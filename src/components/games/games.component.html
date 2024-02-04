@@ -1,0 +1,46 @@
+<ul class="games__container">
+  @for(game of gamesList;let index = $index; track index){
+  <li class="games__card">
+    <div>
+      <p class="games__name">{{game.name}}
+        @if(game.year){
+        <span class="games__year">({{game.year}})</span>
+        }
+      </p>
+      <div class="games__info">
+        <div class="games__info-left">
+          @if(game.players){
+          <p> De
+            @for(player of game.players; let index = $index; let last = $last; track index){
+            {{player}} {{ !last ? 'a' : 'personas'}}
+            }
+          </p>} @else {
+          <p>-</p>
+          }
+          @if(game.complexity){
+          <p class="games__editor">Complejidad (1 a 5): {{game.complexity}}</p>} @else {
+          <p>-</p>
+          }
+          @if(game.language){
+          <p class="games__editor">Idioma: {{game.language}}</p>} @else {
+          <p>-</p>
+          }
+        </div>
+        <div class="games__info-right">
+          @if(game.time){
+          <p class="games__time">Tiempo: {{game.time}} minutos</p>} @else {
+          <p class="games__time">Tiempo: -</p>
+          }
+          @if(game.type){
+          <p class="games__type">Tipo: {{game.type}}</p>} @else {
+          <p class="games__type">Tipo: -</p>
+          }
+          @if(game.editor){
+          <p class="games__editor">{{game.editor}}</p>} @else {
+          <p class="games__editor">-</p>
+          }
+        </div>
+      </div>
+    </div>
+  </li>}
+</ul>

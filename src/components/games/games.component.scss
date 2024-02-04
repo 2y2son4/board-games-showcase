@@ -1,0 +1,48 @@
+p {
+  margin: 0;
+}
+.games {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    // width: 100%;
+    list-style-type: none;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 16px;
+    border: #ffffff 1px solid;
+    min-width: 400px;
+    max-width: 400px;
+  }
+
+  &__name {
+    font-size: 18px;
+    border-bottom: 1px white solid;
+    margin-bottom: 8px;
+  }
+
+  &__year {
+    font-size: 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &-left {
+      width: 50%;
+    }
+
+    &-right {
+      width: 50%;
+    }
+  }
+
+  &__type {
+    font-size: 16px;
+  }
+}
