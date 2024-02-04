@@ -1,5 +1,7 @@
-// :root {
-// }
+/* :root es un pseudo elemento, que se refiere a la raíz del elemento.
+Está por encima de 'body' y 'html' */
 
-// body {
-// }
+:root {
+  color-scheme: light dark;
+  // color-scheme indica al navegador cuáles son los colores que tiene que renderizar por defecto
+}
