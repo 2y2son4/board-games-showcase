@@ -5,7 +5,7 @@
       "editor": "AEG",
       "year": 2023,
       "type": ["Press your luck"],
-      "language": "-",
+      "language": "x",
       "players": [1, 6],
       "time": 20,
       "complexity": 1.06
@@ -115,7 +115,7 @@
       "editor": "Lifestyle Boardgames",
       "year": 2018,
       "type": ["Cards", "Deduction"],
-      "language": "-",
+      "language": "x",
       "players": [3, 5],
       "time": 15,
       "complexity": 1.29
@@ -145,7 +145,7 @@
       "editor": "Brain games",
       "year": 2018,
       "type": ["Party", "Family", "Numbers", "Cooperative"],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 20,
       "complexity": 1.08
@@ -166,7 +166,7 @@
       "year": 2020,
       "type": [
         "Cards",
-        "Area Majority",
+        "Area majority",
         "Deck, Bag, and Pool Building",
         "Pick-up and Deliver"
       ],
@@ -269,198 +269,228 @@
       "name": "Sushi Go!",
       "editor": "Adventureland games",
       "year": 2013,
-      "type": ["Card", "Closed drafting", "End game bonuses"],
-      "language": "-",
+      "type": ["Cards", "Closed drafting", "End game bonuses"],
+      "language": "x",
       "players": [2, 5],
       "time": 15,
       "complexity": 1.16
     },
     {
       "name": "Exploding kittens",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
+      "editor": "Exploding kittens",
+      "year": 2015,
+      "type": ["Party", "Cards", "Humor"],
+      "language": "en",
+      "players": [2, 5],
+      "time": 15,
+      "complexity": 1.08
+    },
+    {
+      "name": "Exploding kittens: Streaking Kittens",
+      "editor": "Exploding kittens",
+      "year": 2018,
+      "type": ["Party", "Cards", "Humor"],
+      "language": "en",
+      "players": [2, 5],
+      "time": 15,
       "complexity": 1
     },
     {
       "name": "Zombie kittens",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
+      "editor": "Exploding kittens",
+      "year": 2022,
+      "type": ["Party", "Cards", "Humor", "Horror"],
+      "language": "en",
+      "players": [2, 5],
+      "time": 15,
       "complexity": 1
     },
     {
-      "name": "Virus",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "name": "Virus!",
+      "editor": "Tranjis games",
+      "year": 2015,
+      "type":  ["Cards", "Horror", "Medical"],
+      "language": "x",
+      "players": [2, 6],
+      "time": 20,
+      "complexity": 1.06
     },
     {
-      "name": "Virus 2",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "name": "Virus 2!",
+      "editor": "Tranjis games",
+      "year": 2018,
+      "type":  ["Cards", "Horror", "Medical"],
+      "language": "x",
+      "players": [2, 6],
+      "time": 20,
+      "complexity": 1.44
+    },
+    {
+      "name": "Virus! Halloween",
+      "editor": "Tranjis games",
+      "year": 2020,
+      "type": ["Cards", "Horror", "Medical"],
+      "language": "x",
+      "players": [2, 6],
+      "time": 20,
+      "complexity": 1.38
     },
     {
       "name": "Jinx",
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
     },
     {
       "name": "Saboteur",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
+      "editor": "AMIGO",
+      "year": 2004,
+      "type": ["Family", "Party", "Bluffing", "Exploration", "Hidden roles", "Route building"],
+      "language": "x",
+      "players": [3, 10],
       "time": 30,
-      "complexity": 1
+      "complexity": 1.32
     },
     {
-      "name": "Saboteur 2",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "name": "Saboteur 2: expansion",
+      "editor": "AMIGO",
+      "year": 2011,
+      "type": ["Family", "Party", "Bluffing", "Exploration", "Hidden roles", "Route building"],
+      "language": "x",
+      "players": [2, 12],
+      "time": 45,
+      "complexity": 1.52
     },
     {
-      "name": "One night: ultimate werewolf",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "name": "One night ultimate werewolf",
+      "editor": "Bézier games",
+      "year": 2014,
+      "type": ["Bluffing", "Cards", "Deduction", "Voting", "Hidden roles", "Narrator"],
+      "language": "en",
+      "players": [3, 10],
+      "time": 10,
+      "complexity": 1.37
     },
     {
-      "name": "One night: ultimate vampire",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "name": "One night ultimate vampire",
+      "editor": "Bézier games",
+      "year": 2016,
+      "type": ["Bluffing", "Cards", "Deduction", "Voting", "Hidden roles", "Narrator"],
+      "language": "en",
+      "players": [3, 10],
+      "time": 10,
+      "complexity": 1.61
     },
     {
-      "name": "One night: ultimate alien",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "name": "One night ultimate alien",
+      "editor": "Bézier games",
+      "year": 2017,
+      "type": ["Bluffing", "Cards", "Deduction", "Voting", "Hidden roles", "Narrator"],
+      "language": "en",
+      "players": [4, 10],
+      "time": 10,
+      "complexity": 1.89
     },
     {
       "name": "Bears Vs. Babies",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
+      "editor": "Self published",
+      "year": 2017,
+      "type": ["Cards", "Humor", "Animals", "Hand management"],
+      "language": "en",
       "players": [2, 4],
       "time": 30,
-      "complexity": 1
+      "complexity": 1.24
+    },
+    {
+      "name": "Bears Vs. Babies: NSFW expansion pack",
+      "editor": "Self published",
+      "year": 2017,
+      "type": ["Cards", "Humor", "Animals", "Hand management"],
+      "language": "en",
+      "players": [2, 5],
+      "time": 30,
+      "complexity": 1.24
     },
     {
       "name": "Happy salmon",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "editor": "Exploding kittens",
+      "year": 2016,
+      "type": ["Party", "Simulation", "Animals", "Real time"],
+      "language": "en",
+      "players": [3, 8],
+      "time": 2,
+      "complexity": 1.08
     },
     {
       "name": "En una escala de 1 a T-Rex",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
+      "editor": "Exploding kittens",
+      "year": 2019,
+      "type": ["Humor", "Party", "Acting"],
+      "language": "es",
+      "players": [2, 8],
+      "time": 15,
       "complexity": 1
     },
     {
       "name": "Skyjo Action",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
+      "editor": "Magilano",
+      "year": 2019,
+      "type": ["Cards", "Set collection"],
+      "language": "x",
+      "players": [2, 8],
       "time": 30,
-      "complexity": 1
+      "complexity": 1.14
     },
     {
-      "name": "Kimonos",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
+      "name": "Kimono",
+      "editor": "Gen-X Games",
+      "year": 2014,
+      "type": ["Cards", "Drawing", "Set collection", "Pattern recognition", "Hand management"],
+      "language": "es",
       "players": [2, 4],
-      "time": 30,
+      "time": 45,
       "complexity": 1
     },
     {
       "name": "Mascarade",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
+      "editor": "Repos production",
+      "year": 2013,
+      "type": ["Party", "Bluffing", "Medieval", "Memory", "Hidden roles"],
+      "language": "es",
+      "players": [2, 13],
       "time": 30,
-      "complexity": 1
+      "complexity": 1.53
     },
     {
       "name": "Secrets",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
+      "editor": "Repos production",
+      "year": 2017,
+      "type": ["Party", "Bluffing", "Deduction", "Spies"],
+      "language": "es",
+      "players": [4, 8],
       "time": 30,
-      "complexity": 1
+      "complexity": 1.49
     },
     {
       "name": "Munchkin",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "editor": "Devir",
+      "year": 2001,
+      "type": ["Cards", "Fantasy", "Humor", "Hand management"],
+      "language": "es",
+      "players": [3, 6],
+      "time": 120,
+      "complexity": 1.81
     },
     {
-      "name": "Card Wars: Princess Bubblegum vs. Lumpy Space Princess ",
+      "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
       "editor": "Edge",
       "year": 2014,
-      "type": [""],
-      "language": "",
+      "type": ["Cards", "Humor", "two players"],
+      "language": "es",
       "players": [2],
       "time": 30,
       "complexity": 1.36
@@ -468,90 +498,100 @@
     {
       "name": "Stay cool",
       "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
+      "year": 2019,
+      "type": ["Party", "Real time", "Trivia"],
+      "language": "es",
+      "players": [3, 7],
       "time": 30,
       "complexity": 1
+    },
+    {
+      "name": "Anomia",
+      "editor": "Anomia Press",
+      "year": 2010,
+      "type": ["Party", "Real time", "Trivia"],
+      "language": "en",
+      "players": [3, 6],
+      "time": 30,
+      "complexity": 1.04
     },
     {
       "name": "So clover",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
+      "editor": "Repos production",
+      "year": 2021,
+      "type": ["Party", "Word game", "Communication limits", "Cooperative"],
+      "language": "es",
+      "players": [3, 6],
       "time": 30,
-      "complexity": 1
+      "complexity": 1.10
     },
     {
       "name": "Código secreto Dúo",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
+      "editor": "Czech Games Edition",
+      "year": 2017,
+      "type": ["Cards", "Deduction", "Cooperative"],
+      "language": "es",
+      "players": [2],
       "time": 30,
-      "complexity": 1
+      "complexity": 1.36
     },
     {
       "name": "Macedonia de letras",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "editor": "Czech Games Edition",
+      "year": 2019,
+      "type": ["Party", "Cards", "Deduction", "Word game", "Communication limits", "Cooperative"],
+      "language": "es",
+      "players": [2, 6],
+      "time": 45,
+      "complexity": 1.96
     },
     {
       "name": "Mars attacks: juego de dados",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "editor": "Edge",
+      "year": 2014,
+      "type": ["Dice", "Family", "Party"],
+      "language": "es",
+      "players": [3, 6],
+      "time": 20,
+      "complexity": 1.19
     },
     {
       "name": "Power plants",
-      "editor": "",
-      "year": "",
-      "type": [""],
+      "editor": "Kids table BG",
+      "year": 2022,
+      "type": ["Puzzle", "Territory building", "Area majority", "Tile placement", "Solitaire"],
       "language": "en",
-      "players": [2, 4],
+      "players": [1, 5],
       "time": 30,
-      "complexity": 1
+      "complexity": 2.44
     },
     {
       "name": "Caballeros arcoíris",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
+      "editor": "Ninja Division",
+      "year": 2018,
+      "type": ["Action", "Dexterity", "Cards", "Real time", "Route building"],
+      "language": "es",
+      "players": [2, 6],
+      "time": 5,
       "complexity": 1
     },
     {
-      "name": "Decrypto",
-      "editor": "",
-      "year": "",
-      "type": [""],
-      "language": "",
-      "players": [2, 4],
-      "time": 30,
-      "complexity": 1
+      "name": "Decrypto: Laserdrive",
+      "editor": "Asmodee",
+      "year": 2019,
+      "type": ["Deduction", "Party", "Word game", "Communication limits", "Team based"],
+      "language": "es",
+      "players": [3, 8],
+      "time": 45,
+      "complexity": 1.80
     },
     {
       "name": "Ninja dice",
       "editor": "Edge",
       "year": 2013,
-      "type": [""],
-      "language": "-",
-      "players": [2,5],
+      "type": ["Dice", "Party", "Push your luck"],
+      "language": "x",
+      "players": [2, 5],
       "time": 30,
       "complexity": 1.33
     },
@@ -560,7 +600,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -570,7 +610,7 @@
       "editor": "Edge",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 6],
       "time": 60,
       "complexity": 1
@@ -580,7 +620,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -590,7 +630,7 @@
       "editor": "TCG factory",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 20,
       "complexity": 1
@@ -600,7 +640,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -610,7 +650,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -620,7 +660,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -630,7 +670,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -640,7 +680,7 @@
       "editor": "Mercurio",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 7],
       "time": 30,
       "complexity": 1
@@ -650,7 +690,7 @@
       "editor": "Edge",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -670,7 +710,7 @@
       "editor": "CASA Consultors i Arquitectes SL",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 6],
       "time": 30,
       "complexity": 1.86
@@ -680,7 +720,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -690,7 +730,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -700,7 +740,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -710,7 +750,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -720,7 +760,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -730,7 +770,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [3, 6],
       "time": 10,
       "complexity": 1
@@ -740,7 +780,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -750,7 +790,7 @@
       "editor": "AEG",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [1, 6],
       "time": 30,
       "complexity": 1
@@ -760,7 +800,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -770,7 +810,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -780,7 +820,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -790,7 +830,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -800,7 +840,7 @@
       "editor": "Cocktail Games",
       "year": 2011,
       "type": [""],
-      "language": "-",
+      "language": "x",
       "players": [3, 6],
       "time": 10,
       "complexity": 1.02
@@ -810,7 +850,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [3, 6],
       "time": 30,
       "complexity": 1
@@ -820,7 +860,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -830,7 +870,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -840,7 +880,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -850,7 +890,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -860,7 +900,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -870,7 +910,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -880,7 +920,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -890,7 +930,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [1, 10],
       "time": 30,
       "complexity": 1
@@ -900,7 +940,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -910,7 +950,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -920,7 +960,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -930,7 +970,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [3, 6],
       "time": 30,
       "complexity": 1
@@ -940,7 +980,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -950,7 +990,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -960,7 +1000,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -970,7 +1010,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -980,7 +1020,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -990,7 +1030,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1000,7 +1040,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1010,7 +1050,7 @@
       "editor": "",
       "year": "",
       "type": ["Tarot/oracle"],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1020,7 +1060,7 @@
       "editor": "",
       "year": "",
       "type": ["Tarot/oracle"],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1030,7 +1070,7 @@
       "editor": "",
       "year": "",
       "type": ["Tarot/oracle"],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1040,7 +1080,7 @@
       "editor": "Kyle gray",
       "year": "",
       "type": ["Tarot/oracle"],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1050,7 +1090,7 @@
       "editor": "",
       "year": "",
       "type": ["Tarot/oracle"],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1060,7 +1100,7 @@
       "editor": "",
       "year": "",
       "type": ["Tarot/oracle"],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1070,7 +1110,7 @@
       "editor": "",
       "year": "",
       "type": ["Tarot/oracle"],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1080,7 +1120,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1110,7 +1150,7 @@
       "editor": "Propifi Limited",
       "year": 2020,
       "type": ["Quiz"],
-      "language": "",
+      "language": "x",
       "players": [2, 99],
       "time": 60,
       "complexity": 1
@@ -1130,7 +1170,7 @@
       "editor": "Cacahuete games",
       "year": 2023,
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [1],
       "time": 30,
       "complexity": 1.33
@@ -1140,7 +1180,7 @@
       "editor": "",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
@@ -1150,10 +1190,40 @@
       "editor": "Looney labs",
       "year": "",
       "type": [""],
-      "language": "",
+      "language": "x",
       "players": [2, 4],
       "time": 30,
       "complexity": 1
+    },
+    {
+      "name": "Werewolves of Miller's Hollow",
+      "editor": "Lui-même",
+      "year": 2001,
+      "type": ["Party", "Bluffing", "Deduction", "Role playing"],
+      "language": "en",
+      "players": [8, 18],
+      "time": 30,
+      "complexity": 1.31
+    },
+    {
+      "name": "La prueba de retos",
+      "editor": "",
+      "year": "",
+      "type": [""],
+      "language": "es",
+      "players": [2, 4],
+      "time": 30,
+      "complexity": 1
+    },
+    {
+      "name": "Petrichor",
+      "editor": "APE games",
+      "year": 2018,
+      "type": ["Strategy", "Farming", "Area majority", "Modular board"],
+      "language": "es",
+      "players": [1, 4],
+      "time": 80,
+      "complexity": 3.02
     }
   ]
 }
