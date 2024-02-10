@@ -85,7 +85,7 @@
     {
       "name": "Joking hazard: Blast from the past",
       "editor": "Explosm Games",
-      "year": "",
+      "year": 2016,
       "type": [
         "Party"
       ],
@@ -95,7 +95,7 @@
         10
       ],
       "time": 90,
-      "complexity": 1.02,
+      "complexity": 1.25,
       "image": "joking-hazard-blast"
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "name": "3 secretos",
-      "editor": "Edge",
+      "editor": "EDGE",
       "year": 2017,
       "type": [
         "Deduction",
@@ -875,7 +875,7 @@
     },
     {
       "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
-      "editor": "Edge",
+      "editor": "EDGE",
       "year": 2014,
       "type": [
         "Cards",
@@ -985,7 +985,7 @@
     },
     {
       "name": "Mars attacks: juego de dados",
-      "editor": "Edge",
+      "editor": "EDGE",
       "year": 2014,
       "type": [
         "Dice",
@@ -999,7 +999,7 @@
       ],
       "time": 20,
       "complexity": 1.19,
-      "image": ""
+      "image": "mars-attack-dados"
     },
     {
       "name": "Power plants",
@@ -1063,7 +1063,7 @@
     },
     {
       "name": "Ninja dice",
-      "editor": "Edge",
+      "editor": "EDGE",
       "year": 2013,
       "type": [
         "Dice",
@@ -1081,131 +1081,154 @@
     },
     {
       "name": "Social train",
-      "editor": "",
-      "year": "",
+      "editor": "GDM Games",
+      "year": 2019,
       "type": [
-        ""
+        "Trains",
+        "Area majority",
+        "Take that"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         4
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.50,
       "image": "social-train"
     },
     {
       "name": "Alta tensión: el juego de cartas",
-      "editor": "Edge",
-      "year": "",
+      "editor": "EDGE",
+      "year": 2016,
       "type": [
-        ""
+        "Strategy",
+        "Cards", "Economic",
+        "Auction"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         6
       ],
       "time": 60,
-      "complexity": 1,
-      "image": ""
+      "complexity": 2.44,
+      "image": "alta-tension-cartas"
     },
     {
       "name": "¡Viva el Rey!",
-      "editor": "",
-      "year": "",
+      "editor": "Aurum",
+      "year": 2004,
       "type": [
-        ""
+        "Bluffing",
+        "Deduction",
+        "Renaissance",
+        "Voting"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
-        2,
-        4
+        3,
+        6
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.21,
       "image": "viva-el-rey"
     },
     {
       "name": "La leyenda del cerezo que florece cada diez años",
       "editor": "TCG factory",
-      "year": "",
+      "year": 2018,
       "type": [
-        ""
+        "Deduction",
+        "Fantasy",
+        "Push your luck",
+        "Set collection"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         4
       ],
       "time": 20,
-      "complexity": 1,
-      "image": ""
+      "complexity": 1.50,
+      "image": "leyenda-del-cerezo"
     },
     {
       "name": "Munchkin Gloom",
-      "editor": "",
-      "year": "",
+      "editor": "EDGE",
+      "year": 2015,
       "type": [
-        ""
+        "Cards",
+        "Fantasy",
+        "Horror",
+        "Storytelling",
+        "Take that"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
-        4
+        5
       ],
-      "time": 30,
-      "complexity": 1,
+      "time": 60,
+      "complexity": 1.86,
       "image": "munchkin-gloom"
     },
     {
       "name": "Gloom",
-      "editor": "",
-      "year": "",
+      "editor": "EDGE",
+      "year": 2005,
       "type": [
-        ""
+        "Cards",
+        "Horror",
+        "Humor",
+        "Layering"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
-        4
+        5
       ],
-      "time": 30,
-      "complexity": 1,
+      "time": 60,
+      "complexity": 1.63,
       "image": "gloom"
     },
     {
       "name": "Gloom: Expediciones Desventuradas",
-      "editor": "",
-      "year": "",
+      "editor": "EDGE",
+      "year": 2009,
       "type": [
-        ""
+        "Cards",
+        "Horror",
+        "Humor",
+        "Layering"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
-        4
+        5
       ],
       "time": 30,
-      "complexity": 1,
-      "image": ""
+      "complexity": 1.80,
+      "image": "gloom-expediciones"
     },
     {
       "name": "Gloom: invitados inoportunos",
-      "editor": "",
-      "year": "",
+      "editor": "EDGE",
+      "year": 2007,
       "type": [
-        ""
+        "Cards",
+        "Horror",
+        "Humor",
+        "Layering"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
-        4
+        5
       ],
       "time": 30,
       "complexity": 1,
-      "image": ""
+      "image": "gloom-invitados"
     },
     {
       "name": "La fiesta",
@@ -1225,7 +1248,7 @@
     },
     {
       "name": "Muchachada Nui: el juego de mesa",
-      "editor": "Edge",
+      "editor": "EDGE",
       "year": "",
       "type": [
         ""
@@ -1432,35 +1455,22 @@
       "image": "uno-flip"
     },
     {
-      "name": "Ah!No",
-      "editor": "",
-      "year": "",
-      "type": [
-        ""
-      ],
-      "language": "x",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 1,
-      "image": "ahno"
-    },
-    {
       "name": "Cluedo suspect",
-      "editor": "",
-      "year": "",
+      "editor": "Hasbro",
+      "year": 2010,
       "type": [
-        ""
+        "Cards",
+        "Deduction",
+        "Murder/Mystery",
+        "Open drafting"
       ],
-      "language": "x",
+      "language": "en",
       "players": [
-        2,
+        3,
         4
       ],
-      "time": 30,
-      "complexity": 1,
+      "time": 15,
+      "complexity": 1.30,
       "image": "cluedo-suspect"
     },
     {
@@ -1468,7 +1478,11 @@
       "editor": "Cocktail Games",
       "year": 2011,
       "type": [
-        ""
+        "Cards",
+        "Humor",
+        "Party",
+        "Memory",
+        "Acting"
       ],
       "language": "x",
       "players": [
@@ -1480,116 +1494,137 @@
       "image": "ugga-buuga"
     },
     {
-      "name": "Black mirror: the anthology series",
-      "editor": "",
-      "year": "",
+      "name": "Black mirror: caída en picado",
+      "editor": "Asmodee",
+      "year": 2018,
       "type": [
-        ""
+        "Cards",
+        "TV series",
+        "Hand management",
+        "Voting",
+        "Set collection"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         3,
         6
       ],
       "time": 30,
-      "complexity": 1,
-      "image": ""
+      "complexity": 1.80,
+      "image": "black-mirror"
     },
     {
       "name": "Organ attack",
-      "editor": "",
-      "year": "",
+      "editor": "Self published",
+      "year": 2016,
       "type": [
-        ""
+        "Party",
+        "Cards",
+        "Educational",
+        "Humor",
+        "Take that"
       ],
-      "language": "x",
+      "language": "en",
       "players": [
         2,
-        4
+        6
       ],
-      "time": 30,
-      "complexity": 1,
+      "time": 15,
+      "complexity": 1.39,
       "image": "organ-attack"
     },
     {
       "name": "Dr. Jekyll and Mr. Hyde",
-      "editor": "",
-      "year": "",
+      "editor": "Mont Tàber",
+      "year": 1997,
       "type": [
-        ""
+        "Strategy",
+        "Bluffing",
+        "Trick-taking"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
-        2,
+        3,
         4
       ],
-      "time": 30,
-      "complexity": 1,
+      "time": 60,
+      "complexity": 2.34,
       "image": "dr-jekyll-and-mr-hyde"
     },
     {
       "name": "The Game",
-      "editor": "",
-      "year": "",
+      "editor": "Pandasaurus Games",
+      "year": 2015,
       "type": [
-        ""
+        "Family",
+        "Cards",
+        "Numbers",
+        "Communication limits",
+        "Cooperative"
       ],
       "language": "x",
       "players": [
-        2,
-        4
+        1,
+        5
       ],
-      "time": 30,
-      "complexity": 1,
+      "time": 20,
+      "complexity": 1.24,
       "image": "the-game"
     },
     {
       "name": "The Game: Face to Face",
-      "editor": "",
-      "year": "",
+      "editor": "Pandasaurus Games",
+      "year": 2017,
       "type": [
-        ""
+        "Cards",
+        "Numbers",
+        "Hand management"
       ],
       "language": "x",
       "players": [
-        2,
-        4
+        2
       ],
-      "time": 30,
-      "complexity": 1,
+      "time": 20,
+      "complexity": 1.24,
       "image": "the-game-face-to-face"
     },
     {
       "name": "Kontour",
-      "editor": "",
-      "year": "",
+      "editor": "Gigamic",
+      "year": 2018,
       "type": [
-        ""
+        "Deduction",
+        "Party",
+        "Line drawing"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
-        2,
-        4
+        3,
+        7
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "kontour"
     },
     {
-      "name": "Codex",
-      "editor": "",
-      "year": "",
+      "name": "Codex naturalis",
+      "editor": "Bombyx",
+      "year": 2021,
       "type": [
-        ""
+        "Family",
+        "Cards",
+        "Hand management",
+        "Layering",
+        "Pattern building"
       ],
       "language": "x",
       "players": [
-        2,
+        1,
         4
       ],
       "time": 30,
-      "complexity": 1,
-      "image": "codex"
+      "complexity": 1.76,
+      "image": "codex-naturalis"
     },
     {
       "name": "Skull",
@@ -2154,7 +2189,8 @@
       "type": [
         "Party",
         "Deduction",
-        "Acting"
+        "Acting",
+        "Layering"
       ],
       "language": "es",
       "players": [
