@@ -1,0 +1,116 @@
+{
+  "oracles": [
+    {
+      "name": "Tarotorial",
+      "editor": "",
+      "year": "",
+      "type": [
+        "Tarot/oracle"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "image": "tarotorial"
+    },
+    {
+      "name": "Wand wood",
+      "editor": "",
+      "year": "",
+      "type": [
+        "Tarot/oracle"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "image": "wand-wood"
+    },
+    {
+      "name": "Green witch oracle",
+      "editor": "",
+      "year": "",
+      "type": [
+        "Tarot/oracle"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "image": "green-witch-oracle"
+    },
+    {
+      "name": "Vibration",
+      "editor": "Kyle gray",
+      "year": "",
+      "type": [
+        "Tarot/oracle"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "image": "vibration"
+    },
+    {
+      "name": "Archetypes",
+      "editor": "",
+      "year": "",
+      "type": [
+        "Tarot/oracle"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "image": "archetypes"
+    },
+    {
+      "name": "Spirit Junkie",
+      "editor": "",
+      "year": "",
+      "type": [
+        "Tarot/oracle"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "image": "spirit-junkie"
+    },
+    {
+      "name": "Prism Oracle",
+      "editor": "",
+      "year": "",
+      "type": [
+        "Tarot/oracle"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "image": "prism-oracle"
+    }
+  ]
+}
