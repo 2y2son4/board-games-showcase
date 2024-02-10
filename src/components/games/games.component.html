@@ -1,63 +1,76 @@
-<div class="filter__container">
-  <button type="button" (click)="sortAtoZ(gamesList)">A to Z</button>
-  <button type="button" (click)="sortZtoA(gamesList)">Z to A</button>
-  <button type="button" (click)="sortByYearAsc(gamesList)">Year </button>
-  <button type="button" (click)="sortByYearDesc(gamesList)">Year ↓</button>
-  <button type="button" (click)="sortByTimeAsc(gamesList)">Time ↑</button>
-  <button type="button" (click)="sortByTimeDesc(gamesList)">Time ↓</button>
-
-</div>
-<ul class="game__container">
-  @for(game of gamesList;let index = $index; track index){
-  <li class="game__card" #game>
-    <div class="game__card-inner">
-      <div class="game__card-front">
-        @if(game.year){
-        <span class="game__year-absolute">{{game.year}}</span>
-        }
-        <h2 class="game__title">{{game.name}}
-        </h2>
-        @if(game.image)
-        { <div class="game__image-container"><img class="game__image" src="../../assets/games/{{game.image}}.webp"
-            alt="{{game.name}} image"></div>
-        }
-      </div>
-      <div class="game__card-back">
-        <div class="game__info">
-          @if (game.complexity) {
-          <div [style.background-color]="getColor(game.complexity)" class="game__complexity">{{
-            game.complexity}}</div>}
-
-          <p class="game__name">{{game.name}}
+<h1>2y2son4's Games</h1>
+<div class="content">
+  <div class="left-side">
+    <ul class="game__container">
+      @for(game of filteredGames;let index = $index; track index){
+      <li class="game__card" #game>
+        <div class="game__card-inner">
+          <div class="game__card-front">
             @if(game.year){
-            <span class="game__year">({{game.year}})</span>
+            <span class="game__year-absolute">{{game.year}}</span>
             }
-          </p>
-          <div class="line"></div>
-          @if(game.players){
-          <p>
-            @for(player of game.players; let index = $index;let first = $first; let last = $last; track index){
-            {{player === 1 && game.players.length === 1 && first ? 'For' : ''}} {{player}} {{ !last ? 'to' :
-            player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
+            <h2 class="game__title">{{game.name}}
+            </h2>
+            @if(game.image)
+            { <div class="game__image-container"><img class="game__image" src="../../assets/games/{{game.image}}.webp"
+                alt="{{game.name}} image"></div>
             }
-          </p>} @else {
-          <p>-</p>
-          }
-          <p class="game__language">Language: <img class="game__flag"
-              src="../../assets/flags/{{game.language}}-flag.png" alt="flag">
-          </p>
-          <p class="game__time">Time: {{game.time ? game.time : '-'}} minutos</p>
-          @if(game.type){
-          <p class="game__type">Type:
-            @for(type of game.type; let index = $index; let last = $last; track index){
-            {{type}}{{ !last ? ',' : ''}}
-            }</p>}
-          @else {
-          <p class="game__type">Type: -</p>
-          }
-          <p class="game__editor">Publisher: {{game.editor ? game.editor : '-'}}</p>
+          </div>
+          <div class="game__card-back">
+            <div class="game__info">
+              @if (game.complexity) {
+              <div [style.background-color]="getColor(game.complexity)" class="game__complexity">{{
+                game.complexity}}</div>}
+
+              <p class="game__name">{{game.name}}
+                @if(game.year){
+                <span class="game__year">({{game.year}})</span>
+                }
+              </p>
+              <div class="line"></div>
+              @if(game.players){
+              <p>
+                @for(player of game.players; let index = $index;let first = $first; let last = $last; track index){
+                {{player === 1 && game.players.length === 1 && first ? 'For' : ''}} {{player}} {{ !last ? 'to' :
+                player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
+                }
+              </p>} @else {
+              <p>-</p>
+              }
+              <p class="game__language">Language: <img class="game__flag"
+                  src="../../assets/flags/{{game.language}}-flag.png" alt="flag">
+              </p>
+              <p class="game__time">Time: {{game.time ? game.time : '-'}} minutos</p>
+              @if(game.type){
+              <p class="game__type">Type:
+                @for(type of game.type; let index = $index; let last = $last; track index){
+                {{type}}{{ !last ? ',' : ''}}
+                }</p>}
+              @else {
+              <p class="game__type">Type: -</p>
+              }
+              <p class="game__editor">Publisher: {{game.editor ? game.editor : '-'}}</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </li>}
+    </ul>
+  </div>
+  <div class="divider"></div>
+  <div class="right-side">
+    <div class="filter__container">
+      <button type="button" mat-button color="accent" (click)="sortAtoZ(gamesList)">A to Z</button>
+      <button type="button" mat-button color="accent" (click)="sortZtoA(gamesList)">Z to A</button>
+      <button type="button" mat-button color="accent" (click)="sortByYearAsc(gamesList)">Year ↑</button>
+      <button type="button" mat-button color="accent" (click)="sortByYearDesc(gamesList)">Year ↓</button>
+      <button type="button" mat-button color="accent" (click)="sortByTimeAsc(gamesList)">Time ↑</button>
+      <button type="button" mat-button color="accent" (click)="sortByTimeDesc(gamesList)">Time ↓</button>
+      <mat-form-field>
+        <mat-label>Types</mat-label>
+        <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGames(selectedTypes.value ?? [])">
+          <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-  </li>}
-</ul>
+  </div>
+</div>

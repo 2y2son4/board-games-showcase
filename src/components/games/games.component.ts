@@ -2,22 +2,74 @@ import { Component, OnInit } from '@angular/core';
 import GAMES_JSON from '../../static/games.json';
 import { GameCard } from './games.component.model';
 import { CommonModule } from '@angular/common';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-games',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatButtonModule,
+  ],
   templateUrl: './games.component.html',
   styleUrl: './games.component.scss',
 })
 export class GamesComponent implements OnInit {
-  public gamesList!: Array<GameCard>;
+  public gamesList: Array<GameCard> = this.sortAtoZ(GAMES_JSON.games);
+  types: string[] = [];
+  selectedTypes = new FormControl([]);
+  filteredGames: GameCard[] = [];
+
   isAlphaUp = false;
   isYearUp = false;
   isTimeUp = false;
 
+  constructor() {
+    this.extractUniqueTypes();
+  }
+
   ngOnInit(): void {
-    this.gamesList = this.sortAtoZ(GAMES_JSON.games);
+    this.filteredGames = this.gamesList;
+  }
+
+  extractUniqueTypes() {
+    const allTypes: string[] = [];
+    this.gamesList.forEach((game) => {
+      game.type.forEach((type) => {
+        if (!allTypes.includes(type)) {
+          allTypes.push(type);
+        }
+      });
+    });
+    this.types = allTypes.sort();
+  }
+
+  filterGames(selectedTypes: string[]) {
+    console.log('selectedTypes: ', selectedTypes);
+    if (selectedTypes.length === 0) {
+      // If no types are selected, show all games
+      this.filteredGames = this.gamesList;
+    } else {
+      // Filter games based on selected types
+      this.filteredGames = this.gamesList.filter((game) =>
+        game.type.some((type) => selectedTypes.includes(type)),
+      );
+
+      console.log(this.filteredGames);
+    }
+  }
+
+  onSelectionChange() {
+    console.log('Selection changed');
+    this.filterGames(this.selectedTypes.value ?? []);
   }
 
   getColor(number: number): string {
