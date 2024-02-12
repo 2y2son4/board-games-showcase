@@ -36,7 +36,7 @@
     },
     {
       "name": "Master dater: big love edition",
-      "editor": "Joking hazard",
+      "editor": "Explosm Games",
       "year": 2022,
       "type": [
         "Party"
@@ -47,7 +47,7 @@
         6
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "master-dater-big-love"
     },
     {
@@ -62,7 +62,7 @@
         3,
         10
       ],
-      "time": 90,
+      "time": 30,
       "complexity": 1.02,
       "image": "joking-hazard"
     },
@@ -78,7 +78,7 @@
         3,
         10
       ],
-      "time": 90,
+      "time": 30,
       "complexity": 1.02,
       "image": "joking-hazard-enhancement-1"
     },
@@ -94,7 +94,7 @@
         3,
         10
       ],
-      "time": 90,
+      "time": 30,
       "complexity": 1.25,
       "image": "joking-hazard-blast"
     },
@@ -234,7 +234,7 @@
         6
       ],
       "time": 20,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "karma"
     },
     {
@@ -343,7 +343,7 @@
         12
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "unanimo-party"
     },
     {
@@ -506,7 +506,7 @@
         5
       ],
       "time": 15,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "exploding-kittens-streaking"
     },
     {
@@ -525,7 +525,7 @@
         5
       ],
       "time": 15,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "zombie-kittens"
     },
     {
@@ -596,7 +596,7 @@
         6
       ],
       "time": 20,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "jinx"
     },
     {
@@ -776,7 +776,7 @@
         8
       ],
       "time": 15,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "en-una-escala-de-1-a-trex"
     },
     {
@@ -813,7 +813,7 @@
         4
       ],
       "time": 45,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "kimono"
     },
     {
@@ -893,7 +893,7 @@
     },
     {
       "name": "Stay cool",
-      "editor": "",
+      "editor": "Scorpion Masqué",
       "year": 2019,
       "type": [
         "Party",
@@ -906,7 +906,7 @@
         7
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "stay-cool"
     },
     {
@@ -1039,7 +1039,7 @@
         6
       ],
       "time": 5,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "caballeros-arcoiris"
     },
     {
@@ -1229,7 +1229,7 @@
         5
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "gloom-invitados"
     },
     {
@@ -1325,7 +1325,7 @@
     },
     {
       "name": "The Island",
-      "editor": "",
+      "editor": "Stronghold Games",
       "year": 1982,
       "type": [
         "Adventure",
@@ -1365,7 +1365,7 @@
     },
     {
       "name": "King of Tokyo",
-      "editor": "",
+      "editor": "Devir",
       "year": 2011,
       "type": [
         "Family",
@@ -1484,7 +1484,7 @@
     },
     {
       "name": "Who am I and what am I doing?",
-      "editor": "",
+      "editor": "Island Workshop",
       "year": 2021,
       "type": [
         "Cards",
@@ -1496,7 +1496,7 @@
         10
       ],
       "time": 60,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "who-am-i-and-what"
     },
     {
@@ -1784,7 +1784,7 @@
         6
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "among-spaceship"
     },
     {
@@ -1943,7 +1943,7 @@
         10
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "secret-hitler"
     },
     {
@@ -2013,7 +2013,7 @@
         99
       ],
       "time": 60,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "more-or-less"
     },
     {
@@ -2029,7 +2029,7 @@
         99
       ],
       "time": 30,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "shot-in-yhe-dark"
     },
     {
@@ -2084,7 +2084,7 @@
         6
       ],
       "time": 15,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "espiral-del-tiempo-feminista"
     },
     {
@@ -2121,7 +2121,7 @@
         4
       ],
       "time": 15,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "sriracha-the-game"
     },
     {
@@ -2156,7 +2156,7 @@
         99
       ],
       "time": 20,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "a-prueba-de-retos"
     },
     {
@@ -2230,7 +2230,7 @@
         10
       ],
       "time": 25,
-      "complexity": 1,
+      "complexity": 1.00,
       "image": "spoilers"
     },
     {
@@ -2254,7 +2254,7 @@
     },
     {
       "name": "F**k: the game",
-      "editor": "",
+      "editor": "Self published",
       "year": 2015,
       "type": [
         "Cards",
