@@ -222,7 +222,7 @@
     },
     {
       "name": "Karma",
-      "editor": "Amigo",
+      "editor": "AMIGO",
       "year": 2014,
       "type": [
         "Family",
@@ -1730,7 +1730,6 @@
       "complexity": 2.20,
       "image": "expediente-dark"
     },
-
     {
       "name": "Expediente X: el juego oficial",
       "editor": "20th Century Fox",
@@ -2269,6 +2268,200 @@
       "time": 15,
       "complexity": 1.29,
       "image": "fuck-the-game"
+    },
+    {
+      "name": "Paris: la cité de la Lumière",
+      "editor": "Devir",
+      "year": 2019,
+      "type": [
+        "Abstract strategy",
+        "Puzzle",
+        "Territory building",
+        "Layering",
+        "Grid coverage",
+        "Open drafting"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 2.04,
+      "image": "paris-la-cite-de-la-lumiere"
+    },
+    {
+      "name": "Paris: Eiffel",
+      "editor": "Devir",
+      "year": 2021,
+      "type": [
+        "Action drafting",
+        "Area majority",
+        "Tile placement",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 2.20,
+      "image": "paris-eiffel"
+    },
+    {
+      "name": "Mix it (monster edition)",
+      "editor": "Brain picnic",
+      "year": 2015,
+      "type": [
+        "Family",
+        "Cards",
+        "Puzzle"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.09,
+      "image": "mix-it-monster"
+    },
+    {
+      "name": "El Jurado 1 - El Caso de las Carpas Doradas",
+      "editor": "GenX",
+      "year": 2019,
+      "type": [
+        "Deduction",
+        "Murder/Mystery",
+        "Storytelling",
+        "Voting"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        12
+      ],
+      "time": 60,
+      "complexity": 1.00,
+      "image": "el-jurado-1"
+    },
+    {
+      "name": "Antarctica",
+      "editor": "Zacatrús",
+      "year": 2021,
+      "type": [
+        "Adventure",
+        "Cards",
+        "Deduction",
+        "Puzzle",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        24
+      ],
+      "time": 300,
+      "complexity": 2,
+      "image": "antarctica"
+    },
+    {
+      "name": "Nightmare",
+      "editor": "Diset",
+      "year": 2021,
+      "type": [
+        "Party",
+        "Murder/Mystery",
+        "Horror",
+        "Deduction",
+        "Real time"
+      ],
+      "language": "es",
+      "players": [
+        4,
+        5
+      ],
+      "time": 120,
+      "complexity": 2,
+      "image": "nightmare"
+    },
+    {
+      "name": "Espías en la sombra",
+      "editor": "TCG Factory",
+      "year": 2021,
+      "type": [
+        "Spies",
+        "Open drafting",
+        "Network",
+        "Route building"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.69,
+      "image": "espias-en-la-sombra"
+    },
+    {
+      "name": "Garabatos y mazmorras",
+      "editor": "TCG Factory",
+      "year": 2020,
+      "type": [
+        "Fantasy",
+        "Humor",
+        "Line drawing",
+        "Open drafting"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 60,
+      "complexity": 1.67,
+      "image": "garabatos-y-mazmorras"
+    },
+    {
+      "name": "Loading",
+      "editor": "TCG Factory",
+      "year": 2021,
+      "type": [
+        "Real time",
+        "Cards",
+        "Closed drafting",
+        "Speed matching"
+
+      ],
+      "language": "x",
+      "players": [
+        2,
+        7
+      ],
+      "time": 5,
+      "complexity": 1.20,
+      "image": "loading"
+    },
+    {
+      "name": "Terra Mare",
+      "editor": "Devir",
+      "year": 2021,
+      "type": [
+        "Medieval",
+        "Puzzle",
+        "Territory building",
+        "Map addition",
+        "Team based game",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 40,
+      "complexity": 1.73,
+      "image": "terra-mare"
     }
   ]
 }
