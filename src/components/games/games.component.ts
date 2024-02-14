@@ -31,16 +31,17 @@ import GAMES_JSON from '../../static/games.json';
   styleUrl: './games.component.scss',
 })
 export class GamesComponent implements OnInit {
-  public gamesList: Array<GameCard> = this.filterFunctions.sortByNameAscending(
-    GAMES_JSON.games,
-  );
+  gamesList!: Array<GameCard>;
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
+
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
+
   selectedSorting = new FormControl<string>('');
   filteredGames: GameCard[] = [];
+
   searchQuery!: string;
 
   playedGames = true;
@@ -57,45 +58,13 @@ export class GamesComponent implements OnInit {
     'Complexity ↓',
   ];
 
-  constructor(public filterFunctions: FilterFunctionsService) {
-    this.extractUniqueTypes();
-    this.extractUniqueEditors();
-  }
-
-  selectSorting(change: MatSelectChange) {
-    switch (change.value) {
-      case 'A to Z':
-        this.filterFunctions.sortByNameAscending(this.filteredGames);
-        break;
-      case 'Z to A':
-        this.filterFunctions.sortByNameDescending(this.filteredGames);
-        break;
-      case 'Year ↑':
-        this.filterFunctions.sortByYearAscending(this.filteredGames);
-        break;
-      case 'Year ↓':
-        this.filterFunctions.sortByYearDescending(this.filteredGames);
-        break;
-      case 'Time ↑':
-        this.filterFunctions.sortByTimeAscending(this.filteredGames);
-        break;
-      case 'Time ↓':
-        this.filterFunctions.sortByTimeDescending(this.filteredGames);
-        break;
-      case 'Complexity ↑':
-        this.filterFunctions.sortByComplexityAscending(this.filteredGames);
-        break;
-      case 'Complexity ↓':
-        this.filterFunctions.sortByComplexityDescending(this.filteredGames);
-        break;
-
-      default:
-        break;
-    }
-  }
+  constructor(public filterFunctions: FilterFunctionsService) {}
 
   ngOnInit(): void {
+    this.gamesList = this.filterFunctions.sortByNameAscending(GAMES_JSON.games);
     this.filteredGames = this.gamesList;
+    this.extractUniqueTypes();
+    this.extractUniqueEditors();
   }
 
   extractUniqueTypes() {
@@ -122,12 +91,10 @@ export class GamesComponent implements OnInit {
 
   filterGames() {
     if (this.searchQuery.trim() === '') {
-      // If search query is empty, show all games
       this.filteredGames = this.filterFunctions.sortByNameAscending(
         this.gamesList,
       );
     } else {
-      // Filter entire gamesList based on search query
       const query = this.searchQuery.toLowerCase().trim();
       this.filteredGames = this.gamesList.filter(
         (game) =>
@@ -144,10 +111,8 @@ export class GamesComponent implements OnInit {
     const selectedEditorValues = this.selectedEditors.value ?? [];
 
     if (selectedTypeValues.length === 0 && selectedEditorValues!.length === 0) {
-      // If no types or editors are selected, show all games
       this.filteredGames = this.gamesList;
     } else {
-      // Filter games based on selected types and/or editors
       this.filteredGames = this.gamesList.filter((game) => {
         const matchTypes =
           selectedTypeValues.length === 0 ||
@@ -185,18 +150,14 @@ export class GamesComponent implements OnInit {
   }
 
   getColor(number: number): string {
-    // Colors for the endpoints
     const greenColor = [54, 174, 124];
     const yellowColor = [249, 217, 35];
     const redColor = [235, 83, 83];
 
-    // Calculate the percentage of the number within the range 1 to 5
     const percentage = (number - 1) / 4;
 
-    // Interpolate colors based on the percentage
     let r, g, b;
     if (percentage < 0.5) {
-      // Transition from green to yellow
       r = Math.round(
         greenColor[0] + percentage * 2 * (yellowColor[0] - greenColor[0]),
       );
@@ -207,7 +168,6 @@ export class GamesComponent implements OnInit {
         greenColor[2] + percentage * 2 * (yellowColor[2] - greenColor[2]),
       );
     } else {
-      // Transition from yellow to red
       r = Math.round(
         yellowColor[0] +
           (percentage - 0.5) * 2 * (redColor[0] - yellowColor[0]),
@@ -222,7 +182,6 @@ export class GamesComponent implements OnInit {
       );
     }
 
-    // Convert RGB values to hexadecimal format
     const colorHex =
       '#' + ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
 

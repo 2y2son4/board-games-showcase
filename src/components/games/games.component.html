@@ -86,7 +86,8 @@
       </mat-form-field>
       <mat-form-field style="height: 70px;">
         <mat-label>Sort</mat-label>
-        <mat-select [formControl]="selectedSorting" (selectionChange)="selectSorting($event)">
+        <mat-select [formControl]="selectedSorting"
+          (selectionChange)="filterFunctions.selectSorting($event, filteredGames)">
           <mat-option *ngFor="let label of sortingSelectLabels" [value]="label">{{label}}</mat-option>
         </mat-select>
       </mat-form-field>
