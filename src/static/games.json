@@ -16,7 +16,8 @@
       ],
       "time": 20,
       "complexity": 1.06,
-      "image": "deep-dive"
+      "image": "deep-dive",
+      "isPlayed": true
     },
     {
       "name": "Tranvía mortal",
@@ -32,7 +33,8 @@
       ],
       "time": 60,
       "complexity": 1.04,
-      "image": "tranvia-mortal"
+      "image": "tranvia-mortal",
+      "isPlayed": true
     },
     {
       "name": "Master dater: big love edition",
@@ -48,7 +50,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "master-dater-big-love"
+      "image": "master-dater-big-love",
+      "isPlayed": true
     },
     {
       "name": "Joking hazard",
@@ -64,7 +67,8 @@
       ],
       "time": 30,
       "complexity": 1.02,
-      "image": "joking-hazard"
+      "image": "joking-hazard",
+      "isPlayed": true
     },
     {
       "name": "Joking hazard: Deck enhancement #1",
@@ -81,7 +85,8 @@
       ],
       "time": 30,
       "complexity": 1.02,
-      "image": "joking-hazard-enhancement-1"
+      "image": "joking-hazard-enhancement-1",
+      "isPlayed": true
     },
     {
       "name": "Joking hazard: Blast from the past",
@@ -98,7 +103,8 @@
       ],
       "time": 30,
       "complexity": 1.25,
-      "image": "joking-hazard-blast"
+      "image": "joking-hazard-blast",
+      "isPlayed": true
     },
     {
       "name": "Back to the future: the card game",
@@ -114,7 +120,8 @@
       ],
       "time": 60,
       "complexity": 1.74,
-      "image": "back-to-the-future"
+      "image": "back-to-the-future",
+      "isPlayed": true
     },
     {
       "name": "Coup",
@@ -132,7 +139,8 @@
       ],
       "time": 15,
       "complexity": 1.41,
-      "image": "coup"
+      "image": "coup",
+      "isPlayed": false
     },
     {
       "name": "Saqueadores",
@@ -149,7 +157,8 @@
       ],
       "time": 30,
       "complexity": 1.24,
-      "image": "saqueadores"
+      "image": "saqueadores",
+      "isPlayed": false
     },
     {
       "name": "Cabo (2nd edition)",
@@ -166,7 +175,8 @@
       ],
       "time": 45,
       "complexity": 1.19,
-      "image": "cabo-2nd-edition"
+      "image": "cabo-2nd-edition",
+      "isPlayed": true
     },
     {
       "name": "3 secretos",
@@ -184,7 +194,8 @@
       ],
       "time": 15,
       "complexity": 1.27,
-      "image": "3-secretos"
+      "image": "3-secretos",
+      "isPlayed": true
     },
     {
       "name": "Narabi",
@@ -201,7 +212,8 @@
       ],
       "time": 15,
       "complexity": 1.29,
-      "image": "narabi"
+      "image": "narabi",
+      "isPlayed": false
     },
     {
       "name": "Dungeon Mayhem",
@@ -220,7 +232,8 @@
       ],
       "time": 10,
       "complexity": 1.1,
-      "image": "dungeon-mayhem"
+      "image": "dungeon-mayhem",
+      "isPlayed": true
     },
     {
       "name": "Karma",
@@ -237,7 +250,8 @@
       ],
       "time": 20,
       "complexity": 1.00,
-      "image": "karma"
+      "image": "karma",
+      "isPlayed": true
     },
     {
       "name": "The Mind",
@@ -256,7 +270,8 @@
       ],
       "time": 20,
       "complexity": 1.08,
-      "image": "the-mind"
+      "image": "the-mind",
+      "isPlayed": true
     },
     {
       "name": "Chrononauts",
@@ -274,7 +289,8 @@
       ],
       "time": 30,
       "complexity": 1.85,
-      "image": "chrononauts"
+      "image": "chrononauts",
+      "isPlayed": true
     },
     {
       "name": "Jumble Jam",
@@ -293,7 +309,8 @@
       ],
       "time": 50,
       "complexity": 1.24,
-      "image": "jumble-jam"
+      "image": "jumble-jam",
+      "isPlayed": false
     },
     {
       "name": "Ramen Ink",
@@ -311,7 +328,8 @@
       ],
       "time": 20,
       "complexity": 1.5,
-      "image": "ramen-ink"
+      "image": "ramen-ink",
+      "isPlayed": true
     },
     {
       "name": "Sencha",
@@ -329,7 +347,8 @@
       ],
       "time": 45,
       "complexity": 2.17,
-      "image": "sencha"
+      "image": "sencha",
+      "isPlayed": false
     },
     {
       "name": "Unánimo Party",
@@ -346,7 +365,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "unanimo-party"
+      "image": "unanimo-party",
+      "isPlayed": true
     },
     {
       "name": "Point City",
@@ -364,7 +384,8 @@
       ],
       "time": 30,
       "complexity": 1.6,
-      "image": "point-city"
+      "image": "point-city",
+      "isPlayed": true
     },
     {
       "name": "Truffle shuffle",
@@ -382,7 +403,8 @@
       ],
       "time": 30,
       "complexity": 1.3,
-      "image": "truffle-shuffle"
+      "image": "truffle-shuffle",
+      "isPlayed": false
     },
     {
       "name": "Unstable unicorns: NSFW",
@@ -401,7 +423,8 @@
       ],
       "time": 60,
       "complexity": 1.8,
-      "image": "unstable-unicorns-nsfw"
+      "image": "unstable-unicorns-nsfw",
+      "isPlayed": false
     },
     {
       "name": "Unstable unicorns: rainbow apocalypse",
@@ -420,7 +443,8 @@
       ],
       "time": 60,
       "complexity": 2,
-      "image": "unstable-unicorns-rainbow"
+      "image": "unstable-unicorns-rainbow",
+      "isPlayed": false
     },
     {
       "name": "Unstable unicorns: adventures",
@@ -439,7 +463,8 @@
       ],
       "time": 60,
       "complexity": 2,
-      "image": "unstable-unicorns-adventures"
+      "image": "unstable-unicorns-adventures",
+      "isPlayed": false
     },
     {
       "name": "Matrioska",
@@ -457,7 +482,8 @@
       ],
       "time": 20,
       "complexity": 1.73,
-      "image": "matrioska"
+      "image": "matrioska",
+      "isPlayed": false
     },
     {
       "name": "Sushi Go!",
@@ -475,7 +501,8 @@
       ],
       "time": 15,
       "complexity": 1.16,
-      "image": "sushi-go"
+      "image": "sushi-go",
+      "isPlayed": true
     },
     {
       "name": "Exploding kittens",
@@ -493,7 +520,8 @@
       ],
       "time": 15,
       "complexity": 1.08,
-      "image": "exploding-kittens"
+      "image": "exploding-kittens",
+      "isPlayed": true
     },
     {
       "name": "Exploding kittens: Streaking Kittens",
@@ -512,7 +540,8 @@
       ],
       "time": 15,
       "complexity": 1.00,
-      "image": "exploding-kittens-streaking"
+      "image": "exploding-kittens-streaking",
+      "isPlayed": false
     },
     {
       "name": "Zombie kittens",
@@ -531,7 +560,8 @@
       ],
       "time": 15,
       "complexity": 1.00,
-      "image": "zombie-kittens"
+      "image": "zombie-kittens",
+      "isPlayed": false
     },
     {
       "name": "Virus!",
@@ -549,7 +579,8 @@
       ],
       "time": 20,
       "complexity": 1.06,
-      "image": "virus"
+      "image": "virus",
+      "isPlayed": true
     },
     {
       "name": "Virus 2! Evolution",
@@ -567,7 +598,8 @@
       ],
       "time": 20,
       "complexity": 1.44,
-      "image": "virus-2"
+      "image": "virus-2",
+      "isPlayed": false
     },
     {
       "name": "Virus! Halloween",
@@ -585,7 +617,8 @@
       ],
       "time": 20,
       "complexity": 1.38,
-      "image": "virus-halloween"
+      "image": "virus-halloween",
+      "isPlayed": true
     },
     {
       "name": "Jinx",
@@ -602,7 +635,8 @@
       ],
       "time": 20,
       "complexity": 1.00,
-      "image": "jinx"
+      "image": "jinx",
+      "isPlayed": false
     },
     {
       "name": "Saboteur",
@@ -623,7 +657,8 @@
       ],
       "time": 30,
       "complexity": 1.32,
-      "image": "saboteur"
+      "image": "saboteur",
+      "isPlayed": true
     },
     {
       "name": "Saboteur 2: expansion",
@@ -645,7 +680,8 @@
       ],
       "time": 45,
       "complexity": 1.52,
-      "image": "saboteur-2"
+      "image": "saboteur-2",
+      "isPlayed": false
     },
     {
       "name": "One night ultimate werewolf",
@@ -666,7 +702,8 @@
       ],
       "time": 10,
       "complexity": 1.37,
-      "image": "one-night-ultimate-werewolf"
+      "image": "one-night-ultimate-werewolf",
+      "isPlayed": true
     },
     {
       "name": "One night ultimate vampire",
@@ -687,7 +724,8 @@
       ],
       "time": 10,
       "complexity": 1.61,
-      "image": "one-night-ultimate-vampire"
+      "image": "one-night-ultimate-vampire",
+      "isPlayed": false
     },
     {
       "name": "One night ultimate alien",
@@ -708,7 +746,8 @@
       ],
       "time": 10,
       "complexity": 1.89,
-      "image": "one-night-ultimate-alien"
+      "image": "one-night-ultimate-alien",
+      "isPlayed": false
     },
     {
       "name": "Bears Vs. Babies",
@@ -727,7 +766,8 @@
       ],
       "time": 30,
       "complexity": 1.24,
-      "image": "bears-vs-babies"
+      "image": "bears-vs-babies",
+      "isPlayed": true
     },
     {
       "name": "Bears Vs. Babies: NSFW expansion pack",
@@ -747,7 +787,8 @@
       ],
       "time": 30,
       "complexity": 1.24,
-      "image": "bears-vs-babies-nsfw"
+      "image": "bears-vs-babies-nsfw",
+      "isPlayed": true
     },
     {
       "name": "Happy salmon",
@@ -766,7 +807,8 @@
       ],
       "time": 2,
       "complexity": 1.08,
-      "image": "happy-salmon"
+      "image": "happy-salmon",
+      "isPlayed": false
     },
     {
       "name": "En una escala de 1 a T-Rex",
@@ -784,7 +826,8 @@
       ],
       "time": 15,
       "complexity": 1.00,
-      "image": "en-una-escala-de-1-a-trex"
+      "image": "en-una-escala-de-1-a-trex",
+      "isPlayed": false
     },
     {
       "name": "Skyjo Action",
@@ -801,7 +844,8 @@
       ],
       "time": 30,
       "complexity": 1.14,
-      "image": "skyjo-action"
+      "image": "skyjo-action",
+      "isPlayed": true
     },
     {
       "name": "Kimono",
@@ -821,7 +865,8 @@
       ],
       "time": 45,
       "complexity": 1.00,
-      "image": "kimono"
+      "image": "kimono",
+      "isPlayed": false
     },
     {
       "name": "Mascarade",
@@ -841,7 +886,8 @@
       ],
       "time": 30,
       "complexity": 1.53,
-      "image": "mascarade"
+      "image": "mascarade",
+      "isPlayed": true
     },
     {
       "name": "Secrets",
@@ -860,7 +906,8 @@
       ],
       "time": 30,
       "complexity": 1.49,
-      "image": "secrets"
+      "image": "secrets",
+      "isPlayed": true
     },
     {
       "name": "Munchkin",
@@ -879,7 +926,8 @@
       ],
       "time": 120,
       "complexity": 1.81,
-      "image": "munchkin"
+      "image": "munchkin",
+      "isPlayed": true
     },
     {
       "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
@@ -896,7 +944,8 @@
       ],
       "time": 30,
       "complexity": 1.36,
-      "image": "card-wards-bubblegum-lumpy"
+      "image": "card-wards-bubblegum-lumpy",
+      "isPlayed": true
     },
     {
       "name": "Stay cool",
@@ -914,7 +963,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "stay-cool"
+      "image": "stay-cool",
+      "isPlayed": false
     },
     {
       "name": "Anomia",
@@ -932,7 +982,8 @@
       ],
       "time": 30,
       "complexity": 1.04,
-      "image": "anomia"
+      "image": "anomia",
+      "isPlayed": false
     },
     {
       "name": "So clover",
@@ -951,7 +1002,8 @@
       ],
       "time": 30,
       "complexity": 1.1,
-      "image": "so-clover"
+      "image": "so-clover",
+      "isPlayed": true
     },
     {
       "name": "Código secreto Dúo",
@@ -968,7 +1020,8 @@
       ],
       "time": 30,
       "complexity": 1.36,
-      "image": "codigo-secreto-duo"
+      "image": "codigo-secreto-duo",
+      "isPlayed": true
     },
     {
       "name": "Macedonia de letras",
@@ -989,7 +1042,8 @@
       ],
       "time": 45,
       "complexity": 1.96,
-      "image": "macedonia-de-letras"
+      "image": "macedonia-de-letras",
+      "isPlayed": true
     },
     {
       "name": "Mars attacks: juego de dados",
@@ -1007,7 +1061,8 @@
       ],
       "time": 20,
       "complexity": 1.19,
-      "image": "mars-attack-dados"
+      "image": "mars-attack-dados",
+      "isPlayed": true
     },
     {
       "name": "Power plants",
@@ -1027,7 +1082,8 @@
       ],
       "time": 30,
       "complexity": 2.44,
-      "image": "power-plants"
+      "image": "power-plants",
+      "isPlayed": false
     },
     {
       "name": "Caballeros arcoíris",
@@ -1047,7 +1103,8 @@
       ],
       "time": 5,
       "complexity": 1.00,
-      "image": "caballeros-arcoiris"
+      "image": "caballeros-arcoiris",
+      "isPlayed": false
     },
     {
       "name": "Decrypto: Laserdrive",
@@ -1068,7 +1125,8 @@
       ],
       "time": 45,
       "complexity": 1.8,
-      "image": "decrypto-laserdrive"
+      "image": "decrypto-laserdrive",
+      "isPlayed": false
     },
     {
       "name": "Ninja dice",
@@ -1086,7 +1144,8 @@
       ],
       "time": 30,
       "complexity": 1.33,
-      "image": "ninja-dice"
+      "image": "ninja-dice",
+      "isPlayed": false
     },
     {
       "name": "Social train",
@@ -1104,7 +1163,8 @@
       ],
       "time": 30,
       "complexity": 1.50,
-      "image": "social-train"
+      "image": "social-train",
+      "isPlayed": false
     },
     {
       "name": "Alta tensión: el juego de cartas",
@@ -1123,7 +1183,8 @@
       ],
       "time": 60,
       "complexity": 2.44,
-      "image": "alta-tension-cartas"
+      "image": "alta-tension-cartas",
+      "isPlayed": false
     },
     {
       "name": "¡Viva el Rey!",
@@ -1142,7 +1203,8 @@
       ],
       "time": 30,
       "complexity": 1.21,
-      "image": "viva-el-rey"
+      "image": "viva-el-rey",
+      "isPlayed": true
     },
     {
       "name": "La leyenda del cerezo que florece cada diez años",
@@ -1161,7 +1223,8 @@
       ],
       "time": 20,
       "complexity": 1.50,
-      "image": "leyenda-del-cerezo"
+      "image": "leyenda-del-cerezo",
+      "isPlayed": false
     },
     {
       "name": "Munchkin Gloom",
@@ -1181,7 +1244,8 @@
       ],
       "time": 60,
       "complexity": 1.86,
-      "image": "munchkin-gloom"
+      "image": "munchkin-gloom",
+      "isPlayed": false
     },
     {
       "name": "Gloom",
@@ -1200,7 +1264,8 @@
       ],
       "time": 60,
       "complexity": 1.63,
-      "image": "gloom"
+      "image": "gloom",
+      "isPlayed": false
     },
     {
       "name": "Gloom: Expediciones Desventuradas",
@@ -1220,7 +1285,8 @@
       ],
       "time": 30,
       "complexity": 1.80,
-      "image": "gloom-expediciones"
+      "image": "gloom-expediciones",
+      "isPlayed": false
     },
     {
       "name": "Gloom: invitados inoportunos",
@@ -1240,7 +1306,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "gloom-invitados"
+      "image": "gloom-invitados",
+      "isPlayed": false
     },
     {
       "name": "La fiesta",
@@ -1260,7 +1327,8 @@
       ],
       "time": 30,
       "complexity": 2,
-      "image": "la-fiesta"
+      "image": "la-fiesta",
+      "isPlayed": false
     },
     {
       "name": "Muchachada Nui: el juego de mesa",
@@ -1280,7 +1348,8 @@
       ],
       "time": 30,
       "complexity": 2,
-      "image": "muchachada-nui"
+      "image": "muchachada-nui",
+      "isPlayed": true
     },
     {
       "name": "Speed cups⁶",
@@ -1297,7 +1366,8 @@
       ],
       "time": 15,
       "complexity": 1.00,
-      "image": "speed-cups-6"
+      "image": "speed-cups-6",
+      "isPlayed": false
     },
     {
       "name": "Speed cups²",
@@ -1313,7 +1383,8 @@
       ],
       "time": 10,
       "complexity": 1.11,
-      "image": "speed-cups-2"
+      "image": "speed-cups-2",
+      "isPlayed": false
     },
     {
       "name": "El juego de las baldosas de Antoni Gaudí",
@@ -1331,7 +1402,8 @@
       ],
       "time": 30,
       "complexity": 1.86,
-      "image": "baldosas-antoni-gaudi"
+      "image": "baldosas-antoni-gaudi",
+      "isPlayed": false
     },
     {
       "name": "The Island",
@@ -1352,7 +1424,8 @@
       ],
       "time": 60,
       "complexity": 1.70,
-      "image": "the-island"
+      "image": "the-island",
+      "isPlayed": true
     },
     {
       "name": "Tags",
@@ -1371,7 +1444,8 @@
       ],
       "time": 40,
       "complexity": 1.18,
-      "image": "tags"
+      "image": "tags",
+      "isPlayed": false
     },
     {
       "name": "King of Tokyo",
@@ -1391,7 +1465,8 @@
       ],
       "time": 30,
       "complexity": 1.49,
-      "image": "king-of-tokyo"
+      "image": "king-of-tokyo",
+      "isPlayed": true
     },
     {
       "name": "Wordsmith",
@@ -1411,7 +1486,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "wordsmith"
+      "image": "wordsmith",
+      "isPlayed": false
     },
     {
       "name": "Mandala Stones",
@@ -1431,7 +1507,8 @@
       ],
       "time": 30,
       "complexity": 1.81,
-      "image": "mandala-stones"
+      "image": "mandala-stones",
+      "isPlayed": false
     },
     {
       "name": "Doodle rush",
@@ -1449,7 +1526,8 @@
       ],
       "time": 15,
       "complexity": 1.33,
-      "image": "doodle-rush"
+      "image": "doodle-rush",
+      "isPlayed": true
     },
     {
       "name": "Drunken sailor",
@@ -1468,7 +1546,8 @@
       ],
       "time": 40,
       "complexity": 1.00,
-      "image": "drunken-sailor"
+      "image": "drunken-sailor",
+      "isPlayed": false
     },
     {
       "name": "Fit to print",
@@ -1490,7 +1569,8 @@
       ],
       "time": 30,
       "complexity": 2.07,
-      "image": "fit-to-print"
+      "image": "fit-to-print",
+      "isPlayed": false
     },
     {
       "name": "Who am I and what am I doing?",
@@ -1507,7 +1587,8 @@
       ],
       "time": 60,
       "complexity": 1.00,
-      "image": "who-am-i-and-what"
+      "image": "who-am-i-and-what",
+      "isPlayed": false
     },
     {
       "name": "Uno Flip!",
@@ -1526,7 +1607,8 @@
       ],
       "time": 30,
       "complexity": 1.30,
-      "image": "uno-flip"
+      "image": "uno-flip",
+      "isPlayed": false
     },
     {
       "name": "Cluedo suspect",
@@ -1545,7 +1627,8 @@
       ],
       "time": 15,
       "complexity": 1.30,
-      "image": "cluedo-suspect"
+      "image": "cluedo-suspect",
+      "isPlayed": false
     },
     {
       "name": "Ugga Buuga",
@@ -1565,7 +1648,8 @@
       ],
       "time": 10,
       "complexity": 1.02,
-      "image": "ugga-buuga"
+      "image": "ugga-buuga",
+      "isPlayed": true
     },
     {
       "name": "Black mirror: caída en picado",
@@ -1585,7 +1669,8 @@
       ],
       "time": 30,
       "complexity": 1.80,
-      "image": "black-mirror"
+      "image": "black-mirror",
+      "isPlayed": false
     },
     {
       "name": "Organ attack",
@@ -1605,7 +1690,8 @@
       ],
       "time": 15,
       "complexity": 1.39,
-      "image": "organ-attack"
+      "image": "organ-attack",
+      "isPlayed": true
     },
     {
       "name": "Dr. Jekyll and Mr. Hyde",
@@ -1623,7 +1709,8 @@
       ],
       "time": 60,
       "complexity": 2.34,
-      "image": "dr-jekyll-and-mr-hyde"
+      "image": "dr-jekyll-and-mr-hyde",
+      "isPlayed": false
     },
     {
       "name": "The Game",
@@ -1643,7 +1730,8 @@
       ],
       "time": 20,
       "complexity": 1.24,
-      "image": "the-game"
+      "image": "the-game",
+      "isPlayed": true
     },
     {
       "name": "The Game: Face to Face",
@@ -1660,7 +1748,8 @@
       ],
       "time": 20,
       "complexity": 1.24,
-      "image": "the-game-face-to-face"
+      "image": "the-game-face-to-face",
+      "isPlayed": false
     },
     {
       "name": "Kontour",
@@ -1678,7 +1767,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "kontour"
+      "image": "kontour",
+      "isPlayed": false
     },
     {
       "name": "Codex naturalis",
@@ -1698,7 +1788,8 @@
       ],
       "time": 30,
       "complexity": 1.76,
-      "image": "codex-naturalis"
+      "image": "codex-naturalis",
+      "isPlayed": true
     },
     {
       "name": "Skull",
@@ -1718,7 +1809,8 @@
       ],
       "time": 45,
       "complexity": 1.11,
-      "image": "skull"
+      "image": "skull",
+      "isPlayed": false
     },
     {
       "name": "Expediente dark",
@@ -1738,7 +1830,8 @@
       ],
       "time": 90,
       "complexity": 2.20,
-      "image": "expediente-dark"
+      "image": "expediente-dark",
+      "isPlayed": false
     },
     {
       "name": "Expediente X: el juego oficial",
@@ -1757,7 +1850,8 @@
       ],
       "time": 45,
       "complexity": 1.25,
-      "image": "expediente-x"
+      "image": "expediente-x",
+      "isPlayed": true
     },
     {
       "name": "Listillo",
@@ -1776,7 +1870,8 @@
       ],
       "time": 25,
       "complexity": 1.50,
-      "image": "listillo"
+      "image": "listillo",
+      "isPlayed": true
     },
     {
       "name": "Among spaceship",
@@ -1794,7 +1889,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "among-spaceship"
+      "image": "among-spaceship",
+      "isPlayed": false
     },
     {
       "name": "Mantis",
@@ -1814,7 +1910,8 @@
       ],
       "time": 30,
       "complexity": 1.03,
-      "image": "mantis"
+      "image": "mantis",
+      "isPlayed": false
     },
     {
       "name": "El portero Baldomero",
@@ -1834,7 +1931,8 @@
       ],
       "time": 20,
       "complexity": 1.25,
-      "image": "el-portero-baldomero"
+      "image": "el-portero-baldomero",
+      "isPlayed": false
     },
     {
       "name": "Here to slay",
@@ -1854,7 +1952,8 @@
       ],
       "time": 60,
       "complexity": 1.69,
-      "image": "here-to-slay"
+      "image": "here-to-slay",
+      "isPlayed": true
     },
     {
       "name": "Here to slay: Berserkers &Necromancers",
@@ -1875,7 +1974,8 @@
       ],
       "time": 60,
       "complexity": 2,
-      "image": "here-to-slay-berserkers-necromancers"
+      "image": "here-to-slay-berserkers-necromancers",
+      "isPlayed": false
     },
     {
       "name": "Here to slay: Warriors & Druids",
@@ -1896,7 +1996,8 @@
       ],
       "time": 60,
       "complexity": 1.83,
-      "image": "here-to-slay-warriors-druids"
+      "image": "here-to-slay-warriors-druids",
+      "isPlayed": false
     },
     {
       "name": "Trash pandas",
@@ -1917,7 +2018,8 @@
       ],
       "time": 20,
       "complexity": 1.38,
-      "image": "trash-pandas"
+      "image": "trash-pandas",
+      "isPlayed": false
     },
     {
       "name": "Kingz",
@@ -1935,7 +2037,8 @@
       ],
       "time": 15,
       "complexity": 1.00,
-      "image": "kingz"
+      "image": "kingz",
+      "isPlayed": false
     },
     {
       "name": "Secret Hitler",
@@ -1955,7 +2058,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "secret-hitler"
+      "image": "secret-hitler",
+      "isPlayed": true
     },
     {
       "name": "Cold case: una historia de muerte",
@@ -1974,7 +2078,8 @@
       ],
       "time": 120,
       "complexity": 2,
-      "image": "cold-case"
+      "image": "cold-case",
+      "isPlayed": false
     },
     {
       "name": "Taco, cat, goat, cheese, pizza",
@@ -1991,7 +2096,8 @@
       ],
       "time": 30,
       "complexity": 1.02,
-      "image": "taco-cat-goat-cheese"
+      "image": "taco-cat-goat-cheese",
+      "isPlayed": false
     },
     {
       "name": "The Grimwood",
@@ -2009,7 +2115,8 @@
       ],
       "time": 60,
       "complexity": 1.33,
-      "image": "the-grimwood"
+      "image": "the-grimwood",
+      "isPlayed": true
     },
     {
       "name": "More or Less: How Good Is Your Judgement?",
@@ -2025,7 +2132,8 @@
       ],
       "time": 60,
       "complexity": 1.00,
-      "image": "more-or-less"
+      "image": "more-or-less",
+      "isPlayed": true
     },
     {
       "name": "Shot in the dark: The Ultimate Unorthodox Quiz",
@@ -2041,7 +2149,8 @@
       ],
       "time": 30,
       "complexity": 1.00,
-      "image": "shot-in-yhe-dark"
+      "image": "shot-in-yhe-dark",
+      "isPlayed": true
     },
     {
       "name": "Micro Roma",
@@ -2060,7 +2169,8 @@
       ],
       "time": 30,
       "complexity": 1.33,
-      "image": "micro-roma"
+      "image": "micro-roma",
+      "isPlayed": true
     },
     {
       "name": "Fluxx",
@@ -2079,7 +2189,8 @@
       ],
       "time": 30,
       "complexity": 1.39,
-      "image": "fluxx"
+      "image": "fluxx",
+      "isPlayed": true
     },
     {
       "name": "Feministime: La Espiral del Tiempo Feminista",
@@ -2096,7 +2207,8 @@
       ],
       "time": 15,
       "complexity": 1.00,
-      "image": "espiral-del-tiempo-feminista"
+      "image": "espiral-del-tiempo-feminista",
+      "isPlayed": false
     },
     {
       "name": "Deep sea adventure",
@@ -2115,7 +2227,8 @@
       ],
       "time": 30,
       "complexity": 1.18,
-      "image": "deep-sea-adventure"
+      "image": "deep-sea-adventure",
+      "isPlayed": true
     },
     {
       "name": "Sriracha the game",
@@ -2133,7 +2246,8 @@
       ],
       "time": 15,
       "complexity": 1.00,
-      "image": "sriracha-the-game"
+      "image": "sriracha-the-game",
+      "isPlayed": false
     },
     {
       "name": "Werewolves of Miller's Hollow",
@@ -2152,7 +2266,8 @@
       ],
       "time": 30,
       "complexity": 1.31,
-      "image": "werewolves-of-millers-hollow"
+      "image": "werewolves-of-millers-hollow",
+      "isPlayed": true
     },
     {
       "name": "A prueba de retos",
@@ -2168,7 +2283,8 @@
       ],
       "time": 20,
       "complexity": 1.00,
-      "image": "a-prueba-de-retos"
+      "image": "a-prueba-de-retos",
+      "isPlayed": false
     },
     {
       "name": "Petrichor",
@@ -2187,7 +2303,8 @@
       ],
       "time": 90,
       "complexity": 3.02,
-      "image": "petrichor"
+      "image": "petrichor",
+      "isPlayed": false
     },
     {
       "name": "Hanabi",
@@ -2205,7 +2322,8 @@
       ],
       "time": 25,
       "complexity": 2.60,
-      "image": "hanabi"
+      "image": "hanabi",
+      "isPlayed": true
     },
     {
       "name": "Arkham noir: Caso #1",
@@ -2223,7 +2341,8 @@
       ],
       "time": 30,
       "complexity": 2.22,
-      "image": "arkham-caso-1"
+      "image": "arkham-caso-1",
+      "isPlayed": false
     },
     {
       "name": "Spoilers: Edición definitiva",
@@ -2242,7 +2361,8 @@
       ],
       "time": 25,
       "complexity": 1.00,
-      "image": "spoilers"
+      "image": "spoilers",
+      "isPlayed": false
     },
     {
       "name": "Imagine",
@@ -2261,7 +2381,8 @@
       ],
       "time": 30,
       "complexity": 1.06,
-      "image": "imagine"
+      "image": "imagine",
+      "isPlayed": true
     },
     {
       "name": "F**k: the game",
@@ -2279,7 +2400,8 @@
       ],
       "time": 15,
       "complexity": 1.29,
-      "image": "fuck-the-game"
+      "image": "fuck-the-game",
+      "isPlayed": true
     },
     {
       "name": "Paris: la cité de la Lumière",
@@ -2299,7 +2421,8 @@
       ],
       "time": 30,
       "complexity": 2.04,
-      "image": "paris-la-cite-de-la-lumiere"
+      "image": "paris-la-cite-de-la-lumiere",
+      "isPlayed": false
     },
     {
       "name": "Paris: Eiffel",
@@ -2317,7 +2440,8 @@
       ],
       "time": 30,
       "complexity": 2.20,
-      "image": "paris-eiffel"
+      "image": "paris-eiffel",
+      "isPlayed": false
     },
     {
       "name": "Mix it (monster edition)",
@@ -2335,7 +2459,8 @@
       ],
       "time": 15,
       "complexity": 1.09,
-      "image": "mix-it-monster"
+      "image": "mix-it-monster",
+      "isPlayed": false
     },
     {
       "name": "El Jurado 1 - El Caso de las Carpas Doradas",
@@ -2354,7 +2479,8 @@
       ],
       "time": 60,
       "complexity": 1.00,
-      "image": "el-jurado-1"
+      "image": "el-jurado-1",
+      "isPlayed": false
     },
     {
       "name": "Antarctica",
@@ -2374,7 +2500,8 @@
       ],
       "time": 300,
       "complexity": 2,
-      "image": "antarctica"
+      "image": "antarctica",
+      "isPlayed": false
     },
     {
       "name": "Nightmare",
@@ -2394,7 +2521,8 @@
       ],
       "time": 120,
       "complexity": 2,
-      "image": "nightmare"
+      "image": "nightmare",
+      "isPlayed": false
     },
     {
       "name": "Espías en la sombra",
@@ -2413,7 +2541,8 @@
       ],
       "time": 30,
       "complexity": 1.69,
-      "image": "espias-en-la-sombra"
+      "image": "espias-en-la-sombra",
+      "isPlayed": false
     },
     {
       "name": "Garabatos y mazmorras",
@@ -2432,7 +2561,8 @@
       ],
       "time": 60,
       "complexity": 1.67,
-      "image": "garabatos-y-mazmorras"
+      "image": "garabatos-y-mazmorras",
+      "isPlayed": false
     },
     {
       "name": "Loading",
@@ -2452,7 +2582,8 @@
       ],
       "time": 5,
       "complexity": 1.20,
-      "image": "loading"
+      "image": "loading",
+      "isPlayed": false
     },
     {
       "name": "Terra Mare",
@@ -2473,7 +2604,8 @@
       ],
       "time": 40,
       "complexity": 1.73,
-      "image": "terra-mare"
+      "image": "terra-mare",
+      "isPlayed": false
     }
   ]
 }
