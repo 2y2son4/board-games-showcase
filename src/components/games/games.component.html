@@ -2,7 +2,7 @@
   <div>
     <div class="side">
       <h2 class="side__title">Games</h2>
-      <h3 class="side__number">
+      <h3 class="side__number" [ngClass]="notPlayedGames ? 'system-font' : 'pink-font'">
         ({{filteredGames.length}})
       </h3>
       <div class="pink-border legend" (click)="filterPlayed()">
@@ -21,8 +21,7 @@
         <div class="game__card-inner">
           <div class="game__card-front" [ngClass]="{'pink-border': game.isPlayed }">
             @if(game.year){
-            <span class="game__year-absolute"
-              [innerHTML]="(game.year.toString()) | highlightText:searchQuery">{{game.year}}</span>
+            <span class="game__year-absolute" [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
             }
             <h2 class="game__title" [innerHTML]="game.name | highlightText:searchQuery">
             </h2>
@@ -40,7 +39,7 @@
                 <p class="game__name" [innerHTML]="game.name | highlightText:searchQuery">
                 </p>
                 @if(game.year){
-                <span class="game__year">({{game.year}})</span>
+                <span class="game__year" [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
                 }
               </div>
               <div class="line"></div>
@@ -66,7 +65,8 @@
                   @else {
                   <p class="game__type">Type: -</p>
                   }
-                  <p class="game__editor">Publisher: {{game.editor ? game.editor : '-'}}</p>
+                  <p class="game__editor"
+                    [innerHTML]="(game.editor ? 'Publisher: ' + game.editor : '-') | highlightText:searchQuery"></p>
             </div>
           </div>
         </div>
