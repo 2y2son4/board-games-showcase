@@ -71,7 +71,8 @@
       "editor": "Explosm Games",
       "year": 2016,
       "type": [
-        "Party"
+        "Party",
+        "Expansion"
       ],
       "language": "en",
       "players": [
@@ -87,7 +88,8 @@
       "editor": "Explosm Games",
       "year": 2016,
       "type": [
-        "Party"
+        "Party",
+        "Expansion"
       ],
       "language": "en",
       "players": [
@@ -408,7 +410,8 @@
       "type": [
         "Cards",
         "Hand management",
-        "Party"
+        "Party",
+        "Expansion"
       ],
       "language": "en",
       "players": [
@@ -426,7 +429,8 @@
       "type": [
         "Cards",
         "Hand management",
-        "Party"
+        "Party",
+        "Expansion"
       ],
       "language": "en",
       "players": [
@@ -498,7 +502,8 @@
       "type": [
         "Party",
         "Cards",
-        "Humor"
+        "Humor",
+        "Expansion"
       ],
       "language": "en",
       "players": [
@@ -630,7 +635,8 @@
         "Bluffing",
         "Exploration",
         "Hidden roles",
-        "Route building"
+        "Route building",
+        "Expansion"
       ],
       "language": "x",
       "players": [
@@ -731,7 +737,8 @@
         "Cards",
         "Humor",
         "Animals",
-        "Hand management"
+        "Hand management",
+        "Expansion"
       ],
       "language": "en",
       "players": [
@@ -1051,7 +1058,8 @@
         "Party",
         "Word game",
         "Communication limits",
-        "Team based"
+        "Team based",
+        "Expansion"
       ],
       "language": "es",
       "players": [
@@ -1202,7 +1210,8 @@
         "Cards",
         "Horror",
         "Humor",
-        "Layering"
+        "Layering",
+        "Expansion"
       ],
       "language": "es",
       "players": [
@@ -1221,7 +1230,8 @@
         "Cards",
         "Horror",
         "Humor",
-        "Layering"
+        "Layering",
+        "Expansion"
       ],
       "language": "es",
       "players": [
@@ -1855,7 +1865,8 @@
         "Fantasy",
         "Fighting",
         "Dice rolling",
-        "Hand management"
+        "Hand management",
+        "Expansion"
       ],
       "language": "en",
       "players": [
@@ -1875,7 +1886,8 @@
         "Fantasy",
         "Fighting",
         "Dice rolling",
-        "Hand management"
+        "Hand management",
+        "Expansion"
       ],
       "language": "en",
       "players": [
@@ -2173,7 +2185,7 @@
         1,
         4
       ],
-      "time": 80,
+      "time": 90,
       "complexity": 3.02,
       "image": "petrichor"
     },
