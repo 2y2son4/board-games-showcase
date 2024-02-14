@@ -157,6 +157,16 @@ export class GamesComponent implements OnInit {
     }
   }
 
+  filterPlayed() {
+    this.filteredGames = this.gamesList;
+    this.filteredGames = this.filteredGames.filter((game) => game.isPlayed);
+  }
+
+  filterNotPlayed() {
+    this.filteredGames = this.gamesList;
+    this.filteredGames = this.filteredGames.filter((game) => !game.isPlayed);
+  }
+
   restartFilters() {
     this.selectedSorting.reset();
     this.selectedEditors.reset();

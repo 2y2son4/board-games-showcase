@@ -8,6 +8,7 @@ export interface GameCard {
   time?: number;
   complexity: number;
   image?: string;
+  isPlayed: boolean;
 }
 
 export interface SortingOrder {
