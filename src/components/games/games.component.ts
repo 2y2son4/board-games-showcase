@@ -124,19 +124,15 @@ export class GamesComponent implements OnInit {
         this.gamesList,
       );
     } else {
-      // Filter games based on search query
-      this.filteredGames = this.filteredGames.filter((game) => {
-        // Convert search query to lowercase for case-insensitive comparison
-        const query = this.searchQuery.toLowerCase();
-
-        // Check if any attribute of the game matches the search query
-        return (
+      // Filter entire gamesList based on search query
+      const query = this.searchQuery.toLowerCase().trim();
+      this.filteredGames = this.gamesList.filter(
+        (game) =>
           game.name.toLowerCase().includes(query) ||
           game.editor.toLowerCase().includes(query) ||
           game.year.toString().includes(query) ||
-          game.type.some((type) => type.toLowerCase().includes(query))
-        );
-      });
+          game.type.some((type) => type.toLowerCase().includes(query)),
+      );
     }
   }
 
