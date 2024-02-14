@@ -4,13 +4,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-main {
-  width: 100%;
-  min-height: 100%;
+.main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3.125rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.1rem;
+  margin: 0 auto 24px;
+  display: flex;
+  max-width: 1400px;
+  padding-left: 14px;
+}
+
+app-games {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  box-sizing: inherit;
-  position: relative;
+}
+
+ul {
+  padding-inline-start: 0;
+  position: sticky;
+}
+
+li {
+  list-style-type: none;
 }
