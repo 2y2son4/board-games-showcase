@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MatSelectChange, MatSelectModule } from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -35,15 +35,11 @@ export class GamesComponent implements OnInit {
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
-
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
-
   selectedSorting = new FormControl<string>('');
   filteredGames: GameCard[] = [];
-
   searchQuery!: string;
-
   playedGames = true;
   notPlayedGames = false;
 
@@ -63,30 +59,31 @@ export class GamesComponent implements OnInit {
   ngOnInit(): void {
     this.gamesList = this.filterFunctions.sortByNameAscending(GAMES_JSON.games);
     this.filteredGames = this.gamesList;
-    this.extractUniqueTypes();
-    this.extractUniqueEditors();
+    this.types = this.extractUniqueValues('type');
+    this.editors = this.extractUniqueValues('editor');
   }
 
-  extractUniqueTypes() {
-    const allTypes: string[] = [];
+  extractUniqueValues(propertyName: keyof GameCard): string[] {
+    const allValues: string[] = [];
     this.gamesList.forEach((game) => {
-      game.type.forEach((type) => {
-        if (!allTypes.includes(type)) {
-          allTypes.push(type);
+      const valueOrArray = game[propertyName];
+
+      if (Array.isArray(valueOrArray)) {
+        valueOrArray.forEach((value) => {
+          const stringValue = String(value);
+          if (stringValue && !allValues.includes(stringValue)) {
+            allValues.push(stringValue);
+          }
+        });
+      } else {
+        const stringValue = String(valueOrArray);
+        if (stringValue && !allValues.includes(stringValue)) {
+          allValues.push(stringValue);
         }
-      });
-    });
-    this.types = allTypes.sort();
-  }
-
-  extractUniqueEditors() {
-    const allEditors: string[] = [];
-    this.gamesList.forEach((game) => {
-      if (!allEditors.includes(game.editor)) {
-        allEditors.push(game.editor);
       }
     });
-    this.editors = allEditors.sort();
+
+    return allValues.sort();
   }
 
   filterGames() {
@@ -125,18 +122,12 @@ export class GamesComponent implements OnInit {
     }
   }
 
-  filterPlayed() {
-    this.filteredGames = this.gamesList;
-    this.filteredGames = this.filteredGames.filter((game) => game.isPlayed);
-    this.playedGames = true;
-    this.notPlayedGames = false;
-  }
-
-  filterNotPlayed() {
-    this.filteredGames = this.gamesList;
-    this.filteredGames = this.filteredGames.filter((game) => !game.isPlayed);
-    this.playedGames = false;
-    this.notPlayedGames = true;
+  togglePlayedFilter(played: boolean): void {
+    this.playedGames = played;
+    this.notPlayedGames = !played;
+    this.filteredGames = this.gamesList.filter(
+      (game) => game.isPlayed === played,
+    );
   }
 
   restartFilters() {
@@ -144,6 +135,8 @@ export class GamesComponent implements OnInit {
     this.selectedEditors.reset();
     this.selectedTypes.reset();
     this.searchQuery = '';
+    this.playedGames = true;
+    this.notPlayedGames = false;
     this.filteredGames = this.filterFunctions.sortByNameAscending(
       this.gamesList,
     );

@@ -5,11 +5,11 @@
       <h3 class="side__number" [ngClass]="notPlayedGames ? 'system-font' : 'pink-font'">
         ({{filteredGames.length}})
       </h3>
-      <div class="pink-border legend" (click)="filterPlayed()">
+      <div class="pink-border legend" (click)="togglePlayedFilter(true)">
         <p>Played</p>
       </div>
       <br />
-      <div class="system-border legend" (click)="filterNotPlayed()">
+      <div class="system-border legend" (click)="togglePlayedFilter(false)">
         <p>Not played</p>
       </div>
     </div>
