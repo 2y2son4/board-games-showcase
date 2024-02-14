@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { MatSelectChange } from '@angular/material/select';
+
 import { GameCard } from '../../../components/games/games.component.model';
 
 @Injectable({
@@ -41,6 +43,26 @@ export class FilterFunctionsService {
     return data.sort((a, b) =>
       this.compareComplexity(b.complexity, a.complexity),
     );
+  }
+
+  selectSorting(change: MatSelectChange, filteredGames: GameCard[]) {
+    const sortFunctions: {
+      [key: string]: (a: GameCard, b: GameCard) => number;
+    } = {
+      'A to Z': (a, b) => a.name.localeCompare(b.name),
+      'Z to A': (a, b) => b.name.localeCompare(a.name),
+      'Year ↑': (a, b) => a.year - b.year,
+      'Year ↓': (a, b) => b.year - a.year,
+      'Time ↑': (a, b) => a.time! - b.time!,
+      'Time ↓': (a, b) => b.time! - a.time!,
+      'Complexity ↑': (a, b) => a.complexity - b.complexity,
+      'Complexity ↓': (a, b) => b.complexity - a.complexity,
+    };
+
+    const sortFunction = sortFunctions[change.value];
+    if (sortFunction) {
+      filteredGames.sort(sortFunction);
+    }
   }
 
   private compareYears(
