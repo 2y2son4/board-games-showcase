@@ -9,3 +9,11 @@ export interface GameCard {
   complexity: number;
   image?: string;
 }
+
+export interface SortingOrder {
+  [key: string]: boolean;
+}
+
+export interface SortingFunctions {
+  [key: string]: (data: GameCard[]) => GameCard[];
+}

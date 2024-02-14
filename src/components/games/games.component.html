@@ -1,15 +1,23 @@
-<h1>2y2son4's Games</h1>
 <div class="content">
-  <div class="left-side">
+  <div>
+    <div class="side__left-far">
+      <h2 class="side__title">Games</h2>
+      <h3 class="side__number">
+        ({{filteredGames.length}})
+      </h3>
+    </div>
+  </div>
+  <div class="side__left">
     <ul class="game__container">
       @for(game of filteredGames;let index = $index; track index){
       <li class="game__card" #game>
         <div class="game__card-inner">
           <div class="game__card-front">
             @if(game.year){
-            <span class="game__year-absolute">{{game.year}}</span>
+            <span class="game__year-absolute"
+              [innerHTML]="(game.year.toString()) | highlightText:searchQuery">{{game.year}}</span>
             }
-            <h2 class="game__title">{{game.name}}
+            <h2 class="game__title" [innerHTML]="game.name | highlightText:searchQuery">
             </h2>
             @if(game.image)
             { <div class="game__image-container"><img class="game__image" src="../../assets/games/{{game.image}}.webp"
@@ -18,20 +26,21 @@
           </div>
           <div class="game__card-back">
             <div class="game__info">
-              @if (game.complexity) {
-              <div [style.background-color]="getColor(game.complexity)" class="game__complexity">{{
-                game.complexity}}</div>}
-
-              <p class="game__name">{{game.name}}
+              <div class="game__info-title">
+                @if (game.complexity) {
+                <div [style.background-color]="getColor(game.complexity)" class="game__complexity">{{
+                  game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>}
+                <p class="game__name" [innerHTML]="game.name | highlightText:searchQuery">
+                </p>
                 @if(game.year){
                 <span class="game__year">({{game.year}})</span>
                 }
-              </p>
+              </div>
               <div class="line"></div>
               @if(game.players){
               <p>
                 @for(player of game.players; let index = $index;let first = $first; let last = $last; track index){
-                {{player === 1 && game.players.length === 1 && first ? 'For' : ''}} {{player}} {{ !last ? 'to' :
+                {{ game.players.length === 1 && first ? 'For' : ''}} {{player}} {{ !last ? 'to' :
                 player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
                 }
               </p>} @else {
@@ -40,37 +49,54 @@
               <p class="game__language">Language: <img class="game__flag"
                   src="../../assets/flags/{{game.language}}-flag.png" alt="flag">
               </p>
-              <p class="game__time">Time: {{game.time ? game.time : '-'}} minutos</p>
-              @if(game.type){
-              <p class="game__type">Type:
-                @for(type of game.type; let index = $index; let last = $last; track index){
-                {{type}}{{ !last ? ',' : ''}}
-                }</p>}
-              @else {
-              <p class="game__type">Type: -</p>
-              }
-              <p class="game__editor">Publisher: {{game.editor ? game.editor : '-'}}</p>
+              <p class="game__time">Time: {{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
+                  ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
+                  @if(game.type){
+                  <p class="game__type">Type:
+                    @for(type of game.type; let index = $index; let last = $last; track index){
+                    {{type}}{{ !last ? ',' : ''}}
+                    }</p>}
+                  @else {
+                  <p class="game__type">Type: -</p>
+                  }
+                  <p class="game__editor">Publisher: {{game.editor ? game.editor : '-'}}</p>
             </div>
           </div>
         </div>
       </li>}
     </ul>
+    @if(filteredGames.length === 0) {
+    <mat-card class="game__no-data">
+      <mat-card-content>No games for this search :(</mat-card-content>
+    </mat-card>}
   </div>
   <div class="divider"></div>
-  <div class="right-side">
+  <div class="side__right">
     <div class="filter__container">
-      <button type="button" mat-button color="accent" (click)="sortAtoZ(gamesList)">A to Z</button>
-      <button type="button" mat-button color="accent" (click)="sortZtoA(gamesList)">Z to A</button>
-      <button type="button" mat-button color="accent" (click)="sortByYearAsc(gamesList)">Year ↑</button>
-      <button type="button" mat-button color="accent" (click)="sortByYearDesc(gamesList)">Year ↓</button>
-      <button type="button" mat-button color="accent" (click)="sortByTimeAsc(gamesList)">Time ↑</button>
-      <button type="button" mat-button color="accent" (click)="sortByTimeDesc(gamesList)">Time ↓</button>
-      <mat-form-field>
-        <mat-label>Types</mat-label>
-        <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGames(selectedTypes.value ?? [])">
+      <mat-form-field style="height: 70px; margin-top: 18px;">
+        <mat-label>Sort</mat-label>
+        <mat-select [formControl]="selectedSorting" (selectionChange)="selectSorting($event)">
+          <mat-option *ngFor="let label of sortingSelectLabels" [value]="label">{{label}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field style="height: 70px;">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Search by name, year, type..." [(ngModel)]="searchQuery" (input)="filterGames()">
+      </mat-form-field>
+      <mat-form-field style="height: 70px;">
+        <mat-label>Filter by types</mat-label>
+        <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGamesByTypeAndEditor()">
           <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
         </mat-select>
       </mat-form-field>
+      <mat-form-field style="height: 70px;">
+        <mat-label>Filter by publisher</mat-label>
+        <mat-select [formControl]="selectedEditors" multiple (selectionChange)="filterGamesByTypeAndEditor()">
+          <mat-option *ngFor="let editor of editors" [value]="editor">{{editor}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button #filterButton type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
+      </button>
     </div>
   </div>
 </div>

@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import GAMES_JSON from '../../static/games.json';
-import { GameCard } from './games.component.model';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MatSelectModule } from '@angular/material/select';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+
+import { GameCard } from './games.component.model';
+import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
+import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
+import GAMES_JSON from '../../static/games.json';
 
 @Component({
   selector: 'app-games',
@@ -14,26 +19,76 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
-    MatSelectModule,
-    MatFormFieldModule,
+    HighlightTextPipe,
     MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    ReactiveFormsModule,
   ],
   templateUrl: './games.component.html',
   styleUrl: './games.component.scss',
 })
 export class GamesComponent implements OnInit {
-  public gamesList: Array<GameCard> = this.sortAtoZ(GAMES_JSON.games);
+  public gamesList: Array<GameCard> = this.filterFunctions.sortByNameAscending(
+    GAMES_JSON.games,
+  );
+
+  selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
-  selectedTypes = new FormControl([]);
+  selectedEditors = new FormControl<string[]>([]);
+  editors: string[] = [];
+  selectedSorting = new FormControl<string>('');
   filteredGames: GameCard[] = [];
+  searchQuery!: string;
 
-  isAlphaUp = false;
-  isYearUp = false;
-  isTimeUp = false;
+  sortingSelectLabels = [
+    'A to Z',
+    'Z to A',
+    'Year ↑',
+    'Year ↓',
+    'Time ↑',
+    'Time ↓',
+    'Complexity ↑',
+    'Complexity ↓',
+  ];
 
-  constructor() {
+  constructor(public filterFunctions: FilterFunctionsService) {
     this.extractUniqueTypes();
+    this.extractUniqueEditors();
+  }
+
+  selectSorting(change: MatSelectChange) {
+    switch (change.value) {
+      case 'A to Z':
+        this.filterFunctions.sortByNameAscending(this.filteredGames);
+        break;
+      case 'Z to A':
+        this.filterFunctions.sortByNameDescending(this.filteredGames);
+        break;
+      case 'Year ↑':
+        this.filterFunctions.sortByYearAscending(this.filteredGames);
+        break;
+      case 'Year ↓':
+        this.filterFunctions.sortByYearDescending(this.filteredGames);
+        break;
+      case 'Time ↑':
+        this.filterFunctions.sortByTimeAscending(this.filteredGames);
+        break;
+      case 'Time ↓':
+        this.filterFunctions.sortByTimeDescending(this.filteredGames);
+        break;
+      case 'Complexity ↑':
+        this.filterFunctions.sortByComplexityAscending(this.filteredGames);
+        break;
+      case 'Complexity ↓':
+        this.filterFunctions.sortByComplexityDescending(this.filteredGames);
+        break;
+
+      default:
+        break;
+    }
   }
 
   ngOnInit(): void {
@@ -52,24 +107,68 @@ export class GamesComponent implements OnInit {
     this.types = allTypes.sort();
   }
 
-  filterGames(selectedTypes: string[]) {
-    console.log('selectedTypes: ', selectedTypes);
-    if (selectedTypes.length === 0) {
-      // If no types are selected, show all games
-      this.filteredGames = this.gamesList;
-    } else {
-      // Filter games based on selected types
-      this.filteredGames = this.gamesList.filter((game) =>
-        game.type.some((type) => selectedTypes.includes(type)),
-      );
+  extractUniqueEditors() {
+    const allEditors: string[] = [];
+    this.gamesList.forEach((game) => {
+      if (!allEditors.includes(game.editor)) {
+        allEditors.push(game.editor);
+      }
+    });
+    this.editors = allEditors.sort();
+  }
 
-      console.log(this.filteredGames);
+  filterGames() {
+    if (this.searchQuery.trim() === '') {
+      // If search query is empty, show all games
+      this.filteredGames = this.filterFunctions.sortByNameAscending(
+        this.gamesList,
+      );
+    } else {
+      // Filter games based on search query
+      this.filteredGames = this.filteredGames.filter((game) => {
+        // Convert search query to lowercase for case-insensitive comparison
+        const query = this.searchQuery.toLowerCase();
+
+        // Check if any attribute of the game matches the search query
+        return (
+          game.name.toLowerCase().includes(query) ||
+          game.editor.toLowerCase().includes(query) ||
+          game.year.toString().includes(query) ||
+          game.type.some((type) => type.toLowerCase().includes(query))
+        );
+      });
     }
   }
 
-  onSelectionChange() {
-    console.log('Selection changed');
-    this.filterGames(this.selectedTypes.value ?? []);
+  filterGamesByTypeAndEditor() {
+    const selectedTypeValues = this.selectedTypes.value ?? [];
+    const selectedEditorValues = this.selectedEditors.value ?? [];
+
+    if (selectedTypeValues.length === 0 && selectedEditorValues!.length === 0) {
+      // If no types or editors are selected, show all games
+      this.filteredGames = this.gamesList;
+    } else {
+      // Filter games based on selected types and/or editors
+      this.filteredGames = this.gamesList.filter((game) => {
+        const matchTypes =
+          selectedTypeValues.length === 0 ||
+          game.type.some((type) => selectedTypeValues.includes(type));
+        const matchEditors =
+          selectedEditorValues!.length === 0 ||
+          selectedEditorValues!.includes(game.editor);
+        return matchTypes && matchEditors;
+      });
+    }
+  }
+
+  restartFilters() {
+    this.selectedSorting.reset();
+    this.selectedEditors.reset();
+    this.selectedTypes.reset();
+    this.searchQuery = '';
+    this.filteredGames = this.filterFunctions.sortByNameAscending(
+      this.gamesList,
+    );
   }
 
   getColor(number: number): string {
@@ -115,61 +214,5 @@ export class GamesComponent implements OnInit {
       '#' + ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
 
     return colorHex;
-  }
-
-  sortAtoZ(data: Array<GameCard>) {
-    return data.sort((a, b) => a.name.localeCompare(b.name));
-  }
-
-  sortZtoA(data: Array<GameCard>) {
-    return data.sort((a, b) => b.name.localeCompare(a.name));
-  }
-
-  sortByYearAsc(data: Array<GameCard>) {
-    return data.sort((a, b) => {
-      if (a.year < 0) {
-        return -1;
-      }
-      if (b.year < 0) {
-        return 1;
-      }
-      return b.year - a.year;
-    });
-  }
-
-  sortByYearDesc(data: Array<GameCard>) {
-    return data.sort((a, b) => {
-      if (a.year > 0) {
-        return -1;
-      }
-      if (b.year > 0) {
-        return 1;
-      }
-      return a.year - b.year;
-    });
-  }
-
-  sortByTimeAsc(data: Array<GameCard>) {
-    return data.sort((a, b) => {
-      if (a.time! < 0) {
-        return -1;
-      }
-      if (b.time! < 0) {
-        return 1;
-      }
-      return b.time! - a.time!;
-    });
-  }
-
-  sortByTimeDesc(data: Array<GameCard>) {
-    return data.sort((a, b) => {
-      if (a.time! > 0) {
-        return -1;
-      }
-      if (b.time! > 0) {
-        return 1;
-      }
-      return a.time! - b.time!;
-    });
   }
 }

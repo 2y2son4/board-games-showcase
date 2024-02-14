@@ -6,14 +6,6 @@ ul {
   padding-inline-start: 0;
 }
 
-h1 {
-  font-size: 3.125rem;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 0.1rem;
-  margin: 0 0 24px 0;
-}
-
 main {
   width: 100%;
   min-height: 100%;
@@ -29,32 +21,45 @@ main {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1400px;
 }
 
-button {
-  border: 4px solid;
-  border-radius: 12px;
-  padding: 8px;
-  min-width: 100px;
-  background-color: inherit;
-  font-weight: 700;
-  font-size: 16px;
-}
+.side {
+  &__right {
+    width: 20%;
+  }
 
-.right-side {
-  width: 20%;
-}
-.left-side {
-  width: 80%;
+  &__left {
+    width: 80%;
+
+    &-far {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 14px;
+      margin: 14px;
+      color: #c2185b;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+  }
+
+  &__number {
+    font-size: 26px;
+    text-align: right;
+  }
 }
 
 .filter {
   &__container {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    margin: 16px auto;
+    justify-content: center;
+    gap: 14px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 14px;
 
     > button {
       cursor: pointer;
@@ -80,9 +85,15 @@ button {
     background-color: transparent;
     width: 300px;
     height: 300px;
-
     margin: 14px;
     perspective: 1000px;
+    cursor: url("https://images.emojiterra.com/openmoji/v15.0/512px/21a9.png"),
+      pointer;
+
+    @media screen and (max-width: 767px) {
+      width: 200px;
+      height: 200px;
+    }
 
     &-inner {
       position: relative;
@@ -91,7 +102,6 @@ button {
       text-align: center;
       transition: transform 0.8s;
       transform-style: preserve-3d;
-      // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
     &:hover &-inner {
@@ -103,13 +113,14 @@ button {
       position: absolute;
       width: 100%;
       height: 100%;
-      -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       border: 4px solid;
       border-radius: 12px;
       padding: 8px;
       display: flex;
       flex-direction: column;
+      transform: rotateX(0deg);
     }
 
     &-back {
@@ -127,8 +138,8 @@ button {
 
   &__complexity {
     position: absolute;
-    top: -14px;
-    right: -14px;
+    top: -20px;
+    right: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,6 +148,7 @@ button {
     padding: 18px;
     border-radius: 50%;
     color: #000000;
+    border: 4px solid #fff;
     font-weight: 700;
   }
 
@@ -147,24 +159,23 @@ button {
   }
 
   &__year {
-    font-size: 14px;
-    font-weight: 700;
-    color: #666;
+    font-size: 16px;
 
     &-absolute {
+      color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
       font-size: 14px;
       font-weight: 600;
-      background-color: #666;
+      background-color: #b9b6b6;
       padding: 4px;
       width: 48px;
       height: 32px;
       top: -16px;
       right: -24px;
-      border: 4px solid;
+      border: 4px solid #fff;
       border-radius: 12px;
     }
   }
@@ -188,19 +199,29 @@ button {
     align-items: flex-start;
     padding: 12px;
     text-align: left;
-  }
 
-  &__type {
-    font-size: 16px;
+    &-title {
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+    }
   }
 
   &__language {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
   }
 
   &__flag {
     width: 24px;
+  }
+
+  &__no-data {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 18px;
   }
 }
 
