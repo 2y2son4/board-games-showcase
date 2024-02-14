@@ -43,6 +43,9 @@ export class GamesComponent implements OnInit {
   filteredGames: GameCard[] = [];
   searchQuery!: string;
 
+  playedGames = true;
+  notPlayedGames = false;
+
   sortingSelectLabels = [
     'A to Z',
     'Z to A',
@@ -160,11 +163,15 @@ export class GamesComponent implements OnInit {
   filterPlayed() {
     this.filteredGames = this.gamesList;
     this.filteredGames = this.filteredGames.filter((game) => game.isPlayed);
+    this.playedGames = true;
+    this.notPlayedGames = false;
   }
 
   filterNotPlayed() {
     this.filteredGames = this.gamesList;
     this.filteredGames = this.filteredGames.filter((game) => !game.isPlayed);
+    this.playedGames = false;
+    this.notPlayedGames = true;
   }
 
   restartFilters() {
