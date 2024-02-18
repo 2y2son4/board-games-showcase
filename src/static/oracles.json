@@ -2,115 +2,123 @@
   "oracles": [
     {
       "name": "Tarotorial",
-      "editor": "",
-      "year": "",
-      "type": [
-        "Tarot/oracle"
-      ],
+      "artist": "",
       "language": "x",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 1,
       "image": "tarotorial"
     },
     {
       "name": "Wand wood",
-      "editor": "",
-      "year": "",
-      "type": [
-        "Tarot/oracle"
-      ],
+      "artist": "",
       "language": "x",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 1,
       "image": "wand-wood"
     },
     {
       "name": "Green witch oracle",
-      "editor": "",
-      "year": "",
-      "type": [
-        "Tarot/oracle"
-      ],
+      "artist": "",
       "language": "x",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 1,
       "image": "green-witch-oracle"
     },
     {
       "name": "Vibration",
-      "editor": "Kyle gray",
-      "year": "",
-      "type": [
-        "Tarot/oracle"
-      ],
+      "artist": "Kyle gray",
       "language": "x",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 1,
       "image": "vibration"
     },
     {
       "name": "Archetypes",
-      "editor": "",
-      "year": "",
-      "type": [
-        "Tarot/oracle"
-      ],
+      "artist": "",
       "language": "x",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 1,
       "image": "archetypes"
     },
     {
-      "name": "Spirit Junkie",
-      "editor": "",
-      "year": "",
-      "type": [
-        "Tarot/oracle"
-      ],
+      "name": "Prism Oracle",
+      "artist": "",
       "language": "x",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 1,
+      "image": "prism-oracle"
+    },
+    {
+      "name": "Spirit Junkie",
+      "artist": "",
+      "language": "x",
       "image": "spirit-junkie"
     },
     {
-      "name": "Prism Oracle",
-      "editor": "",
-      "year": "",
-      "type": [
-        "Tarot/oracle"
-      ],
-      "language": "x",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 1,
-      "image": "prism-oracle"
+      "name": "Slavic folklore",
+      "artist": "Faina Lorah",
+      "language": "en",
+      "image": "slavic-folklore"
+    },
+    {
+      "name": "Broke bitch",
+      "artist": "Kat Dehring and Taryn Masterson",
+      "language": "en",
+      "image": "broke-bitch"
+    },
+    {
+      "name": "Super attractor",
+      "artist": "Gabrielle Bernstein",
+      "language": "en",
+      "image": "super-attractor"
+    },
+    {
+      "name": "Housewives tarot",
+      "artist": "Paul Kepple and Jude Buffum",
+      "language": "en",
+      "image": "housewives-tarot"
+    },
+    {
+      "name": "Rainbow tarot",
+      "artist": "Sonia Lazo",
+      "language": "en",
+      "image": "rainbow-tarot"
+    },
+    {
+      "name": "A totally unofficial Adventure Time tarot deck",
+      "artist": "Katherine Hillier",
+      "language": "en",
+      "image": "adventure-time-tarot"
+    },
+    {
+      "name": "Food fortunes",
+      "artist": "Josh Lafayette",
+      "language": "en",
+      "image": "food-fortunes"
+    },
+    {
+      "name": "8 bit fantasy tarot deck",
+      "artist": "",
+      "language": "en",
+      "image": "8-bit-tarot"
+    },
+    {
+      "name": "Buffy the Vampire slayer tarot deck",
+      "artist": "Karl James Mountford",
+      "language": "en",
+      "image": "buffy-tarot"
+    },
+    {
+      "name": "Woodland gardens",
+      "artist": "Jessica Roux",
+      "language": "en",
+      "image": "woodland-gardens"
+    },
+    {
+      "name": "Botanical inspirations",
+      "artist": "Lynn Araujo",
+      "language": "en",
+      "image": "botanical-inspirations"
+    },
+    {
+      "name": "Synchronicity",
+      "artist": "Cathy Nichols",
+      "language": "en",
+      "image": "synchronicity"
+    },
+    {
+      "name": "Doodle tarot",
+      "artist": "Em K. Holloway",
+      "language": "en",
+      "image": "doodle-tarot"
     }
   ]
 }

@@ -2326,7 +2326,7 @@
       "isPlayed": true
     },
     {
-      "name": "Arkham noir: Caso #1",
+      "name": "Arkham Noir #1: los asesinatos del culto de la Bruja",
       "editor": "Ludonova",
       "year": 2017,
       "type": [
@@ -2605,6 +2605,197 @@
       "time": 40,
       "complexity": 1.73,
       "image": "terra-mare",
+      "isPlayed": false
+    },
+    {
+      "name": "Railroad ink: azul profundo",
+      "editor": "Devir",
+      "year": 2018,
+      "type": [
+        "Family",
+        "Connections",
+        "Dice rolling",
+        "Network and route building",
+        "Line drawing"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.47,
+      "image": "railroad-ink-azul",
+      "isPlayed": true
+    },
+    {
+      "name": "Arkham Noir #2: Invocado por el Trueno",
+      "editor": "Ludonova",
+      "year": 2018,
+      "type": [
+        "Solitaire",
+        "Fantasy",
+        "Horror",
+        "Cards"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 30,
+      "complexity": 2.47,
+      "image": "arkham-caso-2",
+      "isPlayed": false
+    },
+    {
+      "name": "Arkham Noir #3: Abismos Infinitos de Oscuridad",
+      "editor": "Ludonova",
+      "year": 2021,
+      "type": [
+        "Solitaire",
+        "Fantasy",
+        "Horror",
+        "Cards"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 30,
+      "complexity": 2.86,
+      "image": "arkham-caso-3",
+      "isPlayed": false
+    },
+    {
+      "name": "Detective: Sigue la Pista",
+      "editor": "Pegasus Spiele",
+      "year": 2020,
+      "type": [
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 120,
+      "complexity": 2.60,
+      "image": "detective-sigue-la-pista",
+      "isPlayed": false
+    },
+    {
+      "name": "Mr. Jack",
+      "editor": "Devir",
+      "year": 2021,
+      "type": [
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 40,
+      "complexity": 1.73,
+      "image": "mr-jack",
+      "isPlayed": false
+    },
+    {
+      "name": "Lost Cities: Roll & Write",
+      "editor": "Devir",
+      "year": 2021,
+      "type": [
+        "Dice rolling",
+        "Paper and pencil"
+
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.17,
+      "image": "lost-cities",
+      "isPlayed": false
+    },
+    {
+      "name": "Detective: A Modern Crime Board Game",
+      "editor": "Portal Games",
+      "year": 2018,
+      "type": [
+        "Deduction",
+        "Murder/Mystery",
+        "Narrative choice/paragraph",
+        "Solitaire",
+        "Storytelling"
+
+      ],
+      "language": "en",
+      "players": [
+        1,
+        5
+      ],
+      "time": 180,
+      "complexity": 2.74,
+      "image": "detective-a-modern-crime",
+      "isPlayed": false
+    },
+    {
+      "name": "Pictomania (Second edition)",
+      "editor": "Czech Games Edition",
+      "year": 2011,
+      "type": [
+        "Line drawing",
+        "Party",
+        "Real time"
+
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 25,
+      "complexity": 1.53,
+      "image": "pictomania",
+      "isPlayed": false
+    },
+    {
+      "name": "Magnetism",
+      "editor": "Ankama",
+      "year": 2022,
+      "type": [
+        "Strategy"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        4
+      ],
+      "time": 25,
+      "complexity": 1.53,
+      "image": "magnetism",
+      "isPlayed": true
+    },
+    {
+      "name": "Funky pollo",
+      "editor": "DV Games",
+      "year": 2018,
+      "type": [
+        "Party",
+        "Children",
+        "Real time",
+        "Simultaneous action selection"
+
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 2,
+      "complexity": 1.00,
+      "image": "funky-pollo",
       "isPlayed": false
     }
   ]
