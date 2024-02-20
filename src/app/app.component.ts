@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute, RouterModule, RouterOutlet } from '@angular/router';
 
-import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenav } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { UserComponent } from '../components/user/user.component';
@@ -14,31 +15,22 @@ import { GamesComponent } from '../components/games/games.component';
 // @Component afecta a la clase AppComponent
 @Component({
   selector: 'app-root',
-  standalone: true,
-  // si queremos utilizar cualquier componente o cualquier módulo
-  // ahora hay que ponerlo en "imports" de la siguiente línea
   // standalone previene mejor el código repetido
+  standalone: true,
+  /** si queremos utilizar cualquier componente o cualquier módulo
+   * ahora hay que ponerlo en "imports" de la siguiente línea. */
   imports: [
     CommonModule,
     GamesComponent,
     MatButtonModule,
     MatIconModule,
+    MatMenuModule,
     MatSidenav,
-    MatSidenavModule,
     MatToolbarModule,
-    RouterOutlet,
+    RouterModule,
     UserComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  @ViewChild('sidenav') sidenav!: MatSidenav;
-
-  reason = '';
-
-  close(reason: string) {
-    this.reason = reason;
-    this.sidenav.close();
-  }
-}
+export class AppComponent {}

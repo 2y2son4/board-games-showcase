@@ -1,0 +1,64 @@
+@use "@angular/material" as mat;
+@include mat.core();
+@use "sass:map";
+
+$pink-black-palette: (
+  50: #f3e6f9,
+  100: #e0b3f0,
+  200: #cd7fec,
+  300: #ba4beb,
+  400: #a828dd,
+  500: #9400d0,
+  600: #8100b8,
+  700: #6e00a0,
+  800: #5a0088,
+  900: #470070,
+  A100: #f7c8ff,
+  A200: #ff94ff,
+  A400: #ff61ff,
+  A700: #e600e6,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: rgba(0, 0, 0, 0.87),
+    A200: rgba(0, 0, 0, 0.87),
+    A400: rgba(0, 0, 0, 0.87),
+    A700: rgba(0, 0, 0, 0.87),
+  ),
+);
+
+$my-primary: mat.define-palette(mat.$pink-black-palette, 500);
+$my-accent: mat.define-palette(mat.$pink-black-palette, A200, A100, A400);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette(mat.$pink-black-palette);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($my-theme);
+
+// Emit styles for MatButton based on `$my-theme`. Because the configuration
+// passed to `define-light-theme` omits typography, `button-theme` will not
+// emit any typography styles.
+@include mat.button-theme($my-theme);
+@include mat.all-component-themes($my-theme);
+// Include the theme mixins for other components you use here.

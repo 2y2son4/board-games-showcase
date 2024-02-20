@@ -1,0 +1,10 @@
+@import "../common-styles.scss";
+
+.oracles {
+  display: flex;
+  flex-direction: column;
+
+  &__card {
+    display: flex;
+  }
+}

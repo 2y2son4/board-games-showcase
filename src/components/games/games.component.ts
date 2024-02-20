@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 import { GameCard } from './games.component.model';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
@@ -28,7 +28,7 @@ import GAMES_JSON from '../../static/games.json';
     ReactiveFormsModule,
   ],
   templateUrl: './games.component.html',
-  styleUrl: './games.component.scss',
+  styleUrls: ['./games.component.scss', '../common-styles.scss'],
 })
 export class GamesComponent implements OnInit {
   gamesList!: Array<GameCard>;
@@ -39,7 +39,7 @@ export class GamesComponent implements OnInit {
   editors: string[] = [];
   selectedSorting = new FormControl<string>('');
   filteredGames: GameCard[] = [];
-  searchQuery!: string;
+  searchQuery = '';
   playedGames = true;
   notPlayedGames = false;
 

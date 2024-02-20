@@ -1,1 +1,27 @@
-<p>oracles works!</p>
+<div class="content">
+  <div>
+    <div class="side">
+      <h2 class="side__title">Oracles</h2>
+      <h3 class="side__number">
+        Number of oracles
+      </h3>
+    </div>
+  </div>
+  <div class="card">
+    <ul *ngFor="let oracle of oraclesList" class="card__container">
+      <li class="card__list">
+        <p>
+          {{oracle.name}} by
+          {{oracle.artist}}
+        </p>
+        <p class="card__language">Language: <img class="card__flag"
+            src="../../assets/flags/{{oracle.language}}-flag.png" alt="flag">
+        </p>
+        @if(oracle.image)
+        { <div class="card__image-container"><img class="card__image" src="../../assets/oracles/{{oracle.image}}.webp"
+            alt="{{oracle.image}} image"></div>
+        }
+      </li>
+    </ul>
+  </div>
+</div>

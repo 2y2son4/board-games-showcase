@@ -2,44 +2,39 @@
   <div>
     <div class="side">
       <h2 class="side__title">Games</h2>
-      <h3 class="side__number" [ngClass]="notPlayedGames ? 'system-font' : 'pink-font'">
+      <h3 class="side__number" [ngClass]="notPlayedGames ? 'font-system' : 'font-pink'">
         ({{filteredGames.length}})
       </h3>
-      <div class="pink-border legend" (click)="togglePlayedFilter(true)">
-        <p>Played</p>
-      </div>
-      <br />
-      <div class="system-border legend" (click)="togglePlayedFilter(false)">
-        <p>Not played</p>
-      </div>
     </div>
   </div>
-  <div class="game">
-    <ul class="game__container">
+  <div class="card">
+    <ul class="card__container">
       @for(game of filteredGames;let index = $index; track index){
-      <li class="game__card" #game>
-        <div class="game__card-inner">
-          <div class="game__card-front" [ngClass]="{'pink-border': game.isPlayed }">
+      <li class="card__list" #game>
+        <div class="card__list-inner">
+          <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
             @if(game.year){
-            <span class="game__year-absolute" [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
+            <span class="card__year-absolute" [ngClass]="{'border-pink': game.isPlayed }"
+              [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
             }
-            <h2 class="game__title" [innerHTML]="game.name | highlightText:searchQuery">
+            <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery">
             </h2>
             @if(game.image)
-            { <div class="game__image-container"><img class="game__image" src="../../assets/games/{{game.image}}.webp"
+            { <div class="card__image-container"><img class="card__image" src="../../assets/games/{{game.image}}.webp"
                 alt="{{game.name}} image"></div>
             }
           </div>
-          <div class="game__card-back" [ngClass]="{'pink-border': game.isPlayed }">
-            <div class="game__info">
-              <div class="game__info-title">
-                @if (game.complexity) {
-                <div [style.background-color]="getColor(game.complexity)" class="game__complexity">{{
-                  game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>}
-                <p class="game__name" [innerHTML]="game.name | highlightText:searchQuery">
+          <div class="card__list-back" [ngClass]="{'border-pink': game.isPlayed }">
+            <div class="card__info">
+              @if (game.complexity) {
+              <div [style.background-color]="getColor(game.complexity)" class="card__complexity">{{
+                game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>}
+              <div class="card__info-title">
+                <p class="card__name" [innerHTML]="game.name | highlightText:searchQuery">
                 </p>
                 @if(game.year){
-                <span class="game__year" [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
+                <span class="card__year"
+                  [innerHTML]="('(' + game.year.toString() + ')') | highlightText:searchQuery"></span>
                 }
               </div>
               <div class="line"></div>
@@ -52,28 +47,29 @@
               </p>} @else {
               <p>-</p>
               }
-              <p class="game__language">Language: <img class="game__flag"
+              <p class="card__language">Language: <img class="card__flag"
                   src="../../assets/flags/{{game.language}}-flag.png" alt="flag">
               </p>
-              <p class="game__time">Time: {{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
+              <p class="card__time">Time: {{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
                   ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
                   @if(game.type){
-                  <p class="game__type">Type:
+                  <p class="card__type">Type:
                     @for(type of game.type; let index = $index; let last = $last; track index){
                     {{type}}{{ !last ? ',' : ''}}
                     }</p>}
                   @else {
-                  <p class="game__type">Type: -</p>
+                  <p class="card__type">Type: -</p>
                   }
-                  <p class="game__editor"
+                  <p class="card__editor"
                     [innerHTML]="(game.editor ? 'Publisher: ' + game.editor : '-') | highlightText:searchQuery"></p>
             </div>
           </div>
         </div>
       </li>}
+
     </ul>
     @if(filteredGames.length === 0) {
-    <mat-card class="game__no-data">
+    <mat-card class="card__no-data">
       <mat-card-content>No games for this search :(</mat-card-content>
     </mat-card>}
   </div>
@@ -103,6 +99,15 @@
           <mat-option *ngFor="let editor of editors" [value]="editor">{{editor}}</mat-option>
         </mat-select>
       </mat-form-field>
+      <div class="legend__container">
+        <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayedFilter(true)">
+          Played
+        </button>
+        <button class="button-system legend__content" type="button" mat-raised-button
+          (click)="togglePlayedFilter(false)">
+          <p>Not played</p>
+        </button>
+      </div>
       <button #filterButton type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
       </button>
     </div>

@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import ORACLES_JSON from '../../static/oracles.json';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-oracles',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './oracles.component.html',
-  styleUrl: './oracles.component.scss'
+  styleUrl: './oracles.component.scss',
 })
-export class OraclesComponent {
+export class OraclesComponent implements OnInit {
+  oraclesList!: any;
 
+  constructor() {}
+
+  ngOnInit(): void {
+    this.oraclesList = ORACLES_JSON.oracles;
+  }
 }
