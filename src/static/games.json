@@ -2594,7 +2594,7 @@
         "Puzzle",
         "Territory building",
         "Map addition",
-        "Team based game",
+        "Team-based game",
         "Tile placement"
       ],
       "language": "es",
@@ -2796,6 +2796,86 @@
       "time": 2,
       "complexity": 1.00,
       "image": "funky-pollo",
+      "isPlayed": false
+    },
+    {
+      "name": "Love letter",
+      "editor": "Z-Man games",
+      "year": 2019,
+      "type": [
+        "Hand management",
+        "Player elimination",
+        "Score-and-reset-game",
+        "Renaissance"
+
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.13,
+      "image": "love-letter",
+      "isPlayed": false
+    },
+    {
+      "name": "Avalon",
+      "editor": "Indie boards & cards",
+      "year": 2012,
+      "type": [
+        "Hidden roles",
+        "Deduction",
+        "Bluffing",
+        "Team-based game"
+
+      ],
+      "language": "en",
+      "players": [
+        5,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.74,
+      "image": "avalon",
+      "isPlayed": false
+    },
+    {
+      "name": "Behind the campaign",
+      "editor": "A & B Games",
+      "year": 2019,
+      "type": [
+        "Strategy",
+        "Political"
+
+      ],
+      "language": "en",
+      "players": [
+        4,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "image": "behind-the-campaign",
+      "isPlayed": false
+    },
+    {
+      "name": "War of Roshambo: Kingdom clash",
+      "editor": "A & B Games",
+      "year": 2019,
+      "type": [
+        "Medieval",
+        "Territory building"
+
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "image": "kingdom-clash",
       "isPlayed": false
     }
   ]
