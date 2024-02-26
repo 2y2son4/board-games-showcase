@@ -79,6 +79,15 @@
       <mat-form-field style="height: 70px; margin-top: 18px;">
         <mat-label>Search</mat-label>
         <input matInput placeholder="Search by name, year, type..." [(ngModel)]="searchQuery" (input)="filterGames()">
+        @if (searchQuery) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="restartSearch()">
+          <mat-icon>close</mat-icon>
+        </button>
+        }
+      </mat-form-field>
+      <mat-form-field style="height: 70px;"><mat-label>Number of players</mat-label>
+        <input matInput type="number" maxlength="2" id="exactPlayers" name="exactPlayers" [(ngModel)]="exactPlayers"
+          (input)="filterGamesByExactPlayers()">
       </mat-form-field>
       <mat-form-field style="height: 70px;">
         <mat-label>Sort</mat-label>

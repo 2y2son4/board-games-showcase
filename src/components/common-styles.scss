@@ -8,7 +8,9 @@ p {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
+  padding: 0 24px;
+  margin: 0 auto;
 }
 
 .side {
@@ -36,6 +38,7 @@ p {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
@@ -209,8 +212,6 @@ p {
 }
 
 .filter {
-  width: 20%;
-
   &__container {
     display: flex;
     flex-wrap: wrap;

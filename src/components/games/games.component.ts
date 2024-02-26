@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 
 import { GameCard } from './games.component.model';
@@ -24,6 +30,7 @@ import GAMES_JSON from '../../static/games.json';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     MatSelectModule,
     ReactiveFormsModule,
   ],
@@ -42,6 +49,8 @@ export class GamesComponent implements OnInit {
   searchQuery = '';
   playedGames = true;
   notPlayedGames = false;
+  exactPlayers!: number;
+  gamesFilterForm!: FormGroup;
 
   sortingSelectLabels = [
     'A to Z',
@@ -61,6 +70,16 @@ export class GamesComponent implements OnInit {
     this.filteredGames = this.gamesList;
     this.types = this.extractUniqueValues('type');
     this.editors = this.extractUniqueValues('editor');
+
+    this.gamesFilterForm = new FormGroup({
+      searchQuery: new FormControl(''),
+      exactPlayers: new FormControl(''),
+      selectedSorting: new FormControl([]),
+      selectedTypes: new FormControl([]),
+      selectedEditors: new FormControl([]),
+      isPlayed: new FormControl(false),
+      isNotPlayed: new FormControl(false),
+    });
   }
 
   extractUniqueValues(propertyName: keyof GameCard): string[] {
@@ -135,8 +154,16 @@ export class GamesComponent implements OnInit {
     this.selectedEditors.reset();
     this.selectedTypes.reset();
     this.searchQuery = '';
+    this.exactPlayers = 0;
     this.playedGames = true;
     this.notPlayedGames = false;
+    this.filteredGames = this.filterFunctions.sortByNameAscending(
+      this.gamesList,
+    );
+  }
+
+  restartSearch() {
+    this.searchQuery = '';
     this.filteredGames = this.filterFunctions.sortByNameAscending(
       this.gamesList,
     );
@@ -179,5 +206,32 @@ export class GamesComponent implements OnInit {
       '#' + ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
 
     return colorHex;
+  }
+
+  filterGamesByExactPlayers() {
+    const exactPlayersValue = this.exactPlayers;
+
+    if (exactPlayersValue <= 0) {
+      // Invalid input, show all games
+      this.filteredGames = this.gamesList;
+    } else {
+      // Filter games based on exact number of players
+      this.filteredGames = this.gamesList.filter((game) => {
+        const players = game.players;
+        if (players) {
+          if (players.length === 1) {
+            // Check if exactPlayersValue matches the single value in the players array
+            return players[0] === exactPlayersValue;
+          } else if (players.length === 2) {
+            // Check if exactPlayersValue falls within the player count range
+            const [minPlayers, maxPlayers] = players;
+            return (
+              minPlayers <= exactPlayersValue && exactPlayersValue <= maxPlayers
+            );
+          }
+        }
+        return false;
+      });
+    }
   }
 }
