@@ -19,6 +19,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+        
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli@16.2.10
 
       - name: Run tests
         run: npm run test
