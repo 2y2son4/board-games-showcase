@@ -1,4 +1,4 @@
-# Angular 17 Playground for `2y2son4`
+# Board games and oracles showcase for `2y2son4`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
