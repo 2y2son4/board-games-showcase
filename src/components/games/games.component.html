@@ -27,7 +27,7 @@
           <div class="card__list-back" [ngClass]="{'border-pink': game.isPlayed }">
             <div class="card__info">
               @if (game.complexity) {
-              <div [style.background-color]="getColor(game.complexity)" class="card__complexity">{{
+              <div [style.background-color]="commonFunctions.getColor(game.complexity)" class="card__complexity">{{
                 game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>}
               <div class="card__info-title">
                 <p class="card__name" [innerHTML]="game.name | highlightText:searchQuery">

@@ -18,6 +18,7 @@ import { GameCard } from './games.component.model';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import GAMES_JSON from '../../static/games.json';
+import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
 
 @Component({
   selector: 'app-games',
@@ -35,7 +36,7 @@ import GAMES_JSON from '../../static/games.json';
     ReactiveFormsModule,
   ],
   templateUrl: './games.component.html',
-  styleUrls: ['./games.component.scss', '../common-styles.scss'],
+  styleUrl: '../common-styles.scss',
 })
 export class GamesComponent implements OnInit {
   gamesList!: Array<GameCard>;
@@ -49,7 +50,7 @@ export class GamesComponent implements OnInit {
   searchQuery = '';
   playedGames = true;
   notPlayedGames = false;
-  exactPlayers!: number;
+  exactPlayers!: number | undefined;
   gamesFilterForm!: FormGroup;
 
   sortingSelectLabels = [
@@ -63,7 +64,10 @@ export class GamesComponent implements OnInit {
     'Complexity ↓',
   ];
 
-  constructor(public filterFunctions: FilterFunctionsService) {}
+  constructor(
+    public filterFunctions: FilterFunctionsService,
+    public commonFunctions: CommonFunctionsService,
+  ) {}
 
   ngOnInit(): void {
     this.gamesList = this.filterFunctions.sortByNameAscending(GAMES_JSON.games);
@@ -144,17 +148,17 @@ export class GamesComponent implements OnInit {
   togglePlayedFilter(played: boolean): void {
     this.playedGames = played;
     this.notPlayedGames = !played;
-    this.filteredGames = this.gamesList.filter(
+    this.filteredGames = this.filteredGames.filter(
       (game) => game.isPlayed === played,
     );
   }
 
   restartFilters() {
     this.selectedSorting.reset();
-    this.selectedEditors.reset();
-    this.selectedTypes.reset();
+    this.selectedEditors.reset([]);
+    this.selectedTypes.reset([]);
     this.searchQuery = '';
-    this.exactPlayers = 0;
+    this.exactPlayers = undefined;
     this.playedGames = true;
     this.notPlayedGames = false;
     this.filteredGames = this.filterFunctions.sortByNameAscending(
@@ -169,64 +173,22 @@ export class GamesComponent implements OnInit {
     );
   }
 
-  getColor(number: number): string {
-    const greenColor = [54, 174, 124];
-    const yellowColor = [249, 217, 35];
-    const redColor = [235, 83, 83];
-
-    const percentage = (number - 1) / 4;
-
-    let r, g, b;
-    if (percentage < 0.5) {
-      r = Math.round(
-        greenColor[0] + percentage * 2 * (yellowColor[0] - greenColor[0]),
-      );
-      g = Math.round(
-        greenColor[1] + percentage * 2 * (yellowColor[1] - greenColor[1]),
-      );
-      b = Math.round(
-        greenColor[2] + percentage * 2 * (yellowColor[2] - greenColor[2]),
-      );
-    } else {
-      r = Math.round(
-        yellowColor[0] +
-          (percentage - 0.5) * 2 * (redColor[0] - yellowColor[0]),
-      );
-      g = Math.round(
-        yellowColor[1] +
-          (percentage - 0.5) * 2 * (redColor[1] - yellowColor[1]),
-      );
-      b = Math.round(
-        yellowColor[2] +
-          (percentage - 0.5) * 2 * (redColor[2] - yellowColor[2]),
-      );
-    }
-
-    const colorHex =
-      '#' + ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
-
-    return colorHex;
-  }
-
   filterGamesByExactPlayers() {
     const exactPlayersValue = this.exactPlayers;
 
-    if (exactPlayersValue <= 0) {
-      // Invalid input, show all games
+    if (exactPlayersValue! <= 0) {
       this.filteredGames = this.gamesList;
     } else {
-      // Filter games based on exact number of players
       this.filteredGames = this.gamesList.filter((game) => {
         const players = game.players;
         if (players) {
           if (players.length === 1) {
-            // Check if exactPlayersValue matches the single value in the players array
             return players[0] === exactPlayersValue;
           } else if (players.length === 2) {
-            // Check if exactPlayersValue falls within the player count range
             const [minPlayers, maxPlayers] = players;
             return (
-              minPlayers <= exactPlayersValue && exactPlayersValue <= maxPlayers
+              minPlayers <= exactPlayersValue! &&
+              exactPlayersValue! <= maxPlayers
             );
           }
         }

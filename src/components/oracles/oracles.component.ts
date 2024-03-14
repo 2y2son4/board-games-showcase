@@ -1,18 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import ORACLES_JSON from '../../static/oracles.json';
 import { CommonModule } from '@angular/common';
+import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
+import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
 
 @Component({
   selector: 'app-oracles',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HighlightTextPipe],
   templateUrl: './oracles.component.html',
-  styleUrl: './oracles.component.scss',
+  styleUrl: '../common-styles.scss',
 })
 export class OraclesComponent implements OnInit {
   oraclesList!: any;
+  notPlayedGames = false;
+  searchQuery = '';
 
-  constructor() {}
+  constructor(public commonFunctions: CommonFunctionsService) {}
 
   ngOnInit(): void {
     this.oraclesList = ORACLES_JSON.oracles;

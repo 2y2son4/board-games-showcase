@@ -4,115 +4,134 @@
       "name": "Tarotorial",
       "artist": "",
       "language": "x",
-      "image": "tarotorial"
+      "image": "tarotorial",
+      "description": ["Tarot demystified: Beginner-friendly and intuitive Tarot deck that is perfect for anyone.", "In addition to being perfect for beginners and those who are neurodiverse, Tarotorial® eliminates any need to look up information in books. As a result, you can master Tarot reading like a professional, in a matter of hours. In fact, the text-based descriptions allow one to understand the meanings without having to rely on visual interpretation, making it that much easier."]
     },
     {
       "name": "Wand wood",
       "artist": "",
       "language": "x",
-      "image": "wand-wood"
+      "image": "wand-wood",
+      "description": ["The deck is very easy to use. There's no formal or wrong way, and you don't need to have used oracle cards before. "]
     },
     {
       "name": "Green witch oracle",
       "artist": "",
       "language": "x",
-      "image": "green-witch-oracle"
+      "image": "green-witch-oracle",
+      "description": [""]
     },
     {
       "name": "Raise your Vibration",
       "artist": "Kyle Gray and Ari Wisner",
       "language": "x",
-      "image": "vibration"
+      "image": "vibration",
+      "description": [""]
     },
     {
       "name": "Archetypes",
       "artist": "Kim Krans",
       "language": "en",
-      "image": "archetypes"
+      "image": "archetypes",
+      "description": [""]
     },
     {
       "name": "Prism Oracle",
       "artist": "",
       "language": "x",
-      "image": "prism-oracle"
+      "image": "prism-oracle",
+      "description": [""]
     },
     {
       "name": "Spirit Junkie",
       "artist": "",
       "language": "en",
-      "image": "spirit-junkie"
+      "image": "spirit-junkie",
+      "description": [""]
     },
     {
       "name": "Slavic folklore",
       "artist": "Faina Lorah",
       "language": "en",
-      "image": "slavic-folklore"
+      "image": "slavic-folklore",
+      "description": [""]
     },
     {
       "name": "Broke bitch",
       "artist": "Kat Dehring and Taryn Masterson",
       "language": "en",
-      "image": "broke-bitch"
+      "image": "broke-bitch",
+      "description": [""]
     },
     {
       "name": "Super attractor",
       "artist": "Gabrielle Bernstein",
       "language": "en",
-      "image": "super-attractor"
+      "image": "super-attractor",
+      "description": [""]
     },
     {
       "name": "Housewives tarot",
       "artist": "Paul Kepple and Jude Buffum",
       "language": "en",
-      "image": "housewives-tarot"
+      "image": "housewives-tarot",
+      "description": [""]
     },
     {
       "name": "Rainbow tarot",
       "artist": "Sonia Lazo",
       "language": "en",
-      "image": "rainbow-tarot"
+      "image": "rainbow-tarot",
+      "description": [""]
     },
     {
       "name": "A totally unofficial Adventure Time tarot deck",
       "artist": "Katherine Hillier",
       "language": "en",
-      "image": "adventure-time-tarot"
+      "image": "adventure-time-tarot",
+      "description": [""]
     },
     {
       "name": "Food fortunes",
       "artist": "Josh Lafayette",
       "language": "en",
-      "image": "food-fortunes"
+      "image": "food-fortunes",
+      "description": [""]
     },
     {
       "name": "8 bit fantasy tarot deck",
       "artist": "",
       "language": "en",
-      "image": "8-bit-tarot"
+      "image": "8-bit-tarot",
+      "description": [""]
     },
     {
       "name": "Buffy the Vampire slayer tarot deck",
       "artist": "Karl James Mountford",
       "language": "en",
-      "image": "buffy-tarot"
+      "image": "buffy-tarot",
+      "description": [""]
     },
     {
       "name": "Woodland gardens",
       "artist": "Jessica Roux",
       "language": "en",
-      "image": "woodland-gardens"
+      "image": "woodland-gardens",
+      "description": [""]
     },
     {
       "name": "Botanical inspirations",
       "artist": "Lynn Araujo",
       "language": "en",
-      "image": "botanical-inspirations"
+      "image": "botanical-inspirations",
+      "description": [""]
     },
     {
       "name": "Synchronicity",
       "artist": "Cathy Nichols",
       "language": "en",
-      "image": "synchronicity"
+      "image": "synchronicity",
+      "description": [""]
     },
     {
       "name": "Doodle tarot",
