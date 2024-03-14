@@ -36,6 +36,7 @@ const game3: GameCard = {
   isPlayed: false,
   players: [2],
 };
+
 describe('GamesComponent', () => {
   let component: GamesComponent;
   let fixture: ComponentFixture<GamesComponent>;
