@@ -50,7 +50,7 @@ export class GamesComponent implements OnInit {
   searchQuery = '';
   playedGames = true;
   notPlayedGames = false;
-  exactPlayers!: number;
+  exactPlayers!: number | undefined;
   gamesFilterForm!: FormGroup;
 
   sortingSelectLabels = [
@@ -155,10 +155,10 @@ export class GamesComponent implements OnInit {
 
   restartFilters() {
     this.selectedSorting.reset();
-    this.selectedEditors.reset();
-    this.selectedTypes.reset();
+    this.selectedEditors.reset([]);
+    this.selectedTypes.reset([]);
     this.searchQuery = '';
-    this.exactPlayers = 0;
+    this.exactPlayers = undefined;
     this.playedGames = true;
     this.notPlayedGames = false;
     this.filteredGames = this.filterFunctions.sortByNameAscending(
@@ -176,22 +176,19 @@ export class GamesComponent implements OnInit {
   filterGamesByExactPlayers() {
     const exactPlayersValue = this.exactPlayers;
 
-    if (exactPlayersValue <= 0) {
-      // Invalid input, show all games
+    if (exactPlayersValue! <= 0) {
       this.filteredGames = this.gamesList;
     } else {
-      // Filter games based on exact number of players
       this.filteredGames = this.gamesList.filter((game) => {
         const players = game.players;
         if (players) {
           if (players.length === 1) {
-            // Check if exactPlayersValue matches the single value in the players array
             return players[0] === exactPlayersValue;
           } else if (players.length === 2) {
-            // Check if exactPlayersValue falls within the player count range
             const [minPlayers, maxPlayers] = players;
             return (
-              minPlayers <= exactPlayersValue && exactPlayersValue <= maxPlayers
+              minPlayers <= exactPlayersValue! &&
+              exactPlayersValue! <= maxPlayers
             );
           }
         }
