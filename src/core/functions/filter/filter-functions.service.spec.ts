@@ -26,6 +26,7 @@ describe('GameCardSortingService', () => {
           type: [''],
           language: 'es',
           complexity: 1.0,
+          isPlayed: false,
         },
         {
           name: 'A',
@@ -35,6 +36,7 @@ describe('GameCardSortingService', () => {
           type: [''],
           language: 'es',
           complexity: 1.0,
+          isPlayed: false,
         },
         {
           name: 'B',
@@ -44,6 +46,7 @@ describe('GameCardSortingService', () => {
           type: [''],
           language: 'es',
           complexity: 1.0,
+          isPlayed: false,
         },
       ];
       const sortedData = service.sortByNameAscending(testData);
