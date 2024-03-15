@@ -16,8 +16,8 @@
             <h2 class="card__title" [innerHTML]="oracle.name  | highlightText:searchQuery"> {{oracle.name}}
             </h2>
             @if(oracle.image)
-            { <div class="card__image-container"><img class="card__image"
-                src="../../assets/oracles/{{oracle.image}}.webp" alt="{{oracle.name}} image"></div>
+            { <div class="card__image-container"><img class="card__image" src="assets/oracles/{{oracle.image}}.webp"
+                alt="{{oracle.name}} image"></div>
             }
             @if(oracle.artist){
             <h2 class="card__title" [innerHTML]="' by '+

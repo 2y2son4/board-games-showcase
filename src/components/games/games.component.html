@@ -20,7 +20,7 @@
             <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery">
             </h2>
             @if(game.image)
-            { <div class="card__image-container"><img class="card__image" src="../../assets/games/{{game.image}}.webp"
+            { <div class="card__image-container"><img class="card__image" src="assets/games/{{game.image}}.webp"
                 alt="{{game.name}} image"></div>
             }
           </div>
@@ -47,8 +47,8 @@
               </p>} @else {
               <p>-</p>
               }
-              <p class="card__language">Language: <img class="card__flag"
-                  src="../../assets/flags/{{game.language}}-flag.png" alt="flag">
+              <p class="card__language">Language: <img class="card__flag" src="assets/flags/{{game.language}}-flag.png"
+                  alt="flag">
               </p>
               <p class="card__time">Time: {{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
                   ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
