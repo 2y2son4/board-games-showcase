@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { ActivatedRoute, RouterModule, RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -9,6 +9,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { GamesComponent } from '../components/games/games.component';
+import { OraclesComponent } from '../components/oracles/oracles.component';
 
 // el decorador es una sintaxis y en patrón, que typescript implementa con JS.
 // @Component afecta a la clase AppComponent
@@ -26,9 +27,27 @@ import { GamesComponent } from '../components/games/games.component';
     MatMenuModule,
     MatSidenav,
     MatToolbarModule,
+    OraclesComponent,
     RouterModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  isGames!: boolean;
+  isOracles!: boolean;
+
+  ngOnInit(): void {
+    this.selectComponent('games');
+  }
+
+  selectComponent(component: string) {
+    if (component === 'games') {
+      this.isGames = true;
+      this.isOracles = false;
+    } else {
+      this.isGames = false;
+      this.isOracles = true;
+    }
+  }
+}
