@@ -3,141 +3,142 @@
     {
       "name": "Tarotorial",
       "artist": "",
-      "language": "x",
+      "language": "en",
       "image": "tarotorial",
       "description": ["Tarot demystified: Beginner-friendly and intuitive Tarot deck that is perfect for anyone.", "In addition to being perfect for beginners and those who are neurodiverse, Tarotorial® eliminates any need to look up information in books. As a result, you can master Tarot reading like a professional, in a matter of hours. In fact, the text-based descriptions allow one to understand the meanings without having to rely on visual interpretation, making it that much easier."]
     },
     {
       "name": "Wand wood",
       "artist": "",
-      "language": "x",
+      "language": "en",
       "image": "wand-wood",
       "description": ["The deck is very easy to use. There's no formal or wrong way, and you don't need to have used oracle cards before. "]
     },
     {
       "name": "Green witch oracle",
-      "artist": "",
-      "language": "x",
+      "artist": "Cheralyn Darcey",
+      "language": "en",
       "image": "green-witch-oracle",
-      "description": [""]
+      "description": ["This deck is a tool to help those wanting to create a magickal practice within a garden setting: you may have a lovely suburban garden, a country estate, an inner-city courtyard, a collection of houseplants or share a community garden. What matters is not the where but the divine act of gardening and that you do it yourself.", "Explore the healing and supportive energies of fruits, vegetables, flowers and herbs in the cards and informative guidebook. Pick one card each day to bring balance to your life, and create inspirational oracle readings that will empower your outlook while you discover the secrets of the magickal botanical plant world that awaits beyond the garden gates."]
     },
     {
       "name": "Raise your Vibration",
       "artist": "Kyle Gray and Ari Wisner",
-      "language": "x",
+      "language": "en",
       "image": "vibration",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Archetypes",
       "artist": "Kim Krans",
       "language": "en",
       "image": "archetypes",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Prism Oracle",
       "artist": "",
-      "language": "x",
+      "language": "en",
       "image": "prism-oracle",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Spirit Junkie",
       "artist": "",
       "language": "en",
       "image": "spirit-junkie",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Slavic folklore",
       "artist": "Faina Lorah",
       "language": "en",
       "image": "slavic-folklore",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Broke bitch",
       "artist": "Kat Dehring and Taryn Masterson",
       "language": "en",
       "image": "broke-bitch",
-      "description": [""]
+      "description": ["Discover the raw and unapologetic energy of the Broken B*tch Tarot Deck. This deck challenges traditional tarot imagery, offering a unique and empowering perspective on personal growth and resilience."]
     },
     {
       "name": "Super attractor",
       "artist": "Gabrielle Bernstein",
       "language": "en",
       "image": "super-attractor",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Housewives tarot",
       "artist": "Paul Kepple and Jude Buffum",
       "language": "en",
       "image": "housewives-tarot",
-      "description": [""]
+      "description": ["A 1950s-inspired tarot deck filled with images of dinnerware (Pentacles), cutlery and sewing kits (Swords), martini glasses (Cups), mops and brooms (Wands), and much more.", "Perfect for beginners and seasoned tarot readers alike, this fun and nostalgic set includes an instruction book for how to interpret all the cards of the major and minor arcana, helpful advice on giving a reading, and recommended layouts in the shape of a martini glass, clothesline, and more."]
     },
     {
       "name": "Rainbow tarot",
       "artist": "Sonia Lazo",
       "language": "en",
       "image": "rainbow-tarot",
-      "description": [""]
+      "description": []
     },
     {
       "name": "A totally unofficial Adventure Time tarot deck",
       "artist": "Katherine Hillier",
       "language": "en",
       "image": "adventure-time-tarot",
-      "description": [""]
+      "description": ["Discover the mysteries of the Land of Ooo with this totally unofficial Adventure Time Tarot Deck. Featuring 78 unique cards, the deck can be used to tap into the hidden wisdom of the fantasy world. With each card artfully hand-illustrated by a different artist, it’s the perfect way to bring the spirit of Adventure Time into your life."]
     },
     {
       "name": "Food fortunes",
       "artist": "Josh Lafayette",
       "language": "en",
       "image": "food-fortunes",
-      "description": [""]
+      "description": ["A Deck of Dinner Divination.", "Food Fortunes makes divining the sacred mysteries of 'whats for dinner tonight?' as simple as turning over a few cards. This playful deck features 78 mystically illustrated food & drink cards and a booklet detailing their use and auspicious origins. Simply lay the cards out three at a time et voila--your meal appears before you, a vision from the spirit realm. This dining divining game can be played alone or with hungry friends to give apathetic appetites a mystical nudge in the right direction."]
     },
     {
       "name": "8 bit fantasy tarot deck",
-      "artist": "",
+      "artist": "Deck Chi",
       "language": "en",
       "image": "8-bit-tarot",
-      "description": [""]
+      "description": ["A full 78 pixelated Rider-Waite tarot cards deck pays respect to the classic and brings back memories of the 8-bit video games."]
     },
     {
       "name": "Buffy the Vampire slayer tarot deck",
       "artist": "Karl James Mountford",
       "language": "en",
       "image": "buffy-tarot",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Woodland gardens",
       "artist": "Jessica Roux",
       "language": "en",
       "image": "woodland-gardens",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Botanical inspirations",
       "artist": "Lynn Araujo",
       "language": "en",
       "image": "botanical-inspirations",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Synchronicity",
       "artist": "Cathy Nichols",
       "language": "en",
       "image": "synchronicity",
-      "description": [""]
+      "description": []
     },
     {
       "name": "Doodle tarot",
-      "artist": "Em K. Holloway",
+      "artist": "Em Kay Holloway",
       "language": "en",
-      "image": "doodle-tarot"
+      "image": "doodle-tarot",
+      "description": ["A study deck for beginners.", "This deck was created and inspired to help new Tarot readers, young and old, that have never read or have difficulty reading other decks, like the famous Rider-Smith deck. In this deck, we take that famous art and break it down into simplistic, arbitrary drawings of stick figures. We pay homage to those doodles that you drew in grade school, complete with college-ruled paper background, to allow the feeling of nostalgia to come into play and give comfort to the reader. "]
     }
   ]
 }
