@@ -1,3 +1,5 @@
+@import "../core/styles/variables";
+
 :host {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -11,28 +13,40 @@
   margin: auto;
 }
 
-h1 {
-  font-size: 3.125rem;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 0.1rem;
-  margin: 0 auto 24px;
-  display: flex;
-  max-width: 1400px;
-  padding-left: 14px;
+.toolbar {
+  border-bottom: 4px solid $bg-color-dark;
+
+  &__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }
 
-app-games {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.route {
+  &__container :nth-child(2) {
+    border-left: 4px solid$bg-color-dark;
+  }
 
-ul {
-  padding-inline-start: 0;
-  position: sticky;
-}
+  &__buttons {
+    border-radius: 0;
+    border: none;
+    padding: 12px;
+    background-color: $bg-color;
+    color: $bg-color-dark;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 24px;
+    width: 50%;
+    transition: all 0.8s;
+    &:hover {
+      background-color: $highlight-color;
+      color: $white;
+    }
+  }
 
-li {
-  list-style-type: none;
+  &__color {
+    background-color: $highlight-color;
+    color: $white;
+  }
 }

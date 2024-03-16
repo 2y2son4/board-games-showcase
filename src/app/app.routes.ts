@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { OraclesComponent } from '../components/oracles/oracles.component';
 
 export const routes: Routes = [
-  // { path: '', component: AppComponent },
-  { path: 'games', component: GamesComponent },
+  { path: '', component: GamesComponent },
   { path: 'oracles', component: OraclesComponent },
 ];
 

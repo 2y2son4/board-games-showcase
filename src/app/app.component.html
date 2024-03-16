@@ -1,26 +1,25 @@
 <main>
   <header style="margin-bottom: 18px;">
-    <mat-toolbar color="primary">
-      <button mat-button [matMenuTriggerFor]="menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item [routerLink]="['/games']" routerLinkActive="router-link-active"> Games</button>
-        <button mat-menu-item [routerLink]="['/oracles']" routerLinkActive="router-link-active">Oracles</button>
-      </mat-menu>
-
-      <span>2y2son4's showcase</span>
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>github-circle</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
+    <mat-toolbar color="primary" class="toolbar">
+      <div class="toolbar__container">
+        <span>2y2son4's showcase</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button aria-label="Contact button">
+          <mat-icon>
+            contact_page
+          </mat-icon>
+        </button>
+      </div>
     </mat-toolbar>
+    <div class="route__container">
+      <button class="route__buttons" (click)="selectComponent('games')" [ngClass]="{'route__color': isGames}">
+        Games</button>
+      <button class="route__buttons" (click)="selectComponent('oracles')"
+        [ngClass]="{'route__color': isOracles}">Oracles</button>
+    </div>
   </header>
-  <router-outlet></router-outlet>
-  <div class="main">
-    <app-games></app-games>
-  </div>
+  @if(isGames) {
+  <app-games></app-games>}
+  @if(isOracles){
+  <app-oracles></app-oracles>}
 </main>

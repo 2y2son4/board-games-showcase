@@ -146,6 +146,9 @@ export class GamesComponent implements OnInit {
   }
 
   togglePlayedFilter(played: boolean): void {
+    this.filteredGames = this.filterFunctions.sortByNameAscending(
+      this.gamesList,
+    );
     this.playedGames = played;
     this.notPlayedGames = !played;
     this.filteredGames = this.filteredGames.filter(
