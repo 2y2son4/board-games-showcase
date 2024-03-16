@@ -86,8 +86,8 @@
         }
       </mat-form-field>
       <mat-form-field style="height: 70px;"><mat-label>Number of players</mat-label>
-        <input matInput type="number" maxlength="2" id="exactPlayers" name="exactPlayers" [(ngModel)]="exactPlayers"
-          (input)="filterGamesByExactPlayers()">
+        <input matInput type="number" maxlength="2" min="0" id="exactPlayers" name="exactPlayers"
+          [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
       </mat-form-field>
       <mat-form-field style="height: 70px;">
         <mat-label>Sort</mat-label>

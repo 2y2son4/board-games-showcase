@@ -1,7 +1,10 @@
 // Colors
 $white: #fff;
 $black: #000;
+$light-grey: #b9b6b6;
+$dark-grey: #212121;
 $hot-pink: #c2185b;
 
-$bg-color: #b9b6b6;
+$bg-color: $light-grey;
+$bg-color-dark: $dark-grey;
 $highlight-color: $hot-pink;

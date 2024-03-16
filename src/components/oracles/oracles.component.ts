@@ -3,6 +3,7 @@ import ORACLES_JSON from '../../static/oracles.json';
 import { CommonModule } from '@angular/common';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
+import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 
 @Component({
   selector: 'app-oracles',
@@ -16,9 +17,14 @@ export class OraclesComponent implements OnInit {
   notPlayedGames = false;
   searchQuery = '';
 
-  constructor(public commonFunctions: CommonFunctionsService) {}
+  constructor(
+    public commonFunctions: CommonFunctionsService,
+    private filterFunctions: FilterFunctionsService,
+  ) {}
 
   ngOnInit(): void {
-    this.oraclesList = ORACLES_JSON.oracles;
+    this.oraclesList = this.filterFunctions.sortByNameAscending(
+      ORACLES_JSON.oracles,
+    );
   }
 }
