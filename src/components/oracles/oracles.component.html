@@ -36,14 +36,17 @@
               </div>
               <div class="line"></div>
               @if(oracle.description.length > 0) {
-              @for(paragraph of oracle.description; let index = $index; track index){ <p class="card__description">
-                {{paragraph}}
-              </p>}
+              @for(paragraph of oracle.description; let index = $index; track index){
+              <p class="card__description">{{paragraph}}</p>}
               }
               @else {
               <p class="card__description">TBI</p>
               }
             </div>
+            @if(oracle.web){
+            <div class="card__web">
+              <a href="{{oracle.web}}" target="_blank">Web</a>
+            </div>}
           </div>
         </div>
       </li>}
