@@ -1115,7 +1115,7 @@
         "Party",
         "Word game",
         "Communication limits",
-        "Team based",
+        "Team-based game",
         "Expansion"
       ],
       "language": "es",
@@ -2504,6 +2504,27 @@
       "isPlayed": false
     },
     {
+      "name": "Diáspora zero",
+      "editor": "Zacatrús",
+      "year": 2023,
+      "type": [
+        "Science Fiction",
+        "Cards",
+        "Deduction",
+        "Puzzle",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        24
+      ],
+      "time": 120,
+      "complexity": 2,
+      "image": "diaspora-zero",
+      "isPlayed": false
+    },
+    {
       "name": "Nightmare",
       "editor": "Diset",
       "year": 2021,
@@ -2893,6 +2914,127 @@
       "time": 60,
       "complexity": 1.00,
       "image": "mind-fullness-game",
+      "isPlayed": false
+    },
+    {
+      "name": "Arboretum",
+      "editor": "Gen-X Games",
+      "year": 2015,
+      "type": [
+        "Cards",
+        "Hand management",
+        "Pattern recognition",
+        "Set collection",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 2.13,
+      "image": "arboretum",
+      "isPlayed": true
+    },
+    {
+      "name": "That's not a hat",
+      "editor": "Ravensburger",
+      "year": 2023,
+      "type": [
+        "Party",
+        "Memory",
+        "Bluffing"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "image": "thats-not-a-hat",
+      "isPlayed": true
+    },
+    {
+      "name": "Canvas",
+      "editor": "Road To Infamy",
+      "year": 2021,
+      "type": [
+        "Abstract strategy",
+        "Puzzle",
+        "Hand management",
+        "Layering"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.67,
+      "image": "canvas",
+      "isPlayed": false
+    },
+    {
+      "name": "Canvas: Reflections",
+      "editor": "Road To Infamy",
+      "year": 2022,
+      "type": [
+        "Abstract strategy",
+        "Puzzle",
+        "Hand management",
+        "Layering",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.87,
+      "image": "canvas-reflections",
+      "isPlayed": false
+    },
+    {
+      "name": "Railroad ink: amarillo brillante",
+      "editor": "Devir",
+      "year": 2021,
+      "type": [
+        "Family",
+        "Connections",
+        "Dice rolling",
+        "Network and route building",
+        "Line drawing"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 2.05,
+      "image": "railroad-ink-amarillo",
+      "isPlayed": false
+    },
+    {
+      "name": "Pixelate",
+      "editor": "Abrams and Chronicle",
+      "year": 2021,
+      "type": [
+        "Drawing",
+        "Pattern recognition",
+        "Team-based game"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.50,
+      "image": "pixelate",
       "isPlayed": false
     }
   ]
