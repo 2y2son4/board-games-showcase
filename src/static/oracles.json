@@ -2,14 +2,14 @@
   "oracles": [
     {
       "name": "Tarotorial",
-      "artist": "",
+      "artist": "Pamela Coe",
       "language": "en",
       "image": "tarotorial",
       "description": ["Tarot demystified: Beginner-friendly and intuitive Tarot deck that is perfect for anyone.", "In addition to being perfect for beginners and those who are neurodiverse, Tarotorial® eliminates any need to look up information in books. As a result, you can master Tarot reading like a professional, in a matter of hours. In fact, the text-based descriptions allow one to understand the meanings without having to rely on visual interpretation, making it that much easier."]
     },
     {
       "name": "Wand wood",
-      "artist": "",
+      "artist": "Phil and Jacqui Lovesey",
       "language": "en",
       "image": "wand-wood",
       "description": ["The deck is very easy to use. There's no formal or wrong way, and you don't need to have used oracle cards before. "]
@@ -37,7 +37,7 @@
     },
     {
       "name": "Prism Oracle",
-      "artist": "",
+      "artist": "Nicole Pivirotto",
       "language": "en",
       "image": "prism-oracle",
       "description": ["This vibrant deck explores the links between color and emotion with 45 cards, each of a different hue. Each card features a unique energetic state—like Creativity, Frustration, or Reflection—mapped to a color associated with that energy. The guidebook offers direction on how to interpret the cards as a message from your higher self, as well as how to infuse your surroundings with a card's energy through meditation and altar building. This beautiful and insightful deck features modern minimal illustrations on every card and shining metallic edges, and comes enclosed in a rainbow-colored, foil-stamped keepsake box."],
