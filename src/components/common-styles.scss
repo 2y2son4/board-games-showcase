@@ -231,10 +231,10 @@ p {
     padding: 4px 0;
     position: sticky;
     transition: all 0.8s;
-
-    &:hover {
-      color: $highlight-color;
-    }
+    
+      &:hover {
+        color: $highlight-color;
+      }
   }
 }
 
