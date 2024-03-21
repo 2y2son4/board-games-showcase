@@ -99,11 +99,6 @@ p {
 
     &-back {
       transform: rotateY(180deg);
-
-      &-oracle {
-        transform: rotateY(180deg);
-        overflow-y: auto;
-      }
     }
   }
 
@@ -191,6 +186,10 @@ p {
     padding: 12px 12px 0 12px;
     text-align: left;
 
+    &-oracle {
+      overflow-y: auto;
+    }
+
     @media screen and (max-width: 767px) {
       font-size: 14px;
     }
@@ -224,17 +223,14 @@ p {
   }
 
   &__web {
-    position: sticky;
-    bottom: -8px;
-    padding-top: 2px;
-    width: 100%;
     background-color: $bg-color-dark;
-    cursor: pointer;
     color: $white;
-    font-weight: 600;
+    cursor: pointer;
     font-size: 16px;
+    font-weight: 600;
+    padding: 4px 0;
+    position: sticky;
     transition: all 0.8s;
-    padding: 8px 0;
 
     &:hover {
       color: $highlight-color;
@@ -289,18 +285,10 @@ a:active {
   }
 
   &-system {
+    border: 4px solid $white;
     border-radius: 12px;
+    color: $white;
     padding: 8px;
-
-    @media (prefers-color-scheme: light) {
-      border: 4px solid $black;
-      color: $black;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      border: 4px solid $white;
-      color: $white;
-    }
   }
 }
 
@@ -321,13 +309,7 @@ a:active {
   }
 
   &-system {
-    @media (prefers-color-scheme: light) {
-      color: $black;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      color: $white;
-    }
+    color: $white;
   }
 }
 
