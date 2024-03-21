@@ -541,7 +541,7 @@
       "time": 15,
       "complexity": 1.00,
       "image": "exploding-kittens-streaking",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Zombie kittens",
@@ -561,7 +561,7 @@
       "time": 15,
       "complexity": 1.00,
       "image": "zombie-kittens",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Virus!",
@@ -599,7 +599,7 @@
       "time": 20,
       "complexity": 1.44,
       "image": "virus-2",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Virus! Halloween",
@@ -681,7 +681,7 @@
       "time": 45,
       "complexity": 1.52,
       "image": "saboteur-2",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "One night ultimate werewolf",
@@ -725,7 +725,7 @@
       "time": 10,
       "complexity": 1.61,
       "image": "one-night-ultimate-vampire",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "One night ultimate alien",
@@ -747,7 +747,7 @@
       "time": 10,
       "complexity": 1.89,
       "image": "one-night-ultimate-alien",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Bears Vs. Babies",
@@ -1126,7 +1126,7 @@
       "time": 45,
       "complexity": 1.8,
       "image": "decrypto-laserdrive",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Ninja dice",
@@ -1184,7 +1184,7 @@
       "time": 60,
       "complexity": 2.44,
       "image": "alta-tension-cartas",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "¡Viva el Rey!",
@@ -1547,7 +1547,7 @@
       "time": 40,
       "complexity": 1.00,
       "image": "drunken-sailor",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Fit to print",
@@ -1570,7 +1570,7 @@
       "time": 30,
       "complexity": 2.07,
       "image": "fit-to-print",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Who am I and what am I doing?",
@@ -1628,7 +1628,7 @@
       "time": 15,
       "complexity": 1.30,
       "image": "cluedo-suspect",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Ugga Buuga",
@@ -1768,7 +1768,7 @@
       "time": 30,
       "complexity": 1.00,
       "image": "kontour",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Codex naturalis",
@@ -1975,7 +1975,7 @@
       "time": 60,
       "complexity": 2,
       "image": "here-to-slay-berserkers-necromancers",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Here to slay: Warriors & Druids",
@@ -1997,7 +1997,7 @@
       "time": 60,
       "complexity": 1.83,
       "image": "here-to-slay-warriors-druids",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Trash pandas",
@@ -2342,7 +2342,7 @@
       "time": 30,
       "complexity": 2.22,
       "image": "arkham-caso-1",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Spoilers: Edición definitiva",
@@ -2504,27 +2504,6 @@
       "isPlayed": false
     },
     {
-      "name": "Diáspora zero",
-      "editor": "Zacatrús",
-      "year": 2023,
-      "type": [
-        "Science Fiction",
-        "Cards",
-        "Deduction",
-        "Puzzle",
-        "Cooperative"
-      ],
-      "language": "es",
-      "players": [
-        1,
-        24
-      ],
-      "time": 120,
-      "complexity": 2,
-      "image": "diaspora-zero",
-      "isPlayed": false
-    },
-    {
       "name": "Nightmare",
       "editor": "Diset",
       "year": 2021,
@@ -2555,7 +2534,7 @@
         "Network",
         "Route building"
       ],
-      "language": "en",
+      "language": "es",
       "players": [
         2,
         4
@@ -2666,7 +2645,7 @@
       "time": 30,
       "complexity": 2.47,
       "image": "arkham-caso-2",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Arkham Noir #3: Abismos Infinitos de Oscuridad",
@@ -2685,7 +2664,7 @@
       "time": 30,
       "complexity": 2.86,
       "image": "arkham-caso-3",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Detective: Sigue la Pista",
@@ -2779,7 +2758,7 @@
       "time": 25,
       "complexity": 1.53,
       "image": "pictomania",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Magnetism",
@@ -2917,46 +2896,6 @@
       "isPlayed": false
     },
     {
-      "name": "Arboretum",
-      "editor": "Gen-X Games",
-      "year": 2015,
-      "type": [
-        "Cards",
-        "Hand management",
-        "Pattern recognition",
-        "Set collection",
-        "Tile placement"
-      ],
-      "language": "es",
-      "players": [
-        2,
-        4
-      ],
-      "time": 30,
-      "complexity": 2.13,
-      "image": "arboretum",
-      "isPlayed": true
-    },
-    {
-      "name": "That's not a hat",
-      "editor": "Ravensburger",
-      "year": 2023,
-      "type": [
-        "Party",
-        "Memory",
-        "Bluffing"
-      ],
-      "language": "x",
-      "players": [
-        3,
-        8
-      ],
-      "time": 30,
-      "complexity": 1.00,
-      "image": "thats-not-a-hat",
-      "isPlayed": true
-    },
-    {
       "name": "Canvas",
       "editor": "Road To Infamy",
       "year": 2021,
@@ -2974,7 +2913,7 @@
       "time": 30,
       "complexity": 1.67,
       "image": "canvas",
-      "isPlayed": false
+      "isPlayed": true
     },
     {
       "name": "Canvas: Reflections",
