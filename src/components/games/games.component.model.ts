@@ -6,7 +6,8 @@ export interface GameCard {
   language: 'en' | 'es' | 'de' | '-';
   players?: Array<number>;
   time?: number;
-  complexity: number;
+  complexity?: number;
+  rate: number;
   image?: string;
   isPlayed: boolean;
 }

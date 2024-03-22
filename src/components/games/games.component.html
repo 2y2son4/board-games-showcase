@@ -23,12 +23,11 @@
             { <div class="card__image-container"><img class="card__image" src="assets/games/{{game.image}}.webp"
                 alt="{{game.name}} image"></div>
             }
+            <p class="card__title" [innerHTML]="(game.editor ? 'by ' + game.editor : '-') | highlightText:searchQuery">
+            </p>
           </div>
           <div class="card__list-back" [ngClass]="{'border-pink': game.isPlayed }">
-            <div class="card__info">
-              @if (game.complexity) {
-              <div [style.background-color]="commonFunctions.getColor(game.complexity)" class="card__complexity">{{
-                game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>}
+            <div class="card__info  card__info-scroll">
               <div class="card__info-title">
                 <p class="card__name" [innerHTML]="game.name | highlightText:searchQuery">
                 </p>
@@ -38,30 +37,48 @@
                 }
               </div>
               <div class="line"></div>
-              @if(game.players){
-              <p>
-                @for(player of game.players; let index = $index;let first = $first; let last = $last; track index){
-                {{ game.players.length === 1 && first ? 'For' : ''}} {{player}} {{ !last ? 'to' :
-                player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
-                }
-              </p>} @else {
-              <p>-</p>
-              }
-              <p class="card__language">Language: <img class="card__flag" src="assets/flags/{{game.language}}-flag.png"
-                  alt="flag">
-              </p>
-              <p class="card__time">Time: {{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
-                  ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
-                  @if(game.type){
-                  <p class="card__type">Type:
-                    @for(type of game.type; let index = $index; let last = $last; track index){
-                    {{type}}{{ !last ? ',' : ''}}
-                    }</p>}
-                  @else {
-                  <p class="card__type">Type: -</p>
-                  }
-                  <p class="card__editor"
-                    [innerHTML]="(game.editor ? 'Publisher: ' + game.editor : '-') | highlightText:searchQuery"></p>
+              <div class="card__info-container">
+                <div class="card__info-upper">
+                  <div style="display: flex; justify-content: space-between; width: 100%;">
+                    @if(game.players){
+                    <p class="card__players">
+                      @for(player of game.players; let index = $index;let first = $first; let last = $last; track
+                      index){
+                      {{ game.players.length === 1 && first ? 'For' : ''}} {{player}} {{ !last ? 'to' :
+                      player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
+                      }
+                    </p>} @else {
+                    <p>-</p>
+                    }
+                    <p class="card__language">Language: <img class="card__flag"
+                        src="assets/flags/{{game.language}}-flag.png" alt="flag">
+                    </p>
+                  </div>
+                  <p class="card__time">Time: {{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
+                      ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
+                      @if(game.type){
+                      <p class="card__type">Type:
+                        @for(type of game.type; let index = $index; let last = $last; track index){
+                        {{type}}{{ !last ? ',' : ''}}
+                        }</p>}
+                      @else {
+                      <p class="card__type">Type: -</p>
+                      }
+                      <p class="card__editor"
+                        [innerHTML]="(game.editor ? 'Publisher: ' + game.editor : '-') | highlightText:searchQuery"></p>
+                </div>
+                <div class="card__info-down">
+                  <p class="card__rate-title">Rate:</p>
+                  <div [style.background-color]="commonFunctions.getRateColor(game.rate)"
+                    [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
+                    {{!game.rate ? 'X' :game.rate}}</div>
+                  <p class="card__complexity-title">Complexity:</p>
+                  <div [style.background-color]="commonFunctions.getComplexityColor(game.complexity)"
+                    [ngClass]="{'border-pink': game.isPlayed }" class="card__complexity">
+                    {{ !game.complexity ? 'X' :
+                    game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -85,24 +102,24 @@
         </button>
         }
       </mat-form-field>
-      <mat-form-field style="height: 70px;"><mat-label>Number of players</mat-label>
+      <mat-form-field><mat-label>Number of players</mat-label>
         <input matInput type="number" maxlength="2" min="0" id="exactPlayers" name="exactPlayers"
           [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
       </mat-form-field>
-      <mat-form-field style="height: 70px;">
+      <mat-form-field>
         <mat-label>Sort</mat-label>
         <mat-select [formControl]="selectedSorting"
           (selectionChange)="filterFunctions.selectSorting($event, filteredGames)">
           <mat-option *ngFor="let label of sortingSelectLabels" [value]="label">{{label}}</mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field style="height: 70px;">
+      <mat-form-field>
         <mat-label>Filter by types</mat-label>
         <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGamesByTypeAndEditor()">
           <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field style="height: 70px;">
+      <mat-form-field>
         <mat-label>Filter by publisher</mat-label>
         <mat-select [formControl]="selectedEditors" multiple (selectionChange)="filterGamesByTypeAndEditor()">
           <mat-option *ngFor="let editor of editors" [value]="editor">{{editor}}</mat-option>
