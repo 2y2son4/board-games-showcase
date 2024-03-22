@@ -62,6 +62,8 @@ export class GamesComponent implements OnInit {
     'Time ↓',
     'Complexity ↑',
     'Complexity ↓',
+    'Rate ↑',
+    'Rate ↓',
   ];
 
   constructor(
