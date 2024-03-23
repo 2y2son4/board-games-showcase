@@ -50,7 +50,7 @@ export class CommonFunctionsService {
     const greenColor = [54, 174, 124];
     const blueColor = [60, 76, 167];
 
-    const percentage = (number - 1) / 9; // Adjusted for range 1 to 10
+    const percentage = (number - 1) / 9;
 
     let r, g, b;
     if (percentage < 0.5) {
