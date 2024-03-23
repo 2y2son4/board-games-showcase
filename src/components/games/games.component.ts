@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormControl,
@@ -9,6 +9,7 @@ import {
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +20,7 @@ import { FilterFunctionsService } from '../../core/functions/filter/filter-funct
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import GAMES_JSON from '../../static/games.json';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
+import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
 
 @Component({
   selector: 'app-games',
@@ -29,11 +31,13 @@ import { CommonFunctionsService } from '../../core/functions/common/common-funct
     HighlightTextPipe,
     MatButtonModule,
     MatCardModule,
+    MatChipsModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
     MatSelectModule,
     ReactiveFormsModule,
+    ScrollToTopBtnComponent,
   ],
   templateUrl: './games.component.html',
   styleUrl: '../common-styles.scss',
@@ -52,6 +56,7 @@ export class GamesComponent implements OnInit {
   notPlayedGames = false;
   exactPlayers!: number | undefined;
   gamesFilterForm!: FormGroup;
+  type: any;
 
   sortingSelectLabels = [
     'A to Z',
@@ -73,8 +78,8 @@ export class GamesComponent implements OnInit {
 
   ngOnInit(): void {
     this.gamesList = this.filterFunctions.sortByNameAscending(GAMES_JSON.games);
-    this.filteredGames = this.gamesList;
-    this.types = this.extractUniqueValues('type');
+    this.resetGamesList();
+    this.types = this.extractUniqueValues('types');
     this.editors = this.extractUniqueValues('editor');
 
     this.gamesFilterForm = new FormGroup({
@@ -86,6 +91,20 @@ export class GamesComponent implements OnInit {
       isPlayed: new FormControl(false),
       isNotPlayed: new FormControl(false),
     });
+  }
+
+  onTypeChange(modelType: string) {
+    this.searchQuery = modelType;
+    if (this.searchQuery) {
+      this.filterGames();
+    } else {
+      this.resetGamesList();
+      this.type = '';
+    }
+  }
+
+  resetGamesList() {
+    this.filteredGames = this.gamesList;
   }
 
   extractUniqueValues(propertyName: keyof GameCard): string[] {
@@ -123,7 +142,7 @@ export class GamesComponent implements OnInit {
           game.name.toLowerCase().includes(query) ||
           game.editor.toLowerCase().includes(query) ||
           game.year.toString().includes(query) ||
-          game.type.some((type) => type.toLowerCase().includes(query)),
+          game.types.some((type) => type.toLowerCase().includes(query)),
       );
     }
   }
@@ -133,12 +152,12 @@ export class GamesComponent implements OnInit {
     const selectedEditorValues = this.selectedEditors.value ?? [];
 
     if (selectedTypeValues.length === 0 && selectedEditorValues!.length === 0) {
-      this.filteredGames = this.gamesList;
+      this.resetGamesList();
     } else {
       this.filteredGames = this.gamesList.filter((game) => {
         const matchTypes =
           selectedTypeValues.length === 0 ||
-          game.type.some((type) => selectedTypeValues.includes(type));
+          game.types.some((type) => selectedTypeValues.includes(type));
         const matchEditors =
           selectedEditorValues!.length === 0 ||
           selectedEditorValues!.includes(game.editor);
@@ -182,7 +201,7 @@ export class GamesComponent implements OnInit {
     const exactPlayersValue = this.exactPlayers;
 
     if (exactPlayersValue! <= 0) {
-      this.filteredGames = this.gamesList;
+      this.resetGamesList();
     } else {
       this.filteredGames = this.gamesList.filter((game) => {
         const players = game.players;

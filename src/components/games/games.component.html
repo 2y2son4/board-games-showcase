@@ -1,11 +1,16 @@
 <div class="content">
   <div>
     <div class="side">
-      <h2 class="side__title">Games</h2>
-      <h3 class="side__number" [ngClass]="notPlayedGames ? 'font-system' : 'font-pink'">
-        ({{filteredGames.length}})
-      </h3>
+      <div class="side__container">
+        <h2 class="side__title">Games</h2>
+        <h3 class="side__number" [ngClass]="notPlayedGames ? 'font-system' : 'font-pink'">
+          ({{filteredGames.length}})
+        </h3>
+      </div>
+      <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
+
     </div>
+
   </div>
   <div class="card">
     <ul class="card__container">
@@ -13,10 +18,8 @@
       <li class="card__list" #game>
         <div class="card__list-inner">
           <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
-            @if(game.year){
             <span class="card__year-absolute" [ngClass]="{'border-pink': game.isPlayed }"
               [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
-            }
             <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery">
             </h2>
             @if(game.image)
@@ -27,6 +30,8 @@
             </p>
           </div>
           <div class="card__list-back" [ngClass]="{'border-pink': game.isPlayed }">
+            <img class="card__flag card__language" [ngClass]="{'border-pink': game.isPlayed }"
+              src="assets/flags/{{game.language}}-flag.png" alt="flag">
             <div class="card__info  card__info-scroll">
               <div class="card__info-title">
                 <p class="card__name" [innerHTML]="game.name | highlightText:searchQuery">
@@ -50,22 +55,15 @@
                     </p>} @else {
                     <p>-</p>
                     }
-                    <p class="card__language">Language: <img class="card__flag"
-                        src="assets/flags/{{game.language}}-flag.png" alt="flag">
-                    </p>
+                    <p class="card__time">{{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
+                        ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
+
                   </div>
-                  <p class="card__time">Time: {{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
-                      ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
-                      @if(game.type){
-                      <p class="card__type">Type:
-                        @for(type of game.type; let index = $index; let last = $last; track index){
-                        {{type}}{{ !last ? ',' : ''}}
-                        }</p>}
-                      @else {
-                      <p class="card__type">Type: -</p>
-                      }
-                      <p class="card__editor"
-                        [innerHTML]="(game.editor ? 'Publisher: ' + game.editor : '-') | highlightText:searchQuery"></p>
+                  <mat-chip-listbox aria-label="select a shirt size" [(ngModel)]="type"
+                    (ngModelChange)="onTypeChange($event)">
+                    @for(type of game.types; let index = $index; let last = $last; track index){
+                    <mat-chip-option [value]="type"> {{type}} </mat-chip-option>}
+                  </mat-chip-listbox>
                 </div>
                 <div class="card__info-down">
                   <p class="card__rate-title">Rate:</p>
@@ -87,7 +85,8 @@
     </ul>
     @if(filteredGames.length === 0) {
     <mat-card class="card__no-data">
-      <mat-card-content>No games for this search :(</mat-card-content>
+      <mat-card-content>There are no results for <span class="card__search-query">{{searchQuery}}</span>
+      </mat-card-content>
     </mat-card>}
   </div>
   <div class="divider"></div>
