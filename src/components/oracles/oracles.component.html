@@ -1,10 +1,14 @@
 <div class="content">
   <div>
     <div class="side">
-      <h2 class="side__title">Oracles</h2>
-      <h3 class="side__number" [ngClass]="notPlayedGames ? 'font-system' : 'font-pink'">
-        ({{oraclesList.length}})
-      </h3>
+      <div class="side__container">
+        <h2 class="side__title">Oracles</h2>
+        <h3 class="side__number" [ngClass]="notPlayedGames ? 'font-system' : 'font-pink'">
+          ({{oraclesList.length}})
+        </h3>
+      </div>
+      <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
+
     </div>
   </div>
   <div class="card">
