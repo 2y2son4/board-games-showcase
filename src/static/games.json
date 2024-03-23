@@ -2680,6 +2680,27 @@
       "isPlayed": false
     },
     {
+      "name": "Diáspora zero",
+      "editor": "Zacatrús",
+      "year": 2023,
+      "type": [
+        "Science Fiction",
+        "Cards",
+        "Deduction",
+        "Puzzle",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        24
+      ],
+      "time": 120,
+      "complexity": 2,
+      "image": "diaspora-zero",
+      "isPlayed": false
+    },
+    {
       "name": "Nightmare",
       "editor": "Diset",
       "year": 2021,
