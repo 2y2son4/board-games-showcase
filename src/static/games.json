@@ -4,7 +4,7 @@
       "name": "Deep dive",
       "editor": "AEG",
       "year": 2023,
-      "type": [
+      "types": [
         "Press your luck",
         "Set collection",
         "Animals"
@@ -24,7 +24,7 @@
       "name": "Tranvía mortal",
       "editor": "Skybound tabletop",
       "year": 2020,
-      "type": [
+      "types": [
         "Party"
       ],
       "language": "es",
@@ -42,7 +42,7 @@
       "name": "Master dater: big love edition",
       "editor": "Explosm Games",
       "year": 2022,
-      "type": [
+      "types": [
         "Party"
       ],
       "language": "en",
@@ -60,7 +60,7 @@
       "name": "Joking hazard",
       "editor": "Explosm Games",
       "year": 2016,
-      "type": [
+      "types": [
         "Party"
       ],
       "language": "en",
@@ -78,7 +78,7 @@
       "name": "Joking hazard: Deck enhancement #1",
       "editor": "Explosm Games",
       "year": 2016,
-      "type": [
+      "types": [
         "Party",
         "Expansion"
       ],
@@ -97,7 +97,7 @@
       "name": "Joking hazard: Blast from the past",
       "editor": "Explosm Games",
       "year": 2016,
-      "type": [
+      "types": [
         "Party",
         "Expansion"
       ],
@@ -116,8 +116,11 @@
       "name": "Back to the future: the card game",
       "editor": "Looney labs",
       "year": 2010,
-      "type": [
-        "Modular board"
+      "types": [
+        "Modular board",
+        "Movies",
+        "Alternate history",
+        "Science fiction"
       ],
       "language": "en",
       "players": [
@@ -134,7 +137,7 @@
       "name": "Coup",
       "editor": "Indie boards & cards",
       "year": 2012,
-      "type": [
+      "types": [
         "Bluffing",
         "Party",
         "Deduction"
@@ -154,7 +157,7 @@
       "name": "Coup: reformation",
       "editor": "Indie boards & cards",
       "year": 2013,
-      "type": [
+      "types": [
         "Bluffing",
         "Party",
         "Deduction",
@@ -175,7 +178,7 @@
       "name": "Saqueadores",
       "editor": "Black monk",
       "year": 2016,
-      "type": [
+      "types": [
         "Cards",
         "Dice"
       ],
@@ -194,7 +197,7 @@
       "name": "Cabo (2nd edition)",
       "editor": "Arrakis games",
       "year": 2019,
-      "type": [
+      "types": [
         "Family",
         "Cards"
       ],
@@ -213,7 +216,7 @@
       "name": "3 secretos",
       "editor": "EDGE",
       "year": 2017,
-      "type": [
+      "types": [
         "Deduction",
         "Cooperative",
         "Mystery"
@@ -233,7 +236,7 @@
       "name": "Narabi",
       "editor": "Lifestyle Boardgames",
       "year": 2018,
-      "type": [
+      "types": [
         "Cards",
         "Deduction"
       ],
@@ -252,7 +255,7 @@
       "name": "Dungeon Mayhem",
       "editor": "Wizards of the Coast",
       "year": 2018,
-      "type": [
+      "types": [
         "Family",
         "Cards",
         "Fantasy",
@@ -273,7 +276,7 @@
       "name": "Karma",
       "editor": "AMIGO",
       "year": 2014,
-      "type": [
+      "types": [
         "Family",
         "Cards"
       ],
@@ -292,7 +295,7 @@
       "name": "The Mind",
       "editor": "Brain Games",
       "year": 2018,
-      "type": [
+      "types": [
         "Party",
         "Family",
         "Numbers",
@@ -313,7 +316,7 @@
       "name": "Chrononauts",
       "editor": "Looney Labs",
       "year": 2000,
-      "type": [
+      "types": [
         "Family",
         "Bluffing",
         "Deduction"
@@ -333,7 +336,7 @@
       "name": "Jumble Jam",
       "editor": "Txarli Factory",
       "year": 2020,
-      "type": [
+      "types": [
         "Cards",
         "Area majority",
         "Deck, Bag, and Pool Building",
@@ -354,7 +357,7 @@
       "name": "Ramen Ink",
       "editor": "Jumbo",
       "year": 2020,
-      "type": [
+      "types": [
         "Cards",
         "Paper and pencil",
         "Flip-and-write"
@@ -374,7 +377,7 @@
       "name": "Sencha",
       "editor": "Last level",
       "year": 2019,
-      "type": [
+      "types": [
         "Territory building",
         "Area majority",
         "Economic"
@@ -394,7 +397,7 @@
       "name": "Unánimo Party",
       "editor": "Zacatrús",
       "year": 2018,
-      "type": [
+      "types": [
         "Party",
         "Paper and pencil"
       ],
@@ -413,7 +416,7 @@
       "name": "Point City",
       "editor": "AEG",
       "year": 2023,
-      "type": [
+      "types": [
         "Family",
         "Cards",
         "City building"
@@ -433,7 +436,7 @@
       "name": "Truffle shuffle",
       "editor": "AEG",
       "year": 2020,
-      "type": [
+      "types": [
         "Family",
         "Cards",
         "Open drafting"
@@ -453,7 +456,7 @@
       "name": "Unstable unicorns: NSFW",
       "editor": "Unstable games",
       "year": 2019,
-      "type": [
+      "types": [
         "Cards",
         "Hand management",
         "Party",
@@ -474,7 +477,7 @@
       "name": "Unstable unicorns: rainbow apocalypse",
       "editor": "Unstable games",
       "year": 2018,
-      "type": [
+      "types": [
         "Cards",
         "Hand management",
         "Party",
@@ -495,7 +498,7 @@
       "name": "Unstable unicorns: adventures",
       "editor": "Unstable games",
       "year": 2021,
-      "type": [
+      "types": [
         "Cards",
         "Hand management",
         "Party",
@@ -516,7 +519,7 @@
       "name": "Matrioska",
       "editor": "White goblin games",
       "year": 2016,
-      "type": [
+      "types": [
         "Family",
         "Cards",
         "Hand management"
@@ -536,7 +539,7 @@
       "name": "Sushi Go!",
       "editor": "Adventureland games",
       "year": 2013,
-      "type": [
+      "types": [
         "Cards",
         "Closed drafting",
         "End game bonuses"
@@ -556,7 +559,7 @@
       "name": "Exploding kittens",
       "editor": "Exploding kittens",
       "year": 2015,
-      "type": [
+      "types": [
         "Party",
         "Cards",
         "Humor"
@@ -576,7 +579,7 @@
       "name": "Exploding kittens: Streaking Kittens",
       "editor": "Exploding kittens",
       "year": 2018,
-      "type": [
+      "types": [
         "Party",
         "Cards",
         "Humor",
@@ -597,7 +600,7 @@
       "name": "Zombie kittens",
       "editor": "Exploding kittens",
       "year": 2022,
-      "type": [
+      "types": [
         "Party",
         "Cards",
         "Humor",
@@ -618,7 +621,7 @@
       "name": "Virus!",
       "editor": "Tranjis games",
       "year": 2015,
-      "type": [
+      "types": [
         "Cards",
         "Horror",
         "Medical"
@@ -638,7 +641,7 @@
       "name": "Virus 2! Evolution",
       "editor": "Tranjis games",
       "year": 2018,
-      "type": [
+      "types": [
         "Cards",
         "Horror",
         "Medical"
@@ -658,7 +661,7 @@
       "name": "Virus! Halloween",
       "editor": "Tranjis games",
       "year": 2020,
-      "type": [
+      "types": [
         "Cards",
         "Horror",
         "Medical"
@@ -678,7 +681,7 @@
       "name": "Jinx",
       "editor": "Creative Toys",
       "year": 2022,
-      "type": [
+      "types": [
         "Cards",
         "Fast"
       ],
@@ -697,7 +700,7 @@
       "name": "Saboteur",
       "editor": "AMIGO",
       "year": 2004,
-      "type": [
+      "types": [
         "Family",
         "Party",
         "Bluffing",
@@ -720,7 +723,7 @@
       "name": "Saboteur 2: expansion",
       "editor": "AMIGO",
       "year": 2011,
-      "type": [
+      "types": [
         "Family",
         "Party",
         "Bluffing",
@@ -744,7 +747,7 @@
       "name": "One night ultimate werewolf",
       "editor": "Bézier games",
       "year": 2014,
-      "type": [
+      "types": [
         "Bluffing",
         "Cards",
         "Deduction",
@@ -767,7 +770,7 @@
       "name": "One night ultimate vampire",
       "editor": "Bézier games",
       "year": 2016,
-      "type": [
+      "types": [
         "Bluffing",
         "Cards",
         "Deduction",
@@ -790,7 +793,7 @@
       "name": "One night ultimate alien",
       "editor": "Bézier games",
       "year": 2017,
-      "type": [
+      "types": [
         "Bluffing",
         "Cards",
         "Deduction",
@@ -813,7 +816,7 @@
       "name": "Bears Vs. Babies",
       "editor": "Self published",
       "year": 2017,
-      "type": [
+      "types": [
         "Cards",
         "Humor",
         "Animals",
@@ -834,7 +837,7 @@
       "name": "Bears Vs. Babies: NSFW expansion pack",
       "editor": "Self published",
       "year": 2017,
-      "type": [
+      "types": [
         "Cards",
         "Humor",
         "Animals",
@@ -856,7 +859,7 @@
       "name": "Happy salmon",
       "editor": "Exploding kittens",
       "year": 2016,
-      "type": [
+      "types": [
         "Party",
         "Simulation",
         "Animals",
@@ -877,7 +880,7 @@
       "name": "En una escala de 1 a T-Rex",
       "editor": "Exploding kittens",
       "year": 2019,
-      "type": [
+      "types": [
         "Humor",
         "Party",
         "Acting"
@@ -897,7 +900,7 @@
       "name": "Skyjo Action",
       "editor": "Magilano",
       "year": 2019,
-      "type": [
+      "types": [
         "Cards",
         "Set collection"
       ],
@@ -916,7 +919,7 @@
       "name": "Kimono",
       "editor": "Gen-X Games",
       "year": 2014,
-      "type": [
+      "types": [
         "Cards",
         "Drawing",
         "Set collection",
@@ -938,7 +941,7 @@
       "name": "Mascarade",
       "editor": "Repos production",
       "year": 2013,
-      "type": [
+      "types": [
         "Party",
         "Bluffing",
         "Medieval",
@@ -960,7 +963,7 @@
       "name": "Secrets",
       "editor": "Repos production",
       "year": 2017,
-      "type": [
+      "types": [
         "Party",
         "Bluffing",
         "Deduction",
@@ -981,7 +984,7 @@
       "name": "Munchkin",
       "editor": "Devir",
       "year": 2001,
-      "type": [
+      "types": [
         "Cards",
         "Fantasy",
         "Humor",
@@ -1002,7 +1005,7 @@
       "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
       "editor": "EDGE",
       "year": 2014,
-      "type": [
+      "types": [
         "Cards",
         "Humor",
         "Two players"
@@ -1021,7 +1024,7 @@
       "name": "Stay cool",
       "editor": "Scorpion Masqué",
       "year": 2019,
-      "type": [
+      "types": [
         "Party",
         "Real time",
         "Trivia"
@@ -1041,7 +1044,7 @@
       "name": "Anomia",
       "editor": "Anomia Press",
       "year": 2010,
-      "type": [
+      "types": [
         "Party",
         "Real time",
         "Trivia"
@@ -1061,7 +1064,7 @@
       "name": "So clover",
       "editor": "Repos production",
       "year": 2021,
-      "type": [
+      "types": [
         "Party",
         "Word game",
         "Communication limits",
@@ -1082,7 +1085,7 @@
       "name": "Código secreto Dúo",
       "editor": "Czech Games Edition",
       "year": 2017,
-      "type": [
+      "types": [
         "Cards",
         "Deduction",
         "Cooperative"
@@ -1101,7 +1104,7 @@
       "name": "Macedonia de letras",
       "editor": "Czech Games Edition",
       "year": 2019,
-      "type": [
+      "types": [
         "Party",
         "Cards",
         "Deduction",
@@ -1124,7 +1127,7 @@
       "name": "Mars attacks: juego de dados",
       "editor": "EDGE",
       "year": 2014,
-      "type": [
+      "types": [
         "Dice",
         "Family",
         "Party"
@@ -1144,7 +1147,7 @@
       "name": "Power plants",
       "editor": "Kids table BG",
       "year": 2022,
-      "type": [
+      "types": [
         "Puzzle",
         "Territory building",
         "Area majority",
@@ -1166,7 +1169,7 @@
       "name": "Caballeros arcoíris",
       "editor": "Ninja Division",
       "year": 2018,
-      "type": [
+      "types": [
         "Action",
         "Dexterity",
         "Cards",
@@ -1188,7 +1191,7 @@
       "name": "Decrypto: Laserdrive",
       "editor": "Asmodee",
       "year": 2019,
-      "type": [
+      "types": [
         "Deduction",
         "Party",
         "Word game",
@@ -1211,7 +1214,7 @@
       "name": "Ninja dice",
       "editor": "EDGE",
       "year": 2013,
-      "type": [
+      "types": [
         "Dice",
         "Party",
         "Push your luck"
@@ -1231,7 +1234,7 @@
       "name": "Social train",
       "editor": "GDM Games",
       "year": 2019,
-      "type": [
+      "types": [
         "Trains",
         "Area majority",
         "Take that"
@@ -1251,7 +1254,7 @@
       "name": "Alta tensión: el juego de cartas",
       "editor": "EDGE",
       "year": 2016,
-      "type": [
+      "types": [
         "Strategy",
         "Cards",
         "Economic",
@@ -1272,7 +1275,7 @@
       "name": "¡Viva el Rey!",
       "editor": "Aurum",
       "year": 2004,
-      "type": [
+      "types": [
         "Bluffing",
         "Deduction",
         "Renaissance",
@@ -1293,7 +1296,7 @@
       "name": "La leyenda del cerezo que florece cada diez años",
       "editor": "TCG Factory",
       "year": 2018,
-      "type": [
+      "types": [
         "Deduction",
         "Fantasy",
         "Push your luck",
@@ -1314,7 +1317,7 @@
       "name": "Munchkin Gloom",
       "editor": "EDGE",
       "year": 2015,
-      "type": [
+      "types": [
         "Cards",
         "Fantasy",
         "Horror",
@@ -1336,7 +1339,7 @@
       "name": "Gloom",
       "editor": "EDGE",
       "year": 2005,
-      "type": [
+      "types": [
         "Cards",
         "Horror",
         "Humor",
@@ -1357,7 +1360,7 @@
       "name": "Gloom: Expediciones Desventuradas",
       "editor": "EDGE",
       "year": 2009,
-      "type": [
+      "types": [
         "Cards",
         "Horror",
         "Humor",
@@ -1379,7 +1382,7 @@
       "name": "Gloom: invitados inoportunos",
       "editor": "EDGE",
       "year": 2007,
-      "type": [
+      "types": [
         "Cards",
         "Horror",
         "Humor",
@@ -1401,7 +1404,7 @@
       "name": "La fiesta",
       "editor": "Mercurio",
       "year": 2017,
-      "type": [
+      "types": [
         "Bluffing",
         "Party",
         "Hand management",
@@ -1423,7 +1426,7 @@
       "name": "Muchachada Nui: el juego de mesa",
       "editor": "EDGE",
       "year": 2010,
-      "type": [
+      "types": [
         "Cards",
         "Humor",
         "TV series",
@@ -1445,7 +1448,7 @@
       "name": "Speed cups⁶",
       "editor": "AMIGO",
       "year": 2018,
-      "type": [
+      "types": [
         "Action",
         "Dexterity"
       ],
@@ -1464,7 +1467,7 @@
       "name": "Speed cups²",
       "editor": "AMIGO",
       "year": 2014,
-      "type": [
+      "types": [
         "Action",
         "Dexterity"
       ],
@@ -1482,7 +1485,7 @@
       "name": "El juego de las baldosas de Antoni Gaudí",
       "editor": "CASA Consultors i Arquitectes SL",
       "year": 2002,
-      "type": [
+      "types": [
         "Abstract strategy",
         "Tile placement",
         "Pattern building"
@@ -1502,7 +1505,7 @@
       "name": "The Island",
       "editor": "Stronghold Games",
       "year": 1982,
-      "type": [
+      "types": [
         "Adventure",
         "Animals",
         "Bluffing",
@@ -1525,7 +1528,7 @@
       "name": "Tags",
       "editor": "Asmodee",
       "year": 2018,
-      "type": [
+      "types": [
         "Word game",
         "Party",
         "Trivia",
@@ -1546,7 +1549,7 @@
       "name": "King of Tokyo",
       "editor": "Devir",
       "year": 2011,
-      "type": [
+      "types": [
         "Family",
         "Dice",
         "Fighting",
@@ -1568,7 +1571,7 @@
       "name": "Wordsmith",
       "editor": "HeidelBÄR Games",
       "year": 2019,
-      "type": [
+      "types": [
         "Word game",
         "Real time",
         "Dice rolling",
@@ -1590,7 +1593,7 @@
       "name": "Mandala Stones",
       "editor": "Board&Dice",
       "year": 2021,
-      "type": [
+      "types": [
         "Abstract strategy",
         "End game bonuses",
         "Pattern building",
@@ -1612,7 +1615,7 @@
       "name": "Doodle rush",
       "editor": "Brain Games",
       "year": 2017,
-      "type": [
+      "types": [
         "Party",
         "Real time",
         "Line drawing"
@@ -1632,7 +1635,7 @@
       "name": "Drunken sailor",
       "editor": "Asmodee",
       "year": 2017,
-      "type": [
+      "types": [
         "Bluffing",
         "Deduction",
         "Party",
@@ -1653,7 +1656,7 @@
       "name": "Fit to print",
       "editor": "AEG",
       "year": 2023,
-      "type": [
+      "types": [
         "Abstract strategy",
         "Puzzle",
         "End game bonuses",
@@ -1677,7 +1680,7 @@
       "name": "Fit To Print: Game Breaking News Mini-Expansion",
       "editor": "AEG",
       "year": 2023,
-      "type": [
+      "types": [
         "Abstract strategy",
         "Puzzle",
         "End game bonuses",
@@ -1702,7 +1705,7 @@
       "name": "Who am I and what am I doing?",
       "editor": "Island Workshop",
       "year": 2021,
-      "type": [
+      "types": [
         "Cards",
         "Party"
       ],
@@ -1721,7 +1724,7 @@
       "name": "Uno Flip!",
       "editor": "Mattel",
       "year": 2019,
-      "type": [
+      "types": [
         "Cards",
         "Numbers",
         "Hand management",
@@ -1742,10 +1745,10 @@
       "name": "Cluedo suspect",
       "editor": "Hasbro",
       "year": 2010,
-      "type": [
+      "types": [
         "Cards",
         "Deduction",
-        "Murder/Mystery",
+        "Murder mystery",
         "Open drafting"
       ],
       "language": "en",
@@ -1763,7 +1766,7 @@
       "name": "Ugga Buuga",
       "editor": "Cocktail Games",
       "year": 2011,
-      "type": [
+      "types": [
         "Cards",
         "Humor",
         "Party",
@@ -1785,7 +1788,7 @@
       "name": "Black mirror: caída en picado",
       "editor": "Asmodee",
       "year": 2018,
-      "type": [
+      "types": [
         "Cards",
         "TV series",
         "Hand management",
@@ -1807,7 +1810,7 @@
       "name": "Organ attack",
       "editor": "Self published",
       "year": 2016,
-      "type": [
+      "types": [
         "Party",
         "Cards",
         "Educational",
@@ -1829,7 +1832,7 @@
       "name": "Dr. Jekyll and Mr. Hyde",
       "editor": "Mont Tàber",
       "year": 1997,
-      "type": [
+      "types": [
         "Strategy",
         "Bluffing",
         "Trick-taking"
@@ -1849,7 +1852,7 @@
       "name": "The Game",
       "editor": "Pandasaurus Games",
       "year": 2015,
-      "type": [
+      "types": [
         "Family",
         "Cards",
         "Numbers",
@@ -1871,7 +1874,7 @@
       "name": "The Game: Face to Face",
       "editor": "Pandasaurus Games",
       "year": 2017,
-      "type": [
+      "types": [
         "Cards",
         "Numbers",
         "Hand management"
@@ -1890,7 +1893,7 @@
       "name": "Kontour",
       "editor": "Gigamic",
       "year": 2018,
-      "type": [
+      "types": [
         "Deduction",
         "Party",
         "Line drawing"
@@ -1910,7 +1913,7 @@
       "name": "Codex naturalis",
       "editor": "Bombyx",
       "year": 2021,
-      "type": [
+      "types": [
         "Family",
         "Cards",
         "Hand management",
@@ -1932,7 +1935,7 @@
       "name": "Skull",
       "editor": "Lui-même",
       "year": 2011,
-      "type": [
+      "types": [
         "Bluffing",
         "Cards",
         "Auction",
@@ -1954,7 +1957,7 @@
       "name": "Expediente dark",
       "editor": "Lifestyle boardgames",
       "year": 2020,
-      "type": [
+      "types": [
         "Deduction",
         "Horror",
         "Puzzle",
@@ -1976,9 +1979,9 @@
       "name": "Expediente X: el juego oficial",
       "editor": "20th Century Fox",
       "year": 1997,
-      "type": [
+      "types": [
         "TV series",
-        "Murder/Mystery",
+        "Murder mystery",
         "Trivia",
         "VHS"
       ],
@@ -1997,7 +2000,7 @@
       "name": "Listillo",
       "editor": "Zacatrús",
       "year": 2023,
-      "type": [
+      "types": [
         "Cards",
         "Humor",
         "Party",
@@ -2018,7 +2021,7 @@
       "name": "Among spaceship",
       "editor": "A & B Games",
       "year": 2023,
-      "type": [
+      "types": [
         "Cards",
         "Dice",
         "Cooperative"
@@ -2038,7 +2041,7 @@
       "name": "Mantis",
       "editor": "Exploding kittens",
       "year": 2022,
-      "type": [
+      "types": [
         "Cards",
         "Family",
         "Hand management",
@@ -2060,7 +2063,7 @@
       "name": "El portero Baldomero",
       "editor": "Zacatrús",
       "year": 2017,
-      "type": [
+      "types": [
         "Bluffing",
         "Deduction",
         "Humor",
@@ -2082,7 +2085,7 @@
       "name": "Here to slay",
       "editor": "Unstable games",
       "year": 2020,
-      "type": [
+      "types": [
         "Cards",
         "Fantasy",
         "Fighting",
@@ -2104,7 +2107,7 @@
       "name": "Here to slay: Berserkers &Necromancers",
       "editor": "Unstable games",
       "year": 2020,
-      "type": [
+      "types": [
         "Cards",
         "Fantasy",
         "Fighting",
@@ -2127,7 +2130,7 @@
       "name": "Here to slay: Warriors & Druids",
       "editor": "Unstable games",
       "year": 2020,
-      "type": [
+      "types": [
         "Cards",
         "Fantasy",
         "Fighting",
@@ -2150,7 +2153,7 @@
       "name": "Trash pandas",
       "editor": "Red Book Games",
       "year": 2017,
-      "type": [
+      "types": [
         "Family",
         "Cards",
         "Dice",
@@ -2173,7 +2176,7 @@
       "name": "Kingz",
       "editor": "Ankama",
       "year": 2016,
-      "type": [
+      "types": [
         "Simultaneous action selection",
         "Cards",
         "Animals"
@@ -2193,7 +2196,7 @@
       "name": "Secret Hitler",
       "editor": "Goat Wolf and Cabbage",
       "year": 2016,
-      "type": [
+      "types": [
         "Party",
         "Bluffing",
         "Hidden roles",
@@ -2215,9 +2218,9 @@
       "name": "Cold case: una historia de muerte",
       "editor": "Think fun",
       "year": 2021,
-      "type": [
+      "types": [
         "Adult",
-        "Murder/Mystery",
+        "Murder mystery",
         "Cooperative",
         "Solitaire"
       ],
@@ -2236,7 +2239,7 @@
       "name": "Taco, cat, goat, cheese, pizza",
       "editor": "Dolphin halt games",
       "year": 2018,
-      "type": [
+      "types": [
         "Party",
         "Children"
       ],
@@ -2255,7 +2258,7 @@
       "name": "The Grimwood",
       "editor": "Adventure On Games",
       "year": 2016,
-      "type": [
+      "types": [
         "Cards",
         "Hand management",
         "Set collection"
@@ -2275,7 +2278,7 @@
       "name": "More or Less: How Good Is Your Judgement?",
       "editor": "Propifi Limited",
       "year": 2020,
-      "type": [
+      "types": [
         "Quiz"
       ],
       "language": "x",
@@ -2293,7 +2296,7 @@
       "name": "Shot in the dark: The Ultimate Unorthodox Quiz",
       "editor": "Shot in the dark",
       "year": 2019,
-      "type": [
+      "types": [
         "Quiz"
       ],
       "language": "en",
@@ -2311,7 +2314,7 @@
       "name": "Micro Roma",
       "editor": "Cacahuete games",
       "year": 2023,
-      "type": [
+      "types": [
         "Cards",
         "City building",
         "Layering",
@@ -2332,7 +2335,7 @@
       "name": "Fluxx",
       "editor": "Looney labs",
       "year": 1997,
-      "type": [
+      "types": [
         "Party",
         "Cards",
         "Hand management",
@@ -2353,7 +2356,7 @@
       "name": "Feministime: La Espiral del Tiempo Feminista",
       "editor": "Eskalera",
       "year": 2022,
-      "type": [
+      "types": [
         "Trivia",
         "Cards"
       ],
@@ -2372,7 +2375,7 @@
       "name": "Deep sea adventure",
       "editor": "Oink games",
       "year": 2014,
-      "type": [
+      "types": [
         "Dice",
         "Exploration",
         "Push your luck",
@@ -2393,7 +2396,7 @@
       "name": "Sriracha the game",
       "editor": "DSS Games",
       "year": 2021,
-      "type": [
+      "types": [
         "Cards",
         "Dexterity",
         "Real time"
@@ -2413,7 +2416,7 @@
       "name": "Werewolves of Miller's Hollow",
       "editor": "Lui-même",
       "year": 2001,
-      "type": [
+      "types": [
         "Party",
         "Bluffing",
         "Deduction",
@@ -2434,7 +2437,7 @@
       "name": "A prueba de retos",
       "editor": "Exploding kittens",
       "year": 2023,
-      "type": [
+      "types": [
         "Party"
       ],
       "language": "es",
@@ -2452,7 +2455,7 @@
       "name": "Petrichor",
       "editor": "APE games",
       "year": 2018,
-      "type": [
+      "types": [
         "Strategy",
         "Farming",
         "Area majority",
@@ -2473,7 +2476,7 @@
       "name": "Hanabi",
       "editor": "Cocktail Games",
       "year": 2019,
-      "type": [
+      "types": [
         "Cards",
         "Deduction",
         "Memory"
@@ -2493,7 +2496,7 @@
       "name": "Arkham Noir #1: los asesinatos del culto de la Bruja",
       "editor": "Ludonova",
       "year": 2017,
-      "type": [
+      "types": [
         "Solitaire",
         "Fantasy",
         "Horror",
@@ -2513,7 +2516,7 @@
       "name": "Spoilers: Edición definitiva",
       "editor": "Zacatrús",
       "year": 2021,
-      "type": [
+      "types": [
         "Party",
         "Bluffing",
         "Trivia",
@@ -2534,7 +2537,7 @@
       "name": "Imagine",
       "editor": "Cocktail Games",
       "year": 2015,
-      "type": [
+      "types": [
         "Party",
         "Deduction",
         "Acting",
@@ -2555,7 +2558,7 @@
       "name": "F**k: the game",
       "editor": "Self published",
       "year": 2015,
-      "type": [
+      "types": [
         "Cards",
         "Party",
         "Adult"
@@ -2575,7 +2578,7 @@
       "name": "Paris: la cité de la Lumière",
       "editor": "Devir",
       "year": 2019,
-      "type": [
+      "types": [
         "Abstract strategy",
         "Puzzle",
         "Territory building",
@@ -2597,7 +2600,7 @@
       "name": "Paris: Eiffel",
       "editor": "Devir",
       "year": 2021,
-      "type": [
+      "types": [
         "Action drafting",
         "Area majority",
         "Tile placement",
@@ -2617,7 +2620,7 @@
       "name": "Mix it (monster edition)",
       "editor": "Brain picnic",
       "year": 2015,
-      "type": [
+      "types": [
         "Family",
         "Cards",
         "Puzzle"
@@ -2637,9 +2640,9 @@
       "name": "El Jurado 1 - El Caso de las Carpas Doradas",
       "editor": "GenX",
       "year": 2019,
-      "type": [
+      "types": [
         "Deduction",
-        "Murder/Mystery",
+        "Murder mystery",
         "Storytelling",
         "Voting"
       ],
@@ -2658,7 +2661,7 @@
       "name": "Antarctica",
       "editor": "Zacatrús",
       "year": 2021,
-      "type": [
+      "types": [
         "Adventure",
         "Cards",
         "Deduction",
@@ -2680,9 +2683,9 @@
       "name": "Nightmare",
       "editor": "Diset",
       "year": 2021,
-      "type": [
+      "types": [
         "Party",
-        "Murder/Mystery",
+        "Murder mystery",
         "Horror",
         "Deduction",
         "Real time"
@@ -2702,7 +2705,7 @@
       "name": "Espías en la sombra",
       "editor": "TCG Factory",
       "year": 2021,
-      "type": [
+      "types": [
         "Spies",
         "Open drafting",
         "Network",
@@ -2723,7 +2726,7 @@
       "name": "Garabatos y mazmorras",
       "editor": "TCG Factory",
       "year": 2020,
-      "type": [
+      "types": [
         "Fantasy",
         "Humor",
         "Line drawing",
@@ -2744,7 +2747,7 @@
       "name": "Loading",
       "editor": "TCG Factory",
       "year": 2021,
-      "type": [
+      "types": [
         "Real time",
         "Cards",
         "Closed drafting",
@@ -2765,7 +2768,7 @@
       "name": "Terra Mare",
       "editor": "Devir",
       "year": 2021,
-      "type": [
+      "types": [
         "Medieval",
         "Puzzle",
         "Territory building",
@@ -2788,7 +2791,7 @@
       "name": "Railroad ink: azul profundo",
       "editor": "Devir",
       "year": 2018,
-      "type": [
+      "types": [
         "Family",
         "Connections",
         "Dice rolling",
@@ -2810,7 +2813,7 @@
       "name": "Arkham Noir #2: Invocado por el Trueno",
       "editor": "Ludonova",
       "year": 2018,
-      "type": [
+      "types": [
         "Solitaire",
         "Fantasy",
         "Horror",
@@ -2830,7 +2833,7 @@
       "name": "Arkham Noir #3: Abismos Infinitos de Oscuridad",
       "editor": "Ludonova",
       "year": 2021,
-      "type": [
+      "types": [
         "Solitaire",
         "Fantasy",
         "Horror",
@@ -2850,7 +2853,7 @@
       "name": "Detective: Sigue la Pista",
       "editor": "Pegasus Spiele",
       "year": 2020,
-      "type": [
+      "types": [
         "Expansion"
       ],
       "language": "es",
@@ -2868,7 +2871,7 @@
       "name": "Mr. Jack",
       "editor": "Devir",
       "year": 2006,
-      "type": [],
+      "types": [],
       "language": "es",
       "players": [
         2,
@@ -2884,7 +2887,7 @@
       "name": "Lost Cities: Roll & Write",
       "editor": "Devir",
       "year": 2021,
-      "type": [
+      "types": [
         "Dice rolling",
         "Paper and pencil"
       ],
@@ -2903,9 +2906,9 @@
       "name": "Detective: A Modern Crime Board Game",
       "editor": "Portal Games",
       "year": 2018,
-      "type": [
+      "types": [
         "Deduction",
-        "Murder/Mystery",
+        "Murder mystery",
         "Narrative choice/paragraph",
         "Solitaire",
         "Storytelling"
@@ -2925,7 +2928,7 @@
       "name": "Pictomania (Second edition)",
       "editor": "Czech Games Edition",
       "year": 2011,
-      "type": [
+      "types": [
         "Line drawing",
         "Party",
         "Real time"
@@ -2945,7 +2948,7 @@
       "name": "Magnetism",
       "editor": "Ankama",
       "year": 2022,
-      "type": [
+      "types": [
         "Strategy"
       ],
       "language": "x",
@@ -2963,7 +2966,7 @@
       "name": "Funky pollo",
       "editor": "DV Games",
       "year": 2018,
-      "type": [
+      "types": [
         "Party",
         "Children",
         "Real time",
@@ -2984,7 +2987,7 @@
       "name": "Love letter",
       "editor": "Z-Man games",
       "year": 2019,
-      "type": [
+      "types": [
         "Hand management",
         "Player elimination",
         "Score-and-reset-game",
@@ -3005,7 +3008,7 @@
       "name": "Avalon",
       "editor": "Indie boards & cards",
       "year": 2012,
-      "type": [
+      "types": [
         "Hidden roles",
         "Deduction",
         "Bluffing",
@@ -3026,7 +3029,7 @@
       "name": "Behind the campaign",
       "editor": "A & B Games",
       "year": 2019,
-      "type": [
+      "types": [
         "Strategy",
         "Political"
       ],
@@ -3045,7 +3048,7 @@
       "name": "War of Roshambo: Kingdom clash",
       "editor": "A & B Games",
       "year": 2019,
-      "type": [
+      "types": [
         "Medieval",
         "Territory building"
       ],
@@ -3064,7 +3067,7 @@
       "name": "The mind fullness game",
       "editor": "Innericons",
       "year": 2019,
-      "type": [
+      "types": [
         "Mind fullness",
         "Cards"
       ],
@@ -3083,7 +3086,7 @@
       "name": "Canvas",
       "editor": "Road To Infamy",
       "year": 2021,
-      "type": [
+      "types": [
         "Abstract strategy",
         "Puzzle",
         "Hand management",
@@ -3104,7 +3107,7 @@
       "name": "Canvas: Reflections",
       "editor": "Road To Infamy",
       "year": 2022,
-      "type": [
+      "types": [
         "Abstract strategy",
         "Puzzle",
         "Hand management",
@@ -3126,7 +3129,7 @@
       "name": "Railroad ink: amarillo brillante",
       "editor": "Devir",
       "year": 2021,
-      "type": [
+      "types": [
         "Family",
         "Connections",
         "Dice rolling",
@@ -3148,7 +3151,7 @@
       "name": "Pixelate",
       "editor": "Abrams and Chronicle",
       "year": 2021,
-      "type": [
+      "types": [
         "Drawing",
         "Pattern recognition",
         "Team-based game"
@@ -3168,7 +3171,7 @@
       "name": "That's not a hat",
       "editor": "Ravensburger",
       "year": 2023,
-      "type": [
+      "types": [
         "Party",
         "Memory",
         "Bluffing"
@@ -3188,7 +3191,7 @@
       "name": "Sushi bar",
       "editor": "Mercurio",
       "year": 2008,
-      "type": [
+      "types": [
         "Dice",
         "Memory",
         "Push your luck",
@@ -3209,7 +3212,7 @@
       "name": "Sonora",
       "editor": "Pandasaurus",
       "year": 2020,
-      "type": [
+      "types": [
         "Action points",
         "Area majority",
         "Flicking",
@@ -3230,7 +3233,7 @@
       "name": "Obscurio",
       "editor": "Libellud",
       "year": 2023,
-      "type": [
+      "types": [
         "Exploration",
         "Deduction",
         "Bluffing",
@@ -3253,7 +3256,7 @@
       "name": "Clic: la foto perfecta",
       "editor": "Mevo",
       "year": 2020,
-      "type": [
+      "types": [
         "Negotiation",
         "Puzzle",
         "Bidding",
