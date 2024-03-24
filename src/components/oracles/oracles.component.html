@@ -3,8 +3,8 @@
     <div class="side">
       <div class="side__container">
         <h2 class="side__title">Oracles</h2>
-        <h3 class="side__number" [ngClass]="notPlayedGames ? 'font-system' : 'font-pink'">
-          ({{oraclesList.length}})
+        <h3 class="side__number" [ngClass]="unPlayedGames ? 'font-system' : 'font-pink'">
+          ({{filterFunctions.getFlipCardCount(innerElements)}} of {{oraclesList.length}} selected)
         </h3>
       </div>
       <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
@@ -29,7 +29,7 @@
               {{oracle.artist}}
             </h2>}
           </div>
-          <div class="card__list-back" [ngClass]="{'border-pink': oracle.isPlayed }">
+          <div class="card__list-back">
             <div class="card__info card__info-scroll">
               <div class="card__info-title">
                 <div>

@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   OnInit,
@@ -11,6 +12,7 @@ import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-tex
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
+import { OracleCard } from '../commons.models';
 
 @Component({
   selector: 'app-oracles',
@@ -19,22 +21,26 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
   templateUrl: './oracles.component.html',
   styleUrl: '../common-styles.scss',
 })
-export class OraclesComponent implements OnInit {
+export class OraclesComponent implements OnInit, AfterViewInit {
   @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
 
-  oraclesList!: any;
-  notPlayedGames = false;
+  oraclesList!: Array<OracleCard>;
+  unPlayedGames = false;
   searchQuery = '';
 
   constructor(
     public commonFunctions: CommonFunctionsService,
-    private filterFunctions: FilterFunctionsService,
+    public filterFunctions: FilterFunctionsService,
   ) {}
 
   ngOnInit(): void {
     this.oraclesList = this.filterFunctions.sortByNameAscending(
       ORACLES_JSON.oracles,
     );
+  }
+
+  ngAfterViewInit() {
+    this.filterFunctions.getFlipCardCount(this.innerElements);
   }
 
   toggleCardFlip(index: number) {
