@@ -319,7 +319,8 @@
       "types": [
         "Family",
         "Bluffing",
-        "Deduction"
+        "Deduction",
+        "Alternate history"
       ],
       "language": "en",
       "players": [
@@ -2070,7 +2071,7 @@
         "Party",
         "Word game"
       ],
-      "language": "en",
+      "language": "es",
       "players": [
         3,
         8
@@ -2677,27 +2678,6 @@
       "complexity": 2,
       "rate": 6.5,
       "image": "antarctica",
-      "isPlayed": false
-    },
-    {
-      "name": "Diáspora zero",
-      "editor": "Zacatrús",
-      "year": 2023,
-      "type": [
-        "Science Fiction",
-        "Cards",
-        "Deduction",
-        "Puzzle",
-        "Cooperative"
-      ],
-      "language": "es",
-      "players": [
-        1,
-        24
-      ],
-      "time": 120,
-      "complexity": 2,
-      "image": "diaspora-zero",
       "isPlayed": false
     },
     {
