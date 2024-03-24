@@ -37,6 +37,7 @@ p {
   &__container {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 
     &-scroll {
       align-self: flex-end;
@@ -72,19 +73,13 @@ p {
     }
 
     &-inner {
-      // position: relative;
-      // width: 100%;
-      // height: 100%;
-      // text-align: center;
-      // transition: transform 0.8s;
-      // transform-style: preserve-3d;
       position: relative;
       width: 100%;
       height: 100%;
       text-align: center;
-      /* Remove hover transition */
       transition: none;
       transform-style: preserve-3d;
+
       &.active {
         transform: rotateY(180deg);
       }
@@ -97,24 +92,9 @@ p {
       }
     }
 
-    // &:hover &-inner {
-    //   transform: rotateY(180deg);
-    // }
-
     &-front,
     &-back,
     &-back-oracle {
-      // position: absolute;
-      // width: 100%;
-      // height: 100%;
-      // backface-visibility: hidden;
-      // -webkit-backface-visibility: hidden;
-      // border: 4px solid;
-      // border-radius: 12px;
-      // padding: 14px;
-      // display: flex;
-      // flex-direction: column;
-      // transform: rotateX(0deg);
       position: absolute;
       width: 100%;
       height: 100%;
@@ -461,8 +441,7 @@ a:active {
 
 .legend {
   &__container {
-    margin: 0 auto;
-    width: 80%;
+    margin-top: 16px;
   }
 
   &__content {
