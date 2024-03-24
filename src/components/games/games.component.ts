@@ -250,7 +250,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.selectedSorting.reset();
     this.selectedEditors.reset([]);
     this.selectedTypes.reset([]);
-    this.selectedChipTypes = [];
     this.searchQuery = '';
     this.exactPlayers = undefined;
     this.filteredGames = this.filterFunctions.sortByNameAscending(

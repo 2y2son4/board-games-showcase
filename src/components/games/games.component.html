@@ -5,11 +5,12 @@
         <h3 class="side__number">
           {{playedGames ? 'Played' : unPlayedGames ? 'Unplayed' : ''}}
         </h3>
-        <h3 class="side__number">
+        <h4 class="side__number">
           @for(type of selectedChipTypes; let index = $index;let first = $first;let last = $last; track
           index){
-          <span>{{!first ? type.toLowerCase() : type}} {{!last && selectedChipTypes.length > 1? ' and ' : ''}} </span>}
-        </h3>
+          <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes.length > 1 ? ' and ' : '')}}
+            {{!first ? type.toLowerCase() : type}}</span>}
+        </h4>
         <h2 class="side__title">Games</h2>
         <h3 class="side__number" [ngClass]="unPlayedGames ? 'font-system' : 'font-pink'">
           ( {{filterFunctions.getFlipCardCount(innerElements)}} of {{filteredGames.length}} selected)
