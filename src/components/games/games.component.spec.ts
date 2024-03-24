@@ -8,9 +8,10 @@ const game1: GameCard = {
   name: 'Game 1',
   year: 2021,
   editor: 'Editor 1',
-  type: ['Type A'],
+  types: ['Type A'],
   language: 'en',
   complexity: 2,
+  rate: 0,
   isPlayed: true,
   players: [4],
 };
@@ -19,9 +20,10 @@ const game2: GameCard = {
   name: 'Game 2',
   year: 2022,
   editor: 'Editor 2',
-  type: ['Type B', 'Type C'],
+  types: ['Type B', 'Type C'],
   language: 'es',
   complexity: 3,
+  rate: 0,
   isPlayed: false,
   players: [27],
 };
@@ -30,9 +32,10 @@ const game3: GameCard = {
   name: 'Another thing',
   year: 2023,
   editor: 'Editor 1',
-  type: ['Type A', 'Type D'],
+  types: ['Type A', 'Type D'],
   language: 'en',
   complexity: 1,
+  rate: 0,
   isPlayed: false,
   players: [2],
 };
@@ -86,8 +89,8 @@ describe('GamesComponent', () => {
     expect(component.selectedTypes.value).toEqual([]);
     expect(component.searchQuery).toBeFalsy();
     expect(component.exactPlayers).toBe(undefined);
-    expect(component.playedGames).toBe(true);
-    expect(component.notPlayedGames).toBe(false);
+    expect(component.playedGames).toBe(false);
+    expect(component.unPlayedGames).toBe(false);
     expect(component.filteredGames).toEqual(component.gamesList);
   });
 });
