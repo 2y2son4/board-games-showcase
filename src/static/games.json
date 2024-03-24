@@ -1197,7 +1197,7 @@
         "Party",
         "Word game",
         "Communication limits",
-        "Team-based game",
+        "Team-based",
         "Expansion"
       ],
       "language": "es",
@@ -2774,7 +2774,7 @@
         "Puzzle",
         "Territory building",
         "Map addition",
-        "Team-based game",
+        "Team-based",
         "Tile placement"
       ],
       "language": "es",
@@ -3013,7 +3013,7 @@
         "Hidden roles",
         "Deduction",
         "Bluffing",
-        "Team-based game"
+        "Team-based"
       ],
       "language": "en",
       "players": [
@@ -3155,7 +3155,7 @@
       "types": [
         "Drawing",
         "Pattern recognition",
-        "Team-based game"
+        "Team-based"
       ],
       "language": "es",
       "players": [
