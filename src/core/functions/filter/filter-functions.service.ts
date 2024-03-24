@@ -1,7 +1,4 @@
-import { Injectable } from '@angular/core';
-import { MatSelectChange } from '@angular/material/select';
-
-import { GameCard } from '../../../components/games/games.component.model';
+import { ElementRef, Injectable, QueryList } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -9,29 +6,23 @@ import { GameCard } from '../../../components/games/games.component.model';
 export class FilterFunctionsService {
   constructor() {}
 
-  sortByNameAscending(data: Array<GameCard>) {
+  sortByNameAscending(data: Array<any>) {
     return data.sort((a, b) => a.name.localeCompare(b.name));
   }
 
-  selectSorting(change: MatSelectChange, filteredGames: GameCard[]) {
-    const sortFunctions: {
-      [key: string]: (a: GameCard, b: GameCard) => number;
-    } = {
-      'A to Z': (a, b) => a.name.localeCompare(b.name),
-      'Z to A': (a, b) => b.name.localeCompare(a.name),
-      'Year ↑': (a, b) => a.year - b.year,
-      'Year ↓': (a, b) => b.year - a.year,
-      'Time ↑': (a, b) => a.time! - b.time!,
-      'Time ↓': (a, b) => b.time! - a.time!,
-      'Complexity ↑': (a, b) => a.complexity - b.complexity,
-      'Complexity ↓': (a, b) => b.complexity - a.complexity,
-      'Rate ↑': (a, b) => a.rate - b.rate,
-      'Rate ↓': (a, b) => b.rate - a.rate,
-    };
+  getFlipCardCount(innerElements: QueryList<ElementRef>): number {
+    return innerElements
+      ? innerElements.filter((innerElement) =>
+          innerElement.nativeElement.classList.contains('active'),
+        ).length
+      : 0;
+  }
 
-    const sortFunction = sortFunctions[change.value];
-    if (sortFunction) {
-      filteredGames.sort(sortFunction);
+  flipAllCards(innerElements: QueryList<ElementRef>) {
+    if (innerElements) {
+      innerElements.forEach((innerElement) => {
+        innerElement.nativeElement.classList.remove('active');
+      });
     }
   }
 }
