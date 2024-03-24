@@ -1067,7 +1067,7 @@
       "year": 2021,
       "types": [
         "Party",
-        "Word game",
+        "Words",
         "Communication limits",
         "Cooperative"
       ],
@@ -1109,7 +1109,7 @@
         "Party",
         "Cards",
         "Deduction",
-        "Word game",
+        "Words",
         "Communication limits",
         "Cooperative"
       ],
@@ -1195,7 +1195,7 @@
       "types": [
         "Deduction",
         "Party",
-        "Word game",
+        "Words",
         "Communication limits",
         "Team-based",
         "Expansion"
@@ -1530,7 +1530,7 @@
       "editor": "Asmodee",
       "year": 2018,
       "types": [
-        "Word game",
+        "Words",
         "Party",
         "Trivia",
         "Real time"
@@ -1573,7 +1573,7 @@
       "editor": "HeidelBÄR Games",
       "year": 2019,
       "types": [
-        "Word game",
+        "Words",
         "Real time",
         "Dice rolling",
         "Paper and pencil",
@@ -2069,7 +2069,7 @@
         "Deduction",
         "Humor",
         "Party",
-        "Word game"
+        "Words"
       ],
       "language": "es",
       "players": [
@@ -3238,7 +3238,7 @@
         "Exploration",
         "Deduction",
         "Bluffing",
-        "Traitor game",
+        "Traitor",
         "Cooperative",
         "Voting"
       ],
