@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import ORACLES_JSON from '../../static/oracles.json';
 import { CommonModule } from '@angular/common';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
@@ -14,6 +20,8 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
   styleUrl: '../common-styles.scss',
 })
 export class OraclesComponent implements OnInit {
+  @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
+
   oraclesList!: any;
   notPlayedGames = false;
   searchQuery = '';
@@ -27,5 +35,12 @@ export class OraclesComponent implements OnInit {
     this.oraclesList = this.filterFunctions.sortByNameAscending(
       ORACLES_JSON.oracles,
     );
+  }
+
+  toggleCardFlip(index: number) {
+    const targetElement = this.innerElements.toArray()[index];
+    if (targetElement) {
+      targetElement.nativeElement.classList.toggle('active');
+    }
   }
 }

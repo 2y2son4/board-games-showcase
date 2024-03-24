@@ -2,6 +2,11 @@
   <div>
     <div class="side">
       <div class="side__container">
+        <h3 class="side__number">
+          @for(type of selectedChipTypes; let index = $index;let first = $first;let last = $last; track
+          index){
+          <span>{{!first ? type.toLowerCase() : type}} {{!last && selectedChipTypes.length > 1? ' and ' : ''}} </span>}
+        </h3>
         <h2 class="side__title">Games</h2>
         <h3 class="side__number" [ngClass]="notPlayedGames ? 'font-system' : 'font-pink'">
           ({{filteredGames.length}})
@@ -16,7 +21,7 @@
     <ul class="card__container">
       @for(game of filteredGames;let index = $index; track index){
       <li class="card__list" #game>
-        <div class="card__list-inner">
+        <div class="card__list-inner" (click)="toggleCardFlip(index)" #innerElement>
           <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
             <span class="card__year-absolute" [ngClass]="{'border-pink': game.isPlayed }"
               [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
@@ -59,8 +64,7 @@
                         ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
 
                   </div>
-                  <mat-chip-listbox aria-label="select a shirt size" [(ngModel)]="type"
-                    (ngModelChange)="onTypeChange($event)">
+                  <mat-chip-listbox multiple [(ngModel)]="selectedChipTypes" (ngModelChange)="onTypeChange($event)">
                     @for(type of game.types; let index = $index; let last = $last; track index){
                     <mat-chip-option [value]="type"> {{type}} </mat-chip-option>}
                   </mat-chip-listbox>

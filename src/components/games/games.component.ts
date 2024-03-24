@@ -1,4 +1,10 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormControl,
@@ -43,20 +49,22 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
   styleUrl: '../common-styles.scss',
 })
 export class GamesComponent implements OnInit {
+  @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
+
   gamesList!: Array<GameCard>;
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
+  selectedChipTypes: Array<string> = [''];
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
   selectedSorting = new FormControl<string>('');
   filteredGames: GameCard[] = [];
   searchQuery = '';
-  playedGames = true;
+  playedGames = false;
   notPlayedGames = false;
   exactPlayers!: number | undefined;
   gamesFilterForm!: FormGroup;
-  type: any;
 
   sortingSelectLabels = [
     'A to Z',
@@ -93,13 +101,15 @@ export class GamesComponent implements OnInit {
     });
   }
 
-  onTypeChange(modelType: string) {
-    this.searchQuery = modelType;
-    if (this.searchQuery) {
-      this.filterGames();
-    } else {
+  onTypeChange(selectedChipTypes: Array<string>) {
+    if (!selectedChipTypes) {
       this.resetGamesList();
-      this.type = '';
+    } else {
+      this.filteredGames = this.gamesList.filter((card) => {
+        return selectedChipTypes.every((selectedType) =>
+          card.types.includes(selectedType),
+        );
+      });
     }
   }
 
@@ -218,6 +228,13 @@ export class GamesComponent implements OnInit {
         }
         return false;
       });
+    }
+  }
+
+  toggleCardFlip(index: number) {
+    const targetElement = this.innerElements.toArray()[index];
+    if (targetElement) {
+      targetElement.nativeElement.classList.toggle('active');
     }
   }
 }
