@@ -12,6 +12,15 @@ export interface GameCard {
   isPlayed: boolean;
 }
 
+export interface OracleCard {
+  name: string;
+  artist: string;
+  language: 'en' | 'es' | 'de' | '-';
+  image?: string;
+  description: Array<string>;
+  web: string;
+}
+
 export interface SortingOrder {
   [key: string]: boolean;
 }
