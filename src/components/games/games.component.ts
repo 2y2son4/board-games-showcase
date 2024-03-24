@@ -157,6 +157,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
           game.name.toLowerCase().includes(query) ||
           game.editor.toLowerCase().includes(query) ||
           game.year.toString().includes(query) ||
+          game.rate.toString().includes(query) ||
+          game.complexity.toString().includes(query) ||
           game.types.some((type) => type.toLowerCase().includes(query)),
       );
     }
@@ -242,6 +244,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   restartFilters() {
     this.restartDropdownFilters();
+    this.selectedChipTypes = [];
     this.resetPlayedGames();
     this.filterFunctions.flipAllCards(this.innerElements);
   }
