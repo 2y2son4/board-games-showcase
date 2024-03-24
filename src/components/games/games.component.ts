@@ -62,7 +62,7 @@ export class GamesComponent implements OnInit {
   filteredGames: GameCard[] = [];
   searchQuery = '';
   playedGames = false;
-  notPlayedGames = false;
+  unPlayedGames = false;
   exactPlayers!: number | undefined;
   gamesFilterForm!: FormGroup;
 
@@ -181,20 +181,46 @@ export class GamesComponent implements OnInit {
       this.gamesList,
     );
     this.playedGames = played;
-    this.notPlayedGames = !played;
+    this.unPlayedGames = !played;
+  }
+
+  togglePlayed() {
+    this.resetGamesList();
+    this.unPlayedGames = false;
+    this.selectedChipTypes = [];
+    this.playedGames = !this.playedGames;
     this.filteredGames = this.filteredGames.filter(
-      (game) => game.isPlayed === played,
+      (game) => game.isPlayed === this.playedGames,
     );
+
+    if (!this.playedGames) {
+      this.resetGamesList();
+    }
+  }
+
+  toggleUnPlayed() {
+    this.resetGamesList();
+    this.playedGames = false;
+    this.selectedChipTypes = [];
+    this.unPlayedGames = !this.unPlayedGames;
+    this.filteredGames = this.filteredGames.filter(
+      (game) => game.isPlayed === !this.unPlayedGames,
+    );
+
+    if (!this.unPlayedGames) {
+      this.resetGamesList();
+    }
   }
 
   restartFilters() {
     this.selectedSorting.reset();
     this.selectedEditors.reset([]);
     this.selectedTypes.reset([]);
+    this.selectedChipTypes = [];
     this.searchQuery = '';
     this.exactPlayers = undefined;
-    this.playedGames = true;
-    this.notPlayedGames = false;
+    this.playedGames = false;
+    this.unPlayedGames = false;
     this.filteredGames = this.filterFunctions.sortByNameAscending(
       this.gamesList,
     );

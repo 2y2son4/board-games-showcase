@@ -3,14 +3,25 @@
     <div class="side">
       <div class="side__container">
         <h3 class="side__number">
+          {{playedGames ? 'Played' : unPlayedGames ? 'Unplayed' : ''}}
+        </h3>
+        <h3 class="side__number">
           @for(type of selectedChipTypes; let index = $index;let first = $first;let last = $last; track
           index){
           <span>{{!first ? type.toLowerCase() : type}} {{!last && selectedChipTypes.length > 1? ' and ' : ''}} </span>}
         </h3>
         <h2 class="side__title">Games</h2>
-        <h3 class="side__number" [ngClass]="notPlayedGames ? 'font-system' : 'font-pink'">
+        <h3 class="side__number" [ngClass]="unPlayedGames ? 'font-system' : 'font-pink'">
           ({{filteredGames.length}})
         </h3>
+        <div class="legend__container">
+          <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
+            Played
+          </button>
+          <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
+            <p>Unplayed</p>
+          </button>
+        </div>
       </div>
       <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
 
@@ -128,15 +139,6 @@
           <mat-option *ngFor="let editor of editors" [value]="editor">{{editor}}</mat-option>
         </mat-select>
       </mat-form-field>
-      <div class="legend__container">
-        <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayedFilter(true)">
-          Played
-        </button>
-        <button class="button-system legend__content" type="button" mat-raised-button
-          (click)="togglePlayedFilter(false)">
-          <p>Not played</p>
-        </button>
-      </div>
       <button #filterButton type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
       </button>
     </div>
