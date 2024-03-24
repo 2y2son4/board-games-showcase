@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   OnInit,
@@ -19,9 +20,9 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSelectModule } from '@angular/material/select';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 
-import { GameCard } from './games.component.model';
+import { GameCard } from '../commons.models';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import GAMES_JSON from '../../static/games.json';
@@ -48,7 +49,7 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
   templateUrl: './games.component.html',
   styleUrl: '../common-styles.scss',
 })
-export class GamesComponent implements OnInit {
+export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
 
   gamesList!: Array<GameCard>;
@@ -65,6 +66,7 @@ export class GamesComponent implements OnInit {
   unPlayedGames = false;
   exactPlayers!: number | undefined;
   gamesFilterForm!: FormGroup;
+  flippedCards!: number;
 
   sortingSelectLabels = [
     'A to Z',
@@ -101,7 +103,12 @@ export class GamesComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit() {
+    this.filterFunctions.getFlipCardCount(this.innerElements);
+  }
+
   onTypeChange(selectedChipTypes: Array<string>) {
+    this.restartDropdownFilters();
     if (!selectedChipTypes) {
       this.resetGamesList();
     } else {
@@ -111,10 +118,6 @@ export class GamesComponent implements OnInit {
         );
       });
     }
-  }
-
-  resetGamesList() {
-    this.filteredGames = this.gamesList;
   }
 
   extractUniqueValues(propertyName: keyof GameCard): string[] {
@@ -141,6 +144,8 @@ export class GamesComponent implements OnInit {
   }
 
   filterGames() {
+    this.resetPlayedGames();
+    this.filterFunctions.flipAllCards(this.innerElements);
     if (this.searchQuery.trim() === '') {
       this.filteredGames = this.filterFunctions.sortByNameAscending(
         this.gamesList,
@@ -158,6 +163,8 @@ export class GamesComponent implements OnInit {
   }
 
   filterGamesByTypeAndEditor() {
+    this.resetPlayedGames();
+    this.filterFunctions.flipAllCards(this.innerElements);
     const selectedTypeValues = this.selectedTypes.value ?? [];
     const selectedEditorValues = this.selectedEditors.value ?? [];
 
@@ -176,12 +183,28 @@ export class GamesComponent implements OnInit {
     }
   }
 
-  togglePlayedFilter(played: boolean): void {
-    this.filteredGames = this.filterFunctions.sortByNameAscending(
-      this.gamesList,
-    );
-    this.playedGames = played;
-    this.unPlayedGames = !played;
+  selectSorting(change: MatSelectChange, filteredGames: GameCard[]) {
+    this.resetPlayedGames();
+    this.filterFunctions.flipAllCards(this.innerElements);
+    const sortFunctions: {
+      [key: string]: (a: GameCard, b: GameCard) => number;
+    } = {
+      'A to Z': (a, b) => a.name.localeCompare(b.name),
+      'Z to A': (a, b) => b.name.localeCompare(a.name),
+      'Year ↑': (a, b) => a.year - b.year,
+      'Year ↓': (a, b) => b.year - a.year,
+      'Time ↑': (a, b) => a.time! - b.time!,
+      'Time ↓': (a, b) => b.time! - a.time!,
+      'Complexity ↑': (a, b) => a.complexity - b.complexity,
+      'Complexity ↓': (a, b) => b.complexity - a.complexity,
+      'Rate ↑': (a, b) => a.rate - b.rate,
+      'Rate ↓': (a, b) => b.rate - a.rate,
+    };
+
+    const sortFunction = sortFunctions[change.value];
+    if (sortFunction) {
+      filteredGames.sort(sortFunction);
+    }
   }
 
   togglePlayed() {
@@ -212,18 +235,32 @@ export class GamesComponent implements OnInit {
     }
   }
 
+  resetGamesList() {
+    this.filteredGames = this.gamesList;
+    this.filterFunctions.flipAllCards(this.innerElements);
+  }
+
   restartFilters() {
+    this.restartDropdownFilters();
+    this.resetPlayedGames();
+    this.filterFunctions.flipAllCards(this.innerElements);
+  }
+
+  restartDropdownFilters() {
     this.selectedSorting.reset();
     this.selectedEditors.reset([]);
     this.selectedTypes.reset([]);
     this.selectedChipTypes = [];
     this.searchQuery = '';
     this.exactPlayers = undefined;
-    this.playedGames = false;
-    this.unPlayedGames = false;
     this.filteredGames = this.filterFunctions.sortByNameAscending(
       this.gamesList,
     );
+  }
+
+  resetPlayedGames() {
+    this.playedGames = false;
+    this.unPlayedGames = false;
   }
 
   restartSearch() {

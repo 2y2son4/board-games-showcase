@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GamesComponent } from './games.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GameCard } from './games.component.model';
+import { GameCard } from '../commons.models';
 
 const game1: GameCard = {
   name: 'Game 1',

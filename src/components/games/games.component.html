@@ -12,7 +12,7 @@
         </h3>
         <h2 class="side__title">Games</h2>
         <h3 class="side__number" [ngClass]="unPlayedGames ? 'font-system' : 'font-pink'">
-          ({{filteredGames.length}})
+          ( {{filterFunctions.getFlipCardCount(innerElements)}} of {{filteredGames.length}} selected)
         </h3>
         <div class="legend__container">
           <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
@@ -122,8 +122,7 @@
       </mat-form-field>
       <mat-form-field>
         <mat-label>Sort</mat-label>
-        <mat-select [formControl]="selectedSorting"
-          (selectionChange)="filterFunctions.selectSorting($event, filteredGames)">
+        <mat-select [formControl]="selectedSorting" (selectionChange)="selectSorting($event, filteredGames)">
           <mat-option *ngFor="let label of sortingSelectLabels" [value]="label">{{label}}</mat-option>
         </mat-select>
       </mat-form-field>
