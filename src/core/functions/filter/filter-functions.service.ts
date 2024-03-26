@@ -1,4 +1,5 @@
 import { ElementRef, Injectable, QueryList } from '@angular/core';
+import { GameCard } from '../../../components/commons.models';
 
 @Injectable({
   providedIn: 'root',
@@ -6,10 +7,12 @@ import { ElementRef, Injectable, QueryList } from '@angular/core';
 export class FilterFunctionsService {
   constructor() {}
 
+  /** Filter */
   sortByNameAscending(data: Array<any>) {
     return data.sort((a, b) => a.name.localeCompare(b.name));
   }
 
+  /** Cards */
   getFlipCardCount(innerElements: QueryList<ElementRef>): number {
     return innerElements
       ? innerElements.filter((innerElement) =>
