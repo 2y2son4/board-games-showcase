@@ -6,7 +6,7 @@ import {
   QueryList,
   ViewChildren,
 } from '@angular/core';
-import ORACLES_JSON from '../../static/oracles.json';
+import ORACLES_JSON from '../../assets/data/oracles.json';
 import { CommonModule } from '@angular/common';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';

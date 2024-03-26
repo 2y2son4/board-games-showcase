@@ -5,6 +5,7 @@ import {
   OnInit,
   QueryList,
   ViewChildren,
+  inject,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -25,7 +26,7 @@ import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { GameCard } from '../commons.models';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
-import GAMES_JSON from '../../static/games.json';
+import GAMES_JSON from '../../assets/data/games.json';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
 import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
 
@@ -82,15 +83,21 @@ export class GamesComponent implements OnInit, AfterViewInit {
   ];
 
   constructor(
-    public filterFunctions: FilterFunctionsService,
     public commonFunctions: CommonFunctionsService,
+    public filterFunctions: FilterFunctionsService,
   ) {}
 
   ngOnInit(): void {
     this.gamesList = this.filterFunctions.sortByNameAscending(GAMES_JSON.games);
     this.resetGamesList();
-    this.types = this.extractUniqueValues('types');
-    this.editors = this.extractUniqueValues('editor');
+    this.types = this.commonFunctions.extractUniqueValues(
+      this.gamesList,
+      'types',
+    );
+    this.editors = this.commonFunctions.extractUniqueValues(
+      this.gamesList,
+      'editor',
+    );
 
     this.gamesFilterForm = new FormGroup({
       searchQuery: new FormControl(''),
@@ -108,6 +115,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   onTypeChange(selectedChipTypes: Array<string>) {
+    this.gamesFilterForm.reset();
     this.restartDropdownFilters();
     if (!selectedChipTypes) {
       this.resetGamesList();
@@ -120,30 +128,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
     }
   }
 
-  extractUniqueValues(propertyName: keyof GameCard): string[] {
-    const allValues: string[] = [];
-    this.gamesList.forEach((game) => {
-      const valueOrArray = game[propertyName];
-
-      if (Array.isArray(valueOrArray)) {
-        valueOrArray.forEach((value) => {
-          const stringValue = String(value);
-          if (stringValue && !allValues.includes(stringValue)) {
-            allValues.push(stringValue);
-          }
-        });
-      } else {
-        const stringValue = String(valueOrArray);
-        if (stringValue && !allValues.includes(stringValue)) {
-          allValues.push(stringValue);
-        }
-      }
-    });
-
-    return allValues.sort();
-  }
-
   filterGames() {
+    this.selectedChipTypes = [];
     this.resetPlayedGames();
     this.filterFunctions.flipAllCards(this.innerElements);
     if (this.searchQuery.trim() === '') {
@@ -166,6 +152,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   filterGamesByTypeAndEditor() {
     this.resetPlayedGames();
+    this.selectedChipTypes = [];
     this.filterFunctions.flipAllCards(this.innerElements);
     const selectedTypeValues = this.selectedTypes.value ?? [];
     const selectedEditorValues = this.selectedEditors.value ?? [];
@@ -187,6 +174,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   selectSorting(change: MatSelectChange, filteredGames: GameCard[]) {
     this.resetPlayedGames();
+    // this.selectedChipTypes = [];
     this.filterFunctions.flipAllCards(this.innerElements);
     const sortFunctions: {
       [key: string]: (a: GameCard, b: GameCard) => number;
@@ -273,6 +261,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   filterGamesByExactPlayers() {
+    this.selectedChipTypes = [];
+
     const exactPlayersValue = this.exactPlayers;
 
     if (exactPlayersValue! <= 0) {
