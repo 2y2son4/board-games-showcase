@@ -15,6 +15,9 @@
         <h3 class="side__number" [ngClass]="unPlayedGames ? 'font-system' : 'font-pink'">
           ( {{filterFunctions.getFlipCardCount(innerElements)}} of {{filteredGames.length}} selected)
         </h3>
+        <button #filterButton type="button" mat-raised-button color="primary" class="side__reset"
+          (click)="restartFilters()">Reset
+        </button>
         <div class="legend__container">
           <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
             Played
