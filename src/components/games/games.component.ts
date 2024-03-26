@@ -5,7 +5,6 @@ import {
   OnInit,
   QueryList,
   ViewChildren,
-  inject,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
