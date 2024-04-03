@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { GameCard } from '../../../components/commons.models';
 
 @Injectable({
   providedIn: 'root',
@@ -6,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class CommonFunctionsService {
   constructor() {}
 
+  /** Background color */
   getComplexityColor(number: number): string {
     const greenColor = [54, 174, 124];
     const yellowColor = [249, 217, 35];
@@ -50,7 +52,7 @@ export class CommonFunctionsService {
     const greenColor = [54, 174, 124];
     const blueColor = [60, 76, 167];
 
-    const percentage = (number - 1) / 9; // Adjusted for range 1 to 10
+    const percentage = (number - 1) / 9;
 
     let r, g, b;
     if (percentage < 0.5) {
@@ -79,5 +81,32 @@ export class CommonFunctionsService {
       '#' + ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
 
     return colorHex;
+  }
+
+  /** Data */
+  extractUniqueValues(
+    listData: GameCard[],
+    propertyName: keyof GameCard,
+  ): string[] {
+    const allValues: string[] = [];
+    listData.forEach((game) => {
+      const valueOrArray = game[propertyName];
+
+      if (Array.isArray(valueOrArray)) {
+        valueOrArray.forEach((value) => {
+          const stringValue = String(value);
+          if (stringValue && !allValues.includes(stringValue)) {
+            allValues.push(stringValue);
+          }
+        });
+      } else {
+        const stringValue = String(valueOrArray);
+        if (stringValue && !allValues.includes(stringValue)) {
+          allValues.push(stringValue);
+        }
+      }
+    });
+
+    return allValues.sort();
   }
 }

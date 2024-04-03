@@ -1,13 +1,5 @@
 @import "./core//styles/variables";
 
-/* :root es un pseudo elemento, que se refiere a la raíz del elemento.
-Está por encima de 'body' y 'html' */
-
-// :root {
-//   color-scheme: light dark;
-//   // color-scheme indica al navegador cuáles son los colores que tiene que renderizar por defecto
-// }
-
 * {
   box-sizing: border-box;
 }
@@ -27,6 +19,6 @@ body {
 .highlight {
   background-color: $highlight-color;
   font-weight: bold;
-  padding: 2px;
+  padding: 2px 0;
   border-radius: 4px;
 }

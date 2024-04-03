@@ -1,5 +1,7 @@
 # [Board games and oracles showcase for `2y2son4`](https://2y2son4.github.io/board-games-showcase)
 
+[LINK](https://2y2son4.github.io/board-games-showcase)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
 
 ## Development server

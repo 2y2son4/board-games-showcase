@@ -1,0 +1,3438 @@
+{
+  "games": [
+    {
+      "name": "Deep dive",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Press your luck",
+        "Set collection",
+        "Animals"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.06,
+      "rate": 6.7,
+      "image": "deep-dive",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Tranvía mortal",
+      "editor": "Skybound tabletop",
+      "year": 2020,
+      "types": [
+        "Party"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        13
+      ],
+      "time": 60,
+      "complexity": 1.04,
+      "rate": 6.1,
+      "image": "tranvia-mortal",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Master dater: big love edition",
+      "editor": "Explosm Games",
+      "year": 2022,
+      "types": [
+        "Party"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 6.7,
+      "image": "master-dater-big-love",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Joking hazard",
+      "editor": "Explosm Games",
+      "year": 2016,
+      "types": [
+        "Party"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.02,
+      "rate": 6.3,
+      "image": "joking-hazard",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Joking hazard: Deck enhancement #1",
+      "editor": "Explosm Games",
+      "year": 2016,
+      "types": [
+        "Party",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.02,
+      "rate": 7.3,
+      "image": "joking-hazard-enhancement-1",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Joking hazard: Blast from the past",
+      "editor": "Explosm Games",
+      "year": 2016,
+      "types": [
+        "Party",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.25,
+      "rate": 7.2,
+      "image": "joking-hazard-blast",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Back to the future: the card game",
+      "editor": "Looney labs",
+      "year": 2010,
+      "types": [
+        "Modular board",
+        "Movies",
+        "Alternate history",
+        "Science fiction"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.74,
+      "rate": 5.8,
+      "image": "back-to-the-future",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Coup",
+      "editor": "Indie boards & cards",
+      "year": 2012,
+      "types": [
+        "Bluffing",
+        "Party",
+        "Deduction"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.41,
+      "rate": 7,
+      "image": "coup",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Coup: reformation",
+      "editor": "Indie boards & cards",
+      "year": 2013,
+      "types": [
+        "Bluffing",
+        "Party",
+        "Deduction",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        10
+      ],
+      "time": 15,
+      "complexity": 1.60,
+      "rate": 7.3,
+      "image": "coup-reformation",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Saqueadores",
+      "editor": "Black monk",
+      "year": 2016,
+      "types": [
+        "Cards",
+        "Dice"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.24,
+      "rate": 6.6,
+      "image": "saqueadores",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Cabo (2nd edition)",
+      "editor": "Arrakis games",
+      "year": 2019,
+      "types": [
+        "Family",
+        "Cards"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        4
+      ],
+      "time": 45,
+      "complexity": 1.19,
+      "rate": 7.3,
+      "image": "cabo-2nd-edition",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "3 secretos",
+      "editor": "EDGE",
+      "year": 2017,
+      "types": [
+        "Deduction",
+        "Cooperative",
+        "Mystery"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 15,
+      "complexity": 1.27,
+      "rate": 6,
+      "image": "3-secretos",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Narabi",
+      "editor": "Lifestyle Boardgames",
+      "year": 2018,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Cooperative"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.29,
+      "rate": 6,
+      "image": "narabi",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Dungeon Mayhem",
+      "editor": "Wizards of the Coast",
+      "year": 2018,
+      "types": [
+        "Family",
+        "Cards",
+        "Fantasy",
+        "Fighting"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        4
+      ],
+      "time": 10,
+      "complexity": 1.1,
+      "rate": 6.9,
+      "image": "dungeon-mayhem",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Karma",
+      "editor": "AMIGO",
+      "year": 2014,
+      "types": [
+        "Family",
+        "Cards"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.00,
+      "rate": 6,
+      "image": "karma",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "The Mind",
+      "editor": "Brain Games",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Family",
+        "Numbers",
+        "Cooperative"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 1.08,
+      "rate": 6.8,
+      "image": "the-mind",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Chrononauts",
+      "editor": "Looney Labs",
+      "year": 2000,
+      "types": [
+        "Family",
+        "Bluffing",
+        "Deduction",
+        "Alternate history"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.85,
+      "rate": 6.2,
+      "image": "chrononauts",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Jumble Jam",
+      "editor": "Txarli Factory",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Area majority",
+        "Deck, Bag, and Pool Building",
+        "Pick-up and Deliver"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 50,
+      "complexity": 1.24,
+      "rate": 6.8,
+      "image": "jumble-jam",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Ramen Ink",
+      "editor": "Jumbo",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Paper and pencil",
+        "Flip-and-write"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.5,
+      "rate": 6.4,
+      "image": "ramen-ink",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Sencha",
+      "editor": "Last level",
+      "year": 2019,
+      "types": [
+        "Territory building",
+        "Area majority",
+        "Economic"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 45,
+      "complexity": 2.17,
+      "rate": 6.4,
+      "image": "sencha",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Unánimo Party",
+      "editor": "Zacatrús",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Paper and pencil"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        12
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 7.2,
+      "image": "unanimo-party",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Point City",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Family",
+        "Cards",
+        "City building"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.6,
+      "rate": 7.3,
+      "image": "point-city",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Truffle shuffle",
+      "editor": "AEG",
+      "year": 2020,
+      "types": [
+        "Family",
+        "Cards",
+        "Open drafting"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.3,
+      "rate": 6.9,
+      "image": "truffle-shuffle",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Unstable unicorns: NSFW",
+      "editor": "Unstable games",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Hand management",
+        "Party",
+        "Adult"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 60,
+      "complexity": 1.8,
+      "rate": 6.6,
+      "image": "unstable-unicorns-nsfw",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Unstable unicorns: rainbow apocalypse",
+      "editor": "Unstable games",
+      "year": 2018,
+      "types": [
+        "Cards",
+        "Hand management",
+        "Party",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 60,
+      "complexity": 2,
+      "rate": 6.9,
+      "image": "unstable-unicorns-rainbow",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Unstable unicorns: adventures",
+      "editor": "Unstable games",
+      "year": 2021,
+      "types": [
+        "Cards",
+        "Hand management",
+        "Party",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 60,
+      "complexity": 2,
+      "rate": 7.3,
+      "image": "unstable-unicorns-adventures",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Matrioska",
+      "editor": "White goblin games",
+      "year": 2016,
+      "types": [
+        "Family",
+        "Cards",
+        "Hand management"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.73,
+      "rate": 6.6,
+      "image": "matrioska",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Sushi Go!",
+      "editor": "Adventureland games",
+      "year": 2013,
+      "types": [
+        "Cards",
+        "Closed drafting",
+        "End game bonuses"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.16,
+      "rate": 7,
+      "image": "sushi-go",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Exploding kittens",
+      "editor": "Exploding kittens",
+      "year": 2015,
+      "types": [
+        "Party",
+        "Cards",
+        "Humor"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.08,
+      "rate": 6.1,
+      "image": "exploding-kittens",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Exploding kittens: Streaking Kittens",
+      "editor": "Exploding kittens",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Cards",
+        "Humor",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "rate": 7.2,
+      "image": "exploding-kittens-streaking",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Zombie kittens",
+      "editor": "Exploding kittens",
+      "year": 2022,
+      "types": [
+        "Party",
+        "Cards",
+        "Humor",
+        "Horror"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "rate": 6.6,
+      "image": "zombie-kittens",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Virus!",
+      "editor": "Tranjis games",
+      "year": 2015,
+      "types": [
+        "Cards",
+        "Horror",
+        "Medical"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.06,
+      "rate": 6.7,
+      "image": "virus",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Virus 2! Evolution",
+      "editor": "Tranjis games",
+      "year": 2018,
+      "types": [
+        "Cards",
+        "Horror",
+        "Medical"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.44,
+      "rate": 7,
+      "image": "virus-2",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Virus! Halloween",
+      "editor": "Tranjis games",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Horror",
+        "Medical"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.38,
+      "rate": 7.3,
+      "image": "virus-halloween",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Jinx",
+      "editor": "Creative Toys",
+      "year": 2022,
+      "types": [
+        "Cards",
+        "Fast"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 0,
+      "rate": 0,
+      "image": "jinx",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Saboteur",
+      "editor": "AMIGO",
+      "year": 2004,
+      "types": [
+        "Family",
+        "Party",
+        "Bluffing",
+        "Exploration",
+        "Hidden roles",
+        "Route building"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.32,
+      "rate": 6.6,
+      "image": "saboteur",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Saboteur 2: expansion",
+      "editor": "AMIGO",
+      "year": 2011,
+      "types": [
+        "Family",
+        "Party",
+        "Bluffing",
+        "Exploration",
+        "Hidden roles",
+        "Route building",
+        "Expansion"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        12
+      ],
+      "time": 45,
+      "complexity": 1.52,
+      "rate": 7,
+      "image": "saboteur-2",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "One night ultimate werewolf",
+      "editor": "Bézier games",
+      "year": 2014,
+      "types": [
+        "Bluffing",
+        "Cards",
+        "Deduction",
+        "Voting",
+        "Hidden roles",
+        "Narrator"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        10
+      ],
+      "time": 10,
+      "complexity": 1.37,
+      "rate": 7.1,
+      "image": "one-night-ultimate-werewolf",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "One night ultimate vampire",
+      "editor": "Bézier games",
+      "year": 2016,
+      "types": [
+        "Bluffing",
+        "Cards",
+        "Deduction",
+        "Voting",
+        "Hidden roles",
+        "Narrator"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        10
+      ],
+      "time": 10,
+      "complexity": 1.61,
+      "rate": 6.7,
+      "image": "one-night-ultimate-vampire",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "One night ultimate alien",
+      "editor": "Bézier games",
+      "year": 2017,
+      "types": [
+        "Bluffing",
+        "Cards",
+        "Deduction",
+        "Voting",
+        "Hidden roles",
+        "Narrator"
+      ],
+      "language": "en",
+      "players": [
+        4,
+        10
+      ],
+      "time": 10,
+      "complexity": 1.89,
+      "rate": 6.9,
+      "image": "one-night-ultimate-alien",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Bears Vs. Babies",
+      "editor": "Self published",
+      "year": 2017,
+      "types": [
+        "Cards",
+        "Humor",
+        "Animals",
+        "Hand management"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.24,
+      "rate": 5.4,
+      "image": "bears-vs-babies",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Bears Vs. Babies: NSFW expansion pack",
+      "editor": "Self published",
+      "year": 2017,
+      "types": [
+        "Cards",
+        "Humor",
+        "Animals",
+        "Hand management",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.24,
+      "rate": 5.8,
+      "image": "bears-vs-babies-nsfw",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Happy salmon",
+      "editor": "Exploding kittens",
+      "year": 2016,
+      "types": [
+        "Party",
+        "Simulation",
+        "Animals",
+        "Real time"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        8
+      ],
+      "time": 2,
+      "complexity": 1.08,
+      "rate": 6.7,
+      "image": "happy-salmon",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "En una escala de 1 a T-Rex",
+      "editor": "Exploding kittens",
+      "year": 2019,
+      "types": [
+        "Humor",
+        "Party",
+        "Acting"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "rate": 5.8,
+      "image": "en-una-escala-de-1-a-trex",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Skyjo Action",
+      "editor": "Magilano",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Set collection"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.14,
+      "rate": 6.3,
+      "image": "skyjo-action",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Kimono",
+      "editor": "Gen-X Games",
+      "year": 2014,
+      "types": [
+        "Cards",
+        "Drawing",
+        "Set collection",
+        "Pattern recognition",
+        "Hand management"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 45,
+      "complexity": 0,
+      "rate": 5.5,
+      "image": "kimono",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Mascarade",
+      "editor": "Repos production",
+      "year": 2013,
+      "types": [
+        "Party",
+        "Bluffing",
+        "Medieval",
+        "Memory",
+        "Hidden roles"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        13
+      ],
+      "time": 30,
+      "complexity": 1.53,
+      "rate": 6.6,
+      "image": "mascarade",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Secrets",
+      "editor": "Repos production",
+      "year": 2017,
+      "types": [
+        "Party",
+        "Bluffing",
+        "Deduction",
+        "Spies"
+      ],
+      "language": "es",
+      "players": [
+        4,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.49,
+      "rate": 6.4,
+      "image": "secrets",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Munchkin",
+      "editor": "Devir",
+      "year": 2001,
+      "types": [
+        "Cards",
+        "Fantasy",
+        "Humor",
+        "Hand management"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 120,
+      "complexity": 1.81,
+      "rate": 5.9,
+      "image": "munchkin",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
+      "editor": "EDGE",
+      "year": 2014,
+      "types": [
+        "Cards",
+        "Humor",
+        "Two players"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 1.36,
+      "rate": 6.2,
+      "image": "card-wards-bubblegum-lumpy",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Stay cool",
+      "editor": "Scorpion Masqué",
+      "year": 2019,
+      "types": [
+        "Party",
+        "Real time",
+        "Trivia"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        7
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 7,
+      "image": "stay-cool",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Anomia",
+      "editor": "Anomia Press",
+      "year": 2010,
+      "types": [
+        "Party",
+        "Real time",
+        "Trivia"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.04,
+      "rate": 6.7,
+      "image": "anomia",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "So clover",
+      "editor": "Repos production",
+      "year": 2021,
+      "types": [
+        "Party",
+        "Words",
+        "Communication limits",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.1,
+      "rate": 7.6,
+      "image": "so-clover",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Código secreto Dúo",
+      "editor": "Czech Games Edition",
+      "year": 2017,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 1.36,
+      "rate": 7.4,
+      "image": "codigo-secreto-duo",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Macedonia de letras",
+      "editor": "Czech Games Edition",
+      "year": 2019,
+      "types": [
+        "Party",
+        "Cards",
+        "Deduction",
+        "Words",
+        "Communication limits",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 45,
+      "complexity": 1.96,
+      "rate": 7.2,
+      "image": "macedonia-de-letras",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Mars attacks: juego de dados",
+      "editor": "EDGE",
+      "year": 2014,
+      "types": [
+        "Dice",
+        "Family",
+        "Party"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.19,
+      "rate": 5.9,
+      "image": "mars-attack-dados",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Power plants",
+      "editor": "Kids table BG",
+      "year": 2022,
+      "types": [
+        "Puzzle",
+        "Territory building",
+        "Area majority",
+        "Tile placement",
+        "Solitaire"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        5
+      ],
+      "time": 30,
+      "complexity": 2.44,
+      "rate": 7.2,
+      "image": "power-plants",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Caballeros arcoíris",
+      "editor": "Ninja Division",
+      "year": 2018,
+      "types": [
+        "Action",
+        "Dexterity",
+        "Cards",
+        "Real time",
+        "Route building"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 5,
+      "complexity": 1.00,
+      "rate": 5.9,
+      "image": "caballeros-arcoiris",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Decrypto: Laserdrive",
+      "editor": "Asmodee",
+      "year": 2019,
+      "types": [
+        "Deduction",
+        "Party",
+        "Words",
+        "Communication limits",
+        "Team-based",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        8
+      ],
+      "time": 45,
+      "complexity": 1.8,
+      "rate": 7.5,
+      "image": "decrypto-laserdrive",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Ninja dice",
+      "editor": "EDGE",
+      "year": 2013,
+      "types": [
+        "Dice",
+        "Party",
+        "Push your luck"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.33,
+      "rate": 6,
+      "image": "ninja-dice",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Social train",
+      "editor": "GDM Games",
+      "year": 2019,
+      "types": [
+        "Trains",
+        "Area majority",
+        "Take that"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.50,
+      "rate": 6.5,
+      "image": "social-train",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Alta tensión: el juego de cartas",
+      "editor": "EDGE",
+      "year": 2016,
+      "types": [
+        "Strategy",
+        "Cards",
+        "Economic",
+        "Auction"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 60,
+      "complexity": 2.44,
+      "rate": 6.7,
+      "image": "alta-tension-cartas",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "¡Viva el Rey!",
+      "editor": "Aurum",
+      "year": 2004,
+      "types": [
+        "Bluffing",
+        "Deduction",
+        "Renaissance",
+        "Voting"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.21,
+      "rate": 6.4,
+      "image": "viva-el-rey",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "La leyenda del cerezo que florece cada diez años",
+      "editor": "TCG Factory",
+      "year": 2018,
+      "types": [
+        "Deduction",
+        "Fantasy",
+        "Push your luck",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 1.50,
+      "rate": 6.4,
+      "image": "leyenda-del-cerezo",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Munchkin Gloom",
+      "editor": "EDGE",
+      "year": 2015,
+      "types": [
+        "Cards",
+        "Fantasy",
+        "Horror",
+        "Storytelling",
+        "Take that"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 60,
+      "complexity": 1.86,
+      "rate": 6.3,
+      "image": "munchkin-gloom",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Gloom",
+      "editor": "EDGE",
+      "year": 2005,
+      "types": [
+        "Cards",
+        "Horror",
+        "Humor",
+        "Layering"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 60,
+      "complexity": 1.63,
+      "rate": 6.3,
+      "image": "gloom",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Gloom: Expediciones Desventuradas",
+      "editor": "EDGE",
+      "year": 2009,
+      "types": [
+        "Cards",
+        "Horror",
+        "Humor",
+        "Layering",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.80,
+      "rate": 6.6,
+      "image": "gloom-expediciones",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Gloom: invitados inoportunos",
+      "editor": "EDGE",
+      "year": 2007,
+      "types": [
+        "Cards",
+        "Horror",
+        "Humor",
+        "Layering",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 6.7,
+      "image": "gloom-invitados",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "La fiesta",
+      "editor": "Mercurio",
+      "year": 2017,
+      "types": [
+        "Bluffing",
+        "Party",
+        "Hand management",
+        "Open drafting",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        7
+      ],
+      "time": 30,
+      "complexity": 2,
+      "rate": 6,
+      "image": "la-fiesta",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Muchachada Nui: el juego de mesa",
+      "editor": "EDGE",
+      "year": 2010,
+      "types": [
+        "Cards",
+        "Humor",
+        "TV series",
+        "Hand management",
+        "Open drafting"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        4
+      ],
+      "time": 30,
+      "complexity": 2,
+      "rate": 5.8,
+      "image": "muchachada-nui",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Speed cups⁶",
+      "editor": "AMIGO",
+      "year": 2018,
+      "types": [
+        "Action",
+        "Dexterity"
+      ],
+      "language": "de",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "rate": 6.4,
+      "image": "speed-cups-6",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Speed cups²",
+      "editor": "AMIGO",
+      "year": 2014,
+      "types": [
+        "Action",
+        "Dexterity"
+      ],
+      "language": "de",
+      "players": [
+        2
+      ],
+      "time": 10,
+      "complexity": 1.11,
+      "rate": 6.6,
+      "image": "speed-cups-2",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "El juego de las baldosas de Antoni Gaudí",
+      "editor": "CASA Consultors i Arquitectes SL",
+      "year": 2002,
+      "types": [
+        "Abstract strategy",
+        "Tile placement",
+        "Pattern building"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.86,
+      "rate": 6,
+      "image": "baldosas-antoni-gaudi",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "The Island",
+      "editor": "Stronghold Games",
+      "year": 1982,
+      "types": [
+        "Adventure",
+        "Animals",
+        "Bluffing",
+        "Dice rolling",
+        "Action points",
+        "Map reduction"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 60,
+      "complexity": 1.70,
+      "rate": 7.3,
+      "image": "the-island",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Tags",
+      "editor": "Asmodee",
+      "year": 2018,
+      "types": [
+        "Words",
+        "Party",
+        "Trivia",
+        "Real time"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 40,
+      "complexity": 1.18,
+      "rate": 6.5,
+      "image": "tags",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "King of Tokyo",
+      "editor": "Devir",
+      "year": 2011,
+      "types": [
+        "Family",
+        "Dice",
+        "Fighting",
+        "Dice rolling",
+        "King of the hill"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.49,
+      "rate": 7.1,
+      "image": "king-of-tokyo",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Wordsmith",
+      "editor": "HeidelBÄR Games",
+      "year": 2019,
+      "types": [
+        "Words",
+        "Real time",
+        "Dice rolling",
+        "Paper and pencil",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 6.2,
+      "image": "wordsmith",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Mandala Stones",
+      "editor": "Board&Dice",
+      "year": 2021,
+      "types": [
+        "Abstract strategy",
+        "End game bonuses",
+        "Pattern building",
+        "Set collection",
+        "Layering"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.81,
+      "rate": 6.9,
+      "image": "mandala-stones",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Doodle rush",
+      "editor": "Brain Games",
+      "year": 2017,
+      "types": [
+        "Party",
+        "Real time",
+        "Line drawing"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.33,
+      "rate": 6.5,
+      "image": "doodle-rush",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Drunken sailor",
+      "editor": "Asmodee",
+      "year": 2017,
+      "types": [
+        "Bluffing",
+        "Deduction",
+        "Party",
+        "Line drawing"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        8
+      ],
+      "time": 40,
+      "complexity": 1.00,
+      "rate": 5.8,
+      "image": "drunken-sailor",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Fit to print",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Abstract strategy",
+        "Puzzle",
+        "End game bonuses",
+        "Grid coverage",
+        "Pattern building",
+        "Real time",
+        "Solitaire"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        6
+      ],
+      "time": 30,
+      "complexity": 2.07,
+      "rate": 7.5,
+      "image": "fit-to-print",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Fit To Print: Game Breaking News Mini-Expansion",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Abstract strategy",
+        "Puzzle",
+        "End game bonuses",
+        "Grid coverage",
+        "Pattern building",
+        "Real time",
+        "Solitaire",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        6
+      ],
+      "time": 30,
+      "complexity": 2.00,
+      "rate": 7.5,
+      "image": "fit-to-print-expansion",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Who am I and what am I doing?",
+      "editor": "Island Workshop",
+      "year": 2021,
+      "types": [
+        "Cards",
+        "Party"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        10
+      ],
+      "time": 60,
+      "complexity": 0,
+      "rate": 0,
+      "image": "who-am-i-and-what",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Uno Flip!",
+      "editor": "Mattel",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Numbers",
+        "Hand management",
+        "Take that"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.30,
+      "rate": 6.3,
+      "image": "uno-flip",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Cluedo suspect",
+      "editor": "Hasbro",
+      "year": 2010,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Murder mystery",
+        "Open drafting"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        4
+      ],
+      "time": 15,
+      "complexity": 1.30,
+      "rate": 5.8,
+      "image": "cluedo-suspect",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Ugga Buuga",
+      "editor": "Cocktail Games",
+      "year": 2011,
+      "types": [
+        "Cards",
+        "Humor",
+        "Party",
+        "Memory",
+        "Acting"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        6
+      ],
+      "time": 10,
+      "complexity": 1.02,
+      "rate": 6,
+      "image": "ugga-buuga",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Black mirror: caída en picado",
+      "editor": "Asmodee",
+      "year": 2018,
+      "types": [
+        "Cards",
+        "TV series",
+        "Hand management",
+        "Voting",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.80,
+      "rate": 4.1,
+      "image": "black-mirror",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Organ attack",
+      "editor": "Self published",
+      "year": 2016,
+      "types": [
+        "Party",
+        "Cards",
+        "Educational",
+        "Humor",
+        "Take that"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.39,
+      "rate": 6.3,
+      "image": "organ-attack",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Dr. Jekyll and Mr. Hyde",
+      "editor": "Mont Tàber",
+      "year": 1997,
+      "types": [
+        "Strategy",
+        "Bluffing",
+        "Trick-taking"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        4
+      ],
+      "time": 60,
+      "complexity": 2.34,
+      "rate": 6.7,
+      "image": "dr-jekyll-and-mr-hyde",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "The Game",
+      "editor": "Pandasaurus Games",
+      "year": 2015,
+      "types": [
+        "Family",
+        "Cards",
+        "Numbers",
+        "Communication limits",
+        "Cooperative"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.24,
+      "rate": 6.7,
+      "image": "the-game",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "The Game: Face to Face",
+      "editor": "Pandasaurus Games",
+      "year": 2017,
+      "types": [
+        "Cards",
+        "Numbers",
+        "Hand management"
+      ],
+      "language": "x",
+      "players": [
+        2
+      ],
+      "time": 20,
+      "complexity": 1.24,
+      "rate": 7.1,
+      "image": "the-game-face-to-face",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Kontour",
+      "editor": "Gigamic",
+      "year": 2018,
+      "types": [
+        "Deduction",
+        "Party",
+        "Line drawing"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        7
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 6.4,
+      "image": "kontour",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Codex naturalis",
+      "editor": "Bombyx",
+      "year": 2021,
+      "types": [
+        "Family",
+        "Cards",
+        "Hand management",
+        "Layering",
+        "Pattern building"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.76,
+      "rate": 7.2,
+      "image": "codex-naturalis",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Skull",
+      "editor": "Lui-même",
+      "year": 2011,
+      "types": [
+        "Bluffing",
+        "Cards",
+        "Auction",
+        "Bidding",
+        "Player elimination"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        6
+      ],
+      "time": 45,
+      "complexity": 1.11,
+      "rate": 7.2,
+      "image": "skull",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Expediente dark",
+      "editor": "Lifestyle boardgames",
+      "year": 2020,
+      "types": [
+        "Deduction",
+        "Horror",
+        "Puzzle",
+        "Cooperative",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 90,
+      "complexity": 2.20,
+      "rate": 6.3,
+      "image": "expediente-dark",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Expediente X: el juego oficial",
+      "editor": "20th Century Fox",
+      "year": 1997,
+      "types": [
+        "TV series",
+        "Murder mystery",
+        "Trivia",
+        "VHS"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 45,
+      "complexity": 1.25,
+      "rate": 5,
+      "image": "expediente-x",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Listillo",
+      "editor": "Zacatrús",
+      "year": 2023,
+      "types": [
+        "Cards",
+        "Humor",
+        "Party",
+        "Voting"
+      ],
+      "language": "es",
+      "players": [
+        4,
+        6
+      ],
+      "time": 25,
+      "complexity": 1.50,
+      "rate": 6.9,
+      "image": "listillo",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Among spaceship",
+      "editor": "A & B Games",
+      "year": 2023,
+      "types": [
+        "Cards",
+        "Dice",
+        "Cooperative"
+      ],
+      "language": "x",
+      "players": [
+        4,
+        6
+      ],
+      "time": 30,
+      "complexity": 0,
+      "rate": 0,
+      "image": "among-spaceship",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Mantis",
+      "editor": "Exploding kittens",
+      "year": 2022,
+      "types": [
+        "Cards",
+        "Family",
+        "Hand management",
+        "Set collection",
+        "Take that"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.03,
+      "rate": 6.8,
+      "image": "mantis",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "El portero Baldomero",
+      "editor": "Zacatrús",
+      "year": 2017,
+      "types": [
+        "Bluffing",
+        "Deduction",
+        "Humor",
+        "Party",
+        "Words"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        8
+      ],
+      "time": 20,
+      "complexity": 1.25,
+      "rate": 6.8,
+      "image": "el-portero-baldomero",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Here to slay",
+      "editor": "Unstable games",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Fantasy",
+        "Fighting",
+        "Dice rolling",
+        "Hand management"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.69,
+      "rate": 6.9,
+      "image": "here-to-slay",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Here to slay: Berserkers &Necromancers",
+      "editor": "Unstable games",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Fantasy",
+        "Fighting",
+        "Dice rolling",
+        "Hand management",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 60,
+      "complexity": 2,
+      "rate": 7.6,
+      "image": "here-to-slay-berserkers-necromancers",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Here to slay: Warriors & Druids",
+      "editor": "Unstable games",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Fantasy",
+        "Fighting",
+        "Dice rolling",
+        "Hand management",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.83,
+      "rate": 7.5,
+      "image": "here-to-slay-warriors-druids",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Trash pandas",
+      "editor": "Red Book Games",
+      "year": 2017,
+      "types": [
+        "Family",
+        "Cards",
+        "Dice",
+        "Push your luck",
+        "Take that",
+        "Set collection"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 1.38,
+      "rate": 6.5,
+      "image": "trash-pandas",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Kingz",
+      "editor": "Ankama",
+      "year": 2016,
+      "types": [
+        "Simultaneous action selection",
+        "Cards",
+        "Animals"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "rate": 4.5,
+      "image": "kingz",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Secret Hitler",
+      "editor": "Goat Wolf and Cabbage",
+      "year": 2016,
+      "types": [
+        "Party",
+        "Bluffing",
+        "Hidden roles",
+        "Deduction",
+        "Spies"
+      ],
+      "language": "en",
+      "players": [
+        5,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.74,
+      "rate": 7.5,
+      "image": "secret-hitler",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Cold case: una historia de muerte",
+      "editor": "Think fun",
+      "year": 2021,
+      "types": [
+        "Adult",
+        "Murder mystery",
+        "Cooperative",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 120,
+      "complexity": 2,
+      "rate": 6.4,
+      "image": "cold-case",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Taco, cat, goat, cheese, pizza",
+      "editor": "Dolphin halt games",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Children"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.02,
+      "rate": 6.6,
+      "image": "taco-cat-goat-cheese",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "The Grimwood",
+      "editor": "Adventure On Games",
+      "year": 2016,
+      "types": [
+        "Cards",
+        "Hand management",
+        "Set collection"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.33,
+      "rate": 6.1,
+      "image": "the-grimwood",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "More or Less: How Good Is Your Judgement?",
+      "editor": "Propifi Limited",
+      "year": 2020,
+      "types": [
+        "Quiz"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        99
+      ],
+      "time": 60,
+      "complexity": 1.00,
+      "rate": 5.7,
+      "image": "more-or-less",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Shot in the dark: The Ultimate Unorthodox Quiz",
+      "editor": "Shot in the dark",
+      "year": 2019,
+      "types": [
+        "Quiz"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        99
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 6.1,
+      "image": "shot-in-yhe-dark",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Micro Roma",
+      "editor": "Cacahuete games",
+      "year": 2023,
+      "types": [
+        "Cards",
+        "City building",
+        "Layering",
+        "Tile placement",
+        "Solitaire"
+      ],
+      "language": "x",
+      "players": [
+        1
+      ],
+      "time": 30,
+      "complexity": 1.33,
+      "rate": 7,
+      "image": "micro-roma",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Fluxx",
+      "editor": "Looney labs",
+      "year": 1997,
+      "types": [
+        "Party",
+        "Cards",
+        "Hand management",
+        "Set collection"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.39,
+      "rate": 5.7,
+      "image": "fluxx",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Feministime: La Espiral del Tiempo Feminista",
+      "editor": "Eskalera",
+      "year": 2022,
+      "types": [
+        "Trivia",
+        "Cards"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 0,
+      "rate": 0,
+      "image": "espiral-del-tiempo-feminista",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Deep sea adventure",
+      "editor": "Oink games",
+      "year": 2014,
+      "types": [
+        "Dice",
+        "Exploration",
+        "Push your luck",
+        "Party"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.18,
+      "rate": 6.9,
+      "image": "deep-sea-adventure",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Sriracha the game",
+      "editor": "DSS Games",
+      "year": 2021,
+      "types": [
+        "Cards",
+        "Dexterity",
+        "Real time"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "rate": 5.3,
+      "image": "sriracha-the-game",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Werewolves of Miller's Hollow",
+      "editor": "Lui-même",
+      "year": 2001,
+      "types": [
+        "Party",
+        "Bluffing",
+        "Deduction",
+        "Role playing"
+      ],
+      "language": "en",
+      "players": [
+        8,
+        18
+      ],
+      "time": 30,
+      "complexity": 1.31,
+      "rate": 6.7,
+      "image": "werewolves-of-millers-hollow",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "A prueba de retos",
+      "editor": "Exploding kittens",
+      "year": 2023,
+      "types": [
+        "Party"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        99
+      ],
+      "time": 20,
+      "complexity": 1.00,
+      "rate": 6.8,
+      "image": "a-prueba-de-retos",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Petrichor",
+      "editor": "APE games",
+      "year": 2018,
+      "types": [
+        "Strategy",
+        "Farming",
+        "Area majority",
+        "Modular board"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 90,
+      "complexity": 3.02,
+      "rate": 6.9,
+      "image": "petrichor",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Hanabi",
+      "editor": "Cocktail Games",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Memory"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 25,
+      "complexity": 2.60,
+      "rate": 7.7,
+      "image": "hanabi",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Arkham Noir #1: los asesinatos del culto de la Bruja",
+      "editor": "Ludonova",
+      "year": 2017,
+      "types": [
+        "Solitaire",
+        "Fantasy",
+        "Horror",
+        "Cards"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 30,
+      "complexity": 2.22,
+      "rate": 6.8,
+      "image": "arkham-caso-1",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Spoilers: Edición definitiva",
+      "editor": "Zacatrús",
+      "year": 2021,
+      "types": [
+        "Party",
+        "Bluffing",
+        "Trivia",
+        "Movies"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        10
+      ],
+      "time": 25,
+      "complexity": 1.00,
+      "rate": 7.1,
+      "image": "spoilers",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Imagine",
+      "editor": "Cocktail Games",
+      "year": 2015,
+      "types": [
+        "Party",
+        "Deduction",
+        "Acting",
+        "Layering"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.06,
+      "rate": 6.8,
+      "image": "imagine",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "F**k: the game",
+      "editor": "Self published",
+      "year": 2015,
+      "types": [
+        "Cards",
+        "Party",
+        "Adult"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        8
+      ],
+      "time": 15,
+      "complexity": 1.29,
+      "rate": 5.7,
+      "image": "fuck-the-game",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Paris: la cité de la Lumière",
+      "editor": "Devir",
+      "year": 2019,
+      "types": [
+        "Abstract strategy",
+        "Puzzle",
+        "Territory building",
+        "Layering",
+        "Grid coverage",
+        "Open drafting"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 2.04,
+      "rate": 7.3,
+      "image": "paris-la-cite-de-la-lumiere",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Paris: Eiffel",
+      "editor": "Devir",
+      "year": 2021,
+      "types": [
+        "Action drafting",
+        "Area majority",
+        "Tile placement",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 2.20,
+      "rate": 7.6,
+      "image": "paris-eiffel",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Mix it (monster edition)",
+      "editor": "Brain picnic",
+      "year": 2015,
+      "types": [
+        "Family",
+        "Cards",
+        "Puzzle"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.09,
+      "rate": 6.2,
+      "image": "mix-it-monster",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "El Jurado 1 - El Caso de las Carpas Doradas",
+      "editor": "GenX",
+      "year": 2019,
+      "types": [
+        "Deduction",
+        "Murder mystery",
+        "Storytelling",
+        "Voting"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        12
+      ],
+      "time": 60,
+      "complexity": 1.00,
+      "rate": 5.5,
+      "image": "el-jurado-1",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Antarctica",
+      "editor": "Zacatrús",
+      "year": 2021,
+      "types": [
+        "Adventure",
+        "Cards",
+        "Deduction",
+        "Puzzle",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        24
+      ],
+      "time": 300,
+      "complexity": 2,
+      "rate": 6.5,
+      "image": "antarctica",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Nightmare",
+      "editor": "Diset",
+      "year": 2021,
+      "types": [
+        "Party",
+        "Murder mystery",
+        "Horror",
+        "Deduction",
+        "Real time"
+      ],
+      "language": "es",
+      "players": [
+        4,
+        5
+      ],
+      "time": 120,
+      "complexity": 2,
+      "rate": 7.8,
+      "image": "nightmare",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Espías en la sombra",
+      "editor": "TCG Factory",
+      "year": 2021,
+      "types": [
+        "Spies",
+        "Open drafting",
+        "Network",
+        "Route building"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.69,
+      "rate": 6.6,
+      "image": "espias-en-la-sombra",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Garabatos y mazmorras",
+      "editor": "TCG Factory",
+      "year": 2020,
+      "types": [
+        "Fantasy",
+        "Humor",
+        "Line drawing",
+        "Open drafting"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 60,
+      "complexity": 1.67,
+      "rate": 6.3,
+      "image": "garabatos-y-mazmorras",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Loading",
+      "editor": "TCG Factory",
+      "year": 2021,
+      "types": [
+        "Real time",
+        "Cards",
+        "Closed drafting",
+        "Speed matching"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        7
+      ],
+      "time": 5,
+      "complexity": 1.20,
+      "rate": 6.4,
+      "image": "loading",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Terra Mare",
+      "editor": "Devir",
+      "year": 2021,
+      "types": [
+        "Medieval",
+        "Puzzle",
+        "Territory building",
+        "Map addition",
+        "Team-based",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 40,
+      "complexity": 1.73,
+      "rate": 7.1,
+      "image": "terra-mare",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Railroad ink: azul profundo",
+      "editor": "Devir",
+      "year": 2018,
+      "types": [
+        "Family",
+        "Connections",
+        "Dice rolling",
+        "Network and route building",
+        "Line drawing"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.47,
+      "rate": 7.2,
+      "image": "railroad-ink-azul",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Arkham Noir #2: Invocado por el Trueno",
+      "editor": "Ludonova",
+      "year": 2018,
+      "types": [
+        "Solitaire",
+        "Fantasy",
+        "Horror",
+        "Cards"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 30,
+      "complexity": 2.47,
+      "rate": 7.1,
+      "image": "arkham-caso-2",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Arkham Noir #3: Abismos Infinitos de Oscuridad",
+      "editor": "Ludonova",
+      "year": 2021,
+      "types": [
+        "Solitaire",
+        "Fantasy",
+        "Horror",
+        "Cards"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 30,
+      "complexity": 2.86,
+      "rate": 7.2,
+      "image": "arkham-caso-3",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Detective: Sigue la Pista",
+      "editor": "Pegasus Spiele",
+      "year": 2020,
+      "types": [
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 120,
+      "complexity": 2.60,
+      "rate": 7.4,
+      "image": "detective-sigue-la-pista",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Mr. Jack",
+      "editor": "Devir",
+      "year": 2006,
+      "types": [],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 40,
+      "complexity": 1.73,
+      "rate": 7,
+      "image": "mr-jack",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Lost Cities: Roll & Write",
+      "editor": "Devir",
+      "year": 2021,
+      "types": [
+        "Dice rolling",
+        "Paper and pencil"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.17,
+      "rate": 7.2,
+      "image": "lost-cities",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Detective: A Modern Crime Board Game",
+      "editor": "Portal Games",
+      "year": 2018,
+      "types": [
+        "Deduction",
+        "Murder mystery",
+        "Narrative choice/paragraph",
+        "Solitaire",
+        "Storytelling"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        5
+      ],
+      "time": 180,
+      "complexity": 2.74,
+      "rate": 7.7,
+      "image": "detective-a-modern-crime",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Pictomania (Second edition)",
+      "editor": "Czech Games Edition",
+      "year": 2011,
+      "types": [
+        "Line drawing",
+        "Party",
+        "Real time"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 25,
+      "complexity": 1.53,
+      "rate": 7.6,
+      "image": "pictomania",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Magnetism",
+      "editor": "Ankama",
+      "year": 2022,
+      "types": [
+        "Strategy"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        4
+      ],
+      "time": 25,
+      "complexity": 1.53,
+      "rate": 0,
+      "image": "magnetism",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Funky pollo",
+      "editor": "DV Games",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Children",
+        "Real time",
+        "Simultaneous action selection"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 2,
+      "complexity": 1.00,
+      "rate": 6.3,
+      "image": "funky-pollo",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Love letter",
+      "editor": "Z-Man games",
+      "year": 2019,
+      "types": [
+        "Hand management",
+        "Player elimination",
+        "Score-and-reset-game",
+        "Renaissance"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.13,
+      "rate": 7.2,
+      "image": "love-letter",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Avalon",
+      "editor": "Indie boards & cards",
+      "year": 2012,
+      "types": [
+        "Hidden roles",
+        "Deduction",
+        "Bluffing",
+        "Team-based"
+      ],
+      "language": "en",
+      "players": [
+        5,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.74,
+      "rate": 7.5,
+      "image": "avalon",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Behind the campaign",
+      "editor": "A & B Games",
+      "year": 2019,
+      "types": [
+        "Strategy",
+        "Political"
+      ],
+      "language": "en",
+      "players": [
+        4,
+        6
+      ],
+      "time": 30,
+      "complexity": 0,
+      "rate": 0,
+      "image": "behind-the-campaign",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "War of Roshambo: Kingdom clash",
+      "editor": "A & B Games",
+      "year": 2019,
+      "types": [
+        "Medieval",
+        "Territory building"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 15,
+      "complexity": 0,
+      "rate": 0,
+      "image": "kingdom-clash",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "The mind fullness game",
+      "editor": "Innericons",
+      "year": 2019,
+      "types": [
+        "Mind fullness",
+        "Cards"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        15
+      ],
+      "time": 60,
+      "complexity": 0,
+      "rate": 0,
+      "image": "mind-fullness-game",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Canvas",
+      "editor": "Road To Infamy",
+      "year": 2021,
+      "types": [
+        "Abstract strategy",
+        "Puzzle",
+        "Hand management",
+        "Layering"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.67,
+      "rate": 7.3,
+      "image": "canvas",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Canvas: Reflections",
+      "editor": "Road To Infamy",
+      "year": 2022,
+      "types": [
+        "Abstract strategy",
+        "Puzzle",
+        "Hand management",
+        "Layering",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.87,
+      "rate": 7.8,
+      "image": "canvas-reflections",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Railroad ink: amarillo brillante",
+      "editor": "Devir",
+      "year": 2021,
+      "types": [
+        "Family",
+        "Connections",
+        "Dice rolling",
+        "Network and route building",
+        "Line drawing"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 2.05,
+      "rate": 7.6,
+      "image": "railroad-ink-amarillo",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Pixelate",
+      "editor": "Abrams and Chronicle",
+      "year": 2021,
+      "types": [
+        "Drawing",
+        "Pattern recognition",
+        "Team-based"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.50,
+      "rate": 5.8,
+      "image": "pixelate",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "That's not a hat",
+      "editor": "Ravensburger",
+      "year": 2023,
+      "types": [
+        "Party",
+        "Memory",
+        "Bluffing"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 7.1,
+      "image": "thats-not-a-hat",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Sushi bar",
+      "editor": "Mercurio",
+      "year": 2008,
+      "types": [
+        "Dice",
+        "Memory",
+        "Push your luck",
+        "Set collection"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.24,
+      "rate": 6.5,
+      "image": "sushi-bar",
+      "isPlayed": true,
+      "age": 0
+    },
+    {
+      "name": "Sonora",
+      "editor": "Pandasaurus",
+      "year": 2020,
+      "types": [
+        "Action points",
+        "Area majority",
+        "Flicking",
+        "Chaining"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 45,
+      "complexity": 2.19,
+      "rate": 6.9,
+      "image": "sonora",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Obscurio",
+      "editor": "Libellud",
+      "year": 2023,
+      "types": [
+        "Exploration",
+        "Deduction",
+        "Bluffing",
+        "Traitor",
+        "Cooperative",
+        "Voting"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        8
+      ],
+      "time": 40,
+      "complexity": 1.86,
+      "rate": 7.1,
+      "image": "obscurio",
+      "isPlayed": false,
+      "age": 0
+    },
+    {
+      "name": "Clic: la foto perfecta",
+      "editor": "Mevo",
+      "year": 2020,
+      "types": [
+        "Negotiation",
+        "Puzzle",
+        "Bidding",
+        "Deduction",
+        "Memory"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 50,
+      "complexity": 1.84,
+      "rate": 7.0,
+      "image": "clic-foto-perfecta",
+      "isPlayed": false,
+      "age": 0
+    }
+  ]
+}

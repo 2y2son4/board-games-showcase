@@ -2,7 +2,7 @@ export interface GameCard {
   name: string;
   editor: string;
   year: number;
-  type: Array<string>;
+  types: Array<string>;
   language: 'en' | 'es' | 'de' | '-';
   players?: Array<number>;
   time?: number;
@@ -10,6 +10,16 @@ export interface GameCard {
   rate: number;
   image?: string;
   isPlayed: boolean;
+  ages: Array<string | number>;
+}
+
+export interface OracleCard {
+  name: string;
+  artist: string;
+  language: 'en' | 'es' | 'de' | '-';
+  image?: string;
+  description: Array<string>;
+  web: string;
 }
 
 export interface SortingOrder {
