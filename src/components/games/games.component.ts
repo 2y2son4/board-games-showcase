@@ -198,6 +198,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   togglePlayed() {
     this.resetGamesList();
+    this.restartFilters();
     this.unPlayedGames = false;
     this.selectedChipTypes = [];
     this.playedGames = !this.playedGames;
@@ -212,6 +213,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   toggleUnPlayed() {
     this.resetGamesList();
+    this.restartFilters();
     this.playedGames = false;
     this.selectedChipTypes = [];
     this.unPlayedGames = !this.unPlayedGames;

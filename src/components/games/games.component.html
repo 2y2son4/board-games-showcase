@@ -12,7 +12,7 @@
             {{!first ? type.toLowerCase() : type}}</span>}
         </h4>
         <h2 class="side__title">Games</h2>
-        <h3 class="side__number" [ngClass]="unPlayedGames ? 'font-system' : 'font-pink'">
+        <h3 class="side__number">
           ( {{filterFunctions.getFlipCardCount(innerElements)}} of {{filteredGames.length}} selected)
         </h3>
         <button #filterButton type="button" mat-raised-button color="primary" class="side__reset"
@@ -23,7 +23,7 @@
             Played
           </button>
           <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
-            <p>Unplayed</p>
+            Unplayed
           </button>
         </div>
       </div>
