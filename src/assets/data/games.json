@@ -18,7 +18,8 @@
       "complexity": 1.06,
       "rate": 6.7,
       "image": "deep-dive",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Tranvía mortal",
@@ -36,7 +37,8 @@
       "complexity": 1.04,
       "rate": 6.1,
       "image": "tranvia-mortal",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Master dater: big love edition",
@@ -54,7 +56,8 @@
       "complexity": 1.00,
       "rate": 6.7,
       "image": "master-dater-big-love",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Joking hazard",
@@ -72,7 +75,8 @@
       "complexity": 1.02,
       "rate": 6.3,
       "image": "joking-hazard",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Joking hazard: Deck enhancement #1",
@@ -91,7 +95,8 @@
       "complexity": 1.02,
       "rate": 7.3,
       "image": "joking-hazard-enhancement-1",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Joking hazard: Blast from the past",
@@ -110,7 +115,8 @@
       "complexity": 1.25,
       "rate": 7.2,
       "image": "joking-hazard-blast",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Back to the future: the card game",
@@ -131,7 +137,8 @@
       "complexity": 1.74,
       "rate": 5.8,
       "image": "back-to-the-future",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Coup",
@@ -151,7 +158,8 @@
       "complexity": 1.41,
       "rate": 7,
       "image": "coup",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Coup: reformation",
@@ -172,7 +180,8 @@
       "complexity": 1.60,
       "rate": 7.3,
       "image": "coup-reformation",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Saqueadores",
@@ -191,7 +200,8 @@
       "complexity": 1.24,
       "rate": 6.6,
       "image": "saqueadores",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Cabo (2nd edition)",
@@ -210,7 +220,8 @@
       "complexity": 1.19,
       "rate": 7.3,
       "image": "cabo-2nd-edition",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "3 secretos",
@@ -230,7 +241,8 @@
       "complexity": 1.27,
       "rate": 6,
       "image": "3-secretos",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Narabi",
@@ -250,7 +262,8 @@
       "complexity": 1.29,
       "rate": 6,
       "image": "narabi",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Dungeon Mayhem",
@@ -271,7 +284,8 @@
       "complexity": 1.1,
       "rate": 6.9,
       "image": "dungeon-mayhem",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Karma",
@@ -290,7 +304,8 @@
       "complexity": 1.00,
       "rate": 6,
       "image": "karma",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "The Mind",
@@ -311,7 +326,8 @@
       "complexity": 1.08,
       "rate": 6.8,
       "image": "the-mind",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Chrononauts",
@@ -332,7 +348,8 @@
       "complexity": 1.85,
       "rate": 6.2,
       "image": "chrononauts",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Jumble Jam",
@@ -353,7 +370,8 @@
       "complexity": 1.24,
       "rate": 6.8,
       "image": "jumble-jam",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Ramen Ink",
@@ -373,7 +391,8 @@
       "complexity": 1.5,
       "rate": 6.4,
       "image": "ramen-ink",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Sencha",
@@ -393,7 +412,8 @@
       "complexity": 2.17,
       "rate": 6.4,
       "image": "sencha",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Unánimo Party",
@@ -412,7 +432,8 @@
       "complexity": 1.00,
       "rate": 7.2,
       "image": "unanimo-party",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Point City",
@@ -432,7 +453,8 @@
       "complexity": 1.6,
       "rate": 7.3,
       "image": "point-city",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Truffle shuffle",
@@ -452,7 +474,8 @@
       "complexity": 1.3,
       "rate": 6.9,
       "image": "truffle-shuffle",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Unstable unicorns: NSFW",
@@ -473,7 +496,8 @@
       "complexity": 1.8,
       "rate": 6.6,
       "image": "unstable-unicorns-nsfw",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Unstable unicorns: rainbow apocalypse",
@@ -494,7 +518,8 @@
       "complexity": 2,
       "rate": 6.9,
       "image": "unstable-unicorns-rainbow",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Unstable unicorns: adventures",
@@ -515,7 +540,8 @@
       "complexity": 2,
       "rate": 7.3,
       "image": "unstable-unicorns-adventures",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Matrioska",
@@ -535,7 +561,8 @@
       "complexity": 1.73,
       "rate": 6.6,
       "image": "matrioska",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Sushi Go!",
@@ -555,7 +582,8 @@
       "complexity": 1.16,
       "rate": 7,
       "image": "sushi-go",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Exploding kittens",
@@ -575,7 +603,8 @@
       "complexity": 1.08,
       "rate": 6.1,
       "image": "exploding-kittens",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Exploding kittens: Streaking Kittens",
@@ -596,7 +625,8 @@
       "complexity": 1.00,
       "rate": 7.2,
       "image": "exploding-kittens-streaking",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Zombie kittens",
@@ -617,7 +647,8 @@
       "complexity": 1.00,
       "rate": 6.6,
       "image": "zombie-kittens",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Virus!",
@@ -637,7 +668,8 @@
       "complexity": 1.06,
       "rate": 6.7,
       "image": "virus",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Virus 2! Evolution",
@@ -657,7 +689,8 @@
       "complexity": 1.44,
       "rate": 7,
       "image": "virus-2",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Virus! Halloween",
@@ -677,7 +710,8 @@
       "complexity": 1.38,
       "rate": 7.3,
       "image": "virus-halloween",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Jinx",
@@ -696,7 +730,8 @@
       "complexity": 0,
       "rate": 0,
       "image": "jinx",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Saboteur",
@@ -719,7 +754,8 @@
       "complexity": 1.32,
       "rate": 6.6,
       "image": "saboteur",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Saboteur 2: expansion",
@@ -743,7 +779,8 @@
       "complexity": 1.52,
       "rate": 7,
       "image": "saboteur-2",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "One night ultimate werewolf",
@@ -766,7 +803,8 @@
       "complexity": 1.37,
       "rate": 7.1,
       "image": "one-night-ultimate-werewolf",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "One night ultimate vampire",
@@ -789,7 +827,8 @@
       "complexity": 1.61,
       "rate": 6.7,
       "image": "one-night-ultimate-vampire",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "One night ultimate alien",
@@ -812,7 +851,8 @@
       "complexity": 1.89,
       "rate": 6.9,
       "image": "one-night-ultimate-alien",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Bears Vs. Babies",
@@ -833,7 +873,8 @@
       "complexity": 1.24,
       "rate": 5.4,
       "image": "bears-vs-babies",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Bears Vs. Babies: NSFW expansion pack",
@@ -855,7 +896,8 @@
       "complexity": 1.24,
       "rate": 5.8,
       "image": "bears-vs-babies-nsfw",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Happy salmon",
@@ -876,7 +918,8 @@
       "complexity": 1.08,
       "rate": 6.7,
       "image": "happy-salmon",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "En una escala de 1 a T-Rex",
@@ -896,7 +939,8 @@
       "complexity": 1.00,
       "rate": 5.8,
       "image": "en-una-escala-de-1-a-trex",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Skyjo Action",
@@ -915,7 +959,8 @@
       "complexity": 1.14,
       "rate": 6.3,
       "image": "skyjo-action",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Kimono",
@@ -937,7 +982,8 @@
       "complexity": 0,
       "rate": 5.5,
       "image": "kimono",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Mascarade",
@@ -959,7 +1005,8 @@
       "complexity": 1.53,
       "rate": 6.6,
       "image": "mascarade",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Secrets",
@@ -980,7 +1027,8 @@
       "complexity": 1.49,
       "rate": 6.4,
       "image": "secrets",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Munchkin",
@@ -1001,7 +1049,8 @@
       "complexity": 1.81,
       "rate": 5.9,
       "image": "munchkin",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
@@ -1020,7 +1069,8 @@
       "complexity": 1.36,
       "rate": 6.2,
       "image": "card-wards-bubblegum-lumpy",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Stay cool",
@@ -1040,7 +1090,8 @@
       "complexity": 1.00,
       "rate": 7,
       "image": "stay-cool",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Anomia",
@@ -1060,7 +1111,8 @@
       "complexity": 1.04,
       "rate": 6.7,
       "image": "anomia",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "So clover",
@@ -1081,7 +1133,8 @@
       "complexity": 1.1,
       "rate": 7.6,
       "image": "so-clover",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Código secreto Dúo",
@@ -1100,7 +1153,8 @@
       "complexity": 1.36,
       "rate": 7.4,
       "image": "codigo-secreto-duo",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Macedonia de letras",
@@ -1123,7 +1177,8 @@
       "complexity": 1.96,
       "rate": 7.2,
       "image": "macedonia-de-letras",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Mars attacks: juego de dados",
@@ -1143,7 +1198,8 @@
       "complexity": 1.19,
       "rate": 5.9,
       "image": "mars-attack-dados",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Power plants",
@@ -1165,7 +1221,8 @@
       "complexity": 2.44,
       "rate": 7.2,
       "image": "power-plants",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Caballeros arcoíris",
@@ -1187,7 +1244,8 @@
       "complexity": 1.00,
       "rate": 5.9,
       "image": "caballeros-arcoiris",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Decrypto: Laserdrive",
@@ -1210,7 +1268,8 @@
       "complexity": 1.8,
       "rate": 7.5,
       "image": "decrypto-laserdrive",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Ninja dice",
@@ -1230,7 +1289,8 @@
       "complexity": 1.33,
       "rate": 6,
       "image": "ninja-dice",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Social train",
@@ -1250,7 +1310,8 @@
       "complexity": 1.50,
       "rate": 6.5,
       "image": "social-train",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Alta tensión: el juego de cartas",
@@ -1271,7 +1332,8 @@
       "complexity": 2.44,
       "rate": 6.7,
       "image": "alta-tension-cartas",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "¡Viva el Rey!",
@@ -1292,7 +1354,8 @@
       "complexity": 1.21,
       "rate": 6.4,
       "image": "viva-el-rey",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "La leyenda del cerezo que florece cada diez años",
@@ -1313,7 +1376,8 @@
       "complexity": 1.50,
       "rate": 6.4,
       "image": "leyenda-del-cerezo",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Munchkin Gloom",
@@ -1335,7 +1399,8 @@
       "complexity": 1.86,
       "rate": 6.3,
       "image": "munchkin-gloom",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Gloom",
@@ -1356,7 +1421,8 @@
       "complexity": 1.63,
       "rate": 6.3,
       "image": "gloom",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Gloom: Expediciones Desventuradas",
@@ -1378,7 +1444,8 @@
       "complexity": 1.80,
       "rate": 6.6,
       "image": "gloom-expediciones",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Gloom: invitados inoportunos",
@@ -1400,7 +1467,8 @@
       "complexity": 1.00,
       "rate": 6.7,
       "image": "gloom-invitados",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "La fiesta",
@@ -1422,7 +1490,8 @@
       "complexity": 2,
       "rate": 6,
       "image": "la-fiesta",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Muchachada Nui: el juego de mesa",
@@ -1444,7 +1513,8 @@
       "complexity": 2,
       "rate": 5.8,
       "image": "muchachada-nui",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Speed cups⁶",
@@ -1463,7 +1533,8 @@
       "complexity": 1.00,
       "rate": 6.4,
       "image": "speed-cups-6",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Speed cups²",
@@ -1481,7 +1552,8 @@
       "complexity": 1.11,
       "rate": 6.6,
       "image": "speed-cups-2",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "El juego de las baldosas de Antoni Gaudí",
@@ -1501,7 +1573,8 @@
       "complexity": 1.86,
       "rate": 6,
       "image": "baldosas-antoni-gaudi",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "The Island",
@@ -1524,7 +1597,8 @@
       "complexity": 1.70,
       "rate": 7.3,
       "image": "the-island",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Tags",
@@ -1545,7 +1619,8 @@
       "complexity": 1.18,
       "rate": 6.5,
       "image": "tags",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "King of Tokyo",
@@ -1567,7 +1642,8 @@
       "complexity": 1.49,
       "rate": 7.1,
       "image": "king-of-tokyo",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Wordsmith",
@@ -1589,7 +1665,8 @@
       "complexity": 1.00,
       "rate": 6.2,
       "image": "wordsmith",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Mandala Stones",
@@ -1611,7 +1688,8 @@
       "complexity": 1.81,
       "rate": 6.9,
       "image": "mandala-stones",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Doodle rush",
@@ -1631,7 +1709,8 @@
       "complexity": 1.33,
       "rate": 6.5,
       "image": "doodle-rush",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Drunken sailor",
@@ -1652,7 +1731,8 @@
       "complexity": 1.00,
       "rate": 5.8,
       "image": "drunken-sailor",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Fit to print",
@@ -1676,7 +1756,8 @@
       "complexity": 2.07,
       "rate": 7.5,
       "image": "fit-to-print",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Fit To Print: Game Breaking News Mini-Expansion",
@@ -1701,7 +1782,8 @@
       "complexity": 2.00,
       "rate": 7.5,
       "image": "fit-to-print-expansion",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Who am I and what am I doing?",
@@ -1720,7 +1802,8 @@
       "complexity": 0,
       "rate": 0,
       "image": "who-am-i-and-what",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Uno Flip!",
@@ -1741,7 +1824,8 @@
       "complexity": 1.30,
       "rate": 6.3,
       "image": "uno-flip",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Cluedo suspect",
@@ -1762,7 +1846,8 @@
       "complexity": 1.30,
       "rate": 5.8,
       "image": "cluedo-suspect",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Ugga Buuga",
@@ -1784,7 +1869,8 @@
       "complexity": 1.02,
       "rate": 6,
       "image": "ugga-buuga",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Black mirror: caída en picado",
@@ -1806,7 +1892,8 @@
       "complexity": 1.80,
       "rate": 4.1,
       "image": "black-mirror",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Organ attack",
@@ -1828,7 +1915,8 @@
       "complexity": 1.39,
       "rate": 6.3,
       "image": "organ-attack",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Dr. Jekyll and Mr. Hyde",
@@ -1848,7 +1936,8 @@
       "complexity": 2.34,
       "rate": 6.7,
       "image": "dr-jekyll-and-mr-hyde",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "The Game",
@@ -1870,7 +1959,8 @@
       "complexity": 1.24,
       "rate": 6.7,
       "image": "the-game",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "The Game: Face to Face",
@@ -1889,7 +1979,8 @@
       "complexity": 1.24,
       "rate": 7.1,
       "image": "the-game-face-to-face",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Kontour",
@@ -1909,7 +2000,8 @@
       "complexity": 1.00,
       "rate": 6.4,
       "image": "kontour",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Codex naturalis",
@@ -1931,7 +2023,8 @@
       "complexity": 1.76,
       "rate": 7.2,
       "image": "codex-naturalis",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Skull",
@@ -1953,7 +2046,8 @@
       "complexity": 1.11,
       "rate": 7.2,
       "image": "skull",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Expediente dark",
@@ -1975,7 +2069,8 @@
       "complexity": 2.20,
       "rate": 6.3,
       "image": "expediente-dark",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Expediente X: el juego oficial",
@@ -1996,7 +2091,8 @@
       "complexity": 1.25,
       "rate": 5,
       "image": "expediente-x",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Listillo",
@@ -2017,7 +2113,8 @@
       "complexity": 1.50,
       "rate": 6.9,
       "image": "listillo",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Among spaceship",
@@ -2037,7 +2134,8 @@
       "complexity": 0,
       "rate": 0,
       "image": "among-spaceship",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Mantis",
@@ -2059,7 +2157,8 @@
       "complexity": 1.03,
       "rate": 6.8,
       "image": "mantis",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "El portero Baldomero",
@@ -2081,7 +2180,8 @@
       "complexity": 1.25,
       "rate": 6.8,
       "image": "el-portero-baldomero",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Here to slay",
@@ -2103,7 +2203,8 @@
       "complexity": 1.69,
       "rate": 6.9,
       "image": "here-to-slay",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Here to slay: Berserkers &Necromancers",
@@ -2126,7 +2227,8 @@
       "complexity": 2,
       "rate": 7.6,
       "image": "here-to-slay-berserkers-necromancers",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Here to slay: Warriors & Druids",
@@ -2149,7 +2251,8 @@
       "complexity": 1.83,
       "rate": 7.5,
       "image": "here-to-slay-warriors-druids",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Trash pandas",
@@ -2172,7 +2275,8 @@
       "complexity": 1.38,
       "rate": 6.5,
       "image": "trash-pandas",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Kingz",
@@ -2192,7 +2296,8 @@
       "complexity": 1.00,
       "rate": 4.5,
       "image": "kingz",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Secret Hitler",
@@ -2214,7 +2319,8 @@
       "complexity": 1.74,
       "rate": 7.5,
       "image": "secret-hitler",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Cold case: una historia de muerte",
@@ -2235,7 +2341,8 @@
       "complexity": 2,
       "rate": 6.4,
       "image": "cold-case",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Taco, cat, goat, cheese, pizza",
@@ -2254,7 +2361,8 @@
       "complexity": 1.02,
       "rate": 6.6,
       "image": "taco-cat-goat-cheese",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "The Grimwood",
@@ -2274,7 +2382,8 @@
       "complexity": 1.33,
       "rate": 6.1,
       "image": "the-grimwood",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "More or Less: How Good Is Your Judgement?",
@@ -2292,7 +2401,8 @@
       "complexity": 1.00,
       "rate": 5.7,
       "image": "more-or-less",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Shot in the dark: The Ultimate Unorthodox Quiz",
@@ -2310,7 +2420,8 @@
       "complexity": 1.00,
       "rate": 6.1,
       "image": "shot-in-yhe-dark",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Micro Roma",
@@ -2331,7 +2442,8 @@
       "complexity": 1.33,
       "rate": 7,
       "image": "micro-roma",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Fluxx",
@@ -2352,7 +2464,8 @@
       "complexity": 1.39,
       "rate": 5.7,
       "image": "fluxx",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Feministime: La Espiral del Tiempo Feminista",
@@ -2371,7 +2484,8 @@
       "complexity": 0,
       "rate": 0,
       "image": "espiral-del-tiempo-feminista",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Deep sea adventure",
@@ -2392,7 +2506,8 @@
       "complexity": 1.18,
       "rate": 6.9,
       "image": "deep-sea-adventure",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Sriracha the game",
@@ -2412,7 +2527,8 @@
       "complexity": 1.00,
       "rate": 5.3,
       "image": "sriracha-the-game",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Werewolves of Miller's Hollow",
@@ -2433,7 +2549,8 @@
       "complexity": 1.31,
       "rate": 6.7,
       "image": "werewolves-of-millers-hollow",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "A prueba de retos",
@@ -2451,7 +2568,8 @@
       "complexity": 1.00,
       "rate": 6.8,
       "image": "a-prueba-de-retos",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Petrichor",
@@ -2472,7 +2590,8 @@
       "complexity": 3.02,
       "rate": 6.9,
       "image": "petrichor",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Hanabi",
@@ -2492,7 +2611,8 @@
       "complexity": 2.60,
       "rate": 7.7,
       "image": "hanabi",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Arkham Noir #1: los asesinatos del culto de la Bruja",
@@ -2512,7 +2632,8 @@
       "complexity": 2.22,
       "rate": 6.8,
       "image": "arkham-caso-1",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Spoilers: Edición definitiva",
@@ -2533,7 +2654,8 @@
       "complexity": 1.00,
       "rate": 7.1,
       "image": "spoilers",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Imagine",
@@ -2554,7 +2676,8 @@
       "complexity": 1.06,
       "rate": 6.8,
       "image": "imagine",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "F**k: the game",
@@ -2574,7 +2697,8 @@
       "complexity": 1.29,
       "rate": 5.7,
       "image": "fuck-the-game",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Paris: la cité de la Lumière",
@@ -2596,7 +2720,8 @@
       "complexity": 2.04,
       "rate": 7.3,
       "image": "paris-la-cite-de-la-lumiere",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Paris: Eiffel",
@@ -2616,7 +2741,8 @@
       "complexity": 2.20,
       "rate": 7.6,
       "image": "paris-eiffel",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Mix it (monster edition)",
@@ -2634,9 +2760,10 @@
       ],
       "time": 15,
       "complexity": 1.09,
-      "rate": 6.1,
+      "rate": 6.2,
       "image": "mix-it-monster",
-      "isPlayed": false
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "El Jurado 1 - El Caso de las Carpas Doradas",
@@ -2657,7 +2784,8 @@
       "complexity": 1.00,
       "rate": 5.5,
       "image": "el-jurado-1",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Antarctica",
@@ -2679,7 +2807,8 @@
       "complexity": 2,
       "rate": 6.5,
       "image": "antarctica",
-      "isPlayed": false
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Nightmare",
@@ -2701,7 +2830,8 @@
       "complexity": 2,
       "rate": 7.8,
       "image": "nightmare",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Espías en la sombra",
@@ -2722,7 +2852,8 @@
       "complexity": 1.69,
       "rate": 6.6,
       "image": "espias-en-la-sombra",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Garabatos y mazmorras",
@@ -2743,7 +2874,8 @@
       "complexity": 1.67,
       "rate": 6.3,
       "image": "garabatos-y-mazmorras",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Loading",
@@ -2764,7 +2896,8 @@
       "complexity": 1.20,
       "rate": 6.4,
       "image": "loading",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Terra Mare",
@@ -2787,7 +2920,8 @@
       "complexity": 1.73,
       "rate": 7.1,
       "image": "terra-mare",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Railroad ink: azul profundo",
@@ -2809,7 +2943,8 @@
       "complexity": 1.47,
       "rate": 7.2,
       "image": "railroad-ink-azul",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Arkham Noir #2: Invocado por el Trueno",
@@ -2829,7 +2964,8 @@
       "complexity": 2.47,
       "rate": 7.1,
       "image": "arkham-caso-2",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Arkham Noir #3: Abismos Infinitos de Oscuridad",
@@ -2849,7 +2985,8 @@
       "complexity": 2.86,
       "rate": 7.2,
       "image": "arkham-caso-3",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Detective: Sigue la Pista",
@@ -2867,7 +3004,8 @@
       "complexity": 2.60,
       "rate": 7.4,
       "image": "detective-sigue-la-pista",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Mr. Jack",
@@ -2883,7 +3021,8 @@
       "complexity": 1.73,
       "rate": 7,
       "image": "mr-jack",
-      "isPlayed": false
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Lost Cities: Roll & Write",
@@ -2902,7 +3041,8 @@
       "complexity": 1.17,
       "rate": 7.2,
       "image": "lost-cities",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Detective: A Modern Crime Board Game",
@@ -2924,7 +3064,8 @@
       "complexity": 2.74,
       "rate": 7.7,
       "image": "detective-a-modern-crime",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Pictomania (Second edition)",
@@ -2944,7 +3085,8 @@
       "complexity": 1.53,
       "rate": 7.6,
       "image": "pictomania",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Magnetism",
@@ -2962,7 +3104,8 @@
       "complexity": 1.53,
       "rate": 0,
       "image": "magnetism",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Funky pollo",
@@ -2983,7 +3126,8 @@
       "complexity": 1.00,
       "rate": 6.3,
       "image": "funky-pollo",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Love letter",
@@ -3004,7 +3148,8 @@
       "complexity": 1.13,
       "rate": 7.2,
       "image": "love-letter",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Avalon",
@@ -3025,7 +3170,8 @@
       "complexity": 1.74,
       "rate": 7.5,
       "image": "avalon",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Behind the campaign",
@@ -3044,7 +3190,8 @@
       "complexity": 0,
       "rate": 0,
       "image": "behind-the-campaign",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "War of Roshambo: Kingdom clash",
@@ -3063,7 +3210,8 @@
       "complexity": 0,
       "rate": 0,
       "image": "kingdom-clash",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "The mind fullness game",
@@ -3082,7 +3230,8 @@
       "complexity": 0,
       "rate": 0,
       "image": "mind-fullness-game",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Canvas",
@@ -3103,7 +3252,8 @@
       "complexity": 1.67,
       "rate": 7.3,
       "image": "canvas",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Canvas: Reflections",
@@ -3125,7 +3275,8 @@
       "complexity": 1.87,
       "rate": 7.8,
       "image": "canvas-reflections",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Railroad ink: amarillo brillante",
@@ -3147,7 +3298,8 @@
       "complexity": 2.05,
       "rate": 7.6,
       "image": "railroad-ink-amarillo",
-      "isPlayed": false
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Pixelate",
@@ -3167,7 +3319,8 @@
       "complexity": 1.50,
       "rate": 5.8,
       "image": "pixelate",
-      "isPlayed": false
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "That's not a hat",
@@ -3187,7 +3340,8 @@
       "complexity": 1.00,
       "rate": 7.1,
       "image": "thats-not-a-hat",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Sushi bar",
@@ -3208,7 +3362,8 @@
       "complexity": 1.24,
       "rate": 6.5,
       "image": "sushi-bar",
-      "isPlayed": true
+      "isPlayed": true,
+      "age": 0
     },
     {
       "name": "Sonora",
@@ -3229,7 +3384,8 @@
       "complexity": 2.19,
       "rate": 6.9,
       "image": "sonora",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Obscurio",
@@ -3252,7 +3408,8 @@
       "complexity": 1.86,
       "rate": 7.1,
       "image": "obscurio",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     },
     {
       "name": "Clic: la foto perfecta",
@@ -3274,7 +3431,8 @@
       "complexity": 1.84,
       "rate": 7.0,
       "image": "clic-foto-perfecta",
-      "isPlayed": false
+      "isPlayed": false,
+      "age": 0
     }
   ]
 }
