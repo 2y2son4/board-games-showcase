@@ -511,10 +511,3 @@ a:active {
 mat-form-field {
   height: 66px;
 }
-
-::ng-deep mat-chip-listbox mat-chip-option {
-  font-size: 14px; /* Adjust the font size as needed */ /* Adjust the font size for mobile screens */
-  @media screen and (max-width: 756px) {
-    font-size: 12px; /* Adjust the font size for mobile devices */
-  }
-}
