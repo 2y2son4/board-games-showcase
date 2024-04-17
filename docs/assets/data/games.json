@@ -2808,7 +2808,7 @@
       "rate": 6.5,
       "image": "antarctica",
       "isPlayed": true,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Nightmare",
@@ -2944,7 +2944,7 @@
       "rate": 7.2,
       "image": "railroad-ink-azul",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Arkham Noir #2: Invocado por el Trueno",
@@ -3042,7 +3042,7 @@
       "rate": 7.2,
       "image": "lost-cities",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Detective: A Modern Crime Board Game",
@@ -3065,7 +3065,31 @@
       "rate": 7.7,
       "image": "detective-a-modern-crime",
       "isPlayed": false,
-      "age": 0
+      "age": 16
+    },
+    {
+      "name": "Detective: sigue la pista",
+      "editor": "Portal Games",
+      "year": 2020,
+      "types": [
+        "Deduction",
+        "Murder mystery",
+        "Narrative choice/paragraph",
+        "Solitaire",
+        "Storytelling",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 120,
+      "complexity": 2.60,
+      "rate": 7.3,
+      "image": "detective-a-modern-crime",
+      "isPlayed": false,
+      "age": 16
     },
     {
       "name": "Pictomania (Second edition)",
@@ -3086,7 +3110,7 @@
       "rate": 7.6,
       "image": "pictomania",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Magnetism",
@@ -3105,7 +3129,7 @@
       "rate": 0,
       "image": "magnetism",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Funky pollo",
@@ -3127,7 +3151,7 @@
       "rate": 6.3,
       "image": "funky-pollo",
       "isPlayed": false,
-      "age": 0
+      "age": 6
     },
     {
       "name": "Love letter",
@@ -3149,7 +3173,7 @@
       "rate": 7.2,
       "image": "love-letter",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Avalon",
@@ -3171,7 +3195,7 @@
       "rate": 7.5,
       "image": "avalon",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Behind the campaign",
@@ -3191,7 +3215,7 @@
       "rate": 0,
       "image": "behind-the-campaign",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "War of Roshambo: Kingdom clash",
@@ -3211,7 +3235,7 @@
       "rate": 0,
       "image": "kingdom-clash",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "The mind fullness game",
@@ -3253,7 +3277,7 @@
       "rate": 7.3,
       "image": "canvas",
       "isPlayed": true,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Canvas: Reflections",
@@ -3276,7 +3300,7 @@
       "rate": 7.8,
       "image": "canvas-reflections",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Railroad ink: amarillo brillante",
@@ -3299,7 +3323,7 @@
       "rate": 7.6,
       "image": "railroad-ink-amarillo",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Pixelate",
@@ -3320,7 +3344,7 @@
       "rate": 5.8,
       "image": "pixelate",
       "isPlayed": true,
-      "age": 0
+      "age": 6
     },
     {
       "name": "That's not a hat",
@@ -3341,7 +3365,7 @@
       "rate": 7.1,
       "image": "thats-not-a-hat",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Sushi bar",
@@ -3363,7 +3387,7 @@
       "rate": 6.5,
       "image": "sushi-bar",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Sonora",
@@ -3385,7 +3409,7 @@
       "rate": 6.9,
       "image": "sonora",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Obscurio",
@@ -3409,7 +3433,7 @@
       "rate": 7.1,
       "image": "obscurio",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Clic: la foto perfecta",
@@ -3427,12 +3451,279 @@
         2,
         4
       ],
-      "time": 50,
+      "time": 90,
       "complexity": 1.84,
       "rate": 7.0,
       "image": "clic-foto-perfecta",
       "isPlayed": false,
-      "age": 0
+      "age": 10
+    },
+    {
+      "name": "Cat café",
+      "editor": "Cacahuete Games",
+      "year": 2019,
+      "types": [
+        "Dice rolling",
+        "Paper and pencil",
+        "Push your luck"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.60,
+      "rate": 6.4,
+      "image": "cat-cafe",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "Papageno",
+      "editor": "Helvetiq",
+      "year": 2020,
+      "types": [
+        "Set collection",
+        "Animals"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 6.5,
+      "image": "papageno",
+      "isPlayed": false,
+      "age": 6
+    },
+    {
+      "name": "Illusion",
+      "editor": "Mercurio",
+      "year": 2018,
+      "types": [
+        "Pattern recognition"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.05,
+      "rate": 7.0,
+      "image": "illusion",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Roll to the top",
+      "editor": "Zacatrús",
+      "year": 2018,
+      "types": [
+        "Dice rolling",
+        "Bingo",
+        "Family",
+        "Race",
+        "Paper and pencil"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 25,
+      "complexity": 1.04,
+      "rate": 6.7,
+      "image": "roll-to-the-top",
+      "isPlayed": false,
+      "age": 9
+    },
+    {
+      "name": "Diáspora zero",
+      "editor": "Zacatrús",
+      "year": 2023,
+      "types": [
+        "Adventure",
+        "Cards",
+        "Deduction",
+        "Puzzle",
+        "Cooperative",
+        "Science fiction"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        24
+      ],
+      "time": 300,
+      "complexity": 2,
+      "rate": 7.8,
+      "image": "diaspora-zero",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Gohut",
+      "editor": "GDM games",
+      "year": 2023,
+      "types": [
+        "Fantasy",
+        "War game",
+        "Grid movement"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 2,
+      "rate": 7.1,
+      "image": "gohut",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "Circo maldito",
+      "editor": "Maldito games",
+      "year": 2021,
+      "types": [
+        "Auction",
+        "Bidding",
+        "Betting",
+        "Bluffing",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        4,
+        8
+      ],
+      "time": 40,
+      "complexity": 2.25,
+      "rate": 6.6,
+      "image": "circo-maldito",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Convalence",
+      "editor": "MasQueOca",
+      "year": 2016,
+      "types": [
+        "Deduction",
+        "Educational",
+        "Puzzle",
+        "Communication limits",
+        "Pattern building",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 40,
+      "complexity": 1.70,
+      "rate": 6.3,
+      "image": "convalence",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "El secreto de Amelia",
+      "editor": "Gen-X Games",
+      "year": 2021,
+      "types": [
+        "Cards",
+        "Horror",
+        "Murder mystery",
+        "Puzzle",
+        "Real time",
+        "Solitaire",
+        "Scape room"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 60,
+      "complexity": 1.50,
+      "rate": 5.7,
+      "image": "secreto-de-amelia",
+      "isPlayed": false,
+      "age": 12
+    },
+    {
+      "name": "Perspectives",
+      "editor": "Space Cowboys",
+      "year": 2023,
+      "types": [
+        "Deduction",
+        "Murder mystery",
+        "Puzzle",
+        "Communication limits",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 90,
+      "complexity": 2.14,
+      "rate": 7.8,
+      "image": "perspectives",
+      "isPlayed": false,
+      "age": 12
+    },
+    {
+      "name": "Astra",
+      "editor": "Maldito games",
+      "year": 2022,
+      "types": [
+        "Area majority",
+        "End game bonuses",
+        "Paper and pencil",
+        "Set collection",
+        "Abstract strategy"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 90,
+      "complexity": 2.15,
+      "rate": 6.7,
+      "image": "astra",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "Nobel run",
+      "editor": "Tranjis",
+      "year": 2022,
+      "types": [
+        "Solitaire",
+        "Educational",
+        "Simulation",
+        "Deck, bag and pool building"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.82,
+      "rate": 6.6,
+      "image": "nobel-run",
+      "isPlayed": false,
+      "age": 10
     }
   ]
 }
