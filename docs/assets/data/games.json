@@ -3068,30 +3068,6 @@
       "age": 16
     },
     {
-      "name": "Detective: sigue la pista",
-      "editor": "Portal Games",
-      "year": 2020,
-      "types": [
-        "Deduction",
-        "Murder mystery",
-        "Narrative choice/paragraph",
-        "Solitaire",
-        "Storytelling",
-        "Expansion"
-      ],
-      "language": "es",
-      "players": [
-        1,
-        5
-      ],
-      "time": 120,
-      "complexity": 2.60,
-      "rate": 7.3,
-      "image": "detective-a-modern-crime",
-      "isPlayed": false,
-      "age": 16
-    },
-    {
       "name": "Pictomania (Second edition)",
       "editor": "Czech Games Edition",
       "year": 2011,
