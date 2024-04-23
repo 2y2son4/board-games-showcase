@@ -121,6 +121,10 @@ p {
         transform: rotateY(180deg);
       }
 
+      &.active {
+        transform: rotateY(180deg);
+      }
+
       &__oracle {
         position: relative;
         width: 100%;
@@ -151,6 +155,10 @@ p {
         justify-content: space-between;
         padding: 14px 0;
       }
+    }
+
+    &-inner {
+      transition: transform 0.8s;
     }
 
     &-back {
