@@ -19,7 +19,7 @@
       "rate": 6.7,
       "image": "deep-dive",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Tranvía mortal",
@@ -38,7 +38,7 @@
       "rate": 6.1,
       "image": "tranvia-mortal",
       "isPlayed": true,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Master dater: big love edition",
@@ -76,7 +76,7 @@
       "rate": 6.3,
       "image": "joking-hazard",
       "isPlayed": true,
-      "age": 0
+      "age": 18
     },
     {
       "name": "Joking hazard: Deck enhancement #1",
@@ -96,7 +96,7 @@
       "rate": 7.3,
       "image": "joking-hazard-enhancement-1",
       "isPlayed": true,
-      "age": 0
+      "age": 18
     },
     {
       "name": "Joking hazard: Blast from the past",
@@ -116,7 +116,7 @@
       "rate": 7.2,
       "image": "joking-hazard-blast",
       "isPlayed": true,
-      "age": 0
+      "age": 18
     },
     {
       "name": "Back to the future: the card game",
@@ -138,7 +138,7 @@
       "rate": 5.8,
       "image": "back-to-the-future",
       "isPlayed": true,
-      "age": 0
+      "age": 11
     },
     {
       "name": "Coup",
@@ -159,7 +159,7 @@
       "rate": 7,
       "image": "coup",
       "isPlayed": false,
-      "age": 0
+      "age": 13
     },
     {
       "name": "Coup: reformation",
@@ -181,7 +181,7 @@
       "rate": 7.3,
       "image": "coup-reformation",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Saqueadores",
@@ -201,7 +201,7 @@
       "rate": 6.6,
       "image": "saqueadores",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Cabo (2nd edition)",
@@ -221,7 +221,7 @@
       "rate": 7.3,
       "image": "cabo-2nd-edition",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "3 secretos",
@@ -242,7 +242,7 @@
       "rate": 6,
       "image": "3-secretos",
       "isPlayed": true,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Narabi",
@@ -263,7 +263,7 @@
       "rate": 6,
       "image": "narabi",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Dungeon Mayhem",
@@ -285,7 +285,7 @@
       "rate": 6.9,
       "image": "dungeon-mayhem",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Karma",
@@ -305,7 +305,7 @@
       "rate": 6,
       "image": "karma",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "The Mind",
@@ -327,7 +327,7 @@
       "rate": 6.8,
       "image": "the-mind",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Chrononauts",
@@ -349,7 +349,7 @@
       "rate": 6.2,
       "image": "chrononauts",
       "isPlayed": true,
-      "age": 0
+      "age": 11
     },
     {
       "name": "Jumble Jam",
@@ -371,7 +371,7 @@
       "rate": 6.8,
       "image": "jumble-jam",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Ramen Ink",
@@ -392,7 +392,7 @@
       "rate": 6.4,
       "image": "ramen-ink",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Sencha",
@@ -413,7 +413,7 @@
       "rate": 6.4,
       "image": "sencha",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Unánimo Party",
@@ -426,14 +426,14 @@
       "language": "es",
       "players": [
         3,
-        12
+        8
       ],
       "time": 30,
       "complexity": 1.00,
       "rate": 7.2,
       "image": "unanimo-party",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Point City",
@@ -454,7 +454,7 @@
       "rate": 7.3,
       "image": "point-city",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Truffle shuffle",
@@ -475,7 +475,7 @@
       "rate": 6.9,
       "image": "truffle-shuffle",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Unstable unicorns: NSFW",
@@ -497,7 +497,7 @@
       "rate": 6.6,
       "image": "unstable-unicorns-nsfw",
       "isPlayed": false,
-      "age": 0
+      "age": 18
     },
     {
       "name": "Unstable unicorns: rainbow apocalypse",
@@ -519,7 +519,7 @@
       "rate": 6.9,
       "image": "unstable-unicorns-rainbow",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Unstable unicorns: adventures",
@@ -541,7 +541,7 @@
       "rate": 7.3,
       "image": "unstable-unicorns-adventures",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Matrioska",
@@ -562,7 +562,7 @@
       "rate": 6.6,
       "image": "matrioska",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Sushi Go!",
@@ -583,7 +583,7 @@
       "rate": 7,
       "image": "sushi-go",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Exploding kittens",
@@ -604,7 +604,7 @@
       "rate": 6.1,
       "image": "exploding-kittens",
       "isPlayed": true,
-      "age": 0
+      "age": 7
     },
     {
       "name": "Exploding kittens: Streaking Kittens",
@@ -626,7 +626,7 @@
       "rate": 7.2,
       "image": "exploding-kittens-streaking",
       "isPlayed": true,
-      "age": 0
+      "age": 7
     },
     {
       "name": "Zombie kittens",
@@ -648,7 +648,7 @@
       "rate": 6.6,
       "image": "zombie-kittens",
       "isPlayed": true,
-      "age": 0
+      "age": 7
     },
     {
       "name": "Virus!",
@@ -669,7 +669,7 @@
       "rate": 6.7,
       "image": "virus",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Virus 2! Evolution",
@@ -690,7 +690,7 @@
       "rate": 7,
       "image": "virus-2",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Virus! Halloween",
@@ -711,7 +711,7 @@
       "rate": 7.3,
       "image": "virus-halloween",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Jinx",
@@ -3413,7 +3413,7 @@
     },
     {
       "name": "Clic: la foto perfecta",
-      "editor": "Mevo",
+      "editor": "Mebo",
       "year": 2020,
       "types": [
         "Negotiation",
@@ -3700,6 +3700,100 @@
       "image": "nobel-run",
       "isPlayed": false,
       "age": 10
+    },
+    {
+      "name": "Turing machine",
+      "editor": "Scorpion Masqué",
+      "year": 2022,
+      "types": [
+        "Deduction",
+        "Math",
+        "Spies",
+        "Solitaire"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 20,
+      "complexity": 2.42,
+      "rate": 7.7,
+      "image": "turing-machine",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Astra: paquete de cartas promo",
+      "editor": "Maldito games",
+      "year": 2022,
+      "types": [
+        "Expansion",
+        "Area majority",
+        "End game bonuses",
+        "Paper and pencil",
+        "Set collection",
+        "Abstract strategy"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 90,
+      "complexity": 2.15,
+      "rate": 6.4,
+      "image": "astra-cards",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "Próxima estación: Tokyo",
+      "editor": "Blue orange",
+      "year": 2023,
+      "types": [
+        "City building",
+        "Trains",
+        "Connections",
+        "Line drawing",
+        "Network and route building",
+        "Paper and pencil",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.71,
+      "rate": 6.7,
+      "image": "proxima-estacion-tokyo",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Arraial",
+      "editor": "Mebo",
+      "year": 2018,
+      "types": [
+        "Abstract strategy",
+        "Family",
+        "Puzzle",
+        "Pattern building",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.57,
+      "rate": 6.6,
+      "image": "arraial",
+      "isPlayed": false,
+      "age": 8
     }
   ]
 }
