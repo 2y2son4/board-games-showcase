@@ -156,7 +156,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     const selectedTypeValues = this.selectedTypes.value ?? [];
     const selectedEditorValues = this.selectedEditors.value ?? [];
 
-    if (selectedTypeValues.length === 0 && selectedEditorValues!.length === 0) {
+    if (selectedTypeValues.length === 0) {
       this.resetGamesList();
     } else {
       this.filteredGames = this.gamesList.filter((game) => {
@@ -164,8 +164,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
           selectedTypeValues.length === 0 ||
           game.types.some((type) => selectedTypeValues.includes(type));
         const matchEditors =
-          selectedEditorValues!.length === 0 ||
-          selectedEditorValues!.includes(game.editor);
+          selectedEditorValues.length === 0 ||
+          selectedEditorValues.includes(game.editor);
         return matchTypes && matchEditors;
       });
     }
@@ -173,7 +173,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   selectSorting(change: MatSelectChange, filteredGames: GameCard[]) {
     this.resetPlayedGames();
-    // this.selectedChipTypes = [];
     this.filterFunctions.flipAllCards(this.innerElements);
     const sortFunctions: {
       [key: string]: (a: GameCard, b: GameCard) => number;
