@@ -28,7 +28,6 @@
         </div>
       </div>
       <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
-
     </div>
 
   </div>
@@ -40,11 +39,11 @@
           <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
             <span class="card__year-absolute" [ngClass]="{'border-pink': game.isPlayed }"
               [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
-            <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery">
+            <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery"> {{game.name}}
             </h2>
             @if(game.image)
             { <div class="card__image-container"><img class="card__image" src="assets/games/{{game.image}}.webp"
-                alt="{{game.name}} image"></div>
+                alt="{{game.name}}"></div>
             }
             <p class="card__title" [innerHTML]="(game.editor ? 'by ' + game.editor : '-') | highlightText:searchQuery">
             </p>
@@ -75,8 +74,8 @@
                     </p>} @else {
                     <p>-</p>
                     }
-                    <p class="card__time">{{game!.time! < 59 ? game.time + ' minutes' : (game!.time! / 60)===1
-                        ? '1 hour' : game!.time! / 60 + ' hours' }}</p>
+                    <p class="card__time">{{game!.time! < 59 ? game.time + ' min' : (game!.time! / 60)===1 ? '1 h' :
+                        game!.time! / 60 + ' h' }}</p>
 
                   </div>
                   <mat-chip-listbox multiple [(ngModel)]="selectedChipTypes" (ngModelChange)="onTypeChange($event)">
