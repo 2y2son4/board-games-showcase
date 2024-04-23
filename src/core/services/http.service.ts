@@ -14,6 +14,8 @@ export class HttpService {
   }
 
   getOraclesData(): Observable<{ oracles: OracleCard[] }> {
-    return this.http.get<any>('src/assets/data/oracles.json');
+    return this.http.get<{ oracles: OracleCard[] }>(
+      'src/assets/data/oracles.json',
+    );
   }
 }
