@@ -3720,7 +3720,7 @@
       "complexity": 2.42,
       "rate": 7.7,
       "image": "turing-machine",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14
     },
     {
