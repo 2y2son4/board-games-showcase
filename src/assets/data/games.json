@@ -262,7 +262,7 @@
       "complexity": 1.29,
       "rate": 6,
       "image": "narabi",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10
     },
     {
@@ -1111,7 +1111,7 @@
       "complexity": 1.04,
       "rate": 6.7,
       "image": "anomia",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -1802,7 +1802,7 @@
       "complexity": 0,
       "rate": 0,
       "image": "who-am-i-and-what",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -2874,7 +2874,7 @@
       "complexity": 1.67,
       "rate": 6.3,
       "image": "garabatos-y-mazmorras",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -3399,7 +3399,7 @@
         "Cooperative",
         "Voting"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         8
@@ -3408,7 +3408,7 @@
       "complexity": 1.86,
       "rate": 7.1,
       "image": "obscurio",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10
     },
     {
@@ -3422,7 +3422,7 @@
         "Deduction",
         "Memory"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         4
