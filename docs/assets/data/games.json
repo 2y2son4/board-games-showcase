@@ -7,7 +7,8 @@
       "types": [
         "Press your luck",
         "Set collection",
-        "Animals"
+        "Animals",
+        "Solitaire"
       ],
       "language": "x",
       "players": [
@@ -262,7 +263,7 @@
       "complexity": 1.29,
       "rate": 6,
       "image": "narabi",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10
     },
     {
@@ -337,7 +338,8 @@
         "Family",
         "Bluffing",
         "Deduction",
-        "Alternate history"
+        "Alternate history",
+        "Solitaire"
       ],
       "language": "en",
       "players": [
@@ -442,7 +444,8 @@
       "types": [
         "Family",
         "Cards",
-        "City building"
+        "City building",
+        "Solitaire"
       ],
       "language": "en",
       "players": [
@@ -1111,7 +1114,7 @@
       "complexity": 1.04,
       "rate": 6.7,
       "image": "anomia",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -1802,7 +1805,7 @@
       "complexity": 0,
       "rate": 0,
       "image": "who-am-i-and-what",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -1824,7 +1827,7 @@
       "complexity": 1.30,
       "rate": 6.3,
       "image": "uno-flip",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -1948,7 +1951,8 @@
         "Cards",
         "Numbers",
         "Communication limits",
-        "Cooperative"
+        "Cooperative",
+        "Solitaire"
       ],
       "language": "x",
       "players": [
@@ -2012,7 +2016,8 @@
         "Cards",
         "Hand management",
         "Layering",
-        "Pattern building"
+        "Pattern building",
+        "Solitaire"
       ],
       "language": "x",
       "players": [
@@ -2058,7 +2063,8 @@
         "Horror",
         "Puzzle",
         "Cooperative",
-        "Solitaire"
+        "Solitaire",
+        "Escape room"
       ],
       "language": "es",
       "players": [
@@ -2361,7 +2367,7 @@
       "complexity": 1.02,
       "rate": 6.6,
       "image": "taco-cat-goat-cheese",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -2579,7 +2585,8 @@
         "Strategy",
         "Farming",
         "Area majority",
-        "Modular board"
+        "Modular board",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -2796,7 +2803,8 @@
         "Cards",
         "Deduction",
         "Puzzle",
-        "Cooperative"
+        "Cooperative",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -2874,7 +2882,7 @@
       "complexity": 1.67,
       "rate": 6.3,
       "image": "garabatos-y-mazmorras",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -2932,7 +2940,8 @@
         "Connections",
         "Dice rolling",
         "Network and route building",
-        "Line drawing"
+        "Line drawing",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -2993,7 +3002,8 @@
       "editor": "Pegasus Spiele",
       "year": 2020,
       "types": [
-        "Expansion"
+        "Expansion",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3064,7 +3074,7 @@
       "complexity": 2.74,
       "rate": 7.7,
       "image": "detective-a-modern-crime",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 16
     },
     {
@@ -3093,7 +3103,8 @@
       "editor": "Ankama",
       "year": 2022,
       "types": [
-        "Strategy"
+        "Strategy",
+        "Solitaire"
       ],
       "language": "x",
       "players": [
@@ -3241,7 +3252,8 @@
         "Abstract strategy",
         "Puzzle",
         "Hand management",
-        "Layering"
+        "Layering",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3264,7 +3276,8 @@
         "Puzzle",
         "Hand management",
         "Layering",
-        "Expansion"
+        "Expansion",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3287,7 +3300,8 @@
         "Connections",
         "Dice rolling",
         "Network and route building",
-        "Line drawing"
+        "Line drawing",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3373,7 +3387,8 @@
         "Action points",
         "Area majority",
         "Flicking",
-        "Chaining"
+        "Chaining",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3399,7 +3414,7 @@
         "Cooperative",
         "Voting"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         8
@@ -3408,7 +3423,7 @@
       "complexity": 1.86,
       "rate": 7.1,
       "image": "obscurio",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10
     },
     {
@@ -3422,7 +3437,7 @@
         "Deduction",
         "Memory"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         4
@@ -3527,7 +3542,8 @@
         "Deduction",
         "Puzzle",
         "Cooperative",
-        "Science fiction"
+        "Science fiction",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3687,7 +3703,8 @@
         "Solitaire",
         "Educational",
         "Simulation",
-        "Deck, bag and pool building"
+        "Deck, bag and pool building",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3792,6 +3809,361 @@
       "complexity": 1.57,
       "rate": 6.6,
       "image": "arraial",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Concept",
+      "editor": "Repos production",
+      "year": 2013,
+      "types": [
+        "Deduction",
+        "Party",
+        "Words",
+        "Communication limits"
+      ],
+      "language": "es",
+      "players": [
+        4,
+        12
+      ],
+      "time": 40,
+      "complexity": 1.37,
+      "rate": 6.6,
+      "image": "concept",
+      "isPlayed": true,
+      "age": 10
+    },
+    {
+      "name": "Inicio",
+      "editor": "Hot Macacos",
+      "year": 2023,
+      "types": [
+        "Words"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 0,
+      "image": "inicio",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Detective: Crímenes en L.A.",
+      "editor": "Mebo",
+      "year": 2019,
+      "types": [
+        "Deduction",
+        "Expansion",
+        "Murder mystery",
+        "Cooperative",
+        "Solitaire",
+        "Storytelling"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 180,
+      "complexity": 3.06,
+      "rate": 7.2,
+      "image": "detective-crimenes-la",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "EXIT 9: Las Catacumbas del Terror",
+      "editor": "Devir",
+      "year": 2023,
+      "types": [
+        "Deduction",
+        "Horror",
+        "Puzzle",
+        "Cooperative",
+        "Escape room",
+        "Solitaire"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        4
+      ],
+      "time": 240,
+      "complexity": 2.62,
+      "rate": 7.3,
+      "image": "exit-9-las-catacumbas-del-terror",
+      "isPlayed": false,
+      "age": 16
+    },
+    {
+      "name": "Perdidos en R'lyeh",
+      "editor": "Edge",
+      "year": 2016,
+      "types": [
+        "Card game",
+        "Horror",
+        "Hand management",
+        "Player elimination",
+        "Single loser game"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 45,
+      "complexity": 1.17,
+      "rate": 6.1,
+      "image": "perdidos-en-rlyeh",
+      "isPlayed": false,
+      "age": 13
+    },
+    {
+      "name": "TonTon",
+      "editor": "Mercurio",
+      "year": 2018,
+      "types": [
+        "Card game",
+        "Hand management",
+        "Trick-taking"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.67,
+      "rate": 6.4,
+      "image": "ton-ton",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "The Game: Quick & Easy",
+      "editor": "Mercurio",
+      "year": 2020,
+      "types": [
+        "Card game",
+        "Numbers",
+        "Cooperative",
+        "Hand management"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 10,
+      "complexity": 1.05,
+      "rate": 6.8,
+      "image": "the-game-quick",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "Fairy trails",
+      "editor": "TCG Factory",
+      "year": 2020,
+      "types": [
+        "Fantasy",
+        "Puzzle",
+        "Territory building",
+        "Network and route building",
+        "Tile placement",
+        "Solitaire"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        2
+      ],
+      "time": 20,
+      "complexity": 1.11,
+      "rate": 6.1,
+      "image": "fairy-trails",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Shoothit Macarra",
+      "editor": "GAME4U2",
+      "year": 2022,
+      "types": [
+        "Card game"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        8
+      ],
+      "time": 20,
+      "complexity": 1,
+      "rate": 8.4,
+      "image": "shoothit-macarra",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Orbital",
+      "editor": "DMZ games",
+      "year": 2018,
+      "types": [
+        "City building",
+        "Puzzle",
+        "Science fiction",
+        "Modular board",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 45,
+      "complexity": 1.86,
+      "rate": 7,
+      "image": "orbital",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Monster soup",
+      "editor": "Matagot",
+      "year": 2020,
+      "types": [
+        "Creatures",
+        "Children",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 6.1,
+      "image": "monster-soup",
+      "isPlayed": false,
+      "age": 5
+    },
+    {
+      "name": "Genios victorianos",
+      "editor": "Edge",
+      "year": 2019,
+      "types": [
+        "Family",
+        "Contracts",
+        "Sudden death ending",
+        "Worker placement",
+        "Villainy"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 60,
+      "complexity": 2.16,
+      "rate": 6.9,
+      "image": "genios-victorianos",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Tea for 2",
+      "editor": "Space Cowboys",
+      "year": 2020,
+      "types": [
+        "Card game",
+        "End game bonuses",
+        "Deck, Bag, and Pool Building",
+        "Take that"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 1.48,
+      "rate": 6.6,
+      "image": "tea-for-2",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "¡A sacar la basura!",
+      "editor": "The right to lose",
+      "year": 2023,
+      "types": [
+        "Humor",
+        "Party",
+        "Open drafting",
+        "Voting"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        8
+      ],
+      "time": 15,
+      "complexity": 0,
+      "rate": 0,
+      "image": "a-sacar-la-basura",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "Tuareg",
+      "editor": "Devir",
+      "year": 2012,
+      "types": [
+        "Card game",
+        "End game bonuses",
+        "Modular board",
+        "Open drafting",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 60,
+      "complexity": 2.34,
+      "rate": 7.6,
+      "image": "tuareg",
+      "isPlayed": false,
+      "age": 12
+    },
+    {
+      "name": "ERA Edad Media",
+      "editor": "Asmodee",
+      "year": 2019,
+      "types": [
+        "City building",
+        "Dice",
+        "Medieval",
+        "Grid coverage",
+        "End game bonuses",
+        "Strategy",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 60,
+      "complexity": 2.25,
+      "rate": 7.2,
+      "image": "era-edad-media",
       "isPlayed": false,
       "age": 8
     }
