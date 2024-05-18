@@ -84,6 +84,7 @@ p {
 
 .card {
   width: 80%;
+  margin-top: 24px;
 
   &__container {
     position: relative;
@@ -397,6 +398,8 @@ a:active {
 }
 
 .filter {
+  margin-top: 20px;
+
   @media screen and (max-width: 767px) {
     display: none;
   }

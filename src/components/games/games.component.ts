@@ -7,6 +7,7 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import {
   FormControl,
   FormGroup,
@@ -25,9 +26,11 @@ import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { GameCard } from '../commons.models';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
-import GAMES_JSON from '../../assets/data/games.json';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
+import { HttpService } from '../../core/services/http/http.service';
 import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
+import { LoaderComponent } from '../loader/loader.component';
+import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
   selector: 'app-games',
@@ -36,6 +39,8 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
     CommonModule,
     FormsModule,
     HighlightTextPipe,
+    HttpClientModule,
+    LoaderComponent,
     MatButtonModule,
     MatCardModule,
     MatChipsModule,
@@ -84,10 +89,29 @@ export class GamesComponent implements OnInit, AfterViewInit {
   constructor(
     public commonFunctions: CommonFunctionsService,
     public filterFunctions: FilterFunctionsService,
+    private httpDataService: HttpService,
+    private loaderService: LoaderService,
   ) {}
 
   ngOnInit(): void {
-    this.gamesList = this.filterFunctions.sortByNameAscending(GAMES_JSON.games);
+    this.gamesList = [];
+    this.loaderService.show();
+    this.httpDataService.getGames().subscribe({
+      next: (response) => {
+        this.gamesList = this.filterFunctions.sortByNameAscending(
+          response.games,
+        );
+        this.filteredGames = this.filterFunctions.sortByNameAscending(
+          response.games,
+        );
+        this.loaderService.hide();
+      },
+      error: (error) => {
+        console.error('Error fetching games data', error);
+        this.loaderService.hide();
+      },
+    });
+
     this.resetGamesList();
     this.types = this.commonFunctions.extractUniqueValues(
       this.gamesList,
