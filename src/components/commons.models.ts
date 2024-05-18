@@ -10,7 +10,7 @@ export interface GameCard {
   rate: number;
   image?: string;
   isPlayed: boolean;
-  ages: Array<string | number>;
+  age: number;
 }
 
 export interface OracleCard {
