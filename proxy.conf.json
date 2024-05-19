@@ -1,0 +1,11 @@
+{
+  "/api/xmlapi": {
+    "target": "https://boardgamegeek.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api/xmlapi": "/xmlapi"
+    }
+  }
+}
