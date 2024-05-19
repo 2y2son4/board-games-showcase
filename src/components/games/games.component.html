@@ -8,7 +8,7 @@
           {{playedGames ? 'Played' : unPlayedGames ? 'Unplayed' : ''}}
         </h3>
         <h4 class="side__number">
-          @for(type of selectedChipTypes; let index = $index;let first = $first;let last = $last; track
+          @for(type of selectedChipTypes; let index = $index; let first = $first; let last = $last; track
           index){
           <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes.length > 1 ? ' and ' : '')}}
             {{!first ? type.toLowerCase() : type}}</span>}
