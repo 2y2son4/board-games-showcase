@@ -29,3 +29,16 @@ export interface SortingOrder {
 export interface SortingFunctions {
   [key: string]: (data: GameCard[]) => GameCard[];
 }
+
+export interface GameDetails {
+  name: string[];
+  yearpublished: string;
+  minplayers: string;
+  maxplayers: string;
+  playingtime: string;
+  age: string;
+  description: string;
+  boardgamecategory: string[];
+  image: string;
+  boardgamepublisher: string[];
+}
