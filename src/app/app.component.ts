@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
   isSearch!: boolean;
 
   ngOnInit(): void {
-    this.selectComponent('games');
+    this.selectComponent('search');
   }
 
   selectComponent(component: string) {

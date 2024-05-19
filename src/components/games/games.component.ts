@@ -69,6 +69,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   searchQuery = '';
   playedGames = false;
   unPlayedGames = false;
+  isLoading!: boolean;
   exactPlayers!: number | undefined;
   gamesFilterForm!: FormGroup;
   flippedCards!: number;
@@ -96,6 +97,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.gamesList = [];
     this.loaderService.show();
+    this.isLoading = true;
     this.httpDataService.getGames().subscribe({
       next: (response) => {
         this.gamesList = this.filterFunctions.sortByNameAscending(
@@ -105,10 +107,12 @@ export class GamesComponent implements OnInit, AfterViewInit {
           response.games,
         );
         this.loaderService.hide();
+        this.isLoading = false;
       },
       error: (error) => {
         console.error('Error fetching games data', error);
         this.loaderService.hide();
+        this.isLoading = false;
       },
     });
 
