@@ -1,0 +1,32 @@
+<div class="search">
+  <div class="search__input">
+    <mat-form-field style="height: 70px; margin-top: 18px;">
+      <mat-label>Search BGG data base</mat-label>
+      <input matInput placeholder="Search by name" [(ngModel)]="searchTerm">
+    </mat-form-field>
+    <button type="button" mat-raised-button color="primary" class="side__reset" (click)="search()">
+      <mat-icon aria-hidden="false" aria-label="Search icon" fontIcon="search"></mat-icon>
+      Search
+    </button>
+  </div>
+  <app-loader></app-loader>
+  <div class="search__results">
+    @if(results?.boardgames){
+    <div class="search__results-list">
+      <ul class="search__cards">
+        <li class="search__cards-game" *ngFor="let game of results.boardgames.boardgame">
+          @if(game.name['#text']){
+          <h3>{{ game.name['#text']
+            }} ({{ game.yearpublished['#text'] }})</h3>}
+          <button type="button" mat-raised-button color="primary" (click)="selectGame(game['@attributes'].objectid)">
+            <mat-icon aria-hidden="false" aria-label="Info icon" fontIcon="info">
+            </mat-icon>Get Details
+          </button>
+        </li>
+      </ul>
+    </div>
+    }
+    @if(showDetails){
+    <app-game-details [objectid]="selectedGameId" [gameDetails]="selectedGameDetails"></app-game-details>}
+  </div>
+</div>
