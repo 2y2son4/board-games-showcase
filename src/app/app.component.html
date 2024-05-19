@@ -5,15 +5,22 @@
         <span>2y2son4's showcase</span>
       </div>
     </mat-toolbar>
-    <div class="route__container">
-      <button class="route__buttons" (click)="selectComponent('games')" [ngClass]="{'route__color': isGames}">
+    <div class=" route__container">
+      <button class="route__buttons route__buttons-half" (click)="selectComponent('games')"
+        [ngClass]="{'route__color': isGames}">
         Games</button>
-      <button class="route__buttons" (click)="selectComponent('oracles')"
+      <button class="route__buttons route__buttons-half" (click)="selectComponent('oracles')"
         [ngClass]="{'route__color': isOracles}">Oracles</button>
+      <button class="route__buttons route__buttons-full" (click)="selectComponent('search')"
+        [ngClass]="{'route__color': isSearch}">
+        BGG search</button>
     </div>
   </header>
   @if(isGames) {
   <app-games></app-games>}
   @if(isOracles){
   <app-oracles></app-oracles>}
+  @if(isSearch){
+  <app-bgg-search></app-bgg-search>
+  }
 </main>
