@@ -5,11 +5,12 @@ import { throwError } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { LoaderComponent } from '../loader/loader.component';
 import { GameDetails } from '../commons.models';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-game-details',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, LoaderComponent],
+  imports: [CommonModule, HttpClientModule, LoaderComponent, MatChipsModule],
   templateUrl: './game-details.component.html',
   styleUrls: ['./game-details.component.scss'],
 })
@@ -30,8 +31,8 @@ export class GameDetailsComponent implements OnChanges {
     this.http
       .get(apiUrl, { responseType: 'text' })
       .pipe(
-        catchError((err) => {
-          console.error(err);
+        catchError((error) => {
+          console.error('Error from fetchGameDetails: ', error);
           return throwError(() => new Error('Something went wrong'));
         }),
       )
