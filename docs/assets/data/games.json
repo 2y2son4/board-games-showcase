@@ -3002,6 +3002,10 @@
       "editor": "Pegasus Spiele",
       "year": 2020,
       "types": [
+        "Deduction",
+        "Murder mystery",
+        "Cooperative",
+        "Storytelling",
         "Expansion",
         "Solitaire"
       ],
@@ -3859,11 +3863,11 @@
       "year": 2019,
       "types": [
         "Deduction",
-        "Expansion",
         "Murder mystery",
         "Cooperative",
-        "Solitaire",
-        "Storytelling"
+        "Storytelling",
+        "Expansion",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -4166,6 +4170,187 @@
       "image": "era-edad-media",
       "isPlayed": false,
       "age": 8
+    },
+    {
+      "name": "The X-Files: collectible card game",
+      "editor": "The United States Playing Card Company",
+      "year": 1996,
+      "types": [
+        "Card game",
+        "Collectible components",
+        "Deduction",
+        "Action points",
+        "TV series"
+      ],
+      "language": "en",
+      "players": [
+        2
+      ],
+      "time": 60,
+      "complexity": 2.41,
+      "rate": 5.7,
+      "image": "x-files-collectible-card-game",
+      "isPlayed": true,
+      "age": 10
+    },
+    {
+      "name": "Cartzzle: Exploración Extrema",
+      "editor": "Jeux Opla",
+      "year": 2021,
+      "types": [
+        "Puzzle",
+        "Cooperative",
+        "Solitaire"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        2
+      ],
+      "time": 45,
+      "complexity": 1,
+      "rate": 6,
+      "image": "cartzzle-exploracion-extrema",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Topic",
+      "editor": "Ingenio Games",
+      "year": 2022,
+      "types": [
+        "Card game",
+        "Party",
+        "Real time",
+        "Words",
+        "Speed matching",
+        "Spelling"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 2,
+      "rate": 5.7,
+      "image": "topic",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Upstream",
+      "editor": "2 Tomatoes",
+      "year": 2017,
+      "types": [
+        "Action points",
+        "Grid movement",
+        "Modular board",
+        "Tile placement"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 40,
+      "complexity": 1.88,
+      "rate": 6.3,
+      "image": "upstream",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Luna Capital",
+      "editor": "Devir",
+      "year": 2021,
+      "types": [
+        "City building",
+        "Science fiction",
+        "Open drafting",
+        "Set collection",
+        "Tile placement",
+        "Family"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 45,
+      "complexity": 2.25,
+      "rate": 7.1,
+      "image": "luna-capital",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Los Libros del Tiempo",
+      "editor": "Maldito games",
+      "year": 2023,
+      "types": [
+        "Card game",
+        "Deck, Bag, and Pool Building",
+        "Hand management",
+        "Open drafting",
+        "Set collection",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 60,
+      "complexity": 2.58,
+      "rate": 7.2,
+      "image": "libros-del-tiempo",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Miskadas",
+      "editor": "Mebo",
+      "year": 2019,
+      "types": [
+        "Action/Event",
+        "Children's game"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        3
+      ],
+      "time": 25,
+      "complexity": 1,
+      "rate": 6,
+      "image": "miskadas",
+      "isPlayed": false,
+      "age": 5
+    },
+    {
+      "name": "Detective: Temporada 1",
+      "editor": "Portal Games",
+      "year": 2020,
+      "types": [
+        "Deduction",
+        "Murder mystery",
+        "Narrative choice/paragraph",
+        "Storytelling",
+        "Expansion",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 120,
+      "complexity": 2.07,
+      "rate": 6.9,
+      "image": "detective-temporada-1",
+      "isPlayed": false,
+      "age": 12
     }
   ]
 }
