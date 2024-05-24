@@ -38,6 +38,10 @@ export class BggSearchComponent {
   selectedGameId: string | null = null;
   selectedGameDetails: any = null;
   showDetails!: boolean;
+  isLoading!: boolean;
+  noResults!: boolean;
+  numberOfResults!: number;
+  showNumberOfResults!: boolean;
 
   constructor(
     private http: HttpClient,
@@ -47,7 +51,10 @@ export class BggSearchComponent {
   search() {
     this.loaderService.show();
     this.showDetails = false;
+    this.isLoading = true;
+
     const apiUrl = `/api/xmlapi/search?search=${this.searchTerm}`; // Proxy URL
+
     this.http
       .get(apiUrl, { responseType: 'text' })
       .pipe(
@@ -62,6 +69,17 @@ export class BggSearchComponent {
         const json = this.xmlToJson(xml);
         this.results = this.filterResults(json);
         this.loaderService.hide();
+        this.isLoading = false;
+        this.noResults = false;
+
+        if (!json.boardgames['#text']) {
+          this.noResults = true;
+          this.showNumberOfResults = false;
+        } else {
+          this.noResults = false;
+          this.showNumberOfResults = true;
+          this.numberOfResults = json.boardgames['#text'].length;
+        }
       });
   }
 

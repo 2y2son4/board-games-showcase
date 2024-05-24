@@ -8,6 +8,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   max-width: 1500px;
   padding: 0 24px;
@@ -16,6 +17,7 @@ p {
   &__input {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 24px;
   }
 
@@ -27,6 +29,7 @@ p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 24px;
 
     &-game {
       list-style-type: none;
@@ -50,5 +53,14 @@ p {
       flex-direction: column;
       align-items: center;
     }
+
+    &-info {
+      margin-bottom: 14px;
+    }
   }
+}
+
+.search-query {
+  letter-spacing: 0.05rem;
+  font-weight: 500;
 }
