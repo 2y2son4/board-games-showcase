@@ -4168,7 +4168,7 @@
       "complexity": 2.25,
       "rate": 7.2,
       "image": "era-edad-media",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8
     },
     {
@@ -4235,28 +4235,6 @@
       "complexity": 2,
       "rate": 5.7,
       "image": "topic",
-      "isPlayed": false,
-      "age": 8
-    },
-    {
-      "name": "Upstream",
-      "editor": "2 Tomatoes",
-      "year": 2017,
-      "types": [
-        "Action points",
-        "Grid movement",
-        "Modular board",
-        "Tile placement"
-      ],
-      "language": "x",
-      "players": [
-        2,
-        5
-      ],
-      "time": 40,
-      "complexity": 1.88,
-      "rate": 6.3,
-      "image": "upstream",
       "isPlayed": false,
       "age": 8
     },
