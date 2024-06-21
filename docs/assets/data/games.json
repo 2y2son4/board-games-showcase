@@ -4055,7 +4055,7 @@
       "complexity": 1,
       "rate": 6.1,
       "image": "monster-soup",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 5
     },
     {
