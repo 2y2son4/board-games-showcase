@@ -2075,7 +2075,7 @@
       "complexity": 2.20,
       "rate": 6.3,
       "image": "expediente-dark",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 0
     },
     {
@@ -4329,6 +4329,72 @@
       "image": "detective-temporada-1",
       "isPlayed": false,
       "age": 12
+    },
+    {
+      "name": "El misterio del Dr. Dark",
+      "editor": "Mercurio",
+      "year": 2019,
+      "types": [
+        "Deduction",
+        "Horror",
+        "Medical",
+        "Puzzle",
+        "Cooperative",
+        "Escape room"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 60,
+      "complexity": 2.58,
+      "rate": 6.2,
+      "image": "misterio-dr-dark",
+      "isPlayed": false,
+      "age": 12
+    },
+    {
+      "name": "Hitster",
+      "editor": "Jumbo",
+      "year": 2022,
+      "types": [
+        "Card game",
+        "Music",
+        "Party",
+        "Trivia"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        10
+      ],
+      "time": 30,
+      "complexity": 1,
+      "rate": 7.7,
+      "image": "hitster",
+      "isPlayed": false,
+      "age": 16
+    },
+    {
+      "name": "Disc cover",
+      "editor": "Mercurio",
+      "year": 2022,
+      "types": [
+        "Music",
+        "Party"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        8
+      ],
+      "time": 20,
+      "complexity": 1.14,
+      "rate": 6.5,
+      "image": "disc-cover",
+      "isPlayed": false,
+      "age": 7
     }
   ]
 }
