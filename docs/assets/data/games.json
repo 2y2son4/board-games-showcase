@@ -758,7 +758,7 @@
       "rate": 6.6,
       "image": "saboteur",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Saboteur 2: expansion",
@@ -783,7 +783,7 @@
       "rate": 7,
       "image": "saboteur-2",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "One night ultimate werewolf",
@@ -807,7 +807,7 @@
       "rate": 7.1,
       "image": "one-night-ultimate-werewolf",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "One night ultimate vampire",
@@ -831,7 +831,7 @@
       "rate": 6.7,
       "image": "one-night-ultimate-vampire",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "One night ultimate alien",
@@ -855,7 +855,7 @@
       "rate": 6.9,
       "image": "one-night-ultimate-alien",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Bears Vs. Babies",
@@ -877,7 +877,7 @@
       "rate": 5.4,
       "image": "bears-vs-babies",
       "isPlayed": true,
-      "age": 0
+      "age": 7
     },
     {
       "name": "Bears Vs. Babies: NSFW expansion pack",
@@ -900,7 +900,7 @@
       "rate": 5.8,
       "image": "bears-vs-babies-nsfw",
       "isPlayed": true,
-      "age": 0
+      "age": 18
     },
     {
       "name": "Happy salmon",
@@ -922,7 +922,7 @@
       "rate": 6.7,
       "image": "happy-salmon",
       "isPlayed": false,
-      "age": 0
+      "age": 6
     },
     {
       "name": "En una escala de 1 a T-Rex",
@@ -943,7 +943,7 @@
       "rate": 5.8,
       "image": "en-una-escala-de-1-a-trex",
       "isPlayed": false,
-      "age": 0
+      "age": 7
     },
     {
       "name": "Skyjo Action",
@@ -963,7 +963,7 @@
       "rate": 6.3,
       "image": "skyjo-action",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Kimono",
@@ -986,7 +986,7 @@
       "rate": 5.5,
       "image": "kimono",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Mascarade",
@@ -1009,7 +1009,7 @@
       "rate": 6.6,
       "image": "mascarade",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Secrets",
@@ -1031,7 +1031,7 @@
       "rate": 6.4,
       "image": "secrets",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Munchkin",
@@ -1053,7 +1053,7 @@
       "rate": 5.9,
       "image": "munchkin",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
@@ -1073,7 +1073,7 @@
       "rate": 6.2,
       "image": "card-wards-bubblegum-lumpy",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Stay cool",
@@ -1094,7 +1094,7 @@
       "rate": 7,
       "image": "stay-cool",
       "isPlayed": false,
-      "age": 0
+      "age": 12
     },
     {
       "name": "Anomia",
@@ -1115,7 +1115,7 @@
       "rate": 6.7,
       "image": "anomia",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "So clover",
@@ -1137,7 +1137,7 @@
       "rate": 7.6,
       "image": "so-clover",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Código secreto Dúo",
@@ -1157,7 +1157,7 @@
       "rate": 7.4,
       "image": "codigo-secreto-duo",
       "isPlayed": true,
-      "age": 0
+      "age": 11
     },
     {
       "name": "Macedonia de letras",
@@ -1181,7 +1181,7 @@
       "rate": 7.2,
       "image": "macedonia-de-letras",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Mars attacks: juego de dados",
@@ -1202,7 +1202,7 @@
       "rate": 5.9,
       "image": "mars-attack-dados",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Power plants",
@@ -1225,7 +1225,7 @@
       "rate": 7.2,
       "image": "power-plants",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Caballeros arcoíris",
@@ -1248,7 +1248,7 @@
       "rate": 5.9,
       "image": "caballeros-arcoiris",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Decrypto: Laserdrive",
@@ -1272,7 +1272,7 @@
       "rate": 7.5,
       "image": "decrypto-laserdrive",
       "isPlayed": true,
-      "age": 0
+      "age": 12
     },
     {
       "name": "Ninja dice",
@@ -1293,7 +1293,7 @@
       "rate": 6,
       "image": "ninja-dice",
       "isPlayed": false,
-      "age": 0
+      "age": 9
     },
     {
       "name": "Social train",
@@ -1314,7 +1314,7 @@
       "rate": 6.5,
       "image": "social-train",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Alta tensión: el juego de cartas",
@@ -1336,7 +1336,7 @@
       "rate": 6.7,
       "image": "alta-tension-cartas",
       "isPlayed": true,
-      "age": 0
+      "age": 12
     },
     {
       "name": "¡Viva el Rey!",
@@ -1358,7 +1358,7 @@
       "rate": 6.4,
       "image": "viva-el-rey",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "La leyenda del cerezo que florece cada diez años",
@@ -1380,7 +1380,7 @@
       "rate": 6.4,
       "image": "leyenda-del-cerezo",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Munchkin Gloom",
@@ -1403,7 +1403,7 @@
       "rate": 6.3,
       "image": "munchkin-gloom",
       "isPlayed": false,
-      "age": 0
+      "age": 13
     },
     {
       "name": "Gloom",
@@ -1425,7 +1425,7 @@
       "rate": 6.3,
       "image": "gloom",
       "isPlayed": false,
-      "age": 0
+      "age": 13
     },
     {
       "name": "Gloom: Expediciones Desventuradas",
@@ -1448,7 +1448,7 @@
       "rate": 6.6,
       "image": "gloom-expediciones",
       "isPlayed": false,
-      "age": 0
+      "age": 13
     },
     {
       "name": "Gloom: invitados inoportunos",
@@ -1471,7 +1471,7 @@
       "rate": 6.7,
       "image": "gloom-invitados",
       "isPlayed": false,
-      "age": 0
+      "age": 13
     },
     {
       "name": "La fiesta",
@@ -1494,7 +1494,7 @@
       "rate": 6,
       "image": "la-fiesta",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Muchachada Nui: el juego de mesa",
@@ -1517,7 +1517,7 @@
       "rate": 5.8,
       "image": "muchachada-nui",
       "isPlayed": true,
-      "age": 0
+      "age": 13
     },
     {
       "name": "Speed cups⁶",
@@ -1537,7 +1537,7 @@
       "rate": 6.4,
       "image": "speed-cups-6",
       "isPlayed": false,
-      "age": 0
+      "age": 6
     },
     {
       "name": "Speed cups²",
@@ -1556,7 +1556,7 @@
       "rate": 6.6,
       "image": "speed-cups-2",
       "isPlayed": false,
-      "age": 0
+      "age": 6
     },
     {
       "name": "El juego de las baldosas de Antoni Gaudí",
@@ -1577,7 +1577,7 @@
       "rate": 6,
       "image": "baldosas-antoni-gaudi",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "The Island",
@@ -1601,7 +1601,7 @@
       "rate": 7.3,
       "image": "the-island",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Tags",
@@ -1623,7 +1623,7 @@
       "rate": 6.5,
       "image": "tags",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "King of Tokyo",
@@ -1646,7 +1646,7 @@
       "rate": 7.1,
       "image": "king-of-tokyo",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Wordsmith",
@@ -1669,7 +1669,7 @@
       "rate": 6.2,
       "image": "wordsmith",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Mandala Stones",
@@ -1692,7 +1692,7 @@
       "rate": 6.9,
       "image": "mandala-stones",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Doodle rush",
@@ -1713,7 +1713,7 @@
       "rate": 6.5,
       "image": "doodle-rush",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Drunken sailor",
@@ -1735,7 +1735,7 @@
       "rate": 5.8,
       "image": "drunken-sailor",
       "isPlayed": true,
-      "age": 0
+      "age": 17
     },
     {
       "name": "Fit to print",
@@ -1760,7 +1760,7 @@
       "rate": 7.5,
       "image": "fit-to-print",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Fit To Print: Game Breaking News Mini-Expansion",
@@ -1786,7 +1786,7 @@
       "rate": 7.5,
       "image": "fit-to-print-expansion",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Who am I and what am I doing?",
@@ -1806,7 +1806,7 @@
       "rate": 0,
       "image": "who-am-i-and-what",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Uno Flip!",
@@ -1828,7 +1828,7 @@
       "rate": 6.3,
       "image": "uno-flip",
       "isPlayed": true,
-      "age": 0
+      "age": 7
     },
     {
       "name": "Cluedo suspect",
@@ -1850,7 +1850,7 @@
       "rate": 5.8,
       "image": "cluedo-suspect",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Ugga Buuga",
@@ -1873,7 +1873,7 @@
       "rate": 6,
       "image": "ugga-buuga",
       "isPlayed": true,
-      "age": 0
+      "age": 7
     },
     {
       "name": "Black mirror: caída en picado",
@@ -1896,7 +1896,7 @@
       "rate": 4.1,
       "image": "black-mirror",
       "isPlayed": false,
-      "age": 0
+      "age": 13
     },
     {
       "name": "Organ attack",
@@ -1919,7 +1919,7 @@
       "rate": 6.3,
       "image": "organ-attack",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Dr. Jekyll and Mr. Hyde",
@@ -1940,7 +1940,7 @@
       "rate": 6.7,
       "image": "dr-jekyll-and-mr-hyde",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "The Game",
@@ -1964,7 +1964,7 @@
       "rate": 6.7,
       "image": "the-game",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "The Game: Face to Face",
@@ -1984,7 +1984,7 @@
       "rate": 7.1,
       "image": "the-game-face-to-face",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Kontour",
@@ -2005,7 +2005,7 @@
       "rate": 6.4,
       "image": "kontour",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Codex naturalis",
@@ -2029,7 +2029,7 @@
       "rate": 7.2,
       "image": "codex-naturalis",
       "isPlayed": true,
-      "age": 0
+      "age": 7
     },
     {
       "name": "Skull",
@@ -2052,7 +2052,7 @@
       "rate": 7.2,
       "image": "skull",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Expediente dark",
@@ -2076,7 +2076,7 @@
       "rate": 6.3,
       "image": "expediente-dark",
       "isPlayed": true,
-      "age": 0
+      "age": 12
     },
     {
       "name": "Expediente X: el juego oficial",
@@ -2098,7 +2098,7 @@
       "rate": 5,
       "image": "expediente-x",
       "isPlayed": true,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Listillo",
@@ -2120,7 +2120,7 @@
       "rate": 6.9,
       "image": "listillo",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Among spaceship",
@@ -2141,7 +2141,7 @@
       "rate": 0,
       "image": "among-spaceship",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Mantis",
@@ -2164,7 +2164,7 @@
       "rate": 6.8,
       "image": "mantis",
       "isPlayed": false,
-      "age": 0
+      "age": 7
     },
     {
       "name": "El portero Baldomero",
@@ -2187,7 +2187,7 @@
       "rate": 6.8,
       "image": "el-portero-baldomero",
       "isPlayed": false,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Here to slay",
@@ -2210,7 +2210,7 @@
       "rate": 6.9,
       "image": "here-to-slay",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Here to slay: Berserkers &Necromancers",
@@ -2234,7 +2234,7 @@
       "rate": 7.6,
       "image": "here-to-slay-berserkers-necromancers",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Here to slay: Warriors & Druids",
@@ -2258,7 +2258,7 @@
       "rate": 7.5,
       "image": "here-to-slay-warriors-druids",
       "isPlayed": true,
-      "age": 0
+      "age": 10
     },
     {
       "name": "Trash pandas",
@@ -2282,7 +2282,7 @@
       "rate": 6.5,
       "image": "trash-pandas",
       "isPlayed": false,
-      "age": 0
+      "age": 8
     },
     {
       "name": "Kingz",
@@ -2303,7 +2303,7 @@
       "rate": 4.5,
       "image": "kingz",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Secret Hitler",
@@ -2326,7 +2326,7 @@
       "rate": 7.5,
       "image": "secret-hitler",
       "isPlayed": true,
-      "age": 0
+      "age": 13
     },
     {
       "name": "Cold case: una historia de muerte",
@@ -2348,7 +2348,7 @@
       "rate": 6.4,
       "image": "cold-case",
       "isPlayed": false,
-      "age": 0
+      "age": 14
     },
     {
       "name": "Taco, cat, goat, cheese, pizza",
@@ -2368,7 +2368,7 @@
       "rate": 6.6,
       "image": "taco-cat-goat-cheese",
       "isPlayed": true,
-      "age": 0
+      "age": 8
     },
     {
       "name": "The Grimwood",
@@ -3471,7 +3471,7 @@
       "complexity": 1.60,
       "rate": 6.4,
       "image": "cat-cafe",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10
     },
     {
@@ -4211,7 +4211,7 @@
       "complexity": 1,
       "rate": 6,
       "image": "cartzzle-exploracion-extrema",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8
     },
     {
@@ -4356,7 +4356,7 @@
     },
     {
       "name": "Hitster",
-      "editor": "Jumbo",
+      "editor": "Diset",
       "year": 2022,
       "types": [
         "Card game",
