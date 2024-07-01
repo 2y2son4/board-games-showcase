@@ -107,6 +107,6 @@ export class CommonFunctionsService {
       }
     });
 
-    return allValues.sort();
+    return allValues.sort((a, b) => a.localeCompare(b));
   }
 }
