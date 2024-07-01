@@ -106,6 +106,14 @@ export class GamesComponent implements OnInit, AfterViewInit {
         this.filteredGames = this.filterFunctions.sortByNameAscending(
           response.games,
         );
+        this.types = this.commonFunctions.extractUniqueValues(
+          this.filterFunctions.sortByNameAscending(response.games),
+          'types',
+        );
+        this.editors = this.commonFunctions.extractUniqueValues(
+          this.filterFunctions.sortByNameAscending(response.games),
+          'editor',
+        );
         this.loaderService.hide();
         this.isLoading = false;
       },
@@ -117,15 +125,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
     });
 
     this.resetGamesList();
-    this.types = this.commonFunctions.extractUniqueValues(
-      this.gamesList,
-      'types',
-    );
-    this.editors = this.commonFunctions.extractUniqueValues(
-      this.gamesList,
-      'editor',
-    );
-
     this.gamesFilterForm = new FormGroup({
       searchQuery: new FormControl(''),
       exactPlayers: new FormControl(''),
@@ -184,7 +183,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     const selectedTypeValues = this.selectedTypes.value ?? [];
     const selectedEditorValues = this.selectedEditors.value ?? [];
 
-    if (selectedTypeValues.length === 0) {
+    if (selectedTypeValues.length === 0 && selectedEditorValues.length === 0) {
       this.resetGamesList();
     } else {
       this.filteredGames = this.gamesList.filter((game) => {

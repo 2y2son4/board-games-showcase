@@ -113,7 +113,9 @@
     </ul>
     @if(filteredGames.length === 0) {
     <mat-card class="card__no-data">
-      <mat-card-content>There are no results for <span class="card__search-query">{{searchQuery}}</span>
+      <mat-card-content>There are no results for <span class="card__search-query">
+          {{searchQuery || ' this search'}}
+        </span>
       </mat-card-content>
     </mat-card>}
   </div>
