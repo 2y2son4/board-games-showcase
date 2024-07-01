@@ -71,6 +71,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   unPlayedGames = false;
   isLoading!: boolean;
   exactPlayers!: number | undefined;
+  exactAge!: number;
   gamesFilterForm!: FormGroup;
   flippedCards!: number;
 
@@ -307,6 +308,24 @@ export class GamesComponent implements OnInit, AfterViewInit {
               exactPlayersValue! <= maxPlayers
             );
           }
+        }
+        return false;
+      });
+    }
+  }
+
+  filterGamesByAge() {
+    this.selectedChipTypes = [];
+
+    const exactYear = this.exactAge;
+
+    if (!exactYear) {
+      this.resetGamesList();
+    } else {
+      this.filteredGames = this.gamesList.filter((game) => {
+        const players = game.age;
+        if (players) {
+          return players <= exactYear;
         }
         return false;
       });

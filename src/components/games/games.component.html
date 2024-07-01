@@ -131,9 +131,11 @@
         </button>
         }
       </mat-form-field>
-      <mat-form-field><mat-label>Number of players</mat-label>
-        <input matInput type="number" maxlength="2" min="1" id="exactPlayers" name="exactPlayers"
-          [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
+      <mat-form-field><mat-label>Number of players</mat-label><input matInput type="number" maxlength="2" min="1"
+          id="exactPlayers" name="exactPlayers" [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
+      </mat-form-field>
+      <mat-form-field><mat-label>Age</mat-label><input matInput type="number" maxlength="2" min="1" id="exactAge"
+          name="exactAge" [(ngModel)]="exactAge" (input)="filterGamesByAge()">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Sort</mat-label>
