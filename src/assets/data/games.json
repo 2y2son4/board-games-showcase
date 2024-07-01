@@ -3471,7 +3471,7 @@
       "complexity": 1.60,
       "rate": 6.4,
       "image": "cat-cafe",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10
     },
     {
@@ -4211,7 +4211,7 @@
       "complexity": 1,
       "rate": 6,
       "image": "cartzzle-exploracion-extrema",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8
     },
     {
@@ -4356,7 +4356,7 @@
     },
     {
       "name": "Hitster",
-      "editor": "Jumbo",
+      "editor": "Diset",
       "year": 2022,
       "types": [
         "Card game",
