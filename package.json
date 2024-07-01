@@ -11,7 +11,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "lighthouse": "npx unlighthouse --site https://2y2son4.github.io/board-games-showcase/"
   },
   "private": true,
   "dependencies": {
