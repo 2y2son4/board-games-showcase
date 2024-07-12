@@ -4395,6 +4395,72 @@
       "image": "disc-cover",
       "isPlayed": false,
       "age": 7
+    },
+    {
+      "name": "A fake artist goes to New York",
+      "editor": "Oink games",
+      "year": 2011,
+      "types": [
+        "Bluffing",
+        "Party", 
+        "Deduction",
+        "Hidden roles",
+        "Line drawing",
+        "Targeted clues"
+      ],
+      "language": "x",
+      "players": [
+        5,
+        10
+      ],
+      "time": 20,
+      "complexity": 1.12,
+      "rate": 7.1,
+      "image": "a-fake-artist",
+      "isPlayed": true,
+      "age": 8
+    },
+    {
+      "name": "Cubeez",
+      "editor": "Blue orange",
+      "year": 2018,
+      "types": [
+        "Children's game",
+        "Dexterity",
+        "Action"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 6.1,
+      "image": "cubeez",
+      "isPlayed": true,
+      "age": 6
+    },
+    {
+      "name": "Scout",
+      "editor": "Oink games",
+      "year": 2019,
+      "types": [
+        "Hand management",
+        "Ladder climbing",
+        "Score-and-reset-game"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.35,
+      "rate": 7.8,
+      "image": "scout",
+      "isPlayed": false,
+      "age": 9
     }
   ]
 }
