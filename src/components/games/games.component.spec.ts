@@ -14,6 +14,7 @@ const game1: GameCard = {
   rate: 0,
   isPlayed: true,
   players: [4],
+  age: 1,
 };
 
 const game2: GameCard = {
@@ -26,6 +27,7 @@ const game2: GameCard = {
   rate: 0,
   isPlayed: false,
   players: [27],
+  age: 1,
 };
 
 const game3: GameCard = {
@@ -38,6 +40,7 @@ const game3: GameCard = {
   rate: 0,
   isPlayed: false,
   players: [2],
+  age: 1,
 };
 
 describe('GamesComponent', () => {
