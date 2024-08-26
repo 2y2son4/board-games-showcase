@@ -3292,7 +3292,7 @@
       "complexity": 1.87,
       "rate": 7.8,
       "image": "canvas-reflections",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14
     },
     {
@@ -3510,7 +3510,7 @@
       "complexity": 1.05,
       "rate": 7.0,
       "image": "illusion",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8
     },
     {
@@ -3854,7 +3854,7 @@
       "complexity": 1,
       "rate": 0,
       "image": "inicio",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8
     },
     {
@@ -4235,7 +4235,7 @@
       "complexity": 2,
       "rate": 5.7,
       "image": "topic",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8
     },
     {
@@ -4351,7 +4351,7 @@
       "complexity": 2.58,
       "rate": 6.2,
       "image": "misterio-dr-dark",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 12
     },
     {
@@ -4461,6 +4461,389 @@
       "image": "scout",
       "isPlayed": false,
       "age": 9
+    },
+    {
+      "name": "Grove",
+      "editor": "Melmac Games",
+      "year": 2021,
+      "types": [
+        "Abstract",
+        "Farming",
+        "Solitaire",
+        "Pattern building",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 10,
+      "complexity": 1.35,
+      "rate": 7.7,
+      "image": "grove",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Wurst Case Scenario",
+      "editor": "Jumping turtle Games",
+      "year": 2018,
+      "types": [
+        "Humor",
+        "Card game",
+        "Hand management",
+        "Player elimination"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.25,
+      "rate": 6.3,
+      "image": "wurst-case-scenario",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "The Number",
+      "editor": "Repos production",
+      "year": 2020,
+      "types": [
+        "Paper and pencil",
+        "Number"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.15,
+      "rate": 6.0,
+      "image": "the-number",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Rolling Ranch",
+      "editor": "TCG Factory",
+      "year": 2019,
+      "types": [
+        "Animals",
+        "Dice rolling",
+        "Territory building",
+        "Paper and pencil"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        20
+      ],
+      "time": 20,
+      "complexity": 1.26,
+      "rate": 6.7,
+      "image": "rolling-ranch",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Quiz Chef",
+      "editor": "Edge",
+      "year": 2013,
+      "types": [
+        "Party",
+        "Trivia",
+        "Food/Cooking"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        10
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "rate": 5.6,
+      "image": "quiz-chef",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Illusio",
+      "editor": "Edge",
+      "year": 2008,
+      "types": [
+        "Family",
+        "Card game"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.65,
+      "rate": 7.8,
+      "image": "illusio",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Winter tales",
+      "editor": "Edge",
+      "year": 2012,
+      "types": [
+        "Novel based",
+        "Open drafting",
+        "Point to point movement",
+        "Role playing",
+        "Storytelling",
+        "Team-based"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        7
+      ],
+      "time": 90,
+      "complexity": 2.52,
+      "rate": 5.7,
+      "image": "winter-tales",
+      "isPlayed": false,
+      "age": 14
+    },
+    {
+      "name": "Set",
+      "editor": "Devir",
+      "year": 1988,
+      "types": [
+        "Solitaire",
+        "Abstract",
+        "Pattern recognition",
+        "Speed matching",
+        "Real time",
+        "Puzzle"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        20
+      ],
+      "time": 30,
+      "complexity": 1.66,
+      "rate": 6.5,
+      "image": "set",
+      "isPlayed": false,
+      "age": 6
+    },
+    {
+      "name": "Paradox university",
+      "editor": "APA board games",
+      "year": 2019,
+      "types": [
+        "Solitaire",
+        "Memory",
+        "Party"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.43,
+      "rate": 7.2,
+      "image": "paradox-university",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Herbalism",
+      "editor": "TCG Factory",
+      "year": 2017,
+      "types": [
+        "Memory",
+        "Medical",
+        "Deduction",
+        "Mythology",
+        "Puzzle"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        4
+      ],
+      "time": 30,
+      "complexity": 2.00,
+      "rate": 6.5,
+      "image": "herbalism",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Ensalada de puntos",
+      "editor": "Devir",
+      "year": 2019,
+      "types": [
+        "Open drafting",
+        "Set collection",
+        "Family"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.14,
+      "rate": 7.1,
+      "image": "ensalada-de-puntos",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "City blox",
+      "editor": "TCG Factory",
+      "year": 2019,
+      "types": [
+        "City building",
+        "Children's game",
+        "Educational",
+        "Pattern building",
+        "Pattern recognition"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 1.00,
+      "rate": 5.6,
+      "image": "city-blox",
+      "isPlayed": false,
+      "age": 6
+    },
+    {
+      "name": "Sumatra",
+      "editor": "Ludonova",
+      "year": 2019,
+      "types": [
+        "Open drafting",
+        "Set collection",
+        "Adventure",
+        "Exploration",
+        "Travel"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 45,
+      "complexity": 1.91,
+      "rate": 6.7,
+      "image": "sumatra",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Winter",
+      "editor": "Devir",
+      "year": 2022,
+      "types": [
+        "Abstract",
+        "Family",
+        "Area majority",
+        "Modular board",
+        "Pattern building",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 10,
+      "complexity": 1.50,
+      "rate": 7.0,
+      "image": "winter",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Ragami",
+      "editor": "Mebo",
+      "year": 2012,
+      "types": [
+        "Strategy",
+        "Fantasy",
+        "Mythology",
+        "Deck, bag and pool building",
+        "Open drafting",
+        "Point to point movement",
+        "Worker placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 90,
+      "complexity": 2.60,
+      "rate": 5.9,
+      "image": "ragami",
+      "isPlayed": false,
+      "age": 8
+    },
+    {
+      "name": "Nocturne",
+      "editor": "AEG",
+      "year": 2024,
+      "types": [
+        "Abstract strategy",
+        "Animals",
+        "Fantasy",
+        "Puzzle",
+        "Territory building",
+        "Area majority",
+        "Auction",
+        "Bidding",
+        "Contracts",
+        "End game bonuses",
+        "Grid coverage"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 45,
+      "complexity": 2.22,
+      "rate": 7.2,
+      "image": "nocturne",
+      "isPlayed": false,
+      "age": 10
+    },
+    {
+      "name": "Yokai Sketch",
+      "editor": "Devir",
+      "year": 2023,
+      "types": [
+        "Card game",
+        "Mythology",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 20,
+      "complexity": 1.33,
+      "rate": 6.9,
+      "image": "yokai-sketch",
+      "isPlayed": false,
+      "age": 12
     }
   ]
 }
