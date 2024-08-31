@@ -3,14 +3,15 @@ export interface GameCard {
   editor: string;
   year: number;
   types: Array<string>;
-  language: 'en' | 'es' | 'de' | '-';
-  players?: Array<number>;
-  time?: number;
+  language: 'en' | 'es' | 'de' | 'x';
+  players: Array<number>;
+  time: number;
   complexity: number;
   rate: number;
-  image?: string;
+  image: string;
   isPlayed: boolean;
   age: number;
+  bggReference: number;
 }
 
 export interface OracleCard {

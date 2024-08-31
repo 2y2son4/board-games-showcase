@@ -93,7 +93,7 @@
                   </mat-chip-listbox>
 
                 </div>
-                <div class="card__info-down">
+                <div [ngClass]="game.bggReference ? 'card__info-down-3' : 'card__info-down-2'">
                   <p class="card__rate-title">Rate:</p>
                   <div [style.background-color]="commonFunctions.getRateColor(game.rate)"
                     [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
@@ -103,13 +103,18 @@
                     [ngClass]="{'border-pink': game.isPlayed }" class="card__complexity">
                     {{ !game.complexity ? 'X' :
                     game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>
+                  @if(game.bggReference){
+                  <p class="card__bgg-title">BGG page:</p>
+                  <div class="card__bgg">
+                    <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
+                      rel="noopener noreferrer">GO</a>
+                  </div>}
                 </div>
               </div>
             </div>
           </div>
         </article>
       </li>}
-
     </ul>
     @if(filteredGames.length === 0) {
     <mat-card class="card__no-data">
