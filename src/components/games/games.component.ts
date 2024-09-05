@@ -56,7 +56,6 @@ import { LoaderService } from '../../core/services/loader/loader.service';
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
-
   gamesList!: Array<GameCard>;
 
   selectedTypes = new FormControl<string[]>([]);
@@ -74,6 +73,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
   exactAge!: number;
   gamesFilterForm!: FormGroup;
   flippedCards!: number;
+
+  printGames: GameCard[] = [];
 
   sortingSelectLabels = [
     'A to Z',
@@ -274,6 +275,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.filteredGames = this.filterFunctions.sortByNameAscending(
       this.gamesList,
     );
+    this.printGames = [];
   }
 
   resetPlayedGames() {
@@ -334,6 +336,14 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   toggleCardFlip(index: number) {
     const targetElement = this.innerElements.toArray()[index];
+    const gameName =
+      targetElement.nativeElement.firstElementChild.childNodes[1].innerHTML;
+    const gameObject = this.gamesList.filter(
+      (games) => games.name === gameName,
+    );
+
+    this.printGames = [...this.printGames, gameObject[0]];
+
     if (targetElement) {
       targetElement.nativeElement.classList.toggle('active');
     }
