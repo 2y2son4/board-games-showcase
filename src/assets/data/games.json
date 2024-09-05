@@ -233,7 +233,7 @@
       "image": "cabo-2nd-edition",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 271321
     },
     {
       "name": "3 secretos",
@@ -255,7 +255,7 @@
       "image": "3-secretos",
       "isPlayed": true,
       "age": 14,
-      "bggReference": 0
+      "bggReference": 218314
     },
     {
       "name": "Narabi",
@@ -277,7 +277,7 @@
       "image": "narabi",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 257836
     },
     {
       "name": "Dungeon Mayhem",
@@ -300,7 +300,7 @@
       "image": "dungeon-mayhem",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 260300
     },
     {
       "name": "Karma",
@@ -321,7 +321,7 @@
       "image": "karma",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 158268
     },
     {
       "name": "The Mind",
@@ -344,7 +344,7 @@
       "image": "the-mind",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 244992
     },
     {
       "name": "Chrononauts",
@@ -368,7 +368,7 @@
       "image": "chrononauts",
       "isPlayed": true,
       "age": 11,
-      "bggReference": 0
+      "bggReference": 815
     },
     {
       "name": "Jumble Jam",
@@ -391,7 +391,7 @@
       "image": "jumble-jam",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 268543
     },
     {
       "name": "Ramen Ink",
@@ -413,7 +413,7 @@
       "image": "ramen-ink",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 292507
     },
     {
       "name": "Sencha",
@@ -435,7 +435,7 @@
       "image": "sencha",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 277109
     },
     {
       "name": "Unánimo Party",
@@ -456,7 +456,7 @@
       "image": "unanimo-party",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 261614
     },
     {
       "name": "Point City",
@@ -479,7 +479,27 @@
       "image": "point-city",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 368017
+    },
+    {
+      "name": "Point City: Kickstarter promo",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.6,
+      "rate": 7.3,
+      "image": "point-city-expansion",
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 8339373
     },
     {
       "name": "Truffle shuffle",
@@ -501,7 +521,7 @@
       "image": "truffle-shuffle",
       "isPlayed": false,
       "age": 14,
-      "bggReference": 0
+      "bggReference": 298060
     },
     {
       "name": "Unstable unicorns: NSFW",
@@ -522,9 +542,9 @@
       "complexity": 1.8,
       "rate": 6.6,
       "image": "unstable-unicorns-nsfw",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 18,
-      "bggReference": 0
+      "bggReference": 287952
     },
     {
       "name": "Unstable unicorns: rainbow apocalypse",
@@ -545,9 +565,9 @@
       "complexity": 2,
       "rate": 6.9,
       "image": "unstable-unicorns-rainbow",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
-      "bggReference": 0
+      "bggReference": 243566
     },
     {
       "name": "Unstable unicorns: adventures",
@@ -568,9 +588,9 @@
       "complexity": 2,
       "rate": 7.3,
       "image": "unstable-unicorns-adventures",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
-      "bggReference": 0
+      "bggReference": 311080
     },
     {
       "name": "Matrioska",
@@ -592,7 +612,7 @@
       "image": "matrioska",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 192185
     },
     {
       "name": "Sushi Go!",
@@ -614,7 +634,7 @@
       "image": "sushi-go",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 133473
     },
     {
       "name": "Exploding kittens",
@@ -636,7 +656,7 @@
       "image": "exploding-kittens",
       "isPlayed": true,
       "age": 7,
-      "bggReference": 0
+      "bggReference": 172225
     },
     {
       "name": "Exploding kittens: Streaking Kittens",
@@ -659,7 +679,7 @@
       "image": "exploding-kittens-streaking",
       "isPlayed": true,
       "age": 7,
-      "bggReference": 0
+      "bggReference": 260214
     },
     {
       "name": "Zombie kittens",
@@ -682,7 +702,7 @@
       "image": "zombie-kittens",
       "isPlayed": true,
       "age": 7,
-      "bggReference": 0
+      "bggReference": 362202
     },
     {
       "name": "Virus!",
@@ -704,7 +724,7 @@
       "image": "virus",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 180020
     },
     {
       "name": "Virus 2! Evolution",
@@ -726,7 +746,7 @@
       "image": "virus-2",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 266667
     },
     {
       "name": "Virus! Halloween",
@@ -748,7 +768,7 @@
       "image": "virus-halloween",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 323242
     },
     {
       "name": "Jinx",
@@ -794,7 +814,7 @@
       "image": "saboteur",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 9220
     },
     {
       "name": "Saboteur 2: expansion",
@@ -820,7 +840,7 @@
       "image": "saboteur-2",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 91072
     },
     {
       "name": "One night ultimate werewolf",
@@ -845,7 +865,7 @@
       "image": "one-night-ultimate-werewolf",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 147949
     },
     {
       "name": "One night ultimate vampire",
@@ -870,7 +890,7 @@
       "image": "one-night-ultimate-vampire",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 180956
     },
     {
       "name": "One night ultimate alien",
@@ -895,7 +915,7 @@
       "image": "one-night-ultimate-alien",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 204431
     },
     {
       "name": "Bears Vs. Babies",
@@ -918,7 +938,7 @@
       "image": "bears-vs-babies",
       "isPlayed": true,
       "age": 7,
-      "bggReference": 0
+      "bggReference": 211534
     },
     {
       "name": "Bears Vs. Babies: NSFW expansion pack",
@@ -942,7 +962,7 @@
       "image": "bears-vs-babies-nsfw",
       "isPlayed": true,
       "age": 18,
-      "bggReference": 0
+      "bggReference": 211926
     },
     {
       "name": "Happy salmon",
@@ -965,7 +985,7 @@
       "image": "happy-salmon",
       "isPlayed": false,
       "age": 6,
-      "bggReference": 0
+      "bggReference": 194626
     },
     {
       "name": "En una escala de 1 a T-Rex",
@@ -987,7 +1007,7 @@
       "image": "en-una-escala-de-1-a-trex",
       "isPlayed": false,
       "age": 7,
-      "bggReference": 0
+      "bggReference": 289018
     },
     {
       "name": "Skyjo Action",
@@ -1008,7 +1028,7 @@
       "image": "skyjo-action",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 301242
     },
     {
       "name": "Kimono",
@@ -1027,12 +1047,12 @@
         4
       ],
       "time": 45,
-      "complexity": 0,
-      "rate": 5.5,
+      "complexity": 1,
+      "rate": 5.9,
       "image": "kimono",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 407286
     },
     {
       "name": "Mascarade",
@@ -1056,7 +1076,7 @@
       "image": "mascarade",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 139030
     },
     {
       "name": "Secrets",
@@ -1079,7 +1099,7 @@
       "image": "secrets",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 200847
     },
     {
       "name": "Munchkin",
@@ -1102,7 +1122,7 @@
       "image": "munchkin",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 1927
     },
     {
       "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
@@ -1123,7 +1143,7 @@
       "image": "card-wards-bubblegum-lumpy",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 158978
     },
     {
       "name": "Stay cool",
@@ -2781,7 +2801,7 @@
       "complexity": 1.00,
       "rate": 7.1,
       "image": "spoilers",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 0
     },
@@ -3156,7 +3176,7 @@
       "image": "detective-sigue-la-pista",
       "isPlayed": false,
       "age": 16,
-      "bggReference": 0
+      "bggReference": 299442
     },
     {
       "name": "Mr. Jack",
@@ -3392,7 +3412,7 @@
       "complexity": 0,
       "rate": 0,
       "image": "mind-fullness-game",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 0
     },
@@ -4309,7 +4329,7 @@
       "image": "a-sacar-la-basura",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 308768
     },
     {
       "name": "Tuareg",
@@ -4332,7 +4352,7 @@
       "image": "tuareg",
       "isPlayed": false,
       "age": 12,
-      "bggReference": 0
+      "bggReference": 118048
     },
     {
       "name": "ERA Edad Media",
@@ -4358,7 +4378,7 @@
       "image": "era-edad-media",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 270971
     },
     {
       "name": "The X-Files: collectible card game",
@@ -4453,7 +4473,7 @@
       "image": "luna-capital",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 323613
     },
     {
       "name": "Los Libros del Tiempo",
@@ -4478,7 +4498,7 @@
       "image": "libros-del-tiempo",
       "isPlayed": false,
       "age": 14,
-      "bggReference": 0
+      "bggReference": 372631
     },
     {
       "name": "Miskadas",
@@ -4499,7 +4519,7 @@
       "image": "miskadas",
       "isPlayed": false,
       "age": 5,
-      "bggReference": 0
+      "bggReference": 292908
     },
     {
       "name": "Detective: Temporada 1",
@@ -4524,7 +4544,7 @@
       "image": "detective-temporada-1",
       "isPlayed": false,
       "age": 12,
-      "bggReference": 0
+      "bggReference": 223321
     },
     {
       "name": "El misterio del Dr. Dark",
@@ -4570,7 +4590,7 @@
       "complexity": 1,
       "rate": 7.7,
       "image": "hitster",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 16,
       "bggReference": 0
     },
@@ -5042,6 +5062,33 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 0
+    },
+    {
+      "name": "Ghost Blitz",
+      "editor": "AEG",
+      "year": 2024,
+      "types": [
+        "Party",
+        "Family",
+        "Dexterity",
+        "Cards",
+        "Children's game",
+        "Real time",
+        "Pattern recognition",
+        "Speed matching"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 20,
+      "complexity": 1.14,
+      "rate": 6.7,
+      "image": "ghost-blitz",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 2034769
     },
     {
       "name": "Crime zoom #1: la última carta",
