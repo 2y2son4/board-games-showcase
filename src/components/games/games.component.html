@@ -105,10 +105,12 @@
                     game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>
                   @if(game.bggReference){
                   <p class="card__bgg-title">BGG page:</p>
-                  <div class="card__bgg">
-                    <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
-                      rel="noopener noreferrer">GO</a>
-                  </div>}
+                  <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="card__bgg">
+                      GO
+                    </div>
+                  </a>}
                 </div>
               </div>
             </div>
