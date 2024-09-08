@@ -1,5 +1,4 @@
 import { ElementRef, Injectable, QueryList } from '@angular/core';
-import { GameCard } from '../../../components/commons.models';
 
 @Injectable({
   providedIn: 'root',

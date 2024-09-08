@@ -10,18 +10,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { GamesComponent } from '../components/games/games.component';
 import { OraclesComponent } from '../components/oracles/oracles.component';
+import { BggSearchComponent } from '../components/bgg-search/bgg-search.component';
+import { GameDetailsComponent } from '../components/game-details/game-details.component';
 
-// el decorador es una sintaxis y en patrón, que typescript implementa con JS.
-// @Component afecta a la clase AppComponent
 @Component({
   selector: 'app-root',
-  // standalone previene mejor el código repetido
   standalone: true,
-  /** si queremos utilizar cualquier componente o cualquier módulo
-   * ahora hay que ponerlo en "imports" de la siguiente línea. */
   imports: [
+    BggSearchComponent,
     CommonModule,
     GamesComponent,
+    GameDetailsComponent,
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
@@ -36,6 +35,7 @@ import { OraclesComponent } from '../components/oracles/oracles.component';
 export class AppComponent implements OnInit {
   isGames!: boolean;
   isOracles!: boolean;
+  isSearch!: boolean;
 
   ngOnInit(): void {
     this.selectComponent('games');
@@ -45,9 +45,15 @@ export class AppComponent implements OnInit {
     if (component === 'games') {
       this.isGames = true;
       this.isOracles = false;
-    } else {
+      this.isSearch = false;
+    } else if (component === 'oracles') {
       this.isGames = false;
       this.isOracles = true;
+      this.isSearch = false;
+    } else if (component === 'search') {
+      this.isGames = false;
+      this.isOracles = false;
+      this.isSearch = true;
     }
   }
 }

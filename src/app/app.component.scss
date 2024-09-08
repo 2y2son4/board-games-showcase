@@ -36,6 +36,10 @@ header {
     border-left: 4px solid $bg-color-dark;
   }
 
+  &__container :nth-child(3) {
+    border-top: 4px solid $bg-color-dark;
+  }
+
   &__buttons {
     background-color: $bg-color;
     border-radius: 0;
@@ -43,14 +47,21 @@ header {
     color: $bg-color-dark;
     cursor: pointer;
     font-weight: 600;
-    font-size: 24px;
-    padding: 12px;
+    font-size: 20px;
+    height: 40px;
     transition: all 0.8s;
-    width: 50%;
 
     &:hover {
       background-color: $highlight-color;
       color: $white;
+    }
+
+    &-half {
+      width: 50%;
+    }
+
+    &-full {
+      width: 100%;
     }
 
     @media screen and (max-width: 767px) {
@@ -63,4 +74,8 @@ header {
     background-color: $highlight-color;
     color: $white;
   }
+}
+
+mat-toolbar {
+  height: 40px;
 }

@@ -1,4 +1,6 @@
-<div class="content">
+<app-loader></app-loader>
+
+@if(gamesList && !isLoading){<div class="content">
   <div>
     <div class="side">
       <div class="side__container">
@@ -6,7 +8,7 @@
           {{playedGames ? 'Played' : unPlayedGames ? 'Unplayed' : ''}}
         </h3>
         <h4 class="side__number">
-          @for(type of selectedChipTypes; let index = $index;let first = $first;let last = $last; track
+          @for(type of selectedChipTypes; let index = $index; let first = $first; let last = $last; track
           index){
           <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes.length > 1 ? ' and ' : '')}}
             {{!first ? type.toLowerCase() : type}}</span>}
@@ -25,6 +27,9 @@
           <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
             Unplayed
           </button>
+          <button style="width: 100%;" #filterButton type="button" mat-raised-button color="primary"
+            (click)="restartFilters()">Reset
+          </button>
         </div>
       </div>
       <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
@@ -34,7 +39,7 @@
     <ul class="card__container">
       @for(game of filteredGames;let index = $index; track index){
       <li class="card__list" #game>
-        <div class="card__list-inner" (click)="toggleCardFlip(index)" #innerElement>
+        <article class="card__list-inner" (click)="toggleCardFlip(index)" #innerElement>
           <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
             <span class="card__year-absolute" [ngClass]="{'border-pink': game.isPlayed }"
               [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
@@ -73,6 +78,11 @@
                     </p>} @else {
                     <p>-</p>
                     }
+                    @if(game.age){
+                    <p class="card__players">
+                      +{{game.age}} years
+                    </p>
+                    }
                     <p class="card__time">{{game!.time! < 59 ? game.time + ' min' : (game!.time! / 60)===1 ? '1 h' :
                         game!.time! / 60 + ' h' }}</p>
 
@@ -83,7 +93,7 @@
                   </mat-chip-listbox>
 
                 </div>
-                <div class="card__info-down">
+                <div [ngClass]="game.bggReference ? 'card__info-down-3' : 'card__info-down-2'">
                   <p class="card__rate-title">Rate:</p>
                   <div [style.background-color]="commonFunctions.getRateColor(game.rate)"
                     [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
@@ -93,17 +103,26 @@
                     [ngClass]="{'border-pink': game.isPlayed }" class="card__complexity">
                     {{ !game.complexity ? 'X' :
                     game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>
+                  @if(game.bggReference){
+                  <p class="card__bgg-title">BGG page:</p>
+                  <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
+                    rel="noopener noreferrer">
+                    <div class="card__bgg">
+                      GO
+                    </div>
+                  </a>}
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </li>}
-
     </ul>
     @if(filteredGames.length === 0) {
     <mat-card class="card__no-data">
-      <mat-card-content>There are no results for <span class="card__search-query">{{searchQuery}}</span>
+      <mat-card-content>There are no results for <span class="card__search-query">
+          {{searchQuery || ' this search'}}
+        </span>
       </mat-card-content>
     </mat-card>}
   </div>
@@ -119,9 +138,11 @@
         </button>
         }
       </mat-form-field>
-      <mat-form-field><mat-label>Number of players</mat-label>
-        <input matInput type="number" maxlength="2" min="0" id="exactPlayers" name="exactPlayers"
-          [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
+      <mat-form-field><mat-label>Number of players</mat-label><input matInput type="number" maxlength="2" min="1"
+          id="exactPlayers" name="exactPlayers" [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
+      </mat-form-field>
+      <mat-form-field><mat-label>Age</mat-label><input matInput type="number" maxlength="2" min="1" id="exactAge"
+          name="exactAge" [(ngModel)]="exactAge" (input)="filterGamesByAge()">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Sort</mat-label>
@@ -145,4 +166,4 @@
       </button>
     </div>
   </div>
-</div>
+</div>}

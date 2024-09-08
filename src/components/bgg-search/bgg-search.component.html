@@ -1,0 +1,47 @@
+<div class="search">
+  <div class="search__input">
+    <mat-form-field style="height: 70px; margin-top: 18px;">
+      <mat-label>Search BGG data base</mat-label>
+      <input matInput placeholder="Search by name" (keyup)="noResults = false" [(ngModel)]="searchTerm">
+    </mat-form-field>
+    <button type="button" mat-raised-button color="primary" class="side__reset" (click)="search()">
+      <mat-icon aria-hidden="false" aria-label="Search icon" fontIcon="search"></mat-icon>
+      Search
+    </button>
+  </div>
+
+  <app-loader></app-loader>
+
+  @if(noResults){
+  <mat-card class="search__results-info">
+    <mat-card-content>There are no results for <span class="search-query">{{searchTerm}}</span>
+    </mat-card-content>
+  </mat-card>
+  }
+
+  @if(showNumberOfResults){
+  <mat-card class="search__results-info">
+    <mat-card-content><span class="search-query">{{numberOfResults - 1}}</span> results
+    </mat-card-content>
+  </mat-card>
+  }
+
+  <div class="search__results">
+    @if(results?.boardgames && !isLoading && !noResults && searchTerm){<div class="search__results-list">
+      <ul class="search__cards">
+        <li class="search__cards-game" *ngFor="let game of results.boardgames.boardgame">
+          @if(game.name['#text']){
+          <h3>{{ game.name['#text']
+            }} ({{ game.yearpublished['#text'] }})</h3>}
+          <button type="button" mat-raised-button color="primary" (click)="selectGame(game['@attributes'].objectid)">
+            <mat-icon aria-hidden="false" aria-label="Info icon" fontIcon="info">
+            </mat-icon>Get Details
+          </button>
+        </li>
+      </ul>
+    </div>
+    }
+    @if(showDetails){
+    <app-game-details [objectid]="selectedGameId" [gameDetails]="selectedGameDetails"></app-game-details>}
+  </div>
+</div>

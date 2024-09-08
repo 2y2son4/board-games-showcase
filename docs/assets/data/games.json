@@ -5,9 +5,10 @@
       "editor": "AEG",
       "year": 2023,
       "types": [
-        "Press your luck",
+        "Push your luck",
         "Set collection",
-        "Animals"
+        "Animals",
+        "Solitaire"
       ],
       "language": "x",
       "players": [
@@ -19,7 +20,8 @@
       "rate": 6.7,
       "image": "deep-dive",
       "isPlayed": true,
-      "age": 10
+      "age": 10,
+      "bggReference": 376747
     },
     {
       "name": "Tranvía mortal",
@@ -38,7 +40,8 @@
       "rate": 6.1,
       "image": "tranvia-mortal",
       "isPlayed": true,
-      "age": 14
+      "age": 14,
+      "bggReference": 282171
     },
     {
       "name": "Master dater: big love edition",
@@ -57,7 +60,8 @@
       "rate": 6.7,
       "image": "master-dater-big-love",
       "isPlayed": true,
-      "age": 0
+      "age": 18,
+      "bggReference": 361088
     },
     {
       "name": "Joking hazard",
@@ -76,7 +80,8 @@
       "rate": 6.3,
       "image": "joking-hazard",
       "isPlayed": true,
-      "age": 18
+      "age": 18,
+      "bggReference": 193621
     },
     {
       "name": "Joking hazard: Deck enhancement #1",
@@ -96,7 +101,8 @@
       "rate": 7.3,
       "image": "joking-hazard-enhancement-1",
       "isPlayed": true,
-      "age": 18
+      "age": 18,
+      "bggReference": 224058
     },
     {
       "name": "Joking hazard: Blast from the past",
@@ -116,11 +122,12 @@
       "rate": 7.2,
       "image": "joking-hazard-blast",
       "isPlayed": true,
-      "age": 18
+      "age": 18,
+      "bggReference": 211184
     },
     {
       "name": "Back to the future: the card game",
-      "editor": "Looney labs",
+      "editor": "Looney Labs",
       "year": 2010,
       "types": [
         "Modular board",
@@ -138,7 +145,8 @@
       "rate": 5.8,
       "image": "back-to-the-future",
       "isPlayed": true,
-      "age": 11
+      "age": 11,
+      "bggReference": 71676
     },
     {
       "name": "Coup",
@@ -159,7 +167,8 @@
       "rate": 7,
       "image": "coup",
       "isPlayed": false,
-      "age": 13
+      "age": 13,
+      "bggReference": 131357
     },
     {
       "name": "Coup: reformation",
@@ -181,7 +190,8 @@
       "rate": 7.3,
       "image": "coup-reformation",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 148931
     },
     {
       "name": "Saqueadores",
@@ -189,7 +199,7 @@
       "year": 2016,
       "types": [
         "Cards",
-        "Dice"
+        "Dice rolling"
       ],
       "language": "es",
       "players": [
@@ -201,11 +211,12 @@
       "rate": 6.6,
       "image": "saqueadores",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 199780
     },
     {
       "name": "Cabo (2nd edition)",
-      "editor": "Arrakis games",
+      "editor": "Arrakis Games",
       "year": 2019,
       "types": [
         "Family",
@@ -221,7 +232,8 @@
       "rate": 7.3,
       "image": "cabo-2nd-edition",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 271321
     },
     {
       "name": "3 secretos",
@@ -242,7 +254,8 @@
       "rate": 6,
       "image": "3-secretos",
       "isPlayed": true,
-      "age": 14
+      "age": 14,
+      "bggReference": 218314
     },
     {
       "name": "Narabi",
@@ -262,8 +275,9 @@
       "complexity": 1.29,
       "rate": 6,
       "image": "narabi",
-      "isPlayed": false,
-      "age": 10
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 257836
     },
     {
       "name": "Dungeon Mayhem",
@@ -285,7 +299,8 @@
       "rate": 6.9,
       "image": "dungeon-mayhem",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 260300
     },
     {
       "name": "Karma",
@@ -305,7 +320,8 @@
       "rate": 6,
       "image": "karma",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 158268
     },
     {
       "name": "The Mind",
@@ -327,7 +343,8 @@
       "rate": 6.8,
       "image": "the-mind",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 244992
     },
     {
       "name": "Chrononauts",
@@ -337,7 +354,8 @@
         "Family",
         "Bluffing",
         "Deduction",
-        "Alternate history"
+        "Alternate history",
+        "Solitaire"
       ],
       "language": "en",
       "players": [
@@ -349,7 +367,8 @@
       "rate": 6.2,
       "image": "chrononauts",
       "isPlayed": true,
-      "age": 11
+      "age": 11,
+      "bggReference": 815
     },
     {
       "name": "Jumble Jam",
@@ -358,7 +377,7 @@
       "types": [
         "Cards",
         "Area majority",
-        "Deck, Bag, and Pool Building",
+        "Deck, bag and pool building",
         "Pick-up and Deliver"
       ],
       "language": "es",
@@ -371,7 +390,8 @@
       "rate": 6.8,
       "image": "jumble-jam",
       "isPlayed": false,
-      "age": 8
+      "age": 8,
+      "bggReference": 268543
     },
     {
       "name": "Ramen Ink",
@@ -392,7 +412,8 @@
       "rate": 6.4,
       "image": "ramen-ink",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 292507
     },
     {
       "name": "Sencha",
@@ -413,7 +434,8 @@
       "rate": 6.4,
       "image": "sencha",
       "isPlayed": false,
-      "age": 8
+      "age": 8,
+      "bggReference": 277109
     },
     {
       "name": "Unánimo Party",
@@ -433,7 +455,8 @@
       "rate": 7.2,
       "image": "unanimo-party",
       "isPlayed": true,
-      "age": 10
+      "age": 10,
+      "bggReference": 261614
     },
     {
       "name": "Point City",
@@ -442,7 +465,8 @@
       "types": [
         "Family",
         "Cards",
-        "City building"
+        "City building",
+        "Solitaire"
       ],
       "language": "en",
       "players": [
@@ -454,7 +478,28 @@
       "rate": 7.3,
       "image": "point-city",
       "isPlayed": true,
-      "age": 10
+      "age": 10,
+      "bggReference": 368017
+    },
+    {
+      "name": "Point City: Kickstarter promo",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.6,
+      "rate": 7.3,
+      "image": "point-city-expansion",
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 8339373
     },
     {
       "name": "Truffle shuffle",
@@ -475,11 +520,12 @@
       "rate": 6.9,
       "image": "truffle-shuffle",
       "isPlayed": false,
-      "age": 14
+      "age": 14,
+      "bggReference": 298060
     },
     {
       "name": "Unstable unicorns: NSFW",
-      "editor": "Unstable games",
+      "editor": "Unstable Games",
       "year": 2019,
       "types": [
         "Cards",
@@ -496,12 +542,13 @@
       "complexity": 1.8,
       "rate": 6.6,
       "image": "unstable-unicorns-nsfw",
-      "isPlayed": false,
-      "age": 18
+      "isPlayed": true,
+      "age": 18,
+      "bggReference": 287952
     },
     {
       "name": "Unstable unicorns: rainbow apocalypse",
-      "editor": "Unstable games",
+      "editor": "Unstable Games",
       "year": 2018,
       "types": [
         "Cards",
@@ -518,12 +565,13 @@
       "complexity": 2,
       "rate": 6.9,
       "image": "unstable-unicorns-rainbow",
-      "isPlayed": false,
-      "age": 14
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 243566
     },
     {
       "name": "Unstable unicorns: adventures",
-      "editor": "Unstable games",
+      "editor": "Unstable Games",
       "year": 2021,
       "types": [
         "Cards",
@@ -540,12 +588,13 @@
       "complexity": 2,
       "rate": 7.3,
       "image": "unstable-unicorns-adventures",
-      "isPlayed": false,
-      "age": 14
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 311080
     },
     {
       "name": "Matrioska",
-      "editor": "White goblin games",
+      "editor": "White goblin Games",
       "year": 2016,
       "types": [
         "Family",
@@ -562,11 +611,12 @@
       "rate": 6.6,
       "image": "matrioska",
       "isPlayed": false,
-      "age": 8
+      "age": 8,
+      "bggReference": 192185
     },
     {
       "name": "Sushi Go!",
-      "editor": "Adventureland games",
+      "editor": "Adventureland Games",
       "year": 2013,
       "types": [
         "Cards",
@@ -583,7 +633,8 @@
       "rate": 7,
       "image": "sushi-go",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 133473
     },
     {
       "name": "Exploding kittens",
@@ -604,7 +655,8 @@
       "rate": 6.1,
       "image": "exploding-kittens",
       "isPlayed": true,
-      "age": 7
+      "age": 7,
+      "bggReference": 172225
     },
     {
       "name": "Exploding kittens: Streaking Kittens",
@@ -626,7 +678,8 @@
       "rate": 7.2,
       "image": "exploding-kittens-streaking",
       "isPlayed": true,
-      "age": 7
+      "age": 7,
+      "bggReference": 260214
     },
     {
       "name": "Zombie kittens",
@@ -648,11 +701,12 @@
       "rate": 6.6,
       "image": "zombie-kittens",
       "isPlayed": true,
-      "age": 7
+      "age": 7,
+      "bggReference": 362202
     },
     {
       "name": "Virus!",
-      "editor": "Tranjis games",
+      "editor": "Tranjis",
       "year": 2015,
       "types": [
         "Cards",
@@ -669,11 +723,12 @@
       "rate": 6.7,
       "image": "virus",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 180020
     },
     {
       "name": "Virus 2! Evolution",
-      "editor": "Tranjis games",
+      "editor": "Tranjis",
       "year": 2018,
       "types": [
         "Cards",
@@ -690,11 +745,12 @@
       "rate": 7,
       "image": "virus-2",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 266667
     },
     {
       "name": "Virus! Halloween",
-      "editor": "Tranjis games",
+      "editor": "Tranjis",
       "year": 2020,
       "types": [
         "Cards",
@@ -711,7 +767,8 @@
       "rate": 7.3,
       "image": "virus-halloween",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 323242
     },
     {
       "name": "Jinx",
@@ -731,7 +788,8 @@
       "rate": 0,
       "image": "jinx",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Saboteur",
@@ -755,7 +813,8 @@
       "rate": 6.6,
       "image": "saboteur",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 9220
     },
     {
       "name": "Saboteur 2: expansion",
@@ -780,11 +839,12 @@
       "rate": 7,
       "image": "saboteur-2",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 91072
     },
     {
       "name": "One night ultimate werewolf",
-      "editor": "Bézier games",
+      "editor": "Bézier Games",
       "year": 2014,
       "types": [
         "Bluffing",
@@ -804,11 +864,12 @@
       "rate": 7.1,
       "image": "one-night-ultimate-werewolf",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 147949
     },
     {
       "name": "One night ultimate vampire",
-      "editor": "Bézier games",
+      "editor": "Bézier Games",
       "year": 2016,
       "types": [
         "Bluffing",
@@ -828,11 +889,12 @@
       "rate": 6.7,
       "image": "one-night-ultimate-vampire",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 180956
     },
     {
       "name": "One night ultimate alien",
-      "editor": "Bézier games",
+      "editor": "Bézier Games",
       "year": 2017,
       "types": [
         "Bluffing",
@@ -852,7 +914,8 @@
       "rate": 6.9,
       "image": "one-night-ultimate-alien",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 204431
     },
     {
       "name": "Bears Vs. Babies",
@@ -874,7 +937,8 @@
       "rate": 5.4,
       "image": "bears-vs-babies",
       "isPlayed": true,
-      "age": 0
+      "age": 7,
+      "bggReference": 211534
     },
     {
       "name": "Bears Vs. Babies: NSFW expansion pack",
@@ -897,7 +961,8 @@
       "rate": 5.8,
       "image": "bears-vs-babies-nsfw",
       "isPlayed": true,
-      "age": 0
+      "age": 18,
+      "bggReference": 211926
     },
     {
       "name": "Happy salmon",
@@ -919,7 +984,8 @@
       "rate": 6.7,
       "image": "happy-salmon",
       "isPlayed": false,
-      "age": 0
+      "age": 6,
+      "bggReference": 194626
     },
     {
       "name": "En una escala de 1 a T-Rex",
@@ -940,7 +1006,8 @@
       "rate": 5.8,
       "image": "en-una-escala-de-1-a-trex",
       "isPlayed": false,
-      "age": 0
+      "age": 7,
+      "bggReference": 289018
     },
     {
       "name": "Skyjo Action",
@@ -960,11 +1027,12 @@
       "rate": 6.3,
       "image": "skyjo-action",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 301242
     },
     {
       "name": "Kimono",
-      "editor": "Gen-X Games",
+      "editor": "GenX Games",
       "year": 2014,
       "types": [
         "Cards",
@@ -979,11 +1047,12 @@
         4
       ],
       "time": 45,
-      "complexity": 0,
-      "rate": 5.5,
+      "complexity": 1,
+      "rate": 5.9,
       "image": "kimono",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 407286
     },
     {
       "name": "Mascarade",
@@ -1006,7 +1075,8 @@
       "rate": 6.6,
       "image": "mascarade",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 139030
     },
     {
       "name": "Secrets",
@@ -1028,7 +1098,8 @@
       "rate": 6.4,
       "image": "secrets",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 200847
     },
     {
       "name": "Munchkin",
@@ -1050,7 +1121,8 @@
       "rate": 5.9,
       "image": "munchkin",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 1927
     },
     {
       "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
@@ -1070,7 +1142,8 @@
       "rate": 6.2,
       "image": "card-wards-bubblegum-lumpy",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 158978
     },
     {
       "name": "Stay cool",
@@ -1091,7 +1164,8 @@
       "rate": 7,
       "image": "stay-cool",
       "isPlayed": false,
-      "age": 0
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "Anomia",
@@ -1111,8 +1185,9 @@
       "complexity": 1.04,
       "rate": 6.7,
       "image": "anomia",
-      "isPlayed": false,
-      "age": 0
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "So clover",
@@ -1134,7 +1209,8 @@
       "rate": 7.6,
       "image": "so-clover",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Código secreto Dúo",
@@ -1154,7 +1230,8 @@
       "rate": 7.4,
       "image": "codigo-secreto-duo",
       "isPlayed": true,
-      "age": 0
+      "age": 11,
+      "bggReference": 0
     },
     {
       "name": "Macedonia de letras",
@@ -1178,14 +1255,15 @@
       "rate": 7.2,
       "image": "macedonia-de-letras",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Mars attacks: juego de dados",
       "editor": "EDGE",
       "year": 2014,
       "types": [
-        "Dice",
+        "Dice rolling",
         "Family",
         "Party"
       ],
@@ -1199,7 +1277,8 @@
       "rate": 5.9,
       "image": "mars-attack-dados",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Power plants",
@@ -1222,7 +1301,8 @@
       "rate": 7.2,
       "image": "power-plants",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Caballeros arcoíris",
@@ -1245,7 +1325,8 @@
       "rate": 5.9,
       "image": "caballeros-arcoiris",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Decrypto: Laserdrive",
@@ -1269,14 +1350,15 @@
       "rate": 7.5,
       "image": "decrypto-laserdrive",
       "isPlayed": true,
-      "age": 0
+      "age": 12,
+      "bggReference": 0
     },
     {
-      "name": "Ninja dice",
+      "name": "Ninja Dice",
       "editor": "EDGE",
       "year": 2013,
       "types": [
-        "Dice",
+        "Dice rolling",
         "Party",
         "Push your luck"
       ],
@@ -1290,7 +1372,8 @@
       "rate": 6,
       "image": "ninja-dice",
       "isPlayed": false,
-      "age": 0
+      "age": 9,
+      "bggReference": 0
     },
     {
       "name": "Social train",
@@ -1311,7 +1394,8 @@
       "rate": 6.5,
       "image": "social-train",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Alta tensión: el juego de cartas",
@@ -1333,7 +1417,8 @@
       "rate": 6.7,
       "image": "alta-tension-cartas",
       "isPlayed": true,
-      "age": 0
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "¡Viva el Rey!",
@@ -1355,7 +1440,8 @@
       "rate": 6.4,
       "image": "viva-el-rey",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "La leyenda del cerezo que florece cada diez años",
@@ -1377,7 +1463,8 @@
       "rate": 6.4,
       "image": "leyenda-del-cerezo",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Munchkin Gloom",
@@ -1400,7 +1487,8 @@
       "rate": 6.3,
       "image": "munchkin-gloom",
       "isPlayed": false,
-      "age": 0
+      "age": 13,
+      "bggReference": 0
     },
     {
       "name": "Gloom",
@@ -1422,7 +1510,8 @@
       "rate": 6.3,
       "image": "gloom",
       "isPlayed": false,
-      "age": 0
+      "age": 13,
+      "bggReference": 0
     },
     {
       "name": "Gloom: Expediciones Desventuradas",
@@ -1445,7 +1534,8 @@
       "rate": 6.6,
       "image": "gloom-expediciones",
       "isPlayed": false,
-      "age": 0
+      "age": 13,
+      "bggReference": 0
     },
     {
       "name": "Gloom: invitados inoportunos",
@@ -1468,7 +1558,8 @@
       "rate": 6.7,
       "image": "gloom-invitados",
       "isPlayed": false,
-      "age": 0
+      "age": 13,
+      "bggReference": 0
     },
     {
       "name": "La fiesta",
@@ -1491,7 +1582,8 @@
       "rate": 6,
       "image": "la-fiesta",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Muchachada Nui: el juego de mesa",
@@ -1514,7 +1606,8 @@
       "rate": 5.8,
       "image": "muchachada-nui",
       "isPlayed": true,
-      "age": 0
+      "age": 13,
+      "bggReference": 0
     },
     {
       "name": "Speed cups⁶",
@@ -1534,7 +1627,8 @@
       "rate": 6.4,
       "image": "speed-cups-6",
       "isPlayed": false,
-      "age": 0
+      "age": 6,
+      "bggReference": 0
     },
     {
       "name": "Speed cups²",
@@ -1553,7 +1647,8 @@
       "rate": 6.6,
       "image": "speed-cups-2",
       "isPlayed": false,
-      "age": 0
+      "age": 6,
+      "bggReference": 0
     },
     {
       "name": "El juego de las baldosas de Antoni Gaudí",
@@ -1574,7 +1669,8 @@
       "rate": 6,
       "image": "baldosas-antoni-gaudi",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "The Island",
@@ -1598,7 +1694,8 @@
       "rate": 7.3,
       "image": "the-island",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Tags",
@@ -1620,7 +1717,8 @@
       "rate": 6.5,
       "image": "tags",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "King of Tokyo",
@@ -1628,9 +1726,8 @@
       "year": 2011,
       "types": [
         "Family",
-        "Dice",
-        "Fighting",
         "Dice rolling",
+        "Fighting",
         "King of the hill"
       ],
       "language": "es",
@@ -1643,7 +1740,8 @@
       "rate": 7.1,
       "image": "king-of-tokyo",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Wordsmith",
@@ -1666,11 +1764,12 @@
       "rate": 6.2,
       "image": "wordsmith",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Mandala Stones",
-      "editor": "Board&Dice",
+      "editor": "Board&Dice rolling",
       "year": 2021,
       "types": [
         "Abstract strategy",
@@ -1689,7 +1788,8 @@
       "rate": 6.9,
       "image": "mandala-stones",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Doodle rush",
@@ -1710,7 +1810,8 @@
       "rate": 6.5,
       "image": "doodle-rush",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Drunken sailor",
@@ -1732,7 +1833,8 @@
       "rate": 5.8,
       "image": "drunken-sailor",
       "isPlayed": true,
-      "age": 0
+      "age": 17,
+      "bggReference": 0
     },
     {
       "name": "Fit to print",
@@ -1757,7 +1859,8 @@
       "rate": 7.5,
       "image": "fit-to-print",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Fit To Print: Game Breaking News Mini-Expansion",
@@ -1783,7 +1886,8 @@
       "rate": 7.5,
       "image": "fit-to-print-expansion",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Who am I and what am I doing?",
@@ -1802,8 +1906,9 @@
       "complexity": 0,
       "rate": 0,
       "image": "who-am-i-and-what",
-      "isPlayed": false,
-      "age": 0
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Uno Flip!",
@@ -1824,8 +1929,9 @@
       "complexity": 1.30,
       "rate": 6.3,
       "image": "uno-flip",
-      "isPlayed": false,
-      "age": 0
+      "isPlayed": true,
+      "age": 7,
+      "bggReference": 0
     },
     {
       "name": "Cluedo suspect",
@@ -1847,7 +1953,8 @@
       "rate": 5.8,
       "image": "cluedo-suspect",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Ugga Buuga",
@@ -1870,7 +1977,8 @@
       "rate": 6,
       "image": "ugga-buuga",
       "isPlayed": true,
-      "age": 0
+      "age": 7,
+      "bggReference": 0
     },
     {
       "name": "Black mirror: caída en picado",
@@ -1893,7 +2001,8 @@
       "rate": 4.1,
       "image": "black-mirror",
       "isPlayed": false,
-      "age": 0
+      "age": 13,
+      "bggReference": 0
     },
     {
       "name": "Organ attack",
@@ -1916,7 +2025,8 @@
       "rate": 6.3,
       "image": "organ-attack",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Dr. Jekyll and Mr. Hyde",
@@ -1937,18 +2047,20 @@
       "rate": 6.7,
       "image": "dr-jekyll-and-mr-hyde",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "The Game",
-      "editor": "Pandasaurus Games",
+      "editor": "Pandasaurus",
       "year": 2015,
       "types": [
         "Family",
         "Cards",
         "Numbers",
         "Communication limits",
-        "Cooperative"
+        "Cooperative",
+        "Solitaire"
       ],
       "language": "x",
       "players": [
@@ -1960,11 +2072,12 @@
       "rate": 6.7,
       "image": "the-game",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "The Game: Face to Face",
-      "editor": "Pandasaurus Games",
+      "editor": "Pandasaurus",
       "year": 2017,
       "types": [
         "Cards",
@@ -1980,7 +2093,8 @@
       "rate": 7.1,
       "image": "the-game-face-to-face",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Kontour",
@@ -2001,7 +2115,8 @@
       "rate": 6.4,
       "image": "kontour",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Codex naturalis",
@@ -2012,7 +2127,8 @@
         "Cards",
         "Hand management",
         "Layering",
-        "Pattern building"
+        "Pattern building",
+        "Solitaire"
       ],
       "language": "x",
       "players": [
@@ -2024,7 +2140,8 @@
       "rate": 7.2,
       "image": "codex-naturalis",
       "isPlayed": true,
-      "age": 0
+      "age": 7,
+      "bggReference": 0
     },
     {
       "name": "Skull",
@@ -2047,18 +2164,20 @@
       "rate": 7.2,
       "image": "skull",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Expediente dark",
-      "editor": "Lifestyle boardgames",
+      "editor": "Lifestyle Boardgames",
       "year": 2020,
       "types": [
         "Deduction",
         "Horror",
         "Puzzle",
         "Cooperative",
-        "Solitaire"
+        "Solitaire",
+        "Escape room"
       ],
       "language": "es",
       "players": [
@@ -2069,8 +2188,9 @@
       "complexity": 2.20,
       "rate": 6.3,
       "image": "expediente-dark",
-      "isPlayed": false,
-      "age": 0
+      "isPlayed": true,
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "Expediente X: el juego oficial",
@@ -2092,7 +2212,8 @@
       "rate": 5,
       "image": "expediente-x",
       "isPlayed": true,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Listillo",
@@ -2114,7 +2235,8 @@
       "rate": 6.9,
       "image": "listillo",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Among spaceship",
@@ -2122,7 +2244,7 @@
       "year": 2023,
       "types": [
         "Cards",
-        "Dice",
+        "Dice rolling",
         "Cooperative"
       ],
       "language": "x",
@@ -2135,7 +2257,8 @@
       "rate": 0,
       "image": "among-spaceship",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Mantis",
@@ -2158,7 +2281,8 @@
       "rate": 6.8,
       "image": "mantis",
       "isPlayed": false,
-      "age": 0
+      "age": 7,
+      "bggReference": 0
     },
     {
       "name": "El portero Baldomero",
@@ -2181,11 +2305,12 @@
       "rate": 6.8,
       "image": "el-portero-baldomero",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Here to slay",
-      "editor": "Unstable games",
+      "editor": "Unstable Games",
       "year": 2020,
       "types": [
         "Cards",
@@ -2204,11 +2329,12 @@
       "rate": 6.9,
       "image": "here-to-slay",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Here to slay: Berserkers &Necromancers",
-      "editor": "Unstable games",
+      "editor": "Unstable Games",
       "year": 2020,
       "types": [
         "Cards",
@@ -2228,11 +2354,12 @@
       "rate": 7.6,
       "image": "here-to-slay-berserkers-necromancers",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Here to slay: Warriors & Druids",
-      "editor": "Unstable games",
+      "editor": "Unstable Games",
       "year": 2020,
       "types": [
         "Cards",
@@ -2252,7 +2379,8 @@
       "rate": 7.5,
       "image": "here-to-slay-warriors-druids",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Trash pandas",
@@ -2261,7 +2389,7 @@
       "types": [
         "Family",
         "Cards",
-        "Dice",
+        "Dice rolling",
         "Push your luck",
         "Take that",
         "Set collection"
@@ -2276,7 +2404,8 @@
       "rate": 6.5,
       "image": "trash-pandas",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Kingz",
@@ -2297,7 +2426,8 @@
       "rate": 4.5,
       "image": "kingz",
       "isPlayed": false,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Secret Hitler",
@@ -2320,7 +2450,8 @@
       "rate": 7.5,
       "image": "secret-hitler",
       "isPlayed": true,
-      "age": 0
+      "age": 13,
+      "bggReference": 0
     },
     {
       "name": "Cold case: una historia de muerte",
@@ -2342,15 +2473,16 @@
       "rate": 6.4,
       "image": "cold-case",
       "isPlayed": false,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Taco, cat, goat, cheese, pizza",
-      "editor": "Dolphin halt games",
+      "editor": "Dolphin halt Games",
       "year": 2018,
       "types": [
         "Party",
-        "Children"
+        "Children's game"
       ],
       "language": "en",
       "players": [
@@ -2361,8 +2493,9 @@
       "complexity": 1.02,
       "rate": 6.6,
       "image": "taco-cat-goat-cheese",
-      "isPlayed": false,
-      "age": 0
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "The Grimwood",
@@ -2383,7 +2516,8 @@
       "rate": 6.1,
       "image": "the-grimwood",
       "isPlayed": true,
-      "age": 0
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "More or Less: How Good Is Your Judgement?",
@@ -2402,7 +2536,8 @@
       "rate": 5.7,
       "image": "more-or-less",
       "isPlayed": true,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Shot in the dark: The Ultimate Unorthodox Quiz",
@@ -2421,11 +2556,12 @@
       "rate": 6.1,
       "image": "shot-in-yhe-dark",
       "isPlayed": true,
-      "age": 0
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "Micro Roma",
-      "editor": "Cacahuete games",
+      "editor": "Cacahuete Games",
       "year": 2023,
       "types": [
         "Cards",
@@ -2443,11 +2579,12 @@
       "rate": 7,
       "image": "micro-roma",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Fluxx",
-      "editor": "Looney labs",
+      "editor": "Looney Labs",
       "year": 1997,
       "types": [
         "Party",
@@ -2465,7 +2602,8 @@
       "rate": 5.7,
       "image": "fluxx",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Feministime: La Espiral del Tiempo Feminista",
@@ -2485,14 +2623,15 @@
       "rate": 0,
       "image": "espiral-del-tiempo-feminista",
       "isPlayed": false,
-      "age": 0
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "Deep sea adventure",
-      "editor": "Oink games",
+      "editor": "Oink Games",
       "year": 2014,
       "types": [
-        "Dice",
+        "Dice rolling",
         "Exploration",
         "Push your luck",
         "Party"
@@ -2507,7 +2646,8 @@
       "rate": 6.9,
       "image": "deep-sea-adventure",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Sriracha the game",
@@ -2528,7 +2668,8 @@
       "rate": 5.3,
       "image": "sriracha-the-game",
       "isPlayed": false,
-      "age": 0
+      "age": 7,
+      "bggReference": 0
     },
     {
       "name": "Werewolves of Miller's Hollow",
@@ -2550,7 +2691,8 @@
       "rate": 6.7,
       "image": "werewolves-of-millers-hollow",
       "isPlayed": true,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "A prueba de retos",
@@ -2569,17 +2711,19 @@
       "rate": 6.8,
       "image": "a-prueba-de-retos",
       "isPlayed": false,
-      "age": 0
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Petrichor",
-      "editor": "APE games",
+      "editor": "APE Games",
       "year": 2018,
       "types": [
         "Strategy",
         "Farming",
         "Area majority",
-        "Modular board"
+        "Modular board",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -2591,7 +2735,8 @@
       "rate": 6.9,
       "image": "petrichor",
       "isPlayed": false,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Hanabi",
@@ -2612,7 +2757,8 @@
       "rate": 7.7,
       "image": "hanabi",
       "isPlayed": true,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Arkham Noir #1: los asesinatos del culto de la Bruja",
@@ -2633,7 +2779,8 @@
       "rate": 6.8,
       "image": "arkham-caso-1",
       "isPlayed": true,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Spoilers: Edición definitiva",
@@ -2654,8 +2801,9 @@
       "complexity": 1.00,
       "rate": 7.1,
       "image": "spoilers",
-      "isPlayed": false,
-      "age": 0
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Imagine",
@@ -2677,7 +2825,8 @@
       "rate": 6.8,
       "image": "imagine",
       "isPlayed": true,
-      "age": 0
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "F**k: the game",
@@ -2698,7 +2847,8 @@
       "rate": 5.7,
       "image": "fuck-the-game",
       "isPlayed": true,
-      "age": 0
+      "age": 18,
+      "bggReference": 0
     },
     {
       "name": "Paris: la cité de la Lumière",
@@ -2721,7 +2871,8 @@
       "rate": 7.3,
       "image": "paris-la-cite-de-la-lumiere",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Paris: Eiffel",
@@ -2742,7 +2893,8 @@
       "rate": 7.6,
       "image": "paris-eiffel",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Mix it (monster edition)",
@@ -2763,11 +2915,12 @@
       "rate": 6.2,
       "image": "mix-it-monster",
       "isPlayed": true,
-      "age": 0
+      "age": 5,
+      "bggReference": 0
     },
     {
       "name": "El Jurado 1 - El Caso de las Carpas Doradas",
-      "editor": "GenX",
+      "editor": "GenX Games",
       "year": 2019,
       "types": [
         "Deduction",
@@ -2785,7 +2938,8 @@
       "rate": 5.5,
       "image": "el-jurado-1",
       "isPlayed": false,
-      "age": 0
+      "age": 15,
+      "bggReference": 0
     },
     {
       "name": "Antarctica",
@@ -2796,7 +2950,8 @@
         "Cards",
         "Deduction",
         "Puzzle",
-        "Cooperative"
+        "Cooperative",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -2808,7 +2963,8 @@
       "rate": 6.5,
       "image": "antarctica",
       "isPlayed": true,
-      "age": 14
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Nightmare",
@@ -2831,7 +2987,8 @@
       "rate": 7.8,
       "image": "nightmare",
       "isPlayed": false,
-      "age": 0
+      "age": 16,
+      "bggReference": 0
     },
     {
       "name": "Espías en la sombra",
@@ -2853,7 +3010,8 @@
       "rate": 6.6,
       "image": "espias-en-la-sombra",
       "isPlayed": false,
-      "age": 0
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Garabatos y mazmorras",
@@ -2874,8 +3032,9 @@
       "complexity": 1.67,
       "rate": 6.3,
       "image": "garabatos-y-mazmorras",
-      "isPlayed": false,
-      "age": 0
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Loading",
@@ -2897,7 +3056,8 @@
       "rate": 6.4,
       "image": "loading",
       "isPlayed": false,
-      "age": 0
+      "age": 7,
+      "bggReference": 0
     },
     {
       "name": "Terra Mare",
@@ -2921,7 +3081,8 @@
       "rate": 7.1,
       "image": "terra-mare",
       "isPlayed": false,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Railroad ink: azul profundo",
@@ -2932,7 +3093,8 @@
         "Connections",
         "Dice rolling",
         "Network and route building",
-        "Line drawing"
+        "Line drawing",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -2944,7 +3106,8 @@
       "rate": 7.2,
       "image": "railroad-ink-azul",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Arkham Noir #2: Invocado por el Trueno",
@@ -2965,7 +3128,8 @@
       "rate": 7.1,
       "image": "arkham-caso-2",
       "isPlayed": true,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Arkham Noir #3: Abismos Infinitos de Oscuridad",
@@ -2986,14 +3150,20 @@
       "rate": 7.2,
       "image": "arkham-caso-3",
       "isPlayed": true,
-      "age": 0
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Detective: Sigue la Pista",
       "editor": "Pegasus Spiele",
       "year": 2020,
       "types": [
-        "Expansion"
+        "Deduction",
+        "Murder mystery",
+        "Cooperative",
+        "Storytelling",
+        "Expansion",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3005,7 +3175,8 @@
       "rate": 7.4,
       "image": "detective-sigue-la-pista",
       "isPlayed": false,
-      "age": 0
+      "age": 16,
+      "bggReference": 299442
     },
     {
       "name": "Mr. Jack",
@@ -3022,7 +3193,8 @@
       "rate": 7,
       "image": "mr-jack",
       "isPlayed": true,
-      "age": 0
+      "age": 9,
+      "bggReference": 0
     },
     {
       "name": "Lost Cities: Roll & Write",
@@ -3042,7 +3214,8 @@
       "rate": 7.2,
       "image": "lost-cities",
       "isPlayed": false,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Detective: A Modern Crime Board Game",
@@ -3064,8 +3237,9 @@
       "complexity": 2.74,
       "rate": 7.7,
       "image": "detective-a-modern-crime",
-      "isPlayed": false,
-      "age": 16
+      "isPlayed": true,
+      "age": 16,
+      "bggReference": 0
     },
     {
       "name": "Pictomania (Second edition)",
@@ -3086,14 +3260,16 @@
       "rate": 7.6,
       "image": "pictomania",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Magnetism",
       "editor": "Ankama",
       "year": 2022,
       "types": [
-        "Strategy"
+        "Strategy",
+        "Solitaire"
       ],
       "language": "x",
       "players": [
@@ -3105,7 +3281,8 @@
       "rate": 0,
       "image": "magnetism",
       "isPlayed": true,
-      "age": 10
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Funky pollo",
@@ -3113,7 +3290,7 @@
       "year": 2018,
       "types": [
         "Party",
-        "Children",
+        "Children's game",
         "Real time",
         "Simultaneous action selection"
       ],
@@ -3127,11 +3304,12 @@
       "rate": 6.3,
       "image": "funky-pollo",
       "isPlayed": false,
-      "age": 6
+      "age": 6,
+      "bggReference": 0
     },
     {
       "name": "Love letter",
-      "editor": "Z-Man games",
+      "editor": "Z-Man Games",
       "year": 2019,
       "types": [
         "Hand management",
@@ -3149,7 +3327,8 @@
       "rate": 7.2,
       "image": "love-letter",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Avalon",
@@ -3171,7 +3350,8 @@
       "rate": 7.5,
       "image": "avalon",
       "isPlayed": false,
-      "age": 14
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Behind the campaign",
@@ -3191,7 +3371,8 @@
       "rate": 0,
       "image": "behind-the-campaign",
       "isPlayed": false,
-      "age": 14
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "War of Roshambo: Kingdom clash",
@@ -3211,7 +3392,8 @@
       "rate": 0,
       "image": "kingdom-clash",
       "isPlayed": false,
-      "age": 14
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "The mind fullness game",
@@ -3230,8 +3412,9 @@
       "complexity": 0,
       "rate": 0,
       "image": "mind-fullness-game",
-      "isPlayed": false,
-      "age": 0
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Canvas",
@@ -3241,7 +3424,8 @@
         "Abstract strategy",
         "Puzzle",
         "Hand management",
-        "Layering"
+        "Layering",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3253,7 +3437,8 @@
       "rate": 7.3,
       "image": "canvas",
       "isPlayed": true,
-      "age": 14
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Canvas: Reflections",
@@ -3264,7 +3449,8 @@
         "Puzzle",
         "Hand management",
         "Layering",
-        "Expansion"
+        "Expansion",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3275,8 +3461,9 @@
       "complexity": 1.87,
       "rate": 7.8,
       "image": "canvas-reflections",
-      "isPlayed": false,
-      "age": 14
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Railroad ink: amarillo brillante",
@@ -3287,7 +3474,8 @@
         "Connections",
         "Dice rolling",
         "Network and route building",
-        "Line drawing"
+        "Line drawing",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3299,7 +3487,8 @@
       "rate": 7.6,
       "image": "railroad-ink-amarillo",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Pixelate",
@@ -3320,7 +3509,8 @@
       "rate": 5.8,
       "image": "pixelate",
       "isPlayed": true,
-      "age": 6
+      "age": 6,
+      "bggReference": 0
     },
     {
       "name": "That's not a hat",
@@ -3341,14 +3531,15 @@
       "rate": 7.1,
       "image": "thats-not-a-hat",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Sushi bar",
       "editor": "Mercurio",
       "year": 2008,
       "types": [
-        "Dice",
+        "Dice rolling",
         "Memory",
         "Push your luck",
         "Set collection"
@@ -3363,7 +3554,8 @@
       "rate": 6.5,
       "image": "sushi-bar",
       "isPlayed": true,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Sonora",
@@ -3373,7 +3565,8 @@
         "Action points",
         "Area majority",
         "Flicking",
-        "Chaining"
+        "Chaining",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3385,7 +3578,8 @@
       "rate": 6.9,
       "image": "sonora",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Obscurio",
@@ -3399,7 +3593,7 @@
         "Cooperative",
         "Voting"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         8
@@ -3408,8 +3602,9 @@
       "complexity": 1.86,
       "rate": 7.1,
       "image": "obscurio",
-      "isPlayed": false,
-      "age": 10
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Clic: la foto perfecta",
@@ -3422,7 +3617,7 @@
         "Deduction",
         "Memory"
       ],
-      "language": "x",
+      "language": "es",
       "players": [
         2,
         4
@@ -3432,7 +3627,8 @@
       "rate": 7.0,
       "image": "clic-foto-perfecta",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Cat café",
@@ -3452,8 +3648,9 @@
       "complexity": 1.60,
       "rate": 6.4,
       "image": "cat-cafe",
-      "isPlayed": false,
-      "age": 10
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Papageno",
@@ -3473,7 +3670,8 @@
       "rate": 6.5,
       "image": "papageno",
       "isPlayed": false,
-      "age": 6
+      "age": 6,
+      "bggReference": 0
     },
     {
       "name": "Illusion",
@@ -3491,8 +3689,9 @@
       "complexity": 1.05,
       "rate": 7.0,
       "image": "illusion",
-      "isPlayed": false,
-      "age": 8
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Roll to the top",
@@ -3515,7 +3714,8 @@
       "rate": 6.7,
       "image": "roll-to-the-top",
       "isPlayed": false,
-      "age": 9
+      "age": 9,
+      "bggReference": 0
     },
     {
       "name": "Diáspora zero",
@@ -3527,7 +3727,8 @@
         "Deduction",
         "Puzzle",
         "Cooperative",
-        "Science fiction"
+        "Science fiction",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3539,11 +3740,12 @@
       "rate": 7.8,
       "image": "diaspora-zero",
       "isPlayed": false,
-      "age": 14
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Gohut",
-      "editor": "GDM games",
+      "editor": "GDM Games",
       "year": 2023,
       "types": [
         "Fantasy",
@@ -3559,11 +3761,12 @@
       "rate": 7.1,
       "image": "gohut",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Circo maldito",
-      "editor": "Maldito games",
+      "editor": "Maldito Games",
       "year": 2021,
       "types": [
         "Auction",
@@ -3582,11 +3785,12 @@
       "rate": 6.6,
       "image": "circo-maldito",
       "isPlayed": false,
-      "age": 14
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Convalence",
-      "editor": "MasQueOca",
+      "editor": "MásQueOca",
       "year": 2016,
       "types": [
         "Deduction",
@@ -3606,11 +3810,12 @@
       "rate": 6.3,
       "image": "convalence",
       "isPlayed": false,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "El secreto de Amelia",
-      "editor": "Gen-X Games",
+      "editor": "GenX Games",
       "year": 2021,
       "types": [
         "Cards",
@@ -3619,7 +3824,7 @@
         "Puzzle",
         "Real time",
         "Solitaire",
-        "Scape room"
+        "Escape room"
       ],
       "language": "es",
       "players": [
@@ -3631,7 +3836,8 @@
       "rate": 5.7,
       "image": "secreto-de-amelia",
       "isPlayed": false,
-      "age": 12
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "Perspectives",
@@ -3654,11 +3860,12 @@
       "rate": 7.8,
       "image": "perspectives",
       "isPlayed": false,
-      "age": 12
+      "age": 12,
+      "bggReference": 0
     },
     {
       "name": "Astra",
-      "editor": "Maldito games",
+      "editor": "Maldito Games",
       "year": 2022,
       "types": [
         "Area majority",
@@ -3677,7 +3884,8 @@
       "rate": 6.7,
       "image": "astra",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Nobel run",
@@ -3687,7 +3895,8 @@
         "Solitaire",
         "Educational",
         "Simulation",
-        "Deck, bag and pool building"
+        "Deck, bag and pool building",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -3699,7 +3908,8 @@
       "rate": 6.6,
       "image": "nobel-run",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Turing machine",
@@ -3720,12 +3930,13 @@
       "complexity": 2.42,
       "rate": 7.7,
       "image": "turing-machine",
-      "isPlayed": false,
-      "age": 14
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 0
     },
     {
       "name": "Astra: paquete de cartas promo",
-      "editor": "Maldito games",
+      "editor": "Maldito Games",
       "year": 2022,
       "types": [
         "Expansion",
@@ -3745,7 +3956,8 @@
       "rate": 6.4,
       "image": "astra-cards",
       "isPlayed": false,
-      "age": 10
+      "age": 10,
+      "bggReference": 0
     },
     {
       "name": "Próxima estación: Tokyo",
@@ -3770,7 +3982,8 @@
       "rate": 6.7,
       "image": "proxima-estacion-tokyo",
       "isPlayed": false,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
     },
     {
       "name": "Arraial",
@@ -3793,7 +4006,1157 @@
       "rate": 6.6,
       "image": "arraial",
       "isPlayed": false,
-      "age": 8
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Concept",
+      "editor": "Repos production",
+      "year": 2013,
+      "types": [
+        "Deduction",
+        "Party",
+        "Words",
+        "Communication limits"
+      ],
+      "language": "es",
+      "players": [
+        4,
+        12
+      ],
+      "time": 40,
+      "complexity": 1.37,
+      "rate": 6.6,
+      "image": "concept",
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 0
+    },
+    {
+      "name": "Inicio",
+      "editor": "Hot Macacos",
+      "year": 2023,
+      "types": [
+        "Words"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 0,
+      "image": "inicio",
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Detective: Crímenes en L.A.",
+      "editor": "Mebo",
+      "year": 2019,
+      "types": [
+        "Deduction",
+        "Murder mystery",
+        "Cooperative",
+        "Storytelling",
+        "Expansion",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 180,
+      "complexity": 3.06,
+      "rate": 7.2,
+      "image": "detective-crimenes-la",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "EXIT 9: Las Catacumbas del Terror",
+      "editor": "Devir",
+      "year": 2023,
+      "types": [
+        "Deduction",
+        "Horror",
+        "Puzzle",
+        "Cooperative",
+        "Escape room",
+        "Solitaire"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        4
+      ],
+      "time": 240,
+      "complexity": 2.62,
+      "rate": 7.3,
+      "image": "exit-9-las-catacumbas-del-terror",
+      "isPlayed": false,
+      "age": 16,
+      "bggReference": 0
+    },
+    {
+      "name": "Perdidos en R'lyeh",
+      "editor": "EDGE",
+      "year": 2016,
+      "types": [
+        "Cards",
+        "Horror",
+        "Hand management",
+        "Player elimination",
+        "Single loser game"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 45,
+      "complexity": 1.17,
+      "rate": 6.1,
+      "image": "perdidos-en-rlyeh",
+      "isPlayed": false,
+      "age": 13,
+      "bggReference": 0
+    },
+    {
+      "name": "TonTon",
+      "editor": "Mercurio",
+      "year": 2018,
+      "types": [
+        "Cards",
+        "Hand management",
+        "Trick-taking"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.67,
+      "rate": 6.4,
+      "image": "ton-ton",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "The Game: Quick & Easy",
+      "editor": "Mercurio",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Numbers",
+        "Cooperative",
+        "Hand management"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 10,
+      "complexity": 1.05,
+      "rate": 6.8,
+      "image": "the-game-quick",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 0
+    },
+    {
+      "name": "Fairy trails",
+      "editor": "TCG Factory",
+      "year": 2020,
+      "types": [
+        "Fantasy",
+        "Puzzle",
+        "Territory building",
+        "Network and route building",
+        "Tile placement",
+        "Solitaire"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        2
+      ],
+      "time": 20,
+      "complexity": 1.11,
+      "rate": 6.1,
+      "image": "fairy-trails",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Shoothit Macarra",
+      "editor": "GAME4U2",
+      "year": 2022,
+      "types": [
+        "Cards"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        8
+      ],
+      "time": 20,
+      "complexity": 1,
+      "rate": 8.4,
+      "image": "shoothit-macarra",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 0
+    },
+    {
+      "name": "Orbital",
+      "editor": "DMZ Games",
+      "year": 2018,
+      "types": [
+        "City building",
+        "Puzzle",
+        "Science fiction",
+        "Modular board",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 45,
+      "complexity": 1.86,
+      "rate": 7,
+      "image": "orbital",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Monster soup",
+      "editor": "Matagot",
+      "year": 2020,
+      "types": [
+        "Creatures",
+        "Children's game",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 6.1,
+      "image": "monster-soup",
+      "isPlayed": true,
+      "age": 5,
+      "bggReference": 0
+    },
+    {
+      "name": "Genios victorianos",
+      "editor": "EDGE",
+      "year": 2019,
+      "types": [
+        "Family",
+        "Contracts",
+        "Sudden death ending",
+        "Worker placement",
+        "Villainy"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 60,
+      "complexity": 2.16,
+      "rate": 6.9,
+      "image": "genios-victorianos",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 0
+    },
+    {
+      "name": "Tea for 2",
+      "editor": "Space Cowboys",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "End game bonuses",
+        "Deck, bag and pool building",
+        "Take that"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 1.48,
+      "rate": 6.6,
+      "image": "tea-for-2",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 0
+    },
+    {
+      "name": "¡A sacar la basura!",
+      "editor": "The right to lose",
+      "year": 2023,
+      "types": [
+        "Humor",
+        "Party",
+        "Open drafting",
+        "Voting"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        8
+      ],
+      "time": 15,
+      "complexity": 0,
+      "rate": 0,
+      "image": "a-sacar-la-basura",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 308768
+    },
+    {
+      "name": "Tuareg",
+      "editor": "Devir",
+      "year": 2012,
+      "types": [
+        "Cards",
+        "End game bonuses",
+        "Modular board",
+        "Open drafting",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 60,
+      "complexity": 2.34,
+      "rate": 7.6,
+      "image": "tuareg",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 118048
+    },
+    {
+      "name": "ERA Edad Media",
+      "editor": "Asmodee",
+      "year": 2019,
+      "types": [
+        "City building",
+        "Dice rolling",
+        "Medieval",
+        "Grid coverage",
+        "End game bonuses",
+        "Strategy",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 60,
+      "complexity": 2.25,
+      "rate": 7.2,
+      "image": "era-edad-media",
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 270971
+    },
+    {
+      "name": "The X-Files: collectible card game",
+      "editor": "The United States Playing Card Company",
+      "year": 1996,
+      "types": [
+        "Cards",
+        "Collectible components",
+        "Deduction",
+        "Action points",
+        "TV series"
+      ],
+      "language": "en",
+      "players": [
+        2
+      ],
+      "time": 60,
+      "complexity": 2.41,
+      "rate": 5.7,
+      "image": "x-files-collectible-card-game",
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 0
+    },
+    {
+      "name": "Cartzzle: Exploración Extrema",
+      "editor": "Jeux Opla",
+      "year": 2021,
+      "types": [
+        "Puzzle",
+        "Cooperative",
+        "Solitaire"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        2
+      ],
+      "time": 45,
+      "complexity": 1,
+      "rate": 6,
+      "image": "cartzzle-exploracion-extrema",
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Topic",
+      "editor": "Ingenio Games",
+      "year": 2022,
+      "types": [
+        "Cards",
+        "Party",
+        "Real time",
+        "Words",
+        "Speed matching",
+        "Spelling"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 2,
+      "rate": 5.7,
+      "image": "topic",
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Luna Capital",
+      "editor": "Devir",
+      "year": 2021,
+      "types": [
+        "City building",
+        "Science fiction",
+        "Open drafting",
+        "Set collection",
+        "Tile placement",
+        "Family"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 45,
+      "complexity": 2.25,
+      "rate": 7.1,
+      "image": "luna-capital",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 323613
+    },
+    {
+      "name": "Los Libros del Tiempo",
+      "editor": "Maldito Games",
+      "year": 2023,
+      "types": [
+        "Cards",
+        "Deck, bag and pool building",
+        "Hand management",
+        "Open drafting",
+        "Set collection",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 60,
+      "complexity": 2.58,
+      "rate": 7.2,
+      "image": "libros-del-tiempo",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 372631
+    },
+    {
+      "name": "Miskadas",
+      "editor": "Mebo",
+      "year": 2019,
+      "types": [
+        "Action/Event",
+        "Children's game"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        3
+      ],
+      "time": 25,
+      "complexity": 1,
+      "rate": 6,
+      "image": "miskadas",
+      "isPlayed": false,
+      "age": 5,
+      "bggReference": 292908
+    },
+    {
+      "name": "Detective: Temporada 1",
+      "editor": "Portal Games",
+      "year": 2020,
+      "types": [
+        "Deduction",
+        "Murder mystery",
+        "Narrative choice/paragraph",
+        "Storytelling",
+        "Expansion",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 120,
+      "complexity": 2.07,
+      "rate": 6.9,
+      "image": "detective-temporada-1",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 223321
+    },
+    {
+      "name": "El misterio del Dr. Dark",
+      "editor": "Mercurio",
+      "year": 2019,
+      "types": [
+        "Deduction",
+        "Horror",
+        "Medical",
+        "Puzzle",
+        "Cooperative",
+        "Escape room"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 60,
+      "complexity": 2.58,
+      "rate": 6.2,
+      "image": "misterio-dr-dark",
+      "isPlayed": true,
+      "age": 12,
+      "bggReference": 0
+    },
+    {
+      "name": "Hitster",
+      "editor": "Diset",
+      "year": 2022,
+      "types": [
+        "Cards",
+        "Music",
+        "Party",
+        "Trivia"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        10
+      ],
+      "time": 30,
+      "complexity": 1,
+      "rate": 7.7,
+      "image": "hitster",
+      "isPlayed": true,
+      "age": 16,
+      "bggReference": 0
+    },
+    {
+      "name": "Disc cover",
+      "editor": "Mercurio",
+      "year": 2022,
+      "types": [
+        "Music",
+        "Party"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        8
+      ],
+      "time": 20,
+      "complexity": 1.14,
+      "rate": 6.5,
+      "image": "disc-cover",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 0
+    },
+    {
+      "name": "A fake artist goes to New York",
+      "editor": "Oink Games",
+      "year": 2011,
+      "types": [
+        "Bluffing",
+        "Party", 
+        "Deduction",
+        "Hidden roles",
+        "Line drawing",
+        "Targeted clues"
+      ],
+      "language": "x",
+      "players": [
+        5,
+        10
+      ],
+      "time": 20,
+      "complexity": 1.12,
+      "rate": 7.1,
+      "image": "a-fake-artist",
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Cubeez",
+      "editor": "Blue orange",
+      "year": 2018,
+      "types": [
+        "Children's game",
+        "Dexterity",
+        "Action"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 6.1,
+      "image": "cubeez",
+      "isPlayed": true,
+      "age": 6,
+      "bggReference": 0
+    },
+    {
+      "name": "Scout",
+      "editor": "Oink Games",
+      "year": 2019,
+      "types": [
+        "Hand management",
+        "Ladder climbing",
+        "Score-and-reset-game"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.35,
+      "rate": 7.8,
+      "image": "scout",
+      "isPlayed": false,
+      "age": 9,
+      "bggReference": 0
+    },
+    {
+      "name": "Grove",
+      "editor": "Melmac Games",
+      "year": 2021,
+      "types": [
+        "Abstract",
+        "Farming",
+        "Solitaire",
+        "Pattern building",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 10,
+      "complexity": 1.35,
+      "rate": 7.7,
+      "image": "grove",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Wurst Case Scenario",
+      "editor": "Jumping turtle Games",
+      "year": 2018,
+      "types": [
+        "Humor",
+        "Cards",
+        "Hand management",
+        "Player elimination"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.25,
+      "rate": 6.3,
+      "image": "wurst-case-scenario",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "The Number",
+      "editor": "Repos production",
+      "year": 2020,
+      "types": [
+        "Paper and pencil",
+        "Numbers"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.15,
+      "rate": 6.0,
+      "image": "the-number",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Rolling Ranch",
+      "editor": "TCG Factory",
+      "year": 2019,
+      "types": [
+        "Animals",
+        "Dice rolling",
+        "Territory building",
+        "Paper and pencil"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        20
+      ],
+      "time": 20,
+      "complexity": 1.26,
+      "rate": 6.7,
+      "image": "rolling-ranch",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 0
+    },
+    {
+      "name": "Quiz Chef",
+      "editor": "EDGE",
+      "year": 2013,
+      "types": [
+        "Party",
+        "Trivia",
+        "Food/Cooking"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        10
+      ],
+      "time": 15,
+      "complexity": 1.00,
+      "rate": 5.6,
+      "image": "quiz-chef",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 0
+    },
+    {
+      "name": "Illusio",
+      "editor": "EDGE",
+      "year": 2008,
+      "types": [
+        "Family",
+        "Cards"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.65,
+      "rate": 7.8,
+      "image": "illusio",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Winter tales",
+      "editor": "EDGE",
+      "year": 2012,
+      "types": [
+        "Novel based",
+        "Open drafting",
+        "Point to point movement",
+        "Role playing",
+        "Storytelling",
+        "Team-based"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        7
+      ],
+      "time": 90,
+      "complexity": 2.52,
+      "rate": 5.7,
+      "image": "winter-tales",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 0
+    },
+    {
+      "name": "Set",
+      "editor": "Devir",
+      "year": 1988,
+      "types": [
+        "Solitaire",
+        "Abstract",
+        "Pattern recognition",
+        "Speed matching",
+        "Real time",
+        "Puzzle"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        20
+      ],
+      "time": 30,
+      "complexity": 1.66,
+      "rate": 6.5,
+      "image": "set",
+      "isPlayed": false,
+      "age": 6,
+      "bggReference": 0
+    },
+    {
+      "name": "Paradox university",
+      "editor": "APA Board Games",
+      "year": 2019,
+      "types": [
+        "Solitaire",
+        "Memory",
+        "Party"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.43,
+      "rate": 7.2,
+      "image": "paradox-university",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Herbalism",
+      "editor": "TCG Factory",
+      "year": 2017,
+      "types": [
+        "Memory",
+        "Medical",
+        "Deduction",
+        "Mythology",
+        "Puzzle"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        4
+      ],
+      "time": 30,
+      "complexity": 2.00,
+      "rate": 6.5,
+      "image": "herbalism",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Ensalada de puntos",
+      "editor": "Devir",
+      "year": 2019,
+      "types": [
+        "Open drafting",
+        "Set collection",
+        "Family"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.14,
+      "rate": 7.1,
+      "image": "ensalada-de-puntos",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 0
+    },
+    {
+      "name": "City blox",
+      "editor": "TCG Factory",
+      "year": 2019,
+      "types": [
+        "City building",
+        "Children's game",
+        "Educational",
+        "Pattern building",
+        "Pattern recognition"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 1.00,
+      "rate": 5.6,
+      "image": "city-blox",
+      "isPlayed": false,
+      "age": 6,
+      "bggReference": 0
+    },
+    {
+      "name": "Sumatra",
+      "editor": "Ludonova",
+      "year": 2019,
+      "types": [
+        "Open drafting",
+        "Set collection",
+        "Adventure",
+        "Exploration",
+        "Travel"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 45,
+      "complexity": 1.91,
+      "rate": 6.7,
+      "image": "sumatra",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Winter",
+      "editor": "Devir",
+      "year": 2022,
+      "types": [
+        "Abstract",
+        "Family",
+        "Area majority",
+        "Modular board",
+        "Pattern building",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 10,
+      "complexity": 1.50,
+      "rate": 7.0,
+      "image": "winter",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Ragami",
+      "editor": "Mebo",
+      "year": 2012,
+      "types": [
+        "Strategy",
+        "Fantasy",
+        "Mythology",
+        "Deck, bag and pool building",
+        "Open drafting",
+        "Point to point movement",
+        "Worker placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 90,
+      "complexity": 2.60,
+      "rate": 5.9,
+      "image": "ragami",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Nocturne",
+      "editor": "AEG",
+      "year": 2024,
+      "types": [
+        "Abstract strategy",
+        "Animals",
+        "Fantasy",
+        "Puzzle",
+        "Territory building",
+        "Area majority",
+        "Auction",
+        "Bidding",
+        "Contracts",
+        "End game bonuses",
+        "Grid coverage"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 45,
+      "complexity": 2.22,
+      "rate": 7.2,
+      "image": "nocturne",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 0
+    },
+    {
+      "name": "Ghost Blitz",
+      "editor": "AEG",
+      "year": 2024,
+      "types": [
+        "Party",
+        "Family",
+        "Dexterity",
+        "Cards",
+        "Children's game",
+        "Real time",
+        "Pattern recognition",
+        "Speed matching"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 20,
+      "complexity": 1.14,
+      "rate": 6.7,
+      "image": "ghost-blitz",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 2034769
+    },
+    {
+      "name": "Crime zoom #1: la última carta",
+      "editor": "Aurora",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Murder mystery",
+        "Cooperative",
+        "Narrative choice/paragraph",
+        "Storytelling"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.14,
+      "rate": 6.7,
+      "image": "crime-zoom-1",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 294235
+    },
+    {
+      "name": "Draw Bot",
+      "editor": "Jyde",
+      "year": 2020,
+      "types": [
+        "Dice rolling",
+        "Industry",
+        "Paper and pencil"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        5
+      ],
+      "time": 20,
+      "complexity": 1,
+      "rate": 7.3,
+      "image": "draw-bot",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "Yokai Sketch",
+      "editor": "Devir",
+      "year": 2023,
+      "types": [
+        "Cards",
+        "Mythology",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 20,
+      "complexity": 1.33,
+      "rate": 6.9,
+      "image": "yokai-sketch",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 0
     }
   ]
 }

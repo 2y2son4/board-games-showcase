@@ -11,7 +11,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "lighthouse": "npx unlighthouse --site https://2y2son4.github.io/board-games-showcase/"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "@angular/router": "^17.3.5",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.27",
+    "cors-anywhere": "^0.4.4",
     "jest": "^29.7.0",
     "jest-preset-angular": "^14.0.3",
     "npm": "^10.5.2",

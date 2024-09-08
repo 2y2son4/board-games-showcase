@@ -3,14 +3,15 @@ export interface GameCard {
   editor: string;
   year: number;
   types: Array<string>;
-  language: 'en' | 'es' | 'de' | '-';
-  players?: Array<number>;
-  time?: number;
+  language: 'en' | 'es' | 'de' | 'x';
+  players: Array<number>;
+  time: number;
   complexity: number;
   rate: number;
-  image?: string;
+  image: string;
   isPlayed: boolean;
-  ages: Array<string | number>;
+  age: number;
+  bggReference: number;
 }
 
 export interface OracleCard {
@@ -28,4 +29,17 @@ export interface SortingOrder {
 
 export interface SortingFunctions {
   [key: string]: (data: GameCard[]) => GameCard[];
+}
+
+export interface GameDetails {
+  name: string[];
+  yearpublished: string;
+  minplayers: string;
+  maxplayers: string;
+  playingtime: string;
+  age: string;
+  description: string;
+  boardgamecategory: string[];
+  image: string;
+  boardgamepublisher: string[];
 }

@@ -1,4 +1,7 @@
-<div class="content">
+<app-loader></app-loader>
+
+@if(oraclesList)
+{<div class="content">
   <div>
     <div class="side">
       <div class="side__container">
@@ -21,7 +24,7 @@
             </h2>
             @if(oracle.image)
             { <div class="card__image-container"><img class="card__image" src="assets/oracles/{{oracle.image}}.webp"
-                alt="{{oracle.name}} image"></div>
+                alt="{{oracle.name}}"></div>
             }
             @if(oracle.artist){
             <h2 class="card__title" [innerHTML]="' by '+
@@ -56,4 +59,4 @@
       </li>}
     </ul>
   </div>
-</div>
+</div>}

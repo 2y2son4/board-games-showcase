@@ -7,6 +7,7 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import {
   FormControl,
   FormGroup,
@@ -25,9 +26,11 @@ import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { GameCard } from '../commons.models';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
-import GAMES_JSON from '../../assets/data/games.json';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
+import { HttpService } from '../../core/services/http/http.service';
 import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
+import { LoaderComponent } from '../loader/loader.component';
+import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
   selector: 'app-games',
@@ -36,6 +39,8 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
     CommonModule,
     FormsModule,
     HighlightTextPipe,
+    HttpClientModule,
+    LoaderComponent,
     MatButtonModule,
     MatCardModule,
     MatChipsModule,
@@ -51,7 +56,6 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
-
   gamesList!: Array<GameCard>;
 
   selectedTypes = new FormControl<string[]>([]);
@@ -64,9 +68,13 @@ export class GamesComponent implements OnInit, AfterViewInit {
   searchQuery = '';
   playedGames = false;
   unPlayedGames = false;
+  isLoading!: boolean;
   exactPlayers!: number | undefined;
+  exactAge!: number;
   gamesFilterForm!: FormGroup;
   flippedCards!: number;
+
+  printGames: GameCard[] = [];
 
   sortingSelectLabels = [
     'A to Z',
@@ -84,20 +92,41 @@ export class GamesComponent implements OnInit, AfterViewInit {
   constructor(
     public commonFunctions: CommonFunctionsService,
     public filterFunctions: FilterFunctionsService,
+    private httpDataService: HttpService,
+    private loaderService: LoaderService,
   ) {}
 
   ngOnInit(): void {
-    this.gamesList = this.filterFunctions.sortByNameAscending(GAMES_JSON.games);
-    this.resetGamesList();
-    this.types = this.commonFunctions.extractUniqueValues(
-      this.gamesList,
-      'types',
-    );
-    this.editors = this.commonFunctions.extractUniqueValues(
-      this.gamesList,
-      'editor',
-    );
+    this.gamesList = [];
+    this.loaderService.show();
+    this.isLoading = true;
+    this.httpDataService.getGames().subscribe({
+      next: (response) => {
+        this.gamesList = this.filterFunctions.sortByNameAscending(
+          response.games,
+        );
+        this.filteredGames = this.filterFunctions.sortByNameAscending(
+          response.games,
+        );
+        this.types = this.commonFunctions.extractUniqueValues(
+          this.filterFunctions.sortByNameAscending(response.games),
+          'types',
+        );
+        this.editors = this.commonFunctions.extractUniqueValues(
+          this.filterFunctions.sortByNameAscending(response.games),
+          'editor',
+        );
+        this.loaderService.hide();
+        this.isLoading = false;
+      },
+      error: (error) => {
+        console.error('Error fetching games data', error);
+        this.loaderService.hide();
+        this.isLoading = false;
+      },
+    });
 
+    this.resetGamesList();
     this.gamesFilterForm = new FormGroup({
       searchQuery: new FormControl(''),
       exactPlayers: new FormControl(''),
@@ -156,7 +185,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     const selectedTypeValues = this.selectedTypes.value ?? [];
     const selectedEditorValues = this.selectedEditors.value ?? [];
 
-    if (selectedTypeValues.length === 0) {
+    if (selectedTypeValues.length === 0 && selectedEditorValues.length === 0) {
       this.resetGamesList();
     } else {
       this.filteredGames = this.gamesList.filter((game) => {
@@ -246,6 +275,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.filteredGames = this.filterFunctions.sortByNameAscending(
       this.gamesList,
     );
+    this.printGames = [];
   }
 
   resetPlayedGames() {
@@ -286,8 +316,34 @@ export class GamesComponent implements OnInit, AfterViewInit {
     }
   }
 
+  filterGamesByAge() {
+    this.selectedChipTypes = [];
+
+    const exactYear = this.exactAge;
+
+    if (!exactYear) {
+      this.resetGamesList();
+    } else {
+      this.filteredGames = this.gamesList.filter((game) => {
+        const players = game.age;
+        if (players) {
+          return players <= exactYear;
+        }
+        return false;
+      });
+    }
+  }
+
   toggleCardFlip(index: number) {
     const targetElement = this.innerElements.toArray()[index];
+    const gameName =
+      targetElement.nativeElement.firstElementChild.childNodes[1].innerHTML;
+    const gameObject = this.gamesList.filter(
+      (games) => games.name === gameName,
+    );
+
+    this.printGames = [...this.printGames, gameObject[0]];
+
     if (targetElement) {
       targetElement.nativeElement.classList.toggle('active');
     }
