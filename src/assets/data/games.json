@@ -1165,7 +1165,7 @@
       "image": "stay-cool",
       "isPlayed": false,
       "age": 12,
-      "bggReference": 0
+      "bggReference": 267475
     },
     {
       "name": "Anomia",
@@ -1187,7 +1187,7 @@
       "image": "anomia",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 67877
     },
     {
       "name": "So clover",
@@ -1210,7 +1210,7 @@
       "image": "so-clover",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 329839
     },
     {
       "name": "Código secreto Dúo",
@@ -1231,7 +1231,7 @@
       "image": "codigo-secreto-duo",
       "isPlayed": true,
       "age": 11,
-      "bggReference": 0
+      "bggReference": 224037
     },
     {
       "name": "Macedonia de letras",
@@ -1256,7 +1256,7 @@
       "image": "macedonia-de-letras",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 275467
     },
     {
       "name": "Mars attacks: juego de dados",
@@ -1278,7 +1278,7 @@
       "image": "mars-attack-dados",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 155119
     },
     {
       "name": "Power plants",
@@ -1300,9 +1300,9 @@
       "complexity": 2.44,
       "rate": 7.2,
       "image": "power-plants",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 341974
     },
     {
       "name": "Caballeros arcoíris",
@@ -1326,7 +1326,7 @@
       "image": "caballeros-arcoiris",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 251987
     },
     {
       "name": "Decrypto: Laserdrive",
@@ -1351,7 +1351,7 @@
       "image": "decrypto-laserdrive",
       "isPlayed": true,
       "age": 12,
-      "bggReference": 0
+      "bggReference": 273938
     },
     {
       "name": "Ninja Dice",
@@ -1373,7 +1373,7 @@
       "image": "ninja-dice",
       "isPlayed": false,
       "age": 9,
-      "bggReference": 0
+      "bggReference": 136587
     },
     {
       "name": "Social train",
@@ -1395,7 +1395,7 @@
       "image": "social-train",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 280202
     },
     {
       "name": "Alta tensión: el juego de cartas",
@@ -1418,7 +1418,7 @@
       "image": "alta-tension-cartas",
       "isPlayed": true,
       "age": 12,
-      "bggReference": 0
+      "bggReference": 203780
     },
     {
       "name": "¡Viva el Rey!",
@@ -1441,7 +1441,7 @@
       "image": "viva-el-rey",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 7806
     },
     {
       "name": "La leyenda del cerezo que florece cada diez años",
@@ -1464,7 +1464,7 @@
       "image": "leyenda-del-cerezo",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 220784
     },
     {
       "name": "Munchkin Gloom",
@@ -1488,7 +1488,7 @@
       "image": "munchkin-gloom",
       "isPlayed": false,
       "age": 13,
-      "bggReference": 0
+      "bggReference": 164110
     },
     {
       "name": "Gloom",
@@ -1509,9 +1509,9 @@
       "complexity": 1.63,
       "rate": 6.3,
       "image": "gloom",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 13,
-      "bggReference": 0
+      "bggReference": 12692
     },
     {
       "name": "Gloom: Expediciones Desventuradas",
@@ -1535,7 +1535,7 @@
       "image": "gloom-expediciones",
       "isPlayed": false,
       "age": 13,
-      "bggReference": 0
+      "bggReference": 37654
     },
     {
       "name": "Gloom: invitados inoportunos",
@@ -1559,7 +1559,7 @@
       "image": "gloom-invitados",
       "isPlayed": false,
       "age": 13,
-      "bggReference": 0
+      "bggReference": 25621
     },
     {
       "name": "La fiesta",
@@ -1583,7 +1583,7 @@
       "image": "la-fiesta",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 232300
     },
     {
       "name": "Muchachada Nui: el juego de mesa",
@@ -1607,7 +1607,7 @@
       "image": "muchachada-nui",
       "isPlayed": true,
       "age": 13,
-      "bggReference": 0
+      "bggReference": 84797
     },
     {
       "name": "Speed cups⁶",
@@ -1628,7 +1628,7 @@
       "image": "speed-cups-6",
       "isPlayed": false,
       "age": 6,
-      "bggReference": 0
+      "bggReference": 257967
     },
     {
       "name": "Speed cups²",
@@ -1648,7 +1648,7 @@
       "image": "speed-cups-2",
       "isPlayed": false,
       "age": 6,
-      "bggReference": 0
+      "bggReference": 158100
     },
     {
       "name": "El juego de las baldosas de Antoni Gaudí",
@@ -5135,7 +5135,7 @@
       "image": "draw-bot",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 306673
     },
     {
       "name": "Yokai Sketch",
@@ -5156,7 +5156,7 @@
       "image": "yokai-sketch",
       "isPlayed": false,
       "age": 12,
-      "bggReference": 0
+      "bggReference": 371981
     }
   ]
 }
