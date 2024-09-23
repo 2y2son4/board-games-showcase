@@ -1,29 +1,51 @@
-[ 
-  {
-    "name": "Ghost Blitz",
-    "editor": "AEG",
-    "year": 2024,
-    "types": [
-      "Party",
-      "Family",
-      "Dexterity",
-      "Cards",
-      "Children's game",
-      "Real time",
-      "Pattern recognition",
-      "Speed matching"
-    ],
-    "language": "en",
-    "players": [
-      2,
-      8
-    ],
-    "time": 20,
-    "complexity": 1.14,
-    "rate": 6.7,
-    "image": "ghost-blitz",
-    "isPlayed": false,
-    "age": 8,
-    "bggReference": 2034769
-  }
-]
+{
+  "future": [
+    {
+      "name": "Ghost Blitz",
+      "editor": "AEG",
+      "year": 2024,
+      "types": [
+        "Party",
+        "Family",
+        "Dexterity",
+        "Cards",
+        "Children's game",
+        "Real time",
+        "Pattern recognition",
+        "Speed matching"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 20,
+      "complexity": 1.14,
+      "rate": 6.7,
+      "image": "ghost-blitz",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 2034769
+    },
+    {
+      "name": "Game",
+      "editor": "AEG",
+      "year": 2024,
+      "types": [
+        "Party"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 0,
+      "complexity": 0,
+      "rate": 0,
+      "image": "game",
+      "isPlayed": false,
+      "age": 0,
+      "bggReference": 0
+    }
+  ]
+}

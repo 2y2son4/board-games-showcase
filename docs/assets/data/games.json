@@ -2333,7 +2333,7 @@
       "bggReference": 0
     },
     {
-      "name": "Here to slay: Berserkers &Necromancers",
+      "name": "Here to slay: Berserkers & Necromancers",
       "editor": "Unstable Games",
       "year": 2020,
       "types": [
@@ -3715,7 +3715,7 @@
       "complexity": 1.04,
       "rate": 6.7,
       "image": "roll-to-the-top",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 9,
       "bggReference": 0
     },
@@ -5132,6 +5132,421 @@
       "isPlayed": false,
       "age": 12,
       "bggReference": 371981
+    },
+    {
+      "name": "Game that song",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Party",
+        "Player's judge",
+        "Music"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 90,
+      "complexity": 1,
+      "rate": 7.7,
+      "image": "game-that-song",
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 410252
+    },
+    {
+      "name": "Game that song: 80's mix",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Party",
+        "Player's judge",
+        "Music",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 90,
+      "complexity": 1,
+      "rate": 7.7,
+      "image": "game-that-song-80",
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 410252
+    },
+    {
+      "name": "Game that song: 90's mix",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Party",
+        "Player's judge",
+        "Music",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 90,
+      "complexity": 1,
+      "rate": 7.7,
+      "image": "game-that-song-90",
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 410252
+    },
+    {
+      "name": "Game that song: 2000's mix",
+      "editor": "AEG",
+      "year": 2023,
+      "types": [
+        "Party",
+        "Player's judge",
+        "Music",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        6
+      ],
+      "time": 90,
+      "complexity": 1,
+      "rate": 7.7,
+      "image": "game-that-song-2000",
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 410252
+    },
+    {
+      "name": "La búsqueda del Planeta X",
+      "editor": "Maldito Games",
+      "year": 2020,
+      "types": [
+        "Strategy",
+        "Deduction",
+        "Puzzle",
+        "Space exploration",
+        "Action points",
+        "End game bonuses",
+        "Paper and pencil",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 75,
+      "complexity": 2.42,
+      "rate": 7.9,
+      "image": "busqueda-planeta-x",
+      "isPlayed": false,
+      "age": 13,
+      "bggReference": 279537
+    },
+    {
+      "name": "La marcha del cangrejo",
+      "editor": "2 tomatoes games",
+      "year": 2020,
+      "types": [
+        "Deduction",
+        "Cooperative",
+        "Communication limits",
+        "Grid movement"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 15,
+      "complexity": 1.58,
+      "rate": 6.7,
+      "image": "marcha-del-cangrejo",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 316632
+    },
+    {
+      "name": "Zogen",
+      "editor": "Oink Games",
+      "year": 2018,
+      "types": [
+        "Cards",
+        "Real time",
+        "Pattern building"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.67,
+      "rate": 5.6,
+      "image": "zogen",
+      "isPlayed": false,
+      "age": 6,
+      "bggReference": 249289
+    },
+    {
+      "name": "Final Girl",
+      "editor": "GenX Games",
+      "year": 2021,
+      "types": [
+        "Solitaire",
+        "Horror",
+        "Dice rolling",
+        "Hand management",
+        "Pick-up and Deliver",
+        "Variable player powers"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 60,
+      "complexity": 2.69,
+      "rate": 8.3,
+      "image": "final-girl",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 277659
+    },
+    {
+      "name": "Final Girl: Into the Void",
+      "editor": "GenX Games",
+      "year": 2023,
+      "types": [
+        "Expansion",
+        "Solitaire",
+        "Horror"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 60,
+      "complexity": 2.92,
+      "rate": 8.5,
+      "image": "final-girl-into-the-void",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 354775
+    },
+    {
+      "name": "Final Girl: Terror From Above",
+      "editor": "GenX Games",
+      "year": 2021,
+      "types": [
+        "Expansion",
+        "Solitaire",
+        "Horror"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 60,
+      "complexity": 2.80,
+      "rate": 7.9,
+      "image": "final-girl-terror-from-above",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 310177
+    },
+    {
+      "name": "Key Enigma: Hack Forward",
+      "editor": "Key Enigma",
+      "year": 2021,
+      "types": [
+        "Murder mystery",
+        "Puzzle",
+        "Science fiction",
+        "Cooperative",
+        "Deduction",
+        "Solitaire",
+        "Storytelling"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 480,
+      "complexity": 3,
+      "rate": 8,
+      "image": "hack-forward",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 410252
+    },
+    {
+      "name": "Hunch!",
+      "editor": "DMZ Games",
+      "year": 2022,
+      "types": [
+        "Words",
+        "Auction",
+        "Bidding",
+        "Communication limits",
+        "Deduction"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 60,
+      "complexity": 2,
+      "rate": 6.7,
+      "image": "hunch",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 359398
+    },
+    {
+      "name": "¡Peca tú!",
+      "editor": "TCG Factory",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Humor",
+        "Hand management",
+        "Take that"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.44,
+      "rate": 6.9,
+      "image": "peca-tu",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 292907
+    },
+    {
+      "name": "Medang",
+      "editor": "TCG Factory",
+      "year": 2023,
+      "types": [
+        "Abstract strategy",
+        "Area majority",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 2,
+      "rate": 7.6,
+      "image": "medang",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 391161
+    },
+    {
+      "name": "Fast shot",
+      "editor": "Jumping turtle Games",
+      "year": 2018,
+      "types": [
+        "Dexterity",
+        "Finger flicking"
+      ],
+      "language": "en",
+      "players": [
+        2
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 6.5,
+      "image": "fast-shot",
+      "isPlayed": false,
+      "age": 6,
+      "bggReference": 249730
+    },
+    {
+      "name": "El soneto",
+      "editor": "Ludonova",
+      "year": 2016,
+      "types": [
+        "Words",
+        "Paper and pencil",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 60,
+      "complexity": 2.67,
+      "rate": 6.7,
+      "image": "el-soneto",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 204802
+    },
+    {
+      "name": "Foto perfecta",
+      "editor": "Matagot",
+      "year": 2022,
+      "types": [
+        "Animals",
+        "Travel",
+        "Matching",
+        "Set collection",
+        "Tile placement"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.33,
+      "rate": 6.4,
+      "image": "foto-perfecta",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 360224
+    },
+    {
+      "name": "Ars Universalis",
+      "editor": "Meridiano 6",
+      "year": 2015,
+      "types": [
+        "Abstract strategy",
+        "Educational",
+        "Medical",
+        "Puzzle",
+        "Renaissance",
+        "Pattern building",
+        "Auction"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 45,
+      "complexity": 2.23,
+      "rate": 7.1,
+      "image": "ars-universalis",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 151683
     }
   ]
 }
