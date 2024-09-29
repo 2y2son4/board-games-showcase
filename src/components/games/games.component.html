@@ -17,20 +17,8 @@
         <h3 class="side__number">
           ( {{filterFunctions.getFlipCardCount(innerElements)}} of {{filteredGames.length}} selected)
         </h3>
-        <button #filterButton type="button" mat-raised-button color="primary" class="side__reset"
-          (click)="restartFilters()">Reset
+        <button type="button" mat-raised-button color="primary" class="side__reset" (click)="restartFilters()">Reset
         </button>
-        <div class="legend__container">
-          <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
-            Played
-          </button>
-          <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
-            Unplayed
-          </button>
-          <button style="width: 100%;" #filterButton type="button" mat-raised-button color="primary"
-            (click)="restartFilters()">Reset
-          </button>
-        </div>
       </div>
       <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
     </div>
@@ -123,6 +111,9 @@
       <mat-card-content>There are no results for <span class="card__search-query">
           {{searchQuery || ' this search'}}
         </span>
+        <br /><br />
+        <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
+        </button>
       </mat-card-content>
     </mat-card>}
   </div>
@@ -162,7 +153,13 @@
           <mat-option *ngFor="let editor of editors" [value]="editor">{{editor}}</mat-option>
         </mat-select>
       </mat-form-field>
-      <button #filterButton type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
+      <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
+        Played
+      </button>
+      <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
+        Unplayed
+      </button>
+      <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
       </button>
     </div>
   </div>
