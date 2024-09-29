@@ -1670,12 +1670,12 @@
       "image": "baldosas-antoni-gaudi",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 4437
     },
     {
       "name": "The Island",
       "editor": "Stronghold Games",
-      "year": 1982,
+      "year": 2010,
       "types": [
         "Adventure",
         "Animals",
@@ -1691,11 +1691,11 @@
       ],
       "time": 60,
       "complexity": 1.70,
-      "rate": 7.3,
+      "rate": 7.5,
       "image": "the-island",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 2653
     },
     {
       "name": "Tags",
@@ -1718,7 +1718,7 @@
       "image": "tags",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 248002
     },
     {
       "name": "King of Tokyo",
@@ -1741,7 +1741,7 @@
       "image": "king-of-tokyo",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 70323
     },
     {
       "name": "Wordsmith",
@@ -1765,7 +1765,7 @@
       "image": "wordsmith",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 274296
     },
     {
       "name": "Mandala Stones",
@@ -1789,7 +1789,7 @@
       "image": "mandala-stones",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 317504
     },
     {
       "name": "Doodle rush",
@@ -1811,7 +1811,7 @@
       "image": "doodle-rush",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 232090
     },
     {
       "name": "Drunken sailor",
@@ -1834,7 +1834,7 @@
       "image": "drunken-sailor",
       "isPlayed": true,
       "age": 17,
-      "bggReference": 0
+      "bggReference": 233994
     },
     {
       "name": "Fit to print",
@@ -1860,7 +1860,7 @@
       "image": "fit-to-print",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 352574
     },
     {
       "name": "Fit To Print: Game Breaking News Mini-Expansion",
@@ -1887,7 +1887,7 @@
       "image": "fit-to-print-expansion",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 400127
     },
     {
       "name": "Who am I and what am I doing?",
@@ -1908,7 +1908,7 @@
       "image": "who-am-i-and-what",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 395638
     },
     {
       "name": "Uno Flip!",
@@ -1931,7 +1931,7 @@
       "image": "uno-flip",
       "isPlayed": true,
       "age": 7,
-      "bggReference": 0
+      "bggReference": 271460
     },
     {
       "name": "Cluedo suspect",
@@ -1954,7 +1954,7 @@
       "image": "cluedo-suspect",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 88922
     },
     {
       "name": "Ugga Buuga",
@@ -1978,7 +1978,7 @@
       "image": "ugga-buuga",
       "isPlayed": true,
       "age": 7,
-      "bggReference": 0
+      "bggReference": 106753
     },
     {
       "name": "Black mirror: caída en picado",
@@ -2002,7 +2002,7 @@
       "image": "black-mirror",
       "isPlayed": false,
       "age": 13,
-      "bggReference": 0
+      "bggReference": 265316
     },
     {
       "name": "Organ attack",
@@ -2021,12 +2021,12 @@
         6
       ],
       "time": 15,
-      "complexity": 1.39,
+      "complexity": 1.37,
       "rate": 6.3,
       "image": "organ-attack",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 201406
     },
     {
       "name": "Dr. Jekyll and Mr. Hyde",
@@ -2048,7 +2048,7 @@
       "image": "dr-jekyll-and-mr-hyde",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 686
     },
     {
       "name": "The Game",
@@ -2073,7 +2073,7 @@
       "image": "the-game",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 173090
     },
     {
       "name": "The Game: Face to Face",
@@ -2094,7 +2094,7 @@
       "image": "the-game-face-to-face",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0
+      "bggReference": 236461
     },
     {
       "name": "Kontour",
@@ -2116,7 +2116,7 @@
       "image": "kontour",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 242328
     },
     {
       "name": "Codex naturalis",
@@ -2141,7 +2141,7 @@
       "image": "codex-naturalis",
       "isPlayed": true,
       "age": 7,
-      "bggReference": 0
+      "bggReference": 314503
     },
     {
       "name": "Skull",
@@ -2165,7 +2165,7 @@
       "image": "skull",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0
+      "bggReference": 92415
     },
     {
       "name": "Expediente dark",
@@ -5247,7 +5247,7 @@
       "complexity": 2.42,
       "rate": 7.9,
       "image": "busqueda-planeta-x",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 13,
       "bggReference": 279537
     },
@@ -5360,6 +5360,48 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 310177
+    },
+    {
+      "name": "Final Girl: Panic Station 2891",
+      "editor": "GenX Games",
+      "year": 2023,
+      "types": [
+        "Expansion",
+        "Solitaire",
+        "Horror"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 60,
+      "complexity": 2.88,
+      "rate": 8.4,
+      "image": "final-girl-panic-station-2891",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 354776
+    },
+    {
+      "name": "Final Girl: Once Upon a Full Moon",
+      "editor": "GenX Games",
+      "year": 2023,
+      "types": [
+        "Expansion",
+        "Solitaire",
+        "Horror"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 60,
+      "complexity": 2.50,
+      "rate": 8.2,
+      "image": "final-girl-once-upon-a-full-moon",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 354778
     },
     {
       "name": "Key Enigma: Hack Forward",
@@ -5547,6 +5589,30 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 151683
+    },
+    {
+      "name": "Sky team",
+      "editor": "Scorpion Masqué",
+      "year": 2023,
+      "types": [
+        "Aviation",
+        "Communication limits",
+        "Cooperative",
+        "Dice rolling",
+        "Campaign game",
+        "Worker placement"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 15,
+      "complexity": 2.03,
+      "rate": 8.2,
+      "image": "sky-team",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 373106
     }
   ]
 }
