@@ -144,12 +144,14 @@
       <mat-form-field>
         <mat-label>Filter by types</mat-label>
         <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGamesByTypeAndEditor()">
+          <input placeholder="Search..." (input)="onSearchTypes($event.target)" class="dropdown-search">
           <mat-option *ngFor="let type of types" [value]="type">{{type}}</mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field>
         <mat-label>Filter by publisher</mat-label>
         <mat-select [formControl]="selectedEditors" multiple (selectionChange)="filterGamesByTypeAndEditor()">
+          <input placeholder="Search..." (input)="onSearchEditors($event.target)" class="dropdown-search">
           <mat-option *ngFor="let editor of editors" [value]="editor">{{editor}}</mat-option>
         </mat-select>
       </mat-form-field>
