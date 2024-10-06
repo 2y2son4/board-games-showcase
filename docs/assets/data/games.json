@@ -972,7 +972,7 @@
         "Party",
         "Simulation",
         "Animals",
-        "Real time"
+        "Real-time"
       ],
       "language": "en",
       "players": [
@@ -1151,7 +1151,7 @@
       "year": 2019,
       "types": [
         "Party",
-        "Real time",
+        "Real-time",
         "Trivia"
       ],
       "language": "es",
@@ -1173,7 +1173,7 @@
       "year": 2010,
       "types": [
         "Party",
-        "Real time",
+        "Real-time",
         "Trivia"
       ],
       "language": "en",
@@ -1312,7 +1312,7 @@
         "Action",
         "Dexterity",
         "Cards",
-        "Real time",
+        "Real-time",
         "Route building"
       ],
       "language": "es",
@@ -1705,7 +1705,7 @@
         "Words",
         "Party",
         "Trivia",
-        "Real time"
+        "Real-time"
       ],
       "language": "es",
       "players": [
@@ -1749,7 +1749,7 @@
       "year": 2019,
       "types": [
         "Words",
-        "Real time",
+        "Real-time",
         "Dice rolling",
         "Paper and pencil",
         "Solitaire"
@@ -1797,7 +1797,7 @@
       "year": 2017,
       "types": [
         "Party",
-        "Real time",
+        "Real-time",
         "Line drawing"
       ],
       "language": "es",
@@ -1846,7 +1846,7 @@
         "End game bonuses",
         "Grid coverage",
         "Pattern building",
-        "Real time",
+        "Real-time",
         "Solitaire"
       ],
       "language": "en",
@@ -1872,7 +1872,7 @@
         "End game bonuses",
         "Grid coverage",
         "Pattern building",
-        "Real time",
+        "Real-time",
         "Solitaire",
         "Expansion"
       ],
@@ -1940,7 +1940,7 @@
       "types": [
         "Cards",
         "Deduction",
-        "Murder mystery",
+        "Murder/Mystery",
         "Open drafting"
       ],
       "language": "en",
@@ -2198,7 +2198,7 @@
       "year": 1997,
       "types": [
         "TV series",
-        "Murder mystery",
+        "Murder/Mystery",
         "Trivia",
         "VHS"
       ],
@@ -2459,7 +2459,7 @@
       "year": 2021,
       "types": [
         "Adult",
-        "Murder mystery",
+        "Murder/Mystery",
         "Cooperative",
         "Solitaire"
       ],
@@ -2656,7 +2656,7 @@
       "types": [
         "Cards",
         "Dexterity",
-        "Real time"
+        "Real-time"
       ],
       "language": "x",
       "players": [
@@ -2924,7 +2924,7 @@
       "year": 2019,
       "types": [
         "Deduction",
-        "Murder mystery",
+        "Murder/Mystery",
         "Storytelling",
         "Voting"
       ],
@@ -2972,10 +2972,10 @@
       "year": 2021,
       "types": [
         "Party",
-        "Murder mystery",
+        "Murder/Mystery",
         "Horror",
         "Deduction",
-        "Real time"
+        "Real-time"
       ],
       "language": "es",
       "players": [
@@ -3041,7 +3041,7 @@
       "editor": "TCG Factory",
       "year": 2021,
       "types": [
-        "Real time",
+        "Real-time",
         "Cards",
         "Closed drafting",
         "Speed matching"
@@ -3159,7 +3159,7 @@
       "year": 2020,
       "types": [
         "Deduction",
-        "Murder mystery",
+        "Murder/Mystery",
         "Cooperative",
         "Storytelling",
         "Expansion",
@@ -3225,7 +3225,7 @@
       "year": 2018,
       "types": [
         "Deduction",
-        "Murder mystery",
+        "Murder/Mystery",
         "Narrative choice/paragraph",
         "Solitaire",
         "Storytelling"
@@ -3250,7 +3250,7 @@
       "types": [
         "Line drawing",
         "Party",
-        "Real time"
+        "Real-time"
       ],
       "language": "en",
       "players": [
@@ -3293,7 +3293,7 @@
       "types": [
         "Party",
         "Children's game",
-        "Real time",
+        "Real-time",
         "Simultaneous action selection"
       ],
       "language": "es",
@@ -3822,9 +3822,9 @@
       "types": [
         "Cards",
         "Horror",
-        "Murder mystery",
+        "Murder/Mystery",
         "Puzzle",
-        "Real time",
+        "Real-time",
         "Solitaire",
         "Escape room"
       ],
@@ -3847,7 +3847,7 @@
       "year": 2023,
       "types": [
         "Deduction",
-        "Murder mystery",
+        "Murder/Mystery",
         "Puzzle",
         "Communication limits",
         "Cooperative"
@@ -3861,7 +3861,7 @@
       "complexity": 2.14,
       "rate": 7.8,
       "image": "perspectives",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 12,
       "bggReference": 0
     },
@@ -4060,7 +4060,7 @@
       "year": 2019,
       "types": [
         "Deduction",
-        "Murder mystery",
+        "Murder/Mystery",
         "Cooperative",
         "Storytelling",
         "Expansion",
@@ -4434,7 +4434,7 @@
       "types": [
         "Cards",
         "Party",
-        "Real time",
+        "Real-time",
         "Words",
         "Speed matching",
         "Spelling"
@@ -4529,7 +4529,7 @@
       "year": 2020,
       "types": [
         "Deduction",
-        "Murder mystery",
+        "Murder/Mystery",
         "Narrative choice/paragraph",
         "Storytelling",
         "Expansion",
@@ -4691,7 +4691,7 @@
       "editor": "Melmac Games",
       "year": 2021,
       "types": [
-        "Abstract",
+        "Abstract strategy",
         "Farming",
         "Solitaire",
         "Pattern building",
@@ -4850,10 +4850,10 @@
       "year": 1988,
       "types": [
         "Solitaire",
-        "Abstract",
+        "Abstract strategy",
         "Pattern recognition",
         "Speed matching",
-        "Real time",
+        "Real-time",
         "Puzzle"
       ],
       "language": "es",
@@ -4990,7 +4990,7 @@
       "editor": "Devir",
       "year": 2022,
       "types": [
-        "Abstract",
+        "Abstract strategy",
         "Family",
         "Area majority",
         "Modular board",
@@ -5072,7 +5072,7 @@
       "types": [
         "Cards",
         "Deduction",
-        "Murder mystery",
+        "Murder/Mystery",
         "Cooperative",
         "Narrative choice/paragraph",
         "Storytelling"
@@ -5279,7 +5279,7 @@
       "year": 2018,
       "types": [
         "Cards",
-        "Real time",
+        "Real-time",
         "Pattern building"
       ],
       "language": "x",
@@ -5408,7 +5408,7 @@
       "editor": "Key Enigma",
       "year": 2021,
       "types": [
-        "Murder mystery",
+        "Murder/Mystery",
         "Puzzle",
         "Science fiction",
         "Cooperative",
@@ -5610,9 +5610,204 @@
       "complexity": 2.03,
       "rate": 8.2,
       "image": "sky-team",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 12,
       "bggReference": 373106
+    },
+    {
+      "name": "Town 77",
+      "editor": "Oink Games",
+      "year": 2023,
+      "types": [
+        "Puzzle",
+        "Hand management",
+        "Pattern building",
+        "Solitaire",
+        "Square grid",
+        "Tile placement"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.83,
+      "rate": 6.7,
+      "image": "town-77",
+      "isPlayed": true,
+      "age": 9,
+      "bggReference": 402310
+    },
+    {
+      "name": "Startups",
+      "editor": "Oink Games",
+      "year": 2017,
+      "types": [
+        "Party",
+        "Cards",
+        "Economic",
+        "Area majority",
+        "Hot potato",
+        "Increase value of unchosen resources",
+        "Investment",
+        "Score-amd-reset"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        7
+      ],
+      "time": 20,
+      "complexity": 1.56,
+      "rate": 7.2,
+      "image": "startups",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 223770
+    },
+    {
+      "name": "Ghost Blitz",
+      "editor": "AEG",
+      "year": 2024,
+      "types": [
+        "Party",
+        "Family",
+        "Dexterity",
+        "Cards",
+        "Children's game",
+        "Real-time",
+        "Pattern recognition",
+        "Speed matching"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 20,
+      "complexity": 1.14,
+      "rate": 6.7,
+      "image": "ghost-blitz",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 2034769
+    },
+     {
+      "name": "Fafnir",
+      "editor": "Oink Games",
+      "year": 2019,
+      "types": [
+        "Auction",
+        "Bidding"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 1.71,
+      "rate": 6.3,
+      "image": "fafnir",
+      "isPlayed": false,
+      "age": 9,
+      "bggReference": 294233
+    },
+        {
+      "name": "In a grove",
+      "editor": "Oink Games",
+      "year": 2010,
+      "types": [
+        "Party",
+        "Bluffing",
+        "Deduction",
+        "Murder/Mystery",
+        "Memory"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.47,
+      "rate": 6.3,
+      "image": "in-a-grove",
+      "isPlayed": false,
+      "age": 9,
+      "bggReference": 102181
+    },
+     {
+      "name": "Nine Tiles Panic",
+      "editor": "Oink Games",
+      "year": 2019,
+      "types": [
+        "Real-time",
+        "Pattern building",
+        "Tile placement"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.29,
+      "rate": 6.9,
+      "image": "nine-tiles-panic",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 279869
+    },
+     {
+      "name": "Maskmen",
+      "editor": "Oink Games",
+      "year": 2014,
+      "types": [
+        "Family",
+        "Cards",
+        "Sports",
+        "Ladder climbing"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.67,
+      "rate": 6.9,
+      "image": "maskmen",
+      "isPlayed": false,
+      "age": 9,
+      "bggReference": 159581
+    },
+     {
+      "name": "Moving wild",
+      "editor": "Oink Games",
+      "year": 2024,
+      "types": [
+        "Cards",
+        "Animals",
+        "Closed drafting",
+        "Hand management",
+        "Melding and Splaying",
+        "Set collection",
+        "Solitaire"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.67,
+      "rate": 7.0,
+      "image": "moving-wild",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 423270
     }
   ]
 }
