@@ -149,11 +149,48 @@ export class GamesComponent implements OnInit, AfterViewInit {
     if (!selectedChipTypes) {
       this.resetGamesList();
     } else {
+      this.filterFunctions.flipAllCards(this.innerElements);
       this.filteredGames = this.gamesList.filter((card) => {
         return selectedChipTypes.every((selectedType) =>
           card.types.includes(selectedType),
         );
       });
+    }
+  }
+
+  onSearchTypes(target: any) {
+    this.types = this.searchTypes(target.value);
+  }
+
+  searchTypes(value: any) {
+    let filter = value.toLowerCase();
+    if (!value) {
+      return this.commonFunctions.extractUniqueValues(
+        this.filterFunctions.sortByNameAscending(this.gamesList),
+        'types',
+      );
+    } else {
+      return this.types.filter((editor) =>
+        editor.toLowerCase().includes(filter),
+      );
+    }
+  }
+
+  onSearchEditors(target: any) {
+    this.editors = this.searchEditors(target.value);
+  }
+
+  searchEditors(value: any) {
+    let filter = value.toLowerCase();
+    if (!value) {
+      return this.commonFunctions.extractUniqueValues(
+        this.filterFunctions.sortByNameAscending(this.gamesList),
+        'editor',
+      );
+    } else {
+      return this.editors.filter((editor) =>
+        editor.toLowerCase().includes(filter),
+      );
     }
   }
 
