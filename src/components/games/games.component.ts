@@ -4,6 +4,7 @@ import {
   ElementRef,
   OnInit,
   QueryList,
+  ViewChild,
   ViewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -55,7 +56,9 @@ import { LoaderService } from '../../core/services/loader/loader.service';
   styleUrl: '../common-styles.scss',
 })
 export class GamesComponent implements OnInit, AfterViewInit {
-  @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
+  @ViewChild('topPage') topPage!: ElementRef;
+  @ViewChildren('innerElement')
+  innerElements!: QueryList<ElementRef>;
   gamesList!: Array<GameCard>;
 
   selectedTypes = new FormControl<string[]>([]);
@@ -92,8 +95,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
   constructor(
     public commonFunctions: CommonFunctionsService,
     public filterFunctions: FilterFunctionsService,
-    private httpDataService: HttpService,
-    private loaderService: LoaderService,
+    private readonly httpDataService: HttpService,
+    private readonly loaderService: LoaderService,
   ) {}
 
   ngOnInit(): void {
@@ -146,16 +149,18 @@ export class GamesComponent implements OnInit, AfterViewInit {
   onTypeChange(selectedChipTypes: Array<string>) {
     this.gamesFilterForm.reset();
     this.restartDropdownFilters();
-    if (!selectedChipTypes) {
-      this.resetGamesList();
-    } else {
-      this.filterFunctions.flipAllCards(this.innerElements);
+    if (selectedChipTypes.length > 0) {
       this.filteredGames = this.gamesList.filter((card) => {
         return selectedChipTypes.every((selectedType) =>
           card.types.includes(selectedType),
         );
       });
+    } else {
+      this.resetGamesList();
     }
+    setTimeout(() => {
+      this.filterFunctions.flipAllCards(this.innerElements);
+    }, 100);
   }
 
   onSearchTypes(target: any) {
@@ -298,6 +303,10 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.selectedChipTypes = [];
     this.resetPlayedGames();
     this.filterFunctions.flipAllCards(this.innerElements);
+    this.topPage.nativeElement.scrollIntoView({
+      block: 'end',
+      behavior: 'smooth',
+    });
   }
 
   restartDropdownFilters() {
