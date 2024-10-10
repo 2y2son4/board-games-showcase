@@ -6,41 +6,50 @@ import { GameCard } from '../commons.models';
 
 const game1: GameCard = {
   name: 'Game 1',
-  year: 2021,
   editor: 'Editor 1',
+  year: 2021,
   types: ['Type A'],
   language: 'en',
+  players: [4],
+  time: 15,
   complexity: 2,
   rate: 0,
+  image: 'image',
   isPlayed: true,
-  players: [4],
   age: 1,
+  bggReference: 0,
 };
 
 const game2: GameCard = {
   name: 'Game 2',
-  year: 2022,
   editor: 'Editor 2',
+  year: 2022,
   types: ['Type B', 'Type C'],
   language: 'es',
+  players: [27],
+  time: 20,
   complexity: 3,
   rate: 0,
+  image: 'image',
   isPlayed: false,
-  players: [27],
   age: 1,
+  bggReference: 0,
 };
 
 const game3: GameCard = {
   name: 'Another thing',
-  year: 2023,
   editor: 'Editor 1',
+  year: 2023,
   types: ['Type A', 'Type D'],
   language: 'en',
+  players: [2],
+  time: 15,
   complexity: 1,
   rate: 0,
+  image: 'image',
   isPlayed: false,
-  players: [2],
   age: 1,
+  bggReference: 0,
 };
 
 describe('GamesComponent', () => {
