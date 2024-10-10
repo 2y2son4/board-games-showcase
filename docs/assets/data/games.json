@@ -3182,9 +3182,7 @@
       "name": "Mr. Jack",
       "editor": "Devir",
       "year": 2006,
-      "types": [
-        
-      ],
+      "types": [],
       "language": "es",
       "players": [
         2,
@@ -5693,7 +5691,7 @@
       "age": 8,
       "bggReference": 2034769
     },
-     {
+    {
       "name": "Fafnir",
       "editor": "Oink Games",
       "year": 2019,
@@ -5714,7 +5712,7 @@
       "age": 9,
       "bggReference": 294233
     },
-        {
+    {
       "name": "In a grove",
       "editor": "Oink Games",
       "year": 2010,
@@ -5738,7 +5736,7 @@
       "age": 9,
       "bggReference": 102181
     },
-     {
+    {
       "name": "Nine Tiles Panic",
       "editor": "Oink Games",
       "year": 2019,
@@ -5760,7 +5758,7 @@
       "age": 7,
       "bggReference": 279869
     },
-     {
+    {
       "name": "Maskmen",
       "editor": "Oink Games",
       "year": 2014,
@@ -5783,7 +5781,7 @@
       "age": 9,
       "bggReference": 159581
     },
-     {
+    {
       "name": "Moving wild",
       "editor": "Oink Games",
       "year": 2024,
@@ -5808,6 +5806,102 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 423270
+    },
+    {
+      "name": "Biss 20",
+      "editor": "999 Games",
+      "year": 2020,
+      "types": [
+        "Party"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        8
+      ],
+      "time": 20,
+      "complexity": 1.25,
+      "rate": 6.9,
+      "image": "biss-20",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 318195
+    },
+    {
+      "name": "Faraway",
+      "editor": "Catch up Games",
+      "year": 2023,
+      "types": [
+        "Family",
+        "Adventure",
+        "Cards",
+        "Contracts",
+        "Open drafting",
+        "Set collection",
+        "Simultaneous action selection"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 30,
+      "complexity": 1.87,
+      "rate": 7.6,
+      "image": "faraway",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 385761
+    },
+    {
+      "name": "Dumb ways to die",
+      "editor": "Spin master",
+      "year": 2023,
+      "types": [
+        "Cards",
+        "Humor",
+        "Hand management",
+        "Player elimination",
+        "Push your luck",
+        "Take that"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.25,
+      "rate": 6,
+      "image": "dumb-ways-to-die",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 392173
+    },
+    {
+      "name": "Moon adventure",
+      "editor": "Oink Games",
+      "year": 2021,
+      "types": [
+        "Exploration",
+        "Action points",
+        "Cooperative",
+        "Dice rolling",
+        "Pick-up and Deliver",
+        "Push your luck"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 40,
+      "complexity": 2.16,
+      "rate": 6.7,
+      "image": "moon-adventure",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 330403
     }
   ]
 }
