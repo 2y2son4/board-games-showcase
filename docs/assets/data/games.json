@@ -2472,7 +2472,7 @@
       "complexity": 2,
       "rate": 6.4,
       "image": "cold-case",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 0
     },
@@ -4327,7 +4327,7 @@
       "complexity": 0,
       "rate": 0,
       "image": "a-sacar-la-basura",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10,
       "bggReference": 308768
     },
@@ -5660,7 +5660,7 @@
       "complexity": 1.56,
       "rate": 7.2,
       "image": "startups",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10,
       "bggReference": 223770
     },
@@ -5803,7 +5803,7 @@
       "complexity": 1.67,
       "rate": 7.0,
       "image": "moving-wild",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 423270
     },
