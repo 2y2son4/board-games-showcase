@@ -5732,7 +5732,7 @@
       "complexity": 1.47,
       "rate": 6.3,
       "image": "in-a-grove",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 9,
       "bggReference": 102181
     },
@@ -5754,7 +5754,7 @@
       "complexity": 1.29,
       "rate": 6.9,
       "image": "nine-tiles-panic",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 7,
       "bggReference": 279869
     },
