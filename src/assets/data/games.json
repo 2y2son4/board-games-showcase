@@ -1763,7 +1763,7 @@
       "complexity": 1.00,
       "rate": 6.2,
       "image": "wordsmith",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10,
       "bggReference": 274296
     },
@@ -3784,7 +3784,7 @@
       "complexity": 2.25,
       "rate": 6.6,
       "image": "circo-maldito",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 0
     },
@@ -4770,7 +4770,7 @@
       "complexity": 1.26,
       "rate": 6.7,
       "image": "rolling-ranch",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 0
     },
@@ -4955,7 +4955,7 @@
       "complexity": 1.00,
       "rate": 5.6,
       "image": "city-blox",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 6,
       "bggReference": 0
     },
@@ -5512,7 +5512,7 @@
       "complexity": 1,
       "rate": 6.5,
       "image": "fast-shot",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 6,
       "bggReference": 249730
     },
@@ -5558,7 +5558,7 @@
       "complexity": 1.33,
       "rate": 6.4,
       "image": "foto-perfecta",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 360224
     },
@@ -5777,7 +5777,7 @@
       "complexity": 1.67,
       "rate": 6.9,
       "image": "maskmen",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 9,
       "bggReference": 159581
     },
