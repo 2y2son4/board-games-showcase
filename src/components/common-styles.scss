@@ -519,3 +519,11 @@ a:active {
     width: 100%;
   }
 }
+
+.dropdown-search {
+  border: none;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: 12px;
+  margin-left: 16px;
+  padding: 6px 4px;
+}

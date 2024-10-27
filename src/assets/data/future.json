@@ -1,0 +1,24 @@
+{
+  "future": [
+    {
+      "name": "Game",
+      "editor": "AEG",
+      "year": 2024,
+      "types": [
+        "Party"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 0,
+      "complexity": 0,
+      "rate": 0,
+      "image": "game",
+      "isPlayed": false,
+      "age": 0,
+      "bggReference": 0
+    }
+  ]
+}
