@@ -7,12 +7,12 @@ import { GameCard, OracleCard } from '../../../components/commons.models';
   providedIn: 'root',
 })
 export class HttpService {
-  private gamesDb = 'assets/data/games.json';
-  private oraclesDb = 'assets/data/oracles.json';
-  private bggUrl = 'https://boardgamegeek.com/xmlapi2/';
-  private proxyUrl = 'http://localhost:8080/';
+  private readonly gamesDb = 'assets/data/games.json';
+  private readonly oraclesDb = 'assets/data/oracles.json';
+  private readonly bggUrl = 'https://boardgamegeek.com/xmlapi2/';
+  private readonly proxyUrl = 'http://localhost:8080/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {}
 
   getGames(): Observable<{ games: GameCard[] }> {
     return this.http.get<{ games: GameCard[] }>(this.gamesDb).pipe(

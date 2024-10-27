@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,7 +20,6 @@ import { GameDetailsComponent } from '../game-details/game-details.component';
     CommonModule,
     FormsModule,
     GameDetailsComponent,
-    HttpClientModule,
     LoaderComponent,
     MatButtonModule,
     MatCardModule,
@@ -44,8 +43,8 @@ export class BggSearchComponent {
   showNumberOfResults!: boolean;
 
   constructor(
-    private http: HttpClient,
-    private loaderService: LoaderService,
+    private readonly http: HttpClient,
+    private readonly loaderService: LoaderService,
   ) {}
 
   search() {

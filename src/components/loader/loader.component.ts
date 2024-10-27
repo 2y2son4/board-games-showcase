@@ -11,8 +11,8 @@ export class LoaderComponent implements OnInit {
   loading: boolean = false;
 
   constructor(
-    private cdr: ChangeDetectorRef,
-    private loaderService: LoaderService,
+    private readonly cdr: ChangeDetectorRef,
+    private readonly loaderService: LoaderService,
   ) {}
 
   ngOnInit(): void {

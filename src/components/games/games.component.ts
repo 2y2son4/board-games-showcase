@@ -8,7 +8,6 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import {
   FormControl,
   FormGroup,
@@ -40,7 +39,6 @@ import { LoaderService } from '../../core/services/loader/loader.service';
     CommonModule,
     FormsModule,
     HighlightTextPipe,
-    HttpClientModule,
     LoaderComponent,
     MatButtonModule,
     MatCardModule,

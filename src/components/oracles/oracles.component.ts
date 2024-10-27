@@ -7,7 +7,6 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
@@ -24,7 +23,6 @@ import { LoaderService } from '../../core/services/loader/loader.service';
   imports: [
     CommonModule,
     HighlightTextPipe,
-    HttpClientModule,
     LoaderComponent,
     ScrollToTopBtnComponent,
   ],
@@ -41,8 +39,8 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   constructor(
     public commonFunctions: CommonFunctionsService,
     public filterFunctions: FilterFunctionsService,
-    private httpDataService: HttpService,
-    private loaderService: LoaderService,
+    private readonly httpDataService: HttpService,
+    private readonly loaderService: LoaderService,
   ) {}
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { MatChipsModule } from '@angular/material/chips';
 @Component({
   selector: 'app-game-details',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, LoaderComponent, MatChipsModule],
+  imports: [CommonModule, LoaderComponent, MatChipsModule],
   templateUrl: './game-details.component.html',
   styleUrls: ['./game-details.component.scss'],
 })
@@ -18,7 +18,7 @@ export class GameDetailsComponent implements OnChanges {
   @Input() objectid: string | null = null;
   @Input() gameDetails: any = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private readonly http: HttpClient) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['objectid'] && this.objectid) {
@@ -27,7 +27,7 @@ export class GameDetailsComponent implements OnChanges {
   }
 
   fetchGameDetails(objectid: string) {
-    const apiUrl = `/api/xmlapi/boardgame/${objectid}`; // Proxy URL
+    const apiUrl = `/api/xmlapi/boardgame/${objectid}`;
     this.http
       .get(apiUrl, { responseType: 'text' })
       .pipe(
