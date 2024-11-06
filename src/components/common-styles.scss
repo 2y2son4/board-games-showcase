@@ -313,24 +313,16 @@ p {
       width: 100%;
     }
 
-    &-down-2 {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      justify-items: center;
-    }
+    &-down {
+      display: flex;
+      justify-content: space-around;
 
-    &-down-3 {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-      justify-items: center;
+      &-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 
