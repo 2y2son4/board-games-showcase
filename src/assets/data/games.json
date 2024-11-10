@@ -2986,7 +2986,7 @@
       "complexity": 2,
       "rate": 7.8,
       "image": "nightmare",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 16,
       "bggReference": 0
     },
@@ -5086,7 +5086,7 @@
       "complexity": 1.14,
       "rate": 6.7,
       "image": "crime-zoom-1",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 294235
     },
@@ -5926,7 +5926,7 @@
       "complexity": 1.07,
       "rate": 7.1,
       "image": "belratti",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 259374
     },
