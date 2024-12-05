@@ -89,6 +89,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
     'Rate ↑',
     'Rate ↓',
   ];
+  showPlayedBtn = true;
+  showUnplayedBtn = true;
 
   constructor(
     public commonFunctions: CommonFunctionsService,
@@ -276,19 +278,25 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   togglePlayed() {
+    this.resetGamesList();
     this.filterFunctions.flipAllCards(this.innerElements);
     this.unPlayedGames = false;
     this.playedGames = !this.playedGames;
     this.filteredGames = this.filteredGames.filter((game) => game.isPlayed);
     this.selectedChipTypes = [];
+    this.showPlayedBtn = false;
+    this.showUnplayedBtn = true;
   }
 
   toggleUnPlayed() {
+    this.resetGamesList();
     this.filterFunctions.flipAllCards(this.innerElements);
     this.playedGames = false;
     this.unPlayedGames = !this.unPlayedGames;
     this.filteredGames = this.filteredGames.filter((game) => !game.isPlayed);
     this.selectedChipTypes = [];
+    this.showPlayedBtn = true;
+    this.showUnplayedBtn = false;
   }
 
   resetGamesList() {
@@ -305,6 +313,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
       block: 'end',
       behavior: 'smooth',
     });
+    this.showPlayedBtn = true;
+    this.showUnplayedBtn = true;
   }
 
   restartDropdownFilters() {

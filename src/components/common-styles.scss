@@ -297,7 +297,8 @@ p {
     &-title {
       display: flex;
       align-items: flex-end;
-      gap: 4px;
+      justify-content: space-between;
+      width: 100%;
 
       @media screen and (max-width: 767px) {
         display: none;
