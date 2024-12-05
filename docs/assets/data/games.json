@@ -4508,7 +4508,8 @@
       "year": 2019,
       "types": [
         "Action/Event",
-        "Children's game"
+        "Children's game",
+        "Stacking and balancing"
       ],
       "language": "x",
       "players": [
@@ -6174,6 +6175,225 @@
       "isPlayed": false,
       "age": 16,
       "bggReference": 311654
+    },
+    {
+      "name": "Durian",
+      "editor": "Oink Games",
+      "year": 2020,
+      "types": [
+        "Party",
+        "Bluffing",
+        "Cards",
+        "Deduction",
+        "Hand management",
+        "Push your luck"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        7
+      ],
+      "time": 20,
+      "complexity": 1.13,
+      "rate": 6.9,
+      "image": "durian",
+      "isPlayed": true,
+      "age": 7,
+      "bggReference": 307963
+    }, {
+      "name": "Something is wrong here",
+      "editor": "The hill press",
+      "year": 2020,
+      "types": [
+        "Rol"
+      ],
+      "language": "es",
+      "players": [
+        6,
+        7
+      ],
+      "time": 240,
+      "complexity": 0,
+      "rate": 0,
+      "image": "something-is-wrong-here",
+      "isPlayed": false,
+      "age": 18,
+      "bggReference": 0
+    },
+    {
+      "name": "Ramen Fury",
+      "editor": "Mixlore",
+      "year": 2019,
+      "types": [
+        "Family",
+        "Hand management",
+        "Set collection",
+        "Take that"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.21,
+      "rate": 6.2,
+      "image": "ramen-fury",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 265524
+    },
+    {
+      "name": "Raid & Trade",
+      "editor": "EDGE",
+      "year": 2015,
+      "types": [
+        "Strategy",
+        "Miniatures",
+        "Negotiation",
+        "Action points",
+        "Area majority",
+        "Dice rolling",
+        "Hand management",
+        "Trading",
+        "Variable player powers",
+        "Exploration"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        5
+      ],
+      "time": 90,
+      "complexity": 2.58,
+      "rate": 5.8,
+      "image": "raid-and-trade",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 159003
+    },
+    {
+      "name": "Air Mail",
+      "editor": "Ludonova",
+      "year": 2022,
+      "types": [
+        "Aviation",
+        "Connections",
+        "Network and route building",
+        "Pick-up and Deliver",
+        "Action points"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 75,
+      "complexity": 2.43,
+      "rate": 6.9,
+      "image": "air-mail",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 359234
+    },
+    {
+      "name": "Airship city",
+      "editor": "EDGE",
+      "year": 2018,
+      "types": [
+        "Aviation",
+        "Worker placement",
+        "Set collection",
+        "Grid movement"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        4
+      ],
+      "time": 120,
+      "complexity": 3.11,
+      "rate": 6.9,
+      "image": "airship-city",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 256442
+    },
+    {
+      "name": "Escape Tales: Sin memoria",
+      "editor": "TCG Factory",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Puzzle",
+        "Cooperative",
+        "Solitaire",
+        "Deduction"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 540,
+      "complexity": 2.52,
+      "rate": 6.7,
+      "image": "escape-tales-sin-memoria",
+      "isPlayed": false,
+      "age": 16,
+      "bggReference": 282291
+    },
+    {
+      "name": "Rafter five",
+      "editor": "Oink Games",
+      "year": 2023,
+      "types": [
+        "Action",
+        "Dexterity",
+        "Layering",
+        "Player elimination",
+        "Single loser game",
+        "Stacking and balancing"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 20,
+      "complexity": 1,
+      "rate": 6.8,
+      "image": "rafter-five",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 405538
+    },
+    {
+      "name": "Naufrago",
+      "editor": "Eclipse editorial",
+      "year": 2024,
+      "types": [
+        "Adventure",
+        "Cards",
+        "Exploration",
+        "Solitaire",
+        "Storytelling",
+        "Track movement",
+        "Variable player powers",
+        "Narrative choice/paragraph"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        99
+      ],
+      "time": 35,
+      "complexity": 1.17,
+      "rate": 6.8,
+      "image": "naufrago",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 401493
     }
   ]
 }
