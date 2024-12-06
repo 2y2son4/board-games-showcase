@@ -2986,7 +2986,7 @@
       "complexity": 2,
       "rate": 7.8,
       "image": "nightmare",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 16,
       "bggReference": 0
     },
@@ -3094,6 +3094,7 @@
         "Dice rolling",
         "Network and route building",
         "Line drawing",
+        "Trains",
         "Solitaire"
       ],
       "language": "es",
@@ -3475,6 +3476,7 @@
         "Dice rolling",
         "Network and route building",
         "Line drawing",
+        "Trains",
         "Solitaire"
       ],
       "language": "es",
@@ -4506,7 +4508,8 @@
       "year": 2019,
       "types": [
         "Action/Event",
-        "Children's game"
+        "Children's game",
+        "Stacking and balancing"
       ],
       "language": "x",
       "players": [
@@ -5084,7 +5087,7 @@
       "complexity": 1.14,
       "rate": 6.7,
       "image": "crime-zoom-1",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 294235
     },
@@ -5902,6 +5905,495 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 330403
+    },
+    {
+      "name": "Belratti",
+      "editor": "Devir",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Cards",
+        "Deduction",
+        "Communication limits",
+        "Cooperative",
+        "Give a clue/Get a clue"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        7
+      ],
+      "time": 25,
+      "complexity": 1.07,
+      "rate": 7.1,
+      "image": "belratti",
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 259374
+    },
+    {
+      "name": "Android: Infiltration",
+      "editor": "Fantasy Flight Games",
+      "year": 2012,
+      "types": [
+        "Cards",
+        "Exploration",
+        "Science fiction",
+        "Spies",
+        "Dice rolling",
+        "Hand management",
+        "Modular board",
+        "Push your luck",
+        "Simultaneous action selection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 45,
+      "complexity": 2.10,
+      "rate": 6.5,
+      "image": "android-infiltration",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 118063
+    },
+    {
+      "name": "Android: Mainframe",
+      "editor": "Fantasy Flight Games",
+      "year": 2024,
+      "types": [
+        "Abstract strategy",
+        "Enclosure",
+        "Open drafting",
+        "Take that",
+        "Variable player powers"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.84,
+      "rate": 6.6,
+      "image": "android-mainframe",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 193557
+    },
+    {
+      "name": "La Leyenda de los Cinco Anillos: El Juego de Cartas",
+      "editor": "Fantasy Flight Games",
+      "year": 2017,
+      "types": [
+        "Cards",
+        "Collectible components",
+        "Fantasy",
+        "Action points",
+        "Deck construction",
+        "Hand management",
+        "Secret Unit Deployment",
+        "Simultaneous action selection",
+        "Variable player powers"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 90,
+      "complexity": 4,
+      "rate": 7.4,
+      "image": "la-leyenda-de-los-cinco-anillos",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 184151
+    },
+    {
+      "name": "Space Gate Odyssey",
+      "editor": "Ludonaute",
+      "year": 2019,
+      "types": [
+        "Strategy",
+        "Science fiction",
+        "Space exploration",
+        "Tile placement",
+        "Network and route building",
+        "Follow"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 90,
+      "complexity": 2.75,
+      "rate": 6.9,
+      "image": "space-gate-odyssey",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 266179
+    },
+    {
+      "name": "Misty",
+      "editor": "Helvetiq",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Closed drafting",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 15,
+      "complexity": 1.07,
+      "rate": 6.3,
+      "image": "misty",
+      "isPlayed": false,
+      "age": 6,
+      "bggReference": 270443
+    },
+    {
+      "name": "¡Aventureros al Tren! Cambio de Agujas",
+      "editor": "Days of Wonder",
+      "year": 2021,
+      "types": [
+        "Puzzle",
+        "Trains"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 60,
+      "complexity": 0,
+      "rate": 0,
+      "image": "aventureros-al-tren-cambio-de-agujas",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0
+    },
+    {
+      "name": "¡Aventureros al Tren! Londres",
+      "editor": "Days of Wonder",
+      "year": 2019,
+      "types": [
+        "Trains",
+        "Network and route building",
+        "Hand management",
+        "Open drafting",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 15,
+      "complexity": 1.34,
+      "rate": 7.1,
+      "image": "aventureros-al-tren-londres",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 276894
+    },
+    {
+      "name": "Art Society",
+      "editor": "Devir",
+      "year": 2023,
+      "types": [
+        "Auction",
+        "Auction: sealed bid",
+        "Auction: Once around",
+        "End game bonuses",
+        "Grid coverage",
+        "Open drafting",
+        "Market",
+        "Pattern building",
+        "Tile placement",
+        "Increase value of unchosen resources"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 60,
+      "complexity": 1.80,
+      "rate": 7.6,
+      "image": "art-society",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 395375
+    },
+    {
+      "name": "Kartel",
+      "editor": "Helvetiq",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Push your luck",
+        "Roll / spin and move",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.29,
+      "rate": 6.2,
+      "image": "kartel",
+      "isPlayed": false,
+      "age": 6,
+      "bggReference": 244584
+    },
+    {
+      "name": "Alice ha Desaparecido",
+      "editor": "Devir",
+      "year": 2020,
+      "types": [
+        "Crime",
+        "Mystery",
+        "Detective/Noir",
+        "Description based"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        5
+      ],
+      "time": 0,
+      "complexity": 0,
+      "rate": 8,
+      "image": "alice-ha-desaparecido",
+      "isPlayed": false,
+      "age": 16,
+      "bggReference": 311654
+    },
+    {
+      "name": "Durian",
+      "editor": "Oink Games",
+      "year": 2020,
+      "types": [
+        "Party",
+        "Bluffing",
+        "Cards",
+        "Deduction",
+        "Hand management",
+        "Push your luck"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        7
+      ],
+      "time": 20,
+      "complexity": 1.13,
+      "rate": 6.9,
+      "image": "durian",
+      "isPlayed": true,
+      "age": 7,
+      "bggReference": 307963
+    }, {
+      "name": "Something is wrong here",
+      "editor": "The hill press",
+      "year": 2020,
+      "types": [
+        "Rol"
+      ],
+      "language": "es",
+      "players": [
+        6,
+        7
+      ],
+      "time": 240,
+      "complexity": 0,
+      "rate": 0,
+      "image": "something-is-wrong-here",
+      "isPlayed": false,
+      "age": 18,
+      "bggReference": 0
+    },
+    {
+      "name": "Ramen Fury",
+      "editor": "Mixlore",
+      "year": 2019,
+      "types": [
+        "Family",
+        "Hand management",
+        "Set collection",
+        "Take that"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.21,
+      "rate": 6.2,
+      "image": "ramen-fury",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 265524
+    },
+    {
+      "name": "Raid & Trade",
+      "editor": "EDGE",
+      "year": 2015,
+      "types": [
+        "Strategy",
+        "Miniatures",
+        "Negotiation",
+        "Action points",
+        "Area majority",
+        "Dice rolling",
+        "Hand management",
+        "Trading",
+        "Variable player powers",
+        "Exploration"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        5
+      ],
+      "time": 90,
+      "complexity": 2.58,
+      "rate": 5.8,
+      "image": "raid-and-trade",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 159003
+    },
+    {
+      "name": "Air Mail",
+      "editor": "Ludonova",
+      "year": 2022,
+      "types": [
+        "Aviation",
+        "Connections",
+        "Network and route building",
+        "Pick-up and Deliver",
+        "Action points"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 75,
+      "complexity": 2.43,
+      "rate": 6.9,
+      "image": "air-mail",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 359234
+    },
+    {
+      "name": "Airship city",
+      "editor": "EDGE",
+      "year": 2018,
+      "types": [
+        "Aviation",
+        "Worker placement",
+        "Set collection",
+        "Grid movement"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        4
+      ],
+      "time": 120,
+      "complexity": 3.11,
+      "rate": 6.9,
+      "image": "airship-city",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 256442
+    },
+    {
+      "name": "Escape Tales: Sin memoria",
+      "editor": "TCG Factory",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Puzzle",
+        "Cooperative",
+        "Solitaire",
+        "Deduction"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 540,
+      "complexity": 2.52,
+      "rate": 6.7,
+      "image": "escape-tales-sin-memoria",
+      "isPlayed": false,
+      "age": 16,
+      "bggReference": 282291
+    },
+    {
+      "name": "Rafter five",
+      "editor": "Oink Games",
+      "year": 2023,
+      "types": [
+        "Action",
+        "Dexterity",
+        "Layering",
+        "Player elimination",
+        "Single loser game",
+        "Stacking and balancing"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 20,
+      "complexity": 1,
+      "rate": 6.8,
+      "image": "rafter-five",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 405538
+    },
+    {
+      "name": "Naufrago",
+      "editor": "Eclipse editorial",
+      "year": 2024,
+      "types": [
+        "Adventure",
+        "Cards",
+        "Exploration",
+        "Solitaire",
+        "Storytelling",
+        "Track movement",
+        "Variable player powers",
+        "Narrative choice/paragraph"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        99
+      ],
+      "time": 35,
+      "complexity": 1.17,
+      "rate": 6.8,
+      "image": "naufrago",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 401493
     }
   ]
 }

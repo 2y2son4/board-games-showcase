@@ -82,24 +82,32 @@
                   </mat-chip-listbox>
 
                 </div>
-                <div [ngClass]="game.bggReference ? 'card__info-down-3' : 'card__info-down-2'">
-                  <p class="card__rate-title">Rate:</p>
-                  <div [style.background-color]="commonFunctions.getRateColor(game.rate)"
-                    [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
-                    {{!game.rate ? 'X' :game.rate}}</div>
-                  <p class="card__complexity-title">Complexity:</p>
-                  <div [style.background-color]="commonFunctions.getComplexityColor(game.complexity)"
-                    [ngClass]="{'border-pink': game.isPlayed }" class="card__complexity">
-                    {{ !game.complexity ? 'X' :
-                    game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>
+                <div class="card__info-down">
+                  @if(game.rate){
+                  <div class="card__info-down-container">
+                    <p class="card__rate-title">Rate:</p>
+                    <div [style.background-color]="commonFunctions.getRateColor(game.rate)"
+                      [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
+                      {{!game.rate ? 'X' :game.rate}}</div>
+                  </div>}
+                  @if(game.complexity){
+                  <div class="card__info-down-container">
+                    <p class="card__complexity-title">Complexity:</p>
+                    <div [style.background-color]="commonFunctions.getComplexityColor(game.complexity)"
+                      [ngClass]="{'border-pink': game.isPlayed }" class="card__complexity">
+                      {{ !game.complexity ? 'X' :
+                      game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>
+                  </div>}
                   @if(game.bggReference){
-                  <p class="card__bgg-title">BGG page:</p>
-                  <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
-                    rel="noopener noreferrer">
-                    <div class="card__bgg">
-                      GO
-                    </div>
-                  </a>}
+                  <div class="card__info-down-container">
+                    <p class="card__rate-title">BGG page:</p>
+                    <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
+                      rel="noopener noreferrer">
+                      <div class="card__bgg">
+                        GO
+                      </div>
+                    </a>
+                  </div>}
                 </div>
               </div>
             </div>
@@ -130,11 +138,15 @@
         </button>
         }
       </mat-form-field>
-      <mat-form-field><mat-label>Number of players</mat-label><input matInput type="number" maxlength="2" min="1"
-          id="exactPlayers" name="exactPlayers" [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
+      <mat-form-field>
+        <mat-label>Number of players</mat-label>
+        <input matInput type="number" maxlength="2" min="1" id="exactPlayers" name="exactPlayers"
+          [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
       </mat-form-field>
-      <mat-form-field><mat-label>Age</mat-label><input matInput type="number" maxlength="2" min="1" id="exactAge"
-          name="exactAge" [(ngModel)]="exactAge" (input)="filterGamesByAge()">
+      <mat-form-field>
+        <mat-label>Age</mat-label>
+        <input matInput type="number" maxlength="2" min="1" id="exactAge" name="exactAge" [(ngModel)]="exactAge"
+          (input)="filterGamesByAge()">
       </mat-form-field>
       <mat-form-field>
         <mat-label>Sort</mat-label>
@@ -156,12 +168,14 @@
           <mat-option *ngFor="let editor of editors" [value]="editor">{{editor}}</mat-option>
         </mat-select>
       </mat-form-field>
+      @if(showPlayedBtn){
       <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
         Played
-      </button>
+      </button>}
+      @if(showUnplayedBtn){
       <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
         Unplayed
-      </button>
+      </button>}
       <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
       </button>
     </div>
