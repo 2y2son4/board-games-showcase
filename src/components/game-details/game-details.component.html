@@ -32,6 +32,11 @@
         @for(category of gameDetails.boardgamecategory; let index = $index; let last = $last; track index){
         <mat-chip [value]="category"> {{category}} </mat-chip>}
       </mat-chip-set>
+      <div class="line"></div>
+      <mat-chip-set>
+        @for(size of gameDetails.size; let index = $index; track index){
+        <mat-chip [value]="size"> {{size.toUpperCase()}} </mat-chip>}
+      </mat-chip-set>
     </div>
   </article>
 </div>

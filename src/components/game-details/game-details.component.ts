@@ -3,14 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { LoaderComponent } from '../loader/loader.component';
 import { GameDetails } from '../commons.models';
 import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'app-game-details',
   standalone: true,
-  imports: [CommonModule, LoaderComponent, MatChipsModule],
+  imports: [CommonModule, MatChipsModule],
   templateUrl: './game-details.component.html',
   styleUrls: ['./game-details.component.scss'],
 })
@@ -42,6 +41,7 @@ export class GameDetailsComponent implements OnChanges {
         const json = this.xmlToJson(xml);
         this.gameDetails = this.cleanGameDetails(json.boardgames?.boardgame);
       });
+    console.log(this.gameDetails);
   }
 
   cleanGameDetails(details: any): GameDetails {
@@ -58,7 +58,10 @@ export class GameDetailsComponent implements OnChanges {
       boardgamecategory: this.extractNames(game.boardgamecategory),
       image: this.extractTextValue(game.image),
       boardgamepublisher: this.extractNames(game.boardgamepublisher),
+      size: game.size,
     };
+    console.log(details);
+    console.log(cleanedGame);
     return cleanedGame;
   }
 

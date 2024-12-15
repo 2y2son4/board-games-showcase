@@ -80,7 +80,11 @@
                     @for(type of game.types; let index = $index; let last = $last; track index){
                     <mat-chip-option [value]="type"> {{type}} </mat-chip-option>}
                   </mat-chip-listbox>
-
+                  @if(game.size){
+                  <div class="line" style="margin-top: 12px"></div>
+                  <mat-chip-listbox [(ngModel)]="selectedSize" (ngModelChange)="onSizeChange($event)">
+                    <mat-chip-option [value]=" game.size"> {{game.size.toUpperCase()}} </mat-chip-option>
+                  </mat-chip-listbox>}
                 </div>
                 <div class="card__info-down">
                   @if(game.rate){

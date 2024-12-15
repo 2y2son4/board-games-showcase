@@ -62,6 +62,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
   selectedChipTypes: Array<string> = [''];
+  selectedSize!: string;
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
   selectedSorting = new FormControl<string>('');
@@ -155,6 +156,22 @@ export class GamesComponent implements OnInit, AfterViewInit {
           card.types.includes(selectedType),
         );
       });
+    } else {
+      this.resetGamesList();
+    }
+    setTimeout(() => {
+      this.filterFunctions.flipAllCards(this.innerElements);
+    }, 100);
+  }
+
+  onSizeChange(selectedSize: string) {
+    console.log(selectedSize);
+    this.gamesFilterForm.reset();
+    this.restartDropdownFilters();
+    if (selectedSize) {
+      this.filteredGames = this.gamesList.filter((card) =>
+        card.size.includes(selectedSize),
+      );
     } else {
       this.resetGamesList();
     }
