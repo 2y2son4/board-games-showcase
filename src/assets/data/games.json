@@ -2762,7 +2762,7 @@
       "image": "deep-sea-adventure",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0,
+      "bggReference": 169654,
       "size": "s"
     },
     {
@@ -2785,8 +2785,8 @@
       "image": "sriracha-the-game",
       "isPlayed": false,
       "age": 7,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 347029,
+      "size": "s"
     },
     {
       "name": "Werewolves of Miller's Hollow",
@@ -2809,8 +2809,8 @@
       "image": "werewolves-of-millers-hollow",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 25821,
+      "size": "xs"
     },
     {
       "name": "A prueba de retos",
