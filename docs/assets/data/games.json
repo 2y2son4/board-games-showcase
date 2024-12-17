@@ -2762,8 +2762,8 @@
       "image": "deep-sea-adventure",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 169654,
+      "size": "s"
     },
     {
       "name": "Sriracha the game",
@@ -2785,8 +2785,8 @@
       "image": "sriracha-the-game",
       "isPlayed": false,
       "age": 7,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 347029,
+      "size": "s"
     },
     {
       "name": "Werewolves of Miller's Hollow",
@@ -2809,8 +2809,8 @@
       "image": "werewolves-of-millers-hollow",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 25821,
+      "size": "xs"
     },
     {
       "name": "A prueba de retos",
@@ -3335,7 +3335,7 @@
       "isPlayed": true,
       "age": 9,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Lost Cities: Roll & Write",
@@ -3357,7 +3357,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Detective: A Modern Crime Board Game",
@@ -3382,7 +3382,7 @@
       "isPlayed": true,
       "age": 16,
       "bggReference": 0,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Pictomania (Second edition)",
@@ -3405,7 +3405,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Magnetism",
@@ -3427,7 +3427,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Funky pollo",
@@ -3451,7 +3451,7 @@
       "isPlayed": false,
       "age": 6,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Love letter",
@@ -3475,7 +3475,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Avalon",
@@ -3499,7 +3499,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Behind the campaign",
@@ -3521,7 +3521,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "War of Roshambo: Kingdom clash",
@@ -3565,7 +3565,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Canvas",
@@ -3590,7 +3590,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Canvas: Reflections",
@@ -3616,7 +3616,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Railroad ink: amarillo brillante",
@@ -4843,7 +4843,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Cubeez",
@@ -4889,7 +4889,7 @@
       "isPlayed": true,
       "age": 9,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Grove",
@@ -5524,7 +5524,7 @@
       "isPlayed": false,
       "age": 6,
       "bggReference": 249289,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Final Girl",
@@ -5883,7 +5883,7 @@
       "isPlayed": true,
       "age": 9,
       "bggReference": 402310,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Startups",
@@ -5911,7 +5911,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 223770,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Ghost Blitz",
@@ -5961,7 +5961,7 @@
       "isPlayed": false,
       "age": 9,
       "bggReference": 294233,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "In a grove",
@@ -5986,7 +5986,7 @@
       "isPlayed": true,
       "age": 9,
       "bggReference": 102181,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Nine Tiles Panic",
@@ -6009,7 +6009,7 @@
       "isPlayed": true,
       "age": 7,
       "bggReference": 279869,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Maskmen",
@@ -6033,7 +6033,7 @@
       "isPlayed": true,
       "age": 9,
       "bggReference": 159581,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Moving wild",
@@ -6060,7 +6060,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 423270,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Biss 20",
@@ -6160,7 +6160,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 330403,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Belratti",
@@ -6467,8 +6467,9 @@
       "isPlayed": true,
       "age": 7,
       "bggReference": 307963,
-      "size": ""
-    }, {
+      "size": "s"
+    },
+    {
       "name": "Something is wrong here",
       "editor": "The hill press",
       "year": 2020,
@@ -6486,8 +6487,8 @@
       "image": "something-is-wrong-here",
       "isPlayed": false,
       "age": 18,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 277462,
+      "size": "xs"
     },
     {
       "name": "Ramen Fury",
@@ -6511,7 +6512,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 265524,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Raid & Trade",
@@ -6541,7 +6542,7 @@
       "isPlayed": false,
       "age": 12,
       "bggReference": 159003,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Air Mail",
@@ -6566,7 +6567,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 359234,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Airship city",
@@ -6590,7 +6591,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 256442,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Escape Tales: Sin memoria",
@@ -6615,7 +6616,7 @@
       "isPlayed": false,
       "age": 16,
       "bggReference": 282291,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Rafter five",
@@ -6641,7 +6642,7 @@
       "isPlayed": false,
       "age": 7,
       "bggReference": 405538,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Naufrago",
@@ -6670,6 +6671,120 @@
       "age": 10,
       "bggReference": 401493,
       "size": ""
+    },
+    {
+      "name": "Chawai",
+      "editor": "SD Games",
+      "year": 2017,
+      "types": [
+        "Bluffing",
+        "Hand management",
+        "Simultaneous action selection"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.13,
+      "rate": 6.4,
+      "image": "chawai",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 226454,
+      "size": "m"
+    },
+    {
+      "name": "Deductio",
+      "editor": "SD Games",
+      "year": 2023,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Numbers",
+        "Open drafting"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 1,
+      "rate": 7,
+      "image": "deductio",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 397227,
+      "size": "s"
+    },
+    {
+      "name": "Escape Quest 3: Sola en Salem",
+      "editor": "SD Games",
+      "year": 2019,
+      "types": [
+        "Party"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 180,
+      "complexity": 0,
+      "rate": 6.7,
+      "image": "sola-en-salem",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 348443,
+      "size": "m"
+    },
+    {
+      "name": "Profiler: desaparición en el Caribe",
+      "editor": "Platonia Games",
+      "year": 2024,
+      "types": [
+        "Deduction",
+        "Murder/Mystery",
+        "Cooperative",
+        "Targeted clues"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 150,
+      "complexity": 0,
+      "rate": 0,
+      "image": "profiler-caribe",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 422753,
+      "size": "m"
+    },
+    {
+      "name": "Smart 10",
+      "editor": "SD Games",
+      "year": 2017,
+      "types": [
+        "Party",
+        "Trivia",
+        "Push your luck"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 45,
+      "complexity": 1.14,
+      "rate": 7.5,
+      "image": "smart-10",
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 241590,
+      "size": "s"
     }
   ]
 }
