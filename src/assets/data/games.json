@@ -3021,7 +3021,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Mix it (monster edition)",
@@ -3044,7 +3044,7 @@
       "isPlayed": true,
       "age": 5,
       "bggReference": 0,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "El Jurado 1 - El Caso de las Carpas Doradas",
@@ -3068,7 +3068,7 @@
       "isPlayed": false,
       "age": 15,
       "bggReference": 0,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Antarctica",
@@ -3094,7 +3094,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Nightmare",
@@ -3119,7 +3119,7 @@
       "isPlayed": true,
       "age": 16,
       "bggReference": 0,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Espías en la sombra",
@@ -3143,7 +3143,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Garabatos y mazmorras",
@@ -3167,7 +3167,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Loading",
@@ -3191,7 +3191,7 @@
       "isPlayed": false,
       "age": 7,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Terra Mare",
@@ -3217,7 +3217,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Railroad ink: azul profundo",
@@ -3244,7 +3244,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Arkham Noir #2: Invocado por el Trueno",
@@ -3316,25 +3316,32 @@
       "isPlayed": true,
       "age": 16,
       "bggReference": 299442,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Mr. Jack",
       "editor": "Devir",
       "year": 2006,
-      "types": [],
+      "types": [
+        "Strategy",
+        "Deduction",
+        "Grid movement",
+        "Hexagon Grid",
+        "Open drafting",
+        "Variable player powers"
+      ],
       "language": "es",
       "players": [
         2,
         4
       ],
       "time": 40,
-      "complexity": 1.73,
+      "complexity": 2.17,
       "rate": 7,
       "image": "mr-jack",
       "isPlayed": true,
       "age": 9,
-      "bggReference": 0,
+      "bggReference": 21763,
       "size": "m"
     },
     {
@@ -6667,7 +6674,7 @@
       "complexity": 1.17,
       "rate": 6.8,
       "image": "naufrago",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10,
       "bggReference": 401493,
       "size": ""
@@ -6714,7 +6721,7 @@
       "complexity": 1,
       "rate": 7,
       "image": "deductio",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 397227,
       "size": "s"
@@ -6734,7 +6741,7 @@
       "complexity": 0,
       "rate": 6.7,
       "image": "sola-en-salem",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 12,
       "bggReference": 348443,
       "size": "m"
