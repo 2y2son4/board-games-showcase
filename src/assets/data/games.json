@@ -6792,6 +6792,118 @@
       "age": 10,
       "bggReference": 241590,
       "size": "s"
+    },
+    {
+      "name": "Key Enigma: The butterfly curse",
+      "editor": "Key Enigma",
+      "year": 2020,
+      "types": [
+        "Exploration",
+        "Puzzle",
+        "Cooperative",
+        "Deduction",
+        "Storytelling"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 120,
+      "complexity": 2,
+      "rate": 7.2,
+      "image": "butterfly-curse",
+      "isPlayed": false,
+      "age": 13,
+      "bggReference": 332495
+    },
+    {
+      "name": "Polilla tramposa",
+      "editor": "Drei Magier Spiele",
+      "year": 2011,
+      "types": [
+        "Party",
+        "Action/Dexterity",
+        "Cards",
+        "Hand management"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.15,
+      "rate": 6.4,
+      "image": "polilla-tramposa",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 105593
+    },
+    {
+      "name": "Cockroach Poker",
+      "editor": "Drei Magier Spiele",
+      "year": 2004,
+      "types": [
+        "Party"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.10,
+      "rate": 6.8,
+      "image": "cockroach-poker",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 11971
+    },
+    {
+      "name": "¡Resistid!",
+      "editor": "Salt & Pepper Games",
+      "year": 2022,
+      "types": [
+        "Wargame",
+        "Cards",
+        "Spies"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 40,
+      "complexity": 2.24,
+      "rate": 7.5,
+      "image": "resistid",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 352697
+    },
+    {
+      "name": "Justice: Conan Boyle",
+      "editor": "AEG",
+      "year": 20240,
+      "types": [
+        "Deduction",
+        "Murder/Mystery",
+        "Semi-Cooperative",
+        "Storytelling",
+        "Voting"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        10
+      ],
+      "time": 60,
+      "complexity": 0,
+      "rate": 6,
+      "image": "justice-conan-boyle",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 371226
     }
   ]
 }
