@@ -123,8 +123,8 @@ export class GameDetailsComponent implements OnChanges {
 
   parseAttributes(attributes: NamedNodeMap): any {
     const attrObj: any = {};
-    for (let j = 0; j < attributes.length; j++) {
-      const attribute = attributes.item(j);
+    for (let index = 0; index < attributes.length; index++) {
+      const attribute = attributes.item(index);
       if (attribute) {
         attrObj[attribute.nodeName] = attribute.nodeValue;
       }

@@ -44,7 +44,7 @@
           <div class="card__list-back" [ngClass]="{'border-pink': game.isPlayed }">
             <img class="card__flag card__language" [ngClass]="{'border-pink': game.isPlayed }"
               src="assets/flags/{{game.language}}-flag.png" alt="flag">
-            <div class="card__info  card__info-scroll">
+            <div class="card__info card__info-scroll">
               <div class="card__info-title">
                 <p class="card__name" [innerHTML]="game.name | highlightText:searchQuery">
                 </p>
@@ -90,7 +90,7 @@
                   @if(game.rate){
                   <div class="card__info-down-container">
                     <p class="card__rate-title">Rate:</p>
-                    <div [style.background-color]="commonFunctions.getRateColor(game.rate)"
+                    <div [style.background-color]="commonFunctions.getRatingColor(game.rate)"
                       [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
                       {{!game.rate ? 'X' :game.rate}}</div>
                   </div>}
