@@ -6815,7 +6815,8 @@
       "image": "butterfly-curse",
       "isPlayed": false,
       "age": 13,
-      "bggReference": 332495
+      "bggReference": 332495,
+      "size": "s"
     },
     {
       "name": "Polilla tramposa",
@@ -6838,7 +6839,8 @@
       "image": "polilla-tramposa",
       "isPlayed": false,
       "age": 7,
-      "bggReference": 105593
+      "bggReference": 105593,
+      "size": "s"
     },
     {
       "name": "Cockroach Poker",
@@ -6858,7 +6860,8 @@
       "image": "cockroach-poker",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 11971
+      "bggReference": 11971,
+      "size": "s"
     },
     {
       "name": "¡Resistid!",
@@ -6879,7 +6882,8 @@
       "image": "resistid",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 352697
+      "bggReference": 352697,
+      "size": "s"
     },
     {
       "name": "Justice: Conan Boyle",
@@ -6903,7 +6907,77 @@
       "image": "justice-conan-boyle",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 371226
+      "bggReference": 371226,
+      "size": "s"
+    },
+    {
+      "name": "In front of the elevators",
+      "editor": "Popcorn games",
+      "year": 2019,
+      "types": [
+        "Family",
+        "Cards",
+        "Area majority",
+        "Influence",
+        "Hand management"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 1.42,
+      "rate": 7,
+      "image": "in-front-of-the-elevators",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 278751,
+      "size": "s"
+    },
+    {
+      "name": "Schummel Hummel",
+      "editor": "Drei Magier Spiele",
+      "year": 2017,
+      "types": [
+        "Party",
+        "Cards"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.26,
+      "rate": 6.6,
+      "image": "schummel-hummel",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 235944,
+      "size": "s"
+    },
+    {
+      "name": "Power hungry pets",
+      "editor": "Exploding kittens",
+      "year": 2024,
+      "types": [
+        "Cards",
+        "Player elimination"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1.17,
+      "rate": 7,
+      "image": "power-hungry-pets",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 411404,
+      "size": "s"
     }
   ]
 }
