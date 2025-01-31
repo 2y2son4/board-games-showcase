@@ -18,7 +18,8 @@
       "image": "game",
       "isPlayed": false,
       "age": 0,
-      "bggReference": 0
+      "bggReference": 0,
+      "size": "s"
     }
   ]
 }
