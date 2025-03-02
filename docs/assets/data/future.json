@@ -20,6 +20,126 @@
       "age": 0,
       "bggReference": 0,
       "size": "s"
+    },
+    {
+      "name": "Compile: Main 1",
+      "editor": "Greater Than Games",
+      "year": 2024,
+      "types": [
+        "Customizable",
+        "Strategy",
+        "Cards",
+        "Area majority",
+        "Influence"
+      ],
+      "language": "en",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 2.29,
+      "rate": 8.1,
+      "image": "compile-main",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 406652,
+      "size": "s"
+    },
+    {
+      "name": "Compile: Aux 1",
+      "editor": "Greater than games",
+      "year": 2024,
+      "types": [
+        "Customizable",
+        "Strategy",
+        "Cards",
+        "Area majority",
+        "Influence",
+        "Expansion"
+      ],
+      "language": "en",
+      "players": [
+        2
+      ],
+      "time": 30,
+      "complexity": 2.29,
+      "rate": 8.4,
+      "image": "compile-aux",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 417813,
+      "size": "xs"
+    },
+    {
+      "name": "Poetry slam",
+      "editor": "Mayday Games",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Words",
+        "Paper and pencil",
+        "Voting"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        10
+      ],
+      "time": 25,
+      "complexity": 1.50,
+      "rate": 6.3,
+      "image": "poetry-slam",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 247576,
+      "size": "m"
+    },
+    {
+      "name": "District Noir",
+      "editor": "Mebo",
+      "year": 2016,
+      "types": [
+        "Cards",
+        "Family",
+        "Hand management",
+        "Open drafting",
+        "Push your luck",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2
+      ],
+      "time": 20,
+      "complexity": 1.28,
+      "rate": 7,
+      "image": "district-noir",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 216497,
+      "size": "s"
+    },
+    {
+      "name": "Venn",
+      "editor": "The Op Games",
+      "year": 2022,
+      "types": [
+        "Party",
+        "Team-based"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        99
+      ],
+      "time": 30,
+      "complexity": 1.20,
+      "rate": 6,
+      "image": "venn",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 360175,
+      "size": "m"
     }
   ]
 }
