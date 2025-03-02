@@ -5370,7 +5370,7 @@
       "year": 2023,
       "types": [
         "Party",
-        "Player's judge",
+        "Player judge",
         "Music"
       ],
       "language": "en",
@@ -5393,7 +5393,7 @@
       "year": 2023,
       "types": [
         "Party",
-        "Player's judge",
+        "Player judge",
         "Music",
         "Expansion"
       ],
@@ -5417,7 +5417,7 @@
       "year": 2023,
       "types": [
         "Party",
-        "Player's judge",
+        "Player judge",
         "Music",
         "Expansion"
       ],
@@ -5441,7 +5441,7 @@
       "year": 2023,
       "types": [
         "Party",
-        "Player's judge",
+        "Player judge",
         "Music",
         "Expansion"
       ],
@@ -5904,7 +5904,7 @@
         "Hot potato",
         "Increase value of unchosen resources",
         "Investment",
-        "Score-amd-reset"
+        "Score-and-reset-game"
       ],
       "language": "en",
       "players": [
@@ -6481,7 +6481,14 @@
       "editor": "The hill press",
       "year": 2020,
       "types": [
-        "Rol"
+        "Rol",
+        "Adult",
+        "Horror",
+        "Modern",
+        "Social",
+        "Weird",
+        "Cards",
+        "Improvisation"
       ],
       "language": "es",
       "players": [
@@ -6763,7 +6770,7 @@
       ],
       "time": 150,
       "complexity": 0,
-      "rate": 0,
+      "rate": 8.1,
       "image": "profiler-caribe",
       "isPlayed": false,
       "age": 14,
@@ -6888,7 +6895,7 @@
     {
       "name": "Justice: Conan Boyle",
       "editor": "AEG",
-      "year": 20240,
+      "year": 2024,
       "types": [
         "Deduction",
         "Murder/Mystery",
@@ -6978,6 +6985,93 @@
       "age": 7,
       "bggReference": 411404,
       "size": "s"
+    },
+    {
+      "name": "Horrible Therapist",
+      "editor": "Exploding kittens",
+      "year": 2024,
+      "types": [
+        "Humor",
+        "Mature",
+        "Party",
+        "Cards",
+        "Player judge",
+        "Simultaneous action selection"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        8
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 5,
+      "image": "horrible-therapist",
+      "isPlayed": false,
+      "age": 17,
+      "bggReference": 430572,
+      "size": "s"
+    },
+    {
+      "name": "GamSea salt & Paper",
+      "editor": "Pandasaurus",
+      "year": 2022,
+      "types": [
+        "Family",
+        "Cards",
+        "Hand management",
+        "Set collection",
+        "Push your luck",
+        "Open drafting",
+        "Score-and-reset-game",
+        "Sudden death ending"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.47,
+      "rate": 7.5,
+      "image": "sea-salt-and-paper",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 367220,
+      "size": "xs"
+    },
+    {
+      "name": "Terraria: The board game",
+      "editor": "Paper Fort Games",
+      "year": 2025,
+      "types": [
+        "Adventure",
+        "City building",
+        "Exploration",
+        "Fighting",
+        "Territory building",
+        "Action points",
+        "Cooperative",
+        "Grid movement",
+        "Deck, bag and pool building",
+        "Dice rolling",
+        "Modular board",
+        "Tile placement",
+        "Variable Set-up"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 120,
+      "complexity": 2.33,
+      "rate": 0,
+      "image": "terraria",
+      "isPlayed": false,
+      "age": 0,
+      "bggReference": 391286,
+      "size": "l"
     }
   ]
 }
