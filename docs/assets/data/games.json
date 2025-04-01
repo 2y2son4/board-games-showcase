@@ -6887,13 +6887,13 @@
       "complexity": 2.24,
       "rate": 7.5,
       "image": "resistid",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10,
       "bggReference": 352697,
       "size": "s"
     },
     {
-      "name": "Justice: Conan Boyle",
+      "name": "Justice: Conan Doyle",
       "editor": "AEG",
       "year": 2024,
       "types": [
@@ -6911,8 +6911,8 @@
       "time": 60,
       "complexity": 0,
       "rate": 6,
-      "image": "justice-conan-boyle",
-      "isPlayed": false,
+      "image": "justice-conan-doyle",
+      "isPlayed": true,
       "age": 8,
       "bggReference": 371226,
       "size": "s"
@@ -6937,7 +6937,7 @@
       "complexity": 1.42,
       "rate": 7,
       "image": "in-front-of-the-elevators",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 278751,
       "size": "s"
@@ -6981,7 +6981,7 @@
       "complexity": 1.17,
       "rate": 7,
       "image": "power-hungry-pets",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 7,
       "bggReference": 411404,
       "size": "s"
@@ -7013,7 +7013,7 @@
       "size": "s"
     },
     {
-      "name": "GamSea salt & Paper",
+      "name": "Sea, Salt & Paper",
       "editor": "Pandasaurus",
       "year": 2022,
       "types": [
@@ -7072,6 +7072,104 @@
       "age": 0,
       "bggReference": 391286,
       "size": "l"
+    },
+    {
+      "name": "Art robbery",
+      "editor": "Helvetiq",
+      "year": 2021,
+      "types": [
+        "Family",
+        "Cards",
+        "Hand management",
+        "Take that"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        5
+      ],
+      "time": 20,
+      "complexity": 1.14,
+      "rate": 6.9,
+      "image": "art-robbery",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 341935,
+      "size": "s"
+    },
+    {
+      "name": "That's Not a Hat: Pop Culture",
+      "editor": "Ravensburger",
+      "year": 2024,
+      "types": [
+        "Bluffing",
+        "Memory",
+        "Party"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        8
+      ],
+      "time": 15,
+      "complexity": 1.25,
+      "rate": 7.3,
+      "image": "thats-not-a-hat-pop-culture",
+      "isPlayed": true,
+      "age": 8,
+      "bggReference": 406663,
+      "size": "s"
+    },
+    {
+      "name": "Fishing",
+      "editor": "2F-Spiele",
+      "year": 2024,
+      "types": [
+        "Animals",
+        "Cards",
+        "Nautical",
+        "Deck, bag and pool building",
+        "Trick-taking"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        5
+      ],
+      "time": 60,
+      "complexity": 1.86,
+      "rate": 7.3,
+      "image": "fishing",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 419195,
+      "size": "s"
+    },
+    {
+      "name": "Do De Li Do",
+      "editor": "Drei Magier Spiele",
+      "year": 2016,
+      "types": [
+        "Party",
+        "Action",
+        "Real-time",
+        "Cards",
+        "Pattern recognition",
+        "Speed matching"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.10,
+      "rate": 6.5,
+      "image": "do-de-li-do",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 206939,
+      "size": "s"
     }
   ]
 }
