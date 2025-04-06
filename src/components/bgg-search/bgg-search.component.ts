@@ -14,22 +14,21 @@ import { catchError, throwError } from 'rxjs';
 import { GameDetailsComponent } from '../game-details/game-details.component';
 
 @Component({
-  selector: 'app-bgg-search',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    GameDetailsComponent,
-    LoaderComponent,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    ScrollToTopBtnComponent,
-  ],
-  templateUrl: './bgg-search.component.html',
-  styleUrls: ['./bgg-search.component.scss'],
+    selector: 'app-bgg-search',
+    imports: [
+        CommonModule,
+        FormsModule,
+        GameDetailsComponent,
+        LoaderComponent,
+        MatButtonModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        ScrollToTopBtnComponent,
+    ],
+    templateUrl: './bgg-search.component.html',
+    styleUrls: ['./bgg-search.component.scss']
 })
 export class BggSearchComponent {
   searchTerm: string = '';

@@ -33,25 +33,24 @@ import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
-  selector: 'app-games',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    HighlightTextPipe,
-    LoaderComponent,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    ScrollToTopBtnComponent,
-  ],
-  templateUrl: './games.component.html',
-  styleUrl: '../common-styles.scss',
+    selector: 'app-games',
+    imports: [
+        CommonModule,
+        FormsModule,
+        HighlightTextPipe,
+        LoaderComponent,
+        MatButtonModule,
+        MatCardModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        ScrollToTopBtnComponent,
+    ],
+    templateUrl: './games.component.html',
+    styleUrl: '../common-styles.scss'
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChild('topPage') topPage!: ElementRef;

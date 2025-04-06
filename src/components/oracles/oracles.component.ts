@@ -18,16 +18,15 @@ import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
-  selector: 'app-oracles',
-  standalone: true,
-  imports: [
-    CommonModule,
-    HighlightTextPipe,
-    LoaderComponent,
-    ScrollToTopBtnComponent,
-  ],
-  templateUrl: './oracles.component.html',
-  styleUrl: '../common-styles.scss',
+    selector: 'app-oracles',
+    imports: [
+        CommonModule,
+        HighlightTextPipe,
+        LoaderComponent,
+        ScrollToTopBtnComponent,
+    ],
+    templateUrl: './oracles.component.html',
+    styleUrl: '../common-styles.scss'
 })
 export class OraclesComponent implements OnInit, AfterViewInit {
   @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;

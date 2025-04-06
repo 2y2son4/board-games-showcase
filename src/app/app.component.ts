@@ -14,23 +14,22 @@ import { BggSearchComponent } from '../components/bgg-search/bgg-search.componen
 import { GameDetailsComponent } from '../components/game-details/game-details.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    BggSearchComponent,
-    CommonModule,
-    GamesComponent,
-    GameDetailsComponent,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatSidenav,
-    MatToolbarModule,
-    OraclesComponent,
-    RouterModule,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [
+        BggSearchComponent,
+        CommonModule,
+        GamesComponent,
+        GameDetailsComponent,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        MatSidenav,
+        MatToolbarModule,
+        OraclesComponent,
+        RouterModule,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
   isGames!: boolean;
