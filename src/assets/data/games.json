@@ -4011,7 +4011,7 @@
       "complexity": 1.50,
       "rate": 5.7,
       "image": "secreto-de-amelia",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 12,
       "bggReference": 0,
       "size": "m"
@@ -5943,10 +5943,10 @@
       "complexity": 1.14,
       "rate": 6.7,
       "image": "ghost-blitz",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 2034769,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Fafnir",
@@ -6088,7 +6088,7 @@
       "isPlayed": false,
       "age": 7,
       "bggReference": 318195,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Faraway",
@@ -6115,7 +6115,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 385761,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Dumb ways to die",
@@ -6141,7 +6141,7 @@
       "isPlayed": false,
       "age": 12,
       "bggReference": 392173,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Moon adventure",
@@ -6193,7 +6193,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 259374,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Android: Infiltration",
@@ -6222,7 +6222,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 118063,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Android: Mainframe",
@@ -6247,7 +6247,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 193557,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "La Leyenda de los Cinco Anillos: El Juego de Cartas",
@@ -6275,7 +6275,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 184151,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Space Gate Odyssey",
@@ -6301,7 +6301,7 @@
       "isPlayed": false,
       "age": 12,
       "bggReference": 266179,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Misty",
@@ -6324,7 +6324,7 @@
       "isPlayed": false,
       "age": 6,
       "bggReference": 270443,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "¡Aventureros al Tren! Cambio de Agujas",
@@ -6820,7 +6820,7 @@
       "complexity": 2,
       "rate": 7.2,
       "image": "butterfly-curse",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 13,
       "bggReference": 332495,
       "size": "s"
@@ -7169,6 +7169,30 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 206939,
+      "size": "s"
+    },
+    {
+      "name": "Butter crime",
+      "editor": "Caravan Games",
+      "year": 2024,
+      "types": [
+        "Deduction",
+        "Humor",
+        "Puzzle",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 240,
+      "complexity": 1,
+      "rate": 8.7,
+      "image": "butter_crime",
+      "isPlayed": true,
+      "age": 14,
+      "bggReference": 429374,
       "size": "s"
     }
   ]
