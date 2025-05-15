@@ -33,25 +33,24 @@ import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
-  selector: 'app-games',
-  standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    HighlightTextPipe,
-    LoaderComponent,
-    MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    ScrollToTopBtnComponent,
-  ],
-  templateUrl: './games.component.html',
-  styleUrl: '../common-styles.scss',
+    selector: 'app-games',
+    imports: [
+        CommonModule,
+        FormsModule,
+        HighlightTextPipe,
+        LoaderComponent,
+        MatButtonModule,
+        MatCardModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        ScrollToTopBtnComponent,
+    ],
+    templateUrl: './games.component.html',
+    styleUrl: '../common-styles.scss'
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChild('topPage') topPage!: ElementRef;
@@ -62,6 +61,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
   selectedChipTypes: Array<string> = [''];
+  selectedSize!: string;
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
   selectedSorting = new FormControl<string>('');
@@ -155,6 +155,22 @@ export class GamesComponent implements OnInit, AfterViewInit {
           card.types.includes(selectedType),
         );
       });
+    } else {
+      this.resetGamesList();
+    }
+    setTimeout(() => {
+      this.filterFunctions.flipAllCards(this.innerElements);
+    }, 100);
+  }
+
+  onSizeChange(selectedSize: string) {
+    console.log(selectedSize);
+    this.gamesFilterForm.reset();
+    this.restartDropdownFilters();
+    if (selectedSize) {
+      this.filteredGames = this.gamesList.filter((card) =>
+        card.size.includes(selectedSize),
+      );
     } else {
       this.resetGamesList();
     }

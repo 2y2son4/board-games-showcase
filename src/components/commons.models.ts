@@ -12,12 +12,13 @@ export interface GameCard {
   isPlayed: boolean;
   age: number;
   bggReference: number;
+  size: 'xs' | 's' | 'm' | 'l';
 }
 
 export interface OracleCard {
   name: string;
   artist: string;
-  language: 'en' | 'es' | 'de' | '-';
+  language: 'en' | 'es' | 'de' | 'x';
   image?: string;
   description: Array<string>;
   web: string;

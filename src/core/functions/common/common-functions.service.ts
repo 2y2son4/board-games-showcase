@@ -15,29 +15,22 @@ export class CommonFunctionsService {
 
     const percentage = (number - 1) / 4;
 
+    const interpolateColor = (
+      color1: number[],
+      color2: number[],
+      factor: number,
+    ) => {
+      return color1.map((c, i) => Math.round(c + factor * (color2[i] - c)));
+    };
+
     let r, g, b;
     if (percentage < 0.5) {
-      r = Math.round(
-        greenColor[0] + percentage * 2 * (yellowColor[0] - greenColor[0]),
-      );
-      g = Math.round(
-        greenColor[1] + percentage * 2 * (yellowColor[1] - greenColor[1]),
-      );
-      b = Math.round(
-        greenColor[2] + percentage * 2 * (yellowColor[2] - greenColor[2]),
-      );
+      [r, g, b] = interpolateColor(greenColor, yellowColor, percentage * 2);
     } else {
-      r = Math.round(
-        yellowColor[0] +
-          (percentage - 0.5) * 2 * (redColor[0] - yellowColor[0]),
-      );
-      g = Math.round(
-        yellowColor[1] +
-          (percentage - 0.5) * 2 * (redColor[1] - yellowColor[1]),
-      );
-      b = Math.round(
-        yellowColor[2] +
-          (percentage - 0.5) * 2 * (redColor[2] - yellowColor[2]),
+      [r, g, b] = interpolateColor(
+        yellowColor,
+        redColor,
+        (percentage - 0.5) * 2,
       );
     }
 
@@ -47,7 +40,7 @@ export class CommonFunctionsService {
     return colorHex;
   }
 
-  getRateColor(number: number): string {
+  getRatingColor(number: number): string {
     const greyColor = [46, 46, 46];
     const greenColor = [54, 174, 124];
     const blueColor = [60, 76, 167];
@@ -55,25 +48,21 @@ export class CommonFunctionsService {
     const percentage = (number - 1) / 9;
 
     let r, g, b;
+    const interpolateColor = (
+      color1: number[],
+      color2: number[],
+      factor: number,
+    ) => {
+      return color1.map((c, i) => Math.round(c + factor * (color2[i] - c)));
+    };
+
     if (percentage < 0.5) {
-      r = Math.round(
-        greyColor[0] + percentage * 2 * (blueColor[0] - greyColor[0]),
-      );
-      g = Math.round(
-        greyColor[1] + percentage * 2 * (blueColor[1] - greyColor[1]),
-      );
-      b = Math.round(
-        greyColor[2] + percentage * 2 * (blueColor[2] - greyColor[2]),
-      );
+      [r, g, b] = interpolateColor(greyColor, blueColor, percentage * 2);
     } else {
-      r = Math.round(
-        blueColor[0] + (percentage - 0.5) * 2 * (greenColor[0] - blueColor[0]),
-      );
-      g = Math.round(
-        blueColor[1] + (percentage - 0.5) * 2 * (greenColor[1] - blueColor[1]),
-      );
-      b = Math.round(
-        blueColor[2] + (percentage - 0.5) * 2 * (greenColor[2] - blueColor[2]),
+      [r, g, b] = interpolateColor(
+        blueColor,
+        greenColor,
+        (percentage - 0.5) * 2,
       );
     }
 
@@ -83,30 +72,30 @@ export class CommonFunctionsService {
     return colorHex;
   }
 
-  /** Data */
   extractUniqueValues(
     listData: GameCard[],
     propertyName: keyof GameCard,
   ): string[] {
-    const allValues: string[] = [];
+    const uniqueValues = new Set<string>();
+
     listData.forEach((game) => {
       const valueOrArray = game[propertyName];
 
       if (Array.isArray(valueOrArray)) {
         valueOrArray.forEach((value) => {
           const stringValue = String(value);
-          if (stringValue && !allValues.includes(stringValue)) {
-            allValues.push(stringValue);
+          if (stringValue) {
+            uniqueValues.add(stringValue);
           }
         });
       } else {
         const stringValue = String(valueOrArray);
-        if (stringValue && !allValues.includes(stringValue)) {
-          allValues.push(stringValue);
+        if (stringValue) {
+          uniqueValues.add(stringValue);
         }
       }
     });
 
-    return allValues.sort((a, b) => a.localeCompare(b));
+    return Array.from(uniqueValues).sort((a, b) => a.localeCompare(b));
   }
 }

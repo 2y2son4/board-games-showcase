@@ -140,7 +140,15 @@
       "artist": "Em Kay Holloway",
       "language": "en",
       "image": "doodle-tarot",
-      "description": ["A study deck for beginners.", "This deck was created and inspired to help new Tarot readers, young and old, that have never read or have difficulty reading other decks, like the famous Rider-Smith deck. In this deck, we take that famous art and break it down into simplistic, arbitrary drawings of stick figures. We pay homage to those doodles that you drew in grade school, complete with college-ruled paper background, to allow the feeling of nostalgia to come into play and give comfort to the reader. "]
+      "description": ["A study deck for beginners.", "This deck was created and inspired to help new Tarot readers, young and old, that have never read or have difficulty reading other decks, like the famous Rider-Smith deck. In this deck, we take that famous art and break it down into simplistic, arbitrary drawings of stick figures. We pay homage to those doodles that you drew in grade school, complete with college-ruled paper background, to allow the feeling of nostalgia to come into play and give comfort to the reader.", "The Doodle Tarot is a study deck for beginners, but it can also be used by seasoned readers as a fun way to read the cards. The simplistic drawings allow the reader to use their intuition and imagination to interpret the cards in their own way. The Doodle Tarot is a great way to learn the meanings of the cards without being overwhelmed by the traditional imagery."]
+    },
+    {
+      "name": "Demon of the Day",
+      "artist": "Travis McHenry",
+      "language": "en",
+      "image": "demon-of-the-day",
+      "description": ["These 40 cards contain messages from the Goetic demons, a group of infernal spirits that helped King Solomon build his temple during ancient times. Just as they helped the biblical king to accomplish his work, these demons can assist you in overcoming your weaknesses by revealing the truth hidden in the shadows. The sigils on the back of each card use Kabbalistic magic to connect you directly with a Goetic demon.", "Shuffle the deck while thinking of a question or problem you are facing, then draw a card and let the wisdom of the servant demon assist you. The message might answer your question or provide a suggestion that will help you move forward.", "Try drawing a card after waking up each morning to fill your entire day with fiery, infernal energy. These cards may also be used as a companion to the Occult Tarot to provide added clarification during readings."],
+      "web": "https://travisdmchenry.wixsite.com/travis1/s-projects-basic"
     }
   ]
 }

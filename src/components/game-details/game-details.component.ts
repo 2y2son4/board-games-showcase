@@ -3,16 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { LoaderComponent } from '../loader/loader.component';
 import { GameDetails } from '../commons.models';
 import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
-  selector: 'app-game-details',
-  standalone: true,
-  imports: [CommonModule, LoaderComponent, MatChipsModule],
-  templateUrl: './game-details.component.html',
-  styleUrls: ['./game-details.component.scss'],
+    selector: 'app-game-details',
+    imports: [CommonModule, MatChipsModule],
+    templateUrl: './game-details.component.html',
+    styleUrls: ['./game-details.component.scss']
 })
 export class GameDetailsComponent implements OnChanges {
   @Input() objectid: string | null = null;
@@ -42,6 +40,7 @@ export class GameDetailsComponent implements OnChanges {
         const json = this.xmlToJson(xml);
         this.gameDetails = this.cleanGameDetails(json.boardgames?.boardgame);
       });
+    console.log(this.gameDetails);
   }
 
   cleanGameDetails(details: any): GameDetails {
@@ -58,7 +57,10 @@ export class GameDetailsComponent implements OnChanges {
       boardgamecategory: this.extractNames(game.boardgamecategory),
       image: this.extractTextValue(game.image),
       boardgamepublisher: this.extractNames(game.boardgamepublisher),
+      size: game.size,
     };
+    console.log(details);
+    console.log(cleanedGame);
     return cleanedGame;
   }
 
@@ -120,8 +122,8 @@ export class GameDetailsComponent implements OnChanges {
 
   parseAttributes(attributes: NamedNodeMap): any {
     const attrObj: any = {};
-    for (let j = 0; j < attributes.length; j++) {
-      const attribute = attributes.item(j);
+    for (let index = 0; index < attributes.length; index++) {
+      const attribute = attributes.item(index);
       if (attribute) {
         attrObj[attribute.nodeName] = attribute.nodeValue;
       }

@@ -1,4 +1,4 @@
-@import "../../core/styles/variables";
+@use "../../core/styles/variables" as variables;
 
 .loader {
   &__centered {
@@ -9,8 +9,8 @@
   }
 
   &__spinner {
-    border: 16px solid $bg-color;
-    border-top: 16px solid $highlight-color;
+    border: 16px solid variables.$bg-color;
+    border-top: 16px solid variables.$highlight-color;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -21,7 +21,7 @@
 
   &__text {
     font-size: 38px;
-    color: $highlight-color;
+    color: variables.$highlight-color;
     display: flex;
     align-items: center;
     height: 100%;
