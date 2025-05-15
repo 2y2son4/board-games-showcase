@@ -8,7 +8,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { LoaderComponent } from '../loader/loader.component';
-import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 import { catchError, throwError } from 'rxjs';
 import { GameDetailsComponent } from '../game-details/game-details.component';
@@ -25,7 +24,6 @@ import { GameDetailsComponent } from '../game-details/game-details.component';
         MatFormFieldModule,
         MatInputModule,
         MatIconModule,
-        ScrollToTopBtnComponent,
     ],
     templateUrl: './bgg-search.component.html',
     styleUrls: ['./bgg-search.component.scss']

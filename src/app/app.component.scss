@@ -1,4 +1,4 @@
-@import "../core/styles/variables";
+@use "../core/styles/variables" as variables;
 
 :host {
   box-sizing: border-box;
@@ -22,7 +22,7 @@ header {
 }
 
 .toolbar {
-  border-bottom: 4px solid $bg-color-dark;
+  border-bottom: 4px solid variables.$bg-color-dark;
 
   &__container {
     width: 100%;
@@ -33,18 +33,18 @@ header {
 
 .route {
   &__container :nth-child(2) {
-    border-left: 4px solid $bg-color-dark;
+    border-left: 4px solid variables.$bg-color-dark;
   }
 
   &__container :nth-child(3) {
-    border-top: 4px solid $bg-color-dark;
+    border-top: 4px solid variables.$bg-color-dark;
   }
 
   &__buttons {
-    background-color: $bg-color;
+    background-color: variables.$bg-color;
     border-radius: 0;
     border: none;
-    color: $bg-color-dark;
+    color: variables.$bg-color-dark;
     cursor: pointer;
     font-weight: 600;
     font-size: 20px;
@@ -52,8 +52,8 @@ header {
     transition: all 0.8s;
 
     &:hover {
-      background-color: $highlight-color;
-      color: $white;
+      background-color: variables.$highlight-color;
+      color: variables.$white;
     }
 
     &-half {
@@ -71,8 +71,8 @@ header {
   }
 
   &__color {
-    background-color: $highlight-color;
-    color: $white;
+    background-color: variables.$highlight-color;
+    color: variables.$white;
   }
 }
 

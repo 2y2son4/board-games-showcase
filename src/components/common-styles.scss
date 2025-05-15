@@ -1,5 +1,5 @@
-@import "../core/styles/variables";
-@import "../core/styles/scrollbar.scss";
+@use "../core/styles/variables" as variables;
+@use "../core/styles/scrollbar.scss";
 
 p {
   margin: 2px;
@@ -24,7 +24,7 @@ p {
   position: -webkit-sticky;
   top: 14px;
   margin: 14px;
-  color: $highlight-color;
+  color: variables.$highlight-color;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -189,8 +189,8 @@ p {
     height: 28px;
     padding: 18px;
     border-radius: 50%;
-    color: $black;
-    border: 4px solid $white;
+    color: variables.$black;
+    border: 4px solid variables.$white;
     font-weight: 700;
 
     @media screen and (max-width: 767px) {
@@ -220,7 +220,7 @@ p {
   &__bgg {
     background-color: #e64900;
     border: 4px solid #3f3a60;
-    color: $white;
+    color: variables.$white;
   }
 
   &__name {
@@ -233,10 +233,10 @@ p {
     font-size: 16px;
 
     &-absolute {
-      background-color: $bg-color;
-      border: 4px solid $white;
+      background-color: variables.$bg-color;
+      border: 4px solid variables.$white;
       border-radius: 50%;
-      color: $black;
+      color: variables.$black;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -253,7 +253,7 @@ p {
         font-size: 12px;
         width: 36px;
         height: 36px;
-        border: 2px solid $white;
+        border: 2px solid variables.$white;
         top: -18px;
         left: -18px;
       }
@@ -334,7 +334,7 @@ p {
     left: -24px;
     border: 4px solid white;
     border-radius: 50%;
-    background-color: $bg-color-dark;
+    background-color: variables.$bg-color-dark;
 
     @media screen and (max-width: 767px) {
       border-width: 2px;
@@ -367,23 +367,23 @@ p {
     font-size: 18px;
     text-align: center;
     margin: 16px;
-    color: $dark-grey;
+    color: variables.$dark-grey;
   }
 
   &__web {
     position: sticky;
     bottom: -8px;
     width: 100%;
-    background-color: $bg-color-dark;
+    background-color: variables.$bg-color-dark;
     cursor: pointer;
-    color: $white;
+    color: variables.$white;
     font-weight: 600;
     font-size: 16px;
     transition: all 0.8s;
     padding: 8px 0;
 
     &:hover {
-      color: $highlight-color;
+      color: variables.$highlight-color;
     }
   }
 
@@ -448,7 +448,7 @@ a:active {
 
 .border {
   &-pink {
-    border: 4px solid $highlight-color;
+    border: 4px solid variables.$highlight-color;
 
     @media screen and (max-width: 767px) {
       border-width: 2px;
@@ -456,8 +456,8 @@ a:active {
   }
 
   &-system {
-    border: 4px solid $white;
-    color: $white;
+    border: 4px solid variables.$white;
+    color: variables.$white;
 
     @media screen and (max-width: 767px) {
       border-width: 2px;
@@ -467,33 +467,33 @@ a:active {
 
 .button {
   &-pink:hover {
-    background-color: $highlight-color;
+    background-color: variables.$highlight-color;
   }
 
   &-system:hover {
-    background-color: $white;
-    color: $black;
+    background-color: variables.$white;
+    color: variables.$black;
   }
 
   &-hover {
     &-pink {
-      background-color: $highlight-color;
+      background-color: variables.$highlight-color;
     }
 
     &-system {
-      background-color: $white;
-      color: $black;
+      background-color: variables.$white;
+      color: variables.$black;
     }
   }
 }
 
 .font {
   &-pink {
-    color: $highlight-color;
+    color: variables.$highlight-color;
   }
 
   &-system {
-    color: $white;
+    color: variables.$white;
   }
 }
 
@@ -515,7 +515,7 @@ a:active {
 
 .dropdown-search {
   border: none;
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid variables.$light-grey;
   margin-bottom: 12px;
   margin-left: 16px;
   padding: 6px 4px;

@@ -1,4 +1,4 @@
-@import "./core//styles/variables";
+@use "./core//styles/variables" as variables;
 
 * {
   box-sizing: border-box;
@@ -7,8 +7,8 @@
 html,
 body {
   height: 100%;
-  background-color: $dark-grey;
-  color: $white;
+  background-color: variables.$dark-grey;
+  color: variables.$white;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 }
 
 .highlight {
-  background-color: $highlight-color;
+  background-color: variables.$highlight-color;
   font-weight: bold;
   padding: 2px 0;
   border-radius: 4px;
