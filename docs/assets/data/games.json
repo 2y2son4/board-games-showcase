@@ -7194,6 +7194,81 @@
       "age": 14,
       "bggReference": 429374,
       "size": "s"
+    },
+    {
+      "name": "Potato pirates (2nd edition)",
+      "editor": "ThinkFun",
+      "year": 2023,
+      "types": [
+        "Adventure",
+        "Party",
+        "Action queue",
+        "Player elimination"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.63,
+      "rate": 5.5,
+      "image": "potato-pirates",
+      "isPlayed": true,
+      "age": 7,
+      "bggReference": 234465,
+      "size": "m"
+    },
+    {
+      "name": "Bandida",
+      "editor": "Helvetiq",
+      "year": 2020,
+      "types": [
+        "Cooperative",
+        "Cards",
+        "Network and route building",
+        "Solitaire",
+        "Tile placement"
+      ],
+      "language": "x",
+      "players": [
+        1,
+        4
+      ],
+      "time": 15,
+      "complexity": 1.40,
+      "rate": 6.5,
+      "image": "bandida",
+      "isPlayed": false,
+      "age": 6,
+      "bggReference": 299571,
+      "size": "xs"
+    },
+    {
+      "name": "Sky team: Turbulence",
+      "editor": "Scorpion Masqué",
+      "year": 2024,
+      "types": [
+        "Expansion",
+        "Aviation",
+        "Communication limits",
+        "Cooperative",
+        "Dice rolling",
+        "Campaign game",
+        "Worker placement"
+      ],
+      "language": "en",
+      "players": [
+        2
+      ],
+      "time": 15,
+      "complexity": 2.14,
+      "rate": 8.6,
+      "image": "sky-team-turbulence",
+      "isPlayed": true,
+      "age": 12,
+      "bggReference": 423177,
+      "size": "s"
     }
   ]
 }
