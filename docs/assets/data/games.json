@@ -7245,6 +7245,31 @@
       "size": "xs"
     },
     {
+      "name": "Arkham Horror: Lovecraft Letter",
+      "editor": "Z-Man Games",
+      "year": 2025,
+      "types": [
+        "Cards",
+        "Hand management",
+        "Player elimination",
+        "Score-and-reset-game",
+        "Take that"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 20,
+      "complexity": 1.38,
+      "rate": 7.5,
+      "image": "lovecraft-letter",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 424784,
+      "size": "s"
+    },
+    {
       "name": "Sky team: Turbulence",
       "editor": "Scorpion Masqué",
       "year": 2024,
