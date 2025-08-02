@@ -74,7 +74,7 @@ export class GameDetailsComponent implements OnChanges {
   }
 
   private extractTextValue(node: any): string {
-    return node ? node['#text'] || '' : '';
+    return node ? node['#text'] ?? '' : '';
   }
 
   xmlToJson(xml: Document): any {
