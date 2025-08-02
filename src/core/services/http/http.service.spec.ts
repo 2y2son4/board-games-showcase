@@ -41,6 +41,8 @@ describe('HttpService', () => {
           image: 'image1.png',
           isPlayed: true,
           age: 12,
+          bggReference: 123456,
+          size: 'm',
         },
       ],
     };
