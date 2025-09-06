@@ -2,13 +2,13 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 import { GameDetails } from '../commons.models';
 import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
     selector: 'app-game-details',
-    imports: [CommonModule, MatChipsModule],
+    imports: [MatChipsModule],
     templateUrl: './game-details.component.html',
     styleUrls: ['./game-details.component.scss']
 })
