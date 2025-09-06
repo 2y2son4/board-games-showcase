@@ -33,7 +33,7 @@ export interface SortingFunctions {
 }
 
 export interface GameDetails {
-  name: string[];
+  name: string | string[];
   yearpublished: string;
   minplayers: string;
   maxplayers: string;
@@ -43,4 +43,5 @@ export interface GameDetails {
   boardgamecategory: string[];
   image: string;
   boardgamepublisher: string[];
+  size: 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
 }

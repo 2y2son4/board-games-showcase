@@ -12,20 +12,20 @@ import { OraclesComponent } from '../components/oracles/oracles.component';
 import { BggSearchComponent } from '../components/bgg-search/bgg-search.component';
 
 @Component({
-    selector: 'app-root',
-    imports: [
-        BggSearchComponent,
-        CommonModule,
-        GamesComponent,
-        MatButtonModule,
-        MatIconModule,
-        MatMenuModule,
-        MatToolbarModule,
-        OraclesComponent,
-        RouterModule,
-    ],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+  selector: 'app-root',
+  imports: [
+    BggSearchComponent,
+    CommonModule,
+    GamesComponent,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatToolbarModule,
+    OraclesComponent,
+    RouterModule,
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
   isGames!: boolean;

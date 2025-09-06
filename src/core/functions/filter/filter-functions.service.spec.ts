@@ -16,6 +16,10 @@ describe('GameCardSortingService', () => {
     age: 2,
     rate: 1,
     players: [4],
+    time: 15,
+    image: 'image',
+    bggReference: 0,
+    size: 's',
   };
   const game2: GameCard = {
     name: 'Game 2',
@@ -28,6 +32,10 @@ describe('GameCardSortingService', () => {
     age: 2,
     rate: 1,
     players: [27],
+    time: 15,
+    image: 'image',
+    bggReference: 0,
+    size: 's',
   };
   const game3: GameCard = {
     name: 'Another thing',
@@ -40,6 +48,10 @@ describe('GameCardSortingService', () => {
     age: 2,
     rate: 1,
     players: [2],
+    time: 15,
+    image: 'image',
+    bggReference: 0,
+    size: 's',
   };
   const game4: GameCard = {
     name: 'Another thing 2 ',
@@ -52,6 +64,10 @@ describe('GameCardSortingService', () => {
     age: 2,
     rate: 1,
     players: [2],
+    time: 15,
+    image: 'image',
+    bggReference: 0,
+    size: 's',
   };
   const game5: GameCard = {
     name: 'Another thing 3',
@@ -64,6 +80,10 @@ describe('GameCardSortingService', () => {
     age: 2,
     rate: 1,
     players: [2],
+    time: 15,
+    image: 'image',
+    bggReference: 0,
+    size: 's',
   };
   const games = [game1, game2, game3, game4, game5];
 

@@ -1,0 +1,26 @@
+<div class="color-settings-panel" mat-elevation-z8>
+  <div *ngIf="contrastWarning" style="color: #b71c1c; font-weight: 500; margin-bottom: 0.5em;">
+    {{ contrastWarning }}
+  </div>
+  <mat-form-field appearance="fill" class="color-field">
+    <mat-label>Background color</mat-label>
+    <mat-select [(ngModel)]="bgColor" (selectionChange)="setBgColor($event.value)">
+      <mat-option *ngFor="let color of commonBgColors" [value]="color.value">
+        <span [style.background]="color.value" class="color-dot"></span> {{ color.name }}
+      </mat-option>
+    </mat-select>
+    <input matInput type="color" [(ngModel)]="bgColor" (input)="setBgColor(bgColor)"
+      aria-label="Pick background color" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="color-field">
+    <mat-label>Font color</mat-label>
+    <mat-select [(ngModel)]="fontColor" (selectionChange)="setFontColor($event.value)">
+      <mat-option *ngFor="let color of commonFontColors" [value]="color.value">
+        <span [style.background]="color.value" class="color-dot"></span> {{ color.name }}
+      </mat-option>
+    </mat-select>
+    <input matInput type="color" [(ngModel)]="fontColor" (input)="setFontColor(fontColor)"
+      aria-label="Pick font color" />
+  </mat-form-field>
+</div>

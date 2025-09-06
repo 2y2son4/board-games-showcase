@@ -8,10 +8,9 @@ describe('OraclesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OraclesComponent]
-    })
-    .compileComponents();
-    
+      imports: [OraclesComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(OraclesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
