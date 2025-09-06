@@ -43,19 +43,30 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
 
-## Deployment
+## Deployment & GitHub Actions Workflow
 
-All new features are developed in the `gh-pages` branch. To deploy the latest version to GitHub Pages:
+All new features are developed in the `gh-pages` branch. Deployment to GitHub Pages is fully automated using a GitHub Actions workflow defined in `.github/workflows/jekyll-gh-pages.yml`.
 
-1. Run the production build script:
+### How Deployment Works
+
+1. **Build the App:**
+   Run the production build script to generate the static site files:
 
    ```bash
    npm run build:prod
    ```
 
-   This will generate the necessary files in the `docs/` folder.
+   This command outputs the production-ready files to the `docs/` folder.
 
-2. The site is automatically deployed to GitHub Pages using a GitHub Action, serving the contents of the `docs/` folder from the `gh-pages` branch.
+2. **Automatic Deployment:**
+   The GitHub Actions workflow is triggered on every push to the `main` branch or when manually run from the Actions tab. The workflow performs the following steps:
+   - **Checkout:** Retrieves the latest code from the repository.
+   - **Setup Pages:** Prepares the GitHub Pages environment.
+   - **Build (Jekyll by default):** Runs a Jekyll build step (can be adapted or replaced for Angular/static site output).
+   - **Upload Artifact:** Uploads the generated site as an artifact for deployment.
+   - **Deploy:** Publishes the uploaded artifact to GitHub Pages, making the site available at the configured URL.
+
+> **Note:** Although the workflow is based on a Jekyll template, it can be customized to better fit an Angular project by replacing the Jekyll build step with one that copies the contents of `docs/` to the deployment artifact.
 
 The app is available at: [https://2y2son4.github.io/board-games-showcase](https://2y2son4.github.io/board-games-showcase)
 
