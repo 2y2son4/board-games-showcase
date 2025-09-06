@@ -29,28 +29,30 @@ import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-tex
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
 import { HttpService } from '../../core/services/http/http.service';
 import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
+// import { ColorSettingsComponent } from '../color-settings/color-settings.component';
 import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
-    selector: 'app-games',
-    imports: [
-        CommonModule,
-        FormsModule,
-        HighlightTextPipe,
-        LoaderComponent,
-        MatButtonModule,
-        MatCardModule,
-        MatChipsModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-        MatSelectModule,
-        ReactiveFormsModule,
-        ScrollToTopBtnComponent,
-    ],
-    templateUrl: './games.component.html',
-    styleUrl: '../common-styles.scss'
+  selector: 'app-games',
+  imports: [
+    // ColorSettingsComponent,
+    CommonModule,
+    FormsModule,
+    HighlightTextPipe,
+    LoaderComponent,
+    MatButtonModule,
+    MatCardModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    ScrollToTopBtnComponent,
+  ],
+  templateUrl: './games.component.html',
+  styleUrl: '../common-styles.scss'
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChild('topPage') topPage!: ElementRef;
