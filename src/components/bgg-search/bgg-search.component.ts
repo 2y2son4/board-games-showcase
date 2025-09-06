@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -15,16 +15,15 @@ import { GameDetailsComponent } from '../game-details/game-details.component';
 @Component({
     selector: 'app-bgg-search',
     imports: [
-        CommonModule,
-        FormsModule,
-        GameDetailsComponent,
-        LoaderComponent,
-        MatButtonModule,
-        MatCardModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-    ],
+    FormsModule,
+    GameDetailsComponent,
+    LoaderComponent,
+    MatButtonModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule
+],
     templateUrl: './bgg-search.component.html',
     styleUrls: ['./bgg-search.component.scss']
 })

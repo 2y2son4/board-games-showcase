@@ -29,7 +29,8 @@
   <div class="search__results">
     @if(results?.boardgames && !isLoading && !noResults && searchTerm){<div class="search__results-list">
       <ul class="search__cards">
-        <li class="search__cards-game" *ngFor="let game of results.boardgames.boardgame">
+        @for (game of results.boardgames.boardgame; track game) {
+        <li class="search__cards-game">
           @if(game.name['#text']){
           <h3>{{ game.name['#text']
             }} ({{ game.yearpublished['#text'] }})</h3>}
@@ -38,6 +39,7 @@
             </mat-icon>Get Details
           </button>
         </li>
+        }
       </ul>
     </div>
     }
