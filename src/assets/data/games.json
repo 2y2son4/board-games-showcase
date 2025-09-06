@@ -2562,7 +2562,7 @@
     },
     {
       "name": "Cold case: una historia de muerte",
-      "editor": "Think fun",
+      "editor": "ThinkFun",
       "year": 2021,
       "types": [
         "Adult",
@@ -6778,7 +6778,7 @@
       "size": "m"
     },
     {
-      "name": "Smart 10",
+      "name": "Smart10",
       "editor": "SD Games",
       "year": 2017,
       "types": [
@@ -7435,6 +7435,541 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 421934,
+      "size": "s"
+    },
+    {
+      "name": "Souvenirs from Venice",
+      "editor": "Oink Games",
+      "year": 2024,
+      "types": [
+        "Dice rolling",
+        "Set collection"
+      ],
+      "language": "en",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 0,
+      "rate": 6.2,
+      "image": "souvenirs-from-venice",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 427865,
+      "size": "xs"
+    },
+    {
+      "name": "The Disappearing Sisters",
+      "editor": "Crime Scene",
+      "year": 2024,
+      "types": [
+        "Role playing",
+        "Horror",
+        "Murder/Mystery"
+      ],
+      "language": "en",
+      "players": [
+        6,
+        8
+      ],
+      "time": 120,
+      "complexity": 2,
+      "rate": 0,
+      "image": "disappearing-sisters",
+      "isPlayed": false,
+      "age": 18,
+      "bggReference": 0,
+      "size": "s"
+    },
+    {
+      "name": "Piazza",
+      "editor": "Game Factory",
+      "year": 2023,
+      "types": [
+        "Pattern building",
+        "Tile placement"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1.44,
+      "rate": 6.7,
+      "image": "piazza",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 397228,
+      "size": "xs"
+    },
+    {
+      "name": "Hues and Cues",
+      "editor": "The Op Games",
+      "year": 2020,
+      "types": [
+        "Party",
+        "Deduction",
+        "Score-and-reset-game",
+        "Targeted clues",
+        "Turn order: progressive",
+        "Give a clue/Get a clue"
+      ],
+      "language": "x",
+      "players": [
+        3,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.07,
+      "rate": 6.5,
+      "image": "hues-end-cues",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 302520,
+      "size": "l"
+    },
+    {
+      "name": "Escape from the Moon",
+      "editor": "Jugame Studio",
+      "year": 2023,
+      "types": [
+        "Solitaire",
+        "Science fiction"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 20,
+      "complexity": 2,
+      "rate": 7.2,
+      "image": "escape-from-the-moon",
+      "isPlayed": false,
+      "age": 9,
+      "bggReference": 413998,
+      "size": "s"
+    },
+    {
+      "name": "Rear window",
+      "editor": "Funko Games",
+      "year": 2022,
+      "types": [
+        "Deduction",
+        "Murder/Mystery",
+        "Variable player powers",
+        "Cooperative",
+        "Communication limits",
+        "Movies"
+      ],
+      "language": "en",
+      "players": [
+        3,
+        5
+      ],
+      "time": 40,
+      "complexity": 1.69,
+      "rate": 7.4,
+      "image": "rear-window",
+      "isPlayed": false,
+      "age": 13,
+      "bggReference": 358816,
+      "size": "m"
+    },
+    {
+      "name": "Pistas cruzadas",
+      "editor": "Maldito Games",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Party",
+        "Real-time",
+        "Words",
+        "Cooperative",
+        "Elapsed real time ending",
+        "Give a clue/Get a clue"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 10,
+      "complexity": 1.07,
+      "rate": 7.2,
+      "image": "pistas-cruzadas",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 300753,
+      "size": "m"
+    },
+    {
+      "name": "Cat crimes",
+      "editor": "ThinkFun",
+      "year": 2024,
+      "types": [
+        "Logic",
+        "Deduction"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 0,
+      "complexity": 0,
+      "rate": 0,
+      "image": "cat-crimes",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 0,
+      "size": "s"
+    },
+    {
+      "name": "Cat horror festival",
+      "editor": "Invaders",
+      "year": 2023,
+      "types": [
+        "Horror",
+        "Animals",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "rate": 6.6,
+      "image": "cat-horror-festival",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 380610,
+      "size": "s"
+    },
+    {
+      "name": "Similo: Fantastic beasts",
+      "editor": "Horrible Games",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Fantasy",
+        "Communication limits",
+        "Cooperative",
+        "Score-and-reset-game",
+        "Voting"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        8
+      ],
+      "time": 15,
+      "complexity": 1.06,
+      "rate": 6.8,
+      "image": "similo-fantastic-beasts",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 268620,
+      "size": "xs"
+    },
+    {
+      "name": "Rising for the Throne ",
+      "editor": "AEG",
+      "year": 2018,
+      "types": [
+        "Cards",
+        "Dice",
+        "Deck, bag and pool building"
+      ],
+      "language": "x",
+      "players": [
+        2,
+        6
+      ],
+      "time": 50,
+      "complexity": 1.43,
+      "rate": 6.3,
+      "image": "rising-for-the-throne",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 255020,
+      "size": "s"
+    },
+    {
+      "name": "Decktective: Rosas de sangre",
+      "editor": "Mercurio",
+      "year": 2019,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Murder/Mystery",
+        "Puzzle",
+        "Real-time",
+        "Cooperative",
+        "Hand management",
+        "Memory",
+        "Storytelling"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.14,
+      "rate": 6.5,
+      "image": "decktective-rosas",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 286827,
+      "size": "m"
+    },
+    {
+      "name": "Decktective: la mirada del fantasma",
+      "editor": "Mercurio",
+      "year": 2020,
+      "types": [
+        "Cards",
+        "Deduction",
+        "Murder/Mystery",
+        "Puzzle",
+        "Real-time",
+        "Cooperative",
+        "Hand management",
+        "Memory",
+        "Storytelling"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.53,
+      "rate": 6.4,
+      "image": "decktective-fantasma",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 298701,
+      "size": "m"
+    },
+    {
+      "name": "Photograph",
+      "editor": "SD Games",
+      "year": 2016,
+      "types": [
+        "Family",
+        "Cards",
+        "Numbers",
+        "Hand management",
+        "Open drafting",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 2.05,
+      "rate": 7.4,
+      "image": "photograph",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 215471,
+      "size": "s"
+    },
+    {
+      "name": "Dulces Sueños",
+      "editor": "Devir",
+      "year": 2024,
+      "types": [
+        "Cards",
+        "Area movement",
+        "Open drafting",
+        "Push your luck",
+        "Race",
+        "Solitaire",
+        "Variable Set-up"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 45,
+      "complexity": 1.78,
+      "rate": 7,
+      "image": "dulces-sueños",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 324242,
+      "size": "m"
+    },
+    {
+      "name": "Stonehenge",
+      "editor": "EDGE",
+      "year": 2007,
+      "types": [
+        "Political",
+        "Medieval",
+        "Science fiction",
+        "Auction/Biding"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 60,
+      "complexity": 2.19,
+      "rate": 5.4,
+      "image": "stonehenge",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 20436,
+      "size": "l"
+    },
+    {
+      "name": "Pocket Invaders",
+      "editor": "SD Games",
+      "year": 2016,
+      "types": [
+        "Abstract strategy",
+        "Dice",
+        "Grid movement",
+        "Roll / spin and move"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 2.11,
+      "rate": 6.6,
+      "image": "pocket-invaders",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 181120,
+      "size": "xs"
+    },
+    {
+      "name": "Pocket Invaders: nuevos desafíos",
+      "editor": "SD Games",
+      "year": 2019,
+       "types": [
+        "Abstract strategy",
+        "Dice",
+        "Grid movement",
+        "Roll / spin and move",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        4
+      ],
+      "time": 20,
+      "complexity": 2.11,
+      "rate": 7.7,
+      "image": "pocket-invaders-desafíos",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 269256,
+      "size": "xs"
+    },
+    {
+      "name": "Smart10: Viajes",
+      "editor": "SD Games",
+      "year": 2021,
+      "types": [
+        "Trivia",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.33,
+      "rate": 7.8,
+      "image": "smart-10-viajes",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 340974,
+      "size": "s"
+    },
+    {
+      "name": "Smart10: Entretenimiento",
+      "editor": "SD Games",
+      "year": 2022,
+      "types": [
+        "Trivia",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 7.8,
+      "image": "smart-10-entretenimiento",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 357567,
+      "size": "s"
+    },
+    {
+      "name": "Smart10: Música",
+      "editor": "SD Games",
+      "year": 2018,
+      "types": [
+        "Trivia",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 30,
+      "complexity": 1.00,
+      "rate": 7.6,
+      "image": "smart-10-musica",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 357110,
+      "size": "s"
+    },
+    {
+      "name": "Kryptex",
+      "editor": "Zacatrús",
+      "year": 2024,
+      "types": [
+        "Deduction",
+        "Puzzle",
+        "Solitaire"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        2
+      ],
+      "time": 30,
+      "complexity": 2,
+      "rate": 7.4,
+      "image": "kryptex",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 419113,
       "size": "s"
     }
   ]
