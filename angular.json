@@ -50,7 +50,8 @@
                 }
               ],
               "outputHashing": "all",
-              "outputPath": "docs"
+              "outputPath": "docs",
+              "baseHref": "/board-games-showcase/"
             },
             "development": {
               "optimization": false,
