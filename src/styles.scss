@@ -21,3 +21,14 @@ body {
   padding: 2px 0;
   border-radius: 4px;
 }
+
+.mat-mdc-standard-chip:not(.mdc-evolution-chip--disabled) {
+  background-color: variables.$bg-color !important;
+}
+
+.mat-mdc-standard-chip.mdc-evolution-chip--selected:not(
+    .mdc-evolution-chip--disabled
+  ) {
+  background-color: variables.$highlight-color !important;
+  color: variables.$white !important;
+}
