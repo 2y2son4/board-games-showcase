@@ -6,6 +6,9 @@
   --dark-grey: #212121;
   --hot-pink: #c2185b;
   --deep-purple: #673ab7;
+  --bg-color: var(--light-grey);
+  --bg-color-dark: var(--dark-grey);
+  --highlight-color: var(--deep-purple);
 }
 
 // Colors
@@ -19,3 +22,4 @@ $deep-purple: #673ab7;
 $bg-color: $light-grey;
 $bg-color-dark: $dark-grey;
 $highlight-color: $deep-purple;
+$text-color: $black;
