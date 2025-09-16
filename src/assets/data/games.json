@@ -22,7 +22,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 376747,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Tranvía mortal",
@@ -43,7 +43,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 282171,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Master dater: big love edition",
@@ -64,7 +64,7 @@
       "isPlayed": true,
       "age": 18,
       "bggReference": 361088,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Joking hazard",
@@ -85,7 +85,7 @@
       "isPlayed": true,
       "age": 18,
       "bggReference": 193621,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Joking hazard: Deck enhancement #1",
@@ -107,7 +107,7 @@
       "isPlayed": true,
       "age": 18,
       "bggReference": 224058,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Joking hazard: Blast from the past",
@@ -129,7 +129,7 @@
       "isPlayed": true,
       "age": 18,
       "bggReference": 211184,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Back to the future: the card game",
@@ -153,7 +153,7 @@
       "isPlayed": true,
       "age": 11,
       "bggReference": 71676,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Coup",
@@ -222,7 +222,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 199780,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Cabo (2nd edition)",
@@ -244,7 +244,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 271321,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "3 secretos",
@@ -267,7 +267,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 218314,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Narabi",
@@ -290,7 +290,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 257836,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Dungeon Mayhem",
@@ -314,7 +314,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 260300,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Karma",
@@ -336,7 +336,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 158268,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "The Mind",
@@ -360,7 +360,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 244992,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Chrononauts",
@@ -385,7 +385,7 @@
       "isPlayed": true,
       "age": 11,
       "bggReference": 815,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Jumble Jam",
@@ -409,7 +409,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 268543,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Ramen Ink",
@@ -432,7 +432,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 292507,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Sencha",
@@ -455,7 +455,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 277109,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Unánimo Party",
@@ -477,7 +477,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 261614,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Point City",
@@ -501,7 +501,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 368017,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Point City: Kickstarter promo",
@@ -522,7 +522,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 8339373,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Truffle shuffle",
@@ -545,7 +545,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 298060,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Unstable unicorns: NSFW",
@@ -569,7 +569,7 @@
       "isPlayed": true,
       "age": 18,
       "bggReference": 287952,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Unstable unicorns: rainbow apocalypse",
@@ -593,7 +593,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 243566,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Unstable unicorns: adventures",
@@ -617,7 +617,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 311080,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Matrioska",
@@ -640,7 +640,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 192185,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Sushi Go!",
@@ -663,7 +663,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 133473,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Exploding kittens",
@@ -686,7 +686,7 @@
       "isPlayed": true,
       "age": 7,
       "bggReference": 172225,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Exploding kittens: Streaking Kittens",
@@ -710,7 +710,7 @@
       "isPlayed": true,
       "age": 7,
       "bggReference": 260214,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Zombie kittens",
@@ -734,7 +734,7 @@
       "isPlayed": true,
       "age": 7,
       "bggReference": 362202,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Virus!",
@@ -757,7 +757,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 180020,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Virus 2! Evolution",
@@ -825,7 +825,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Saboteur",
@@ -851,7 +851,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 9220,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Saboteur 2: expansion",
@@ -878,7 +878,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 91072,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "One night ultimate werewolf",
@@ -904,7 +904,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 147949,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "One night ultimate vampire",
@@ -930,7 +930,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 180956,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "One night ultimate alien",
@@ -956,7 +956,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 204431,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Bears Vs. Babies",
@@ -980,7 +980,7 @@
       "isPlayed": true,
       "age": 7,
       "bggReference": 211534,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Bears Vs. Babies: NSFW expansion pack",
@@ -1005,7 +1005,7 @@
       "isPlayed": true,
       "age": 18,
       "bggReference": 211926,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Happy salmon",
@@ -1029,7 +1029,7 @@
       "isPlayed": false,
       "age": 6,
       "bggReference": 194626,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "En una escala de 1 a T-Rex",
@@ -1052,7 +1052,7 @@
       "isPlayed": false,
       "age": 7,
       "bggReference": 289018,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Skyjo Action",
@@ -1074,7 +1074,7 @@
       "isPlayed": true,
       "age": 8,
       "bggReference": 301242,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Kimono",
@@ -1099,7 +1099,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 407286,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Mascarade",
@@ -1124,7 +1124,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 139030,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Secrets",
@@ -1148,7 +1148,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 200847,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Munchkin",
@@ -1172,7 +1172,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 1927,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Adventure Time Card Wars: Princess Bubblegum vs. Lumpy Space Princess",
@@ -1194,7 +1194,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 158978,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "Stay cool",
@@ -2603,8 +2603,8 @@
       "image": "taco-cat-goat-cheese",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 253664,
+      "size": "xs"
     },
     {
       "name": "The Grimwood",
@@ -2626,8 +2626,8 @@
       "image": "the-grimwood",
       "isPlayed": true,
       "age": 12,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 186947,
+      "size": "xs"
     },
     {
       "name": "More or Less: How Good Is Your Judgement?",
@@ -2647,8 +2647,8 @@
       "image": "more-or-less",
       "isPlayed": true,
       "age": 14,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 371953,
+      "size": "xs"
     },
     {
       "name": "Shot in the dark: The Ultimate Unorthodox Quiz",
@@ -2668,8 +2668,8 @@
       "image": "shot-in-yhe-dark",
       "isPlayed": true,
       "age": 12,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 297386,
+      "size": "xs"
     },
     {
       "name": "Micro Roma",
@@ -2692,8 +2692,8 @@
       "image": "micro-roma",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 171721,
+      "size": "xs"
     },
     {
       "name": "Fluxx",
@@ -2716,8 +2716,8 @@
       "image": "fluxx",
       "isPlayed": true,
       "age": 8,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 258,
+      "size": "s"
     },
     {
       "name": "Feministime: La Espiral del Tiempo Feminista",
@@ -2734,12 +2734,12 @@
       ],
       "time": 15,
       "complexity": 0,
-      "rate": 0,
+      "rate": 7,
       "image": "espiral-del-tiempo-feminista",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 12,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 411899,
+      "size": "s"
     },
     {
       "name": "Deep sea adventure",
@@ -2925,8 +2925,8 @@
       "image": "spoilers",
       "isPlayed": true,
       "age": 14,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 348535,
+      "size": "m"
     },
     {
       "name": "Imagine",
@@ -2949,8 +2949,8 @@
       "image": "imagine",
       "isPlayed": true,
       "age": 12,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 191894,
+      "size": "m"
     },
     {
       "name": "F**k: the game",
@@ -2972,8 +2972,8 @@
       "image": "fuck-the-game",
       "isPlayed": true,
       "age": 18,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 182168,
+      "size": "xs"
     },
     {
       "name": "Paris: la cité de la Lumière",
@@ -2997,8 +2997,8 @@
       "image": "paris-la-cite-de-la-lumiere",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 276498,
+      "size": "m"
     },
     {
       "name": "Paris: Eiffel",
@@ -3020,7 +3020,7 @@
       "image": "paris-eiffel",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0,
+      "bggReference": 331654,
       "size": "s"
     },
     {
@@ -3043,7 +3043,7 @@
       "image": "mix-it-monster",
       "isPlayed": true,
       "age": 5,
-      "bggReference": 0,
+      "bggReference": 177843,
       "size": "xs"
     },
     {
@@ -3067,7 +3067,7 @@
       "image": "el-jurado-1",
       "isPlayed": false,
       "age": 15,
-      "bggReference": 0,
+      "bggReference": 298740,
       "size": "xs"
     },
     {
@@ -3093,7 +3093,7 @@
       "image": "antarctica",
       "isPlayed": true,
       "age": 14,
-      "bggReference": 0,
+      "bggReference": 342987,
       "size": "xs"
     },
     {
@@ -3118,7 +3118,7 @@
       "image": "nightmare",
       "isPlayed": true,
       "age": 16,
-      "bggReference": 0,
+      "bggReference": 319135,
       "size": "l"
     },
     {
@@ -4963,10 +4963,10 @@
       "complexity": 1.15,
       "rate": 6.0,
       "image": "the-number",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Rolling Ranch",
@@ -4990,7 +4990,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Quiz Chef",
@@ -5010,10 +5010,10 @@
       "complexity": 1.00,
       "rate": 5.6,
       "image": "quiz-chef",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Illusio",
@@ -5035,7 +5035,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Winter tales",
@@ -5061,7 +5061,7 @@
       "isPlayed": false,
       "age": 14,
       "bggReference": 0,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Set",
@@ -5084,10 +5084,10 @@
       "complexity": 1.66,
       "rate": 6.5,
       "image": "set",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 6,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Paradox university",
@@ -5107,10 +5107,10 @@
       "complexity": 1.43,
       "rate": 7.2,
       "image": "paradox-university",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Herbalism",
@@ -5135,7 +5135,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Ensalada de puntos",
@@ -5158,7 +5158,7 @@
       "isPlayed": true,
       "age": 10,
       "bggReference": 0,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "City blox",
@@ -5183,7 +5183,7 @@
       "isPlayed": true,
       "age": 6,
       "bggReference": 0,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Sumatra",
@@ -5208,7 +5208,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Winter",
@@ -5233,7 +5233,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Ragami",
@@ -5260,7 +5260,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 0,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Nocturne",
@@ -5291,7 +5291,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 0,
-      "size": ""
+      "size": "l"
     },
     {
       "name": "Crime zoom #1: la última carta",
@@ -5317,7 +5317,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 294235,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Draw Bot",
@@ -5340,7 +5340,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 306673,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Yokai Sketch",
@@ -5362,7 +5362,7 @@
       "isPlayed": false,
       "age": 12,
       "bggReference": 371981,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Game that song",
@@ -5385,7 +5385,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 410252,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Game that song: 80's mix",
@@ -5409,7 +5409,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 410252,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Game that song: 90's mix",
@@ -5433,7 +5433,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 410252,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Game that song: 2000's mix",
@@ -5457,7 +5457,7 @@
       "isPlayed": true,
       "age": 14,
       "bggReference": 410252,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "La búsqueda del Planeta X",
@@ -5485,7 +5485,7 @@
       "isPlayed": true,
       "age": 13,
       "bggReference": 279537,
-      "size": ""
+      "size": "m"
     },
     {
       "name": "La marcha del cangrejo",
@@ -5508,7 +5508,7 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 316632,
-      "size": ""
+      "size": "xs"
     },
     {
       "name": "Zogen",
@@ -6653,7 +6653,7 @@
       "complexity": 1,
       "rate": 6.8,
       "image": "rafter-five",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 7,
       "bggReference": 405538,
       "size": "s"
@@ -7007,7 +7007,7 @@
       "complexity": 1,
       "rate": 5,
       "image": "horrible-therapist",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 17,
       "bggReference": 430572,
       "size": "s"
@@ -7600,7 +7600,7 @@
       "complexity": 1.07,
       "rate": 7.2,
       "image": "pistas-cruzadas",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 7,
       "bggReference": 300753,
       "size": "m"
@@ -7677,7 +7677,7 @@
       "size": "xs"
     },
     {
-      "name": "Rising for the Throne ",
+      "name": "Rising for the Throne",
       "editor": "AEG",
       "year": 2018,
       "types": [
@@ -7723,7 +7723,7 @@
       "complexity": 1.14,
       "rate": 6.5,
       "image": "decktective-rosas",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 12,
       "bggReference": 286827,
       "size": "m"
@@ -7900,7 +7900,7 @@
       "complexity": 1.33,
       "rate": 7.8,
       "image": "smart-10-viajes",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 340974,
       "size": "s"
@@ -7922,7 +7922,7 @@
       "complexity": 1.00,
       "rate": 7.8,
       "image": "smart-10-entretenimiento",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 357567,
       "size": "s"
@@ -7944,7 +7944,7 @@
       "complexity": 1.00,
       "rate": 7.6,
       "image": "smart-10-musica",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 357110,
       "size": "s"
