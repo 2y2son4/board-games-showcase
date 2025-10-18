@@ -1273,7 +1273,8 @@
       "types": [
         "Cards",
         "Deduction",
-        "Cooperative"
+        "Cooperative",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -1708,7 +1709,8 @@
       "year": 2014,
       "types": [
         "Action",
-        "Dexterity"
+        "Dexterity",
+        "Two players"
       ],
       "language": "de",
       "players": [
@@ -2173,7 +2175,8 @@
       "types": [
         "Cards",
         "Numbers",
-        "Hand management"
+        "Hand management",
+        "Two players"
       ],
       "language": "x",
       "players": [
@@ -2333,8 +2336,8 @@
       "image": "listillo",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 382405,
+      "size": "m"
     },
     {
       "name": "Among spaceship",
@@ -2357,7 +2360,7 @@
       "isPlayed": false,
       "age": 10,
       "bggReference": 0,
-      "size": ""
+      "size": "s"
     },
     {
       "name": "Mantis",
@@ -2381,8 +2384,8 @@
       "image": "mantis",
       "isPlayed": false,
       "age": 7,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 358690,
+      "size": "s"
     },
     {
       "name": "El portero Baldomero",
@@ -2406,8 +2409,8 @@
       "image": "el-portero-baldomero",
       "isPlayed": false,
       "age": 10,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 306745,
+      "size": "s"
     },
     {
       "name": "Here to slay",
@@ -2431,8 +2434,8 @@
       "image": "here-to-slay",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 299252,
+      "size": "s"
     },
     {
       "name": "Here to slay: Berserkers & Necromancers",
@@ -2457,8 +2460,8 @@
       "image": "here-to-slay-berserkers-necromancers",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 349286,
+      "size": "s"
     },
     {
       "name": "Here to slay: Warriors & Druids",
@@ -2483,8 +2486,8 @@
       "image": "here-to-slay-warriors-druids",
       "isPlayed": true,
       "age": 10,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 321259,
+      "size": "s"
     },
     {
       "name": "Trash pandas",
@@ -2509,8 +2512,8 @@
       "image": "trash-pandas",
       "isPlayed": false,
       "age": 8,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 216439,
+      "size": "s"
     },
     {
       "name": "Kingz",
@@ -2532,8 +2535,8 @@
       "image": "kingz",
       "isPlayed": false,
       "age": 14,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 199401,
+      "size": "s"
     },
     {
       "name": "Secret Hitler",
@@ -2557,8 +2560,8 @@
       "image": "secret-hitler",
       "isPlayed": true,
       "age": 13,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 188834,
+      "size": "m"
     },
     {
       "name": "Cold case: una historia de muerte",
@@ -2581,8 +2584,8 @@
       "image": "cold-case",
       "isPlayed": true,
       "age": 14,
-      "bggReference": 0,
-      "size": ""
+      "bggReference": 337863,
+      "size": "m"
     },
     {
       "name": "Taco, cat, goat, cheese, pizza",
@@ -2985,7 +2988,8 @@
         "Territory building",
         "Layering",
         "Grid coverage",
-        "Open drafting"
+        "Open drafting",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -3008,7 +3012,8 @@
         "Action drafting",
         "Area majority",
         "Tile placement",
-        "Expansion"
+        "Expansion",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -3922,8 +3927,9 @@
       "year": 2023,
       "types": [
         "Fantasy",
-        "War game",
-        "Grid movement"
+        "Wargame",
+        "Grid movement",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -4372,7 +4378,8 @@
         "Territory building",
         "Network and route building",
         "Tile placement",
-        "Solitaire"
+        "Solitaire",
+        "Two players"
       ],
       "language": "x",
       "players": [
@@ -4490,7 +4497,8 @@
         "Cards",
         "End game bonuses",
         "Deck, bag and pool building",
-        "Take that"
+        "Take that",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -4538,7 +4546,8 @@
         "End game bonuses",
         "Modular board",
         "Open drafting",
-        "Set collection"
+        "Set collection",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -4589,7 +4598,8 @@
         "Collectible components",
         "Deduction",
         "Action points",
-        "TV series"
+        "TV series",
+        "Two players"
       ],
       "language": "en",
       "players": [
@@ -4611,7 +4621,8 @@
       "types": [
         "Puzzle",
         "Cooperative",
-        "Solitaire"
+        "Solitaire",
+        "Two players"
       ],
       "language": "x",
       "players": [
@@ -5220,7 +5231,8 @@
         "Area majority",
         "Modular board",
         "Pattern building",
-        "Tile placement"
+        "Tile placement",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -5349,7 +5361,8 @@
       "types": [
         "Cards",
         "Mythology",
-        "Set collection"
+        "Set collection",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -5495,7 +5508,8 @@
         "Deduction",
         "Cooperative",
         "Communication limits",
-        "Grid movement"
+        "Grid movement",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -5751,7 +5765,8 @@
       "year": 2018,
       "types": [
         "Dexterity",
-        "Finger flicking"
+        "Finger flicking",
+        "Two players"
       ],
       "language": "en",
       "players": [
@@ -5851,7 +5866,8 @@
         "Cooperative",
         "Dice rolling",
         "Campaign game",
-        "Worker placement"
+        "Worker placement",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -6262,7 +6278,8 @@
         "Hand management",
         "Secret Unit Deployment",
         "Simultaneous action selection",
-        "Variable player powers"
+        "Variable player powers",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -6332,7 +6349,8 @@
       "year": 2021,
       "types": [
         "Puzzle",
-        "Trains"
+        "Trains",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -6738,7 +6756,8 @@
       "editor": "SD Games",
       "year": 2019,
       "types": [
-        "Party"
+        "Party",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -6877,7 +6896,8 @@
       "types": [
         "Wargame",
         "Cards",
-        "Spies"
+        "Spies",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -7280,7 +7300,8 @@
         "Cooperative",
         "Dice rolling",
         "Campaign game",
-        "Worker placement"
+        "Worker placement",
+        "Two players"
       ],
       "language": "en",
       "players": [
@@ -7304,7 +7325,8 @@
         "Strategy",
         "Cards",
         "Area majority",
-        "Influence"
+        "Influence",
+        "Two players"
       ],
       "language": "en",
       "players": [
@@ -7329,7 +7351,8 @@
         "Cards",
         "Area majority",
         "Influence",
-        "Expansion"
+        "Expansion",
+        "Two players"
       ],
       "language": "en",
       "players": [
@@ -7378,7 +7401,8 @@
         "Hand management",
         "Open drafting",
         "Push your luck",
-        "Set collection"
+        "Set collection",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -7611,7 +7635,8 @@
       "year": 2024,
       "types": [
         "Logic",
-        "Deduction"
+        "Deduction",
+        "Solitaire"
       ],
       "language": "es",
       "players": [
@@ -7956,7 +7981,8 @@
       "types": [
         "Deduction",
         "Puzzle",
-        "Solitaire"
+        "Solitaire",
+        "Two players"
       ],
       "language": "es",
       "players": [
@@ -7970,6 +7996,105 @@
       "isPlayed": false,
       "age": 8,
       "bggReference": 419113,
+      "size": "s"
+    },
+    {
+      "name": "Just One",
+      "editor": "AEG",
+      "year": 2018,
+      "types": [
+        "Party",
+        "Deduction",
+        "Words",
+        "Communication limits",
+        "Cooperative",
+        "Score-and-reset-game",
+        "Give a clue/Get a clue",
+        "Words"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        7
+      ],
+      "time": 60,
+      "complexity": 1.04,
+      "rate": 7.6,
+      "image": "just-one",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 254640,
+      "size": "m"
+    },
+    {
+      "name": "Pana Po'o",
+      "editor": "Falomir Juegos",
+      "year": 2020,
+      "types": [
+        "Party",
+        "Action timer",
+        "Communication limits",
+        "Pattern recognition",
+        "Team-based"
+      ],
+      "language": "es",
+      "players": [
+        4
+      ],
+      "time": 30,
+      "complexity": 1,
+      "rate": 7,
+      "image": "pana-poo",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 352508,
+      "size": "m"
+    },
+    {
+      "name": "Backstories: Sola bajo el hielo",
+      "editor": "Tranjis",
+      "year": 2024,
+      "types": [
+        "Adventure",
+        "Cards",
+        "Exploration",
+        "Puzzle",
+        "Cooperative",
+        "Narrative choice/paragraph",
+        "Storytelling"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        6
+      ],
+      "time": 70,
+      "complexity": 1.23,
+      "rate": 7.1,
+      "image": "back-stories-hielo",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 415921,
+      "size": "s"
+    },
+    {
+      "name": "Batallas Napoleónicas en la Península",
+      "editor": "Draco Ideas",
+      "year": 2023,
+      "types": [
+        "Wargame"
+      ],
+      "language": "es",
+      "players": [
+        1
+      ],
+      "time": 50,
+      "complexity": 2.25,
+      "rate": 8.4,
+      "image": "batallas-napoleonicas",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 389135,
       "size": "s"
     }
   ]
