@@ -1,18 +1,18 @@
 <div #topPage></div>
 <app-loader></app-loader>
-
-@if(gamesList && !isLoading){<div class="content">
-  <div>
-    <div class="side">
-      <div class="side__container">
-        <h3 class="side__number">
-          {{playedGames ? 'Played' : unPlayedGames ? 'Unplayed' : ''}}
-        </h3>
-        <h4 class="side__number">
-          @for(type of selectedChipTypes; let index = $index; let first = $first; let last = $last; track
+@if(gamesList && !isLoading){
+  <div class="content">
+    <div>
+      <div class="side">
+        <div class="side__container">
+          <h3 class="side__number">
+            {{playedGames ? 'Played' : unPlayedGames ? 'Unplayed' : ''}}
+          </h3>
+          <h4 class="side__number">
+            @for(type of selectedChipTypes; let index = $index; let first = $first; let last = $last; track
             index){
-            <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes.length > 1 ? ' and ' : '')}}
-            {{!first ? type.toLowerCase() : type}}</span>}
+              <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes.length > 1 ? ' and ' : '')}}
+                {{!first ? type.toLowerCase() : type}}</span>}
           </h4>
           <h2 class="side__title">Games</h2>
           <h3 class="side__number">
@@ -32,26 +32,27 @@
             <article class="card__list-inner" (click)="toggleCardFlip(index)" #innerElement>
               <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
                 <span class="card__year-absolute" [ngClass]="{'border-pink': game.isPlayed }"
-                [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
+                  [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
                 <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery"> {{game.name}}
                 </h2>
-                @if(game.image)
-                  { <div class="card__image-container"><img class="card__image" src="assets/games/{{game.image}}.webp"
-                alt="{{game.name}}"></div>
-              }
-              <p class="card__title" [innerHTML]="(game.editor ? 'by ' + game.editor : '-') | highlightText:searchQuery">
-              </p>
-            </div>
-            <div class="card__list-back" [ngClass]="{'border-pink': game.isPlayed }">
-              <img class="card__flag card__language" [ngClass]="{'border-pink': game.isPlayed }"
-                src="assets/flags/{{game.language}}-flag.png" alt="flag">
+                @if(game.image) {
+                  <div class="card__image-container"><img class="card__image" src="assets/games/{{game.image}}.webp"
+                      alt="{{game.name}}"></div>
+                }
+                <p class="card__title"
+                  [innerHTML]="(game.editor ? 'by ' + game.editor : '-') | highlightText:searchQuery">
+                </p>
+              </div>
+              <div class="card__list-back" [ngClass]="{'border-pink': game.isPlayed }">
+                <img class="card__flag card__language" [ngClass]="{'border-pink': game.isPlayed }"
+                  src="assets/flags/{{game.language}}-flag.png" alt="flag">
                 <div class="card__info card__info-scroll">
                   <div class="card__info-title">
                     <p class="card__name" [innerHTML]="game.name | highlightText:searchQuery">
                     </p>
                     @if(game.year){
                       <span class="card__year"
-                      [innerHTML]="('(' + game.year.toString() + ')') | highlightText:searchQuery"></span>
+                        [innerHTML]="('(' + game.year.toString() + ')') | highlightText:searchQuery"></span>
                     }
                   </div>
                   <div class="line"></div>
@@ -65,7 +66,8 @@
                               {{ game.players.length === 1 && first ? 'For' : ''}} {{player}} {{ !last ? 'to' :
                               player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
                             }
-                          </p>} @else {
+                          </p>
+                        } @else {
                           <p>-</p>
                         }
                         @if(game.age){
@@ -79,116 +81,128 @@
                       </div>
                       <mat-chip-listbox multiple [(ngModel)]="selectedChipTypes" (ngModelChange)="onTypeChange($event)">
                         @for(type of game.types; let index = $index; let last = $last; track index){
-                          <mat-chip-option [value]="type"> {{type}} </mat-chip-option>}
+                          <mat-chip-option [value]="type"> {{type}} </mat-chip-option>
+                        }
+                      </mat-chip-listbox>
+                      @if(game.size){
+                        <div class="line" style="margin-top: 12px"></div>
+                        <mat-chip-listbox [(ngModel)]="selectedSize" (ngModelChange)="onSizeChange($event)">
+                          <mat-chip-option [value]=" game.size"> {{game.size.toUpperCase()}} </mat-chip-option>
                         </mat-chip-listbox>
-                        @if(game.size){
-                          <div class="line" style="margin-top: 12px"></div>
-                          <mat-chip-listbox [(ngModel)]="selectedSize" (ngModelChange)="onSizeChange($event)">
-                            <mat-chip-option [value]=" game.size"> {{game.size.toUpperCase()}} </mat-chip-option>
-                          </mat-chip-listbox>}
-                        </div>
-                        <div class="card__info-down">
-                          @if(game.rate){
-                            <div class="card__info-down-container">
-                              <p class="card__rate-title">Rate:</p>
-                              <div [style.background-color]="commonFunctions.getRatingColor(game.rate)"
-                                [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
-                              {{!game.rate ? 'X' :game.rate}}</div>
-                            </div>}
-                            @if(game.complexity){
-                              <div class="card__info-down-container">
-                                <p class="card__complexity-title">Complexity:</p>
-                                <div [style.background-color]="commonFunctions.getComplexityColor(game.complexity)"
-                                  [ngClass]="{'border-pink': game.isPlayed }" class="card__complexity">
-                                  {{ !game.complexity ? 'X' :
-                                game.complexity.toString() === '1' ? '1.00' : game.complexity}}</div>
-                              </div>}
-                              @if(game.bggReference){
-                                <div class="card__info-down-container">
-                                  <p class="card__rate-title">BGG page:</p>
-                                  <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
-                                    rel="noopener noreferrer">
-                                    <div class="card__bgg">
-                                      GO
-                                    </div>
-                                  </a>
-                                </div>}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                    </li>}
-                  </ul>
-                  @if(filteredGames.length === 0) {
-                    <mat-card class="card__no-data">
-                      <mat-card-content>There are no results for <span class="card__search-query">
-                        {{searchQuery || ' this search'}}
-                      </span>
-                      <br /><br />
-                      <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
-                      </button>
-                    </mat-card-content>
-                  </mat-card>}
-                </div>
-                <div class="divider"></div>
-                <div class="filter">
-                  <div class="filter__container">
-                    <mat-form-field style="height: 70px; margin-top: 18px;">
-                      <mat-label>Search</mat-label>
-                      <input matInput placeholder="Search by name, year, type..." [(ngModel)]="searchQuery" (input)="filterGames()">
-                      @if (searchQuery) {
-                        <button matSuffix mat-icon-button aria-label="Clear" (click)="restartSearch()">
-                          <mat-icon>close</mat-icon>
-                        </button>
                       }
-                    </mat-form-field>
-                    <mat-form-field>
-                      <mat-label>Number of players</mat-label>
-                      <input matInput type="number" maxlength="2" min="1" id="exactPlayers" name="exactPlayers"
-                        [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
-                      </mat-form-field>
-                      <mat-form-field>
-                        <mat-label>Age</mat-label>
-                        <input matInput type="number" maxlength="2" min="1" id="exactAge" name="exactAge" [(ngModel)]="exactAge"
-                          (input)="filterGamesByAge()">
-                        </mat-form-field>
-                        <mat-form-field>
-                          <mat-label>Sort</mat-label>
-                          <mat-select [formControl]="selectedSorting" (selectionChange)="selectSorting($event, filteredGames)">
-                            @for (label of sortingSelectLabels; track label) {
-                              <mat-option [value]="label">{{label}}</mat-option>
-                            }
-                          </mat-select>
-                        </mat-form-field>
-                        <mat-form-field>
-                          <mat-label>Filter by types</mat-label>
-                          <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGamesByTypeAndEditor()">
-                            <input placeholder="Search..." (input)="onSearchTypes($event.target)" class="dropdown-search">
-                            @for (type of types; track type) {
-                              <mat-option [value]="type">{{type}}</mat-option>
-                            }
-                          </mat-select>
-                        </mat-form-field>
-                        <mat-form-field>
-                          <mat-label>Filter by publisher</mat-label>
-                          <mat-select [formControl]="selectedEditors" multiple (selectionChange)="filterGamesByTypeAndEditor()">
-                            <input placeholder="Search..." (input)="onSearchEditors($event.target)" class="dropdown-search">
-                            @for (editor of editors; track editor) {
-                              <mat-option [value]="editor">{{editor}}</mat-option>
-                            }
-                          </mat-select>
-                        </mat-form-field>
-                        @if(showPlayedBtn){
-                          <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
-                            Played
-                          </button>}
-                          @if(showUnplayedBtn){
-                            <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
-                              Unplayed
-                            </button>}
-                            <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
-                            </button>
+                    </div>
+                    <div class="card__info-down">
+                      @if(game.rate){
+                        <div class="card__info-down-container">
+                          <p class="card__rate-title">Rate:</p>
+                          <div [style.background-color]="commonFunctions.getRatingColor(game.rate)"
+                            [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
+                            {{!game.rate ? 'X' :game.rate}}
                           </div>
                         </div>
-                      </div>}
+                      }
+                      @if(game.complexity){
+                        <div class="card__info-down-container">
+                          <p class="card__complexity-title">Complexity:</p>
+                          <div [style.background-color]="commonFunctions.getComplexityColor(game.complexity)"
+                            [ngClass]="{'border-pink': game.isPlayed }" class="card__complexity">
+                            {{ !game.complexity ? 'X' :
+                                game.complexity.toString() === '1' ? '1.00' : game.complexity}}
+                          </div>
+                        </div>
+                      }
+                      @if(game.bggReference){
+                        <div class="card__info-down-container">
+                          <p class="card__rate-title">BGG page:</p>
+                          <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="card__bgg">
+                              GO
+                            </div>
+                          </a>
+                        </div>
+                      }
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
+        }
+      </ul>
+      @if(filteredGames.length === 0) {
+        <mat-card class="card__no-data">
+          <mat-card-content>There are no results for <span class="card__search-query">
+              {{searchQuery || ' this search'}}
+            </span>
+            <br /><br />
+            <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
+            </button>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+    <div class="divider"></div>
+    <div class="filter">
+      <div class="filter__container">
+        <mat-form-field style="height: 70px; margin-top: 18px;">
+          <mat-label>Search</mat-label>
+          <input matInput placeholder="Search by name, year, type..." [(ngModel)]="searchQuery" (input)="filterGames()">
+          @if (searchQuery) {
+            <button matSuffix mat-icon-button aria-label="Clear" (click)="restartSearch()">
+              <mat-icon>close</mat-icon>
+            </button>
+          }
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Number of players</mat-label>
+          <input matInput type="number" maxlength="2" min="1" id="exactPlayers" name="exactPlayers"
+            [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Age</mat-label>
+          <input matInput type="number" maxlength="2" min="1" id="exactAge" name="exactAge" [(ngModel)]="exactAge"
+            (input)="filterGamesByAge()">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Sort</mat-label>
+          <mat-select [formControl]="selectedSorting" (selectionChange)="selectSorting($event, filteredGames)">
+            @for (label of sortingSelectLabels; track label) {
+              <mat-option [value]="label">{{label}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Filter by types</mat-label>
+          <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGamesByTypeAndEditor()">
+            <input placeholder="Search..." (input)="onSearchTypes($event.target)" class="dropdown-search">
+            @for (type of types; track type) {
+              <mat-option [value]="type">{{type}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Filter by publisher</mat-label>
+          <mat-select [formControl]="selectedEditors" multiple (selectionChange)="filterGamesByTypeAndEditor()">
+            <input placeholder="Search..." (input)="onSearchEditors($event.target)" class="dropdown-search">
+            @for (editor of editors; track editor) {
+              <mat-option [value]="editor">{{editor}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        @if(showPlayedBtn){
+          <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
+            Played
+          </button>
+        }
+        @if(showUnplayedBtn){
+          <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
+            Unplayed
+          </button>
+        }
+        <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
+        </button>
+      </div>
+    </div>
+  </div>
+}
