@@ -4044,7 +4044,7 @@
       "image": "perspectives",
       "isPlayed": true,
       "age": 12,
-      "bggReference": 0,
+      "bggReference": 400995,
       "size": "m"
     },
     {
@@ -6791,7 +6791,7 @@
       "complexity": 0,
       "rate": 8.1,
       "image": "profiler-caribe",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 422753,
       "size": "m"
@@ -7646,7 +7646,7 @@
       "complexity": 0,
       "rate": 0,
       "image": "cat-crimes",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 0,
       "size": "s"
@@ -8021,7 +8021,7 @@
       "complexity": 1.04,
       "rate": 7.6,
       "image": "just-one",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 8,
       "bggReference": 254640,
       "size": "m"
@@ -8072,7 +8072,7 @@
       "complexity": 1.23,
       "rate": 7.1,
       "image": "back-stories-hielo",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 10,
       "bggReference": 415921,
       "size": "s"
@@ -8092,10 +8092,134 @@
       "complexity": 2.25,
       "rate": 8.4,
       "image": "batallas-napoleonicas",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 12,
       "bggReference": 389135,
       "size": "s"
+    },
+    {
+      "name": "Perspectives (azul)",
+      "editor": "Space Cowboys",
+      "year": 2024,
+      "types": [
+        "Deduction",
+        "Murder/Mystery",
+        "Puzzle",
+        "Communication limits",
+        "Cooperative"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 90,
+      "complexity": 1.60,
+      "rate": 7.6,
+      "image": "perspectives-azul",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 427087,
+      "size": "m"
+    },
+    {
+      "name": "Mysterium Park",
+      "editor": "Libellud",
+      "year": 2020,
+      "types": [
+        "Deduction",
+        "Murder/Mystery",
+        "Party",
+        "Communication limits",
+        "Cooperative",
+        "Pattern recognition",
+        "Roles with Asymmetric information",
+        "Storytelling"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 45,
+      "complexity": 1.44,
+      "rate": 7,
+      "image": "mysterium-park",
+      "isPlayed": true,
+      "age": 10,
+      "bggReference": 301767,
+      "size": "s"
+    },
+    {
+      "name": "Loops",
+      "editor": "Zacatrús",
+      "year": 2024,
+      "types": [
+        "Narrative choice/paragraph"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        2
+      ],
+      "time": 120,
+      "complexity": 0,
+      "rate": 0,
+      "image": "loops",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 454167,
+      "size": "xs"
+    },
+    {
+      "name": "Zoom in Barcelona",
+      "editor": "Cucafera Games",
+      "year": 2019,
+      "types": [
+        "Hand management",
+        "Open drafting",
+        "Pattern building",
+        "Point to point movement",
+        "Set collection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 60,
+      "complexity": 1.85,
+      "rate": 6.9,
+      "image": "zoom-in-barcelona",
+      "isPlayed": false,
+      "age": 8,
+      "bggReference": 280655,
+      "size": "m"
+    },
+    {
+      "name": "Crash Octopus",
+      "editor": "SD Games",
+      "year": 2021,
+      "types": [
+        "Action/Dexterity",
+        "Party",
+        "Dice rolling",
+        "Push your luck",
+        "Flicking"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.36,
+      "rate": 6.9,
+      "image": "crash-octopus",
+      "isPlayed": false,
+      "age": 7,
+      "bggReference": 319579,
+      "size": "m"
     }
   ]
 }
