@@ -9,12 +9,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { GamesComponent } from '../components/games/games.component';
 import { OraclesComponent } from '../components/oracles/oracles.component';
-import { BggSearchComponent } from '../components/bgg-search/bgg-search.component';
 
 @Component({
   selector: 'app-root',
   imports: [
-    BggSearchComponent,
     CommonModule,
     GamesComponent,
     MatButtonModule,
