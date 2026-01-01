@@ -11,8 +11,8 @@ describe('ColorSettingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ColorSettingsComponent],
       imports: [
+        ColorSettingsComponent,
         FormsModule,
         MatFormFieldModule,
         MatSelectModule,

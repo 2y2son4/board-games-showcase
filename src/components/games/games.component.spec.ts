@@ -3,6 +3,8 @@ import { GamesComponent } from './games.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GameCard } from '../commons.models';
 import { FormControl } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 const game1: GameCard = {
   name: 'Game 1',
@@ -62,14 +64,22 @@ describe('GamesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [GamesComponent, BrowserAnimationsModule],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
     fixture = TestBed.createComponent(GamesComponent);
     component = fixture.componentInstance;
     // Manually initialize form controls if not done in constructor
-    if (!component.selectedEditors) component.selectedEditors = new FormControl([]);
-    if (!component.selectedSorting) component.selectedSorting = new FormControl();
+    if (!component.selectedEditors)
+      component.selectedEditors = new FormControl([]);
+    if (!component.selectedSorting)
+      component.selectedSorting = new FormControl();
     if (!component.selectedTypes) component.selectedTypes = new FormControl([]);
     fixture.detectChanges();
+
+    // JSDOM doesn't implement scrollIntoView; Angular sets @ViewChild after detectChanges
+    if (component.topPage?.nativeElement) {
+      component.topPage.nativeElement.scrollIntoView = jest.fn();
+    }
   });
 
   it('should create', () => {
@@ -89,8 +99,9 @@ describe('GamesComponent', () => {
 
   it('should filter games by exact number of players properly', () => {
     component.gamesList = [game1, game2, game3];
+    component.filteredGames = [...component.gamesList];
     component.exactPlayers = 2;
-    component.filterGames();
+    component.filterGamesByExactPlayers();
 
     expect(component.filteredGames.length).toBe(1);
     expect(component.filteredGames[0].name).toBe('Another thing');
@@ -98,8 +109,9 @@ describe('GamesComponent', () => {
 
   it('should reset all filters properly', () => {
     component.gamesList = [game1, game2, game3];
+    component.filteredGames = [...component.gamesList];
     component.selectedEditors.setValue(['Editor 1']);
-    component.selectedSorting.setValue('year');
+    component.selectedSorting.setValue('Year ↑');
     component.selectedTypes.setValue(['Type A']);
     component.searchQuery = 'Game';
     component.exactPlayers = 4;
@@ -120,51 +132,61 @@ describe('GamesComponent', () => {
 
   it('should filter by playedGames', () => {
     component.gamesList = [game1, game2, game3];
-    component.playedGames = true;
-    component.unPlayedGames = false;
-    component.filterGames();
+    component.filteredGames = [...component.gamesList];
+    component.togglePlayed();
 
-    expect(component.filteredGames.every(g => g.isPlayed)).toBe(true);
+    expect(component.filteredGames.every((g) => g.isPlayed)).toBe(true);
   });
 
   it('should filter by unPlayedGames', () => {
     component.gamesList = [game1, game2, game3];
-    component.playedGames = false;
-    component.unPlayedGames = true;
-    component.filterGames();
+    component.filteredGames = [...component.gamesList];
+    component.toggleUnPlayed();
 
-    expect(component.filteredGames.every(g => !g.isPlayed)).toBe(true);
+    expect(component.filteredGames.every((g) => !g.isPlayed)).toBe(true);
   });
 
   it('should filter by editor', () => {
     component.gamesList = [game1, game2, game3];
+    component.filteredGames = [...component.gamesList];
     component.selectedEditors.setValue(['Editor 1']);
-    component.filterGames();
+    component.filterGamesByTypeAndEditor();
 
-    expect(component.filteredGames.every(g => g.editor === 'Editor 1')).toBe(true);
+    expect(component.filteredGames.every((g) => g.editor === 'Editor 1')).toBe(
+      true,
+    );
   });
 
   it('should filter by type', () => {
     component.gamesList = [game1, game2, game3];
+    component.filteredGames = [...component.gamesList];
     component.selectedTypes.setValue(['Type A']);
-    component.filterGames();
+    component.filterGamesByTypeAndEditor();
 
-    expect(component.filteredGames.every(g => g.types.includes('Type A'))).toBe(true);
+    expect(
+      component.filteredGames.every((g) => g.types.includes('Type A')),
+    ).toBe(true);
   });
 
   it('should sort games by year', () => {
-    component.gamesList = [game1, game2, game3];
-    component.selectedSorting.setValue('year');
-    component.filterGames();
+    component.gamesList = [game2, game3, game1];
+    component.filteredGames = [...component.gamesList];
+    component.selectSorting(
+      { value: 'Year ↑' } as any,
+      component.filteredGames,
+    );
 
     expect(component.filteredGames[0].year).toBe(2021);
     expect(component.filteredGames[2].year).toBe(2023);
   });
 
   it('should sort games by name', () => {
-    component.gamesList = [game1, game2, game3];
-    component.selectedSorting.setValue('name');
-    component.filterGames();
+    component.gamesList = [game2, game1, game3];
+    component.filteredGames = [...component.gamesList];
+    component.selectSorting(
+      { value: 'A to Z' } as any,
+      component.filteredGames,
+    );
 
     expect(component.filteredGames[0].name).toBe('Another thing');
     expect(component.filteredGames[2].name).toBe('Game 2');
