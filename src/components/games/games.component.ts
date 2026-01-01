@@ -29,14 +29,13 @@ import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-tex
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
 import { HttpService } from '../../core/services/http/http.service';
 import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
-// import { ColorSettingsComponent } from '../color-settings/color-settings.component';
 import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
+import { ExportService } from '../../core/services/export/export.service';
 
 @Component({
   selector: 'app-games',
   imports: [
-    // ColorSettingsComponent,
     CommonModule,
     FormsModule,
     HighlightTextPipe,
@@ -52,7 +51,7 @@ import { LoaderService } from '../../core/services/loader/loader.service';
     ScrollToTopBtnComponent,
   ],
   templateUrl: './games.component.html',
-  styleUrl: '../common-styles.scss'
+  styleUrl: '../common-styles.scss',
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChild('topPage') topPage!: ElementRef;
@@ -99,6 +98,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     public filterFunctions: FilterFunctionsService,
     private readonly httpDataService: HttpService,
     private readonly loaderService: LoaderService,
+    private readonly exportService: ExportService,
   ) {}
 
   ngOnInit(): void {
@@ -248,7 +248,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
     if (selectedTypeValues.length === 0 && selectedEditorValues.length === 0) {
       this.resetGamesList();
-    } else if (this.filterGames.length !== this.gamesList.length) {
+    } else if (this.filteredGames.length !== this.gamesList.length) {
       this.filteredGames = this.filteredGames.filter((game) => {
         const matchTypes =
           selectedTypeValues.length === 0 ||
@@ -404,18 +404,26 @@ export class GamesComponent implements OnInit, AfterViewInit {
     }
   }
 
-  toggleCardFlip(index: number) {
-    const targetElement = this.innerElements.toArray()[index];
-    const gameName =
-      targetElement.nativeElement.firstElementChild.childNodes[1].innerHTML;
-    const gameObject = this.gamesList.filter(
-      (games) => games.name === gameName,
-    );
+  toggleCardFlip(game: GameCard, index: number) {
+    const targetElement = this.innerElements?.toArray()?.[index];
+    if (!targetElement) return;
 
-    this.printGames = [...this.printGames, gameObject[0]];
+    const isCurrentlySelected =
+      targetElement.nativeElement.classList.contains('active');
+    targetElement.nativeElement.classList.toggle('active');
 
-    if (targetElement) {
-      targetElement.nativeElement.classList.toggle('active');
+    if (isCurrentlySelected) {
+      // Unselect
+      this.printGames = this.printGames.filter((g) => g.name !== game.name);
+    } else {
+      // Select (avoid duplicates)
+      if (!this.printGames.some((g) => g.name === game.name)) {
+        this.printGames = [...this.printGames, game];
+      }
     }
+  }
+
+  async exportSelectedAsPdf(): Promise<void> {
+    await this.exportService.exportSelectedGamesAsPdf(this.printGames);
   }
 }

@@ -64,6 +64,15 @@ p {
     }
   }
 
+  &__export {
+    display: block;
+    margin-top: 12px;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
