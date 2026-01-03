@@ -215,27 +215,11 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
   }
 
-  selectSorting(change: MatSelectChange, filteredGames: GameCard[]) {
+  selectSorting(change: MatSelectChange) {
     this.filterFunctions.flipAllCards(this.innerElements);
-    const sortFunctions: {
-      [key: string]: (a: GameCard, b: GameCard) => number;
-    } = {
-      'A to Z': (a, b) => a.name.localeCompare(b.name),
-      'Z to A': (a, b) => b.name.localeCompare(a.name),
-      'Year ↑': (a, b) => a.year - b.year,
-      'Year ↓': (a, b) => b.year - a.year,
-      'Time ↑': (a, b) => a.time - b.time,
-      'Time ↓': (a, b) => b.time - a.time,
-      'Complexity ↑': (a, b) => a.complexity - b.complexity,
-      'Complexity ↓': (a, b) => b.complexity - a.complexity,
-      'Rate ↑': (a, b) => a.rate - b.rate,
-      'Rate ↓': (a, b) => b.rate - a.rate,
-    };
-
-    const sortFunction = sortFunctions[change.value];
-    if (sortFunction) {
-      filteredGames.sort(sortFunction);
-    }
+    // The form control value is already updated by the time this is called
+    // Just re-apply all filters with the new sorting
+    this.applyAllFilters();
   }
 
   togglePlayed() {
@@ -262,6 +246,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   restartFilters() {
+    // Must clear these BEFORE calling restartDropdownFilters()
+    // so that applyAllFilters() runs with all filters cleared
     this.selectedChipTypes = [];
     this.resetPlayedGames();
     this.restartDropdownFilters();

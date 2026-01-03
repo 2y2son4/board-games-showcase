@@ -180,10 +180,8 @@ describe('GamesComponent', () => {
     component.gamesList = [game2, game3, game1];
     component.filteredGames = [...component.gamesList];
     component.selectedChipTypes = [];
-    component.selectSorting(
-      { value: 'Year ↑' } as any,
-      component.filteredGames,
-    );
+    component.selectedSorting.setValue('Year ↑');
+    component.selectSorting({ value: 'Year ↑' } as any);
 
     expect(component.filteredGames[0].year).toBe(2021);
     expect(component.filteredGames[2].year).toBe(2023);
@@ -193,10 +191,8 @@ describe('GamesComponent', () => {
     component.gamesList = [game2, game1, game3];
     component.filteredGames = [...component.gamesList];
     component.selectedChipTypes = [];
-    component.selectSorting(
-      { value: 'A to Z' } as any,
-      component.filteredGames,
-    );
+    component.selectedSorting.setValue('A to Z');
+    component.selectSorting({ value: 'A to Z' } as any);
 
     expect(component.filteredGames[0].name).toBe('Another thing');
     expect(component.filteredGames[2].name).toBe('Game 2');
@@ -355,10 +351,8 @@ describe('GamesComponent', () => {
       expect(filteredCount).toBeLessThan(3);
 
       // Change sorting
-      component.selectSorting(
-        { value: 'Year ↑' } as any,
-        component.filteredGames,
-      );
+      component.selectedSorting.setValue('Year ↑');
+      component.selectSorting({ value: 'Year ↑' } as any);
 
       // Should have the same number of games, not expanded to full list
       expect(component.filteredGames.length).toBe(filteredCount);
