@@ -8,6 +8,7 @@
     "build": "ng build",
     "move-files": "mv ./docs/browser/* ./docs/ && rm -rf ./docs/browser",
     "build:prod": "ng build --configuration production",
+    "deploy": "npm run build:prod && npm run move-files",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -18,8 +19,8 @@
   "dependencies": {
     "@angular/animations": "^20.2.4",
     "@angular/cdk": "^20.2.2",
-    "@angular/common": "^20.2.4",
-    "@angular/compiler": "^20.2.4",
+    "@angular/common": "^20.3.14",
+    "@angular/compiler": "^20.3.15",
     "@angular/core": "^20.2.4",
     "@angular/forms": "^20.2.4",
     "@angular/material": "^20.2.2",
@@ -40,7 +41,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^20.0.1",
-    "@angular/cli": "^20.2.2",
+    "@angular/cli": "^20.3.13",
     "@angular/compiler-cli": "^20.2.4",
     "typescript": "~5.9.2"
   },
