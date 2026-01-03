@@ -8,6 +8,7 @@
     "build": "ng build",
     "move-files": "mv ./docs/browser/* ./docs/ && rm -rf ./docs/browser",
     "build:prod": "ng build --configuration production",
+    "deploy": "npm run build:prod && npm run move-files",
     "watch": "ng build --watch --configuration development",
     "test": "jest",
     "test:watch": "jest --watch",
