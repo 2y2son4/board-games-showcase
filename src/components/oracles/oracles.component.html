@@ -1,13 +1,12 @@
 <app-loader></app-loader>
 
-@if (oraclesList)
-{
+@if (oraclesList) {
   <div class="content">
     <div>
       <div class="side">
         <div class="side__container">
           <h2 class="side__title">Oracles</h2>
-          <h3 class="side__number" [ngClass]="unPlayedGames ? 'font-system' : 'font-pink'">
+          <h3 class="side__number">
             ({{filterFunctions.getFlipCardCount(innerElements)}} of {{oraclesList.length}} selected)
           </h3>
         </div>
@@ -21,18 +20,15 @@
           <li class="card__list">
             <div class="card__list-inner" (click)="toggleCardFlip(index)" #innerElement>
               <div class="card__list-front">
-                <h2 class="card__title" [innerHTML]="oracle.name  | highlightText:searchQuery"> {{oracle.name}}
-                </h2>
-                @if (oracle.image)
-            {
-                  <div class="card__image-container"><img class="card__image" src="assets/oracles/{{oracle.image}}.webp"
-                      alt="{{oracle.name}}"></div>
+                <h2 class="card__title">{{oracle.name}}</h2>
+                @if (oracle.image) {
+                  <div class="card__image-container">
+                    <img class="card__image" src="assets/oracles/{{oracle.image}}.webp" alt="{{oracle.name}}">
+                  </div>
                 }
-                @if (oracle.artist){
-                  <h2 class="card__title" [innerHTML]="' by '+
-          oracle.artist | highlightText:searchQuery">by
-                    {{oracle.artist}}
-                  </h2>}
+                @if (oracle.artist) {
+                  <h2 class="card__title">by {{oracle.artist}}</h2>
+                }
               </div>
               <div class="card__list-back">
                 <div class="card__info card__info-scroll">
@@ -45,20 +41,23 @@
                   </div>
                   <div class="line"></div>
                   @if (oracle.description.length > 0) {
-                    @for(paragraph of oracle.description; let index = $index; track index){
-                      <p class="card__description">{{paragraph}}</p>}
-                  }
-                  @else {
+                    @for (paragraph of oracle.description; let index = $index; track index) {
+                      <p class="card__description">{{paragraph}}</p>
+                    }
+                  } @else {
                     <p class="card__description">TBI</p>
                   }
                 </div>
-                @if (oracle.web){
+                @if (oracle.web) {
                   <div class="card__web">
                     <a href="{{oracle.web}}" target="_blank">Web</a>
-                  </div>}
+                  </div>
+                }
               </div>
             </div>
-          </li>}
+          </li>
+        }
       </ul>
     </div>
-  </div>}
+  </div>
+}

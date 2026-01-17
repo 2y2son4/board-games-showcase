@@ -8,7 +8,6 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HttpService } from '../../core/services/http/http.service';
@@ -21,7 +20,6 @@ import { LoaderService } from '../../core/services/loader/loader.service';
   selector: 'app-oracles',
   imports: [
     CommonModule,
-    HighlightTextPipe,
     LoaderComponent,
     ScrollToTopBtnComponent,
   ],
