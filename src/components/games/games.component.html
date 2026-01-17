@@ -169,7 +169,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Sort</mat-label>
-          <mat-select [formControl]="selectedSorting" (selectionChange)="selectSorting($event)">
+          <mat-select [formControl]="selectedSorting" (selectionChange)="filterGames()">
             @for (label of sortingSelectLabels; track label) {
               <mat-option [value]="label">{{label}}</mat-option>
             }
@@ -177,7 +177,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Filter by types</mat-label>
-          <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGamesByTypeAndEditor()">
+          <mat-select [formControl]="selectedTypes" multiple (selectionChange)="filterGames()">
             <input placeholder="Search..." (input)="onSearchTypes($event.target)" class="dropdown-search">
             @for (type of types; track type) {
               <mat-option [value]="type">{{type}}</mat-option>
@@ -186,7 +186,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Filter by publisher</mat-label>
-          <mat-select [formControl]="selectedEditors" multiple (selectionChange)="filterGamesByTypeAndEditor()">
+          <mat-select [formControl]="selectedEditors" multiple (selectionChange)="filterGames()">
             <input placeholder="Search..." (input)="onSearchEditors($event.target)" class="dropdown-search">
             @for (editor of editors; track editor) {
               <mat-option [value]="editor">{{editor}}</mat-option>

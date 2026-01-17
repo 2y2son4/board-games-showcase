@@ -67,7 +67,7 @@ export class ExportService {
     doc.save(filename);
   }
 
-  private formatPlayers(players: Array<number> | undefined): string {
+  private formatPlayers(players: number[] | undefined): string {
     if (!players || players.length === 0) return '-';
     if (players.length === 1) return `${players[0]}`;
     if (players.length === 2) return `${players[0]}-${players[1]}`;

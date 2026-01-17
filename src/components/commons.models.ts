@@ -2,9 +2,9 @@ export interface GameCard {
   name: string;
   editor: string;
   year: number;
-  types: Array<string>;
+  types: string[];
   language: 'en' | 'es' | 'de' | 'x';
-  players: Array<number>;
+  players: number[];
   time: number;
   complexity: number;
   rate: number;
@@ -20,7 +20,7 @@ export interface OracleCard {
   artist: string;
   language: 'en' | 'es' | 'de' | 'x';
   image?: string;
-  description: Array<string>;
+  description: string[];
   web: string;
 }
 
