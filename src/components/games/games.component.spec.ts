@@ -383,4 +383,45 @@ describe('GamesComponent', () => {
       expect(component.filteredGames[0].name).toBe('Game 1');
     });
   });
+
+  describe('Bug: First search returns 0 elements', () => {
+    it('should initialize selectedChipTypes as empty array, not array with empty string', () => {
+      // This test verifies the fix for the bug where first search returns 0 elements
+      // The bug was caused by selectedChipTypes being initialized with [''] instead of []
+      expect(component.selectedChipTypes).toEqual([]);
+      expect(component.selectedChipTypes.length).toBe(0);
+    });
+
+    it('should return results on first search when selectedChipTypes is properly initialized', () => {
+      // Setup: simulate initial state after data load
+      component.gamesList = [game1, game2, game3];
+      component.filteredGames = [...component.gamesList];
+      // selectedChipTypes should be [] (not [''])
+      expect(component.selectedChipTypes).toEqual([]);
+      
+      // Perform first search
+      component.searchQuery = 'Game';
+      component.filterGames();
+      
+      // Should return results (not 0 elements)
+      expect(component.filteredGames.length).toBe(2);
+      expect(component.filteredGames[0].name).toBe('Game 1');
+      expect(component.filteredGames[1].name).toBe('Game 2');
+    });
+
+    it('should fail if selectedChipTypes contains empty string (demonstrating the bug)', () => {
+      // This test demonstrates what happens with the buggy initialization
+      component.gamesList = [game1, game2, game3];
+      component.filteredGames = [...component.gamesList];
+      component.selectedChipTypes = ['']; // Buggy initialization
+      
+      // Perform search
+      component.searchQuery = 'Game';
+      component.applyAllFilters();
+      
+      // With buggy initialization, this would return 0 elements
+      // because no game has an empty string in its types array
+      expect(component.filteredGames.length).toBe(0);
+    });
+  });
 });
