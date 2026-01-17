@@ -1,6 +1,6 @@
 <div #topPage></div>
 <app-loader></app-loader>
-@if(gamesList && !isLoading){
+@if (gamesList && !isLoading){
   <div class="content">
     <div>
       <div class="side">
@@ -38,7 +38,7 @@
                   [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
                 <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery"> {{game.name}}
                 </h2>
-                @if(game.image) {
+                @if (game.image) {
                   <div class="card__image-container"><img class="card__image" src="assets/games/{{game.image}}.webp"
                       alt="{{game.name}}"></div>
                 }
@@ -53,7 +53,7 @@
                   <div class="card__info-title">
                     <p class="card__name" [innerHTML]="game.name | highlightText:searchQuery">
                     </p>
-                    @if(game.year){
+                    @if (game.year){
                       <span class="card__year"
                         [innerHTML]="('(' + game.year.toString() + ')') | highlightText:searchQuery"></span>
                     }
@@ -62,7 +62,7 @@
                   <div class="card__info-container">
                     <div class="card__info-upper">
                       <div style="display: flex; justify-content: space-between; width: 100%;">
-                        @if(game.players){
+                        @if (game.players){
                           <p class="card__players">
                             @for(player of game.players; let index = $index;let first = $first; let last = $last; track
                               index){
@@ -73,7 +73,7 @@
                         } @else {
                           <p>-</p>
                         }
-                        @if(game.age){
+                        @if (game.age){
                           <p class="card__players">
                             +{{game.age}} years
                           </p>
@@ -87,7 +87,7 @@
                           <mat-chip-option [value]="type"> {{type}} </mat-chip-option>
                         }
                       </mat-chip-listbox>
-                      @if(game.size){
+                      @if (game.size){
                         <div class="line" style="margin-top: 12px"></div>
                         <mat-chip-listbox [(ngModel)]="selectedSize" (ngModelChange)="onSizeChange($event)">
                           <mat-chip-option [value]=" game.size"> {{game.size.toUpperCase()}} </mat-chip-option>
@@ -95,7 +95,7 @@
                       }
                     </div>
                     <div class="card__info-down">
-                      @if(game.rate){
+                      @if (game.rate){
                         <div class="card__info-down-container">
                           <p class="card__rate-title">Rate:</p>
                           <div [style.background-color]="commonFunctions.getRatingColor(game.rate)"
@@ -104,7 +104,7 @@
                           </div>
                         </div>
                       }
-                      @if(game.complexity){
+                      @if (game.complexity){
                         <div class="card__info-down-container">
                           <p class="card__complexity-title">Complexity:</p>
                           <div [style.background-color]="commonFunctions.getComplexityColor(game.complexity)"
@@ -114,7 +114,7 @@
                           </div>
                         </div>
                       }
-                      @if(game.bggReference){
+                      @if (game.bggReference){
                         <div class="card__info-down-container">
                           <p class="card__rate-title">BGG page:</p>
                           <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
@@ -133,7 +133,7 @@
           </li>
         }
       </ul>
-      @if(filteredGames.length === 0) {
+      @if (filteredGames.length === 0) {
         <mat-card class="card__no-data">
           <mat-card-content>There are no results for <span class="card__search-query">
               {{searchQuery || ' this search'}}
@@ -193,12 +193,12 @@
             }
           </mat-select>
         </mat-form-field>
-        @if(showPlayedBtn){
+        @if (showPlayedBtn){
           <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
             Played
           </button>
         }
-        @if(showUnplayedBtn){
+        @if (showUnplayedBtn){
           <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
             Unplayed
           </button>

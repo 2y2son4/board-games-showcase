@@ -1,24 +1,24 @@
-@if(gameDetails){
-<div class="details__container">
-  <article class="details__card">
-    <div class="details__left">
-      <div class="details__image-container"><img class="details__image" src="{{gameDetails.image}}" alt=""></div>
-      <p>{{gameDetails.yearpublished}}</p>
-      @if(gameDetails.minplayers === gameDetails.maxplayers){
-      <p>For {{gameDetails.minplayers}} {{gameDetails.minplayers === '1' ? 'player' : 'players'}}</p>
-      } @else {
-      <p>For {{gameDetails.minplayers}} to {{gameDetails.maxplayers}} players</p>
-      }
-      <p>{{gameDetails.playingtime}} mins</p>
-      @if(gameDetails.age !== '0'){
-      <p>+{{gameDetails.age}} years</p>
-      }
-    </div>
-    <div class="details__right">
-      <p>
-        Titles:
-        @for(name of gameDetails.name; let index = $index; let first = $first; let last = $last; track index){
-      <div class="details__name">- {{name}}.</div>
+@if (gameDetails){
+  <div class="details__container">
+    <article class="details__card">
+      <div class="details__left">
+        <div class="details__image-container"><img class="details__image" src="{{gameDetails.image}}" alt=""></div>
+        <p>{{gameDetails.yearpublished}}</p>
+        @if (gameDetails.minplayers === gameDetails.maxplayers){
+          <p>For {{gameDetails.minplayers}} {{gameDetails.minplayers === '1' ? 'player' : 'players'}}</p>
+        } @else {
+          <p>For {{gameDetails.minplayers}} to {{gameDetails.maxplayers}} players</p>
+        }
+        <p>{{gameDetails.playingtime}} mins</p>
+        @if (gameDetails.age !== '0'){
+          <p>+{{gameDetails.age}} years</p>
+        }
+      </div>
+      <div class="details__right">
+        <p>
+          Titles:
+          @for(name of gameDetails.name; let index = $index; let first = $first; let last = $last; track index){
+        <div class="details__name">- {{name}}.</div>
       }
       </p>
       <p>{{gameDetails.description}} </p>
@@ -27,17 +27,17 @@
         @for(publisher of gameDetails.boardgamepublisher; let index = $index;track
         index){
       <div>- {{publisher}}. </div>}
-      </p>
-      <mat-chip-set>
-        @for(category of gameDetails.boardgamecategory; let index = $index; let last = $last; track index){
+    </p>
+    <mat-chip-set>
+      @for(category of gameDetails.boardgamecategory; let index = $index; let last = $last; track index){
         <mat-chip [value]="category"> {{category}} </mat-chip>}
-      </mat-chip-set>
-      <div class="line"></div>
-      <mat-chip-set>
-        @for(size of gameDetails.size; let index = $index; track index){
+    </mat-chip-set>
+    <div class="line"></div>
+    <mat-chip-set>
+      @for(size of gameDetails.size; let index = $index; track index){
         <mat-chip [value]="size"> {{size.toUpperCase()}} </mat-chip>}
-      </mat-chip-set>
-    </div>
-  </article>
-</div>
+    </mat-chip-set>
+      </div>
+    </article>
+  </div>
 }
