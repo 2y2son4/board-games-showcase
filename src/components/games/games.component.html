@@ -169,7 +169,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Sort</mat-label>
-          <mat-select [formControl]="selectedSorting" (selectionChange)="selectSorting($event, filteredGames)">
+          <mat-select [formControl]="selectedSorting" (selectionChange)="selectSorting($event)">
             @for (label of sortingSelectLabels; track label) {
               <mat-option [value]="label">{{label}}</mat-option>
             }

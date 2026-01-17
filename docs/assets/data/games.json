@@ -4797,8 +4797,8 @@
       "year": 2022,
       "types": [
         "Cards",
-        "Music",
         "Party",
+        "Music",
         "Trivia"
       ],
       "language": "es",
@@ -8219,6 +8219,177 @@
       "isPlayed": false,
       "age": 7,
       "bggReference": 319579,
+      "size": "m"
+    },
+    {
+      "name": "Cereal Killer",
+      "editor": "Ediciones Primigenio",
+      "year": 2025,
+      "types": [
+        "Deduction",
+        "Murder/Mystery",
+        "Hidden movement",
+        "Point to point movement",
+        "Questions and answers",
+        "Team-based"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        3
+      ],
+      "time": 15,
+      "complexity": 2.75,
+      "rate": 7.5,
+      "image": "cereal-killer",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 449893,
+      "size": "s"
+    },
+    {
+      "name": "Criaturas de serie B",
+      "editor": "Tranjis",
+      "year": 2017,
+      "types": [
+        "Bluffing",
+        "Cards",
+        "Deduction",
+        "Horror",
+        "Auction/Biding",
+        "Hand management",
+        "Set collection",
+        "Simultaneous action selection"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        5
+      ],
+      "time": 30,
+      "complexity": 1.53,
+      "rate": 7,
+      "image": "criaturas-de-serie-b",
+      "isPlayed": false,
+      "age": 10,
+      "bggReference": 214396,
+      "size": "m"
+    },
+    {
+      "name": "Texas Hold it",
+      "editor": "Joking hazard",
+      "year": 2024,
+      "types": [
+        "Bluffing",
+        "Deduction",
+        "Betting and bluffing"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        6
+      ],
+      "time": 15,
+      "complexity": 1,
+      "rate": 5.8,
+      "image": "texas-hold-it",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 429963,
+      "size": "xs"
+    },
+    {
+      "name": "Smart10: Videojuegos",
+      "editor": "SD Games",
+      "year": 2025,
+      "types": [
+        "Trivia",
+        "Expansion"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        8
+      ],
+      "time": 20,
+      "complexity": 1,
+      "rate": 8.5,
+      "image": "smart10-videojuegos",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 458937,
+      "size": "s"
+    },
+    {
+      "name": "Imperfect Job",
+      "editor": "TCG Factory",
+      "year": 2023,
+      "types": [
+        "Party",
+        "Cards",
+        "Player judge",
+        "Questions and answers"
+      ],
+      "language": "es",
+      "players": [
+        3,
+        6
+      ],
+      "time": 45,
+      "complexity": 1,
+      "rate": 7.7,
+      "image": "imperfect-job",
+      "isPlayed": false,
+      "age": 12,
+      "bggReference": 392084,
+      "size": "s"
+    },
+    {
+      "name": "Hitster: Temazos",
+      "editor": "Jumbo",
+      "year": 2023,
+      "types": [
+        "Cards",
+        "Party",
+        "Music",
+        "Trivia"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.06,
+      "rate": 7.5,
+      "image": "hitster-temazos",
+      "isPlayed": false,
+      "age": 16,
+      "bggReference": 397736,
+      "size": "m"
+    },
+    {
+      "name": "Hitster Rock: Bob!",
+      "editor": "Jumbo",
+      "year": 2025,
+      "types": [
+        "Cards",
+        "Party",
+        "Music",
+        "Trivia"
+      ],
+      "language": "es",
+      "players": [
+        2,
+        10
+      ],
+      "time": 30,
+      "complexity": 1.06,
+      "rate": 8.1,
+      "image": "hitster-rock-bob",
+      "isPlayed": false,
+      "age": 16,
+      "bggReference": 450175,
       "size": "m"
     }
   ]
