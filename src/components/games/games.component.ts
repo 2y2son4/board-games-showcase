@@ -163,7 +163,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   onSizeChange(selectedSize: string) {
-    console.log(selectedSize);
     this.gamesFilterForm.reset();
     this.restartDropdownFilters();
     this.selectedSize = selectedSize;
