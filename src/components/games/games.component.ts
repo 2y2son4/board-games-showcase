@@ -138,13 +138,28 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   onTypeChange(selectedChipTypes: string[]) {
-    this.gamesFilterForm.reset();
-    this.restartDropdownFilters();
     this.selectedChipTypes = selectedChipTypes;
+
+    // Sync the dropdown with chip selections
+    const currentDropdownTypes = this.selectedTypes.value ?? [];
+    const mergedTypes = Array.from(
+      new Set([...currentDropdownTypes, ...selectedChipTypes]),
+    );
+    this.selectedTypes.setValue(mergedTypes);
+
     this.applyAllFilters();
     setTimeout(() => {
       this.filterFunctions.flipAllCards(this.innerElements);
     }, 100);
+  }
+
+  onDropdownTypeChange() {
+    // Sync chips with dropdown selections
+    const dropdownTypes = this.selectedTypes.value ?? [];
+    this.selectedChipTypes = dropdownTypes;
+
+    this.filterFunctions.flipAllCards(this.innerElements);
+    this.applyAllFilters();
   }
 
   onSizeChange(selectedSize: string) {
