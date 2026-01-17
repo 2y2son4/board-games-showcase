@@ -61,7 +61,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
-  selectedChipTypes: Array<string> = [''];
+  selectedChipTypes: Array<string> = [];
   selectedSize!: string;
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
