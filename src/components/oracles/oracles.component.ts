@@ -3,9 +3,7 @@ import {
   Component,
   ElementRef,
   OnInit,
-  QueryList,
   viewChildren,
-  ViewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
