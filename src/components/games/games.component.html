@@ -1,27 +1,36 @@
 <div #topPage></div>
 <app-loader></app-loader>
-@if (gamesList && !isLoading){
+@if (gamesList && !isLoading()){
   <div class="content">
     <div>
       <div class="side">
         <div class="side__container">
           <h3 class="side__number">
-            {{playedGames ? 'Played' : unPlayedGames ? 'Unplayed' : ''}}
+            {{playedGames() ? 'Played' : unPlayedGames() ? 'Unplayed' : ''}}
           </h3>
           <h4 class="side__number">
-            @for (type of selectedChipTypes; let index = $index; let first = $first; let last = $last; track
-            index){
-              <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes.length > 1 ? ' and ' : '')}}
-                {{!first ? type.toLowerCase() : type}}</span>}
+            @if (selectedChipTypes().length > 0) {
+              @for (type of selectedChipTypes(); let index = $index; let first = $first; let last = $last; track index){
+                <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes().length > 1 ? ' and ' : '')}}
+                  {{!first ? type.toLowerCase() : type}}</span>
+              }
+            }
+            @if (selectedTypes.value && selectedTypes.value.length > 0 && selectedChipTypes().length === 0) {
+              @for (type of selectedTypes.value; let index = $index; let first = $first; let last = $last; track index){
+                <span>{{!last ? (index === 0 ? '' : ', ') : (selectedTypes.value!.length > 1 ? ' or ' : '')}}
+                  {{!first ? type.toLowerCase() : type}}</span>
+              }
+            }
           </h4>
           <h2 class="side__title">Games</h2>
           <h3 class="side__number">
-            ( {{filterFunctions.getFlipCardCount(innerElements)}} of {{filteredGames.length}} selected)
+            ( {{filterFunctions.getFlipCardCount(innerElements())}} of {{filteredGames().length}}
+            selected)
           </h3>
           <button type="button" mat-raised-button color="primary" class="side__reset" (click)="restartFilters()">Reset
           </button>
           <button type="button" mat-raised-button color="primary" class="side__export"
-            [disabled]="printGames.length === 0" (click)="exportSelectedAsPdf()">
+            [disabled]="printGames().length === 0" (click)="exportSelectedAsPdf()">
             Export to PDF
           </button>
         </div>
@@ -30,7 +39,7 @@
     </div>
     <div class="card">
       <ul class="card__container">
-        @for (game of filteredGames;let index = $index; track index){
+        @for (game of filteredGames();let index = $index; track index){
           <li class="card__list" #game>
             <article class="card__list-inner" (click)="toggleCardFlip(game, index)" #innerElement>
               <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
@@ -82,7 +91,7 @@
                         game!.time! / 60 + ' h' }}</p>
 
                       </div>
-                      <mat-chip-listbox multiple [(ngModel)]="selectedChipTypes" (ngModelChange)="onTypeChange($event)">
+                      <mat-chip-listbox multiple [ngModel]="selectedChipTypes()" (ngModelChange)="onTypeChange($event)">
                         @for (type of game.types; let index = $index; let last = $last; track index){
                           <mat-chip-option [value]="type"> {{type}} </mat-chip-option>
                         }
@@ -133,7 +142,7 @@
           </li>
         }
       </ul>
-      @if (filteredGames.length === 0) {
+      @if (filteredGames().length === 0) {
         <mat-card class="card__no-data">
           <mat-card-content>There are no results for <span class="card__search-query">
               {{searchQuery || ' this search'}}
@@ -176,7 +185,7 @@
           </mat-select>
         </mat-form-field>
         <mat-form-field>
-          <mat-label>Filter by types</mat-label>
+          <mat-label>Filter by types (<code>OR</code> logic)</mat-label>
           <mat-select [formControl]="selectedTypes" multiple (selectionChange)="onDropdownTypeChange()">
             <input placeholder="Search..." (input)="onSearchTypes($event.target)" class="dropdown-search">
             @for (type of types; track type) {
@@ -193,12 +202,12 @@
             }
           </mat-select>
         </mat-form-field>
-        @if (showPlayedBtn){
+        @if (showPlayedBtn()){
           <button class="button-pink legend__content" type="button" mat-raised-button (click)="togglePlayed()">
             Played
           </button>
         }
-        @if (showUnplayedBtn){
+        @if (showUnplayedBtn()){
           <button class="button-system legend__content" type="button" mat-raised-button (click)="toggleUnPlayed()">
             Unplayed
           </button>

@@ -57,9 +57,20 @@ export class FilterFunctionsService {
     result = this.filterBySearch(result, criteria.searchQuery);
     result = this.filterByPlayers(result, criteria.exactPlayers);
     result = this.filterByAge(result, criteria.exactAge);
-    result = this.filterByTypes(result, criteria.selectedTypes);
+
+    // Apply type filtering: prioritize chip types (AND logic) over dropdown types (OR logic)
+    const hasChipTypes =
+      criteria.selectedChipTypes && criteria.selectedChipTypes.length > 0;
+    const hasDropdownTypes =
+      criteria.selectedTypes && criteria.selectedTypes.length > 0;
+
+    if (hasChipTypes) {
+      result = this.filterByChipTypes(result, criteria.selectedChipTypes);
+    } else if (hasDropdownTypes) {
+      result = this.filterByTypes(result, criteria.selectedTypes);
+    }
+
     result = this.filterByEditors(result, criteria.selectedEditors);
-    result = this.filterByChipTypes(result, criteria.selectedChipTypes);
     result = this.filterBySize(result, criteria.selectedSize);
     result = this.filterByPlayedStatus(
       result,
@@ -251,7 +262,7 @@ export class FilterFunctionsService {
   }
 
   /** Cards */
-  getFlipCardCount(innerElements: QueryList<ElementRef>): number {
+  getFlipCardCount(innerElements: readonly ElementRef[]): number {
     return innerElements
       ? innerElements.filter((innerElement) =>
           innerElement.nativeElement.classList.contains('active'),
@@ -259,7 +270,7 @@ export class FilterFunctionsService {
       : 0;
   }
 
-  flipAllCards(innerElements: QueryList<ElementRef>): void {
+  flipAllCards(innerElements: readonly ElementRef[]): void {
     if (innerElements) {
       innerElements.forEach((innerElement) => {
         innerElement.nativeElement.classList.remove('active');

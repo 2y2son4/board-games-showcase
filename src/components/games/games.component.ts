@@ -3,9 +3,9 @@ import {
   Component,
   ElementRef,
   OnInit,
-  QueryList,
+  signal,
   ViewChild,
-  ViewChildren,
+  viewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -55,31 +55,30 @@ import { ExportService } from '../../core/services/export/export.service';
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChild('topPage') topPage!: ElementRef;
-  @ViewChildren('innerElement')
-  innerElements!: QueryList<ElementRef>;
+  innerElements = viewChildren<ElementRef>('innerElement');
   gamesList!: GameCard[];
+
+  isLoading = signal(false);
+  selectedChipTypes = signal<string[]>([]);
+  filteredGames = signal<GameCard[]>([]);
+  printGames = signal<GameCard[]>([]);
+  playedGames = signal(false);
+  unPlayedGames = signal(false);
+  showPlayedBtn = signal(true);
+  showUnplayedBtn = signal(true);
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
-  selectedChipTypes: string[] = [];
   selectedSize!: string;
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
   selectedSorting = new FormControl<string>('');
-  filteredGames: GameCard[] = [];
   searchQuery = '';
-  playedGames = false;
-  unPlayedGames = false;
-  isLoading!: boolean;
   exactPlayers!: number | undefined;
   exactAge!: number | undefined;
   gamesFilterForm!: FormGroup;
   flippedCards!: number;
-
-  printGames: GameCard[] = [];
   sortingSelectLabels: string[] = [];
-  showPlayedBtn = true;
-  showUnplayedBtn = true;
 
   constructor(
     public commonFunctions: CommonFunctionsService,
@@ -92,7 +91,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.sortingSelectLabels = this.filterFunctions.SORTING_LABELS;
     this.loaderService.show();
-    this.isLoading = true;
+    this.isLoading.set(true);
     this.gamesList = [];
 
     this.httpDataService.getGames().subscribe({
@@ -100,8 +99,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
         this.gamesList = this.filterFunctions.sortByNameAscending(
           response.games,
         );
-        this.filteredGames = this.filterFunctions.sortByNameAscending(
-          response.games,
+        this.filteredGames.set(
+          this.filterFunctions.sortByNameAscending(response.games),
         );
         this.types = this.commonFunctions.extractUniqueValues(
           this.filterFunctions.sortByNameAscending(response.games),
@@ -112,12 +111,12 @@ export class GamesComponent implements OnInit, AfterViewInit {
           'editor',
         );
         this.loaderService.hide();
-        this.isLoading = false;
+        this.isLoading.set(false);
       },
       error: (error) => {
         console.error('Error fetching games data', error);
         this.loaderService.hide();
-        this.isLoading = false;
+        this.isLoading.set(false);
       },
     });
 
@@ -134,31 +133,31 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.filterFunctions.getFlipCardCount(this.innerElements);
+    this.filterFunctions.getFlipCardCount(this.innerElements());
   }
 
   onTypeChange(selectedChipTypes: string[]) {
-    this.selectedChipTypes = selectedChipTypes;
+    this.selectedChipTypes.set(selectedChipTypes);
 
-    // Sync the dropdown with chip selections
-    const currentDropdownTypes = this.selectedTypes.value ?? [];
-    const mergedTypes = Array.from(
-      new Set([...currentDropdownTypes, ...selectedChipTypes]),
-    );
-    this.selectedTypes.setValue(mergedTypes);
+    // Clear dropdown selections when chips are selected
+    if (selectedChipTypes.length > 0) {
+      this.selectedTypes.setValue([], { emitEvent: false });
+    }
 
     this.applyAllFilters();
     setTimeout(() => {
-      this.filterFunctions.flipAllCards(this.innerElements);
+      this.filterFunctions.flipAllCards(this.innerElements());
     }, 100);
   }
 
   onDropdownTypeChange() {
-    // Sync chips with dropdown selections
+    // Clear chip selections when dropdown is used
     const dropdownTypes = this.selectedTypes.value ?? [];
-    this.selectedChipTypes = dropdownTypes;
+    if (dropdownTypes.length > 0) {
+      this.selectedChipTypes.set([]);
+    }
 
-    this.filterFunctions.flipAllCards(this.innerElements);
+    this.filterFunctions.flipAllCards(this.innerElements());
     this.applyAllFilters();
   }
 
@@ -168,7 +167,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.selectedSize = selectedSize;
     this.applyAllFilters();
     setTimeout(() => {
-      this.filterFunctions.flipAllCards(this.innerElements);
+      this.filterFunctions.flipAllCards(this.innerElements());
     }, 100);
   }
 
@@ -189,44 +188,44 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   filterGames() {
-    this.filterFunctions.flipAllCards(this.innerElements);
+    this.filterFunctions.flipAllCards(this.innerElements());
     this.applyAllFilters();
   }
 
   togglePlayed() {
-    this.filterFunctions.flipAllCards(this.innerElements);
-    this.unPlayedGames = false;
-    this.playedGames = !this.playedGames;
-    this.showPlayedBtn = false;
-    this.showUnplayedBtn = true;
+    this.filterFunctions.flipAllCards(this.innerElements());
+    this.unPlayedGames.set(false);
+    this.playedGames.set(!this.playedGames());
+    this.showPlayedBtn.set(false);
+    this.showUnplayedBtn.set(true);
     this.applyAllFilters();
   }
 
   toggleUnPlayed() {
-    this.filterFunctions.flipAllCards(this.innerElements);
-    this.playedGames = false;
-    this.unPlayedGames = !this.unPlayedGames;
-    this.showPlayedBtn = true;
-    this.showUnplayedBtn = false;
+    this.filterFunctions.flipAllCards(this.innerElements());
+    this.playedGames.set(false);
+    this.unPlayedGames.set(!this.unPlayedGames());
+    this.showPlayedBtn.set(true);
+    this.showUnplayedBtn.set(false);
     this.applyAllFilters();
   }
 
   resetGamesList() {
-    this.filteredGames = this.gamesList;
-    this.filterFunctions.flipAllCards(this.innerElements);
+    this.filteredGames.set(this.gamesList);
+    this.filterFunctions.flipAllCards(this.innerElements());
   }
 
   restartFilters() {
-    this.selectedChipTypes = [];
+    this.selectedChipTypes.set([]);
     this.resetPlayedGames();
     this.restartDropdownFilters();
-    this.filterFunctions.flipAllCards(this.innerElements);
+    this.filterFunctions.flipAllCards(this.innerElements());
     this.topPage.nativeElement.scrollIntoView({
       block: 'end',
       behavior: 'smooth',
     });
-    this.showPlayedBtn = true;
-    this.showUnplayedBtn = true;
+    this.showPlayedBtn.set(true);
+    this.showUnplayedBtn.set(true);
   }
 
   restartDropdownFilters() {
@@ -236,15 +235,15 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.searchQuery = '';
     this.exactPlayers = undefined;
     this.exactAge = undefined;
-    this.selectedChipTypes = [];
+    this.selectedChipTypes.set([]);
     this.selectedSize = '';
     this.applyAllFilters();
-    this.printGames = [];
+    this.printGames.set([]);
   }
 
   resetPlayedGames() {
-    this.playedGames = false;
-    this.unPlayedGames = false;
+    this.playedGames.set(false);
+    this.unPlayedGames.set(false);
   }
 
   restartSearch() {
@@ -257,18 +256,20 @@ export class GamesComponent implements OnInit, AfterViewInit {
    * This ensures filters work together (AND logic) rather than independently.
    */
   applyAllFilters(): void {
-    this.filteredGames = this.filterFunctions.applyFilters(this.gamesList, {
-      searchQuery: this.searchQuery,
-      exactPlayers: this.exactPlayers,
-      exactAge: this.exactAge,
-      selectedTypes: this.selectedTypes.value ?? [],
-      selectedEditors: this.selectedEditors.value ?? [],
-      selectedChipTypes: this.selectedChipTypes,
-      selectedSize: this.selectedSize,
-      playedGames: this.playedGames,
-      unPlayedGames: this.unPlayedGames,
-      sorting: this.selectedSorting.value ?? undefined,
-    });
+    this.filteredGames.set(
+      this.filterFunctions.applyFilters(this.gamesList, {
+        searchQuery: this.searchQuery,
+        exactPlayers: this.exactPlayers,
+        exactAge: this.exactAge,
+        selectedTypes: this.selectedTypes.value ?? [],
+        selectedEditors: this.selectedEditors.value ?? [],
+        selectedChipTypes: this.selectedChipTypes(),
+        selectedSize: this.selectedSize,
+        playedGames: this.playedGames(),
+        unPlayedGames: this.unPlayedGames(),
+        sorting: this.selectedSorting.value ?? undefined,
+      }),
+    );
   }
 
   filterGamesByExactPlayers() {
@@ -280,7 +281,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   toggleCardFlip(game: GameCard, index: number) {
-    const targetElement = this.innerElements?.toArray()?.[index];
+    const targetElement = this.innerElements()[index];
     if (!targetElement) return;
 
     const isCurrentlySelected =
@@ -289,16 +290,18 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
     if (isCurrentlySelected) {
       // Unselect
-      this.printGames = this.printGames.filter((g) => g.name !== game.name);
+      this.printGames.set(
+        this.printGames().filter((g) => g.name !== game.name),
+      );
     } else {
       // Select (avoid duplicates)
-      if (!this.printGames.some((g) => g.name === game.name)) {
-        this.printGames = [...this.printGames, game];
+      if (!this.printGames().some((g) => g.name === game.name)) {
+        this.printGames.set([...this.printGames(), game]);
       }
     }
   }
 
   async exportSelectedAsPdf(): Promise<void> {
-    await this.exportService.exportSelectedGamesAsPdf(this.printGames);
+    await this.exportService.exportSelectedGamesAsPdf(this.printGames());
   }
 }

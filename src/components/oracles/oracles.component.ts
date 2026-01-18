@@ -4,6 +4,7 @@ import {
   ElementRef,
   OnInit,
   QueryList,
+  viewChildren,
   ViewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -18,16 +19,12 @@ import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
   selector: 'app-oracles',
-  imports: [
-    CommonModule,
-    LoaderComponent,
-    ScrollToTopBtnComponent,
-  ],
+  imports: [CommonModule, LoaderComponent, ScrollToTopBtnComponent],
   templateUrl: './oracles.component.html',
   styleUrl: '../common-styles.scss',
 })
 export class OraclesComponent implements OnInit, AfterViewInit {
-  @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
+  innerElements = viewChildren<ElementRef>('innerElement');
 
   oraclesList: OracleCard[] = [];
 
@@ -55,11 +52,11 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.filterFunctions.getFlipCardCount(this.innerElements);
+    this.filterFunctions.getFlipCardCount(this.innerElements());
   }
 
   toggleCardFlip(index: number) {
-    const targetElement = this.innerElements.toArray()[index];
+    const targetElement = this.innerElements()[index];
     if (targetElement) {
       targetElement.nativeElement.classList.toggle('active');
     }
