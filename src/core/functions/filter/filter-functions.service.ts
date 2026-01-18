@@ -125,7 +125,8 @@ export class FilterFunctionsService {
   }
 
   /**
-   * Filters games by selected types from dropdown
+   * Filters games by selected types.
+   * The provided types array may include values from the dropdown, chips, or a merged selection.
    */
   filterByTypes(games: GameCard[], selectedTypes?: string[]): GameCard[] {
     if (!selectedTypes || selectedTypes.length === 0) {
