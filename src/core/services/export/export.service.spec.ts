@@ -18,6 +18,8 @@ jest.mock('jspdf', () => {
     addPage = jest.fn();
     text = jest.fn();
     save = jest.fn();
+    setTextColor = jest.fn();
+    getTextColor = jest.fn(() => 'rgb(0,0,0)');
 
     constructor() {
       FakeJsPDF.instances.push(this);
@@ -62,8 +64,14 @@ describe('ExportService', () => {
         time: 90,
         year: 2020,
         image: 'a-sacar-la-basura',
-        bggReference: '12345',
-      } as unknown as GameCard,
+        bggReference: 12345,
+        complexity: 1.5,
+        rate: 7.5,
+        types: ['Strategy', 'Family'],
+        age: 10,
+        size: 'm',
+        isPlayed: true,
+      } as GameCard,
     ];
 
     await service.exportSelectedGamesAsPdf(games, 'my-export');
@@ -82,16 +90,22 @@ describe('ExportService', () => {
     // Ensure we wrote expected lines.
     const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
     expect(writtenText).toContain('Selected games (1)');
-    expect(writtenText).toContain('1. Test Game (2020)');
+    expect(writtenText).toContain('LIGHT GAMES (Complexity 1 / 1.5)');
+    expect(writtenText).toContain('1. Test Game (2020). Played');
     expect(writtenText).toContain('Editor: Test Publisher');
+    expect(writtenText).toContain('Types: Strategy, Family');
     expect(writtenText).toContain('Players: 1-4');
+    expect(writtenText).toContain('Age: 10+ years');
     expect(writtenText).toContain('Play time: 1.5 h');
+    expect(writtenText).toContain('Complexity: 1.5/5');
+    expect(writtenText).toContain('Rating: 7.5/10 (HIGH)');
+    expect(writtenText).toContain('Size: M');
     expect(writtenText).toContain(
       'BGG: https://boardgamegeek.com/boardgame/12345',
     );
 
-    // Image line was intentionally removed.
-    expect(writtenText).not.toContain('Image:');
+    // Verify color-coding was applied
+    expect(doc.setTextColor).toHaveBeenCalledWith(0, 128, 0); // Green for high rating
   });
 
   it('handles missing optional fields gracefully', async () => {
@@ -108,6 +122,12 @@ describe('ExportService', () => {
         time: undefined,
         year: undefined,
         bggReference: undefined,
+        complexity: 2.5,
+        rate: 5.0,
+        types: [],
+        age: undefined,
+        size: undefined,
+        isPlayed: false,
       } as unknown as GameCard,
     ];
 
@@ -117,10 +137,159 @@ describe('ExportService', () => {
 
     const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
     expect(writtenText).toContain('Selected games (1)');
+    expect(writtenText).toContain('HEAVY GAMES (Complexity 2.1 / 5)');
     expect(writtenText).toContain('1. No Extras Game');
     expect(writtenText).toContain('Editor: -');
     expect(writtenText).toContain('Players: -');
     expect(writtenText).toContain('Play time: -');
-    expect(writtenText).toContain('BGG: -');
+
+    // Verify red color for low rating
+    expect(doc.setTextColor).toHaveBeenCalledWith(255, 0, 0);
+  });
+
+  it('includes metadata filters in the PDF header', async () => {
+    const service = new ExportService();
+
+    const FakeJsPDF = await getFakeJsPdfCtor();
+    FakeJsPDF.instances.length = 0;
+
+    const games: GameCard[] = [
+      {
+        name: 'Test Game',
+        editor: 'Test Publisher',
+        complexity: 1.2,
+        rate: 8.0,
+        types: ['Strategy'],
+        players: [2, 4],
+        time: 60,
+        year: 2023,
+        age: 12,
+        size: 's',
+        isPlayed: true,
+        bggReference: 123,
+      } as GameCard,
+    ];
+
+    await service.exportSelectedGamesAsPdf(games, 'filtered-games', {
+      searchQuery: 'strategy',
+      selectedChipTypes: ['Strategy', 'Family'],
+      exactPlayers: 3,
+      exactAge: 10,
+      selectedEditors: ['Publisher A', 'Publisher B'],
+      selectedSize: 'm',
+      playedFilter: 'played',
+    });
+
+    const doc = FakeJsPDF.instances[0];
+    const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+
+    expect(writtenText).toContain('Search query: "strategy"');
+    expect(writtenText).toContain('Filtered by types (AND): Strategy, Family');
+    expect(writtenText).toContain('Player count: 3 players');
+    expect(writtenText).toContain('Age filter: 10+ years');
+    expect(writtenText).toContain('Publisher filter: Publisher A, Publisher B');
+    expect(writtenText).toContain('Size filter: M');
+    expect(writtenText).toContain('Status: Played games');
+  });
+
+  it('groups games by complexity correctly', async () => {
+    const service = new ExportService();
+
+    const FakeJsPDF = await getFakeJsPdfCtor();
+    FakeJsPDF.instances.length = 0;
+
+    const games: GameCard[] = [
+      {
+        name: 'Light Game',
+        complexity: 1.3,
+        rate: 7.0,
+        editor: 'Ed1',
+        types: ['Party'],
+        players: [2],
+        time: 30,
+        year: 2021,
+        age: 8,
+        size: 's',
+        isPlayed: false,
+        bggReference: 1,
+      } as GameCard,
+      {
+        name: 'Medium Game',
+        complexity: 1.8,
+        rate: 7.5,
+        editor: 'Ed2',
+        types: ['Strategy'],
+        players: [2, 4],
+        time: 60,
+        year: 2022,
+        age: 10,
+        size: 'm',
+        isPlayed: true,
+        bggReference: 2,
+      } as GameCard,
+      {
+        name: 'Heavy Game',
+        complexity: 3.5,
+        rate: 8.0,
+        editor: 'Ed3',
+        types: ['Strategy'],
+        players: [1, 4],
+        time: 120,
+        year: 2023,
+        age: 14,
+        size: 'l',
+        isPlayed: false,
+        bggReference: 3,
+      } as GameCard,
+    ];
+
+    await service.exportSelectedGamesAsPdf(games);
+
+    const doc = FakeJsPDF.instances[0];
+    const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+
+    expect(writtenText).toContain('LIGHT GAMES (Complexity 1 / 1.5) - 1 games');
+    expect(writtenText).toContain(
+      'MEDIUM GAMES (Complexity 1.51 / 2) - 1 games',
+    );
+    expect(writtenText).toContain('HEAVY GAMES (Complexity 2.1 / 5) - 1 games');
+    expect(writtenText).toContain('Light Game');
+    expect(writtenText).toContain('Medium Game');
+    expect(writtenText).toContain('Heavy Game');
+  });
+
+  it('displays dropdown types filter with OR logic', async () => {
+    const service = new ExportService();
+
+    const FakeJsPDF = await getFakeJsPdfCtor();
+    FakeJsPDF.instances.length = 0;
+
+    const games: GameCard[] = [
+      {
+        name: 'Test',
+        complexity: 1.5,
+        rate: 6.0,
+        editor: 'Ed',
+        types: ['Party'],
+        players: [2],
+        time: 30,
+        year: 2021,
+        age: 8,
+        size: 's',
+        isPlayed: false,
+        bggReference: 1,
+      } as GameCard,
+    ];
+
+    await service.exportSelectedGamesAsPdf(games, 'test', {
+      selectedDropdownTypes: ['Party', 'Strategy', 'Family'],
+    });
+
+    const doc = FakeJsPDF.instances[0];
+    const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+
+    expect(writtenText).toContain(
+      'Filtered by types (OR): Party, Strategy, Family',
+    );
   });
 });
