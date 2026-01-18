@@ -147,6 +147,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
     setTimeout(() => {
       this.filterFunctions.flipAllCards(this.innerElements());
+      this.syncCardSelection();
     }, 100);
   }
 
@@ -159,6 +160,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
     this.filterFunctions.flipAllCards(this.innerElements());
     this.applyAllFilters();
+    this.syncCardSelection();
   }
 
   onSizeChange(selectedSize: string) {
@@ -168,6 +170,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
     setTimeout(() => {
       this.filterFunctions.flipAllCards(this.innerElements());
+      this.syncCardSelection();
     }, 100);
   }
 
@@ -190,6 +193,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   filterGames() {
     this.filterFunctions.flipAllCards(this.innerElements());
     this.applyAllFilters();
+    this.syncCardSelection();
   }
 
   togglePlayed() {
@@ -199,6 +203,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.showPlayedBtn.set(false);
     this.showUnplayedBtn.set(true);
     this.applyAllFilters();
+    this.syncCardSelection();
   }
 
   toggleUnPlayed() {
@@ -208,6 +213,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.showPlayedBtn.set(true);
     this.showUnplayedBtn.set(false);
     this.applyAllFilters();
+    this.syncCardSelection();
   }
 
   resetGamesList() {
@@ -280,6 +286,24 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
   }
 
+  /**
+   * Syncs the visual selection state (active class) with the printGames signal.
+   * This ensures selected cards remain visually selected after sorting/filtering.
+   */
+  private syncCardSelection(): void {
+    setTimeout(() => {
+      const elements = this.innerElements();
+      const selected = this.printGames();
+
+      elements.forEach((element, index) => {
+        const game = this.filteredGames()[index];
+        if (game && selected.some((g) => g.name === game.name)) {
+          element.nativeElement.classList.add('active');
+        }
+      });
+    }, 0);
+  }
+
   toggleCardFlip(game: GameCard, index: number) {
     const targetElement = this.innerElements()[index];
     if (!targetElement) return;
@@ -306,6 +330,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
       this.printGames(),
       'selected-games',
       {
+        searchQuery: this.searchQuery || undefined,
         selectedChipTypes:
           this.selectedChipTypes().length > 0
             ? this.selectedChipTypes()
@@ -314,6 +339,13 @@ export class GamesComponent implements OnInit, AfterViewInit {
           this.selectedTypes.value && this.selectedTypes.value.length > 0
             ? this.selectedTypes.value
             : undefined,
+        exactPlayers: this.exactPlayers,
+        exactAge: this.exactAge,
+        selectedEditors:
+          this.selectedEditors.value && this.selectedEditors.value.length > 0
+            ? this.selectedEditors.value
+            : undefined,
+        selectedSize: this.selectedSize || undefined,
         playedFilter: this.playedGames()
           ? 'played'
           : this.unPlayedGames()

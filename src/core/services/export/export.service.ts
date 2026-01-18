@@ -13,6 +13,11 @@ export class ExportService {
       selectedChipTypes?: string[];
       selectedDropdownTypes?: string[];
       playedFilter?: 'played' | 'unplayed' | null;
+      searchQuery?: string;
+      exactPlayers?: number;
+      exactAge?: number;
+      selectedEditors?: string[];
+      selectedSize?: string;
     },
   ): Promise<void> {
     // Lazy import so Jest/tests and initial load don't need to evaluate jsPDF.
@@ -27,7 +32,6 @@ export class ExportService {
     const marginX = 40;
     const marginY = 48;
     const lineHeight = 18;
-    const blockSpacing = 6;
 
     const pageHeight = doc.internal.pageSize.getHeight();
     const pageWidth = doc.internal.pageSize.getWidth();
@@ -54,11 +58,20 @@ export class ExportService {
 
     // Add filter information
     if (metadata) {
+      let hasFilters = false;
+
+      if (metadata.searchQuery) {
+        addLine(`Search query: "${metadata.searchQuery}"`);
+        hasFilters = true;
+      }
+
       if (metadata.selectedChipTypes && metadata.selectedChipTypes.length > 0) {
         addLine(
           `Filtered by types (AND): ${metadata.selectedChipTypes.join(', ')}`,
         );
+        hasFilters = true;
       }
+
       if (
         metadata.selectedDropdownTypes &&
         metadata.selectedDropdownTypes.length > 0
@@ -66,16 +79,105 @@ export class ExportService {
         addLine(
           `Filtered by types (OR): ${metadata.selectedDropdownTypes.join(', ')}`,
         );
+        hasFilters = true;
       }
+
+      if (metadata.exactPlayers) {
+        addLine(`Player count: ${metadata.exactPlayers} players`);
+        hasFilters = true;
+      }
+
+      if (metadata.exactAge) {
+        addLine(`Age filter: ${metadata.exactAge}+ years`);
+        hasFilters = true;
+      }
+
+      if (metadata.selectedEditors && metadata.selectedEditors.length > 0) {
+        addLine(`Publisher filter: ${metadata.selectedEditors.join(', ')}`);
+        hasFilters = true;
+      }
+
+      if (metadata.selectedSize) {
+        addLine(`Size filter: ${metadata.selectedSize.toUpperCase()}`);
+        hasFilters = true;
+      }
+
       if (metadata.playedFilter) {
         addLine(
           `Status: ${metadata.playedFilter === 'played' ? 'Played games' : 'Unplayed games'}`,
         );
+        hasFilters = true;
+      }
+
+      if (hasFilters) {
+        addLine('');
       }
     }
 
     addLine('');
 
+    // Group games by complexity
+    const grouped = this.groupByComplexity(games);
+
+    // Light games (1 / 1.5)
+    if (grouped.light.length > 0) {
+      addLine(
+        `LIGHT GAMES (Complexity 1 / 1.5) - ${grouped.light.length} games`,
+        true,
+      );
+      addLine('');
+      this.renderGames(grouped.light, doc, addLine);
+    }
+
+    // Medium games (1.51 / 2)
+    if (grouped.medium.length > 0) {
+      if (grouped.light.length > 0) {
+        addLine('-----------------------------------------------');
+        addLine('');
+      }
+      addLine(
+        `MEDIUM GAMES (Complexity 1.51 / 2) - ${grouped.medium.length} games`,
+        true,
+      );
+      addLine('');
+      this.renderGames(grouped.medium, doc, addLine);
+    }
+
+    // Heavy games (2.1 / 5)
+    if (grouped.heavy.length > 0) {
+      if (grouped.light.length > 0 || grouped.medium.length > 0) {
+        addLine('-----------------------------------------------');
+        addLine('');
+      }
+      addLine(
+        `HEAVY GAMES (Complexity 2.1 / 5) - ${grouped.heavy.length} games`,
+        true,
+      );
+      addLine('');
+      this.renderGames(grouped.heavy, doc, addLine);
+    }
+
+    const filename = this.withTimestamp(`${filenameBase}.pdf`);
+    doc.save(filename);
+  }
+
+  private groupByComplexity(games: GameCard[]): {
+    light: GameCard[];
+    medium: GameCard[];
+    heavy: GameCard[];
+  } {
+    return {
+      light: games.filter((g) => g.complexity >= 1 && g.complexity <= 1.5),
+      medium: games.filter((g) => g.complexity > 1.5 && g.complexity <= 2),
+      heavy: games.filter((g) => g.complexity > 2 && g.complexity <= 5),
+    };
+  }
+
+  private renderGames(
+    games: GameCard[],
+    doc: any,
+    addLine: (text: string, bold?: boolean) => void,
+  ): void {
     games.forEach((game, i) => {
       addLine(
         `${i + 1}. ${game.name}${game.year ? ` (${game.year}). ${game.isPlayed ? 'Played' : 'Not played yet'}` : ''}`,
@@ -94,7 +196,12 @@ export class ExportService {
         addLine(`Complexity: ${game.complexity}/5`);
       }
       if (game.rate) {
-        addLine(`Rating: ${game.rate}/10`);
+        // Color-coded rating
+        const ratingColor = this.getRatingColor(game.rate);
+        const prevColor = doc.getTextColor();
+        doc.setTextColor(ratingColor.r, ratingColor.g, ratingColor.b);
+        addLine(`Rating: ${game.rate}/10 ${game.rate > 6.5 ? '(HIGH)' : ''}`);
+        doc.setTextColor(prevColor);
       }
       if (game.size) {
         addLine(`Size: ${game.size.toUpperCase()}`);
@@ -104,12 +211,15 @@ export class ExportService {
           `BGG: https://boardgamegeek.com/boardgame/${game.bggReference}`,
         );
       }
-      cursorY += blockSpacing;
       addLine('');
     });
+  }
 
-    const filename = this.withTimestamp(`${filenameBase}.pdf`);
-    doc.save(filename);
+  private getRatingColor(rate: number): { r: number; g: number; b: number } {
+    if (rate > 5.999) {
+      return { r: 0, g: 128, b: 0 }; // Green for high ratings
+    }
+    return { r: 255, g: 0, b: 0 }; // Red for low ratings
   }
 
   private formatPlayers(players: number[] | undefined): string {
