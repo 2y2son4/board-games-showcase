@@ -203,9 +203,9 @@ describe('FilterFunctionsService', () => {
     });
 
     it('should handle edge cases for player range', () => {
-      const result2 = service.filterByPlayers(games, 2);
-      expect(result2).toContain(game2);
-      expect(result2).toContain(game4);
+      const result = service.filterByPlayers(games, 2);
+      expect(result).toContain(game2);
+      expect(result).toContain(game4);
     });
 
     it('should handle games with single exact player count', () => {
