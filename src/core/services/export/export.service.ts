@@ -9,6 +9,11 @@ export class ExportService {
   async exportSelectedGamesAsPdf(
     games: GameCard[],
     filenameBase = 'selected-games',
+    metadata?: {
+      selectedChipTypes?: string[];
+      selectedDropdownTypes?: string[];
+      playedFilter?: 'played' | 'unplayed' | null;
+    },
   ): Promise<void> {
     // Lazy import so Jest/tests and initial load don't need to evaluate jsPDF.
     const jsPDFModule: any = await import('jspdf');
@@ -46,19 +51,59 @@ export class ExportService {
 
     addLine(`Selected games (${games.length})`, true);
     addLine(`Generated: ${new Date().toLocaleString()}`);
+
+    // Add filter information
+    if (metadata) {
+      if (metadata.selectedChipTypes && metadata.selectedChipTypes.length > 0) {
+        addLine(
+          `Filtered by types (AND): ${metadata.selectedChipTypes.join(', ')}`,
+        );
+      }
+      if (
+        metadata.selectedDropdownTypes &&
+        metadata.selectedDropdownTypes.length > 0
+      ) {
+        addLine(
+          `Filtered by types (OR): ${metadata.selectedDropdownTypes.join(', ')}`,
+        );
+      }
+      if (metadata.playedFilter) {
+        addLine(
+          `Status: ${metadata.playedFilter === 'played' ? 'Played games' : 'Unplayed games'}`,
+        );
+      }
+    }
+
     addLine('');
 
-    games.forEach((game, idx) => {
+    games.forEach((game, i) => {
       addLine(
-        `${idx + 1}. ${game.name}${game.year ? ` (${game.year})` : ''}`,
+        `${i + 1}. ${game.name}${game.year ? ` (${game.year}). ${game.isPlayed ? 'Played' : 'Not played yet'}` : ''}`,
         true,
       );
       addLine(`Editor: ${game.editor || '-'}`);
+      if (game.types && game.types.length > 0) {
+        addLine(`Types: ${game.types.join(', ')}`);
+      }
       addLine(`Players: ${this.formatPlayers(game.players)}`);
+      if (game.age) {
+        addLine(`Age: ${game.age}+ years`);
+      }
       addLine(`Play time: ${this.formatTime(game.time)}`);
-      addLine(
-        `BGG: ${game.bggReference ? `https://boardgamegeek.com/boardgame/${game.bggReference}` : '-'}`,
-      );
+      if (game.complexity) {
+        addLine(`Complexity: ${game.complexity}/5`);
+      }
+      if (game.rate) {
+        addLine(`Rating: ${game.rate}/10`);
+      }
+      if (game.size) {
+        addLine(`Size: ${game.size.toUpperCase()}`);
+      }
+      if (game.bggReference) {
+        addLine(
+          `BGG: https://boardgamegeek.com/boardgame/${game.bggReference}`,
+        );
+      }
       cursorY += blockSpacing;
       addLine('');
     });
@@ -86,9 +131,9 @@ export class ExportService {
     const d = new Date();
     const ts = `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}${pad(d.getSeconds())}`;
 
-    const dotIdx = filename.lastIndexOf('.');
-    if (dotIdx === -1) return `${filename}-${ts}`;
+    const dotIndex = filename.lastIndexOf('.');
+    if (dotIndex === -1) return `${filename}-${ts}`;
 
-    return `${filename.slice(0, dotIdx)}-${ts}${filename.slice(dotIdx)}`;
+    return `${filename.slice(0, dotIndex)}-${ts}${filename.slice(dotIndex)}`;
   }
 }

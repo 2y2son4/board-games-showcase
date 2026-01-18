@@ -302,6 +302,24 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   async exportSelectedAsPdf(): Promise<void> {
-    await this.exportService.exportSelectedGamesAsPdf(this.printGames());
+    await this.exportService.exportSelectedGamesAsPdf(
+      this.printGames(),
+      'selected-games',
+      {
+        selectedChipTypes:
+          this.selectedChipTypes().length > 0
+            ? this.selectedChipTypes()
+            : undefined,
+        selectedDropdownTypes:
+          this.selectedTypes.value && this.selectedTypes.value.length > 0
+            ? this.selectedTypes.value
+            : undefined,
+        playedFilter: this.playedGames()
+          ? 'played'
+          : this.unPlayedGames()
+            ? 'unplayed'
+            : null,
+      },
+    );
   }
 }
