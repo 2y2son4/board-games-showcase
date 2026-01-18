@@ -17,24 +17,24 @@
       <div class="details__right">
         <p>
           Titles:
-          @for(name of gameDetails.name; let index = $index; let first = $first; let last = $last; track index){
+          @for (name of gameDetails.name; let index = $index; let first = $first; let last = $last; track index){
         <div class="details__name">- {{name}}.</div>
       }
       </p>
       <p>{{gameDetails.description}} </p>
       <p>
         Publishers:
-        @for(publisher of gameDetails.boardgamepublisher; let index = $index;track
+        @for (publisher of gameDetails.boardgamepublisher; let index = $index;track
         index){
       <div>- {{publisher}}. </div>}
     </p>
     <mat-chip-set>
-      @for(category of gameDetails.boardgamecategory; let index = $index; let last = $last; track index){
+      @for (category of gameDetails.boardgamecategory; let index = $index; let last = $last; track index){
         <mat-chip [value]="category"> {{category}} </mat-chip>}
     </mat-chip-set>
     <div class="line"></div>
     <mat-chip-set>
-      @for(size of gameDetails.size; let index = $index; track index){
+      @for (size of gameDetails.size; let index = $index; track index){
         <mat-chip [value]="size"> {{size.toUpperCase()}} </mat-chip>}
     </mat-chip-set>
       </div>

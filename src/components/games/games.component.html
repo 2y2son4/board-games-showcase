@@ -9,7 +9,7 @@
             {{playedGames ? 'Played' : unPlayedGames ? 'Unplayed' : ''}}
           </h3>
           <h4 class="side__number">
-            @for(type of selectedChipTypes; let index = $index; let first = $first; let last = $last; track
+            @for (type of selectedChipTypes; let index = $index; let first = $first; let last = $last; track
             index){
               <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes.length > 1 ? ' and ' : '')}}
                 {{!first ? type.toLowerCase() : type}}</span>}
@@ -30,7 +30,7 @@
     </div>
     <div class="card">
       <ul class="card__container">
-        @for(game of filteredGames;let index = $index; track index){
+        @for (game of filteredGames;let index = $index; track index){
           <li class="card__list" #game>
             <article class="card__list-inner" (click)="toggleCardFlip(game, index)" #innerElement>
               <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
@@ -64,7 +64,7 @@
                       <div style="display: flex; justify-content: space-between; width: 100%;">
                         @if (game.players){
                           <p class="card__players">
-                            @for(player of game.players; let index = $index;let first = $first; let last = $last; track
+                            @for (player of game.players; let index = $index;let first = $first; let last = $last; track
                               index){
                               {{ game.players.length === 1 && first ? 'For' : ''}} {{player}} {{ !last ? 'to' :
                               player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
@@ -83,7 +83,7 @@
 
                       </div>
                       <mat-chip-listbox multiple [(ngModel)]="selectedChipTypes" (ngModelChange)="onTypeChange($event)">
-                        @for(type of game.types; let index = $index; let last = $last; track index){
+                        @for (type of game.types; let index = $index; let last = $last; track index){
                           <mat-chip-option [value]="type"> {{type}} </mat-chip-option>
                         }
                       </mat-chip-listbox>

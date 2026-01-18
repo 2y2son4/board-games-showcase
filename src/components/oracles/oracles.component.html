@@ -16,7 +16,7 @@
     </div>
     <div class="card">
       <ul class="card__container">
-        @for(oracle of oraclesList;let index = $index; track index){
+        @for (oracle of oraclesList;let index = $index; track index){
           <li class="card__list">
             <div class="card__list-inner" (click)="toggleCardFlip(index)" #innerElement>
               <div class="card__list-front">
