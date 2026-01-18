@@ -3,12 +3,10 @@ import {
   Component,
   ElementRef,
   OnInit,
-  QueryList,
-  ViewChildren,
+  viewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HttpService } from '../../core/services/http/http.service';
@@ -18,22 +16,15 @@ import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
-    selector: 'app-oracles',
-    imports: [
-        CommonModule,
-        HighlightTextPipe,
-        LoaderComponent,
-        ScrollToTopBtnComponent,
-    ],
-    templateUrl: './oracles.component.html',
-    styleUrl: '../common-styles.scss'
+  selector: 'app-oracles',
+  imports: [CommonModule, LoaderComponent, ScrollToTopBtnComponent],
+  templateUrl: './oracles.component.html',
+  styleUrl: '../common-styles.scss',
 })
 export class OraclesComponent implements OnInit, AfterViewInit {
-  @ViewChildren('innerElement') innerElements!: QueryList<ElementRef>;
+  innerElements = viewChildren<ElementRef>('innerElement');
 
-  oraclesList!: Array<OracleCard>;
-  unPlayedGames = false;
-  searchQuery = '';
+  oraclesList: OracleCard[] = [];
 
   constructor(
     public commonFunctions: CommonFunctionsService,
@@ -43,7 +34,6 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.oraclesList = [];
     this.loaderService.show();
     this.httpDataService.getOracles().subscribe({
       next: (response) => {
@@ -60,11 +50,11 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.filterFunctions.getFlipCardCount(this.innerElements);
+    this.filterFunctions.getFlipCardCount(this.innerElements());
   }
 
   toggleCardFlip(index: number) {
-    const targetElement = this.innerElements.toArray()[index];
+    const targetElement = this.innerElements()[index];
     if (targetElement) {
       targetElement.nativeElement.classList.toggle('active');
     }

@@ -3,9 +3,9 @@ import {
   Component,
   ElementRef,
   OnInit,
-  QueryList,
+  signal,
   ViewChild,
-  ViewChildren,
+  viewChildren,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -55,43 +55,30 @@ import { ExportService } from '../../core/services/export/export.service';
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChild('topPage') topPage!: ElementRef;
-  @ViewChildren('innerElement')
-  innerElements!: QueryList<ElementRef>;
-  gamesList!: Array<GameCard>;
+  innerElements = viewChildren<ElementRef>('innerElement');
+  gamesList!: GameCard[];
+
+  isLoading = signal(false);
+  selectedChipTypes = signal<string[]>([]);
+  filteredGames = signal<GameCard[]>([]);
+  printGames = signal<GameCard[]>([]);
+  playedGames = signal(false);
+  unPlayedGames = signal(false);
+  showPlayedBtn = signal(true);
+  showUnplayedBtn = signal(true);
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
-  selectedChipTypes: Array<string> = [''];
   selectedSize!: string;
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
   selectedSorting = new FormControl<string>('');
-  filteredGames: GameCard[] = [];
   searchQuery = '';
-  playedGames = false;
-  unPlayedGames = false;
-  isLoading!: boolean;
   exactPlayers!: number | undefined;
   exactAge!: number | undefined;
   gamesFilterForm!: FormGroup;
   flippedCards!: number;
-
-  printGames: GameCard[] = [];
-
-  sortingSelectLabels = [
-    'A to Z',
-    'Z to A',
-    'Year ↑',
-    'Year ↓',
-    'Time ↑',
-    'Time ↓',
-    'Complexity ↑',
-    'Complexity ↓',
-    'Rate ↑',
-    'Rate ↓',
-  ];
-  showPlayedBtn = true;
-  showUnplayedBtn = true;
+  sortingSelectLabels: string[] = [];
 
   constructor(
     public commonFunctions: CommonFunctionsService,
@@ -102,8 +89,9 @@ export class GamesComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
+    this.sortingSelectLabels = this.filterFunctions.SORTING_LABELS;
     this.loaderService.show();
-    this.isLoading = true;
+    this.isLoading.set(true);
     this.gamesList = [];
 
     this.httpDataService.getGames().subscribe({
@@ -111,8 +99,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
         this.gamesList = this.filterFunctions.sortByNameAscending(
           response.games,
         );
-        this.filteredGames = this.filterFunctions.sortByNameAscending(
-          response.games,
+        this.filteredGames.set(
+          this.filterFunctions.sortByNameAscending(response.games),
         );
         this.types = this.commonFunctions.extractUniqueValues(
           this.filterFunctions.sortByNameAscending(response.games),
@@ -123,12 +111,12 @@ export class GamesComponent implements OnInit, AfterViewInit {
           'editor',
         );
         this.loaderService.hide();
-        this.isLoading = false;
+        this.isLoading.set(false);
       },
       error: (error) => {
         console.error('Error fetching games data', error);
         this.loaderService.hide();
-        this.isLoading = false;
+        this.isLoading.set(false);
       },
     });
 
@@ -145,119 +133,105 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.filterFunctions.getFlipCardCount(this.innerElements);
+    this.filterFunctions.getFlipCardCount(this.innerElements());
   }
 
-  onTypeChange(selectedChipTypes: Array<string>) {
-    this.gamesFilterForm.reset();
-    this.restartDropdownFilters();
-    this.selectedChipTypes = selectedChipTypes;
+  onTypeChange(selectedChipTypes: string[]) {
+    this.selectedChipTypes.set(selectedChipTypes);
+
+    // Clear dropdown selections when chips are selected
+    if (selectedChipTypes.length > 0) {
+      this.selectedTypes.setValue([], { emitEvent: false });
+    }
+
     this.applyAllFilters();
     setTimeout(() => {
-      this.filterFunctions.flipAllCards(this.innerElements);
+      this.filterFunctions.flipAllCards(this.innerElements());
+      this.syncCardSelection();
     }, 100);
   }
 
+  onDropdownTypeChange() {
+    // Clear chip selections when dropdown is used
+    const dropdownTypes = this.selectedTypes.value ?? [];
+    if (dropdownTypes.length > 0) {
+      this.selectedChipTypes.set([]);
+    }
+
+    this.filterFunctions.flipAllCards(this.innerElements());
+    this.applyAllFilters();
+    this.syncCardSelection();
+  }
+
   onSizeChange(selectedSize: string) {
-    console.log(selectedSize);
     this.gamesFilterForm.reset();
     this.restartDropdownFilters();
     this.selectedSize = selectedSize;
     this.applyAllFilters();
     setTimeout(() => {
-      this.filterFunctions.flipAllCards(this.innerElements);
+      this.filterFunctions.flipAllCards(this.innerElements());
+      this.syncCardSelection();
     }, 100);
   }
 
   onSearchTypes(target: any) {
-    this.types = this.searchTypes(target.value);
-  }
-
-  searchTypes(value: any) {
-    let filter = value.toLowerCase();
-    if (!value) {
-      return this.commonFunctions.extractUniqueValues(
-        this.filterFunctions.sortByNameAscending(this.gamesList),
-        'types',
-      );
-    } else {
-      return this.types.filter((editor) =>
-        editor.toLowerCase().includes(filter),
-      );
-    }
+    const allTypes = this.commonFunctions.extractUniqueValues(
+      this.filterFunctions.sortByNameAscending(this.gamesList),
+      'types',
+    );
+    this.types = this.filterFunctions.searchInList(allTypes, target.value);
   }
 
   onSearchEditors(target: any) {
-    this.editors = this.searchEditors(target.value);
-  }
-
-  searchEditors(value: any) {
-    let filter = value.toLowerCase();
-    if (!value) {
-      return this.commonFunctions.extractUniqueValues(
-        this.filterFunctions.sortByNameAscending(this.gamesList),
-        'editor',
-      );
-    } else {
-      return this.editors.filter((editor) =>
-        editor.toLowerCase().includes(filter),
-      );
-    }
+    const allEditors = this.commonFunctions.extractUniqueValues(
+      this.filterFunctions.sortByNameAscending(this.gamesList),
+      'editor',
+    );
+    this.editors = this.filterFunctions.searchInList(allEditors, target.value);
   }
 
   filterGames() {
-    this.filterFunctions.flipAllCards(this.innerElements);
+    this.filterFunctions.flipAllCards(this.innerElements());
     this.applyAllFilters();
-  }
-
-  filterGamesByTypeAndEditor() {
-    this.filterFunctions.flipAllCards(this.innerElements);
-    this.applyAllFilters();
-  }
-
-  selectSorting(change: MatSelectChange) {
-    this.filterFunctions.flipAllCards(this.innerElements);
-    // The form control value is already updated by the time this is called
-    // Just re-apply all filters with the new sorting
-    this.applyAllFilters();
+    this.syncCardSelection();
   }
 
   togglePlayed() {
-    this.filterFunctions.flipAllCards(this.innerElements);
-    this.unPlayedGames = false;
-    this.playedGames = !this.playedGames;
-    this.showPlayedBtn = false;
-    this.showUnplayedBtn = true;
+    this.filterFunctions.flipAllCards(this.innerElements());
+    this.unPlayedGames.set(false);
+    this.playedGames.set(!this.playedGames());
+    this.showPlayedBtn.set(false);
+    this.showUnplayedBtn.set(true);
     this.applyAllFilters();
+    this.syncCardSelection();
   }
 
   toggleUnPlayed() {
-    this.filterFunctions.flipAllCards(this.innerElements);
-    this.playedGames = false;
-    this.unPlayedGames = !this.unPlayedGames;
-    this.showPlayedBtn = true;
-    this.showUnplayedBtn = false;
+    this.filterFunctions.flipAllCards(this.innerElements());
+    this.playedGames.set(false);
+    this.unPlayedGames.set(!this.unPlayedGames());
+    this.showPlayedBtn.set(true);
+    this.showUnplayedBtn.set(false);
     this.applyAllFilters();
+    this.syncCardSelection();
   }
 
   resetGamesList() {
-    this.filteredGames = this.gamesList;
-    this.filterFunctions.flipAllCards(this.innerElements);
+    this.filteredGames.set(this.gamesList);
+    this.filterFunctions.flipAllCards(this.innerElements());
   }
 
   restartFilters() {
-    // Must clear these BEFORE calling restartDropdownFilters()
-    // so that applyAllFilters() runs with all filters cleared
-    this.selectedChipTypes = [];
+    this.selectedChipTypes.set([]);
     this.resetPlayedGames();
     this.restartDropdownFilters();
-    this.filterFunctions.flipAllCards(this.innerElements);
+    this.filterFunctions.flipAllCards(this.innerElements());
     this.topPage.nativeElement.scrollIntoView({
       block: 'end',
       behavior: 'smooth',
     });
-    this.showPlayedBtn = true;
-    this.showUnplayedBtn = true;
+    this.showPlayedBtn.set(true);
+    this.showUnplayedBtn.set(true);
   }
 
   restartDropdownFilters() {
@@ -267,15 +241,15 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.searchQuery = '';
     this.exactPlayers = undefined;
     this.exactAge = undefined;
-    this.selectedChipTypes = [];
+    this.selectedChipTypes.set([]);
     this.selectedSize = '';
     this.applyAllFilters();
-    this.printGames = [];
+    this.printGames.set([]);
   }
 
   resetPlayedGames() {
-    this.playedGames = false;
-    this.unPlayedGames = false;
+    this.playedGames.set(false);
+    this.unPlayedGames.set(false);
   }
 
   restartSearch() {
@@ -284,120 +258,24 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   /**
-   * Centralized method to apply all active filters cumulatively.
+   * Centralized method to apply all active filters using the filter service.
    * This ensures filters work together (AND logic) rather than independently.
    */
-  applyAllFilters() {
-    let result = [...this.gamesList];
-
-    // Apply search query filter
-    const query = this.searchQuery.toLowerCase().trim();
-    if (query) {
-      result = result.filter(
-        (game) =>
-          game.name.toLowerCase().includes(query) ||
-          game.editor.toLowerCase().includes(query) ||
-          game.year.toString().includes(query) ||
-          game.rate.toString().includes(query) ||
-          game.complexity.toString().includes(query) ||
-          game.types.some((type) => type.toLowerCase().includes(query)),
-      );
-    }
-
-    // Apply exact players filter
-    if (this.exactPlayers && this.exactPlayers > 0) {
-      result = result.filter((game) => {
-        const players = game.players;
-        if (players) {
-          if (players.length === 1) {
-            return players[0] === this.exactPlayers;
-          } else if (players.length === 2) {
-            const [minPlayers, maxPlayers] = players;
-            return (
-              minPlayers <= this.exactPlayers! &&
-              this.exactPlayers! <= maxPlayers
-            );
-          }
-        }
-        return false;
-      });
-    }
-
-    // Apply age filter
-    if (this.exactAge) {
-      result = result.filter((game) => {
-        const ages = game.age;
-        if (ages) {
-          return ages <= this.exactAge!;
-        }
-        return false;
-      });
-    }
-
-    // Apply type filter (from dropdown)
-    const selectedTypeValues = this.selectedTypes.value ?? [];
-    if (selectedTypeValues.length > 0) {
-      result = result.filter((game) =>
-        game.types.some((type) => selectedTypeValues.includes(type)),
-      );
-    }
-
-    // Apply editor/publisher filter
-    const selectedEditorValues = this.selectedEditors.value ?? [];
-    if (selectedEditorValues.length > 0) {
-      result = result.filter((game) =>
-        selectedEditorValues.includes(game.editor),
-      );
-    }
-
-    // Apply chip types filter (from clicking on chips in cards)
-    if (this.selectedChipTypes && this.selectedChipTypes.length > 0) {
-      result = result.filter((card) => {
-        return this.selectedChipTypes.every((selectedType) =>
-          card.types.includes(selectedType),
-        );
-      });
-    }
-
-    // Apply size filter
-    if (this.selectedSize) {
-      result = result.filter((card) => card.size.includes(this.selectedSize));
-    }
-
-    // Apply played/unplayed filter
-    if (this.playedGames) {
-      result = result.filter((game) => game.isPlayed);
-    } else if (this.unPlayedGames) {
-      result = result.filter((game) => !game.isPlayed);
-    }
-
-    // Apply current sorting if any
-    const currentSorting = this.selectedSorting.value;
-    if (currentSorting) {
-      const sortFunctions: {
-        [key: string]: (a: GameCard, b: GameCard) => number;
-      } = {
-        'A to Z': (a, b) => a.name.localeCompare(b.name),
-        'Z to A': (a, b) => b.name.localeCompare(a.name),
-        'Year ↑': (a, b) => a.year - b.year,
-        'Year ↓': (a, b) => b.year - a.year,
-        'Time ↑': (a, b) => a.time - b.time,
-        'Time ↓': (a, b) => b.time - a.time,
-        'Complexity ↑': (a, b) => a.complexity - b.complexity,
-        'Complexity ↓': (a, b) => b.complexity - a.complexity,
-        'Rate ↑': (a, b) => a.rate - b.rate,
-        'Rate ↓': (a, b) => b.rate - a.rate,
-      };
-      const sortFunction = sortFunctions[currentSorting];
-      if (sortFunction) {
-        result.sort(sortFunction);
-      }
-    } else {
-      // Default sorting by name ascending if no sorting is selected
-      result = this.filterFunctions.sortByNameAscending(result);
-    }
-
-    this.filteredGames = result;
+  applyAllFilters(): void {
+    this.filteredGames.set(
+      this.filterFunctions.applyFilters(this.gamesList, {
+        searchQuery: this.searchQuery,
+        exactPlayers: this.exactPlayers,
+        exactAge: this.exactAge,
+        selectedTypes: this.selectedTypes.value ?? [],
+        selectedEditors: this.selectedEditors.value ?? [],
+        selectedChipTypes: this.selectedChipTypes(),
+        selectedSize: this.selectedSize,
+        playedGames: this.playedGames(),
+        unPlayedGames: this.unPlayedGames(),
+        sorting: this.selectedSorting.value ?? undefined,
+      }),
+    );
   }
 
   filterGamesByExactPlayers() {
@@ -408,8 +286,26 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
   }
 
+  /**
+   * Syncs the visual selection state (active class) with the printGames signal.
+   * This ensures selected cards remain visually selected after sorting/filtering.
+   */
+  private syncCardSelection(): void {
+    setTimeout(() => {
+      const elements = this.innerElements();
+      const selected = this.printGames();
+
+      elements.forEach((element, index) => {
+        const game = this.filteredGames()[index];
+        if (game && selected.some((g) => g.name === game.name)) {
+          element.nativeElement.classList.add('active');
+        }
+      });
+    }, 0);
+  }
+
   toggleCardFlip(game: GameCard, index: number) {
-    const targetElement = this.innerElements?.toArray()?.[index];
+    const targetElement = this.innerElements()[index];
     if (!targetElement) return;
 
     const isCurrentlySelected =
@@ -418,16 +314,44 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
     if (isCurrentlySelected) {
       // Unselect
-      this.printGames = this.printGames.filter((g) => g.name !== game.name);
+      this.printGames.set(
+        this.printGames().filter((g) => g.name !== game.name),
+      );
     } else {
       // Select (avoid duplicates)
-      if (!this.printGames.some((g) => g.name === game.name)) {
-        this.printGames = [...this.printGames, game];
+      if (!this.printGames().some((g) => g.name === game.name)) {
+        this.printGames.set([...this.printGames(), game]);
       }
     }
   }
 
   async exportSelectedAsPdf(): Promise<void> {
-    await this.exportService.exportSelectedGamesAsPdf(this.printGames);
+    await this.exportService.exportSelectedGamesAsPdf(
+      this.printGames(),
+      'selected-games',
+      {
+        searchQuery: this.searchQuery || undefined,
+        selectedChipTypes:
+          this.selectedChipTypes().length > 0
+            ? this.selectedChipTypes()
+            : undefined,
+        selectedDropdownTypes:
+          this.selectedTypes.value && this.selectedTypes.value.length > 0
+            ? this.selectedTypes.value
+            : undefined,
+        exactPlayers: this.exactPlayers,
+        exactAge: this.exactAge,
+        selectedEditors:
+          this.selectedEditors.value && this.selectedEditors.value.length > 0
+            ? this.selectedEditors.value
+            : undefined,
+        selectedSize: this.selectedSize || undefined,
+        playedFilter: this.playedGames()
+          ? 'played'
+          : this.unPlayedGames()
+            ? 'unplayed'
+            : null,
+      },
+    );
   }
 }
