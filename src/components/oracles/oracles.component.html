@@ -9,6 +9,7 @@
           <h3 class="side__number">
             ({{filterFunctions.getFlipCardCount(innerElements())}} of {{oraclesList.length}} selected)
           </h3>
+
           <button type="button" mat-raised-button color="primary" class="side__export" [disabled]="printOracles().length === 0"
             (click)="exportSelectedAsPdf()">
             Export to PDF
