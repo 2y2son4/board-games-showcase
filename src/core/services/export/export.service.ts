@@ -1,11 +1,70 @@
 import { Injectable } from '@angular/core';
 
-import { GameCard } from '../../../components/commons.models';
+import { GameCard, OracleCard } from '../../../components/commons.models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ExportService {
+  async exportSelectedOraclesAsPdf(
+    oracles: OracleCard[],
+    filenameBase = 'selected-oracles',
+  ): Promise<void> {
+    // Lazy import so Jest/tests and initial load don't need to evaluate jsPDF.
+    const jsPDFModule: any = await import('jspdf');
+    const JsPDFCtor = jsPDFModule.jsPDF ?? jsPDFModule.default;
+    const doc = new JsPDFCtor({
+      orientation: 'p',
+      unit: 'pt',
+      format: 'a4',
+    });
+
+    const marginX = 40;
+    const marginY = 48;
+    const lineHeight = 18;
+
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const maxTextWidth = pageWidth - marginX * 2;
+
+    let cursorY = marginY;
+
+    const addLine = (text: string, bold = false) => {
+      doc.setFont('helvetica', bold ? 'bold' : 'normal');
+      const lines = doc.splitTextToSize(text, maxTextWidth);
+
+      for (const line of lines) {
+        if (cursorY + lineHeight > pageHeight - marginY) {
+          doc.addPage();
+          cursorY = marginY;
+        }
+        doc.text(line, marginX, cursorY);
+        cursorY += lineHeight;
+      }
+    };
+
+    addLine(`Selected oracles (${oracles.length})`, true);
+    addLine(`Generated: ${new Date().toLocaleString()}`);
+    addLine('');
+
+    oracles.forEach((oracle, i) => {
+      addLine(`${i + 1}. ${oracle.name}`, true);
+      if (oracle.artist) {
+        addLine(`Artist: ${oracle.artist}`);
+      }
+      if (oracle.description && oracle.description.length > 0) {
+        addLine('Description:');
+        oracle.description.forEach((paragraph) => {
+          addLine(`  ${paragraph}`);
+        });
+      }
+      addLine('');
+    });
+
+    const filename = this.withTimestamp(`${filenameBase}.pdf`);
+    doc.save(filename);
+  }
+
   async exportSelectedGamesAsPdf(
     games: GameCard[],
     filenameBase = 'selected-games',
