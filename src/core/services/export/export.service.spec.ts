@@ -1,5 +1,5 @@
 import { ExportService } from './export.service';
-import type { GameCard } from '../../../components/commons.models';
+import type { GameCard, OracleCard } from '../../../components/commons.models';
 
 // Mock jsPDF so tests don't generate real PDFs.
 jest.mock('jspdf', () => {
@@ -291,5 +291,85 @@ describe('ExportService', () => {
     expect(writtenText).toContain(
       'Filtered by types (OR): Party, Strategy, Family',
     );
+  });
+
+  describe('Oracle Export', () => {
+    it('exports oracle cards to PDF with name, artist, and description', async () => {
+      const service = new ExportService();
+
+      const FakeJsPDF = await getFakeJsPdfCtor();
+      FakeJsPDF.instances.length = 0;
+
+      const oracles: OracleCard[] = [
+        {
+          name: 'Test Oracle',
+          artist: 'Test Artist',
+          description: ['First paragraph', 'Second paragraph'],
+          language: 'en',
+          web: 'https://example.com',
+        },
+        {
+          name: 'Another Oracle',
+          artist: 'Another Artist',
+          description: ['Description text'],
+          language: 'es',
+          web: '',
+        },
+      ];
+
+      await service.exportSelectedOraclesAsPdf(oracles, 'my-oracles');
+
+      expect(FakeJsPDF.instances.length).toBe(1);
+
+      const doc = FakeJsPDF.instances[0];
+
+      // Ensure we saved a timestamped filename.
+      expect(doc.save).toHaveBeenCalledTimes(1);
+      const filenameArg = doc.save.mock.calls[0][0] as string;
+      expect(filenameArg.startsWith('my-oracles-')).toBe(true);
+      expect(filenameArg.endsWith('.pdf')).toBe(true);
+      expect(filenameArg).toMatch(/^my-oracles-\d{8}-\d{6}\.pdf$/);
+
+      // Ensure we wrote expected lines.
+      const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+      expect(writtenText).toContain('Selected oracles (2)');
+      expect(writtenText).toContain('1. Test Oracle');
+      expect(writtenText).toContain('Artist: Test Artist');
+      expect(writtenText).toContain('Description:');
+      expect(writtenText).toContain('First paragraph');
+      expect(writtenText).toContain('Second paragraph');
+      expect(writtenText).toContain('2. Another Oracle');
+      expect(writtenText).toContain('Artist: Another Artist');
+      expect(writtenText).toContain('Description text');
+    });
+
+    it('handles oracles with missing optional fields', async () => {
+      const service = new ExportService();
+
+      const FakeJsPDF = await getFakeJsPdfCtor();
+      FakeJsPDF.instances.length = 0;
+
+      const oracles: OracleCard[] = [
+        {
+          name: 'Minimal Oracle',
+          artist: '',
+          description: [],
+          language: 'en',
+          web: '',
+        },
+      ];
+
+      await service.exportSelectedOraclesAsPdf(oracles);
+
+      const doc = FakeJsPDF.instances[0];
+
+      const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+      expect(writtenText).toContain('Selected oracles (1)');
+      expect(writtenText).toContain('1. Minimal Oracle');
+      // Artist should not be present when empty
+      expect(writtenText.split('\n').filter((line: string) => line.includes('Artist:')).length).toBe(0);
+      // Description should not be present when empty
+      expect(writtenText.split('\n').filter((line: string) => line.includes('Description:')).length).toBe(0);
+    });
   });
 });
