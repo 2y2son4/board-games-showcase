@@ -33,6 +33,7 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   innerElements = viewChildren<ElementRef>('innerElement');
 
   oraclesList: OracleCard[] = [];
+
   printOracles = signal<OracleCard[]>([]);
 
   constructor(
