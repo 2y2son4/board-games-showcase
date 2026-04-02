@@ -4237,7 +4237,7 @@
       ],
       "time": 15,
       "complexity": 1,
-      "rate": 0,
+      "rate": 4.5,
       "image": "inicio",
       "isPlayed": true,
       "age": 8,
@@ -4530,7 +4530,7 @@
       ],
       "time": 15,
       "complexity": 0,
-      "rate": 0,
+      "rate": 5.6,
       "image": "a-sacar-la-basura",
       "isPlayed": true,
       "age": 10,
@@ -8131,7 +8131,7 @@
       ],
       "time": 120,
       "complexity": 0,
-      "rate": 0,
+      "rate": 8.1,
       "image": "loops",
       "isPlayed": true,
       "age": 10,
@@ -8287,7 +8287,7 @@
       "complexity": 1,
       "rate": 5.8,
       "image": "texas-hold-it",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 429963,
       "size": "xs"
@@ -8309,7 +8309,7 @@
       "complexity": 1,
       "rate": 8.5,
       "image": "smart10-videojuegos",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 14,
       "bggReference": 458937,
       "size": "s"
@@ -8357,7 +8357,7 @@
       "complexity": 1.06,
       "rate": 7.5,
       "image": "hitster-temazos",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 16,
       "bggReference": 397736,
       "size": "m"
@@ -8381,10 +8381,193 @@
       "complexity": 1.06,
       "rate": 8.1,
       "image": "hitster-rock-bob",
-      "isPlayed": false,
+      "isPlayed": true,
       "age": 16,
       "bggReference": 450175,
       "size": "m"
+    },
+    {
+      "name": "Terraria: The board game",
+      "editor": "Paper Fort Games",
+      "year": 2025,
+      "types": [
+        "Adventure",
+        "City building",
+        "Exploration",
+        "Fighting",
+        "Territory building",
+        "Action points",
+        "Cooperative",
+        "Grid movement",
+        "Deck, bag and pool building",
+        "Dice rolling",
+        "Modular board",
+        "Tile placement",
+        "Variable Set-up"
+      ],
+      "language": "es",
+      "players": [
+        1,
+        4
+      ],
+      "time": 120,
+      "complexity": 3.53,
+      "rate": 8.1,
+      "image": "terraria",
+      "isPlayed": true,
+      "age": 0,
+      "bggReference": 391286,
+      "size": "l"
+    },
+    {
+      "name": "Unsolved Case Files: Wallet Case – Tara Noble",
+      "editor": "Unsolved Case Files",
+      "year": 2025,
+      "types": [
+        "Party",
+        "Deduction",
+        "Murder/Mystery",
+        "Cooperative",
+        "Digital hybrid"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        8
+      ],
+      "time": 180,
+      "complexity": 2,
+      "rate": 8,
+      "image": "wallet-case",
+      "isPlayed": true,
+      "age": 13,
+      "bggReference": 443655,
+      "size": "s"
+    },
+    {
+      "name": "Unsolved Case Files: Max Cahill",
+      "editor": "Unsolved Case Files",
+      "year": 2021,
+      "types": [
+        "Party",
+        "Deduction",
+        "Murder/Mystery",
+        "Cooperative",
+        "Digital hybrid"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        8
+      ],
+      "time": 180,
+      "complexity": 1.7,
+      "rate": 5.9,
+      "image": "max-cahill",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 8480275,
+      "size": "s"
+    },
+    {
+      "name": "Unsolved Case Files: Mini Case – Luna Knight",
+      "editor": "Unsolved Case Files",
+      "year": 2024,
+      "types": [
+        "Party",
+        "Deduction",
+        "Murder/Mystery",
+        "Cooperative",
+        "Digital hybrid"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        4
+      ],
+      "time": 60,
+      "complexity": 1.7,
+      "rate": 6.7,
+      "image": "luna-knight",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 430746,
+      "size": "s"
+    },
+    {
+      "name": "Murder of a Millionaire",
+      "editor": "Cryptic Killers",
+      "year": 2021,
+      "types": [
+        "Party",
+        "Deduction",
+        "Murder/Mystery",
+        "Cooperative",
+        "Digital hybrid"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        99
+      ],
+      "time": 120,
+      "complexity": 3,
+      "rate": 6.7,
+      "image": "murder-of-a-millionaire",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 356962,
+      "size": "s"
+    },
+    {
+      "name": "Murder of a Millionaire",
+      "editor": "Cryptic Killers",
+      "year": 2021,
+      "types": [
+        "Party",
+        "Deduction",
+        "Murder/Mystery",
+        "Cooperative",
+        "Digital hybrid"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        99
+      ],
+      "time": 120,
+      "complexity": 3,
+      "rate": 6.7,
+      "image": "murder-of-a-millionaire",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 356962,
+      "size": "s"
+    },
+    {
+      "name": "Murder at The Movie Theater",
+      "editor": "Cryptic Killers",
+      "year": 2021,
+      "types": [
+        "Party",
+        "Deduction",
+        "Murder/Mystery",
+        "Cooperative",
+        "Digital hybrid"
+      ],
+      "language": "en",
+      "players": [
+        1,
+        99
+      ],
+      "time": 120,
+      "complexity": 2,
+      "rate": 7.1,
+      "image": "murder-at-the-movie-theater",
+      "isPlayed": false,
+      "age": 14,
+      "bggReference": 373127,
+      "size": "s"
     }
   ]
 }
