@@ -35,6 +35,7 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   oraclesList: OracleCard[] = [];
 
   printOracles = signal<OracleCard[]>([]);
+  readonly oraclesImageBase: string;
 
   constructor(
     public commonFunctions: CommonFunctionsService,
@@ -42,7 +43,9 @@ export class OraclesComponent implements OnInit, AfterViewInit {
     private readonly httpDataService: HttpService,
     private readonly loaderService: LoaderService,
     private readonly exportService: ExportService,
-  ) {}
+  ) {
+    this.oraclesImageBase = this.httpDataService.oraclesImageBase;
+  }
 
   ngOnInit(): void {
     this.loaderService.show();

@@ -7,10 +7,14 @@ import { GameCard, OracleCard } from '../../../components/commons.models';
   providedIn: 'root',
 })
 export class HttpService {
-  private readonly gamesDb = 'assets/data/games.json';
-  private readonly oraclesDb = 'assets/data/oracles.json';
+  private readonly apiBase = 'https://2y2son4.github.io/board-games-db';
+  private readonly gamesDb = `${this.apiBase}/v1/games.json`;
+  private readonly oraclesDb = `${this.apiBase}/v1/oracles.json`;
   private readonly bggUrl = 'https://boardgamegeek.com/xmlapi2/';
   private readonly proxyUrl = 'http://localhost:8080/';
+
+  readonly gamesImageBase = `${this.apiBase}/images/games`;
+  readonly oraclesImageBase = `${this.apiBase}/images/oracles`;
 
   constructor(private readonly http: HttpClient) {}
 
@@ -31,7 +35,19 @@ export class HttpService {
   }
 
   getOracles(): Observable<{ oracles: OracleCard[] }> {
-    return this.http.get<{ oracles: OracleCard[] }>(this.oraclesDb);
+    return this.http.get<{ oracles: OracleCard[] }>(this.oraclesDb).pipe(
+      map((data) => {
+        if (Array.isArray(data.oracles)) {
+          return data;
+        } else {
+          return data.oracles;
+        }
+      }),
+      catchError((error) => {
+        console.error('Error fetching oracles data:', error);
+        return of({ oracles: [] });
+      }),
+    );
   }
 
   getBGG(): Observable<any> {

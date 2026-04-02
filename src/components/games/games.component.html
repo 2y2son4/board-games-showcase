@@ -48,8 +48,8 @@
                 <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery"> {{game.name}}
                 </h2>
                 @if (game.image) {
-                  <div class="card__image-container"><img class="card__image" src="assets/games/{{game.image}}.webp"
-                      alt="{{game.name}}"></div>
+                  <div class="card__image-container"><img class="card__image"
+                      src="{{gamesImageBase}}/{{game.image}}.webp" alt="{{game.name}}"></div>
                 }
                 <p class="card__title"
                   [innerHTML]="(game.editor ? 'by ' + game.editor : '-') | highlightText:searchQuery">

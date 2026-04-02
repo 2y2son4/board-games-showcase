@@ -80,13 +80,17 @@ export class GamesComponent implements OnInit, AfterViewInit {
   flippedCards!: number;
   sortingSelectLabels: string[] = [];
 
+  readonly gamesImageBase: string;
+
   constructor(
     public commonFunctions: CommonFunctionsService,
     public filterFunctions: FilterFunctionsService,
     private readonly httpDataService: HttpService,
     private readonly loaderService: LoaderService,
     private readonly exportService: ExportService,
-  ) {}
+  ) {
+    this.gamesImageBase = this.httpDataService.gamesImageBase;
+  }
 
   ngOnInit(): void {
     this.sortingSelectLabels = this.filterFunctions.SORTING_LABELS;
