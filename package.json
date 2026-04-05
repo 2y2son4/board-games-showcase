@@ -43,6 +43,7 @@
     "@angular-devkit/build-angular": "^20.0.1",
     "@angular/cli": "^20.3.13",
     "@angular/compiler-cli": "^20.3.16",
+    "jest-environment-jsdom": "^30.3.0",
     "typescript": "~5.9.2"
   },
   "overrides": {
