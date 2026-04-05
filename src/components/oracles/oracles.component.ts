@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   OnInit,
@@ -28,6 +29,7 @@ import { ExportService } from '../../core/services/export/export.service';
   ],
   templateUrl: './oracles.component.html',
   styleUrl: '../common-styles.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OraclesComponent implements OnInit, AfterViewInit {
   innerElements = viewChildren<ElementRef>('innerElement');

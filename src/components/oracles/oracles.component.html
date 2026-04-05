@@ -7,7 +7,7 @@
         <div class="side__container">
           <h2 class="side__title">Oracles</h2>
           <h3 class="side__number">
-            ({{filterFunctions.getFlipCardCount(innerElements())}} of {{oraclesList.length}} selected)
+            ({{printOracles().length}} of {{oraclesList.length}} selected)
           </h3>
 
           <button type="button" mat-raised-button color="primary" class="side__export"
@@ -21,14 +21,14 @@
     </div>
     <div class="card">
       <ul class="card__container">
-        @for (oracle of oraclesList;let index = $index; track index){
+        @for (oracle of oraclesList;let index = $index; track oracle.name){
           <li class="card__list">
             <div class="card__list-inner" (click)="toggleCardFlip(oracle, index)" #innerElement>
               <div class="card__list-front">
                 <h2 class="card__title">{{oracle.name}}</h2>
                 @if (oracle.image) {
                   <div class="card__image-container">
-                    <img class="card__image" src="{{oraclesImageBase}}/{{oracle.image}}.webp" alt="{{oracle.name}}">
+                    <img class="card__image" loading="lazy" src="{{oraclesImageBase}}/{{oracle.image}}.webp" alt="{{oracle.name}}">
                   </div>
                 }
                 @if (oracle.artist) {
