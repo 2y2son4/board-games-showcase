@@ -2,7 +2,19 @@
 
 [LINK](https://2y2son4.github.io/board-games-showcase)
 
-This web application, developed with Angular 17 and migrated to Angular 19, serves as a comprehensive showcase for a curated collection of board games and oracle decks. The platform offers an intuitive and visually engaging interface, enabling users to efficiently browse, filter, and explore detailed information about each item.
+This web application, developed with Angular 17 and migrated to Angular 20, serves as a comprehensive showcase for a curated collection of board games and oracle decks. The platform offers an intuitive and visually engaging interface, enabling users to efficiently browse, filter, and explore detailed information about each item.
+
+## Data Source
+
+All game and oracle data (JSON files and images) is fetched at runtime from a separate GitHub Pages repository:
+
+- **Base URL:** [`https://2y2son4.github.io/board-games-db`](https://2y2son4.github.io/board-games-db)
+- **Games data:** `/v1/games.json`
+- **Oracles data:** `/v1/oracles.json`
+- **Game images:** `/v1/games/<image>.webp`
+- **Oracle images:** `/v1/oracles/<image>.webp`
+
+This decouples the data from the application code, allowing data updates without redeploying the app.
 
 ## Key Features
 
@@ -43,30 +55,26 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `docs/` directory.
 
-## Deployment & GitHub Actions Workflow
+## CI/CD & Deployment
 
-All new features are developed in the `gh-pages` branch. Deployment to GitHub Pages is fully automated using a GitHub Actions workflow defined in `.github/workflows/jekyll-gh-pages.yml`.
+Deployment to GitHub Pages is fully automated via a GitHub Actions workflow defined in `.github/workflows/jekyll-gh-pages.yml`. No build artifacts need to be committed to the repository.
 
-### How Deployment Works
+### Workflow Overview
 
-1. **Build the App:**
-   Run the production build script to generate the static site files:
+The workflow runs two jobs:
 
-   ```bash
-   npm run build:prod
-   ```
+1. **Test** — Runs on every push and pull request to `main`:
+   - Installs dependencies (`npm ci`)
+   - Runs all unit tests (`npm test`)
 
-   This command outputs the production-ready files to the `docs/` folder.
+2. **Build & Deploy** — Runs only on pushes to `main` (after tests pass):
+   - Installs dependencies
+   - Builds the production app (`npm run build:prod`)
+   - Deploys the output to GitHub Pages via `actions/deploy-pages`
 
-2. **Automatic Deployment:**
-   The GitHub Actions workflow is triggered on every push to the `main` branch or when manually run from the Actions tab. The workflow performs the following steps:
-   - **Checkout:** Retrieves the latest code from the repository.
-   - **Setup Pages:** Prepares the GitHub Pages environment.
-   - **Build (Jekyll by default):** Runs a Jekyll build step (can be adapted or replaced for Angular/static site output).
-   - **Upload Artifact:** Uploads the generated site as an artifact for deployment.
-   - **Deploy:** Publishes the uploaded artifact to GitHub Pages, making the site available at the configured URL.
+### Manual Deployment
 
-> **Note:** Although the workflow is based on a Jekyll template, it can be customized to better fit an Angular project by replacing the Jekyll build step with one that copies the contents of `docs/` to the deployment artifact.
+The workflow can also be triggered manually from the **Actions** tab using `workflow_dispatch`.
 
 The app is available at: [https://2y2son4.github.io/board-games-showcase](https://2y2son4.github.io/board-games-showcase)
 
@@ -77,6 +85,10 @@ Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/).
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## [Wiki](https://deepwiki.com/2y2son4/board-games-showcase)
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/2y2son4/board-games-showcase)
 
 ## Further help
 
