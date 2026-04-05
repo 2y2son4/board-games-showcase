@@ -100,13 +100,15 @@ export class GamesComponent implements OnInit, AfterViewInit {
   ) {
     this.gamesImageBase = this.httpDataService.gamesImageBase;
 
-    this.#searchSubject$.pipe(
-      debounceTime(200),
-      distinctUntilChanged(),
-      takeUntil(this.#destroy$),
-    ).subscribe(() => {
-      this.filterGames();
-    });
+    this.#searchSubject$
+      .pipe(
+        debounceTime(200),
+        distinctUntilChanged(),
+        takeUntil(this.#destroy$),
+      )
+      .subscribe(() => {
+        this.filterGames();
+      });
 
     this.#destroyRef.onDestroy(() => {
       this.#destroy$.next();

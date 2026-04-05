@@ -140,7 +140,9 @@ describe('GamesComponent', () => {
     component.selectedChipTypes.set([]);
     component.togglePlayed();
 
-    expect(component.filteredGames().every((g: GameCard) => g.isPlayed)).toBe(true);
+    expect(component.filteredGames().every((g: GameCard) => g.isPlayed)).toBe(
+      true,
+    );
   });
 
   it('should filter by unPlayedGames', () => {
@@ -149,7 +151,9 @@ describe('GamesComponent', () => {
     component.selectedChipTypes.set([]);
     component.toggleUnPlayed();
 
-    expect(component.filteredGames().every((g: GameCard) => !g.isPlayed)).toBe(true);
+    expect(component.filteredGames().every((g: GameCard) => !g.isPlayed)).toBe(
+      true,
+    );
   });
 
   it('should filter by editor', () => {
@@ -159,9 +163,9 @@ describe('GamesComponent', () => {
     component.selectedEditors.setValue(['Editor 1']);
     component.applyAllFilters();
 
-    expect(component.filteredGames().every((g: GameCard) => g.editor === 'Editor 1')).toBe(
-      true,
-    );
+    expect(
+      component.filteredGames().every((g: GameCard) => g.editor === 'Editor 1'),
+    ).toBe(true);
   });
 
   it('should filter by type', () => {
@@ -172,7 +176,9 @@ describe('GamesComponent', () => {
     component.applyAllFilters();
 
     expect(
-      component.filteredGames().every((g: GameCard) => g.types.includes('Type A')),
+      component
+        .filteredGames()
+        .every((g: GameCard) => g.types.includes('Type A')),
     ).toBe(true);
   });
 
@@ -357,7 +363,9 @@ describe('GamesComponent', () => {
       // Should have the same number of games, not expanded to full list
       expect(component.filteredGames().length).toBe(filteredCount);
       expect(
-        component.filteredGames().every((g: GameCard) => g.types.includes('Type A')),
+        component
+          .filteredGames()
+          .every((g: GameCard) => g.types.includes('Type A')),
       ).toBe(true);
     });
 
