@@ -11,8 +11,8 @@ All game and oracle data (JSON files and images) is fetched at runtime from a se
 - **Base URL:** [`https://2y2son4.github.io/board-games-db`](https://2y2son4.github.io/board-games-db)
 - **Games data:** `/v1/games.json`
 - **Oracles data:** `/v1/oracles.json`
-- **Game images:** `/v1/games/<image>.webp`
-- **Oracle images:** `/v1/oracles/<image>.webp`
+- **Game images:** `/images/games/<image>.webp`
+- **Oracle images:** `/images/oracles/<image>.webp`
 
 This decouples the data from the application code, allowing data updates without redeploying the app.
 
