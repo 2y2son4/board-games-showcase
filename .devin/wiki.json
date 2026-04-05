@@ -1,0 +1,232 @@
+{
+  "repo_notes": [
+    {
+      "content": ""
+    }
+  ],
+  "pages": [
+    {
+      "title": "Overview",
+      "purpose": "Introduce the Board Games Showcase repo, summarizing at a high level what it contains and what its purpose is",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Architecture",
+      "purpose": "Describe the overall system architecture, component relationships, and data flow",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Getting Started",
+      "purpose": "Provide instructions for setting up, running, and developing the project",
+      "parent": "Overview",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Core Components",
+      "purpose": "Overview of the main components that make up the application",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Games Component",
+      "purpose": "Detailed documentation of the GamesComponent including filtering, sorting, and display capabilities",
+      "parent": "Core Components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Oracles Component",
+      "purpose": "Detailed documentation of the OraclesComponent and how it differs from the GamesComponent",
+      "parent": "Core Components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "App Component and Routing",
+      "purpose": "Documentation of the root AppComponent and the routing system",
+      "parent": "Core Components",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "BGG Integration",
+      "purpose": "Overview of the BoardGameGeek API integration features",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "BGG Search Component",
+      "purpose": "Documentation of the BoardGameGeek search functionality",
+      "parent": "BGG Integration",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Game Details Component",
+      "purpose": "Documentation of the game details display for BGG games",
+      "parent": "BGG Integration",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Services",
+      "purpose": "Overview of the core services that power the application",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "HTTP Service",
+      "purpose": "Documentation of the HTTP service for data fetching from local sources and APIs",
+      "parent": "Services",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Filter Functions Service",
+      "purpose": "Documentation of the filter functions for sorting and filtering game data",
+      "parent": "Services",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Common Functions Service",
+      "purpose": "Documentation of the common utility functions for working with game data",
+      "parent": "Services",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Loader Service",
+      "purpose": "Documentation of the loader service for handling loading states",
+      "parent": "Services",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Data Model",
+      "purpose": "Overview of the data structures used in the application",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Game Data Structure",
+      "purpose": "Documentation of the game data structure and format",
+      "parent": "Data Model",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Oracle Data Structure",
+      "purpose": "Documentation of the oracle data structure and format",
+      "parent": "Data Model",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Future Games Data",
+      "purpose": "Documentation of the upcoming games data structure",
+      "parent": "Data Model",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Asset Management",
+      "purpose": "Overview of how game images and other assets are managed",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Build and Deployment",
+      "purpose": "Overview of the build and deployment process",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Build Configuration",
+      "purpose": "Documentation of the build process and Angular configuration",
+      "parent": "Build and Deployment",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "Deployment Process",
+      "purpose": "Documentation of the GitHub Pages deployment process",
+      "parent": "Build and Deployment",
+      "page_notes": [
+        {
+          "content": ""
+        }
+      ]
+    }
+  ]
+}

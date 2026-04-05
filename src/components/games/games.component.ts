@@ -1,7 +1,10 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
+  DestroyRef,
   ElementRef,
+  inject,
   OnInit,
   signal,
   ViewChild,
@@ -24,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 
 import { GameCard } from '../commons.models';
+import { Subject, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
@@ -52,6 +56,7 @@ import { ExportService } from '../../core/services/export/export.service';
   ],
   templateUrl: './games.component.html',
   styleUrl: '../common-styles.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesComponent implements OnInit, AfterViewInit {
   @ViewChild('topPage') topPage!: ElementRef;
@@ -80,13 +85,36 @@ export class GamesComponent implements OnInit, AfterViewInit {
   flippedCards!: number;
   sortingSelectLabels: string[] = [];
 
+  readonly gamesImageBase: string;
+
+  readonly #searchSubject$ = new Subject<string>();
+  readonly #destroyRef = inject(DestroyRef);
+  readonly #destroy$ = new Subject<void>();
+
   constructor(
     public commonFunctions: CommonFunctionsService,
     public filterFunctions: FilterFunctionsService,
     private readonly httpDataService: HttpService,
     private readonly loaderService: LoaderService,
     private readonly exportService: ExportService,
-  ) {}
+  ) {
+    this.gamesImageBase = this.httpDataService.gamesImageBase;
+
+    this.#searchSubject$
+      .pipe(
+        debounceTime(200),
+        distinctUntilChanged(),
+        takeUntil(this.#destroy$),
+      )
+      .subscribe(() => {
+        this.filterGames();
+      });
+
+    this.#destroyRef.onDestroy(() => {
+      this.#destroy$.next();
+      this.#destroy$.complete();
+    });
+  }
 
   ngOnInit(): void {
     this.sortingSelectLabels = this.filterFunctions.SORTING_LABELS;
@@ -194,6 +222,11 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.filterFunctions.flipAllCards(this.innerElements());
     this.applyAllFilters();
     this.syncCardSelection();
+  }
+
+  onSearchInput(value: string) {
+    this.searchQuery = value;
+    this.#searchSubject$.next(value);
   }
 
   togglePlayed() {

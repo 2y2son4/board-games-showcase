@@ -24,7 +24,7 @@
           </h4>
           <h2 class="side__title">Games</h2>
           <h3 class="side__number">
-            ( {{filterFunctions.getFlipCardCount(innerElements())}} of {{filteredGames().length}}
+            ( {{printGames().length}} of {{filteredGames().length}}
             selected)
           </h3>
           <button type="button" mat-raised-button color="primary" class="side__reset" (click)="restartFilters()">Reset
@@ -39,7 +39,7 @@
     </div>
     <div class="card">
       <ul class="card__container">
-        @for (game of filteredGames();let index = $index; track index){
+        @for (game of filteredGames();let index = $index; track game.name){
           <li class="card__list" #game>
             <article class="card__list-inner" (click)="toggleCardFlip(game, index)" #innerElement>
               <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
@@ -48,8 +48,8 @@
                 <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery"> {{game.name}}
                 </h2>
                 @if (game.image) {
-                  <div class="card__image-container"><img class="card__image" src="assets/games/{{game.image}}.webp"
-                      alt="{{game.name}}"></div>
+                  <div class="card__image-container"><img class="card__image" loading="lazy"
+                      src="{{gamesImageBase}}/{{game.image}}.webp" alt="{{game.name}}"></div>
                 }
                 <p class="card__title"
                   [innerHTML]="(game.editor ? 'by ' + game.editor : '-') | highlightText:searchQuery">
@@ -159,7 +159,8 @@
       <div class="filter__container">
         <mat-form-field style="height: 70px; margin-top: 18px;">
           <mat-label>Search</mat-label>
-          <input matInput placeholder="Search by name, year, type..." [(ngModel)]="searchQuery" (input)="filterGames()">
+          <input matInput placeholder="Search by name, year, type..." [(ngModel)]="searchQuery"
+            (input)="onSearchInput(searchQuery)">
           @if (searchQuery) {
             <button matSuffix mat-icon-button aria-label="Clear" (click)="restartSearch()">
               <mat-icon>close</mat-icon>

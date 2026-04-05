@@ -1,42 +1,79 @@
-# Workflow for deploying an Angular static site to GitHub Pages
-name: Deploy Angular App to GitHub Pages
+# Workflow for building and deploying Angular app to GitHub Pages
+name: CI/CD - Build, Test & Deploy
 
-# Trigger deployment on push to main branch or manual run
 on:
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
   workflow_dispatch:
 
-# Set permissions for GitHub Pages deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Only allow one deployment at a time
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the repository code
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Step 2: Setup GitHub Pages environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Run tests
+        run: npm test
+
+  build-and-deploy:
+    name: Build & Deploy
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build production
+        run: npm run build:prod
+
+      - name: Flatten build output
+        run: |
+          mv ./docs/browser/* ./docs/
+          rm -rf ./docs/browser
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # Step 3: Upload the static site files from docs/ (Angular build output)
-      - name: Upload static site
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
 
-      # Step 4: Deploy the uploaded artifact to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
