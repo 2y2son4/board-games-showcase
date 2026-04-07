@@ -71,6 +71,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   unPlayedGames = signal(false);
   showPlayedBtn = signal(true);
   showUnplayedBtn = signal(true);
+  showSelectAllBtn = signal(false);
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
@@ -278,6 +279,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.selectedSize = '';
     this.applyAllFilters();
     this.printGames.set([]);
+    this.showSelectAllBtn.set(false);
   }
 
   resetPlayedGames() {
@@ -295,20 +297,35 @@ export class GamesComponent implements OnInit, AfterViewInit {
    * This ensures filters work together (AND logic) rather than independently.
    */
   applyAllFilters(): void {
-    this.filteredGames.set(
-      this.filterFunctions.applyFilters(this.gamesList, {
-        searchQuery: this.searchQuery,
-        exactPlayers: this.exactPlayers,
-        exactAge: this.exactAge,
-        selectedTypes: this.selectedTypes.value ?? [],
-        selectedEditors: this.selectedEditors.value ?? [],
-        selectedChipTypes: this.selectedChipTypes(),
-        selectedSize: this.selectedSize,
-        playedGames: this.playedGames(),
-        unPlayedGames: this.unPlayedGames(),
-        sorting: this.selectedSorting.value ?? undefined,
-      }),
+    const criteria = {
+      searchQuery: this.searchQuery,
+      exactPlayers: this.exactPlayers,
+      exactAge: this.exactAge,
+      selectedTypes: this.selectedTypes.value ?? [],
+      selectedEditors: this.selectedEditors.value ?? [],
+      selectedChipTypes: this.selectedChipTypes(),
+      selectedSize: this.selectedSize,
+      playedGames: this.playedGames(),
+      unPlayedGames: this.unPlayedGames(),
+      sorting: this.selectedSorting.value ?? undefined,
+    };
+
+    const result = this.filterFunctions.applyFilters(this.gamesList, criteria);
+    this.filteredGames.set(result);
+
+    const hasActiveFilters = !!(
+      criteria.searchQuery?.trim() ||
+      criteria.exactPlayers ||
+      criteria.exactAge ||
+      (criteria.selectedTypes && criteria.selectedTypes.length > 0) ||
+      (criteria.selectedEditors && criteria.selectedEditors.length > 0) ||
+      (criteria.selectedChipTypes && criteria.selectedChipTypes.length > 0) ||
+      criteria.selectedSize ||
+      criteria.playedGames ||
+      criteria.unPlayedGames
     );
+
+    this.showSelectAllBtn.set(hasActiveFilters && result.length > 1);
   }
 
   filterGamesByExactPlayers() {
@@ -356,6 +373,21 @@ export class GamesComponent implements OnInit, AfterViewInit {
         this.printGames.set([...this.printGames(), game]);
       }
     }
+  }
+
+  selectAllFiltered(): void {
+    const currentlySelected = this.printGames();
+    const filtered = this.filteredGames();
+    const merged = [
+      ...currentlySelected,
+      ...filtered.filter(
+        (g) => !currentlySelected.some((s) => s.name === g.name),
+      ),
+    ];
+    this.printGames.set(merged);
+    this.innerElements().forEach((element) => {
+      element.nativeElement.classList.add('active');
+    });
   }
 
   async exportSelectedAsPdf(): Promise<void> {

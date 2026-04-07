@@ -213,6 +213,11 @@
             Unplayed
           </button>
         }
+        @if (showSelectAllBtn()){
+          <button type="button" mat-raised-button color="primary" (click)="selectAllFiltered()">
+            Select all
+          </button>
+        }
         <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset
         </button>
       </div>

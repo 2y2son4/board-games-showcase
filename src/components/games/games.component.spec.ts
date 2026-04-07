@@ -204,6 +204,69 @@ describe('GamesComponent', () => {
     expect(component.filteredGames()[2].name).toBe('Game 2');
   });
 
+  it('should show "Select all" button when a filter is active and results > 1', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.searchQuery = 'game';
+    component.applyAllFilters();
+
+    expect(component.showSelectAllBtn()).toBe(true);
+  });
+
+  it('should not show "Select all" button when no filter is active', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.applyAllFilters();
+
+    expect(component.showSelectAllBtn()).toBe(false);
+  });
+
+  it('should not show "Select all" button when filter yields only one result', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.searchQuery = 'Game 1';
+    component.applyAllFilters();
+
+    expect(component.showSelectAllBtn()).toBe(false);
+  });
+
+  it('should hide "Select all" button after reset', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.searchQuery = 'game';
+    component.applyAllFilters();
+    expect(component.showSelectAllBtn()).toBe(true);
+
+    component.restartFilters();
+    expect(component.showSelectAllBtn()).toBe(false);
+  });
+
+  it('should select all filtered games when selectAllFiltered is called', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([]);
+
+    component.selectAllFiltered();
+
+    expect(component.printGames().length).toBe(2);
+    expect(component.printGames()).toEqual([game1, game2]);
+  });
+
+  it('should not add duplicates when selectAllFiltered is called with already-selected games', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([game1]);
+
+    component.selectAllFiltered();
+
+    expect(component.printGames().length).toBe(2);
+    expect(component.printGames().filter((g) => g.name === game1.name).length).toBe(1);
+  });
+
   // Cumulative filtering tests (regression tests for the reported bug)
   describe('Cumulative Filters', () => {
     it('should apply "4 players" filter and then "Played" cumulatively', () => {
