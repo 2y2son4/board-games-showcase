@@ -36,6 +36,8 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
 import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 import { ExportService } from '../../core/services/export/export.service';
+import { MatDialog } from '@angular/material/dialog';
+import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
 
 @Component({
   selector: 'app-games',
@@ -91,6 +93,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
   readonly #searchSubject$ = new Subject<string>();
   readonly #destroyRef = inject(DestroyRef);
   readonly #destroy$ = new Subject<void>();
+
+  private readonly dialog = inject(MatDialog);
 
   constructor(
     public commonFunctions: CommonFunctionsService,
@@ -168,7 +172,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
   onTypeChange(selectedChipTypes: string[]) {
     this.selectedChipTypes.set(selectedChipTypes);
 
-    // Clear dropdown selections when chips are selected
     if (selectedChipTypes.length > 0) {
       this.selectedTypes.setValue([], { emitEvent: false });
     }
@@ -181,7 +184,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   onDropdownTypeChange() {
-    // Clear chip selections when dropdown is used
     const dropdownTypes = this.selectedTypes.value ?? [];
     if (dropdownTypes.length > 0) {
       this.selectedChipTypes.set([]);
@@ -291,10 +293,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
   }
 
-  /**
-   * Centralized method to apply all active filters using the filter service.
-   * This ensures filters work together (AND logic) rather than independently.
-   */
   applyAllFilters(): void {
     const criteria = {
       searchQuery: this.searchQuery,
@@ -335,10 +333,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
   }
 
-  /**
-   * Syncs the visual selection state (active class) with the printGames signal.
-   * This ensures selected cards remain visually selected after sorting/filtering.
-   */
   private syncCardSelection(): void {
     setTimeout(() => {
       const elements = this.innerElements();
@@ -362,16 +356,21 @@ export class GamesComponent implements OnInit, AfterViewInit {
     targetElement.nativeElement.classList.toggle('active');
 
     if (isCurrentlySelected) {
-      // Unselect
       this.printGames.set(
         this.printGames().filter((g) => g.name !== game.name),
       );
     } else {
-      // Select (avoid duplicates)
       if (!this.printGames().some((g) => g.name === game.name)) {
         this.printGames.set([...this.printGames(), game]);
       }
     }
+  }
+
+  openGameOfTheDay(): void {
+    this.dialog.open(GameOfTheDayComponent, {
+      width: '700px',
+      maxWidth: '95vw',
+    });
   }
 
   allFilteredGamesSelected(): boolean {

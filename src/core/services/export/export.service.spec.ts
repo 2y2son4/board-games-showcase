@@ -41,7 +41,7 @@ const getFakeJsPdfCtor = async () => {
 describe('ExportService', () => {
   beforeEach(() => {
     jest.useFakeTimers();
-    jest.setSystemTime(new Date('2026-01-01T12:34:56.000Z'));
+    jest.setSystemTime(new Date('2026-01-01T12:34:56.000Z').getTime());
   });
 
   afterEach(() => {

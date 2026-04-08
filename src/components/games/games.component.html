@@ -30,6 +30,10 @@
           <button type="button" mat-raised-button color="primary" class="side__reset" (click)="restartFilters()">Reset
           </button>
           <button type="button" mat-raised-button color="primary" class="button-system side__export"
+            (click)="openGameOfTheDay()">
+            Game of the Day
+          </button>
+          <button type="button" mat-raised-button color="primary" class="button-system side__export"
             [disabled]="printGames().length === 0" (click)="exportSelectedAsPdf()">
             Export to PDF
           </button>
@@ -113,7 +117,7 @@
                           <p class="card__rate-title">Rate:</p>
                           <div [style.background-color]="commonFunctions.getRatingColor(game.rate)"
                             [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
-                            {{!game.rate ? 'X' :game.rate}}
+                            {{ game?.rate ?? 'X'}}
                           </div>
                         </div>
                       }

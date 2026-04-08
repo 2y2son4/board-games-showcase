@@ -5,6 +5,8 @@ import { GameCard } from '../commons.models';
 import { FormControl } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { MatDialog } from '@angular/material/dialog';
+import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
 
 const game1: GameCard = {
   name: 'Game 1',
@@ -544,6 +546,20 @@ describe('GamesComponent', () => {
       component.applyAllFilters();
       expect(component.filteredGames().length).toBe(1); // Still game1
       expect(component.filteredGames()[0].name).toBe('Game 1');
+    });
+  });
+
+  describe('openGameOfTheDay', () => {
+    it('should open the GameOfTheDayComponent dialog', () => {
+      const dialog = TestBed.inject(MatDialog);
+      const openSpy = jest.spyOn(dialog, 'open');
+
+      component.openGameOfTheDay();
+
+      expect(openSpy).toHaveBeenCalledWith(GameOfTheDayComponent, {
+        width: '700px',
+        maxWidth: '95vw',
+      });
     });
   });
 });
