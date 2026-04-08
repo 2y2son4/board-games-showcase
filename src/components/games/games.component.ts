@@ -36,6 +36,8 @@ import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.
 import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 import { ExportService } from '../../core/services/export/export.service';
+import { MatDialog } from '@angular/material/dialog';
+import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
 
 @Component({
   selector: 'app-games',
@@ -91,6 +93,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
   readonly #searchSubject$ = new Subject<string>();
   readonly #destroyRef = inject(DestroyRef);
   readonly #destroy$ = new Subject<void>();
+
+  private readonly dialog = inject(MatDialog);
 
   constructor(
     public commonFunctions: CommonFunctionsService,
@@ -372,6 +376,13 @@ export class GamesComponent implements OnInit, AfterViewInit {
         this.printGames.set([...this.printGames(), game]);
       }
     }
+  }
+
+  openGameOfTheDay(): void {
+    this.dialog.open(GameOfTheDayComponent, {
+      width: '700px',
+      maxWidth: '95vw',
+    });
   }
 
   allFilteredGamesSelected(): boolean {
