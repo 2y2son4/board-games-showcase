@@ -378,12 +378,15 @@ export class GamesComponent implements OnInit, AfterViewInit {
   selectAllFiltered(): void {
     const currentlySelected = this.printGames();
     const filtered = this.filteredGames();
-    const merged = [
-      ...currentlySelected,
-      ...filtered.filter(
-        (g) => !currentlySelected.some((s) => s.name === g.name),
-      ),
-    ];
+    const selectedNames = new Set(currentlySelected.map((g) => g.name));
+    const merged = [...currentlySelected];
+
+    filtered.forEach((g) => {
+      if (!selectedNames.has(g.name)) {
+        selectedNames.add(g.name);
+        merged.push(g);
+      }
+    });
     this.printGames.set(merged);
     this.innerElements().forEach((element) => {
       element.nativeElement.classList.add('active');
