@@ -116,7 +116,7 @@
                           <p class="card__rate-title">Rate:</p>
                           <div [style.background-color]="commonFunctions.getRatingColor(game.rate)"
                             [ngClass]="{'border-pink': game.isPlayed }" class="card__rate">
-                            {{!game.rate ? 'X' :game.rate}}
+                            {{ game?.rate ?? 'X'}}
                           </div>
                         </div>
                       }

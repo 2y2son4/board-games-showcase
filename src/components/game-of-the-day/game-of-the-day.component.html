@@ -31,8 +31,8 @@
       <div class="gotd__card-wrapper">
         <article class="gotd__card">
           <!-- FRONT -->
-          <div class="gotd__card-front" [ngClass]="{'border-pink': game.isPlayed}">
-            <span class="gotd__year-badge" [ngClass]="{'border-pink': game.isPlayed}">
+          <div class="gotd__card-front">
+            <span class="gotd__year-badge">
               {{ game.year }}
             </span>
             <h2 class="gotd__card-title">{{ game.name }}</h2>
@@ -46,9 +46,8 @@
           </div>
 
           <!-- BACK -->
-          <div class="gotd__card-back" [ngClass]="{'border-pink': game.isPlayed}">
-            <img class="gotd__flag" [ngClass]="{'border-pink': game.isPlayed}"
-              src="assets/flags/{{ game.language }}-flag.png" alt="flag">
+          <div class="gotd__card-back">
+            <img class="gotd__flag" src="assets/flags/{{ game.language }}-flag.png" alt="flag">
             <div class="gotd__info">
               <div class="gotd__info-title">
                 <p class="gotd__name">{{ game.name }}</p>
@@ -93,9 +92,8 @@
                   @if (game.rate) {
                     <div class="gotd__info-down-item">
                       <p class="gotd__rate-title">Rate:</p>
-                      <div [style.background-color]="commonFunctions.getRatingColor(game.rate)"
-                        [ngClass]="{'border-pink': game.isPlayed}" class="gotd__badge">
-                        {{ !game.rate ? 'X' : game.rate }}
+                      <div [style.background-color]="commonFunctions.getRatingColor(game.rate)" class="gotd__badge">
+                        {{ game?.rate ?? 'X'}}
                       </div>
                     </div>
                   }
@@ -103,8 +101,8 @@
                     <div class="gotd__info-down-item">
                       <p class="gotd__complexity-title">Complexity:</p>
                       <div [style.background-color]="commonFunctions.getComplexityColor(game.complexity)"
-                        [ngClass]="{'border-pink': game.isPlayed}" class="gotd__badge">
-                        {{ !game.complexity ? 'X' : game.complexity.toString() === '1' ? '1.00' : game.complexity }}
+                        class="gotd__badge">
+                        {{ game?.complexity ?? 'X'}}
                       </div>
                     </div>
                   }
