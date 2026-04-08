@@ -29,9 +29,13 @@
           </h3>
           <button type="button" mat-raised-button color="primary" class="side__reset" (click)="restartFilters()">Reset
           </button>
-          <button type="button" mat-raised-button color="primary" class="side__export"
+          <button type="button" mat-raised-button color="primary" class="button-system side__export"
             [disabled]="printGames().length === 0" (click)="exportSelectedAsPdf()">
             Export to PDF
+          </button>
+          <button class="button-system side__export" type="button" mat-raised-button color="primary"
+            [disabled]="!showSelectAllBtn() && printGames().length === 0" (click)="toggleSelectAll()">
+            {{ isUnselectMode() ? 'Unselect all' : 'Select all' }}
           </button>
         </div>
         <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
