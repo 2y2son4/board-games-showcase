@@ -245,50 +245,116 @@ describe('GamesComponent', () => {
     expect(component.showSelectAllBtn()).toBe(false);
   });
 
-  it('should select all filtered games when toggleSelectAllFiltered is called', () => {
+  it('should select all filtered games when selectAllFiltered is called', () => {
     component.gamesList = [game1, game2, game3];
     component.filteredGames.set([game1, game2]);
     component.printGames.set([]);
 
-    component.toggleSelectAllFiltered();
+    component.selectAllFiltered();
 
     expect(component.printGames().length).toBe(2);
     expect(component.printGames()).toEqual([game1, game2]);
   });
 
-  it('should not add duplicates when toggleSelectAllFiltered is called with already-selected games', () => {
+  it('should not add duplicates when selectAllFiltered is called with already-selected games', () => {
     component.gamesList = [game1, game2, game3];
     component.filteredGames.set([game1, game2]);
     component.printGames.set([game1]);
 
-    component.toggleSelectAllFiltered();
+    component.selectAllFiltered();
 
     expect(component.printGames().length).toBe(2);
     expect(component.printGames().filter((g) => g.name === game1.name).length).toBe(1);
   });
 
-  it('should deselect all filtered games when toggleSelectAllFiltered is called again (all already selected)', () => {
-    component.gamesList = [game1, game2, game3];
+  it('allFilteredGamesSelected should be true when all filtered games are in printGames', () => {
     component.filteredGames.set([game1, game2]);
     component.printGames.set([game1, game2]);
 
-    component.toggleSelectAllFiltered();
-
-    expect(component.printGames().length).toBe(0);
+    expect(component.allFilteredGamesSelected()).toBe(true);
   });
 
-  it('allFilteredSelected should be true when all filtered games are in printGames', () => {
-    component.filteredGames.set([game1, game2]);
-    component.printGames.set([game1, game2]);
-
-    expect(component.allFilteredSelected()).toBe(true);
-  });
-
-  it('allFilteredSelected should be false when not all filtered games are selected', () => {
+  it('allFilteredGamesSelected should be false when not all filtered games are selected', () => {
     component.filteredGames.set([game1, game2]);
     component.printGames.set([game1]);
 
-    expect(component.allFilteredSelected()).toBe(false);
+    expect(component.allFilteredGamesSelected()).toBe(false);
+  });
+
+  describe('isUnselectMode', () => {
+    it('should return false when no cards are selected', () => {
+      component.printGames.set([]);
+
+      expect(component.isUnselectMode()).toBe(false);
+    });
+
+    it('should return true when at least one card is selected', () => {
+      component.printGames.set([game1]);
+
+      expect(component.isUnselectMode()).toBe(true);
+    });
+
+    it('should return true when all filtered games are selected', () => {
+      component.filteredGames.set([game1, game2]);
+      component.printGames.set([game1, game2]);
+
+      expect(component.isUnselectMode()).toBe(true);
+    });
+
+    it('should return true when some (but not all) filtered games are selected', () => {
+      component.filteredGames.set([game1, game2, game3]);
+      component.printGames.set([game1]);
+
+      expect(component.isUnselectMode()).toBe(true);
+    });
+  });
+
+  describe('unselectAll', () => {
+    it('should clear all selected games', () => {
+      component.printGames.set([game1, game2]);
+
+      component.unselectAll();
+
+      expect(component.printGames().length).toBe(0);
+    });
+
+    it('should do nothing when no games are selected', () => {
+      component.printGames.set([]);
+
+      component.unselectAll();
+
+      expect(component.printGames().length).toBe(0);
+    });
+  });
+
+  describe('toggleSelectAll', () => {
+    it('should call selectAllFiltered when no cards are selected (select mode)', () => {
+      component.gamesList = [game1, game2, game3];
+      component.filteredGames.set([game1, game2]);
+      component.printGames.set([]);
+
+      component.toggleSelectAll();
+
+      expect(component.printGames().length).toBe(2);
+    });
+
+    it('should call unselectAll when some cards are selected (unselect mode)', () => {
+      component.filteredGames.set([game1, game2, game3]);
+      component.printGames.set([game1]);
+
+      component.toggleSelectAll();
+
+      expect(component.printGames().length).toBe(0);
+    });
+
+    it('should call unselectAll when all filtered cards are selected', () => {
+      component.filteredGames.set([game1, game2]);
+      component.printGames.set([game1, game2]);
+
+      component.toggleSelectAll();
+
+      expect(component.printGames().length).toBe(0);
+    });
   });
 
   // Cumulative filtering tests (regression tests for the reported bug)
