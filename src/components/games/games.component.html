@@ -34,9 +34,8 @@
             Export to PDF
           </button>
           <button class="button-system side__export" type="button" mat-raised-button color="primary"
-            [disabled]="!showSelectAllBtn() || allFilteredGamesSelected()"
-            (click)="selectAllFiltered()">
-            Select all
+            [disabled]="!showSelectAllBtn() && printGames().length === 0" (click)="toggleSelectAll()">
+            {{ isUnselectMode() ? 'Unselect all' : 'Select all' }}
           </button>
         </div>
         <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>

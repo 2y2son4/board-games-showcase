@@ -381,6 +381,25 @@ export class GamesComponent implements OnInit, AfterViewInit {
     return filtered.every((g) => selected.some((s) => s.name === g.name));
   }
 
+  isUnselectMode(): boolean {
+    return this.printGames().length > 0;
+  }
+
+  toggleSelectAll(): void {
+    if (this.isUnselectMode()) {
+      this.unselectAll();
+    } else {
+      this.selectAllFiltered();
+    }
+  }
+
+  unselectAll(): void {
+    this.printGames.set([]);
+    this.innerElements().forEach((element) => {
+      element.nativeElement.classList.remove('active');
+    });
+  }
+
   selectAllFiltered(): void {
     const currentlySelected = this.printGames();
     const filtered = this.filteredGames();
