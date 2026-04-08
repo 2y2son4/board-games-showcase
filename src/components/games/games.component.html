@@ -214,8 +214,8 @@
           </button>
         }
         @if (showSelectAllBtn()){
-          <button class="button-system legend__content" type="button" mat-raised-button color="primary" (click)="selectAllFiltered()">
-            Select all
+          <button class="legend__content" type="button" mat-raised-button [color]="allFilteredSelected() ? '' : 'primary'" (click)="toggleSelectAllFiltered()">
+            {{allFilteredSelected() ? 'Unselect all' : 'Select all'}}
           </button>
         }
         <button type="button" mat-raised-button color="primary" (click)="restartFilters()">Reset

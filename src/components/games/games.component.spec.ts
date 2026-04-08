@@ -245,26 +245,50 @@ describe('GamesComponent', () => {
     expect(component.showSelectAllBtn()).toBe(false);
   });
 
-  it('should select all filtered games when selectAllFiltered is called', () => {
+  it('should select all filtered games when toggleSelectAllFiltered is called', () => {
     component.gamesList = [game1, game2, game3];
     component.filteredGames.set([game1, game2]);
     component.printGames.set([]);
 
-    component.selectAllFiltered();
+    component.toggleSelectAllFiltered();
 
     expect(component.printGames().length).toBe(2);
     expect(component.printGames()).toEqual([game1, game2]);
   });
 
-  it('should not add duplicates when selectAllFiltered is called with already-selected games', () => {
+  it('should not add duplicates when toggleSelectAllFiltered is called with already-selected games', () => {
     component.gamesList = [game1, game2, game3];
     component.filteredGames.set([game1, game2]);
     component.printGames.set([game1]);
 
-    component.selectAllFiltered();
+    component.toggleSelectAllFiltered();
 
     expect(component.printGames().length).toBe(2);
     expect(component.printGames().filter((g) => g.name === game1.name).length).toBe(1);
+  });
+
+  it('should deselect all filtered games when toggleSelectAllFiltered is called again (all already selected)', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([game1, game2]);
+
+    component.toggleSelectAllFiltered();
+
+    expect(component.printGames().length).toBe(0);
+  });
+
+  it('allFilteredSelected should be true when all filtered games are in printGames', () => {
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([game1, game2]);
+
+    expect(component.allFilteredSelected()).toBe(true);
+  });
+
+  it('allFilteredSelected should be false when not all filtered games are selected', () => {
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([game1]);
+
+    expect(component.allFilteredSelected()).toBe(false);
   });
 
   // Cumulative filtering tests (regression tests for the reported bug)
