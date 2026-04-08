@@ -73,6 +73,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   unPlayedGames = signal(false);
   showPlayedBtn = signal(true);
   showUnplayedBtn = signal(true);
+  showSelectAllBtn = signal(false);
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
@@ -299,20 +300,35 @@ export class GamesComponent implements OnInit, AfterViewInit {
    * This ensures filters work together (AND logic) rather than independently.
    */
   applyAllFilters(): void {
-    this.filteredGames.set(
-      this.filterFunctions.applyFilters(this.gamesList, {
-        searchQuery: this.searchQuery,
-        exactPlayers: this.exactPlayers,
-        exactAge: this.exactAge,
-        selectedTypes: this.selectedTypes.value ?? [],
-        selectedEditors: this.selectedEditors.value ?? [],
-        selectedChipTypes: this.selectedChipTypes(),
-        selectedSize: this.selectedSize,
-        playedGames: this.playedGames(),
-        unPlayedGames: this.unPlayedGames(),
-        sorting: this.selectedSorting.value ?? undefined,
-      }),
+    const criteria = {
+      searchQuery: this.searchQuery,
+      exactPlayers: this.exactPlayers,
+      exactAge: this.exactAge,
+      selectedTypes: this.selectedTypes.value ?? [],
+      selectedEditors: this.selectedEditors.value ?? [],
+      selectedChipTypes: this.selectedChipTypes(),
+      selectedSize: this.selectedSize,
+      playedGames: this.playedGames(),
+      unPlayedGames: this.unPlayedGames(),
+      sorting: this.selectedSorting.value ?? undefined,
+    };
+
+    const result = this.filterFunctions.applyFilters(this.gamesList, criteria);
+    this.filteredGames.set(result);
+
+    const hasActiveFilters = !!(
+      criteria.searchQuery?.trim() ||
+      criteria.exactPlayers ||
+      criteria.exactAge ||
+      (criteria.selectedTypes && criteria.selectedTypes.length > 0) ||
+      (criteria.selectedEditors && criteria.selectedEditors.length > 0) ||
+      (criteria.selectedChipTypes && criteria.selectedChipTypes.length > 0) ||
+      criteria.selectedSize ||
+      criteria.playedGames ||
+      criteria.unPlayedGames
     );
+
+    this.showSelectAllBtn.set(hasActiveFilters && result.length > 1);
   }
 
   filterGamesByExactPlayers() {
@@ -366,6 +382,50 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.dialog.open(GameOfTheDayComponent, {
       width: '700px',
       maxWidth: '95vw',
+    });
+  }
+
+  allFilteredGamesSelected(): boolean {
+    const filtered = this.filteredGames();
+    const selected = this.printGames();
+    if (filtered.length === 0) return true;
+    return filtered.every((g) => selected.some((s) => s.name === g.name));
+  }
+
+  isUnselectMode(): boolean {
+    return this.printGames().length > 0;
+  }
+
+  toggleSelectAll(): void {
+    if (this.isUnselectMode()) {
+      this.unselectAll();
+    } else {
+      this.selectAllFiltered();
+    }
+  }
+
+  unselectAll(): void {
+    this.printGames.set([]);
+    this.innerElements().forEach((element) => {
+      element.nativeElement.classList.remove('active');
+    });
+  }
+
+  selectAllFiltered(): void {
+    const currentlySelected = this.printGames();
+    const filtered = this.filteredGames();
+    const selectedNames = new Set(currentlySelected.map((g) => g.name));
+    const merged = [...currentlySelected];
+
+    filtered.forEach((g) => {
+      if (!selectedNames.has(g.name)) {
+        selectedNames.add(g.name);
+        merged.push(g);
+      }
+    });
+    this.printGames.set(merged);
+    this.innerElements().forEach((element) => {
+      element.nativeElement.classList.add('active');
     });
   }
 
