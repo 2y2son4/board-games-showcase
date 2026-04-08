@@ -264,7 +264,9 @@ describe('GamesComponent', () => {
     component.selectAllFiltered();
 
     expect(component.printGames().length).toBe(2);
-    expect(component.printGames().filter((g) => g.name === game1.name).length).toBe(1);
+    expect(
+      component.printGames().filter((g) => g.name === game1.name).length,
+    ).toBe(1);
   });
 
   it('allFilteredGamesSelected should be true when all filtered games are in printGames', () => {
