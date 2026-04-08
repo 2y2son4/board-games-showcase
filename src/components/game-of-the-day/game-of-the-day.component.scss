@@ -1,0 +1,228 @@
+@use "../../core/styles/variables" as variables;
+
+.gotd {
+  color: variables.$white;
+
+  &__title {
+    text-align: center;
+    color: variables.$highlight-color;
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 340px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  &__selector {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__select-field {
+    min-width: 220px;
+  }
+
+  // ── Card wrapper ──
+  &__card-wrapper {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  // ── Front ──
+  &__card-front {
+    width: 300px;
+    height: 300px;
+    border: 4px solid variables.$white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    position: relative;
+    text-align: center;
+  }
+
+  &__card-title {
+    font-size: 18px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  &__year-badge {
+    background-color: variables.$bg-color;
+    border: 4px solid variables.$white;
+    border-radius: 50%;
+    color: variables.$black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px;
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    width: 48px;
+    height: 48px;
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: scale-down;
+    width: 100%;
+
+    &-container {
+      height: 180px;
+      margin-bottom: 10px;
+      padding: 0 10px;
+      width: 100%;
+    }
+  }
+
+  // ── Back ──
+  &__card-back {
+    width: 300px;
+    min-height: 300px;
+    border: 4px solid variables.$white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    position: relative;
+  }
+
+  &__flag {
+    width: 48px;
+    padding: 6px;
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    border: 4px solid white;
+    border-radius: 50%;
+    background-color: variables.$bg-color-dark;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 12px;
+    text-align: left;
+    height: 100%;
+
+    &-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+      height: 100%;
+      width: 100%;
+    }
+
+    &-down {
+      display: flex;
+      justify-content: space-around;
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+  }
+
+  &__year {
+    font-size: 16px;
+  }
+
+  &__line {
+    border: 1px solid;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  &__players {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 18px;
+    border-radius: 50%;
+    color: variables.$black;
+    border: 4px solid variables.$white;
+    font-weight: 700;
+  }
+
+  &__bgg-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    padding: 18px;
+    border-radius: 50%;
+    background-color: #e64900;
+    border: 4px solid #3f3a60;
+    color: variables.$white;
+    font-weight: 700;
+  }
+}
+
+.border-pink {
+  border: 4px solid variables.$highlight-color;
+}
+
+p {
+  margin: 2px;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}

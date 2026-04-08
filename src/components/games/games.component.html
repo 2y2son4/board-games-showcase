@@ -33,6 +33,9 @@
             [disabled]="printGames().length === 0" (click)="exportSelectedAsPdf()">
             Export to PDF
           </button>
+          <button type="button" mat-raised-button color="primary" class="side__export" (click)="openGameOfTheDay()">
+            Game of the Day
+          </button>
         </div>
         <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
       </div>
