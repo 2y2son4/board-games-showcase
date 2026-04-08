@@ -2,7 +2,6 @@ import {
   AfterViewInit,
   ChangeDetectionStrategy,
   Component,
-  computed,
   DestroyRef,
   ElementRef,
   inject,
@@ -73,13 +72,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
   showPlayedBtn = signal(true);
   showUnplayedBtn = signal(true);
   showSelectAllBtn = signal(false);
-  allFilteredSelected = computed(() => {
-    const filtered = this.filteredGames();
-    const selected = this.printGames();
-    if (filtered.length === 0) return false;
-    const selectedNames = new Set(selected.map((g) => g.name));
-    return filtered.every((g) => selectedNames.has(g.name));
-  });
 
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
@@ -382,34 +374,29 @@ export class GamesComponent implements OnInit, AfterViewInit {
     }
   }
 
-  toggleSelectAllFiltered(): void {
-    if (this.allFilteredSelected()) {
-      // Deselect all filtered games
-      const filteredNames = new Set(this.filteredGames().map((g) => g.name));
-      this.printGames.set(
-        this.printGames().filter((g) => !filteredNames.has(g.name)),
-      );
-      this.innerElements().forEach((element) => {
-        element.nativeElement.classList.remove('active');
-      });
-    } else {
-      // Select all filtered games (O(n) deduplication via Set)
-      const currentlySelected = this.printGames();
-      const filtered = this.filteredGames();
-      const selectedNames = new Set(currentlySelected.map((g) => g.name));
-      const merged = [...currentlySelected];
+  allFilteredGamesSelected(): boolean {
+    const filtered = this.filteredGames();
+    const selected = this.printGames();
+    if (filtered.length === 0) return true;
+    return filtered.every((g) => selected.some((s) => s.name === g.name));
+  }
 
-      filtered.forEach((g) => {
-        if (!selectedNames.has(g.name)) {
-          selectedNames.add(g.name);
-          merged.push(g);
-        }
-      });
-      this.printGames.set(merged);
-      this.innerElements().forEach((element) => {
-        element.nativeElement.classList.add('active');
-      });
-    }
+  selectAllFiltered(): void {
+    const currentlySelected = this.printGames();
+    const filtered = this.filteredGames();
+    const selectedNames = new Set(currentlySelected.map((g) => g.name));
+    const merged = [...currentlySelected];
+
+    filtered.forEach((g) => {
+      if (!selectedNames.has(g.name)) {
+        selectedNames.add(g.name);
+        merged.push(g);
+      }
+    });
+    this.printGames.set(merged);
+    this.innerElements().forEach((element) => {
+      element.nativeElement.classList.add('active');
+    });
   }
 
   async exportSelectedAsPdf(): Promise<void> {
