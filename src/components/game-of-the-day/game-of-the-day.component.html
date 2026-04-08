@@ -3,7 +3,7 @@
 
   <mat-dialog-content class="gotd__content">
     <div class="gotd__selector">
-      <mat-form-field class="gotd__select-field">
+      <mat-form-field class="gotd__select-field" subscriptSizing="dynamic">
         <mat-label>Pick your favourite type</mat-label>
         <mat-select [(value)]="selectedType">
           @for (type of types; track type) {
@@ -12,7 +12,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field class="gotd__select-field">
+      <mat-form-field class="gotd__select-field" subscriptSizing="dynamic">
         <mat-label>Number of players</mat-label>
         <mat-select [(value)]="selectedPlayers">
           @for (option of playerOptions; track option) {
