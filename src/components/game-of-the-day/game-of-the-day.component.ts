@@ -70,7 +70,10 @@ export class GameOfTheDayComponent implements OnInit {
       matching = matching.filter((game) => this.matchesPlayerCount(game));
     }
 
-    if (matching.length === 0) return;
+    if (matching.length === 0) {
+      this.selectedGame.set(null);
+      return;
+    }
     const randomIndex = Math.floor(Math.random() * matching.length);
     this.selectedGame.set(matching[randomIndex]);
   }
