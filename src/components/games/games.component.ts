@@ -172,7 +172,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
   onTypeChange(selectedChipTypes: string[]) {
     this.selectedChipTypes.set(selectedChipTypes);
 
-    // Clear dropdown selections when chips are selected
     if (selectedChipTypes.length > 0) {
       this.selectedTypes.setValue([], { emitEvent: false });
     }
@@ -185,7 +184,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
   }
 
   onDropdownTypeChange() {
-    // Clear chip selections when dropdown is used
     const dropdownTypes = this.selectedTypes.value ?? [];
     if (dropdownTypes.length > 0) {
       this.selectedChipTypes.set([]);
@@ -295,10 +293,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
   }
 
-  /**
-   * Centralized method to apply all active filters using the filter service.
-   * This ensures filters work together (AND logic) rather than independently.
-   */
   applyAllFilters(): void {
     const criteria = {
       searchQuery: this.searchQuery,
@@ -339,10 +333,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
   }
 
-  /**
-   * Syncs the visual selection state (active class) with the printGames signal.
-   * This ensures selected cards remain visually selected after sorting/filtering.
-   */
   private syncCardSelection(): void {
     setTimeout(() => {
       const elements = this.innerElements();
@@ -366,12 +356,10 @@ export class GamesComponent implements OnInit, AfterViewInit {
     targetElement.nativeElement.classList.toggle('active');
 
     if (isCurrentlySelected) {
-      // Unselect
       this.printGames.set(
         this.printGames().filter((g) => g.name !== game.name),
       );
     } else {
-      // Select (avoid duplicates)
       if (!this.printGames().some((g) => g.name === game.name)) {
         this.printGames.set([...this.printGames(), game]);
       }
