@@ -5,6 +5,8 @@ import { GameCard } from '../commons.models';
 import { FormControl } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { MatDialog } from '@angular/material/dialog';
+import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
 
 const game1: GameCard = {
   name: 'Game 1',
@@ -204,6 +206,161 @@ describe('GamesComponent', () => {
     expect(component.filteredGames()[2].name).toBe('Game 2');
   });
 
+  it('should show "Select all" button when a filter is active and results > 1', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.searchQuery = 'game';
+    component.applyAllFilters();
+
+    expect(component.showSelectAllBtn()).toBe(true);
+  });
+
+  it('should not show "Select all" button when no filter is active', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.applyAllFilters();
+
+    expect(component.showSelectAllBtn()).toBe(false);
+  });
+
+  it('should not show "Select all" button when filter yields only one result', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.searchQuery = 'Game 1';
+    component.applyAllFilters();
+
+    expect(component.showSelectAllBtn()).toBe(false);
+  });
+
+  it('should hide "Select all" button after reset', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.searchQuery = 'game';
+    component.applyAllFilters();
+    expect(component.showSelectAllBtn()).toBe(true);
+
+    component.restartFilters();
+    expect(component.showSelectAllBtn()).toBe(false);
+  });
+
+  it('should select all filtered games when selectAllFiltered is called', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([]);
+
+    component.selectAllFiltered();
+
+    expect(component.printGames().length).toBe(2);
+    expect(component.printGames()).toEqual([game1, game2]);
+  });
+
+  it('should not add duplicates when selectAllFiltered is called with already-selected games', () => {
+    component.gamesList = [game1, game2, game3];
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([game1]);
+
+    component.selectAllFiltered();
+
+    expect(component.printGames().length).toBe(2);
+    expect(
+      component.printGames().filter((g) => g.name === game1.name).length,
+    ).toBe(1);
+  });
+
+  it('allFilteredGamesSelected should be true when all filtered games are in printGames', () => {
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([game1, game2]);
+
+    expect(component.allFilteredGamesSelected()).toBe(true);
+  });
+
+  it('allFilteredGamesSelected should be false when not all filtered games are selected', () => {
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([game1]);
+
+    expect(component.allFilteredGamesSelected()).toBe(false);
+  });
+
+  describe('isUnselectMode', () => {
+    it('should return false when no cards are selected', () => {
+      component.printGames.set([]);
+
+      expect(component.isUnselectMode()).toBe(false);
+    });
+
+    it('should return true when at least one card is selected', () => {
+      component.printGames.set([game1]);
+
+      expect(component.isUnselectMode()).toBe(true);
+    });
+
+    it('should return true when all filtered games are selected', () => {
+      component.filteredGames.set([game1, game2]);
+      component.printGames.set([game1, game2]);
+
+      expect(component.isUnselectMode()).toBe(true);
+    });
+
+    it('should return true when some (but not all) filtered games are selected', () => {
+      component.filteredGames.set([game1, game2, game3]);
+      component.printGames.set([game1]);
+
+      expect(component.isUnselectMode()).toBe(true);
+    });
+  });
+
+  describe('unselectAll', () => {
+    it('should clear all selected games', () => {
+      component.printGames.set([game1, game2]);
+
+      component.unselectAll();
+
+      expect(component.printGames().length).toBe(0);
+    });
+
+    it('should do nothing when no games are selected', () => {
+      component.printGames.set([]);
+
+      component.unselectAll();
+
+      expect(component.printGames().length).toBe(0);
+    });
+  });
+
+  describe('toggleSelectAll', () => {
+    it('should call selectAllFiltered when no cards are selected (select mode)', () => {
+      component.gamesList = [game1, game2, game3];
+      component.filteredGames.set([game1, game2]);
+      component.printGames.set([]);
+
+      component.toggleSelectAll();
+
+      expect(component.printGames().length).toBe(2);
+    });
+
+    it('should call unselectAll when some cards are selected (unselect mode)', () => {
+      component.filteredGames.set([game1, game2, game3]);
+      component.printGames.set([game1]);
+
+      component.toggleSelectAll();
+
+      expect(component.printGames().length).toBe(0);
+    });
+
+    it('should call unselectAll when all filtered cards are selected', () => {
+      component.filteredGames.set([game1, game2]);
+      component.printGames.set([game1, game2]);
+
+      component.toggleSelectAll();
+
+      expect(component.printGames().length).toBe(0);
+    });
+  });
+
   // Cumulative filtering tests (regression tests for the reported bug)
   describe('Cumulative Filters', () => {
     it('should apply "4 players" filter and then "Played" cumulatively', () => {
@@ -389,6 +546,20 @@ describe('GamesComponent', () => {
       component.applyAllFilters();
       expect(component.filteredGames().length).toBe(1); // Still game1
       expect(component.filteredGames()[0].name).toBe('Game 1');
+    });
+  });
+
+  describe('openGameOfTheDay', () => {
+    it('should open the GameOfTheDayComponent dialog', () => {
+      const dialog = TestBed.inject(MatDialog);
+      const openSpy = jest.spyOn(dialog, 'open');
+
+      component.openGameOfTheDay();
+
+      expect(openSpy).toHaveBeenCalledWith(GameOfTheDayComponent, {
+        width: '700px',
+        maxWidth: '95vw',
+      });
     });
   });
 });
