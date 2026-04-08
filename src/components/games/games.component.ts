@@ -279,7 +279,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.selectedSize = '';
     this.applyAllFilters();
     this.printGames.set([]);
-    this.showSelectAllBtn.set(false);
   }
 
   resetPlayedGames() {
