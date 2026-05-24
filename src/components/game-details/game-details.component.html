@@ -28,9 +28,10 @@
         index){
       <div>- {{publisher}}. </div>}
     </p>
+    @let categoriesSorted = gameDetails.boardgamecategory.sort((a, b) => a.localeCompare(b));
     <mat-chip-set>
-      @for (category of gameDetails.boardgamecategory; let index = $index; let last = $last; track index){
-        <mat-chip [value]="category"> {{category}} </mat-chip>}
+      @for (category of categoriesSorted; let index = $index; let last = $last; track index){
+      <mat-chip [value]="category"> {{category}} </mat-chip>}
     </mat-chip-set>
     <div class="line"></div>
     <mat-chip-set>

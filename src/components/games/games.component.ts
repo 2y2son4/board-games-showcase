@@ -78,6 +78,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
   selectedSize!: string;
+  sizes: string[] = [];
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
   selectedSorting = new FormControl<string>('');
@@ -143,6 +144,13 @@ export class GamesComponent implements OnInit, AfterViewInit {
           this.filterFunctions.sortByNameAscending(response.games),
           'editor',
         );
+        const sizeOrder = ['xs', 's', 'm', 'l', 'xl'];
+        this.sizes = this.commonFunctions
+          .extractUniqueValues(
+            this.filterFunctions.sortByNameAscending(response.games),
+            'size',
+          )
+          .sort((a, b) => sizeOrder.indexOf(a) - sizeOrder.indexOf(b));
         this.loaderService.hide();
         this.isLoading.set(false);
       },

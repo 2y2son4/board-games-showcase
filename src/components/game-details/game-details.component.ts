@@ -7,10 +7,10 @@ import { GameDetails } from '../commons.models';
 import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
-    selector: 'app-game-details',
-    imports: [MatChipsModule],
-    templateUrl: './game-details.component.html',
-    styleUrls: ['./game-details.component.scss']
+  selector: 'app-game-details',
+  imports: [MatChipsModule],
+  templateUrl: './game-details.component.html',
+  styleUrls: ['./game-details.component.scss']
 })
 export class GameDetailsComponent implements OnChanges {
   @Input() objectid: string | null = null;
@@ -74,7 +74,7 @@ export class GameDetailsComponent implements OnChanges {
   }
 
   private extractTextValue(node: any): string {
-    return node ? node['#text'] ?? '' : '';
+    return node ? (node['#text'] ?? '') : '';
   }
 
   xmlToJson(xml: Document): any {
