@@ -64,12 +64,12 @@ Deployment to GitHub Pages is fully automated via a GitHub Actions workflow defi
 The workflow runs two jobs:
 
 1. **Test** — Runs on every push and pull request to `main`:
-   - Installs dependencies (`npm ci`)
-   - Runs all unit tests (`npm test`)
+   - Installs dependencies (`pnpm install --frozen-lockfile`)
+   - Runs all unit tests (`pnpm test`)
 
 2. **Build & Deploy** — Runs only on pushes to `main` (after tests pass):
    - Installs dependencies
-   - Builds the production app (`npm run build:prod`)
+   - Builds the production app (`pnpm run build:prod`)
    - Deploys the output to GitHub Pages via `actions/deploy-pages`
 
 ### Manual Deployment
