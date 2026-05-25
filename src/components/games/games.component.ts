@@ -150,7 +150,20 @@ export class GamesComponent implements OnInit, AfterViewInit {
             this.filterFunctions.sortByNameAscending(response.games),
             'size',
           )
-          .sort((a, b) => sizeOrder.indexOf(a) - sizeOrder.indexOf(b));
+          .sort((a, b) => {
+            const indexA =
+              sizeOrder.indexOf(a) !== -1
+                ? sizeOrder.indexOf(a)
+                : sizeOrder.length;
+            const indexB =
+              sizeOrder.indexOf(b) !== -1
+                ? sizeOrder.indexOf(b)
+                : sizeOrder.length;
+            if (indexA === indexB) {
+              return a.localeCompare(b);
+            }
+            return indexA - indexB;
+          });
         this.loaderService.hide();
         this.isLoading.set(false);
       },
