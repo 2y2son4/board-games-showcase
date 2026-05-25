@@ -130,26 +130,25 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
     this.httpDataService.getGames().subscribe({
       next: (response) => {
-        this.gamesList = this.filterFunctions
-          .sortByNameAscending(response.games)
-          .map((game) => ({ ...game, types: [...game.types].sort() }));
-        this.filteredGames.set(
-          this.gamesList,
+        const sortedGames = this.filterFunctions.sortByNameAscending(
+          response.games,
         );
+        this.gamesList = sortedGames.map((game) => ({
+          ...game,
+          types: [...game.types].sort(),
+        }));
+        this.filteredGames.set(this.gamesList);
         this.types = this.commonFunctions.extractUniqueValues(
-          this.filterFunctions.sortByNameAscending(response.games),
+          sortedGames,
           'types',
         );
         this.editors = this.commonFunctions.extractUniqueValues(
-          this.filterFunctions.sortByNameAscending(response.games),
+          sortedGames,
           'editor',
         );
         const sizeOrder = ['xs', 's', 'm', 'l', 'xl'];
         this.sizes = this.commonFunctions
-          .extractUniqueValues(
-            this.filterFunctions.sortByNameAscending(response.games),
-            'size',
-          )
+          .extractUniqueValues(sortedGames, 'size')
           .sort((a, b) => {
             const indexA =
               sizeOrder.indexOf(a) !== -1
