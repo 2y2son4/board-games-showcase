@@ -213,7 +213,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Filter by size</mat-label>
-          <mat-select [(value)]="selectedSize" (selectionChange)="applyAllFilters()">
+          <mat-select [(value)]="selectedSize" (selectionChange)="filterGames()">
             @for (size of sizes; track size) {
               <mat-option [value]="size">{{size.toUpperCase()}}</mat-option>
             }
