@@ -130,11 +130,11 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
     this.httpDataService.getGames().subscribe({
       next: (response) => {
-        this.gamesList = this.filterFunctions.sortByNameAscending(
-          response.games,
-        );
+        this.gamesList = this.filterFunctions
+          .sortByNameAscending(response.games)
+          .map((game) => ({ ...game, types: [...game.types].sort() }));
         this.filteredGames.set(
-          this.filterFunctions.sortByNameAscending(response.games),
+          this.gamesList,
         );
         this.types = this.commonFunctions.extractUniqueValues(
           this.filterFunctions.sortByNameAscending(response.games),
