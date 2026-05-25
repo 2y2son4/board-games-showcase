@@ -549,6 +549,22 @@ describe('GamesComponent', () => {
     });
   });
 
+  it('should filter by size', () => {
+    const gameWithXsSize: GameCard = { ...game1, name: 'XS Game', size: 'xs' };
+    component.gamesList = [game1, game2, game3, gameWithXsSize];
+    component.filteredGames.set([...component.gamesList]);
+    component.selectedChipTypes.set([]);
+    component.selectedSize = 's';
+    component.applyAllFilters();
+
+    expect(
+      component.filteredGames().every((g: GameCard) => g.size === 's'),
+    ).toBe(true);
+    expect(
+      component.filteredGames().some((g: GameCard) => g.size === 'xs'),
+    ).toBe(false);
+  });
+
   describe('openGameOfTheDay', () => {
     it('should open the GameOfTheDayComponent dialog', () => {
       const dialog = TestBed.inject(MatDialog);

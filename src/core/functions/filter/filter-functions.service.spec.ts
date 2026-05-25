@@ -136,6 +136,12 @@ describe('GameCardSortingService', () => {
     expect(result).toEqual([game2]);
   });
 
+  it('should not match partial size values', () => {
+    const gameWithExtraSmallSize: GameCard = { ...game1, size: 'xs' };
+    const result = service.filterBySize([game1, gameWithExtraSmallSize], 's');
+    expect(result).toEqual([game1]);
+  });
+
   it('should filter games by played status', () => {
     const result = service.filterByPlayedStatus(games, true, false);
     expect(result).toEqual([game1]);
