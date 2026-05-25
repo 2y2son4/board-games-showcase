@@ -565,6 +565,21 @@ describe('GamesComponent', () => {
     ).toBe(false);
   });
 
+  it('should clear selected games when size filter changes from one value to another', () => {
+    const mediumGame: GameCard = { ...game3, name: 'Medium Game', size: 'm' };
+    component.gamesList = [game1, game2, mediumGame];
+    component.filteredGames.set([game1, game2]);
+    component.printGames.set([game1, game2]);
+    component.selectedChipTypes.set([]);
+    component.selectedSize = 's';
+
+    component.onSizeFilterChange({ value: 'm' } as any);
+
+    expect(component.printGames()).toEqual([]);
+    expect(component.filteredGames().length).toBe(1);
+    expect(component.filteredGames()[0].size).toBe('m');
+  });
+
   describe('openGameOfTheDay', () => {
     it('should open the GameOfTheDayComponent dialog', () => {
       const dialog = TestBed.inject(MatDialog);

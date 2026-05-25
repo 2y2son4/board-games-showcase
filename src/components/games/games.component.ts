@@ -226,6 +226,12 @@ export class GamesComponent implements OnInit, AfterViewInit {
     }, 100);
   }
 
+  onSizeFilterChange(event: MatSelectChange): void {
+    this.unselectAll();
+    this.selectedSize = event.value ?? '';
+    this.filterGames();
+  }
+
   onSearchTypes(target: any) {
     const allTypes = this.commonFunctions.extractUniqueValues(
       this.filterFunctions.sortByNameAscending(this.gamesList),
