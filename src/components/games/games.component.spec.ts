@@ -580,6 +580,7 @@ describe('GamesComponent', () => {
     expect(component.filteredGames()[0].size).toBe('m');
   });
 
+
   describe('openGameOfTheDay', () => {
     it('should open the GameOfTheDayComponent dialog', () => {
       const dialog = TestBed.inject(MatDialog);

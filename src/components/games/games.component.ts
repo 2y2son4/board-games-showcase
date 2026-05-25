@@ -10,7 +10,7 @@ import {
   ViewChild,
   viewChildren,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import {
   FormControl,
   FormGroup,
