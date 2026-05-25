@@ -186,7 +186,7 @@ export class FilterFunctionsService {
       return games;
     }
 
-    return games.filter((game) => game.size.includes(selectedSize));
+    return games.filter((game) => game.size === selectedSize);
   }
 
   /**
