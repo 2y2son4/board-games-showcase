@@ -130,26 +130,25 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
     this.httpDataService.getGames().subscribe({
       next: (response) => {
-        this.gamesList = this.filterFunctions.sortByNameAscending(
+        const sortedGames = this.filterFunctions.sortByNameAscending(
           response.games,
         );
-        this.filteredGames.set(
-          this.filterFunctions.sortByNameAscending(response.games),
-        );
+        this.gamesList = sortedGames.map((game) => ({
+          ...game,
+          types: [...game.types].sort(),
+        }));
+        this.filteredGames.set(this.gamesList);
         this.types = this.commonFunctions.extractUniqueValues(
-          this.filterFunctions.sortByNameAscending(response.games),
+          sortedGames,
           'types',
         );
         this.editors = this.commonFunctions.extractUniqueValues(
-          this.filterFunctions.sortByNameAscending(response.games),
+          sortedGames,
           'editor',
         );
         const sizeOrder = ['xs', 's', 'm', 'l', 'xl'];
         this.sizes = this.commonFunctions
-          .extractUniqueValues(
-            this.filterFunctions.sortByNameAscending(response.games),
-            'size',
-          )
+          .extractUniqueValues(sortedGames, 'size')
           .sort((a, b) => {
             const indexA =
               sizeOrder.indexOf(a) !== -1
@@ -224,6 +223,12 @@ export class GamesComponent implements OnInit, AfterViewInit {
       this.filterFunctions.flipAllCards(this.innerElements());
       this.syncCardSelection();
     }, 100);
+  }
+
+  onSizeFilterChange(event: MatSelectChange): void {
+    this.unselectAll();
+    this.selectedSize = event.value ?? '';
+    this.filterGames();
   }
 
   onSearchTypes(target: any) {
@@ -352,6 +357,23 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   filterGamesByAge() {
     this.applyAllFilters();
+  }
+
+  getAppliedFiltersSummary(): string[] {
+    const trimmedSearch = this.searchQuery?.trim();
+    const selectedSorting = this.selectedSorting.value;
+    const selectedEditors = this.selectedEditors.value;
+
+    return [
+      trimmedSearch ? `Search: "${trimmedSearch}"` : null,
+      selectedSorting ? `Sort: ${selectedSorting}` : null,
+      this.exactPlayers != null ? `Players: ${this.exactPlayers}` : null,
+      this.exactAge != null ? `Age: ${this.exactAge}+` : null,
+      selectedEditors?.length
+        ? `Publishers: ${selectedEditors.join(', ')}`
+        : null,
+      this.selectedSize ? `Size: ${this.selectedSize.toUpperCase()}` : null,
+    ].filter((filter): filter is string => filter !== null);
   }
 
   private syncCardSelection(): void {

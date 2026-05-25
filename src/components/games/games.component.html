@@ -41,6 +41,16 @@
             [disabled]="!showSelectAllBtn() && printGames().length === 0" (click)="toggleSelectAll()">
             {{ isUnselectMode() ? 'Unselect all' : 'Select all' }}
           </button>
+          @let appliedFilters = getAppliedFiltersSummary();
+          @if (appliedFilters.length > 0) {
+            <div class="side__applied-filters">
+              <ul class="side__applied-filters-list">
+                @for (filterLabel of appliedFilters; track filterLabel) {
+                  <li class="side__number side__applied-filters-item">{{filterLabel}}</li>
+                }
+              </ul>
+            </div>
+          }
         </div>
         <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
       </div>
@@ -100,7 +110,7 @@
 
                       </div>
                       <mat-chip-listbox multiple [ngModel]="selectedChipTypes()" (ngModelChange)="onTypeChange($event)">
-                        @for (type of game.types.slice().sort(); let index = $index; let last = $last; track index){
+                        @for (type of game.types; let index = $index; let last = $last; track index){
                           <mat-chip-option [value]="type"> {{type}} </mat-chip-option>
                         }
                       </mat-chip-listbox>
@@ -176,6 +186,14 @@
           }
         </mat-form-field>
         <mat-form-field>
+          <mat-label>Sort</mat-label>
+          <mat-select [formControl]="selectedSorting" (selectionChange)="filterGames()">
+            @for (label of sortingSelectLabels; track label) {
+              <mat-option [value]="label">{{label}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
           <mat-label>Number of players</mat-label>
           <input matInput type="number" maxlength="2" min="1" id="exactPlayers" name="exactPlayers"
             [(ngModel)]="exactPlayers" (input)="filterGamesByExactPlayers()">
@@ -184,14 +202,6 @@
           <mat-label>Age</mat-label>
           <input matInput type="number" maxlength="2" min="1" id="exactAge" name="exactAge" [(ngModel)]="exactAge"
             (input)="filterGamesByAge()">
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>Sort</mat-label>
-          <mat-select [formControl]="selectedSorting" (selectionChange)="filterGames()">
-            @for (label of sortingSelectLabels; track label) {
-              <mat-option [value]="label">{{label}}</mat-option>
-            }
-          </mat-select>
         </mat-form-field>
         <mat-form-field>
           <mat-label>Filter by types (<code>OR</code> logic)</mat-label>
@@ -213,7 +223,7 @@
         </mat-form-field>
         <mat-form-field>
           <mat-label>Filter by size</mat-label>
-          <mat-select [(value)]="selectedSize" (selectionChange)="filterGames()">
+          <mat-select [value]="selectedSize" (selectionChange)="onSizeFilterChange($event)">
             @for (size of sizes; track size) {
               <mat-option [value]="size">{{size.toUpperCase()}}</mat-option>
             }
