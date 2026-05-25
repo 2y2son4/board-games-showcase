@@ -110,7 +110,7 @@
 
                       </div>
                       <mat-chip-listbox multiple [ngModel]="selectedChipTypes()" (ngModelChange)="onTypeChange($event)">
-                        @for (type of game.types.slice().sort(); let index = $index; let last = $last; track index){
+                        @for (type of game.types; let index = $index; let last = $last; track index){
                           <mat-chip-option [value]="type"> {{type}} </mat-chip-option>
                         }
                       </mat-chip-listbox>
