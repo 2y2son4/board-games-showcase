@@ -130,4 +130,8 @@ export class GameDetailsComponent implements OnChanges {
     }
     return attrObj;
   }
+
+  getSortedCategories(categories: string[] | null | undefined): string[] {
+    return [...(categories ?? [])].sort((a, b) => a.localeCompare(b));
+  }
 }
