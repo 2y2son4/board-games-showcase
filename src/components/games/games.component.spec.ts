@@ -550,7 +550,8 @@ describe('GamesComponent', () => {
   });
 
   it('should filter by size', () => {
-    component.gamesList = [game1, game2, game3];
+    const gameWithXsSize: GameCard = { ...game1, name: 'XS Game', size: 'xs' };
+    component.gamesList = [game1, game2, game3, gameWithXsSize];
     component.filteredGames.set([...component.gamesList]);
     component.selectedChipTypes.set([]);
     component.selectedSize = 's';
@@ -559,6 +560,9 @@ describe('GamesComponent', () => {
     expect(
       component.filteredGames().every((g: GameCard) => g.size === 's'),
     ).toBe(true);
+    expect(
+      component.filteredGames().some((g: GameCard) => g.size === 'xs'),
+    ).toBe(false);
   });
 
   describe('openGameOfTheDay', () => {
