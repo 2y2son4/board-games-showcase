@@ -360,6 +360,23 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.applyAllFilters();
   }
 
+  getAppliedFiltersSummary(): string[] {
+    const trimmedSearch = this.searchQuery?.trim();
+    const selectedSorting = this.selectedSorting.value;
+    const selectedEditors = this.selectedEditors.value;
+
+    return [
+      trimmedSearch ? `Search: "${trimmedSearch}"` : null,
+      selectedSorting ? `Sort: ${selectedSorting}` : null,
+      this.exactPlayers != null ? `Players: ${this.exactPlayers}` : null,
+      this.exactAge != null ? `Age: ${this.exactAge}+` : null,
+      selectedEditors?.length
+        ? `Publishers: ${selectedEditors.join(', ')}`
+        : null,
+      this.selectedSize ? `Size: ${this.selectedSize.toUpperCase()}` : null,
+    ].filter((filter): filter is string => filter !== null);
+  }
+
   private syncCardSelection(): void {
     setTimeout(() => {
       const elements = this.innerElements();
