@@ -41,10 +41,11 @@
             [disabled]="!showSelectAllBtn() && printGames().length === 0" (click)="toggleSelectAll()">
             {{ isUnselectMode() ? 'Unselect all' : 'Select all' }}
           </button>
-          @if (getAppliedFiltersSummary().length > 0) {
+          @let appliedFilters = getAppliedFiltersSummary();
+          @if (appliedFilters.length > 0) {
             <div class="side__applied-filters">
               <ul class="side__applied-filters-list">
-                @for (filterLabel of getAppliedFiltersSummary(); track filterLabel) {
+                @for (filterLabel of appliedFilters; track filterLabel) {
                   <li class="side__number side__applied-filters-item">{{filterLabel}}</li>
                 }
               </ul>
