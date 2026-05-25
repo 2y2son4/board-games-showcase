@@ -10,7 +10,7 @@ import {
   ViewChild,
   viewChildren,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import {
   FormControl,
   FormGroup,
@@ -78,6 +78,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
   selectedTypes = new FormControl<string[]>([]);
   types: string[] = [];
   selectedSize!: string;
+  sizes: string[] = [];
   selectedEditors = new FormControl<string[]>([]);
   editors: string[] = [];
   selectedSorting = new FormControl<string>('');
@@ -143,6 +144,26 @@ export class GamesComponent implements OnInit, AfterViewInit {
           this.filterFunctions.sortByNameAscending(response.games),
           'editor',
         );
+        const sizeOrder = ['xs', 's', 'm', 'l', 'xl'];
+        this.sizes = this.commonFunctions
+          .extractUniqueValues(
+            this.filterFunctions.sortByNameAscending(response.games),
+            'size',
+          )
+          .sort((a, b) => {
+            const indexA =
+              sizeOrder.indexOf(a) !== -1
+                ? sizeOrder.indexOf(a)
+                : sizeOrder.length;
+            const indexB =
+              sizeOrder.indexOf(b) !== -1
+                ? sizeOrder.indexOf(b)
+                : sizeOrder.length;
+            if (indexA === indexB) {
+              return a.localeCompare(b);
+            }
+            return indexA - indexB;
+          });
         this.loaderService.hide();
         this.isLoading.set(false);
       },

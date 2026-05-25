@@ -100,7 +100,7 @@
 
                       </div>
                       <mat-chip-listbox multiple [ngModel]="selectedChipTypes()" (ngModelChange)="onTypeChange($event)">
-                        @for (type of game.types; let index = $index; let last = $last; track index){
+                        @for (type of game.types.slice().sort(); let index = $index; let last = $last; track index){
                           <mat-chip-option [value]="type"> {{type}} </mat-chip-option>
                         }
                       </mat-chip-listbox>
@@ -208,6 +208,14 @@
             <input placeholder="Search..." (input)="onSearchEditors($event.target)" class="dropdown-search">
             @for (editor of editors; track editor) {
               <mat-option [value]="editor">{{editor}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Filter by size</mat-label>
+          <mat-select [(value)]="selectedSize" (selectionChange)="filterGames()">
+            @for (size of sizes; track size) {
+              <mat-option [value]="size">{{size.toUpperCase()}}</mat-option>
             }
           </mat-select>
         </mat-form-field>
