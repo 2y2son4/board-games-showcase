@@ -1,13 +1,13 @@
 <app-loader></app-loader>
 
-@if (oraclesList) {
+@if (oraclesList().length > 0) {
   <div class="content">
     <div>
       <div class="side">
         <div class="side__container">
           <h2 class="side__title">Oracles</h2>
           <h3 class="side__number">
-            ({{printOracles().length}} of {{oraclesList.length}} selected)
+            ({{printOracles().length}} of {{oraclesList().length}} selected)
           </h3>
 
           <button type="button" mat-raised-button color="primary" class="side__export"
@@ -21,7 +21,7 @@
     </div>
     <div class="card">
       <ul class="card__container">
-        @for (oracle of oraclesList;let index = $index; track oracle.name){
+        @for (oracle of oraclesList();let index = $index; track oracle.name){
           <li class="card__list">
             <div class="card__list-inner" (click)="toggleCardFlip(oracle, index)"
               (keydown.enter)="toggleCardFlip(oracle, index)"

@@ -1,4 +1,13 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, signal, viewChildren, inject } from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  OnInit,
+  signal,
+  viewChildren,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -32,7 +41,7 @@ export class OraclesComponent implements OnInit, AfterViewInit {
 
   innerElements = viewChildren<ElementRef>('innerElement');
 
-  oraclesList: OracleCard[] = [];
+  oraclesList = signal<OracleCard[]>([]);
 
   printOracles = signal<OracleCard[]>([]);
   readonly oraclesImageBase: string;
@@ -45,8 +54,8 @@ export class OraclesComponent implements OnInit, AfterViewInit {
     this.loaderService.show();
     this.httpDataService.getOracles().subscribe({
       next: (response) => {
-        this.oraclesList = this.filterFunctions.sortByNameAscending(
-          response.oracles,
+        this.oraclesList.set(
+          this.filterFunctions.sortByNameAscending(response.oracles),
         );
         this.loaderService.hide();
       },
