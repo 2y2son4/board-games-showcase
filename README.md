@@ -2,7 +2,7 @@
 
 [LINK](https://2y2son4.github.io/board-games-showcase)
 
-This web application, developed with Angular 17 and migrated to Angular 20, serves as a comprehensive showcase for a curated collection of board games and oracle decks. The platform offers an intuitive and visually engaging interface, enabling users to efficiently browse, filter, and explore detailed information about each item.
+This web application, originally created with Angular 17 and currently running on Angular 20, serves as a comprehensive showcase for a curated collection of board games and oracle decks. The platform offers an intuitive and visually engaging interface, enabling users to efficiently browse, filter, and explore detailed information about each item.
 
 ## Data Source
 
@@ -41,7 +41,7 @@ This decouples the data from the application code, allowing data updates without
 - **Text Search:** Locate decks by name or artist.
 - **Reset:** Restore the full list and clear the search.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+The project is currently built with [Angular CLI](https://github.com/angular/angular-cli) 20.x and uses standalone bootstrapping/routing APIs.
 
 ## Development server
 
@@ -57,7 +57,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## CI/CD & Deployment
 
-Deployment to GitHub Pages is fully automated via a GitHub Actions workflow defined in `.github/workflows/jekyll-gh-pages.yml`. No build artifacts need to be committed to the repository.
+Deployment to GitHub Pages is fully automated via a GitHub Actions workflow defined in `.github/workflows/jekyll-gh-pages.yml`. The workflow generates the build output and uploads it as a Pages artifact (`docs/` path in the workflow).
 
 ### Workflow Overview
 
