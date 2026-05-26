@@ -7,6 +7,8 @@
     "start": "ng serve",
     "serve": "ng serve --open",
     "build": "ng build",
+    "lint": "ng lint",
+    "lint:fix": "ng lint --fix",
     "move-files": "mv ./docs/browser/* ./docs/ && rm -rf ./docs/browser",
     "build:prod": "ng build --configuration production",
     "deploy": "pnpm run build:prod && pnpm run move-files",
