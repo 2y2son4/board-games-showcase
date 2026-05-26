@@ -59,7 +59,10 @@
       <ul class="card__container">
         @for (game of filteredGames();let index = $index; track game.name){
           <li class="card__list" #game>
-            <article class="card__list-inner" (click)="toggleCardFlip(game, index)" #innerElement>
+            <article class="card__list-inner" (click)="toggleCardFlip(game, index)"
+              (keydown.enter)="toggleCardFlip(game, index)"
+              (keydown.space)="$event.preventDefault(); toggleCardFlip(game, index)" tabindex="0" role="button"
+              #innerElement>
               <div class="card__list-front" [ngClass]="{'border-pink': game.isPlayed }">
                 <span class="card__year-absolute" [ngClass]="{'border-pink': game.isPlayed }"
                   [innerHTML]="(game.year.toString()) | highlightText:searchQuery"></span>
