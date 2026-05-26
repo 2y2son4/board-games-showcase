@@ -1,4 +1,4 @@
-import { ElementRef, Injectable, QueryList } from '@angular/core';
+import { ElementRef, Injectable } from '@angular/core';
 import { GameCard, OracleCard } from '../../../components/commons.models';
 
 export interface FilterCriteria {
@@ -31,9 +31,7 @@ export class FilterFunctionsService {
     'Rate ↓',
   ];
 
-  private readonly sortFunctions: {
-    [key: string]: (a: GameCard, b: GameCard) => number;
-  } = {
+  private readonly sortFunctions: Record<string, (a: GameCard, b: GameCard) => number> = {
     'A to Z': (a, b) => a.name.localeCompare(b.name),
     'Z to A': (a, b) => b.name.localeCompare(a.name),
     'Year ↑': (a, b) => a.year - b.year,
@@ -45,8 +43,6 @@ export class FilterFunctionsService {
     'Rate ↑': (a, b) => a.rate - b.rate,
     'Rate ↓': (a, b) => b.rate - a.rate,
   };
-
-  constructor() {}
 
   /**
    * Applies all filters to the game list based on the provided criteria

@@ -1,12 +1,4 @@
-import {
-  AfterViewInit,
-  ChangeDetectionStrategy,
-  Component,
-  ElementRef,
-  OnInit,
-  signal,
-  viewChildren,
-} from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, OnInit, signal, viewChildren, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -32,6 +24,12 @@ import { ExportService } from '../../core/services/export/export.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OraclesComponent implements OnInit, AfterViewInit {
+  commonFunctions = inject(CommonFunctionsService);
+  filterFunctions = inject(FilterFunctionsService);
+  private readonly httpDataService = inject(HttpService);
+  private readonly loaderService = inject(LoaderService);
+  private readonly exportService = inject(ExportService);
+
   innerElements = viewChildren<ElementRef>('innerElement');
 
   oraclesList: OracleCard[] = [];
@@ -39,13 +37,7 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   printOracles = signal<OracleCard[]>([]);
   readonly oraclesImageBase: string;
 
-  constructor(
-    public commonFunctions: CommonFunctionsService,
-    public filterFunctions: FilterFunctionsService,
-    private readonly httpDataService: HttpService,
-    private readonly loaderService: LoaderService,
-    private readonly exportService: ExportService,
-  ) {
+  constructor() {
     this.oraclesImageBase = this.httpDataService.oraclesImageBase;
   }
 

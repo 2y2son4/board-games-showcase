@@ -61,6 +61,12 @@ import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.compon
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesComponent implements OnInit, AfterViewInit {
+  commonFunctions = inject(CommonFunctionsService);
+  filterFunctions = inject(FilterFunctionsService);
+  private readonly httpDataService = inject(HttpService);
+  private readonly loaderService = inject(LoaderService);
+  private readonly exportService = inject(ExportService);
+
   @ViewChild('topPage') topPage!: ElementRef;
   innerElements = viewChildren<ElementRef>('innerElement');
   gamesList!: GameCard[];
@@ -97,13 +103,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   private readonly dialog = inject(MatDialog);
 
-  constructor(
-    public commonFunctions: CommonFunctionsService,
-    public filterFunctions: FilterFunctionsService,
-    private readonly httpDataService: HttpService,
-    private readonly loaderService: LoaderService,
-    private readonly exportService: ExportService,
-  ) {
+  constructor() {
     this.gamesImageBase = this.httpDataService.gamesImageBase;
 
     this.#searchSubject$

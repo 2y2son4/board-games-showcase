@@ -1,4 +1,10 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  inject,
+} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
@@ -10,13 +16,12 @@ import { MatChipsModule } from '@angular/material/chips';
   selector: 'app-game-details',
   imports: [MatChipsModule],
   templateUrl: './game-details.component.html',
-  styleUrls: ['./game-details.component.scss']
+  styleUrls: ['./game-details.component.scss'],
 })
 export class GameDetailsComponent implements OnChanges {
   @Input() objectid: string | null = null;
   @Input() gameDetails: any = null;
-
-  constructor(private readonly http: HttpClient) {}
+  private readonly http = inject(HttpClient);
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['objectid'] && this.objectid) {

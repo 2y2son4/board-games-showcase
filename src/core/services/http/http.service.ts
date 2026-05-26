@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, map, of } from 'rxjs';
 import { GameCard, OracleCard } from '../../../components/commons.models';
@@ -15,8 +15,7 @@ export class HttpService {
 
   readonly gamesImageBase = `${this.apiBase}/images/games`;
   readonly oraclesImageBase = `${this.apiBase}/images/oracles`;
-
-  constructor(private readonly http: HttpClient) {}
+  private readonly http = inject(HttpClient);
 
   getGames(): Observable<{ games: GameCard[] }> {
     return this.http.get<{ games: GameCard[] }>(this.gamesDb).pipe(

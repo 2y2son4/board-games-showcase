@@ -1,6 +1,5 @@
-
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -13,8 +12,8 @@ import { catchError, throwError } from 'rxjs';
 import { GameDetailsComponent } from '../game-details/game-details.component';
 
 @Component({
-    selector: 'app-bgg-search',
-    imports: [
+  selector: 'app-bgg-search',
+  imports: [
     FormsModule,
     GameDetailsComponent,
     LoaderComponent,
@@ -22,10 +21,10 @@ import { GameDetailsComponent } from '../game-details/game-details.component';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
-],
-    templateUrl: './bgg-search.component.html',
-    styleUrls: ['./bgg-search.component.scss']
+    MatIconModule,
+  ],
+  templateUrl: './bgg-search.component.html',
+  styleUrls: ['./bgg-search.component.scss'],
 })
 export class BggSearchComponent {
   searchTerm: string = '';
@@ -38,10 +37,8 @@ export class BggSearchComponent {
   numberOfResults!: number;
   showNumberOfResults!: boolean;
 
-  constructor(
-    private readonly http: HttpClient,
-    private readonly loaderService: LoaderService,
-  ) {}
+  private readonly http = inject(HttpClient);
+  private readonly loaderService = inject(LoaderService);
 
   search() {
     this.loaderService.show();

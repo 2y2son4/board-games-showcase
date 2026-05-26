@@ -5,8 +5,6 @@ import { GameCard } from '../../../components/commons.models';
   providedIn: 'root',
 })
 export class CommonFunctionsService {
-  constructor() {}
-
   /** Background color */
   getComplexityColor(number: number): string {
     const greenColor = [54, 174, 124];

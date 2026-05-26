@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import { LoaderService } from '../../core/services/loader/loader.service';
 
 @Component({
@@ -8,12 +8,10 @@ import { LoaderService } from '../../core/services/loader/loader.service';
   styleUrls: ['./loader.component.scss'],
 })
 export class LoaderComponent implements OnInit {
-  loading: boolean = false;
+  loading = false;
 
-  constructor(
-    private readonly cdr: ChangeDetectorRef,
-    private readonly loaderService: LoaderService,
-  ) {}
+  private readonly cdr = inject(ChangeDetectorRef);
+  private readonly loaderService = inject(LoaderService);
 
   ngOnInit(): void {
     this.loaderService.loading$.subscribe((loading) => {

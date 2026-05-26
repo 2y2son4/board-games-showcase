@@ -1,4 +1,4 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -57,7 +57,7 @@ export class ColorSettingsComponent {
     return value || fallback;
   }
 
-  constructor(private readonly renderer: Renderer2) {}
+  private readonly renderer = inject(Renderer2);
 
   setBgColor(color: string) {
     this.bgColor = color;
