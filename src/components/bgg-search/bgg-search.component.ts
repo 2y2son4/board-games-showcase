@@ -10,9 +10,9 @@ import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 import { catchError, throwError } from 'rxjs';
 import { GameDetailsComponent } from '../game-details/game-details.component';
-import { GameDetails } from '../commons.models';
-import type { BggResults } from './bgg-search.model';
-import type { XmlNodeObject, XmlNodeValue } from '../../core/models/xml.model';
+import { GameDetails } from '../models';
+import type { BggResults } from './index';
+import type { XmlNodeObject, XmlNodeValue } from '../../core/models';
 
 @Component({
   selector: 'app-bgg-search',

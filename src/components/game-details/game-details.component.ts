@@ -9,13 +9,13 @@ import { HttpClient } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
-import { GameDetails } from '../commons.models';
+import { GameDetails } from '../models';
 import { MatChipsModule } from '@angular/material/chips';
 import type {
   XmlAttributes,
   XmlNodeObject,
   XmlNodeValue,
-} from '../../core/models/xml.model';
+} from '../../core/models';
 
 @Component({
   selector: 'app-game-details',

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GamesComponent } from './games.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GameCard } from '../commons.models';
+import { GameCard } from '../models';
 import { FormControl } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';

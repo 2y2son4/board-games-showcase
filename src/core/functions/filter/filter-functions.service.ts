@@ -1,18 +1,6 @@
 import { ElementRef, Injectable } from '@angular/core';
-import { GameCard, OracleCard } from '../../../components/commons.models';
-
-export interface FilterCriteria {
-  searchQuery?: string;
-  exactPlayers?: number;
-  exactAge?: number;
-  selectedTypes?: string[];
-  selectedEditors?: string[];
-  selectedChipTypes?: string[];
-  selectedSize?: string;
-  playedGames?: boolean;
-  unPlayedGames?: boolean;
-  sorting?: string;
-}
+import { GameCard, OracleCard } from '../../../components/models';
+import type { FilterCriteria } from './filter.model';
 
 @Injectable({
   providedIn: 'root',
@@ -31,7 +19,10 @@ export class FilterFunctionsService {
     'Rate ↓',
   ];
 
-  private readonly sortFunctions: Record<string, (a: GameCard, b: GameCard) => number> = {
+  private readonly sortFunctions: Record<
+    string,
+    (a: GameCard, b: GameCard) => number
+  > = {
     'A to Z': (a, b) => a.name.localeCompare(b.name),
     'Z to A': (a, b) => b.name.localeCompare(a.name),
     'Year ↑': (a, b) => a.year - b.year,

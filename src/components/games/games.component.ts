@@ -26,7 +26,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 
-import { GameCard } from '../commons.models';
+import { GameCard } from '../models';
 import { Subject, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs';
 import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
 import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';

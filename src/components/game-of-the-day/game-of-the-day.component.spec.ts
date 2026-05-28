@@ -5,7 +5,7 @@ import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { MatDialogRef } from '@angular/material/dialog';
 
 import { GameOfTheDayComponent } from './game-of-the-day.component';
-import { GameCard } from '../commons.models';
+import { GameCard } from '../models';
 import { HttpService } from '../../core/services/http/http.service';
 import { of } from 'rxjs';
 

@@ -1,5 +1,5 @@
 import { ExportService } from './export.service';
-import type { GameCard, OracleCard } from '../../../components/commons.models';
+import type { GameCard, OracleCard } from '../../../components/models';
 
 // Mock jsPDF so tests don't generate real PDFs.
 jest.mock('jspdf', () => {

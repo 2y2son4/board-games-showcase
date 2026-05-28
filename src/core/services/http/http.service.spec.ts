@@ -4,7 +4,7 @@ import {
   HttpTestingController,
 } from '@angular/common/http/testing';
 import { HttpService } from './http.service';
-import { GameCard, OracleCard } from '../../../components/commons.models';
+import { GameCard, OracleCard } from '../../../components/models';
 import { HttpErrorResponse } from '@angular/common/http';
 
 describe('HttpService', () => {
