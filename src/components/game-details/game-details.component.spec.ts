@@ -27,7 +27,9 @@ describe('GameDetailsComponent', () => {
   });
 
   it('should call fetchGameDetails in ngOnChanges if objectid changes', () => {
-    const spy = jest.spyOn(component, 'fetchGameDetails').mockImplementation();
+    const spy = jest
+      .spyOn(component, 'fetchGameDetails')
+      .mockImplementation(() => undefined);
     component.objectid = '123';
     component.ngOnChanges({
       objectid: {
@@ -92,7 +94,7 @@ describe('GameDetailsComponent', () => {
 
   it('should handle error in fetchGameDetails', () => {
     http.get.mockReturnValue(throwError(() => new Error('fail')));
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => undefined);
     component.fetchGameDetails('fail');
     // No throw, error handled
     expect(true).toBe(true);

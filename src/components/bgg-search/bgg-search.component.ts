@@ -11,7 +11,14 @@ import { LoaderService } from '../../core/services/loader/loader.service';
 import { catchError, throwError } from 'rxjs';
 import { GameDetailsComponent } from '../game-details/game-details.component';
 import { GameDetails } from '../models';
-import type { BggResults } from './index';
+import type {
+  BggAttributes,
+  BggGame,
+  BggGameRaw,
+  BggResults,
+  BggResultsRaw,
+  BggTextNode,
+} from './index';
 import type { XmlNodeObject, XmlNodeValue } from '../../core/models';
 
 @Component({
@@ -67,22 +74,20 @@ export class BggSearchComponent {
         this.isLoading = false;
         this.noResults = false;
 
-        const textNodes = this.results.boardgames?.['#text'];
+        const totalResults = this.results.boardgames.boardgame.length;
 
-        if (!textNodes) {
+        if (totalResults === 0) {
           this.noResults = true;
           this.showNumberOfResults = false;
         } else {
           this.noResults = false;
           this.showNumberOfResults = true;
-          this.numberOfResults = Array.isArray(textNodes)
-            ? textNodes.length
-            : 1;
+          this.numberOfResults = totalResults;
         }
       });
   }
 
-  xmlToJson(xml: Document): BggResults {
+  xmlToJson(xml: Document): BggResultsRaw {
     return this.asObject(this.parseElement(xml));
   }
 
@@ -143,14 +148,17 @@ export class BggSearchComponent {
     return attrObj;
   }
 
-  filterResults(json: BggResults): BggResults {
+  filterResults(json: BggResultsRaw): BggResults {
     const boardgames = json.boardgames?.boardgame ?? [];
-    if (json.boardgames) {
-      json.boardgames.boardgame = boardgames.filter((game) => {
-        return game.name?.['#text'] && game.yearpublished?.['#text'];
-      });
-    }
-    return json;
+    const normalizedGames = boardgames
+      .map((game) => this.normalizeGame(game))
+      .filter((game): game is BggGame => game !== null);
+
+    return {
+      boardgames: {
+        boardgame: normalizedGames,
+      },
+    };
   }
 
   private asObject(value: XmlNodeValue): XmlNodeObject {
@@ -164,5 +172,57 @@ export class BggSearchComponent {
   selectGame(objectid: string) {
     this.selectedGameId = objectid;
     this.showDetails = true;
+  }
+
+  private normalizeGame(game: BggGameRaw): BggGame | null {
+    const name = this.asTextNode(game.name);
+    const yearpublished = this.asTextNode(game.yearpublished);
+    const attributes = this.asAttributes(game['@attributes']);
+
+    if (!name || !yearpublished || !attributes) {
+      return null;
+    }
+
+    return {
+      name,
+      yearpublished,
+      '@attributes': attributes,
+    };
+  }
+
+  private asTextNode(value: XmlNodeValue | undefined): BggTextNode | null {
+    if (!value || typeof value === 'string' || Array.isArray(value)) {
+      return null;
+    }
+
+    const text = value['#text'];
+    if (typeof text !== 'string' || text.trim() === '') {
+      return null;
+    }
+
+    return { '#text': text };
+  }
+
+  private asAttributes(value: XmlNodeValue | undefined): BggAttributes | null {
+    if (!value || typeof value === 'string' || Array.isArray(value)) {
+      return null;
+    }
+
+    const objectid = value['objectid'];
+    if (typeof objectid !== 'string' || objectid.trim() === '') {
+      return null;
+    }
+
+    const attributes: Record<string, string> = {};
+    for (const [key, entry] of Object.entries(value)) {
+      if (typeof entry === 'string') {
+        attributes[key] = entry;
+      }
+    }
+
+    return {
+      ...attributes,
+      objectid,
+    };
   }
 }

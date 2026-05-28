@@ -1,7 +1,7 @@
-export type XmlNodeValue = string | XmlNodeObject | XmlNodeValue[];
+export type XmlAttributes = Record<string, string>;
 
 export interface XmlNodeObject {
-  [key: string]: XmlNodeValue | undefined;
+  [key: string]: XmlNodeValue | XmlAttributes | undefined;
 }
 
-export type XmlAttributes = Record<string, string>;
+export type XmlNodeValue = string | XmlNodeObject | XmlNodeValue[];

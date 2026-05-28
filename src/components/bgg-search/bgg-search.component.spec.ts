@@ -45,17 +45,23 @@ describe('BggSearchComponent', () => {
     http.get.mockReturnValue(of(response));
     jest.spyOn(component, 'xmlToJson').mockReturnValue({
       boardgames: {
-        '#text': ['a'],
         boardgame: [
-          { name: { '#text': 'foo' }, yearpublished: { '#text': '2020' } },
+          {
+            '@attributes': { objectid: '123' },
+            name: { '#text': 'foo' },
+            yearpublished: { '#text': '2020' },
+          },
         ],
       },
     });
     jest.spyOn(component, 'filterResults').mockReturnValue({
       boardgames: {
-        '#text': ['a'],
         boardgame: [
-          { name: { '#text': 'foo' }, yearpublished: { '#text': '2020' } },
+          {
+            '@attributes': { objectid: '123' },
+            name: { '#text': 'foo' },
+            yearpublished: { '#text': '2020' },
+          },
         ],
       },
     });
@@ -84,7 +90,9 @@ describe('BggSearchComponent', () => {
     const xmlString = '<boardgames></boardgames>';
     http.get.mockReturnValue(of(xmlString));
     jest.spyOn(component, 'xmlToJson').mockReturnValue({ boardgames: {} });
-    jest.spyOn(component, 'filterResults').mockReturnValue({ boardgames: {} });
+    jest.spyOn(component, 'filterResults').mockReturnValue({
+      boardgames: { boardgame: [] },
+    });
     component.searchTerm = 'none';
     component.search();
     expect(component.noResults).toBe(true);
@@ -189,14 +197,26 @@ describe('BggSearchComponent', () => {
     const json = {
       boardgames: {
         boardgame: [
-          { name: { '#text': 'foo' }, yearpublished: { '#text': '2020' } },
-          { name: {}, yearpublished: { '#text': '2020' } },
-          { name: { '#text': 'bar' }, yearpublished: {} },
+          {
+            '@attributes': { objectid: '1' },
+            name: { '#text': 'foo' },
+            yearpublished: { '#text': '2020' },
+          },
+          {
+            '@attributes': { objectid: '2' },
+            name: {},
+            yearpublished: { '#text': '2020' },
+          },
+          {
+            '@attributes': { objectid: '3' },
+            name: { '#text': 'bar' },
+            yearpublished: {},
+          },
         ],
       },
     };
     const filtered = component.filterResults(JSON.parse(JSON.stringify(json)));
-    expect(filtered.boardgames?.boardgame?.length).toBe(1);
+    expect(filtered.boardgames.boardgame.length).toBe(1);
   });
 
   it('should select game', () => {
