@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError, map, of } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 import { GameCard, OracleCard } from '../../../components/commons.models';
 
 @Injectable({
@@ -19,13 +19,6 @@ export class HttpService {
 
   getGames(): Observable<{ games: GameCard[] }> {
     return this.http.get<{ games: GameCard[] }>(this.gamesDb).pipe(
-      map((data) => {
-        if (Array.isArray(data.games)) {
-          return data;
-        } else {
-          return data.games;
-        }
-      }),
       catchError((error) => {
         console.error('Error fetching games data:', error);
         return of({ games: [] });
@@ -35,13 +28,6 @@ export class HttpService {
 
   getOracles(): Observable<{ oracles: OracleCard[] }> {
     return this.http.get<{ oracles: OracleCard[] }>(this.oraclesDb).pipe(
-      map((data) => {
-        if (Array.isArray(data.oracles)) {
-          return data;
-        } else {
-          return data.oracles;
-        }
-      }),
       catchError((error) => {
         console.error('Error fetching oracles data:', error);
         return of({ oracles: [] });
@@ -49,7 +35,7 @@ export class HttpService {
     );
   }
 
-  getBGG(): Observable<any> {
+  getBGG(): Observable<string> {
     return this.http.get(this.proxyUrl + this.bggUrl, { responseType: 'text' });
   }
 }

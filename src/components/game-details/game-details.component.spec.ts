@@ -19,7 +19,7 @@ describe('GameDetailsComponent', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(GameDetailsComponent);
     component = fixture.componentInstance;
-    http = TestBed.inject(HttpClient) as any;
+    http = TestBed.inject(HttpClient) as unknown as HttpClientMock;
   });
 
   it('should create', () => {
@@ -61,21 +61,19 @@ describe('GameDetailsComponent', () => {
     jest.spyOn(component, 'xmlToJson').mockReturnValue({
       boardgames: { boardgame: { name: { '#text': 'foo' } } },
     });
-    jest
-      .spyOn(component, 'cleanGameDetails')
-      .mockReturnValue({
-        name: 'foo',
-        yearpublished: '2020',
-        minplayers: '1',
-        maxplayers: '4',
-        playingtime: '30',
-        age: '8',
-        description: 'desc',
-        boardgamecategory: ['cat1', 'cat2'],
-        image: 'img.png',
-        boardgamepublisher: ['pub1'],
-        size: 's',
-      });
+    jest.spyOn(component, 'cleanGameDetails').mockReturnValue({
+      name: 'foo',
+      yearpublished: '2020',
+      minplayers: '1',
+      maxplayers: '4',
+      playingtime: '30',
+      age: '8',
+      description: 'desc',
+      boardgamecategory: ['cat1', 'cat2'],
+      image: 'img.png',
+      boardgamepublisher: ['pub1'],
+      size: ['s'],
+    });
     component.fetchGameDetails('123');
     expect(component.gameDetails).toEqual({
       name: 'foo',
@@ -88,7 +86,7 @@ describe('GameDetailsComponent', () => {
       boardgamecategory: ['cat1', 'cat2'],
       image: 'img.png',
       boardgamepublisher: ['pub1'],
-      size: 's',
+      size: ['s'],
     });
   });
 
@@ -129,19 +127,25 @@ describe('GameDetailsComponent', () => {
   });
 
   it('should extract names from array, object, and undefined', () => {
+    const privateApi = component as unknown as {
+      extractNames: (value: unknown) => string[];
+    };
+
     expect(
-      (component as any).extractNames([{ '#text': 'foo' }, { '#text': 'bar' }]),
+      privateApi.extractNames([{ '#text': 'foo' }, { '#text': 'bar' }]),
     ).toEqual(['foo', 'bar']);
-    expect((component as any).extractNames({ '#text': 'baz' })).toEqual([
-      'baz',
-    ]);
-    expect((component as any).extractNames(undefined)).toEqual([]);
+    expect(privateApi.extractNames({ '#text': 'baz' })).toEqual(['baz']);
+    expect(privateApi.extractNames(undefined)).toEqual([]);
   });
 
   it('should extract text value from node', () => {
-    expect((component as any).extractTextValue({ '#text': 'foo' })).toBe('foo');
-    expect((component as any).extractTextValue({})).toBe('');
-    expect((component as any).extractTextValue(undefined)).toBe('');
+    const privateApi = component as unknown as {
+      extractTextValue: (value: unknown) => string;
+    };
+
+    expect(privateApi.extractTextValue({ '#text': 'foo' })).toBe('foo');
+    expect(privateApi.extractTextValue({})).toBe('');
+    expect(privateApi.extractTextValue(undefined)).toBe('');
   });
 
   it('should convert xml to json', () => {
@@ -163,7 +167,15 @@ describe('GameDetailsComponent', () => {
     const root = xml.documentElement;
     const result = component.parseElement(root);
     expect(result).toBeDefined();
-    expect(result['@attributes']).toBeDefined();
+    if (
+      typeof result === 'object' &&
+      result !== null &&
+      !Array.isArray(result)
+    ) {
+      expect(result['@attributes']).toBeDefined();
+    } else {
+      fail('Expected parseElement to return an object node');
+    }
   });
 
   it('should parse text node', () => {
@@ -181,10 +193,12 @@ describe('GameDetailsComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: any = {};
+    const obj = {} as Parameters<
+      GameDetailsComponent['parseAttributesIntoObject']
+    >[1];
     component.parseAttributesIntoObject(root, obj);
     expect(obj['@attributes']).toBeDefined();
-    expect(obj['@attributes'].attr).toBe('1');
+    expect((obj['@attributes'] as Record<string, unknown>)['attr']).toBe('1');
   });
 
   it('should parse child nodes into object', () => {
@@ -194,9 +208,11 @@ describe('GameDetailsComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: any = {};
+    const obj = {} as Parameters<
+      GameDetailsComponent['parseChildNodesIntoObject']
+    >[1];
     component.parseChildNodesIntoObject(root, obj);
-    expect(obj.child).toBeDefined();
+    expect(obj['child']).toBeDefined();
   });
 
   it('should add child node to object', () => {
@@ -206,12 +222,14 @@ describe('GameDetailsComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: any = {};
+    const obj = {} as Parameters<
+      GameDetailsComponent['addChildNodeToObject']
+    >[2];
     const child1 = root.childNodes[0];
     const child2 = root.childNodes[1];
     component.addChildNodeToObject(child1, child1.nodeName, obj);
     component.addChildNodeToObject(child2, child2.nodeName, obj);
-    expect(Array.isArray(obj.child)).toBe(true);
+    expect(Array.isArray(obj['child'])).toBe(true);
   });
 
   it('should parse attributes', () => {
@@ -222,7 +240,7 @@ describe('GameDetailsComponent', () => {
     );
     const root = xml.documentElement;
     const attrs = component.parseAttributes(root.attributes);
-    expect(attrs.attr1).toBe('a');
-    expect(attrs.attr2).toBe('b');
+    expect(attrs['attr1']).toBe('a');
+    expect(attrs['attr2']).toBe('b');
   });
 });

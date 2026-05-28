@@ -24,13 +24,9 @@ export interface OracleCard {
   web: string;
 }
 
-export interface SortingOrder {
-  [key: string]: boolean;
-}
+export type SortingOrder = Record<string, boolean>;
 
-export interface SortingFunctions {
-  [key: string]: (data: GameCard[]) => GameCard[];
-}
+export type SortingFunctions = Record<string, (data: GameCard[]) => GameCard[]>;
 
 export interface GameDetails {
   name: string | string[];
@@ -43,5 +39,5 @@ export interface GameDetails {
   boardgamecategory: string[];
   image: string;
   boardgamepublisher: string[];
-  size: 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl';
+  size: string[];
 }

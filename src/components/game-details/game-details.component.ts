@@ -12,6 +12,14 @@ import { throwError } from 'rxjs';
 import { GameDetails } from '../commons.models';
 import { MatChipsModule } from '@angular/material/chips';
 
+type XmlNodeValue = string | XmlNodeObject | XmlNodeValue[];
+
+interface XmlNodeObject {
+  [key: string]: XmlNodeValue | undefined;
+}
+
+type XmlAttributes = Record<string, string>;
+
 @Component({
   selector: 'app-game-details',
   imports: [MatChipsModule],
@@ -20,7 +28,7 @@ import { MatChipsModule } from '@angular/material/chips';
 })
 export class GameDetailsComponent implements OnChanges {
   @Input() objectid: string | null = null;
-  @Input() gameDetails: any = null;
+  @Input() gameDetails: GameDetails | null = null;
   private readonly http = inject(HttpClient);
 
   ngOnChanges(changes: SimpleChanges) {
@@ -43,51 +51,72 @@ export class GameDetailsComponent implements OnChanges {
         const parser = new DOMParser();
         const xml = parser.parseFromString(response, 'application/xml');
         const json = this.xmlToJson(xml);
-        this.gameDetails = this.cleanGameDetails(json.boardgames?.boardgame);
+        this.gameDetails = this.cleanGameDetails(
+          this.asObject(json['boardgames'])['boardgame'],
+        );
       });
     console.log(this.gameDetails);
   }
 
-  cleanGameDetails(details: any): GameDetails {
-    const game = details;
+  cleanGameDetails(details: XmlNodeValue | undefined): GameDetails {
+    const game = this.asObject(details);
 
     const cleanedGame = {
-      name: this.extractNames(game.name),
-      yearpublished: this.extractTextValue(game.yearpublished),
-      minplayers: this.extractTextValue(game.minplayers),
-      maxplayers: this.extractTextValue(game.maxplayers),
-      playingtime: this.extractTextValue(game.playingtime),
-      age: this.extractTextValue(game.age),
-      description: this.extractTextValue(game.description),
-      boardgamecategory: this.extractNames(game.boardgamecategory),
-      image: this.extractTextValue(game.image),
-      boardgamepublisher: this.extractNames(game.boardgamepublisher),
-      size: game.size,
+      name: this.extractNames(game['name'] as XmlNodeValue),
+      yearpublished: this.extractTextValue(
+        game['yearpublished'] as XmlNodeValue,
+      ),
+      minplayers: this.extractTextValue(game['minplayers'] as XmlNodeValue),
+      maxplayers: this.extractTextValue(game['maxplayers'] as XmlNodeValue),
+      playingtime: this.extractTextValue(game['playingtime'] as XmlNodeValue),
+      age: this.extractTextValue(game['age'] as XmlNodeValue),
+      description: this.extractTextValue(game['description'] as XmlNodeValue),
+      boardgamecategory: this.extractNames(
+        game['boardgamecategory'] as XmlNodeValue,
+      ),
+      image: this.extractTextValue(game['image'] as XmlNodeValue),
+      boardgamepublisher: this.extractNames(
+        game['boardgamepublisher'] as XmlNodeValue,
+      ),
+      size: this.extractNames(game['size'] as XmlNodeValue),
     };
     console.log(details);
     console.log(cleanedGame);
     return cleanedGame;
   }
 
-  private extractNames(nameObj: any): string[] {
+  private extractNames(nameObj: XmlNodeValue | undefined): string[] {
     if (!nameObj) return [];
     if (Array.isArray(nameObj)) {
-      return nameObj.map((nameItem: any) => this.extractTextValue(nameItem));
+      return nameObj.map((nameItem) => this.extractTextValue(nameItem));
     } else {
       return [this.extractTextValue(nameObj)];
     }
   }
 
-  private extractTextValue(node: any): string {
-    return node ? (node['#text'] ?? '') : '';
+  private extractTextValue(node: XmlNodeValue | undefined): string {
+    if (!node) {
+      return '';
+    }
+
+    if (typeof node === 'string') {
+      return node;
+    }
+
+    if (Array.isArray(node)) {
+      return '';
+    }
+
+    const textNode = node['#text'];
+    return typeof textNode === 'string' ? textNode : '';
   }
 
-  xmlToJson(xml: Document): any {
-    return this.parseElement(xml);
+  xmlToJson(xml: Document): XmlNodeObject {
+    return this.asObject(this.parseElement(xml));
   }
 
-  parseElement(element: Node): any {
-    const obj: any = {};
+  parseElement(element: Node): XmlNodeValue {
+    const obj: XmlNodeObject = {};
     if (element.nodeType === Node.ELEMENT_NODE) {
       const el = element as Element;
       this.parseAttributesIntoObject(el, obj);
@@ -98,13 +127,13 @@ export class GameDetailsComponent implements OnChanges {
     return obj;
   }
 
-  parseAttributesIntoObject(element: Element, obj: any): void {
+  parseAttributesIntoObject(element: Element, obj: XmlNodeObject): void {
     if (element.attributes.length > 0) {
       obj['@attributes'] = this.parseAttributes(element.attributes);
     }
   }
 
-  parseChildNodesIntoObject(element: Node, obj: any): void {
+  parseChildNodesIntoObject(element: Node, obj: XmlNodeObject): void {
     if (element.hasChildNodes()) {
       for (let i = 0; i < element.childNodes.length; i++) {
         const item = element.childNodes.item(i);
@@ -114,23 +143,29 @@ export class GameDetailsComponent implements OnChanges {
     }
   }
 
-  addChildNodeToObject(item: Node, nodeName: string, obj: any): void {
-    if (typeof obj[nodeName] === 'undefined') {
-      obj[nodeName] = this.parseElement(item);
-    } else {
-      if (!Array.isArray(obj[nodeName])) {
-        obj[nodeName] = [obj[nodeName]];
-      }
-      obj[nodeName].push(this.parseElement(item));
+  addChildNodeToObject(item: Node, nodeName: string, obj: XmlNodeObject): void {
+    const parsedChild = this.parseElement(item);
+    const existingChild = obj[nodeName];
+
+    if (typeof existingChild === 'undefined') {
+      obj[nodeName] = parsedChild;
+      return;
     }
+
+    if (Array.isArray(existingChild)) {
+      obj[nodeName] = [...existingChild, parsedChild];
+      return;
+    }
+
+    obj[nodeName] = [existingChild, parsedChild];
   }
 
-  parseAttributes(attributes: NamedNodeMap): any {
-    const attrObj: any = {};
+  parseAttributes(attributes: NamedNodeMap): XmlAttributes {
+    const attrObj: XmlAttributes = {};
     for (let index = 0; index < attributes.length; index++) {
       const attribute = attributes.item(index);
       if (attribute) {
-        attrObj[attribute.nodeName] = attribute.nodeValue;
+        attrObj[attribute.nodeName] = attribute.nodeValue ?? '';
       }
     }
     return attrObj;
@@ -138,5 +173,13 @@ export class GameDetailsComponent implements OnChanges {
 
   getSortedCategories(categories: string[] | null | undefined): string[] {
     return [...(categories ?? [])].sort((a, b) => a.localeCompare(b));
+  }
+
+  private asObject(value: XmlNodeValue | undefined): XmlNodeObject {
+    if (!value || typeof value === 'string' || Array.isArray(value)) {
+      return {};
+    }
+
+    return value;
   }
 }

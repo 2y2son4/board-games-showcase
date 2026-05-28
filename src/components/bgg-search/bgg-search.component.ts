@@ -27,7 +27,7 @@ import { GameDetailsComponent } from '../game-details/game-details.component';
   styleUrls: ['./bgg-search.component.scss'],
 })
 export class BggSearchComponent {
-  searchTerm: string = '';
+  searchTerm = '';
   results: any = null;
   selectedGameId: string | null = null;
   selectedGameDetails: any = null;

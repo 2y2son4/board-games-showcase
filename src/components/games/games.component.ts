@@ -231,20 +231,22 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.filterGames();
   }
 
-  onSearchTypes(target: any) {
+  onSearchTypes(target: EventTarget | null) {
+    const searchValue = target instanceof HTMLInputElement ? target.value : '';
     const allTypes = this.commonFunctions.extractUniqueValues(
       this.filterFunctions.sortByNameAscending(this.gamesList),
       'types',
     );
-    this.types = this.filterFunctions.searchInList(allTypes, target.value);
+    this.types = this.filterFunctions.searchInList(allTypes, searchValue);
   }
 
-  onSearchEditors(target: any) {
+  onSearchEditors(target: EventTarget | null) {
+    const searchValue = target instanceof HTMLInputElement ? target.value : '';
     const allEditors = this.commonFunctions.extractUniqueValues(
       this.filterFunctions.sortByNameAscending(this.gamesList),
       'editor',
     );
-    this.editors = this.filterFunctions.searchInList(allEditors, target.value);
+    this.editors = this.filterFunctions.searchInList(allEditors, searchValue);
   }
 
   filterGames() {

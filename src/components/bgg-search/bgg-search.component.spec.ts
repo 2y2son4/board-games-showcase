@@ -28,8 +28,10 @@ describe('BggSearchComponent', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(BggSearchComponent);
     component = fixture.componentInstance;
-    http = TestBed.inject(HttpClient) as any;
-    loaderService = TestBed.inject(LoaderService) as any;
+    http = TestBed.inject(HttpClient) as unknown as HttpClientMock;
+    loaderService = TestBed.inject(
+      LoaderService,
+    ) as unknown as LoaderServiceMock;
   });
 
   it('should create', () => {
@@ -41,26 +43,22 @@ describe('BggSearchComponent', () => {
       '<boardgames><boardgame><name>#text</name><yearpublished>#text</yearpublished></boardgame></boardgames>';
     const response = xmlString;
     http.get.mockReturnValue(of(response));
-    jest
-      .spyOn(component, 'xmlToJson')
-      .mockReturnValue({
-        boardgames: {
-          '#text': ['a'],
-          boardgame: [
-            { name: { '#text': 'foo' }, yearpublished: { '#text': '2020' } },
-          ],
-        },
-      });
-    jest
-      .spyOn(component, 'filterResults')
-      .mockReturnValue({
-        boardgames: {
-          '#text': ['a'],
-          boardgame: [
-            { name: { '#text': 'foo' }, yearpublished: { '#text': '2020' } },
-          ],
-        },
-      });
+    jest.spyOn(component, 'xmlToJson').mockReturnValue({
+      boardgames: {
+        '#text': ['a'],
+        boardgame: [
+          { name: { '#text': 'foo' }, yearpublished: { '#text': '2020' } },
+        ],
+      },
+    });
+    jest.spyOn(component, 'filterResults').mockReturnValue({
+      boardgames: {
+        '#text': ['a'],
+        boardgame: [
+          { name: { '#text': 'foo' }, yearpublished: { '#text': '2020' } },
+        ],
+      },
+    });
     component.searchTerm = 'test';
     component.search();
     expect(loaderService.show).toHaveBeenCalled();
@@ -73,7 +71,7 @@ describe('BggSearchComponent', () => {
 
   it('should handle error in search', () => {
     http.get.mockReturnValue(throwError(() => new Error('fail')));
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'error').mockImplementation(() => { /* empty */ });
     component.searchTerm = 'fail';
     component.search();
     expect(loaderService.show).toHaveBeenCalled();
@@ -128,10 +126,10 @@ describe('BggSearchComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: any = {};
+    const obj: Record<string, unknown> = {};
     component.parseAttributesIntoObject(root, obj);
     expect(obj['@attributes']).toBeDefined();
-    expect(obj['@attributes'].attr).toBe('1');
+    expect((obj['@attributes'] as Record<string, unknown>)['attr']).toBe('1');
   });
 
   it('should parse child nodes into object', () => {
@@ -141,9 +139,9 @@ describe('BggSearchComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: any = {};
+    const obj: Record<string, unknown> = {};
     component.parseChildNodesIntoObject(root, obj);
-    expect(obj.child).toBeDefined();
+    expect(obj['child']).toBeDefined();
   });
 
   it('should add child node to object', () => {
@@ -153,12 +151,12 @@ describe('BggSearchComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: any = {};
+    const obj: Record<string, unknown> = {};
     const child1 = root.childNodes[0];
     const child2 = root.childNodes[1];
     component.addChildNodeToObject(child1, child1.nodeName, obj);
     component.addChildNodeToObject(child2, child2.nodeName, obj);
-    expect(Array.isArray(obj.child)).toBe(true);
+    expect(Array.isArray(obj['child'])).toBe(true);
   });
 
   it('should parse attributes', () => {

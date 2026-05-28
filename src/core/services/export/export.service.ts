@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import type { jsPDF as JsPdf } from 'jspdf';
 
 import { GameCard, OracleCard } from '../../../components/commons.models';
 
@@ -11,8 +12,8 @@ export class ExportService {
     filenameBase = 'selected-oracles',
   ): Promise<void> {
     // Lazy import so Jest/tests and initial load don't need to evaluate jsPDF.
-    const jsPDFModule: any = await import('jspdf');
-    const JsPDFCtor = jsPDFModule.jsPDF ?? jsPDFModule.default;
+    const jsPDFModule = await import('jspdf');
+    const JsPDFCtor = jsPDFModule.jsPDF;
     const doc = new JsPDFCtor({
       orientation: 'p',
       unit: 'pt',
@@ -80,8 +81,8 @@ export class ExportService {
     },
   ): Promise<void> {
     // Lazy import so Jest/tests and initial load don't need to evaluate jsPDF.
-    const jsPDFModule: any = await import('jspdf');
-    const JsPDFCtor = jsPDFModule.jsPDF ?? jsPDFModule.default;
+    const jsPDFModule = await import('jspdf');
+    const JsPDFCtor = jsPDFModule.jsPDF;
     const doc = new JsPDFCtor({
       orientation: 'p',
       unit: 'pt',
@@ -234,7 +235,7 @@ export class ExportService {
 
   private renderGames(
     games: GameCard[],
-    doc: any,
+    doc: JsPdf,
     addLine: (text: string, bold?: boolean) => void,
   ): void {
     games.forEach((game, i) => {
