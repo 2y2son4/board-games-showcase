@@ -29,8 +29,14 @@
                 <h2 class="card__title">{{oracle.name}}</h2>
                 @if (oracle.image) {
                   <div class="card__image-container">
-                    <img class="card__image" loading="lazy" [ngSrc]="oraclesImageBase + '/' + oracle.image + '.webp'"
-                      width="280" height="180" alt="{{oracle.name}}">
+                    <img
+                      class="card__image"
+                      loading="lazy"
+                      [ngSrc]="oraclesImageBase + '/' + oracle.image + '.webp'"
+                      fill
+                        sizes="(max-width: 767px) 80vw, (max-width: 1199px) 40vw, 25vw"
+                      alt="{{oracle.name}}"
+                    >
                   </div>
                 }
                 @if (oracle.artist) {
