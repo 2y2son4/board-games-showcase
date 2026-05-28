@@ -8,7 +8,7 @@ import {
   viewChildren,
   inject,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 
 import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
@@ -26,6 +26,7 @@ import { ExportService } from '../../core/services/export/export.service';
     CommonModule,
     LoaderComponent,
     MatButtonModule,
+    NgOptimizedImage,
     ScrollToTopBtnComponent,
   ],
   templateUrl: './oracles.component.html',
