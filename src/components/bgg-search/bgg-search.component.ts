@@ -11,26 +11,8 @@ import { LoaderService } from '../../core/services/loader/loader.service';
 import { catchError, throwError } from 'rxjs';
 import { GameDetailsComponent } from '../game-details/game-details.component';
 import { GameDetails } from '../commons.models';
-
-type XmlNodeValue = string | XmlNodeObject | XmlNodeValue[];
-
-interface XmlNodeObject {
-  [key: string]: XmlNodeValue | undefined;
-}
-
-interface BggGame extends XmlNodeObject {
-  name?: XmlNodeObject;
-  yearpublished?: XmlNodeObject;
-}
-
-interface BggBoardgames extends XmlNodeObject {
-  boardgame?: BggGame[];
-  '#text'?: XmlNodeValue;
-}
-
-interface BggResults extends XmlNodeObject {
-  boardgames?: BggBoardgames;
-}
+import type { BggResults } from './bgg-search.model';
+import type { XmlNodeObject, XmlNodeValue } from '../../core/models/xml.model';
 
 @Component({
   selector: 'app-bgg-search',

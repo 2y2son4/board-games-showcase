@@ -11,14 +11,11 @@ import { throwError } from 'rxjs';
 
 import { GameDetails } from '../commons.models';
 import { MatChipsModule } from '@angular/material/chips';
-
-type XmlNodeValue = string | XmlNodeObject | XmlNodeValue[];
-
-interface XmlNodeObject {
-  [key: string]: XmlNodeValue | undefined;
-}
-
-type XmlAttributes = Record<string, string>;
+import type {
+  XmlAttributes,
+  XmlNodeObject,
+  XmlNodeValue,
+} from '../../core/models/xml.model';
 
 @Component({
   selector: 'app-game-details',
