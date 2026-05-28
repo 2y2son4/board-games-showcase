@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GameCard } from '../../../components/models';
+import { GameCard } from '../../../shared/models';
 
 @Injectable({
   providedIn: 'root',

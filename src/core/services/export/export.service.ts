@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import type { jsPDF as JsPdf } from 'jspdf';
 
-import { GameCard, OracleCard } from '../../../components/models';
+import { GameCard, OracleCard } from '../../../shared/models';
 
 @Injectable({
   providedIn: 'root',

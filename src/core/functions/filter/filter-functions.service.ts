@@ -1,5 +1,5 @@
 import { ElementRef, Injectable } from '@angular/core';
-import { GameCard, OracleCard } from '../../../components/models';
+import { GameCard, OracleCard } from '../../../shared/models';
 import type { FilterCriteria } from './filter.model';
 
 @Injectable({

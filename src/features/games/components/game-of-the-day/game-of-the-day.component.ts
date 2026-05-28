@@ -8,7 +8,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 
-import { GameCard } from '../../../../components/models';
+import { GameCard } from '../../../../shared/models';
 import { CommonFunctionsService } from '../../../../core/functions/common/common-functions.service';
 import { HttpService } from '../../../../core/services/http/http.service';
 

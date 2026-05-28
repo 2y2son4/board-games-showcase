@@ -6,11 +6,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { LoaderComponent } from '../../../../components/loader/loader.component';
+import { LoaderComponent } from '../../../../shared/components/loader/loader.component';
 import { LoaderService } from '../../../../core/services/loader/loader.service';
 import { catchError, throwError } from 'rxjs';
-import { GameDetailsComponent } from '../../../../components/game-details/game-details.component';
-import { GameDetails } from '../../../../components/models';
+import { GameDetailsComponent } from '../game-details/game-details.component';
+import { GameDetails } from '../../../../shared/models';
 import type {
   BggAttributes,
   BggGame,
