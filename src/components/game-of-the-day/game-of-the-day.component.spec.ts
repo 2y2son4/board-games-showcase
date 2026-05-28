@@ -66,7 +66,9 @@ describe('GameOfTheDayComponent', () => {
   let dialogRefSpy: jest.Mocked<MatDialogRef<GameOfTheDayComponent>>;
 
   beforeEach(async () => {
-    dialogRefSpy = { close: jest.fn() } as any;
+    dialogRefSpy = {
+      close: jest.fn(),
+    } as unknown as jest.Mocked<MatDialogRef<GameOfTheDayComponent>>;
 
     const httpServiceMock = {
       gamesImageBase: 'https://example.com/images',

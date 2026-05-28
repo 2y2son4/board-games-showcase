@@ -71,7 +71,9 @@ describe('BggSearchComponent', () => {
 
   it('should handle error in search', () => {
     http.get.mockReturnValue(throwError(() => new Error('fail')));
-    jest.spyOn(console, 'error').mockImplementation(() => { /* empty */ });
+    jest.spyOn(console, 'error').mockImplementation(() => {
+      /* empty */
+    });
     component.searchTerm = 'fail';
     component.search();
     expect(loaderService.show).toHaveBeenCalled();
@@ -108,7 +110,15 @@ describe('BggSearchComponent', () => {
     const root = xml.documentElement;
     const result = component.parseElement(root);
     expect(result).toBeDefined();
-    expect(result['@attributes']).toBeDefined();
+    if (
+      typeof result === 'object' &&
+      result !== null &&
+      !Array.isArray(result)
+    ) {
+      expect(result['@attributes']).toBeDefined();
+    } else {
+      fail('Expected parseElement to return an object node');
+    }
   });
 
   it('should parse text node', () => {
@@ -126,7 +136,9 @@ describe('BggSearchComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: Record<string, unknown> = {};
+    const obj = {} as Parameters<
+      BggSearchComponent['parseAttributesIntoObject']
+    >[1];
     component.parseAttributesIntoObject(root, obj);
     expect(obj['@attributes']).toBeDefined();
     expect((obj['@attributes'] as Record<string, unknown>)['attr']).toBe('1');
@@ -139,7 +151,9 @@ describe('BggSearchComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: Record<string, unknown> = {};
+    const obj = {} as Parameters<
+      BggSearchComponent['parseChildNodesIntoObject']
+    >[1];
     component.parseChildNodesIntoObject(root, obj);
     expect(obj['child']).toBeDefined();
   });
@@ -151,7 +165,7 @@ describe('BggSearchComponent', () => {
       'application/xml',
     );
     const root = xml.documentElement;
-    const obj: Record<string, unknown> = {};
+    const obj = {} as Parameters<BggSearchComponent['addChildNodeToObject']>[2];
     const child1 = root.childNodes[0];
     const child2 = root.childNodes[1];
     component.addChildNodeToObject(child1, child1.nodeName, obj);
@@ -167,8 +181,8 @@ describe('BggSearchComponent', () => {
     );
     const root = xml.documentElement;
     const attrs = component.parseAttributes(root.attributes);
-    expect(attrs.attr1).toBe('a');
-    expect(attrs.attr2).toBe('b');
+    expect(attrs['attr1']).toBe('a');
+    expect(attrs['attr2']).toBe('b');
   });
 
   it('should filter results', () => {
@@ -182,7 +196,7 @@ describe('BggSearchComponent', () => {
       },
     };
     const filtered = component.filterResults(JSON.parse(JSON.stringify(json)));
-    expect(filtered.boardgames.boardgame.length).toBe(1);
+    expect(filtered.boardgames?.boardgame?.length).toBe(1);
   });
 
   it('should select game', () => {

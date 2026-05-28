@@ -10,6 +10,27 @@ import { LoaderComponent } from '../loader/loader.component';
 import { LoaderService } from '../../core/services/loader/loader.service';
 import { catchError, throwError } from 'rxjs';
 import { GameDetailsComponent } from '../game-details/game-details.component';
+import { GameDetails } from '../commons.models';
+
+type XmlNodeValue = string | XmlNodeObject | XmlNodeValue[];
+
+interface XmlNodeObject {
+  [key: string]: XmlNodeValue | undefined;
+}
+
+interface BggGame extends XmlNodeObject {
+  name?: XmlNodeObject;
+  yearpublished?: XmlNodeObject;
+}
+
+interface BggBoardgames extends XmlNodeObject {
+  boardgame?: BggGame[];
+  '#text'?: XmlNodeValue;
+}
+
+interface BggResults extends XmlNodeObject {
+  boardgames?: BggBoardgames;
+}
 
 @Component({
   selector: 'app-bgg-search',
@@ -28,9 +49,9 @@ import { GameDetailsComponent } from '../game-details/game-details.component';
 })
 export class BggSearchComponent {
   searchTerm = '';
-  results: any = null;
+  results: BggResults | null = null;
   selectedGameId: string | null = null;
-  selectedGameDetails: any = null;
+  selectedGameDetails: GameDetails | null = null;
   showDetails!: boolean;
   isLoading!: boolean;
   noResults!: boolean;
@@ -64,23 +85,27 @@ export class BggSearchComponent {
         this.isLoading = false;
         this.noResults = false;
 
-        if (!json.boardgames['#text']) {
+        const textNodes = this.results.boardgames?.['#text'];
+
+        if (!textNodes) {
           this.noResults = true;
           this.showNumberOfResults = false;
         } else {
           this.noResults = false;
           this.showNumberOfResults = true;
-          this.numberOfResults = json.boardgames['#text'].length;
+          this.numberOfResults = Array.isArray(textNodes)
+            ? textNodes.length
+            : 1;
         }
       });
   }
 
-  xmlToJson(xml: Document): any {
-    return this.parseElement(xml);
+  xmlToJson(xml: Document): BggResults {
+    return this.asObject(this.parseElement(xml));
   }
 
-  parseElement(element: Node): any {
-    const obj: any = {};
+  parseElement(element: Node): XmlNodeValue {
+    const obj: XmlNodeObject = {};
     if (element.nodeType === Node.ELEMENT_NODE) {
       const el = element as Element;
       this.parseAttributesIntoObject(el, obj);
@@ -91,13 +116,13 @@ export class BggSearchComponent {
     return obj;
   }
 
-  parseAttributesIntoObject(element: Element, obj: any): void {
+  parseAttributesIntoObject(element: Element, obj: XmlNodeObject): void {
     if (element.attributes.length > 0) {
       obj['@attributes'] = this.parseAttributes(element.attributes);
     }
   }
 
-  parseChildNodesIntoObject(element: Node, obj: any): void {
+  parseChildNodesIntoObject(element: Node, obj: XmlNodeObject): void {
     if (element.hasChildNodes()) {
       for (let i = 0; i < element.childNodes.length; i++) {
         const item = element.childNodes.item(i);
@@ -107,37 +132,51 @@ export class BggSearchComponent {
     }
   }
 
-  addChildNodeToObject(item: Node, nodeName: string, obj: any): void {
-    if (typeof obj[nodeName] === 'undefined') {
-      obj[nodeName] = this.parseElement(item);
-    } else {
-      if (!Array.isArray(obj[nodeName])) {
-        obj[nodeName] = [obj[nodeName]];
-      }
-      obj[nodeName].push(this.parseElement(item));
+  addChildNodeToObject(item: Node, nodeName: string, obj: XmlNodeObject): void {
+    const parsedChild = this.parseElement(item);
+    const existingChild = obj[nodeName];
+
+    if (typeof existingChild === 'undefined') {
+      obj[nodeName] = parsedChild;
+      return;
     }
+
+    if (Array.isArray(existingChild)) {
+      obj[nodeName] = [...existingChild, parsedChild];
+      return;
+    }
+
+    obj[nodeName] = [existingChild, parsedChild];
   }
 
-  parseAttributes(attributes: NamedNodeMap): any {
-    const attrObj: any = {};
+  parseAttributes(attributes: NamedNodeMap): XmlNodeObject {
+    const attrObj: XmlNodeObject = {};
     for (let j = 0; j < attributes.length; j++) {
       const attribute = attributes.item(j);
       if (attribute) {
         // check if attribute is not null
-        attrObj[attribute.nodeName] = attribute.nodeValue;
+        attrObj[attribute.nodeName] = attribute.nodeValue ?? '';
       }
     }
     return attrObj;
   }
 
-  filterResults(json: any): any {
-    const boardgames = json?.boardgames?.boardgame;
-    if (boardgames) {
-      json.boardgames.boardgame = boardgames.filter((game: any) => {
+  filterResults(json: BggResults): BggResults {
+    const boardgames = json.boardgames?.boardgame ?? [];
+    if (json.boardgames) {
+      json.boardgames.boardgame = boardgames.filter((game) => {
         return game.name?.['#text'] && game.yearpublished?.['#text'];
       });
     }
     return json;
+  }
+
+  private asObject(value: XmlNodeValue): XmlNodeObject {
+    if (typeof value === 'string' || Array.isArray(value)) {
+      return {};
+    }
+
+    return value;
   }
 
   selectGame(objectid: string) {

@@ -6,6 +6,7 @@ import { FormControl } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSelectChange } from '@angular/material/select';
 import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
 
 const game1: GameCard = {
@@ -573,13 +574,12 @@ describe('GamesComponent', () => {
     component.selectedChipTypes.set([]);
     component.selectedSize = 's';
 
-    component.onSizeFilterChange({ value: 'm' } as any);
+    component.onSizeFilterChange({ value: 'm' } as unknown as MatSelectChange);
 
     expect(component.printGames()).toEqual([]);
     expect(component.filteredGames().length).toBe(1);
     expect(component.filteredGames()[0].size).toBe('m');
   });
-
 
   describe('openGameOfTheDay', () => {
     it('should open the GameOfTheDayComponent dialog', () => {
