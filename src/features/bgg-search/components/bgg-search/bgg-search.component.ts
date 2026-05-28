@@ -6,11 +6,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { LoaderComponent } from '../loader/loader.component';
-import { LoaderService } from '../../core/services/loader/loader.service';
+import { LoaderComponent } from '../../../../components/loader/loader.component';
+import { LoaderService } from '../../../../core/services/loader/loader.service';
 import { catchError, throwError } from 'rxjs';
-import { GameDetailsComponent } from '../game-details/game-details.component';
-import { GameDetails } from '../models';
+import { GameDetailsComponent } from '../../../../components/game-details/game-details.component';
+import { GameDetails } from '../../../../components/models';
 import type {
   BggAttributes,
   BggGame,
@@ -19,7 +19,7 @@ import type {
   BggResultsRaw,
   BggTextNode,
 } from './index';
-import type { XmlNodeObject, XmlNodeValue } from '../../core/models';
+import type { XmlNodeObject, XmlNodeValue } from '../../../../core/models';
 
 @Component({
   selector: 'app-bgg-search',

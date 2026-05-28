@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
 import { of, throwError } from 'rxjs';
-import { LoaderService } from '../../core/services/loader/loader.service';
+import { LoaderService } from '../../../../core/services/loader/loader.service';
 import { BggSearchComponent } from './bgg-search.component';
 
 class HttpClientMock {

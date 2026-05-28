@@ -1,4 +1,7 @@
-import type { XmlNodeObject, XmlNodeValue } from '../../core/models/xml.model';
+import type {
+  XmlNodeObject,
+  XmlNodeValue,
+} from '../../../../core/models/xml.model';
 
 export type BggAttributes = {
   objectid: string;
