@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { GamesComponent } from '../components/games/games.component';
+import { GamesComponent } from '../features/games/components/games/games.component';
 import { OraclesComponent } from '../components/oracles/oracles.component';
 import { BggSearchComponent } from '../components/bgg-search/bgg-search.component';
 

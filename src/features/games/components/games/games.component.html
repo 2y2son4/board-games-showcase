@@ -69,7 +69,8 @@
                 <h2 class="card__title" [innerHTML]="game.name | highlightText:searchQuery"> {{game.name}}
                 </h2>
                 @if (game.image) {
-                  <div class="card__image-container"><img class="card__image" loading="lazy"
+                  <div class="card__image-container"><img class="card__image"
+                      [attr.loading]="index < 4 ? 'eager' : 'lazy'" [attr.fetchpriority]="index === 0 ? 'high' : 'auto'"
                       src="{{gamesImageBase}}/{{game.image}}.webp" alt="{{game.name}}"></div>
                 }
                 <p class="card__title"
@@ -78,7 +79,7 @@
               </div>
               <div class="card__list-back" [ngClass]="{'border-pink': game.isPlayed }">
                 <img class="card__flag card__language" [ngClass]="{'border-pink': game.isPlayed }"
-                  src="assets/flags/{{game.language}}-flag.png" alt="flag">
+                  src="/assets/flags/{{game.language}}-flag.png" alt="flag">
                 <div class="card__info card__info-scroll">
                   <div class="card__info-title">
                     <p class="card__name" [innerHTML]="game.name | highlightText:searchQuery">

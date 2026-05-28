@@ -26,16 +26,16 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 
-import { GameCard } from '../models';
+import { GameCard } from '../../../../components/models';
 import { Subject, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs';
-import { FilterFunctionsService } from '../../core/functions/filter/filter-functions.service';
-import { HighlightTextPipe } from '../../core/pipes/highlight-text/highlight-text.pipe';
-import { CommonFunctionsService } from '../../core/functions/common/common-functions.service';
-import { HttpService } from '../../core/services/http/http.service';
-import { ScrollToTopBtnComponent } from '../scroll-to-top-btn/scroll-to-top-btn.component';
-import { LoaderComponent } from '../loader/loader.component';
-import { LoaderService } from '../../core/services/loader/loader.service';
-import { ExportService } from '../../core/services/export/export.service';
+import { FilterFunctionsService } from '../../../../core/functions/filter/filter-functions.service';
+import { HighlightTextPipe } from '../../../../core/pipes/highlight-text/highlight-text.pipe';
+import { CommonFunctionsService } from '../../../../core/functions/common/common-functions.service';
+import { HttpService } from '../../../../core/services/http/http.service';
+import { ScrollToTopBtnComponent } from '../../../../components/scroll-to-top-btn/scroll-to-top-btn.component';
+import { LoaderComponent } from '../../../../components/loader/loader.component';
+import { LoaderService } from '../../../../core/services/loader/loader.service';
+import { ExportService } from '../../../../core/services/export/export.service';
 import { MatDialog } from '@angular/material/dialog';
 import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
 
@@ -57,7 +57,7 @@ import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.compon
     ScrollToTopBtnComponent,
   ],
   templateUrl: './games.component.html',
-  styleUrl: '../common-styles.scss',
+  styleUrl: '../../../../components/common-styles.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesComponent implements OnInit, AfterViewInit {
