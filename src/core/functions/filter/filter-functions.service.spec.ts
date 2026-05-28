@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { FilterFunctionsService } from './filter-functions.service';
-import { GameCard } from '../../../shared/models';
+import { GameCard } from '../../../features/games/models';
 
 describe('GameCardSortingService', () => {
   let service: FilterFunctionsService;

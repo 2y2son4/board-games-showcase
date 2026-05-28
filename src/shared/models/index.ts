@@ -1,2 +1,2 @@
-export * from './catalog.model';
+export * from './language.model';
 export * from './bgg.model';

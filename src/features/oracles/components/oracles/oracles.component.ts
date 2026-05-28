@@ -15,7 +15,7 @@ import { CommonFunctionsService } from '../../../../core/functions/common/common
 import { FilterFunctionsService } from '../../../../core/functions/filter/filter-functions.service';
 import { HttpService } from '../../../../core/services/http/http.service';
 import { ScrollToTopBtnComponent } from '../../../../shared/components/scroll-to-top-btn/scroll-to-top-btn.component';
-import { OracleCard } from '../../../../shared/models';
+import { OracleCard } from '../../models';
 import { LoaderComponent } from '../../../../shared/components/loader/loader.component';
 import { LoaderService } from '../../../../core/services/loader/loader.service';
 import { ExportService } from '../../../../core/services/export/export.service';

@@ -1,7 +1,8 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, catchError, of } from 'rxjs';
-import { GameCard, OracleCard } from '../../../shared/models';
+import { GameCard } from '../../../features/games/models';
+import { OracleCard } from '../../../features/oracles/models';
 
 @Injectable({
   providedIn: 'root',

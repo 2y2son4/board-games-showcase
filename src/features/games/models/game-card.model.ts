@@ -1,4 +1,4 @@
-export type SupportedLanguage = 'en' | 'es' | 'de' | 'x';
+import { SupportedLanguage } from '../../../shared/models';
 
 export type GameSize = 'xs' | 's' | 'm' | 'l';
 
@@ -17,15 +17,6 @@ export interface GameCard {
   age: number;
   bggReference: number;
   size: GameSize;
-}
-
-export interface OracleCard {
-  name: string;
-  artist: string;
-  language: SupportedLanguage;
-  image?: string;
-  description: string[];
-  web: string;
 }
 
 export type SortingOrder = Record<string, boolean>;
