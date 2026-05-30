@@ -80,8 +80,8 @@ describe('GamesComponent', () => {
     fixture.detectChanges();
 
     // JSDOM doesn't implement scrollIntoView; Angular sets @ViewChild after detectChanges
-    if (component.topPage?.nativeElement) {
-      component.topPage.nativeElement.scrollIntoView = jest.fn();
+    if (component.topPage()?.nativeElement) {
+      component.topPage()!.nativeElement.scrollIntoView = jest.fn();
     }
   });
 

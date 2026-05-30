@@ -11,8 +11,9 @@
             <h2 class="games-card__title" [innerHTML]="game.name | highlightText:searchQuery()">{{game.name}}</h2>
             @if (game.image) {
               <div class="games-card__image-container">
-                <img class="games-card__image" [attr.loading]="index < 4 ? 'eager' : 'lazy'"
-                  [attr.fetchpriority]="index === 0 ? 'high' : 'auto'" src="{{gamesImageBase()}}/{{game.image}}.webp"
+                <img class="games-card__image" [ngSrc]="gamesImageBase() + '/' + game.image + '.webp'" fill
+                  sizes="(max-width: 767px) 80vw, (max-width: 1199px) 40vw, 25vw"
+                  [attr.loading]="index < 4 ? 'eager' : 'lazy'" [attr.fetchpriority]="index === 0 ? 'high' : 'auto'"
                   alt="{{game.name}}">
               </div>
             }
@@ -34,7 +35,7 @@
               <div class="games-line"></div>
               <div class="games-card__info-container">
                 <div class="games-card__info-upper">
-                  <div style="display: flex; justify-content: space-between; width: 100%;">
+                  <div class="games-card__meta-row">
                     @if (game.players) {
                       <p class="games-card__players">
                         @for (player of game.players; let i = $index; let first = $first; let last = $last; track i) {
@@ -49,7 +50,7 @@
                       <p class="games-card__players">+{{game.age}} years</p>
                     }
                     <p class="games-card__time">
-                      {{game.time < 59 ? game.time + ' min' : (game.time / 60) === 1 ? '1 h' : game.time / 60 + ' h' }}
+                      {{formatDuration(game.time)}}
                     </p>
                   </div>
 

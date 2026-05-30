@@ -1,5 +1,11 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnInit,
+  inject,
+  signal,
+} from '@angular/core';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -22,9 +28,11 @@ import { HttpService } from '../../../../core/services/http/http.service';
     MatDialogModule,
     MatFormFieldModule,
     MatSelectModule,
+    NgOptimizedImage,
   ],
   templateUrl: './game-of-the-day.component.html',
   styleUrl: './game-of-the-day.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GameOfTheDayComponent implements OnInit {
   private readonly dialogRef = inject(MatDialogRef<GameOfTheDayComponent>);
@@ -89,6 +97,15 @@ export class GameOfTheDayComponent implements OnInit {
     }
     const count = parseInt(this.selectedPlayers, 10);
     return count >= min && count <= max;
+  }
+
+  formatDuration(minutes: number): string {
+    if (minutes < 59) {
+      return `${minutes} min`;
+    }
+
+    const hours = minutes / 60;
+    return hours === 1 ? '1 h' : `${hours} h`;
   }
 
   close(): void {

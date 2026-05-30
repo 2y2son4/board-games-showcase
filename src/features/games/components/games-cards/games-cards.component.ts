@@ -5,7 +5,7 @@ import {
   input,
   output,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule, MatChipListboxChange } from '@angular/material/chips';
@@ -16,7 +16,13 @@ import { GameCard } from '../../models';
 
 @Component({
   selector: 'app-games-cards',
-  imports: [CommonModule, HighlightTextPipe, MatCardModule, MatChipsModule],
+  imports: [
+    CommonModule,
+    HighlightTextPipe,
+    MatCardModule,
+    MatChipsModule,
+    NgOptimizedImage,
+  ],
   templateUrl: './games-cards.component.html',
   styleUrl: './games-cards.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -51,5 +57,14 @@ export class GamesCardsComponent {
     }
 
     this.sizeChanged.emit((value as string | null) ?? '');
+  }
+
+  formatDuration(minutes: number): string {
+    if (minutes < 59) {
+      return `${minutes} min`;
+    }
+
+    const hours = minutes / 60;
+    return hours === 1 ? '1 h' : `${hours} h`;
   }
 }

@@ -4,9 +4,9 @@ import {
   DestroyRef,
   ElementRef,
   OnInit,
-  ViewChild,
   inject,
   signal,
+  viewChild,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -51,7 +51,7 @@ export class GamesComponent implements OnInit {
   private readonly exportService = inject(ExportService);
   private readonly dialog = inject(MatDialog);
 
-  @ViewChild('topPage') topPage!: ElementRef;
+  topPage = viewChild<ElementRef>('topPage');
 
   gamesList: GameCard[] = [];
   allTypes: string[] = [];
@@ -301,7 +301,7 @@ export class GamesComponent implements OnInit {
     this.resetPlayedGames();
     this.restartDropdownFilters();
 
-    this.topPage?.nativeElement?.scrollIntoView?.({
+    this.topPage()?.nativeElement?.scrollIntoView?.({
       block: 'end',
       behavior: 'smooth',
     });
