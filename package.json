@@ -11,6 +11,8 @@
     "lint:fix": "ng lint --fix",
     "move-files": "mv ./docs/browser/* ./docs/ && rm -rf ./docs/browser",
     "build:prod": "ng build --configuration production",
+    "build:prod:stats": "ng build --configuration production --stats-json",
+    "bundle:report": "node scripts/report-bundle-stats.mjs",
     "deploy": "pnpm run build:prod && pnpm run move-files",
     "watch": "ng build --watch --configuration development",
     "test": "jest",

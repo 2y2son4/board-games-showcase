@@ -65,6 +65,10 @@ The workflow runs two jobs:
 
 1. **Test** — Runs on every push and pull request to `main`:
    - Installs dependencies (`pnpm install --frozen-lockfile`)
+   - Runs lint (`pnpm run lint`)
+   - Builds production with budgets enabled and stats output (`pnpm run build:prod:stats`)
+   - Publishes a bundle size summary (`pnpm run bundle:report`)
+   - Uploads `docs/stats.json` as a CI artifact for bundle drift tracking
    - Runs all unit tests (`pnpm test`)
 
 2. **Build & Deploy** — Runs only on pushes to `main` (after tests pass):

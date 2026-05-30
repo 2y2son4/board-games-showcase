@@ -39,6 +39,21 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Run lint
+        run: pnpm run lint
+
+      - name: Build production (budget gate)
+        run: pnpm run build:prod:stats
+
+      - name: Publish bundle stats report
+        run: pnpm run bundle:report
+
+      - name: Upload bundle stats artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bundle-stats
+          path: docs/stats.json
+
       - name: Run tests
         run: pnpm test
 
