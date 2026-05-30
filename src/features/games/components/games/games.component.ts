@@ -1,75 +1,64 @@
 import {
-  AfterViewInit,
   ChangeDetectionStrategy,
   Component,
   DestroyRef,
   ElementRef,
-  inject,
   OnInit,
-  signal,
   ViewChild,
-  viewChildren,
+  inject,
+  signal,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  FormControl,
-  FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSelectChange, MatSelectModule } from '@angular/material/select';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSelectChange } from '@angular/material/select';
+import { Subject, debounceTime, takeUntil } from 'rxjs';
 
-import { GameCard } from '../../models';
-import { Subject, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs';
 import { FilterFunctionsService } from '../../../../core/functions/filter/filter-functions.service';
-import { HighlightTextPipe } from '../../../../shared/pipes/highlight-text/highlight-text.pipe';
 import { CommonFunctionsService } from '../../../../core/functions/common/common-functions.service';
 import { HttpService } from '../../../../core/services/http/http.service';
-import { ScrollToTopBtnComponent } from '../../../../shared/components/scroll-to-top-btn/scroll-to-top-btn.component';
 import { LoaderComponent } from '../../../../shared/components/loader/loader.component';
 import { LoaderService } from '../../../../core/services/loader/loader.service';
 import { ExportService } from '../../../../core/services/export/export.service';
-import { MatDialog } from '@angular/material/dialog';
+import { ScrollToTopBtnComponent } from '../../../../shared/components/scroll-to-top-btn/scroll-to-top-btn.component';
 import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
+import { GameCard } from '../../models';
+import { GamesCardsComponent } from '../games-cards/games-cards.component';
+import { GamesFiltersComponent } from '../games-filters/games-filters.component';
+import { GamesFilterForm } from './games-filter-form.model';
 
 @Component({
   selector: 'app-games',
   imports: [
     CommonModule,
-    FormsModule,
-    HighlightTextPipe,
+    GamesCardsComponent,
+    GamesFiltersComponent,
     LoaderComponent,
     MatButtonModule,
-    MatCardModule,
-    MatChipsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
-    MatSelectModule,
-    ReactiveFormsModule,
     ScrollToTopBtnComponent,
   ],
   templateUrl: './games.component.html',
-  styleUrl: '../../../../shared/styles/common-styles.scss',
+  styleUrl: './games.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class GamesComponent implements OnInit, AfterViewInit {
-  commonFunctions = inject(CommonFunctionsService);
-  filterFunctions = inject(FilterFunctionsService);
+export class GamesComponent implements OnInit {
+  readonly commonFunctions = inject(CommonFunctionsService);
+  readonly filterFunctions = inject(FilterFunctionsService);
   private readonly httpDataService = inject(HttpService);
   private readonly loaderService = inject(LoaderService);
   private readonly exportService = inject(ExportService);
+  private readonly dialog = inject(MatDialog);
 
   @ViewChild('topPage') topPage!: ElementRef;
-  innerElements = viewChildren<ElementRef>('innerElement');
-  gamesList!: GameCard[];
+
+  gamesList: GameCard[] = [];
+  allTypes: string[] = [];
+  allEditors: string[] = [];
+  types: string[] = [];
+  sizes: string[] = [];
+  editors: string[] = [];
 
   isLoading = signal(false);
   selectedChipTypes = signal<string[]>([]);
@@ -81,40 +70,68 @@ export class GamesComponent implements OnInit, AfterViewInit {
   showUnplayedBtn = signal(true);
   showSelectAllBtn = signal(false);
 
-  selectedTypes = new FormControl<string[]>([]);
-  types: string[] = [];
-  selectedSize!: string;
-  sizes: string[] = [];
-  selectedEditors = new FormControl<string[]>([]);
-  editors: string[] = [];
-  selectedSorting = new FormControl<string>('');
-  searchQuery = '';
-  exactPlayers!: number | undefined;
-  exactAge!: number | undefined;
-  gamesFilterForm!: FormGroup;
-  flippedCards!: number;
   sortingSelectLabels: string[] = [];
-
   readonly gamesImageBase: string;
 
-  readonly #searchSubject$ = new Subject<string>();
+  readonly gamesFilterForm: GamesFilterForm = new FormGroup({
+    searchQuery: new FormControl('', { nonNullable: true }),
+    selectedSorting: new FormControl<string | null>(null),
+    exactPlayers: new FormControl<number | null>(null),
+    exactAge: new FormControl<number | null>(null),
+    selectedTypes: new FormControl<string[] | null>([]),
+    selectedEditors: new FormControl<string[] | null>([]),
+    selectedSize: new FormControl<string | null>(null),
+  });
+
+  selectedTypes = this.gamesFilterForm.controls.selectedTypes;
+  selectedEditors = this.gamesFilterForm.controls.selectedEditors;
+  selectedSorting = this.gamesFilterForm.controls.selectedSorting;
+
+  get searchQuery(): string {
+    return this.gamesFilterForm.controls.searchQuery.value;
+  }
+
+  set searchQuery(value: string) {
+    this.gamesFilterForm.controls.searchQuery.setValue(value, {
+      emitEvent: false,
+    });
+  }
+
+  get exactPlayers(): number | undefined {
+    return this.gamesFilterForm.controls.exactPlayers.value ?? undefined;
+  }
+
+  set exactPlayers(value: number | undefined) {
+    this.gamesFilterForm.controls.exactPlayers.setValue(value ?? null, {
+      emitEvent: false,
+    });
+  }
+
+  get exactAge(): number | undefined {
+    return this.gamesFilterForm.controls.exactAge.value ?? undefined;
+  }
+
+  set exactAge(value: number | undefined) {
+    this.gamesFilterForm.controls.exactAge.setValue(value ?? null, {
+      emitEvent: false,
+    });
+  }
+
+  get selectedSize(): string {
+    return this.gamesFilterForm.controls.selectedSize.value ?? '';
+  }
+
+  set selectedSize(value: string) {
+    this.gamesFilterForm.controls.selectedSize.setValue(value || null, {
+      emitEvent: false,
+    });
+  }
+
   readonly #destroyRef = inject(DestroyRef);
   readonly #destroy$ = new Subject<void>();
 
-  private readonly dialog = inject(MatDialog);
-
   constructor() {
     this.gamesImageBase = this.httpDataService.gamesImageBase;
-
-    this.#searchSubject$
-      .pipe(
-        debounceTime(200),
-        distinctUntilChanged(),
-        takeUntil(this.#destroy$),
-      )
-      .subscribe(() => {
-        this.filterGames();
-      });
 
     this.#destroyRef.onDestroy(() => {
       this.#destroy$.next();
@@ -124,28 +141,44 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.sortingSelectLabels = this.filterFunctions.SORTING_LABELS;
+
+    this.gamesFilterForm.valueChanges
+      .pipe(debounceTime(200), takeUntil(this.#destroy$))
+      .subscribe(() => {
+        this.applyAllFilters();
+      });
+
+    this.loadGames();
+  }
+
+  private loadGames(): void {
     this.loaderService.show();
     this.isLoading.set(true);
-    this.gamesList = [];
 
     this.httpDataService.getGames().subscribe({
       next: (response) => {
-        const sortedGames = this.filterFunctions.sortByNameAscending(
-          response.games,
-        );
-        this.gamesList = sortedGames.map((game) => ({
-          ...game,
-          types: [...game.types].sort(),
-        }));
-        this.filteredGames.set(this.gamesList);
-        this.types = this.commonFunctions.extractUniqueValues(
+        const sortedGames = this.filterFunctions
+          .sortByNameAscending(response.games)
+          .map((game) => ({
+            ...game,
+            types: [...game.types].sort(),
+          }));
+
+        this.gamesList = sortedGames;
+        this.filteredGames.set(sortedGames);
+
+        this.allTypes = this.commonFunctions.extractUniqueValues(
           sortedGames,
           'types',
         );
-        this.editors = this.commonFunctions.extractUniqueValues(
+        this.types = [...this.allTypes];
+
+        this.allEditors = this.commonFunctions.extractUniqueValues(
           sortedGames,
           'editor',
         );
+        this.editors = [...this.allEditors];
+
         const sizeOrder = ['xs', 's', 'm', 'l', 'xl'];
         this.sizes = this.commonFunctions
           .extractUniqueValues(sortedGames, 'size')
@@ -158,166 +191,152 @@ export class GamesComponent implements OnInit, AfterViewInit {
               sizeOrder.indexOf(b) !== -1
                 ? sizeOrder.indexOf(b)
                 : sizeOrder.length;
-            if (indexA === indexB) {
-              return a.localeCompare(b);
-            }
-            return indexA - indexB;
+            return indexA === indexB ? a.localeCompare(b) : indexA - indexB;
           });
+
         this.loaderService.hide();
         this.isLoading.set(false);
       },
-      error: (error) => {
-        console.error('Error fetching games data', error);
+      error: () => {
         this.loaderService.hide();
         this.isLoading.set(false);
       },
     });
-
-    this.resetGamesList();
-    this.gamesFilterForm = new FormGroup({
-      searchQuery: new FormControl(''),
-      exactPlayers: new FormControl(''),
-      selectedSorting: new FormControl([]),
-      selectedTypes: new FormControl([]),
-      selectedEditors: new FormControl([]),
-      isPlayed: new FormControl(false),
-      isNotPlayed: new FormControl(false),
-    });
   }
 
-  ngAfterViewInit() {
-    this.filterFunctions.getFlipCardCount(this.innerElements());
-  }
-
-  onTypeChange(selectedChipTypes: string[]) {
+  onTypeChange(selectedChipTypes: string[]): void {
     this.selectedChipTypes.set(selectedChipTypes);
 
     if (selectedChipTypes.length > 0) {
-      this.selectedTypes.setValue([], { emitEvent: false });
+      this.selectedTypes.setValue([]);
     }
 
     this.applyAllFilters();
-    setTimeout(() => {
-      this.filterFunctions.flipAllCards(this.innerElements());
-      this.syncCardSelection();
-    }, 100);
   }
 
-  onDropdownTypeChange() {
-    const dropdownTypes = this.selectedTypes.value ?? [];
-    if (dropdownTypes.length > 0) {
-      this.selectedChipTypes.set([]);
-    }
+  onSizeChange(selectedSize: string): void {
+    this.gamesFilterForm.patchValue(
+      {
+        searchQuery: '',
+        selectedSorting: null,
+        exactPlayers: null,
+        exactAge: null,
+        selectedTypes: [],
+        selectedEditors: [],
+        selectedSize: selectedSize || null,
+      },
+      { emitEvent: false },
+    );
 
-    this.filterFunctions.flipAllCards(this.innerElements());
-    this.applyAllFilters();
-    this.syncCardSelection();
-  }
+    this.selectedChipTypes.set([]);
+    this.types = [...this.allTypes];
+    this.editors = [...this.allEditors];
+    this.printGames.set([]);
+    this.resetPlayedGames();
 
-  onSizeChange(selectedSize: string) {
-    this.gamesFilterForm.reset();
-    this.restartDropdownFilters();
-    this.selectedSize = selectedSize;
     this.applyAllFilters();
-    setTimeout(() => {
-      this.filterFunctions.flipAllCards(this.innerElements());
-      this.syncCardSelection();
-    }, 100);
   }
 
   onSizeFilterChange(event: MatSelectChange): void {
     this.unselectAll();
-    this.selectedSize = event.value ?? '';
-    this.filterGames();
-  }
-
-  onSearchTypes(target: EventTarget | null) {
-    const searchValue = target instanceof HTMLInputElement ? target.value : '';
-    const allTypes = this.commonFunctions.extractUniqueValues(
-      this.filterFunctions.sortByNameAscending(this.gamesList),
-      'types',
-    );
-    this.types = this.filterFunctions.searchInList(allTypes, searchValue);
-  }
-
-  onSearchEditors(target: EventTarget | null) {
-    const searchValue = target instanceof HTMLInputElement ? target.value : '';
-    const allEditors = this.commonFunctions.extractUniqueValues(
-      this.filterFunctions.sortByNameAscending(this.gamesList),
-      'editor',
-    );
-    this.editors = this.filterFunctions.searchInList(allEditors, searchValue);
-  }
-
-  filterGames() {
-    this.filterFunctions.flipAllCards(this.innerElements());
+    this.gamesFilterForm.controls.selectedSize.setValue(event.value ?? null);
     this.applyAllFilters();
-    this.syncCardSelection();
   }
 
-  onSearchInput(value: string) {
-    this.searchQuery = value;
-    this.#searchSubject$.next(value);
+  onSearchTypes(target: EventTarget | string | null): void {
+    const searchValue =
+      typeof target === 'string'
+        ? target
+        : target instanceof HTMLInputElement
+          ? target.value
+          : '';
+
+    this.types = this.filterFunctions.searchInList(this.allTypes, searchValue);
   }
 
-  togglePlayed() {
-    this.filterFunctions.flipAllCards(this.innerElements());
+  onSearchEditors(target: EventTarget | string | null): void {
+    const searchValue =
+      typeof target === 'string'
+        ? target
+        : target instanceof HTMLInputElement
+          ? target.value
+          : '';
+
+    this.editors = this.filterFunctions.searchInList(
+      this.allEditors,
+      searchValue,
+    );
+  }
+
+  filterGames(): void {
+    this.applyAllFilters();
+  }
+
+  onSearchInput(value: string): void {
+    this.gamesFilterForm.controls.searchQuery.setValue(value);
+  }
+
+  togglePlayed(): void {
     this.unPlayedGames.set(false);
     this.playedGames.set(!this.playedGames());
     this.showPlayedBtn.set(false);
     this.showUnplayedBtn.set(true);
     this.applyAllFilters();
-    this.syncCardSelection();
   }
 
-  toggleUnPlayed() {
-    this.filterFunctions.flipAllCards(this.innerElements());
+  toggleUnPlayed(): void {
     this.playedGames.set(false);
     this.unPlayedGames.set(!this.unPlayedGames());
     this.showPlayedBtn.set(true);
     this.showUnplayedBtn.set(false);
     this.applyAllFilters();
-    this.syncCardSelection();
   }
 
-  resetGamesList() {
+  resetGamesList(): void {
     this.filteredGames.set(this.gamesList);
-    this.filterFunctions.flipAllCards(this.innerElements());
   }
 
-  restartFilters() {
+  restartFilters(): void {
     this.selectedChipTypes.set([]);
     this.resetPlayedGames();
     this.restartDropdownFilters();
-    this.filterFunctions.flipAllCards(this.innerElements());
-    this.topPage.nativeElement.scrollIntoView({
+
+    this.topPage?.nativeElement?.scrollIntoView?.({
       block: 'end',
       behavior: 'smooth',
     });
+
     this.showPlayedBtn.set(true);
     this.showUnplayedBtn.set(true);
   }
 
-  restartDropdownFilters() {
-    this.selectedSorting.reset();
-    this.selectedEditors.reset([]);
-    this.selectedTypes.reset([]);
-    this.searchQuery = '';
-    this.exactPlayers = undefined;
-    this.exactAge = undefined;
-    this.selectedChipTypes.set([]);
-    this.selectedSize = '';
+  restartDropdownFilters(): void {
+    this.gamesFilterForm.patchValue(
+      {
+        searchQuery: '',
+        selectedSorting: null,
+        exactPlayers: null,
+        exactAge: null,
+        selectedTypes: [],
+        selectedEditors: [],
+        selectedSize: null,
+      },
+      { emitEvent: false },
+    );
+
+    this.types = [...this.allTypes];
+    this.editors = [...this.allEditors];
     this.applyAllFilters();
     this.printGames.set([]);
   }
 
-  resetPlayedGames() {
+  resetPlayedGames(): void {
     this.playedGames.set(false);
     this.unPlayedGames.set(false);
   }
 
-  restartSearch() {
-    this.searchQuery = '';
+  restartSearch(): void {
+    this.gamesFilterForm.controls.searchQuery.setValue('');
     this.applyAllFilters();
   }
 
@@ -338,13 +357,18 @@ export class GamesComponent implements OnInit, AfterViewInit {
     const result = this.filterFunctions.applyFilters(this.gamesList, criteria);
     this.filteredGames.set(result);
 
+    const selectedNames = new Set(result.map((g) => g.name));
+    this.printGames.set(
+      this.printGames().filter((game) => selectedNames.has(game.name)),
+    );
+
     const hasActiveFilters = !!(
-      criteria.searchQuery?.trim() ||
+      criteria.searchQuery.trim() ||
       criteria.exactPlayers ||
       criteria.exactAge ||
-      (criteria.selectedTypes && criteria.selectedTypes.length > 0) ||
-      (criteria.selectedEditors && criteria.selectedEditors.length > 0) ||
-      (criteria.selectedChipTypes && criteria.selectedChipTypes.length > 0) ||
+      (criteria.selectedTypes?.length ?? 0) > 0 ||
+      criteria.selectedEditors.length > 0 ||
+      criteria.selectedChipTypes.length > 0 ||
       criteria.selectedSize ||
       criteria.playedGames ||
       criteria.unPlayedGames
@@ -353,62 +377,40 @@ export class GamesComponent implements OnInit, AfterViewInit {
     this.showSelectAllBtn.set(hasActiveFilters && result.length > 1);
   }
 
-  filterGamesByExactPlayers() {
+  filterGamesByExactPlayers(): void {
     this.applyAllFilters();
   }
 
-  filterGamesByAge() {
+  filterGamesByAge(): void {
     this.applyAllFilters();
   }
 
   getAppliedFiltersSummary(): string[] {
-    const trimmedSearch = this.searchQuery?.trim();
     const selectedSorting = this.selectedSorting.value;
-    const selectedEditors = this.selectedEditors.value;
+    const selectedEditors = this.selectedEditors.value ?? [];
 
     return [
-      trimmedSearch ? `Search: "${trimmedSearch}"` : null,
+      this.searchQuery.trim() ? `Search: "${this.searchQuery.trim()}"` : null,
       selectedSorting ? `Sort: ${selectedSorting}` : null,
       this.exactPlayers != null ? `Players: ${this.exactPlayers}` : null,
       this.exactAge != null ? `Age: ${this.exactAge}+` : null,
-      selectedEditors?.length
+      selectedEditors.length
         ? `Publishers: ${selectedEditors.join(', ')}`
         : null,
       this.selectedSize ? `Size: ${this.selectedSize.toUpperCase()}` : null,
     ].filter((filter): filter is string => filter !== null);
   }
 
-  private syncCardSelection(): void {
-    setTimeout(() => {
-      const elements = this.innerElements();
-      const selected = this.printGames();
-
-      elements.forEach((element, index) => {
-        const game = this.filteredGames()[index];
-        if (game && selected.some((g) => g.name === game.name)) {
-          element.nativeElement.classList.add('active');
-        }
-      });
-    }, 0);
-  }
-
-  toggleCardFlip(game: GameCard, index: number) {
-    const targetElement = this.innerElements()[index];
-    if (!targetElement) return;
-
-    const isCurrentlySelected =
-      targetElement.nativeElement.classList.contains('active');
-    targetElement.nativeElement.classList.toggle('active');
+  toggleCardFlip(game: GameCard): void {
+    const selected = this.printGames();
+    const isCurrentlySelected = selected.some((g) => g.name === game.name);
 
     if (isCurrentlySelected) {
-      this.printGames.set(
-        this.printGames().filter((g) => g.name !== game.name),
-      );
-    } else {
-      if (!this.printGames().some((g) => g.name === game.name)) {
-        this.printGames.set([...this.printGames(), game]);
-      }
+      this.printGames.set(selected.filter((g) => g.name !== game.name));
+      return;
     }
+
+    this.printGames.set([...selected, game]);
   }
 
   openGameOfTheDay(): void {
@@ -422,6 +424,7 @@ export class GamesComponent implements OnInit, AfterViewInit {
     const filtered = this.filteredGames();
     const selected = this.printGames();
     if (filtered.length === 0) return true;
+
     return filtered.every((g) => selected.some((s) => s.name === g.name));
   }
 
@@ -439,9 +442,6 @@ export class GamesComponent implements OnInit, AfterViewInit {
 
   unselectAll(): void {
     this.printGames.set([]);
-    this.innerElements().forEach((element) => {
-      element.nativeElement.classList.remove('active');
-    });
   }
 
   selectAllFiltered(): void {
@@ -456,10 +456,8 @@ export class GamesComponent implements OnInit, AfterViewInit {
         merged.push(g);
       }
     });
+
     this.printGames.set(merged);
-    this.innerElements().forEach((element) => {
-      element.nativeElement.classList.add('active');
-    });
   }
 
   async exportSelectedAsPdf(): Promise<void> {
@@ -473,14 +471,14 @@ export class GamesComponent implements OnInit, AfterViewInit {
             ? this.selectedChipTypes()
             : undefined,
         selectedDropdownTypes:
-          this.selectedTypes.value && this.selectedTypes.value.length > 0
-            ? this.selectedTypes.value
+          (this.selectedTypes.value?.length ?? 0) > 0
+            ? (this.selectedTypes.value ?? undefined)
             : undefined,
         exactPlayers: this.exactPlayers,
         exactAge: this.exactAge,
         selectedEditors:
-          this.selectedEditors.value && this.selectedEditors.value.length > 0
-            ? this.selectedEditors.value
+          (this.selectedEditors.value?.length ?? 0) > 0
+            ? (this.selectedEditors.value ?? undefined)
             : undefined,
         selectedSize: this.selectedSize || undefined,
         playedFilter: this.playedGames()

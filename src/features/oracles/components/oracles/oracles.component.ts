@@ -30,7 +30,7 @@ import { ExportService } from '../../../../core/services/export/export.service';
     ScrollToTopBtnComponent,
   ],
   templateUrl: './oracles.component.html',
-  styleUrl: '../../../../shared/styles/common-styles.scss',
+  styleUrl: './oracles.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OraclesComponent implements OnInit, AfterViewInit {

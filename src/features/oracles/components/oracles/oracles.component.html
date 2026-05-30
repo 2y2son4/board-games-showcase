@@ -1,62 +1,60 @@
 <app-loader></app-loader>
 
 @if (oraclesList().length > 0) {
-  <div class="content">
-    <div>
-      <div class="side">
-        <div class="side__container">
-          <h2 class="side__title">Oracles</h2>
-          <h3 class="side__number">
-            ({{printOracles().length}} of {{oraclesList().length}} selected)
-          </h3>
-          <button type="button" mat-raised-button color="primary" class="side__export"
-            [disabled]="printOracles().length === 0" (click)="exportSelectedAsPdf()">
-            Export to PDF
-          </button>
-        </div>
-        <app-scroll-to-top-btn class="side__container-scroll"></app-scroll-to-top-btn>
+  <div class="oracles-layout">
+    <div class="oracles-sidebar">
+      <div class="oracles-sidebar__container">
+        <h2 class="oracles-sidebar__title">Oracles</h2>
+        <h3 class="oracles-sidebar__number">
+          ({{printOracles().length}} of {{oraclesList().length}} selected)
+        </h3>
+        <button type="button" mat-raised-button color="primary" class="oracles-sidebar__export"
+          [disabled]="printOracles().length === 0" (click)="exportSelectedAsPdf()">
+          Export to PDF
+        </button>
       </div>
+      <app-scroll-to-top-btn class="oracles-sidebar__container-scroll"></app-scroll-to-top-btn>
     </div>
-    <div class="card">
-      <ul class="card__container">
+    <div class="oracles-card">
+      <ul class="oracles-card__container">
         @for (oracle of oraclesList();let index = $index; track oracle.name){
-          <li class="card__list">
-            <div class="card__list-inner" (click)="toggleCardFlip(oracle, index)"
+          <li class="oracles-card__list">
+            <div class="oracles-card__list-inner" (click)="toggleCardFlip(oracle, index)"
               (keydown.enter)="toggleCardFlip(oracle, index)"
               (keydown.space)="$event.preventDefault(); toggleCardFlip(oracle, index)" tabindex="0" role="button"
               #innerElement>
-              <div class="card__list-front">
-                <h2 class="card__title">{{oracle.name}}</h2>
+              <div class="oracles-card__list-front">
+                <h2 class="oracles-card__title">{{oracle.name}}</h2>
                 @if (oracle.image) {
-                  <div class="card__image-container">
-                    <img class="card__image" loading="lazy" [ngSrc]="oraclesImageBase + '/' + oracle.image + '.webp'"
+                  <div class="oracles-card__image-container">
+                    <img class="oracles-card__image" loading="lazy" [ngSrc]="oraclesImageBase + '/' + oracle.image + '.webp'"
                       fill sizes="(max-width: 767px) 80vw, (max-width: 1199px) 40vw, 25vw" alt="{{oracle.name}}">
                   </div>
                 }
                 @if (oracle.artist) {
-                  <h2 class="card__title">by {{oracle.artist}}</h2>
+                  <h2 class="oracles-card__title">by {{oracle.artist}}</h2>
                 }
               </div>
-              <div class="card__list-back">
-                <div class="card__info card__info-scroll">
-                  <div class="card__info-title">
+              <div class="oracles-card__list-back">
+                <div class="oracles-card__info oracles-card__info-scroll">
+                  <div class="oracles-card__info-title">
                     <div>
-                      <p class="card__name"> {{oracle.name}}
+                      <p class="oracles-card__name"> {{oracle.name}}
                         {{oracle.artist ? 'by ' + oracle.artist : ''}}
                       </p>
                     </div>
                   </div>
-                  <div class="line"></div>
+                  <div class="oracles-line"></div>
                   @if (oracle.description.length > 0) {
                     @for (paragraph of oracle.description; let index = $index; track index) {
-                      <p class="card__description">{{paragraph}}</p>
+                      <p class="oracles-card__description">{{paragraph}}</p>
                     }
                   } @else {
-                    <p class="card__description">TBI</p>
+                    <p class="oracles-card__description">TBI</p>
                   }
                 </div>
                 @if (oracle.web) {
-                  <div class="card__web">
+                  <div class="oracles-card__web">
                     <a href="{{oracle.web}}" target="_blank">Web</a>
                   </div>
                 }
