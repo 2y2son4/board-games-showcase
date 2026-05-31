@@ -52,7 +52,6 @@ export class GameDetailsComponent implements OnChanges {
           this.asObject(json['boardgames'])['boardgame'],
         );
       });
-    console.log(this.gameDetails);
   }
 
   cleanGameDetails(details: XmlNodeValue | undefined): GameDetails {
@@ -77,8 +76,6 @@ export class GameDetailsComponent implements OnChanges {
       ),
       size: this.extractNames(game['size'] as XmlNodeValue),
     };
-    console.log(details);
-    console.log(cleanedGame);
     return cleanedGame;
   }
 

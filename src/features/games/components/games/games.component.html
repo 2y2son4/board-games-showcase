@@ -59,7 +59,7 @@
       [selectedSize]="selectedSize" [searchQuery]="searchQuery" [gamesImageBase]="gamesImageBase"
       [hasMore]="hasMoreVisibleGames()" [isLoadingMore]="isLoadingMoreGames()" (cardToggled)="toggleCardFlip($event)"
       (chipTypesChanged)="onTypeChange($event)" (sizeChanged)="onSizeChange($event)"
-      (loadMoreRequested)="loadMoreGames()"></app-games-cards>
+      (loadMoreRequested)="loadMoreGames()" (resetRequested)="restartFilters()"></app-games-cards>
 
     <div class="divider"></div>
 

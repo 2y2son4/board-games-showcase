@@ -43,6 +43,7 @@ import { GamesFilterForm } from './games-filter-form.model';
 })
 export class GamesComponent implements OnInit {
   private static readonly INITIAL_VISIBLE_GAMES = 9;
+  private static readonly LOAD_MORE_BATCH_SIZE = 9;
   private static readonly LOAD_MORE_DELAY_MS = 180;
 
   readonly commonFunctions = inject(CommonFunctionsService);
@@ -399,7 +400,7 @@ export class GamesComponent implements OnInit {
 
     this.#loadMoreTimeoutId = window.setTimeout(() => {
       this.visibleGamesCount.update(
-        (count) => count + GamesComponent.INITIAL_VISIBLE_GAMES,
+        (count) => count + GamesComponent.LOAD_MORE_BATCH_SIZE,
       );
       this.isLoadingMoreGames.set(false);
       this.#loadMoreTimeoutId = undefined;

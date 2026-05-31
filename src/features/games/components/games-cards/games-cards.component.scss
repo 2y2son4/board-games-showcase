@@ -286,6 +286,8 @@
   }
 
   &__no-data {
+    display: flex;
+    align-items: center;
     font-size: 18px;
     text-align: center;
     margin: 16px;

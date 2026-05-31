@@ -11,6 +11,7 @@ import {
 } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule, MatChipListboxChange } from '@angular/material/chips';
 
@@ -23,6 +24,7 @@ import { GameCard } from '../../models';
   imports: [
     CommonModule,
     HighlightTextPipe,
+    MatButtonModule,
     MatCardModule,
     MatChipsModule,
     NgOptimizedImage,
@@ -53,6 +55,7 @@ export class GamesCardsComponent {
   chipTypesChanged = output<string[]>();
   sizeChanged = output<string>();
   loadMoreRequested = output<void>();
+  resetRequested = output<void>();
 
   constructor() {
     effect(() => {

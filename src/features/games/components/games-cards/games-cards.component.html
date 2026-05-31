@@ -23,7 +23,7 @@
 
           <div class="games-card__list-back" [class.border-pink]="game.isPlayed">
             <img class="games-card__flag games-card__language" [class.border-pink]="game.isPlayed"
-              src="/assets/flags/{{game.language}}-flag.png" alt="flag">
+              src="assets/flags/{{game.language}}-flag.png" alt="flag">
             <div class="games-card__info games-card__info-scroll">
               <div class="games-card__info-title">
                 <p class="games-card__name" [innerHTML]="game.name | highlightText:searchQuery()"></p>
@@ -107,6 +107,9 @@
   @if (games().length === 0) {
     <mat-card class="games-card__no-data">
       <mat-card-content>There are no matching results.</mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="resetRequested.emit()">Reset filters</button>
+      </mat-card-actions>
     </mat-card>
   }
 
