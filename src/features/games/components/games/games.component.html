@@ -1,0 +1,71 @@
+<div #topPage></div>
+@if (gamesList && !isLoading()) {
+  <div class="games-layout">
+    <div>
+      <div class="games-sidebar">
+        <div class="games-sidebar__container">
+          <h3 class="games-sidebar__number">{{playedGames() ? 'Played' : unPlayedGames() ? 'Unplayed' : ''}}</h3>
+          <h4 class="games-sidebar__number">
+            @if (selectedChipTypes().length > 0) {
+              @for (type of selectedChipTypes(); let index = $index; let first = $first; let last = $last; track index) {
+                <span>{{!last ? (index === 0 ? '' : ', ') : (selectedChipTypes().length > 1 ? ' and ' : '')}}
+                  {{!first ? type.toLowerCase() : type}}</span>
+              }
+            }
+            @if ((selectedTypes.value ?? []).length > 0 && selectedChipTypes().length === 0) {
+              @for (type of (selectedTypes.value ?? []); let index = $index; let first = $first; let last = $last; track index) {
+                <span>{{!last ? (index === 0 ? '' : ', ') : ((selectedTypes.value ?? []).length > 1 ? ' or ' : '')}}
+                  {{!first ? type.toLowerCase() : type}}</span>
+              }
+            }
+          </h4>
+
+          <h2 class="games-sidebar__title">Games</h2>
+          <h3 class="games-sidebar__number">( {{printGames().length}} of {{filteredGames().length}} selected)</h3>
+
+          <button type="button" mat-raised-button color="primary" class="games-sidebar__reset"
+            (click)="restartFilters()">
+            Reset
+          </button>
+          <button type="button" mat-raised-button color="primary" class="button-system games-sidebar__export"
+            (click)="openGameOfTheDay()">
+            Game of the Day
+          </button>
+          <button type="button" mat-raised-button color="primary" class="button-system games-sidebar__export"
+            [disabled]="printGames().length === 0" (click)="exportSelectedAsPdf()">
+            Export to PDF
+          </button>
+          <button class="button-system games-sidebar__export" type="button" mat-raised-button color="primary"
+            [disabled]="!showSelectAllBtn() && printGames().length === 0" (click)="toggleSelectAll()">
+            {{ isUnselectMode() ? 'Unselect all' : 'Select all' }}
+          </button>
+
+          @let appliedFilters = getAppliedFiltersSummary();
+          @if (appliedFilters.length > 0) {
+            <div class="games-sidebar__applied-filters">
+              <ul class="games-sidebar__applied-filters-list">
+                @for (filterLabel of appliedFilters; track filterLabel) {
+                  <li class="games-sidebar__number games-sidebar__applied-filters-item">{{filterLabel}}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+        <app-scroll-to-top-btn class="games-sidebar__container-scroll"></app-scroll-to-top-btn>
+      </div>
+    </div>
+
+    <app-games-cards [games]="visibleGames()" [selectedGames]="printGames()" [selectedChipTypes]="selectedChipTypes()"
+      [selectedSize]="selectedSize" [searchQuery]="searchQuery" [gamesImageBase]="gamesImageBase"
+      [hasMore]="hasMoreVisibleGames()" [isLoadingMore]="isLoadingMoreGames()" (cardToggled)="toggleCardFlip($event)"
+      (chipTypesChanged)="onTypeChange($event)" (sizeChanged)="onSizeChange($event)"
+      (loadMoreRequested)="loadMoreGames()" (resetRequested)="restartFilters()"></app-games-cards>
+
+    <div class="divider"></div>
+
+    <app-games-filters [filterForm]="gamesFilterForm" [sortingSelectLabels]="sortingSelectLabels" [types]="types"
+      [editors]="editors" [sizes]="sizes" [showPlayedBtn]="showPlayedBtn()" [showUnplayedBtn]="showUnplayedBtn()"
+      (playedToggled)="togglePlayed()" (unplayedToggled)="toggleUnPlayed()" (resetClicked)="restartFilters()"
+      (typeSearchChanged)="onSearchTypes($event)" (editorSearchChanged)="onSearchEditors($event)"></app-games-filters>
+  </div>
+}

@@ -1,0 +1,91 @@
+@use "../../core/styles/variables" as variables;
+@use "../../core/styles/scrollbar.scss";
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 2px;
+}
+
+.side__reset {
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.line {
+  border: 1px solid;
+  margin-bottom: 8px;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.border {
+  &-pink {
+    border: 4px solid variables.$highlight-color;
+
+    @media screen and (max-width: 767px) {
+      border-width: 2px;
+    }
+  }
+
+  &-system {
+    border: 4px solid variables.$white;
+    color: variables.$white;
+
+    @media screen and (max-width: 767px) {
+      border-width: 2px;
+    }
+  }
+}
+
+.button {
+  &-pink:hover {
+    background-color: variables.$highlight-color;
+  }
+
+  &-system:hover {
+    background-color: variables.$white;
+    color: variables.$black;
+  }
+
+  &-hover {
+    &-pink {
+      background-color: variables.$highlight-color;
+    }
+
+    &-system {
+      background-color: variables.$white;
+      color: variables.$black;
+    }
+  }
+}
+
+.font {
+  &-pink {
+    color: variables.$highlight-color;
+  }
+
+  &-system {
+    color: variables.$white;
+  }
+}

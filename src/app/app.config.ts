@@ -1,4 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
+import { IMAGE_CONFIG } from '@angular/common';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -15,5 +16,11 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideAnimationsAsync(),
     provideHttpClient(withFetch(), withJsonpSupport()),
+    {
+      provide: IMAGE_CONFIG,
+      useValue: {
+        disableImageSizeWarning: true,
+      },
+    },
   ],
 };

@@ -6,15 +6,20 @@
       </div>
     </mat-toolbar>
     <div class=" route__container">
-      <button class="route__buttons route__buttons-half" (click)="selectComponent('games')"
-        [ngClass]="{'route__color': isGames}">
-        Games</button>
-      <button class="route__buttons route__buttons-half" (click)="selectComponent('oracles')"
-        [ngClass]="{'route__color': isOracles}">Oracles</button>
+      <button class="route__buttons route__buttons-half" routerLink="/games" routerLinkActive="route__color">
+        Games
+      </button>
+      <button class="route__buttons route__buttons-half" routerLink="/oracles" routerLinkActive="route__color">
+        Oracles
+      </button>
+      <!-- <button
+        class="route__buttons route__buttons-full"
+        routerLink="/search"
+        routerLinkActive="route__color"
+      >
+        BGG Search
+      </button> -->
     </div>
   </header>
-  @if (isGames) {
-    <app-games></app-games>}
-  @if (isOracles){
-    <app-oracles></app-oracles>}
+  <router-outlet></router-outlet>
 </main>

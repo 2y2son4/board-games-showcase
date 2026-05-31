@@ -1,26 +1,49 @@
 <div class="color-settings-panel" mat-elevation-z8>
-  <div *ngIf="contrastWarning" style="color: #b71c1c; font-weight: 500; margin-bottom: 0.5em;">
-    {{ contrastWarning }}
+  <div class="settings-header">
+    <div>
+      <p class="eyebrow">Appearance</p>
+      <h2>Theme colors</h2>
+      <p class="description">
+        Tune the page background and text colors with a quick preview before you commit.
+      </p>
+    </div>
+    <div class="preview-card" [style.backgroundColor]="bgColor" [style.color]="fontColor" aria-hidden="true">
+      <span class="preview-card__label">Preview</span>
+      <span class="preview-card__value">Aa</span>
+    </div>
   </div>
-  <mat-form-field appearance="fill" class="color-field">
-    <mat-label>Background color</mat-label>
-    <mat-select [(ngModel)]="bgColor" (selectionChange)="setBgColor($event.value)">
-      <mat-option *ngFor="let color of commonBgColors" [value]="color.value">
-        <span [style.background]="color.value" class="color-dot"></span> {{ color.name }}
-      </mat-option>
-    </mat-select>
-    <input matInput type="color" [(ngModel)]="bgColor" (input)="setBgColor(bgColor)"
-      aria-label="Pick background color" />
-  </mat-form-field>
 
-  <mat-form-field appearance="fill" class="color-field">
-    <mat-label>Font color</mat-label>
-    <mat-select [(ngModel)]="fontColor" (selectionChange)="setFontColor($event.value)">
-      <mat-option *ngFor="let color of commonFontColors" [value]="color.value">
-        <span [style.background]="color.value" class="color-dot"></span> {{ color.name }}
-      </mat-option>
-    </mat-select>
-    <input matInput type="color" [(ngModel)]="fontColor" (input)="setFontColor(fontColor)"
-      aria-label="Pick font color" />
-  </mat-form-field>
+  @if (contrastWarning) {
+    <div class="contrast-warning">{{ contrastWarning }}</div>
+  }
+
+  <div class="settings-grid">
+    <mat-form-field appearance="fill" class="color-field">
+      <mat-label>Background color</mat-label>
+      <mat-select [(ngModel)]="bgColor" (selectionChange)="setBgColor($event.value)">
+        @for (color of commonBgColors; track color.value) {
+          <mat-option [value]="color.value">
+            <span [style.background]="color.value" class="color-dot"></span>
+            {{ color.name }}
+          </mat-option>
+        }
+      </mat-select>
+      <input matInput type="color" [(ngModel)]="bgColor" (input)="setBgColor(bgColor)"
+        aria-label="Pick background color" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="color-field">
+      <mat-label>Font color</mat-label>
+      <mat-select [(ngModel)]="fontColor" (selectionChange)="setFontColor($event.value)">
+        @for (color of commonFontColors; track color.value) {
+          <mat-option [value]="color.value">
+            <span [style.background]="color.value" class="color-dot"></span>
+            {{ color.name }}
+          </mat-option>
+        }
+      </mat-select>
+      <input matInput type="color" [(ngModel)]="fontColor" (input)="setFontColor(fontColor)"
+        aria-label="Pick font color" />
+    </mat-form-field>
+  </div>
 </div>
