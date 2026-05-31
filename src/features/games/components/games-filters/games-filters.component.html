@@ -50,7 +50,7 @@
 
   <mat-form-field>
     <mat-label>Filter by size</mat-label>
-    <mat-select formControlName="selectedSize">
+    <mat-select formControlName="selectedSize" (selectionChange)="sizeFilterChanged.emit($event)">
       @for (size of sizes(); track size) {
         <mat-option [value]="size">{{size.toUpperCase()}}</mat-option>
       }

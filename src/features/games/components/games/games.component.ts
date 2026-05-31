@@ -14,7 +14,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import { MatSelectChange } from '@angular/material/select';
 import { Subject, debounceTime, takeUntil } from 'rxjs';
 
 import { FilterFunctionsService } from '../../../../core/functions/filter/filter-functions.service';
@@ -250,10 +249,8 @@ export class GamesComponent implements OnInit {
     this.applyAllFilters();
   }
 
-  onSizeFilterChange(event: MatSelectChange): void {
+  onSizeFilterChange(): void {
     this.unselectAll();
-    this.gamesFilterForm.controls.selectedSize.setValue(event.value ?? null);
-    this.applyAllFilters();
   }
 
   onSearchTypes(target: EventTarget | string | null): void {
