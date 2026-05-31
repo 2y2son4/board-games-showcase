@@ -1,9 +1,13 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  DestroyRef,
+  ElementRef,
+  effect,
   inject,
   input,
   output,
+  viewChild,
 } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 
@@ -29,6 +33,10 @@ import { GameCard } from '../../models';
 })
 export class GamesCardsComponent {
   readonly commonFunctions = inject(CommonFunctionsService);
+  private readonly destroyRef = inject(DestroyRef);
+
+  private intersectionObserver?: IntersectionObserver;
+  private loadMoreRequestedForBatch = false;
 
   games = input<GameCard[]>([]);
   selectedGames = input<GameCard[]>([]);
@@ -36,10 +44,54 @@ export class GamesCardsComponent {
   selectedSize = input<string>('');
   searchQuery = input<string>('');
   gamesImageBase = input<string>('');
+  hasMore = input(false);
+  isLoadingMore = input(false);
+
+  loadMoreTrigger = viewChild<ElementRef<HTMLDivElement>>('loadMoreTrigger');
 
   cardToggled = output<GameCard>();
   chipTypesChanged = output<string[]>();
   sizeChanged = output<string>();
+  loadMoreRequested = output<void>();
+
+  constructor() {
+    effect(() => {
+      this.games();
+      this.hasMore();
+      this.loadMoreRequestedForBatch = false;
+    });
+
+    effect(() => {
+      const trigger = this.loadMoreTrigger();
+      const hasMore = this.hasMore();
+
+      this.intersectionObserver?.disconnect();
+
+      if (!trigger || !hasMore) {
+        return;
+      }
+
+      this.intersectionObserver = new IntersectionObserver(
+        ([entry]) => {
+          if (!entry?.isIntersecting || this.loadMoreRequestedForBatch) {
+            return;
+          }
+
+          this.loadMoreRequestedForBatch = true;
+          this.loadMoreRequested.emit();
+        },
+        {
+          rootMargin: '300px 0px',
+        },
+      );
+
+      this.intersectionObserver.observe(trigger.nativeElement);
+    });
+
+    this.destroyRef.onDestroy(() => {
+      this.intersectionObserver?.disconnect();
+    });
+  }
 
   isSelected(game: GameCard): boolean {
     return this.selectedGames().some((selected) => selected.name === game.name);

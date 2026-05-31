@@ -4,6 +4,7 @@ import {
   DestroyRef,
   ElementRef,
   OnInit,
+  computed,
   inject,
   signal,
   viewChild,
@@ -41,6 +42,9 @@ import { GamesFilterForm } from './games-filter-form.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesComponent implements OnInit {
+  private static readonly INITIAL_VISIBLE_GAMES = 9;
+  private static readonly LOAD_MORE_DELAY_MS = 180;
+
   readonly commonFunctions = inject(CommonFunctionsService);
   readonly filterFunctions = inject(FilterFunctionsService);
   private readonly httpDataService = inject(HttpService);
@@ -57,14 +61,22 @@ export class GamesComponent implements OnInit {
   editors: string[] = [];
 
   isLoading = signal(false);
+  isLoadingMoreGames = signal(false);
   selectedChipTypes = signal<string[]>([]);
   filteredGames = signal<GameCard[]>([]);
+  visibleGamesCount = signal(GamesComponent.INITIAL_VISIBLE_GAMES);
   printGames = signal<GameCard[]>([]);
   playedGames = signal(false);
   unPlayedGames = signal(false);
   showPlayedBtn = signal(true);
   showUnplayedBtn = signal(true);
   showSelectAllBtn = signal(false);
+  visibleGames = computed(() =>
+    this.filteredGames().slice(0, this.visibleGamesCount()),
+  );
+  hasMoreVisibleGames = computed(
+    () => this.visibleGames().length < this.filteredGames().length,
+  );
 
   sortingSelectLabels: string[] = [];
   readonly gamesImageBase: string;
@@ -125,11 +137,16 @@ export class GamesComponent implements OnInit {
 
   readonly #destroyRef = inject(DestroyRef);
   readonly #destroy$ = new Subject<void>();
+  #loadMoreTimeoutId: number | undefined;
 
   constructor() {
     this.gamesImageBase = this.httpDataService.gamesImageBase;
 
     this.#destroyRef.onDestroy(() => {
+      if (this.#loadMoreTimeoutId !== undefined) {
+        window.clearTimeout(this.#loadMoreTimeoutId);
+      }
+
       this.#destroy$.next();
       this.#destroy$.complete();
     });
@@ -161,6 +178,7 @@ export class GamesComponent implements OnInit {
 
         this.gamesList = sortedGames;
         this.filteredGames.set(sortedGames);
+        this.resetVisibleGames();
 
         this.allTypes = this.commonFunctions.extractUniqueValues(
           sortedGames,
@@ -350,6 +368,7 @@ export class GamesComponent implements OnInit {
 
     const result = this.filterFunctions.applyFilters(this.gamesList, criteria);
     this.filteredGames.set(result);
+    this.resetVisibleGames();
 
     const selectedNames = new Set(result.map((g) => g.name));
     this.printGames.set(
@@ -369,6 +388,32 @@ export class GamesComponent implements OnInit {
     );
 
     this.showSelectAllBtn.set(hasActiveFilters && result.length > 1);
+  }
+
+  loadMoreGames(): void {
+    if (!this.hasMoreVisibleGames() || this.isLoadingMoreGames()) {
+      return;
+    }
+
+    this.isLoadingMoreGames.set(true);
+
+    this.#loadMoreTimeoutId = window.setTimeout(() => {
+      this.visibleGamesCount.update(
+        (count) => count + GamesComponent.INITIAL_VISIBLE_GAMES,
+      );
+      this.isLoadingMoreGames.set(false);
+      this.#loadMoreTimeoutId = undefined;
+    }, GamesComponent.LOAD_MORE_DELAY_MS);
+  }
+
+  private resetVisibleGames(): void {
+    this.visibleGamesCount.set(GamesComponent.INITIAL_VISIBLE_GAMES);
+    this.isLoadingMoreGames.set(false);
+
+    if (this.#loadMoreTimeoutId !== undefined) {
+      window.clearTimeout(this.#loadMoreTimeoutId);
+      this.#loadMoreTimeoutId = undefined;
+    }
   }
 
   filterGamesByExactPlayers(): void {

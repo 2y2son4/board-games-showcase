@@ -55,10 +55,11 @@
       </div>
     </div>
 
-    <app-games-cards [games]="filteredGames()" [selectedGames]="printGames()" [selectedChipTypes]="selectedChipTypes()"
+    <app-games-cards [games]="visibleGames()" [selectedGames]="printGames()" [selectedChipTypes]="selectedChipTypes()"
       [selectedSize]="selectedSize" [searchQuery]="searchQuery" [gamesImageBase]="gamesImageBase"
-      (cardToggled)="toggleCardFlip($event)" (chipTypesChanged)="onTypeChange($event)"
-      (sizeChanged)="onSizeChange($event)"></app-games-cards>
+      [hasMore]="hasMoreVisibleGames()" [isLoadingMore]="isLoadingMoreGames()" (cardToggled)="toggleCardFlip($event)"
+      (chipTypesChanged)="onTypeChange($event)" (sizeChanged)="onSizeChange($event)"
+      (loadMoreRequested)="loadMoreGames()"></app-games-cards>
 
     <div class="divider"></div>
 

@@ -259,6 +259,19 @@
     gap: 8px;
   }
 
+  &__loading-more {
+    width: fit-content;
+    margin: 8px auto 0;
+    padding: 8px 14px;
+    border: 1px solid variables.$white;
+    border-radius: 999px;
+    background-color: rgb(255 255 255 / 0.75);
+    color: variables.$black;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.03rem;
+  }
+
   &__meta-row {
     display: flex;
     justify-content: space-between;

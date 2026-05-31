@@ -113,4 +113,12 @@
       <mat-card-content>There are no matching results.</mat-card-content>
     </mat-card>
   }
+
+  @if (hasMore() && games().length > 0) {
+    <div #loadMoreTrigger aria-hidden="true"></div>
+  }
+
+  @if (isLoadingMore()) {
+    <div class="games-card__loading-more" aria-live="polite">Loading more games...</div>
+  }
 </div>
