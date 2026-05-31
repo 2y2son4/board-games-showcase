@@ -574,13 +574,21 @@ describe('GamesComponent', () => {
     component.selectedChipTypes.set([]);
     component.selectedSize = 's';
 
+<<<<<<< HEAD:src/features/games/components/games/games.component.spec.ts
     component.onSizeFilterChange({ value: 'm' } as unknown as MatSelectChange);
+=======
+    component.onSizeFilterChange({ value: 'm' } as any);
+>>>>>>> origin/main:src/components/games/games.component.spec.ts
 
     expect(component.printGames()).toEqual([]);
     expect(component.filteredGames().length).toBe(1);
     expect(component.filteredGames()[0].size).toBe('m');
   });
 
+<<<<<<< HEAD:src/features/games/components/games/games.component.spec.ts
+=======
+
+>>>>>>> origin/main:src/components/games/games.component.spec.ts
   describe('openGameOfTheDay', () => {
     it('should open the GameOfTheDayComponent dialog', () => {
       const dialog = TestBed.inject(MatDialog);
