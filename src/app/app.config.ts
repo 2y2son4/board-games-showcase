@@ -1,6 +1,6 @@
 import { ApplicationConfig } from '@angular/core';
 import { IMAGE_CONFIG } from '@angular/common';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -13,7 +13,7 @@ import {
 export const appConfig: ApplicationConfig = {
   // los providers se añadirían al routing
   providers: [
-    provideRouter(routes),
+    provideRouter(routes, withHashLocation()),
     provideAnimationsAsync(),
     provideHttpClient(withFetch(), withJsonpSupport()),
     {
