@@ -12,8 +12,8 @@
             @if (game.image) {
               <div class="games-card__image-container">
                 <img class="games-card__image" [ngSrc]="gamesImageBase() + '/' + game.image + '.webp'" fill
-                  sizes="(max-width: 767px) 80vw, (max-width: 1199px) 40vw, 25vw"
-                  [attr.loading]="index < 4 ? 'eager' : 'lazy'" [attr.fetchpriority]="index === 0 ? 'high' : 'auto'"
+                  sizes="(max-width: 767px) 80vw, (max-width: 1199px) 40vw, 25vw" [priority]="index < 4"
+                  [attr.loading]="index < 4 ? 'eager' : 'lazy'" [attr.fetchpriority]="index < 4 ? 'high' : 'auto'"
                   alt="{{game.name}}">
               </div>
             }

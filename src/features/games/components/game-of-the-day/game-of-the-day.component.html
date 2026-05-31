@@ -37,7 +37,7 @@
             @if (game.image) {
               <div class="gotd__image-container">
                 <img class="gotd__image" loading="lazy" [ngSrc]="gamesImageBase + '/' + game.image + '.webp'" fill
-                  sizes="(max-width: 767px) 80vw, 300px" alt="{{ game.name }}">
+                  sizes="(max-width: 767px) 80vw, 40vw" alt="{{ game.name }}">
               </div>
             }
             <p class="gotd__card-title">{{ game.editor ? 'by ' + game.editor : '-' }}</p>

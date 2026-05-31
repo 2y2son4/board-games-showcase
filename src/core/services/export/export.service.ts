@@ -4,28 +4,17 @@ import type { jsPDF as JsPdf } from 'jspdf';
 import { GameCard } from '../../../features/games/models';
 import { OracleCard } from '../../../features/oracles/models';
 
-type JsPdfCtor = new (...args: unknown[]) => JsPdf;
-
-type JsPdfWindow = Window & {
-  jspdf?: {
-    jsPDF?: JsPdfCtor;
-  };
-};
-
 @Injectable({
   providedIn: 'root',
 })
 export class ExportService {
-  private static readonly JSPD_UMD_URL =
-    'https://cdn.jsdelivr.net/npm/jspdf@4.2.1/dist/jspdf.umd.min.js';
-
-  private static jsPdfScriptLoadPromise: Promise<void> | null = null;
-
   async exportSelectedOraclesAsPdf(
     oracles: OracleCard[],
     filenameBase = 'selected-oracles',
   ): Promise<void> {
-    const JsPDFCtor = await this.loadJsPdfCtor();
+    // Lazy import so Jest/tests and initial load don't need to evaluate jsPDF.
+    const jsPDFModule = await import('jspdf');
+    const JsPDFCtor = jsPDFModule.jsPDF;
     const doc = new JsPDFCtor({
       orientation: 'p',
       unit: 'pt',
@@ -92,7 +81,9 @@ export class ExportService {
       selectedSize?: string;
     },
   ): Promise<void> {
-    const JsPDFCtor = await this.loadJsPdfCtor();
+    // Lazy import so Jest/tests and initial load don't need to evaluate jsPDF.
+    const jsPDFModule = await import('jspdf');
+    const JsPDFCtor = jsPDFModule.jsPDF;
     const doc = new JsPDFCtor({
       orientation: 'p',
       unit: 'pt',
@@ -319,62 +310,5 @@ export class ExportService {
     if (dotIndex === -1) return `${filename}-${ts}`;
 
     return `${filename.slice(0, dotIndex)}-${ts}${filename.slice(dotIndex)}`;
-  }
-
-  private async loadJsPdfCtor(): Promise<JsPdfCtor> {
-    const browserWindow =
-      typeof window !== 'undefined' ? (window as JsPdfWindow) : null;
-
-    const existingCtor = browserWindow?.jspdf?.jsPDF;
-    if (existingCtor) {
-      return existingCtor;
-    }
-
-    if (
-      typeof document === 'undefined' ||
-      !browserWindow ||
-      this.isJestRuntime()
-    ) {
-      const moduleName = 'jspdf';
-      const jsPdfModule = await import(moduleName);
-      const ctor = jsPdfModule.jsPDF as JsPdfCtor | undefined;
-      if (!ctor) {
-        throw new Error('Could not load jsPDF constructor.');
-      }
-      return ctor;
-    }
-
-    if (!ExportService.jsPdfScriptLoadPromise) {
-      ExportService.jsPdfScriptLoadPromise = new Promise<void>(
-        (resolve, reject) => {
-          const script = document.createElement('script');
-          script.src = ExportService.JSPD_UMD_URL;
-          script.async = true;
-          script.onload = () => resolve();
-          script.onerror = () =>
-            reject(new Error('Failed to load jsPDF runtime script.'));
-          document.head.appendChild(script);
-        },
-      );
-    }
-
-    await ExportService.jsPdfScriptLoadPromise;
-
-    const loadedCtor = browserWindow.jspdf?.jsPDF;
-    if (!loadedCtor) {
-      throw new Error('jsPDF loaded script did not expose window.jspdf.jsPDF.');
-    }
-
-    return loadedCtor;
-  }
-
-  private isJestRuntime(): boolean {
-    const maybeGlobal = globalThis as {
-      process?: {
-        env?: Record<string, string | undefined>;
-      };
-    };
-
-    return Boolean(maybeGlobal.process?.env?.['JEST_WORKER_ID']);
   }
 }
