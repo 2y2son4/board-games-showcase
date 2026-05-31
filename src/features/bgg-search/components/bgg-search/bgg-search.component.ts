@@ -143,7 +143,15 @@ export class BggSearchComponent {
   }
 
   filterResults(json: BggResultsRaw): BggResults {
-    const boardgames = json.boardgames?.boardgame ?? [];
+    const boardgamesValue = json.boardgames?.boardgame as
+      | BggGameRaw
+      | BggGameRaw[]
+      | undefined;
+    const boardgames = Array.isArray(boardgamesValue)
+      ? boardgamesValue
+      : boardgamesValue
+        ? [boardgamesValue]
+        : [];
     const normalizedGames = boardgames
       .map((game) => this.normalizeGame(game))
       .filter((game): game is BggGame => game !== null);
