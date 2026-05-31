@@ -1,44 +1,34 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
 import { of, throwError } from 'rxjs';
-import { LoaderService } from '../../../../core/services/loader/loader.service';
 import { BggSearchComponent } from './bgg-search.component';
 
 class HttpClientMock {
   get = jest.fn();
-}
-class LoaderServiceMock {
-  show = jest.fn();
-  hide = jest.fn();
 }
 
 describe('BggSearchComponent', () => {
   let component: BggSearchComponent;
   let fixture: ComponentFixture<BggSearchComponent>;
   let http: HttpClientMock;
-  let loaderService: LoaderServiceMock;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [BggSearchComponent],
       providers: [
         { provide: HttpClient, useClass: HttpClientMock },
-        { provide: LoaderService, useClass: LoaderServiceMock },
       ],
     }).compileComponents();
     fixture = TestBed.createComponent(BggSearchComponent);
     component = fixture.componentInstance;
     http = TestBed.inject(HttpClient) as unknown as HttpClientMock;
-    loaderService = TestBed.inject(
-      LoaderService,
-    ) as unknown as LoaderServiceMock;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should call loaderService.show and hide, and handle successful search', () => {
+  it('should set isLoading and handle successful search', () => {
     const xmlString =
       '<boardgames><boardgame><name>#text</name><yearpublished>#text</yearpublished></boardgame></boardgames>';
     const response = xmlString;
@@ -67,8 +57,6 @@ describe('BggSearchComponent', () => {
     });
     component.searchTerm = 'test';
     component.search();
-    expect(loaderService.show).toHaveBeenCalled();
-    expect(loaderService.hide).toHaveBeenCalled();
     expect(component.isLoading).toBe(false);
     expect(component.noResults).toBe(false);
     expect(component.showNumberOfResults).toBe(true);
@@ -82,7 +70,6 @@ describe('BggSearchComponent', () => {
     });
     component.searchTerm = 'fail';
     component.search();
-    expect(loaderService.show).toHaveBeenCalled();
     expect(component.isLoading).toBe(true);
   });
 

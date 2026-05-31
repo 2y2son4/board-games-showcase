@@ -6,7 +6,6 @@ import { FormControl } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { MatDialog } from '@angular/material/dialog';
-import { MatSelectChange } from '@angular/material/select';
 import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
 
 const game1: GameCard = {
@@ -574,21 +573,16 @@ describe('GamesComponent', () => {
     component.selectedChipTypes.set([]);
     component.selectedSize = 's';
 
-<<<<<<< HEAD:src/features/games/components/games/games.component.spec.ts
-    component.onSizeFilterChange({ value: 'm' } as unknown as MatSelectChange);
-=======
-    component.onSizeFilterChange({ value: 'm' } as any);
->>>>>>> origin/main:src/components/games/games.component.spec.ts
+    // The reactive form value change triggers applyAllFilters(); onSizeFilterChange() clears selections
+    component.selectedSize = 'm';
+    component.applyAllFilters();
+    component.onSizeFilterChange();
 
     expect(component.printGames()).toEqual([]);
     expect(component.filteredGames().length).toBe(1);
     expect(component.filteredGames()[0].size).toBe('m');
   });
 
-<<<<<<< HEAD:src/features/games/components/games/games.component.spec.ts
-=======
-
->>>>>>> origin/main:src/components/games/games.component.spec.ts
   describe('openGameOfTheDay', () => {
     it('should open the GameOfTheDayComponent dialog', () => {
       const dialog = TestBed.inject(MatDialog);
