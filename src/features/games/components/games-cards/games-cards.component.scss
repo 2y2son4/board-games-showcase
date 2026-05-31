@@ -1,7 +1,137 @@
 @use "../../../../shared/styles/common-styles.scss";
 @use "../../../../core/styles/variables" as variables;
 
+<<<<<<< HEAD:src/features/games/components/games-cards/games-cards.component.scss
 .games-card {
+=======
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 2px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 24px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.side {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 14px;
+  margin: 14px;
+  color: variables.$highlight-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 24px;
+
+  @media screen and (max-width: 767px) {
+    height: 100%;
+    padding-bottom: 0;
+  }
+
+  &__title {
+    font-size: 40px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__number {
+    font-size: 26px;
+    text-align: right;
+    margin-bottom: 8px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__applied-filters {
+    margin-top: 8px;
+    width: 100%;
+
+    &-list {
+      margin: 6px 0 0;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      font-size: 18px;
+      text-align: right;
+      margin-bottom: 8px;
+      line-height: 1.4;
+
+      @media screen and (max-width: 767px) {
+        text-align: center;
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__reset {
+    display: none;
+
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &__export {
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media screen and (max-width: 767px) {
+      align-items: center;
+    }
+
+    &-scroll {
+      align-self: flex-end;
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.card {
+  width: 80%;
+>>>>>>> origin/main:src/components/common-styles.scss
   margin-top: 24px;
 
   &__container {
