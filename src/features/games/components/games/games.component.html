@@ -54,15 +54,12 @@
         <app-scroll-to-top-btn class="games-sidebar__container-scroll"></app-scroll-to-top-btn>
       </div>
     </div>
-
     <app-games-cards [games]="visibleGames()" [selectedGames]="printGames()" [selectedChipTypes]="selectedChipTypes()"
       [selectedSize]="selectedSize" [searchQuery]="searchQuery" [gamesImageBase]="gamesImageBase"
       [hasMore]="hasMoreVisibleGames()" [isLoadingMore]="isLoadingMoreGames()" (cardToggled)="toggleCardFlip($event)"
       (chipTypesChanged)="onTypeChange($event)" (sizeChanged)="onSizeChange($event)"
       (loadMoreRequested)="loadMoreGames()" (resetRequested)="restartFilters()"></app-games-cards>
-
     <div class="divider"></div>
-
     <app-games-filters [filterForm]="gamesFilterForm" [sortingSelectLabels]="sortingSelectLabels" [types]="types"
       [editors]="editors" [sizes]="sizes" [showPlayedBtn]="showPlayedBtn()" [showUnplayedBtn]="showUnplayedBtn()"
       (playedToggled)="togglePlayed()" (unplayedToggled)="toggleUnPlayed()" (resetClicked)="restartFilters()"
