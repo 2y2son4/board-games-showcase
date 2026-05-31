@@ -19,8 +19,6 @@ import { Subject, debounceTime, takeUntil } from 'rxjs';
 import { FilterFunctionsService } from '../../../../core/functions/filter/filter-functions.service';
 import { CommonFunctionsService } from '../../../../core/functions/common/common-functions.service';
 import { HttpService } from '../../../../core/services/http/http.service';
-import { LoaderComponent } from '../../../../shared/components/loader/loader.component';
-import { LoaderService } from '../../../../core/services/loader/loader.service';
 import { ExportService } from '../../../../core/services/export/export.service';
 import { ScrollToTopBtnComponent } from '../../../../shared/components/scroll-to-top-btn/scroll-to-top-btn.component';
 import { GameOfTheDayComponent } from '../game-of-the-day/game-of-the-day.component';
@@ -35,7 +33,6 @@ import { GamesFilterForm } from './games-filter-form.model';
     CommonModule,
     GamesCardsComponent,
     GamesFiltersComponent,
-    LoaderComponent,
     MatButtonModule,
     ScrollToTopBtnComponent,
   ],
@@ -47,7 +44,6 @@ export class GamesComponent implements OnInit {
   readonly commonFunctions = inject(CommonFunctionsService);
   readonly filterFunctions = inject(FilterFunctionsService);
   private readonly httpDataService = inject(HttpService);
-  private readonly loaderService = inject(LoaderService);
   private readonly exportService = inject(ExportService);
   private readonly dialog = inject(MatDialog);
 
@@ -152,7 +148,6 @@ export class GamesComponent implements OnInit {
   }
 
   private loadGames(): void {
-    this.loaderService.show();
     this.isLoading.set(true);
 
     this.httpDataService.getGames().subscribe({
@@ -194,11 +189,10 @@ export class GamesComponent implements OnInit {
             return indexA === indexB ? a.localeCompare(b) : indexA - indexB;
           });
 
-        this.loaderService.hide();
         this.isLoading.set(false);
       },
-      error: () => {
-        this.loaderService.hide();
+      error: (error) => {
+        console.error('Error fetching games data', error);
         this.isLoading.set(false);
       },
     });

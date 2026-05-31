@@ -6,8 +6,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { LoaderComponent } from '../../../../shared/components/loader/loader.component';
-import { LoaderService } from '../../../../core/services/loader/loader.service';
 import { catchError, throwError } from 'rxjs';
 import { GameDetailsComponent } from '../game-details/game-details.component';
 import { GameDetails } from '../../../../shared/models';
@@ -26,7 +24,6 @@ import type { XmlNodeObject, XmlNodeValue } from '../../../../core/models';
   imports: [
     FormsModule,
     GameDetailsComponent,
-    LoaderComponent,
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
@@ -48,10 +45,8 @@ export class BggSearchComponent {
   showNumberOfResults!: boolean;
 
   private readonly http = inject(HttpClient);
-  private readonly loaderService = inject(LoaderService);
 
   search() {
-    this.loaderService.show();
     this.showDetails = false;
     this.isLoading = true;
 
@@ -70,7 +65,6 @@ export class BggSearchComponent {
         const xml = parser.parseFromString(response, 'application/xml');
         const json = this.xmlToJson(xml);
         this.results = this.filterResults(json);
-        this.loaderService.hide();
         this.isLoading = false;
         this.noResults = false;
 
