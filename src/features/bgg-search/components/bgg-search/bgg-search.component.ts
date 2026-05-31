@@ -50,7 +50,7 @@ export class BggSearchComponent {
     this.showDetails = false;
     this.isLoading = true;
 
-    const apiUrl = `/api/xmlapi/search?search=${this.searchTerm}`; // Proxy URL
+    const apiUrl = `/api/xmlapi/search?search=${encodeURIComponent(this.searchTerm)}`; // Proxy URL
 
     this.http
       .get(apiUrl, { responseType: 'text' })
