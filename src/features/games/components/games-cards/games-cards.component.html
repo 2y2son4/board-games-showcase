@@ -33,73 +33,69 @@
                 }
               </div>
               <div class="games-line"></div>
-              <div class="games-card__info-container">
-                <div class="games-card__info-upper">
-                  <div class="games-card__meta-row">
-                    @if (game.players) {
-                      <p class="games-card__players">
-                        @for (player of game.players; let i = $index; let first = $first; let last = $last; track i) {
-                          {{ game.players.length === 1 && first ? 'For' : ''}} {{player}}
-                          {{ !last ? 'to' : player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
-                        }
-                      </p>
-                    } @else {
-                      <p>-</p>
+              <div class="games-card__meta-row">
+                @if (game.players) {
+                  <p class="games-card__players">
+                    @for (player of game.players; let i = $index; let first = $first; let last = $last; track i) {
+                      {{ game.players.length === 1 && first ? 'For' : ''}} {{player}}
+                      {{ !last ? 'to' : player === 1 && game.players.length === 1 && first ? 'player' :'players'}}
                     }
-                    @if (game.age) {
-                      <p class="games-card__players">+{{game.age}} years</p>
-                    }
-                    <p class="games-card__time">
-                      {{formatDuration(game.time)}}
-                    </p>
+                  </p>
+                } @else {
+                  <p>-</p>
+                }
+                @if (game.age) {
+                  <p class="games-card__players">+{{game.age}} years</p>
+                }
+                <p class="games-card__time">
+                  {{formatDuration(game.time)}}
+                </p>
+              </div>
+
+              <mat-chip-listbox multiple [value]="selectedChipTypes()" (change)="onTypeSelectionChange($event)">
+                @for (type of game.types; let i = $index; track i) {
+                  <mat-chip-option [value]="type">{{type}}</mat-chip-option>
+                }
+              </mat-chip-listbox>
+
+              @if (game.size) {
+                <div class="games-line games-line--spaced"></div>
+                <mat-chip-listbox [value]="selectedSize() ? [selectedSize()] : []"
+                  (change)="onSizeSelectionChange($event)">
+                  <mat-chip-option [value]="game.size">{{game.size.toUpperCase()}}</mat-chip-option>
+                </mat-chip-listbox>
+              }
+
+              <div class="games-card__info-down">
+                @if (game.rate) {
+                  <div class="games-card__info-down-container">
+                    <p class="games-card__rate-title">Rate:</p>
+                    <div [style.backgroundColor]="commonFunctions.getRatingColor(game.rate)"
+                      [class.border-pink]="game.isPlayed" class="games-card__rate">
+                      {{ game.rate }}
+                    </div>
                   </div>
+                }
 
-                  <mat-chip-listbox multiple [value]="selectedChipTypes()" (change)="onTypeSelectionChange($event)">
-                    @for (type of game.types; let i = $index; track i) {
-                      <mat-chip-option [value]="type">{{type}}</mat-chip-option>
-                    }
-                  </mat-chip-listbox>
-
-                  @if (game.size) {
-                    <div class="games-line" style="margin-top: 12px"></div>
-                    <mat-chip-listbox [value]="selectedSize() ? [selectedSize()] : []"
-                      (change)="onSizeSelectionChange($event)">
-                      <mat-chip-option [value]="game.size">{{game.size.toUpperCase()}}</mat-chip-option>
-                    </mat-chip-listbox>
-                  }
-                </div>
-
-                <div class="games-card__info-down">
-                  @if (game.rate) {
-                    <div class="games-card__info-down-container">
-                      <p class="games-card__rate-title">Rate:</p>
-                      <div [style.backgroundColor]="commonFunctions.getRatingColor(game.rate)"
-                        [class.border-pink]="game.isPlayed" class="games-card__rate">
-                        {{ game.rate }}
-                      </div>
+                @if (game.complexity) {
+                  <div class="games-card__info-down-container">
+                    <p class="games-card__complexity-title">Complexity:</p>
+                    <div [style.backgroundColor]="commonFunctions.getComplexityColor(game.complexity)"
+                      [class.border-pink]="game.isPlayed" class="games-card__complexity">
+                      {{ !game.complexity ? 'X' : game.complexity.toString() === '1' ? '1.00' : game.complexity}}
                     </div>
-                  }
+                  </div>
+                }
 
-                  @if (game.complexity) {
-                    <div class="games-card__info-down-container">
-                      <p class="games-card__complexity-title">Complexity:</p>
-                      <div [style.backgroundColor]="commonFunctions.getComplexityColor(game.complexity)"
-                        [class.border-pink]="game.isPlayed" class="games-card__complexity">
-                        {{ !game.complexity ? 'X' : game.complexity.toString() === '1' ? '1.00' : game.complexity}}
-                      </div>
-                    </div>
-                  }
-
-                  @if (game.bggReference) {
-                    <div class="games-card__info-down-container">
-                      <p class="games-card__rate-title">BGG page:</p>
-                      <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
-                        rel="noopener noreferrer">
-                        <div class="games-card__bgg">GO</div>
-                      </a>
-                    </div>
-                  }
-                </div>
+                @if (game.bggReference) {
+                  <div class="games-card__info-down-container">
+                    <p class="games-card__rate-title">BGG page:</p>
+                    <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
+                      rel="noopener noreferrer">
+                      <div class="games-card__bgg">GO</div>
+                    </a>
+                  </div>
+                }
               </div>
             </div>
           </div>

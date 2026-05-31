@@ -24,8 +24,9 @@
               <h2 class="oracles-card__title">{{oracle.name}}</h2>
               @if (oracle.image) {
                 <div class="oracles-card__image-container">
-                  <img class="oracles-card__image" loading="lazy" [ngSrc]="oraclesImageBase + '/' + oracle.image + '.webp'"
-                    fill sizes="(max-width: 767px) 80vw, (max-width: 1199px) 40vw, 25vw" alt="{{oracle.name}}">
+                  <img class="oracles-card__image" loading="lazy"
+                    [ngSrc]="oraclesImageBase + '/' + oracle.image + '.webp'" fill
+                    sizes="(max-width: 767px) 80vw, (max-width: 1199px) 40vw, 25vw" alt="{{oracle.name}}">
                 </div>
               }
               @if (oracle.artist) {
@@ -35,11 +36,7 @@
             <div class="oracles-card__list-back">
               <div class="oracles-card__info oracles-card__info-scroll">
                 <div class="oracles-card__info-title">
-                  <div>
-                    <p class="oracles-card__name"> {{oracle.name}}
-                      {{oracle.artist ? 'by ' + oracle.artist : ''}}
-                    </p>
-                  </div>
+                  <p class="oracles-card__name">{{oracle.name}} {{oracle.artist ? 'by ' + oracle.artist : ''}}</p>
                 </div>
                 <div class="oracles-line"></div>
                 @if (oracle.description.length > 0) {

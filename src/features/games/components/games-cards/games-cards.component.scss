@@ -117,6 +117,7 @@
     &-scroll {
       overflow-y: auto;
       height: 100%;
+      gap: 8px;
     }
 
     @media screen and (max-width: 767px) {
@@ -134,18 +135,10 @@
       }
     }
 
-    &-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 8px;
-      height: 100%;
-      width: 100%;
-    }
-
     &-down {
       display: flex;
       justify-content: space-around;
+      width: 100%;
 
       &-container {
         display: flex;
@@ -177,19 +170,13 @@
   }
 
   &__complexity {
-    grid-area: 2 / 1 / 3 / 2;
-
     &-title {
-      grid-area: 1 / 1 / 2 / 2;
       margin-bottom: 8px;
     }
   }
 
   &__rate {
-    grid-area: 2 / 2 / 3 / 3;
-
     &-title {
-      grid-area: 1 / 2 / 2 / 3;
       margin-bottom: 8px;
     }
   }
@@ -278,6 +265,18 @@
     width: 100%;
   }
 
+  &__info-down {
+    display: flex;
+    justify-content: space-around;
+
+    &-container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   &__flag {
     width: 48px;
 
@@ -301,5 +300,9 @@
 
   @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  &--spaced {
+    margin-top: 12px;
   }
 }
