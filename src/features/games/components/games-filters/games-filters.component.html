@@ -1,0 +1,76 @@
+<div class="games-filters games-filters__container" [formGroup]="filterForm()">
+  <mat-form-field style="height: 70px; margin-top: 18px;">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Search by name, year, type..." formControlName="searchQuery">
+    @if (filterForm().controls.searchQuery.value) {
+      <button matSuffix mat-icon-button aria-label="Clear" type="button" (click)="clearSearch()">
+        <mat-icon>close</mat-icon>
+      </button>
+    }
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Sort</mat-label>
+    <mat-select formControlName="selectedSorting">
+      @for (label of sortingSelectLabels(); track label) {
+        <mat-option [value]="label">{{label}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Number of players</mat-label>
+    <input matInput type="number" maxlength="2" min="1" formControlName="exactPlayers">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Age</mat-label>
+    <input matInput type="number" maxlength="2" min="1" formControlName="exactAge">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Filter by types (<code>OR</code> logic)</mat-label>
+    <mat-select formControlName="selectedTypes" multiple>
+      <input placeholder="Search..." (input)="onTypeSearch($event.target)" class="games-dropdown-search">
+      @for (type of types(); track type) {
+        <mat-option [value]="type">{{type}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Filter by publisher</mat-label>
+    <mat-select formControlName="selectedEditors" multiple>
+      <input placeholder="Search..." (input)="onEditorSearch($event.target)" class="games-dropdown-search">
+      @for (editor of editors(); track editor) {
+        <mat-option [value]="editor">{{editor}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Filter by size</mat-label>
+    <mat-select formControlName="selectedSize" (selectionChange)="sizeFilterChanged.emit($event)">
+      @for (size of sizes(); track size) {
+        <mat-option [value]="size">{{size.toUpperCase()}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  @if (showPlayedBtn()) {
+    <button class="button-pink games-legend__content" type="button" mat-raised-button (click)="playedToggled.emit()">
+      Played
+    </button>
+  }
+
+  @if (showUnplayedBtn()) {
+    <button class="button-system games-legend__content" type="button" mat-raised-button
+      (click)="unplayedToggled.emit()">
+      Unplayed
+    </button>
+  }
+
+  <button type="button" mat-raised-button color="primary" (click)="resetClicked.emit()">
+    Reset
+  </button>
+</div>

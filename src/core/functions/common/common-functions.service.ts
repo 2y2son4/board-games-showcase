@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { GameCard } from '../../../components/commons.models';
+import { GameCard } from '../../../features/games/models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CommonFunctionsService {
-  constructor() {}
-
   /** Background color */
   getComplexityColor(number: number): string {
     const greenColor = [54, 174, 124];

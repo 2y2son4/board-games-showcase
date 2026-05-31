@@ -1,5 +1,6 @@
 import { ExportService } from './export.service';
-import type { GameCard, OracleCard } from '../../../components/commons.models';
+import type { GameCard } from '../../../features/games/models';
+import type { OracleCard } from '../../../features/oracles/models';
 
 // Mock jsPDF so tests don't generate real PDFs.
 jest.mock('jspdf', () => {
@@ -32,11 +33,24 @@ jest.mock('jspdf', () => {
   };
 });
 
+interface FakeDoc {
+  text: { mock: { calls: unknown[][] } };
+  save: { mock: { calls: unknown[][] } };
+  setTextColor: jest.Mock;
+}
+
+interface FakeJsPdfCtor {
+  instances: FakeDoc[];
+}
+
 const getFakeJsPdfCtor = async () => {
   const jspdf = await import('jspdf');
-  const FakeJsPDF: any = jspdf.jsPDF ?? jspdf.default;
+  const FakeJsPDF = (jspdf.jsPDF ?? jspdf.default) as unknown as FakeJsPdfCtor;
   return FakeJsPDF;
 };
+
+const getWrittenText = (doc: FakeDoc): string =>
+  doc.text.mock.calls.map((c: unknown[]) => String(c[0] ?? '')).join('\n');
 
 describe('ExportService', () => {
   beforeEach(() => {
@@ -88,7 +102,7 @@ describe('ExportService', () => {
     expect(filenameArg).toMatch(/^my-export-\d{8}-\d{6}\.pdf$/);
 
     // Ensure we wrote expected lines.
-    const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+    const writtenText = getWrittenText(doc);
     expect(writtenText).toContain('Selected games (1)');
     expect(writtenText).toContain('LIGHT GAMES (Complexity 1 / 1.5)');
     expect(writtenText).toContain('1. Test Game (2020). Played');
@@ -135,7 +149,7 @@ describe('ExportService', () => {
 
     const doc = FakeJsPDF.instances[0];
 
-    const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+    const writtenText = getWrittenText(doc);
     expect(writtenText).toContain('Selected games (1)');
     expect(writtenText).toContain('HEAVY GAMES (Complexity 2.1 / 5)');
     expect(writtenText).toContain('1. No Extras Game');
@@ -181,7 +195,7 @@ describe('ExportService', () => {
     });
 
     const doc = FakeJsPDF.instances[0];
-    const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+    const writtenText = getWrittenText(doc);
 
     expect(writtenText).toContain('Search query: "strategy"');
     expect(writtenText).toContain('Filtered by types (AND): Strategy, Family');
@@ -246,7 +260,7 @@ describe('ExportService', () => {
     await service.exportSelectedGamesAsPdf(games);
 
     const doc = FakeJsPDF.instances[0];
-    const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+    const writtenText = getWrittenText(doc);
 
     expect(writtenText).toContain('LIGHT GAMES (Complexity 1 / 1.5) - 1 games');
     expect(writtenText).toContain(
@@ -286,7 +300,7 @@ describe('ExportService', () => {
     });
 
     const doc = FakeJsPDF.instances[0];
-    const writtenText = doc.text.mock.calls.map((c: any[]) => c[0]).join('\n');
+    const writtenText = getWrittenText(doc);
 
     expect(writtenText).toContain(
       'Filtered by types (OR): Party, Strategy, Family',
@@ -331,9 +345,7 @@ describe('ExportService', () => {
       expect(filenameArg).toMatch(/^my-oracles-\d{8}-\d{6}\.pdf$/);
 
       // Ensure we wrote expected lines.
-      const writtenText = doc.text.mock.calls
-        .map((c: any[]) => c[0])
-        .join('\n');
+      const writtenText = getWrittenText(doc);
       expect(writtenText).toContain('Selected oracles (2)');
       expect(writtenText).toContain('1. Test Oracle');
       expect(writtenText).toContain('Artist: Test Artist');
@@ -365,9 +377,7 @@ describe('ExportService', () => {
 
       const doc = FakeJsPDF.instances[0];
 
-      const writtenText = doc.text.mock.calls
-        .map((c: any[]) => c[0])
-        .join('\n');
+      const writtenText = getWrittenText(doc);
       expect(writtenText).toContain('Selected oracles (1)');
       expect(writtenText).toContain('1. Minimal Oracle');
       // Artist should not be present when empty
