@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: bundle-stats
-          path: docs/stats.json
+          path: docs/browser/stats.json
 
       - name: Run tests
         run: pnpm test
