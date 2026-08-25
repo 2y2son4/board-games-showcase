@@ -86,7 +86,8 @@ export class FilterFunctionsService {
         game.year.toString().includes(query) ||
         game.rate.toString().includes(query) ||
         game.complexity.toString().includes(query) ||
-        game.types.some((type) => type.toLowerCase().includes(query)),
+        game.types.some((type) => type.toLowerCase().includes(query)) ||
+        (game.age && game.age.toString().includes(query)),
     );
   }
 
