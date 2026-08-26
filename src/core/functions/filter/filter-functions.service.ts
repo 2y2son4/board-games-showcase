@@ -71,7 +71,7 @@ export class FilterFunctionsService {
   }
 
   /**
-   * Filters games by search query (name, editor, year, rate, complexity, types)
+   * Filters games by search query (name, editor, year, rate, complexity, types, age)
    */
   filterBySearch(games: GameCard[], searchQuery?: string): GameCard[] {
     if (!searchQuery?.trim()) {
@@ -87,7 +87,7 @@ export class FilterFunctionsService {
         game.rate.toString().includes(query) ||
         game.complexity.toString().includes(query) ||
         game.types.some((type) => type.toLowerCase().includes(query)) ||
-        (game.age && game.age.toString().includes(query)),
+        game.age.toString().includes(query),
     );
   }
 
