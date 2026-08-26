@@ -20,7 +20,7 @@ export class FilterFunctionsService {
     'Rate ↓',
   ];
 
-  private readonly sortFunctions: Record<
+  readonly #sortFunctions: Record<
     string,
     (a: GameCard, b: GameCard) => number
   > = {
@@ -202,7 +202,7 @@ export class FilterFunctionsService {
       return this.sortByNameAscending(games);
     }
 
-    const sortFunction = this.sortFunctions[sorting];
+    const sortFunction = this.#sortFunctions[sorting];
     if (sortFunction) {
       return [...games].sort(sortFunction);
     }

@@ -35,8 +35,8 @@ import { HttpService } from '../../../../core/services/http/http.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GameOfTheDayComponent implements OnInit {
-  private readonly dialogRef = inject(MatDialogRef<GameOfTheDayComponent>);
-  private readonly httpService = inject(HttpService);
+  readonly #dialogRef = inject(MatDialogRef<GameOfTheDayComponent>);
+  readonly #httpService = inject(HttpService);
   readonly commonFunctions = inject(CommonFunctionsService);
 
   readonly gamesImageBase: string;
@@ -49,11 +49,11 @@ export class GameOfTheDayComponent implements OnInit {
   selectedGame = signal<GameCard | null>(null);
 
   constructor() {
-    this.gamesImageBase = this.httpService.gamesImageBase;
+    this.gamesImageBase = this.#httpService.gamesImageBase;
   }
 
   ngOnInit(): void {
-    this.httpService.getGames().subscribe({
+    this.#httpService.getGames().subscribe({
       next: (response) => {
         this.gamesList = response.games;
         const allTypes = new Set<string>();
@@ -75,7 +75,7 @@ export class GameOfTheDayComponent implements OnInit {
     }
 
     if (this.selectedPlayers) {
-      matching = matching.filter((game) => this.matchesPlayerCount(game));
+      matching = matching.filter((game) => this.#matchesPlayerCount(game));
     }
 
     if (matching.length === 0) {
@@ -86,7 +86,7 @@ export class GameOfTheDayComponent implements OnInit {
     this.selectedGame.set(matching[randomIndex]);
   }
 
-  private matchesPlayerCount(game: GameCard): boolean {
+  #matchesPlayerCount(game: GameCard): boolean {
     if (!game.players || game.players.length === 0) return false;
     const min = game.players[0];
     const max =
@@ -109,6 +109,6 @@ export class GameOfTheDayComponent implements OnInit {
   }
 
   close(): void {
-    this.dialogRef.close();
+    this.#dialogRef.close();
   }
 }

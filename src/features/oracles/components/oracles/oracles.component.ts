@@ -33,8 +33,8 @@ import { ExportService } from '../../../../core/services/export/export.service';
 export class OraclesComponent implements OnInit, AfterViewInit {
   commonFunctions = inject(CommonFunctionsService);
   filterFunctions = inject(FilterFunctionsService);
-  private readonly httpDataService = inject(HttpService);
-  private readonly exportService = inject(ExportService);
+  readonly #httpDataService = inject(HttpService);
+  readonly #exportService = inject(ExportService);
 
   innerElements = viewChildren<ElementRef>('innerElement');
 
@@ -44,11 +44,11 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   readonly oraclesImageBase: string;
 
   constructor() {
-    this.oraclesImageBase = this.httpDataService.oraclesImageBase;
+    this.oraclesImageBase = this.#httpDataService.oraclesImageBase;
   }
 
   ngOnInit(): void {
-    this.httpDataService.getOracles().subscribe({
+    this.#httpDataService.getOracles().subscribe({
       next: (response) => {
         this.oraclesList.set(
           this.filterFunctions.sortByNameAscending(response.oracles),
@@ -86,7 +86,7 @@ export class OraclesComponent implements OnInit, AfterViewInit {
   }
 
   async exportSelectedAsPdf(): Promise<void> {
-    await this.exportService.exportSelectedOraclesAsPdf(
+    await this.#exportService.exportSelectedOraclesAsPdf(
       this.printOracles(),
       'selected-oracles',
     );

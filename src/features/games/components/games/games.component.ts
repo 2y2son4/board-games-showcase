@@ -41,15 +41,15 @@ import { GamesFilterForm } from './games-filter-form.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GamesComponent implements OnInit {
-  private static readonly INITIAL_VISIBLE_GAMES = 9;
-  private static readonly LOAD_MORE_BATCH_SIZE = 9;
-  private static readonly LOAD_MORE_DELAY_MS = 180;
+  readonly #INITIAL_VISIBLE_GAMES = 9;
+  readonly #LOAD_MORE_BATCH_SIZE = 9;
+  readonly #LOAD_MORE_DELAY_MS = 180;
 
   readonly commonFunctions = inject(CommonFunctionsService);
   readonly filterFunctions = inject(FilterFunctionsService);
-  private readonly httpDataService = inject(HttpService);
-  private readonly exportService = inject(ExportService);
-  private readonly dialog = inject(MatDialog);
+  readonly #httpDataService = inject(HttpService);
+  readonly #exportService = inject(ExportService);
+  readonly #dialog = inject(MatDialog);
 
   topPage = viewChild<ElementRef>('topPage');
 
@@ -64,7 +64,7 @@ export class GamesComponent implements OnInit {
   isLoadingMoreGames = signal(false);
   selectedChipTypes = signal<string[]>([]);
   filteredGames = signal<GameCard[]>([]);
-  visibleGamesCount = signal(GamesComponent.INITIAL_VISIBLE_GAMES);
+  visibleGamesCount = signal(this.#INITIAL_VISIBLE_GAMES);
   printGames = signal<GameCard[]>([]);
   playedGames = signal(false);
   unPlayedGames = signal(false);
@@ -140,7 +140,7 @@ export class GamesComponent implements OnInit {
   #loadMoreTimeoutId: number | undefined;
 
   constructor() {
-    this.gamesImageBase = this.httpDataService.gamesImageBase;
+    this.gamesImageBase = this.#httpDataService.gamesImageBase;
 
     this.#destroyRef.onDestroy(() => {
       if (this.#loadMoreTimeoutId !== undefined) {
@@ -161,13 +161,13 @@ export class GamesComponent implements OnInit {
         this.applyAllFilters();
       });
 
-    this.loadGames();
+    this.#loadGames();
   }
 
-  private loadGames(): void {
+  #loadGames(): void {
     this.isLoading.set(true);
 
-    this.httpDataService.getGames().subscribe({
+    this.#httpDataService.getGames().subscribe({
       next: (response) => {
         const sortedGames = this.filterFunctions
           .sortByNameAscending(response.games)
@@ -178,7 +178,7 @@ export class GamesComponent implements OnInit {
 
         this.gamesList = sortedGames;
         this.filteredGames.set(sortedGames);
-        this.resetVisibleGames();
+        this.#resetVisibleGames();
 
         this.allTypes = this.commonFunctions.extractUniqueValues(
           sortedGames,
@@ -366,7 +366,7 @@ export class GamesComponent implements OnInit {
 
     const result = this.filterFunctions.applyFilters(this.gamesList, criteria);
     this.filteredGames.set(result);
-    this.resetVisibleGames();
+    this.#resetVisibleGames();
 
     const selectedNames = new Set(result.map((g) => g.name));
     this.printGames.set(
@@ -397,15 +397,15 @@ export class GamesComponent implements OnInit {
 
     this.#loadMoreTimeoutId = window.setTimeout(() => {
       this.visibleGamesCount.update(
-        (count) => count + GamesComponent.LOAD_MORE_BATCH_SIZE,
+        (count) => count + this.#LOAD_MORE_BATCH_SIZE,
       );
       this.isLoadingMoreGames.set(false);
       this.#loadMoreTimeoutId = undefined;
-    }, GamesComponent.LOAD_MORE_DELAY_MS);
+    }, this.#LOAD_MORE_DELAY_MS);
   }
 
-  private resetVisibleGames(): void {
-    this.visibleGamesCount.set(GamesComponent.INITIAL_VISIBLE_GAMES);
+  #resetVisibleGames(): void {
+    this.visibleGamesCount.set(this.#INITIAL_VISIBLE_GAMES);
     this.isLoadingMoreGames.set(false);
 
     if (this.#loadMoreTimeoutId !== undefined) {
@@ -451,7 +451,7 @@ export class GamesComponent implements OnInit {
   }
 
   openGameOfTheDay(): void {
-    this.dialog.open(GameOfTheDayComponent, {
+    this.#dialog.open(GameOfTheDayComponent, {
       width: '700px',
       maxWidth: '95vw',
     });
@@ -498,7 +498,7 @@ export class GamesComponent implements OnInit {
   }
 
   async exportSelectedAsPdf(): Promise<void> {
-    await this.exportService.exportSelectedGamesAsPdf(
+    await this.#exportService.exportSelectedGamesAsPdf(
       this.printGames(),
       'selected-games',
       {

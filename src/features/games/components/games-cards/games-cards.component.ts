@@ -35,10 +35,10 @@ import { GameCard } from '../../models';
 })
 export class GamesCardsComponent {
   readonly commonFunctions = inject(CommonFunctionsService);
-  private readonly destroyRef = inject(DestroyRef);
+  readonly #destroyRef = inject(DestroyRef);
 
-  private intersectionObserver?: IntersectionObserver;
-  private loadMoreRequestedForBatch = false;
+  #intersectionObserver?: IntersectionObserver;
+  #loadMoreRequestedForBatch = false;
 
   games = input<GameCard[]>([]);
   selectedGames = input<GameCard[]>([]);
@@ -61,26 +61,26 @@ export class GamesCardsComponent {
     effect(() => {
       this.games();
       this.hasMore();
-      this.loadMoreRequestedForBatch = false;
+      this.#loadMoreRequestedForBatch = false;
     });
 
     effect(() => {
       const trigger = this.loadMoreTrigger();
       const hasMore = this.hasMore();
 
-      this.intersectionObserver?.disconnect();
+      this.#intersectionObserver?.disconnect();
 
       if (!trigger || !hasMore) {
         return;
       }
 
-      this.intersectionObserver = new IntersectionObserver(
+      this.#intersectionObserver = new IntersectionObserver(
         ([entry]) => {
-          if (!entry?.isIntersecting || this.loadMoreRequestedForBatch) {
+          if (!entry?.isIntersecting || this.#loadMoreRequestedForBatch) {
             return;
           }
 
-          this.loadMoreRequestedForBatch = true;
+          this.#loadMoreRequestedForBatch = true;
           this.loadMoreRequested.emit();
         },
         {
@@ -88,11 +88,11 @@ export class GamesCardsComponent {
         },
       );
 
-      this.intersectionObserver.observe(trigger.nativeElement);
+      this.#intersectionObserver.observe(trigger.nativeElement);
     });
 
-    this.destroyRef.onDestroy(() => {
-      this.intersectionObserver?.disconnect();
+    this.#destroyRef.onDestroy(() => {
+      this.#intersectionObserver?.disconnect();
     });
   }
 
