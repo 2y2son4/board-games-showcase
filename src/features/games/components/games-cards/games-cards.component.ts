@@ -67,6 +67,7 @@ export class GamesCardsComponent {
     effect(() => {
       const trigger = this.loadMoreTrigger();
       const hasMore = this.hasMore();
+      this.games();
 
       this.#intersectionObserver?.disconnect();
 
