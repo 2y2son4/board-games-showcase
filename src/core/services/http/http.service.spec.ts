@@ -7,10 +7,15 @@ import { HttpService } from './http.service';
 import { GameCard } from '../../../features/games/models';
 import { OracleCard } from '../../../features/oracles/models';
 import { HttpErrorResponse } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 describe('HttpService', () => {
   let service: HttpService;
   let httpMock: HttpTestingController;
+  const apiBase = environment.api.base;
+  const gamesDb = `${apiBase}/v1/games.json`;
+  const oraclesDb = `${apiBase}/v1/oracles.json`;
+  const bggUrl = environment.api.proxy + environment.api.bggPath;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -52,7 +57,7 @@ describe('HttpService', () => {
       expect(games).toEqual(dummyGames);
     });
 
-    const req = httpMock.expectOne(service['gamesDb']);
+    const req = httpMock.expectOne(gamesDb);
     expect(req.request.method).toBe('GET');
     req.flush(dummyGames);
   });
@@ -62,7 +67,7 @@ describe('HttpService', () => {
       expect(games).toEqual({ games: [] });
     });
 
-    const req = httpMock.expectOne(service['gamesDb']);
+    const req = httpMock.expectOne(gamesDb);
     expect(req.request.method).toBe('GET');
 
     const errorResponse = new HttpErrorResponse({
@@ -95,7 +100,7 @@ describe('HttpService', () => {
       expect(oracles).toEqual(dummyOracles);
     });
 
-    const req = httpMock.expectOne(service['oraclesDb']);
+    const req = httpMock.expectOne(oraclesDb);
     expect(req.request.method).toBe('GET');
     req.flush(dummyOracles);
   });
@@ -107,7 +112,7 @@ describe('HttpService', () => {
       expect(data).toEqual(dummyBGGData);
     });
 
-    const req = httpMock.expectOne(service['proxyUrl'] + service['bggUrl']);
+    const req = httpMock.expectOne(bggUrl);
     expect(req.request.method).toBe('GET');
     req.flush(dummyBGGData);
   });
