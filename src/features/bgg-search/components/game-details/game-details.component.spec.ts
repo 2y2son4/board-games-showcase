@@ -142,13 +142,13 @@ describe('GameDetailsComponent', () => {
     expect(cleaned.size).toEqual([]);
   });
 
-  it('should normalize text values in cleanGameDetails', () => {
+  it('should return empty strings for array-based text fields in cleanGameDetails', () => {
     const cleaned = component.cleanGameDetails({
       name: { '#text': 'foo' },
       yearpublished: { '#text': '2024' },
       minplayers: {},
       maxplayers: undefined,
-      playingtime: [{ '#text': '30' }],
+      playingtime: ['unexpected-array-value'],
       description: 'description text',
     });
 
