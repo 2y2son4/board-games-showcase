@@ -58,7 +58,7 @@ success criterion (SC).
 | Landmark regions used (`<main>`, `<nav>`, `<header>`, `<footer>`, `<aside>`) | 1.3.1, 2.4.1 | A     |
 | Skip-navigation link present and visible on focus                            | 2.4.1        | A     |
 | Viewport `user-scalable=no` / `maximum-scale` NOT used                       | 1.4.4        | AA    |
-| `autofocus` attribute avoided                                                | 3.2.1        | A     |
+| `autofocus` attribute avoided (advisory)                                     | —            | —     |
 | Session timeout extension mechanism provided                                 | 2.2.1        | A     |
 
 #### 2b. Content & Text
