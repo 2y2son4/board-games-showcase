@@ -128,26 +128,35 @@ describe('GameDetailsComponent', () => {
     expect(cleaned.size).toEqual(['small', 'large']);
   });
 
-  it('should extract names from array, object, and undefined', () => {
-    const privateApi = component as unknown as {
-      extractNames: (value: unknown) => string[];
-    };
+  it('should normalize name collections in cleanGameDetails', () => {
+    const cleaned = component.cleanGameDetails({
+      name: [{ '#text': 'foo' }, { '#text': 'bar' }],
+      boardgamecategory: { '#text': 'category' },
+      boardgamepublisher: undefined,
+      size: undefined,
+    });
 
-    expect(
-      privateApi.extractNames([{ '#text': 'foo' }, { '#text': 'bar' }]),
-    ).toEqual(['foo', 'bar']);
-    expect(privateApi.extractNames({ '#text': 'baz' })).toEqual(['baz']);
-    expect(privateApi.extractNames(undefined)).toEqual([]);
+    expect(cleaned.name).toEqual(['foo', 'bar']);
+    expect(cleaned.boardgamecategory).toEqual(['category']);
+    expect(cleaned.boardgamepublisher).toEqual([]);
+    expect(cleaned.size).toEqual([]);
   });
 
-  it('should extract text value from node', () => {
-    const privateApi = component as unknown as {
-      extractTextValue: (value: unknown) => string;
-    };
+  it('should normalize text values in cleanGameDetails', () => {
+    const cleaned = component.cleanGameDetails({
+      name: { '#text': 'foo' },
+      yearpublished: { '#text': '2024' },
+      minplayers: {},
+      maxplayers: undefined,
+      playingtime: [{ '#text': '30' }],
+      description: 'description text',
+    });
 
-    expect(privateApi.extractTextValue({ '#text': 'foo' })).toBe('foo');
-    expect(privateApi.extractTextValue({})).toBe('');
-    expect(privateApi.extractTextValue(undefined)).toBe('');
+    expect(cleaned.yearpublished).toBe('2024');
+    expect(cleaned.minplayers).toBe('');
+    expect(cleaned.maxplayers).toBe('');
+    expect(cleaned.playingtime).toBe('');
+    expect(cleaned.description).toBe('description text');
   });
 
   it('should convert xml to json', () => {
