@@ -63,7 +63,7 @@ export class ExportService {
       addLine('');
     });
 
-    const filename = this.withTimestamp(`${filenameBase}.pdf`);
+    const filename = this.#withTimestamp(`${filenameBase}.pdf`);
     doc.save(filename);
   }
 
@@ -178,7 +178,7 @@ export class ExportService {
     addLine('');
 
     // Group games by complexity
-    const grouped = this.groupByComplexity(games);
+    const grouped = this.#groupByComplexity(games);
 
     // Light games (1 / 1.5)
     if (grouped.light.length > 0) {
@@ -187,7 +187,7 @@ export class ExportService {
         true,
       );
       addLine('');
-      this.renderGames(grouped.light, doc, addLine);
+      this.#renderGames(grouped.light, doc, addLine);
     }
 
     // Medium games (1.51 / 2)
@@ -201,7 +201,7 @@ export class ExportService {
         true,
       );
       addLine('');
-      this.renderGames(grouped.medium, doc, addLine);
+      this.#renderGames(grouped.medium, doc, addLine);
     }
 
     // Heavy games (2.1 / 5)
@@ -215,14 +215,14 @@ export class ExportService {
         true,
       );
       addLine('');
-      this.renderGames(grouped.heavy, doc, addLine);
+      this.#renderGames(grouped.heavy, doc, addLine);
     }
 
-    const filename = this.withTimestamp(`${filenameBase}.pdf`);
+    const filename = this.#withTimestamp(`${filenameBase}.pdf`);
     doc.save(filename);
   }
 
-  private groupByComplexity(games: GameCard[]): {
+  #groupByComplexity(games: GameCard[]): {
     light: GameCard[];
     medium: GameCard[];
     heavy: GameCard[];
@@ -234,7 +234,7 @@ export class ExportService {
     };
   }
 
-  private renderGames(
+  #renderGames(
     games: GameCard[],
     doc: JsPdf,
     addLine: (text: string, bold?: boolean) => void,
@@ -248,17 +248,17 @@ export class ExportService {
       if (game.types && game.types.length > 0) {
         addLine(`Types: ${game.types.join(', ')}`);
       }
-      addLine(`Players: ${this.formatPlayers(game.players)}`);
+      addLine(`Players: ${this.#formatPlayers(game.players)}`);
       if (game.age) {
         addLine(`Age: ${game.age}+ years`);
       }
-      addLine(`Play time: ${this.formatTime(game.time)}`);
+      addLine(`Play time: ${this.#formatTime(game.time)}`);
       if (game.complexity) {
         addLine(`Complexity: ${game.complexity}/5`);
       }
       if (game.rate) {
         // Color-coded rating
-        const ratingColor = this.getRatingColor(game.rate);
+        const ratingColor = this.#getRatingColor(game.rate);
         const prevColor = doc.getTextColor();
         doc.setTextColor(ratingColor.r, ratingColor.g, ratingColor.b);
         addLine(`Rating: ${game.rate}/10 ${game.rate > 6.5 ? '(HIGH)' : ''}`);
@@ -276,28 +276,28 @@ export class ExportService {
     });
   }
 
-  private getRatingColor(rate: number): { r: number; g: number; b: number } {
+  #getRatingColor(rate: number): { r: number; g: number; b: number } {
     if (rate > 5.999) {
       return { r: 0, g: 128, b: 0 }; // Green for high ratings
     }
     return { r: 255, g: 0, b: 0 }; // Red for low ratings
   }
 
-  private formatPlayers(players: number[] | undefined): string {
+  #formatPlayers(players: number[] | undefined): string {
     if (!players || players.length === 0) return '-';
     if (players.length === 1) return `${players[0]}`;
     if (players.length === 2) return `${players[0]}-${players[1]}`;
     return players.join(', ');
   }
 
-  private formatTime(minutes: number | undefined): string {
+  #formatTime(minutes: number | undefined): string {
     if (!minutes && minutes !== 0) return '-';
     if (minutes < 60) return `${minutes} min`;
     const hours = minutes / 60;
     return hours === 1 ? '1 h' : `${hours} h`;
   }
 
-  private withTimestamp(filename: string): string {
+  #withTimestamp(filename: string): string {
     const pad = (n: number) => String(n).padStart(2, '0');
     const d = new Date();
     const ts =

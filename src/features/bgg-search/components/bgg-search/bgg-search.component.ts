@@ -44,7 +44,7 @@ export class BggSearchComponent {
   numberOfResults!: number;
   showNumberOfResults!: boolean;
 
-  private readonly http = inject(HttpClient);
+  readonly #http = inject(HttpClient);
 
   search() {
     this.showDetails = false;
@@ -52,7 +52,7 @@ export class BggSearchComponent {
 
     const apiUrl = `/api/xmlapi/search?search=${encodeURIComponent(this.searchTerm)}`; // Proxy URL
 
-    this.http
+    this.#http
       .get(apiUrl, { responseType: 'text' })
       .pipe(
         catchError((err) => {
@@ -82,7 +82,7 @@ export class BggSearchComponent {
   }
 
   xmlToJson(xml: Document): BggResultsRaw {
-    return this.asObject(this.parseElement(xml));
+    return this.#asObject(this.parseElement(xml));
   }
 
   parseElement(element: Node): XmlNodeValue {
@@ -153,7 +153,7 @@ export class BggSearchComponent {
         ? [boardgamesValue]
         : [];
     const normalizedGames = boardgames
-      .map((game) => this.normalizeGame(game))
+      .map((game) => this.#normalizeGame(game))
       .filter((game): game is BggGame => game !== null);
 
     return {
@@ -163,7 +163,7 @@ export class BggSearchComponent {
     };
   }
 
-  private asObject(value: XmlNodeValue): XmlNodeObject {
+  #asObject(value: XmlNodeValue): XmlNodeObject {
     if (typeof value === 'string' || Array.isArray(value)) {
       return {};
     }
@@ -176,10 +176,10 @@ export class BggSearchComponent {
     this.showDetails = true;
   }
 
-  private normalizeGame(game: BggGameRaw): BggGame | null {
-    const name = this.asTextNode(game.name);
-    const yearpublished = this.asTextNode(game.yearpublished);
-    const attributes = this.asAttributes(game['@attributes']);
+  #normalizeGame(game: BggGameRaw): BggGame | null {
+    const name = this.#asTextNode(game.name);
+    const yearpublished = this.#asTextNode(game.yearpublished);
+    const attributes = this.#asAttributes(game['@attributes']);
 
     if (!name || !yearpublished || !attributes) {
       return null;
@@ -192,7 +192,7 @@ export class BggSearchComponent {
     };
   }
 
-  private asTextNode(value: XmlNodeValue | undefined): BggTextNode | null {
+  #asTextNode(value: XmlNodeValue | undefined): BggTextNode | null {
     if (!value || typeof value === 'string' || Array.isArray(value)) {
       return null;
     }
@@ -205,7 +205,7 @@ export class BggSearchComponent {
     return { '#text': text };
   }
 
-  private asAttributes(value: XmlNodeValue | undefined): BggAttributes | null {
+  #asAttributes(value: XmlNodeValue | undefined): BggAttributes | null {
     if (!value || typeof value === 'string' || Array.isArray(value)) {
       return null;
     }

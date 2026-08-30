@@ -45,7 +45,7 @@
                   <p>-</p>
                 }
                 @if (game.age) {
-                  <p class="games-card__players">+{{game.age}} years</p>
+                  <p class="games-card__players" [innerHTML]="('+' + game.age + ' years') | highlightText:searchQuery()"></p>
                 }
                 <p class="games-card__time">
                   {{formatDuration(game.time)}}

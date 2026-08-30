@@ -9,42 +9,44 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root',
 })
 export class HttpService {
-  private readonly apiBase = environment.api.base;
-  private readonly gamesDb = `${this.apiBase}/v1/games.json`;
-  private readonly oraclesDb = `${this.apiBase}/v1/oracles.json`;
-  private readonly bggUrl = environment.api.bggPath;
-  private readonly proxyUrl = environment.api.proxy;
+  readonly #apiBase = environment.api.base;
+  readonly #gamesDb = `${this.#apiBase}/v1/games.json`;
+  readonly #oraclesDb = `${this.#apiBase}/v1/oracles.json`;
+  readonly #bggUrl = environment.api.bggPath;
+  readonly #proxyUrl = environment.api.proxy;
 
-  readonly gamesImageBase = `${this.apiBase}/images/games`;
-  readonly oraclesImageBase = `${this.apiBase}/images/oracles`;
-  private readonly http = inject(HttpClient);
-  private readonly errorHandler = inject(ErrorHandler);
+  readonly gamesImageBase = `${this.#apiBase}/images/games`;
+  readonly oraclesImageBase = `${this.#apiBase}/images/oracles`;
+  readonly #http = inject(HttpClient);
+  readonly #errorHandler = inject(ErrorHandler);
 
   getGames(): Observable<{ games: GameCard[] }> {
-    return this.http
-      .get<{ games: GameCard[] }>(this.gamesDb)
-      .pipe(catchError(this.handleCollectionError('games', { games: [] })));
+    return this.#http
+      .get<{ games: GameCard[] }>(this.#gamesDb)
+      .pipe(catchError(this.#handleCollectionError('games', { games: [] })));
   }
 
   getOracles(): Observable<{ oracles: OracleCard[] }> {
-    return this.http
-      .get<{ oracles: OracleCard[] }>(this.oraclesDb)
-      .pipe(catchError(this.handleCollectionError('oracles', { oracles: [] })));
+    return this.#http
+      .get<{ oracles: OracleCard[] }>(this.#oraclesDb)
+      .pipe(
+        catchError(this.#handleCollectionError('oracles', { oracles: [] })),
+      );
   }
 
   getBGG(): Observable<string> {
-    return this.http
-      .get(this.proxyUrl + this.bggUrl, { responseType: 'text' })
-      .pipe(catchError(this.handleCollectionError('bgg', '')));
+    return this.#http
+      .get(this.#proxyUrl + this.#bggUrl, { responseType: 'text' })
+      .pipe(catchError(this.#handleCollectionError('bgg', '')));
   }
 
-  private handleCollectionError<T>(resource: string, fallback: T) {
+  #handleCollectionError<T>(resource: string, fallback: T) {
     return (error: unknown): Observable<T> => {
       const normalizedError =
         error instanceof Error
           ? error
           : new Error(`Failed to fetch ${resource}`);
-      this.errorHandler.handleError(normalizedError);
+      this.#errorHandler.handleError(normalizedError);
       return of(fallback);
     };
   }

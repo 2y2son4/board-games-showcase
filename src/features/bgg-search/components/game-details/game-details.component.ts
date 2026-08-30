@@ -26,7 +26,7 @@ import type {
 export class GameDetailsComponent implements OnChanges {
   @Input() objectid: string | null = null;
   @Input() gameDetails: GameDetails | null = null;
-  private readonly http = inject(HttpClient);
+  readonly #http = inject(HttpClient);
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['objectid'] && this.objectid) {
@@ -36,7 +36,7 @@ export class GameDetailsComponent implements OnChanges {
 
   fetchGameDetails(objectid: string) {
     const apiUrl = `/api/xmlapi/boardgame/${objectid}`;
-    this.http
+    this.#http
       .get(apiUrl, { responseType: 'text' })
       .pipe(
         catchError((error) => {
@@ -49,46 +49,46 @@ export class GameDetailsComponent implements OnChanges {
         const xml = parser.parseFromString(response, 'application/xml');
         const json = this.xmlToJson(xml);
         this.gameDetails = this.cleanGameDetails(
-          this.asObject(json['boardgames'])['boardgame'],
+          this.#asObject(json['boardgames'])['boardgame'],
         );
       });
   }
 
   cleanGameDetails(details: XmlNodeValue | undefined): GameDetails {
-    const game = this.asObject(details);
+    const game = this.#asObject(details);
 
     const cleanedGame = {
-      name: this.extractNames(game['name'] as XmlNodeValue),
-      yearpublished: this.extractTextValue(
+      name: this.#extractNames(game['name'] as XmlNodeValue),
+      yearpublished: this.#extractTextValue(
         game['yearpublished'] as XmlNodeValue,
       ),
-      minplayers: this.extractTextValue(game['minplayers'] as XmlNodeValue),
-      maxplayers: this.extractTextValue(game['maxplayers'] as XmlNodeValue),
-      playingtime: this.extractTextValue(game['playingtime'] as XmlNodeValue),
-      age: this.extractTextValue(game['age'] as XmlNodeValue),
-      description: this.extractTextValue(game['description'] as XmlNodeValue),
-      boardgamecategory: this.extractNames(
+      minplayers: this.#extractTextValue(game['minplayers'] as XmlNodeValue),
+      maxplayers: this.#extractTextValue(game['maxplayers'] as XmlNodeValue),
+      playingtime: this.#extractTextValue(game['playingtime'] as XmlNodeValue),
+      age: this.#extractTextValue(game['age'] as XmlNodeValue),
+      description: this.#extractTextValue(game['description'] as XmlNodeValue),
+      boardgamecategory: this.#extractNames(
         game['boardgamecategory'] as XmlNodeValue,
       ),
-      image: this.extractTextValue(game['image'] as XmlNodeValue),
-      boardgamepublisher: this.extractNames(
+      image: this.#extractTextValue(game['image'] as XmlNodeValue),
+      boardgamepublisher: this.#extractNames(
         game['boardgamepublisher'] as XmlNodeValue,
       ),
-      size: this.extractNames(game['size'] as XmlNodeValue),
+      size: this.#extractNames(game['size'] as XmlNodeValue),
     };
     return cleanedGame;
   }
 
-  private extractNames(nameObj: XmlNodeValue | undefined): string[] {
+  #extractNames(nameObj: XmlNodeValue | undefined): string[] {
     if (!nameObj) return [];
     if (Array.isArray(nameObj)) {
-      return nameObj.map((nameItem) => this.extractTextValue(nameItem));
+      return nameObj.map((nameItem) => this.#extractTextValue(nameItem));
     } else {
-      return [this.extractTextValue(nameObj)];
+      return [this.#extractTextValue(nameObj)];
     }
   }
 
-  private extractTextValue(node: XmlNodeValue | undefined): string {
+  #extractTextValue(node: XmlNodeValue | undefined): string {
     if (!node) {
       return '';
     }
@@ -106,7 +106,7 @@ export class GameDetailsComponent implements OnChanges {
   }
 
   xmlToJson(xml: Document): XmlNodeObject {
-    return this.asObject(this.parseElement(xml));
+    return this.#asObject(this.parseElement(xml));
   }
 
   parseElement(element: Node): XmlNodeValue {
@@ -169,7 +169,7 @@ export class GameDetailsComponent implements OnChanges {
     return [...(categories ?? [])].sort((a, b) => a.localeCompare(b));
   }
 
-  private asObject(value: XmlNodeValue | undefined): XmlNodeObject {
+  #asObject(value: XmlNodeValue | undefined): XmlNodeObject {
     if (!value || typeof value === 'string' || Array.isArray(value)) {
       return {};
     }

@@ -20,7 +20,7 @@ export class FilterFunctionsService {
     'Rate ↓',
   ];
 
-  private readonly sortFunctions: Record<
+  readonly #sortFunctions: Record<
     string,
     (a: GameCard, b: GameCard) => number
   > = {
@@ -71,7 +71,7 @@ export class FilterFunctionsService {
   }
 
   /**
-   * Filters games by search query (name, editor, year, rate, complexity, types)
+   * Filters games by search query (name, editor, year, rate, complexity, types, age)
    */
   filterBySearch(games: GameCard[], searchQuery?: string): GameCard[] {
     if (!searchQuery?.trim()) {
@@ -86,7 +86,8 @@ export class FilterFunctionsService {
         game.year.toString().includes(query) ||
         game.rate.toString().includes(query) ||
         game.complexity.toString().includes(query) ||
-        game.types.some((type) => type.toLowerCase().includes(query)),
+        game.types.some((type) => type.toLowerCase().includes(query)) ||
+        game.age.toString().includes(query),
     );
   }
 
@@ -201,7 +202,7 @@ export class FilterFunctionsService {
       return this.sortByNameAscending(games);
     }
 
-    const sortFunction = this.sortFunctions[sorting];
+    const sortFunction = this.#sortFunctions[sorting];
     if (sortFunction) {
       return [...games].sort(sortFunction);
     }
