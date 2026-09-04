@@ -5,8 +5,10 @@
         <article class="games-card__list-inner" [class.active]="isSelected(game)" (click)="cardToggled.emit(game)"
           (keydown.enter)="cardToggled.emit(game)" (keydown.space)="$event.preventDefault(); cardToggled.emit(game)"
           tabindex="0" role="button">
-          <div class="games-card__list-front" [class.border-pink]="game.isPlayed">
+          <div class="games-card__list-front" [class.border-pink]="game.isPlayed"
+            [style.borderColor]="game.isPlayed ? '#673ab7' : '#fff'">
             <span class="games-card__year-absolute" [class.border-pink]="game.isPlayed"
+              [style.borderColor]="game.isPlayed ? '#673ab7' : '#fff'"
               [innerHTML]="(game.year.toString()) | highlightText:searchQuery()"></span>
             <h2 class="games-card__title" [innerHTML]="game.name | highlightText:searchQuery()">{{game.name}}</h2>
             @if (game.image) {
@@ -21,8 +23,10 @@
               [innerHTML]="(game.editor ? 'by ' + game.editor : '-') | highlightText:searchQuery()"></p>
           </div>
 
-          <div class="games-card__list-back" [class.border-pink]="game.isPlayed">
+          <div class="games-card__list-back" [class.border-pink]="game.isPlayed"
+            [style.borderColor]="game.isPlayed ? '#673ab7' : '#fff'">
             <img class="games-card__flag games-card__language" [class.border-pink]="game.isPlayed"
+              [style.borderColor]="game.isPlayed ? '#673ab7' : '#fff'"
               src="assets/flags/{{game.language}}-flag.png" alt="flag">
             <div class="games-card__info games-card__info-scroll">
               <div class="games-card__info-title">
@@ -71,7 +75,8 @@
                   <div class="games-card__info-down-container">
                     <p class="games-card__rate-title">Rate:</p>
                     <div [style.backgroundColor]="commonFunctions.getRatingColor(game.rate)"
-                      [class.border-pink]="game.isPlayed" class="games-card__rate">
+                      [class.border-pink]="game.isPlayed" [style.borderColor]="game.isPlayed ? '#673ab7' : '#fff'"
+                      class="games-card__rate">
                       {{ game.rate }}
                     </div>
                   </div>
@@ -81,7 +86,8 @@
                   <div class="games-card__info-down-container">
                     <p class="games-card__complexity-title">Complexity:</p>
                     <div [style.backgroundColor]="commonFunctions.getComplexityColor(game.complexity)"
-                      [class.border-pink]="game.isPlayed" class="games-card__complexity">
+                      [class.border-pink]="game.isPlayed" [style.borderColor]="game.isPlayed ? '#673ab7' : '#fff'"
+                      class="games-card__complexity">
                       {{ !game.complexity ? 'X' : game.complexity.toString() === '1' ? '1.00' : game.complexity}}
                     </div>
                   </div>
