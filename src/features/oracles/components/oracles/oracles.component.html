@@ -19,7 +19,8 @@
           <div class="oracles-card__list-inner" (click)="toggleCardFlip(oracle, index)"
             (keydown.enter)="toggleCardFlip(oracle, index)"
             (keydown.space)="$event.preventDefault(); toggleCardFlip(oracle, index)" tabindex="0" role="button"
-            #innerElement>
+            [attr.aria-label]="'Toggle details for oracle ' + oracle.name"
+            [attr.aria-pressed]="isOracleSelected(oracle)" #innerElement>
             <div class="oracles-card__list-front">
               <h2 class="oracles-card__title">{{oracle.name}}</h2>
               @if (oracle.image) {

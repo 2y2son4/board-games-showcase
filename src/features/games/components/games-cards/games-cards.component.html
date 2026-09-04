@@ -2,11 +2,12 @@
   <ul class="games-card__container">
     @for (game of games(); let index = $index; track game.name) {
       <li class="games-card__list">
-        <article class="games-card__list-inner" [class.active]="isSelected(game)" (click)="cardToggled.emit(game)"
+        <div class="games-card__list-inner" [class.active]="isSelected(game)" (click)="cardToggled.emit(game)"
           (keydown.enter)="cardToggled.emit(game)" (keydown.space)="$event.preventDefault(); cardToggled.emit(game)"
-          tabindex="0" role="button">
-          <div class="games-card__list-front" [class.border-pink]="game.isPlayed">
-            <span class="games-card__year-absolute" [class.border-pink]="game.isPlayed"
+          tabindex="0" role="button" [attr.aria-label]="'Toggle details for ' + game.name"
+          [attr.aria-expanded]="isSelected(game)">
+          <div class="games-card__list-front" [class.border-purple]="game.isPlayed">
+            <span class="games-card__year-absolute" [class.border-purple]="game.isPlayed"
               [innerHTML]="(game.year.toString()) | highlightText:searchQuery()"></span>
             <h2 class="games-card__title" [innerHTML]="game.name | highlightText:searchQuery()">{{game.name}}</h2>
             @if (game.image) {
@@ -21,8 +22,8 @@
               [innerHTML]="(game.editor ? 'by ' + game.editor : '-') | highlightText:searchQuery()"></p>
           </div>
 
-          <div class="games-card__list-back" [class.border-pink]="game.isPlayed">
-            <img class="games-card__flag games-card__language" [class.border-pink]="game.isPlayed"
+          <div class="games-card__list-back" [class.border-purple]="game.isPlayed">
+            <img class="games-card__flag games-card__language" [class.border-purple]="game.isPlayed"
               src="assets/flags/{{game.language}}-flag.png" alt="flag">
             <div class="games-card__info games-card__info-scroll">
               <div class="games-card__info-title">
@@ -45,7 +46,8 @@
                   <p>-</p>
                 }
                 @if (game.age) {
-                  <p class="games-card__players" [innerHTML]="('+' + game.age + ' years') | highlightText:searchQuery()"></p>
+                  <p class="games-card__players"
+                    [innerHTML]="('+' + game.age + ' years') | highlightText:searchQuery()"></p>
                 }
                 <p class="games-card__time">
                   {{formatDuration(game.time)}}
@@ -71,7 +73,7 @@
                   <div class="games-card__info-down-container">
                     <p class="games-card__rate-title">Rate:</p>
                     <div [style.backgroundColor]="commonFunctions.getRatingColor(game.rate)"
-                      [class.border-pink]="game.isPlayed" class="games-card__rate">
+                      [class.border-purple]="game.isPlayed" class="games-card__rate">
                       {{ game.rate }}
                     </div>
                   </div>
@@ -81,7 +83,7 @@
                   <div class="games-card__info-down-container">
                     <p class="games-card__complexity-title">Complexity:</p>
                     <div [style.backgroundColor]="commonFunctions.getComplexityColor(game.complexity)"
-                      [class.border-pink]="game.isPlayed" class="games-card__complexity">
+                      [class.border-purple]="game.isPlayed" class="games-card__complexity">
                       {{ !game.complexity ? 'X' : game.complexity.toString() === '1' ? '1.00' : game.complexity}}
                     </div>
                   </div>
@@ -99,7 +101,7 @@
               </div>
             </div>
           </div>
-        </article>
+        </div>
       </li>
     }
   </ul>
