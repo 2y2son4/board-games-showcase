@@ -222,6 +222,15 @@
     font-weight: 700;
     font-size: 14px;
   }
+
+  &__welcome,
+  &__no-results {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 400px;
+    height: 80px;
+  }
 }
 
 p {

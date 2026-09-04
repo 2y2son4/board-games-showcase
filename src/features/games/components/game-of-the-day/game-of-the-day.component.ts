@@ -47,6 +47,7 @@ export class GameOfTheDayComponent implements OnInit {
   selectedPlayers = '';
   gamesList: GameCard[] = [];
   selectedGame = signal<GameCard | null>(null);
+  searchPerformed = signal(false);
 
   constructor() {
     this.gamesImageBase = this.#httpService.gamesImageBase;
@@ -66,6 +67,7 @@ export class GameOfTheDayComponent implements OnInit {
   }
 
   showGame(): void {
+    this.searchPerformed.set(true);
     let matching = [...this.gamesList];
 
     if (this.selectedType) {

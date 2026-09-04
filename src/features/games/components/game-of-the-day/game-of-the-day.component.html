@@ -119,8 +119,11 @@
           </div>
         </article>
       </div>
+    } @else if (searchPerformed()) {
+      <p class="gotd__no-results">No game with those characteristics. Select type and/or number of players</p>
     } @else {
-      <p>No game with those characteristics. Select type and/or number of players</p>
+      <p class="gotd__welcome">Select your favorite type and/or number of players, then click "Show game" to discover
+        your next favorite!</p>
     }
   </mat-dialog-content>
 
