@@ -64,6 +64,12 @@ export class OraclesComponent implements OnInit, AfterViewInit {
     this.filterFunctions.getFlipCardCount(this.innerElements());
   }
 
+  isOracleSelected(oracle: OracleCard): boolean {
+    return this.printOracles().some(
+      (selected) => selected.name === oracle.name,
+    );
+  }
+
   toggleCardFlip(oracle: OracleCard, index: number) {
     const targetElement = this.innerElements()[index];
     if (!targetElement) return;
@@ -79,7 +85,7 @@ export class OraclesComponent implements OnInit, AfterViewInit {
       );
     } else {
       // Select (avoid duplicates)
-      if (!this.printOracles().some((o) => o.name === oracle.name)) {
+      if (!this.isOracleSelected(oracle)) {
         this.printOracles.set([...this.printOracles(), oracle]);
       }
     }

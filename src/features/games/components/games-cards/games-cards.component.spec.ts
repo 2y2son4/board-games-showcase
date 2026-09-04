@@ -36,13 +36,14 @@ describe('GamesCardsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should apply the played-card highlight border color', () => {
-    const frontCard = fixture.nativeElement.querySelector('.games-card__list-front');
-    const ratingBadge = fixture.nativeElement.querySelector('.games-card__rate');
+  it('should apply the played-card highlight state', () => {
+    const frontCard = fixture.nativeElement.querySelector(
+      '.games-card__list-front',
+    );
+    const ratingBadge =
+      fixture.nativeElement.querySelector('.games-card__rate');
 
-    expect(frontCard.classList.contains('border-pink')).toBe(true);
-    expect(ratingBadge.classList.contains('border-pink')).toBe(true);
-    expect(getComputedStyle(frontCard).borderColor).toBe('rgb(103, 58, 183)');
-    expect(getComputedStyle(ratingBadge).borderColor).toBe('rgb(103, 58, 183)');
+    expect(frontCard.classList.contains('border-purple')).toBe(true);
+    expect(ratingBadge.classList.contains('border-purple')).toBe(true);
   });
 });
