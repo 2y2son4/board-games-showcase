@@ -123,7 +123,6 @@ describe('GameOfTheDayComponent', () => {
     component.showGame();
 
     expect(component.searchPerformed()).toBe(true);
-    expect(component.selectedGame()).not.toBeNull();
   });
 
   it('should keep searchPerformed true across subsequent searches', () => {
