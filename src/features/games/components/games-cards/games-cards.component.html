@@ -5,7 +5,7 @@
         <div class="games-card__list-inner" [class.active]="isSelected(game)" (click)="cardToggled.emit(game)"
           (keydown.enter)="cardToggled.emit(game)" (keydown.space)="$event.preventDefault(); cardToggled.emit(game)"
           tabindex="0" role="button" [attr.aria-label]="'Toggle details for ' + game.name"
-          [attr.aria-pressed]="isSelected(game)">
+          [attr.aria-expanded]="isSelected(game)">
           <div class="games-card__list-front" [class.border-purple]="game.isPlayed">
             <span class="games-card__year-absolute" [class.border-purple]="game.isPlayed"
               [innerHTML]="(game.year.toString()) | highlightText:searchQuery()"></span>
