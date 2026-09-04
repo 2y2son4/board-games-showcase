@@ -28,15 +28,16 @@
     @if (selectedGame(); as game) {
       <article class="gotd__card-container">
         <div class="gotd__info-title">
-          <h2 class="gotd__name">{{ game.name }}
+          @if (game.language !== 'x'){
+            <img class="gotd__flag" src="assets/flags/{{ game.language }}-flag.png" alt="flag">
+          }
+          <h2 class="gotd__name">
+            {{ game.name }}
             <span>({{ game.year }})</span>
           </h2>
         </div>
         <div class="gotd__cards">
           <div class="gotd__card-left">
-            <span class="gotd__year-badge">
-              {{ game.year }}
-            </span>
             @if (game.image) {
               <div class="gotd__image-container">
                 <img class="gotd__image" loading="lazy" [ngSrc]="gamesImageBase + '/' + game.image + '.webp'" fill
@@ -46,7 +47,6 @@
             <p class="gotd__card-title">{{ game.editor ? 'by ' + game.editor : '-' }}</p>
           </div>
           <div class="gotd__card-right">
-            <img class="gotd__flag" src="assets/flags/{{ game.language }}-flag.png" alt="flag">
             <div class="gotd__info">
               <div class="gotd__info-container">
                 <div class="gotd__info-upper">
@@ -74,7 +74,7 @@
                     }
                   </mat-chip-set>
                   @if (game.size) {
-                    <div class="gotd__line" style="margin-top: 12px"></div>
+                    <div class="gotd__line"></div>
                     <mat-chip-set>
                       <mat-chip [value]="game.size">{{ game.size.toUpperCase() }}</mat-chip>
                     </mat-chip-set>
