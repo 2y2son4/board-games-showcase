@@ -39,26 +39,32 @@
     flex-wrap: wrap;
   }
 
-  &__card {
+  &__card-container {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    background-color: variables.$bg-color-dark;
+    border: 4px solid variables.$highlight-color;
+    border-radius: 12px;
+  }
+
+  &__cards {
     display: flex;
-    gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  // ── Front ──
-  &__card-front {
+  // ── Left ──
+  &__card-left {
     width: 300px;
     height: 300px;
-    background-color: variables.$bg-color-dark;
-    border: 4px solid variables.$highlight-color;
-    border-radius: 12px;
     color: variables.$white;
     display: flex;
     flex-direction: column;
-    padding: 14px;
+    // padding: 14px;
     position: relative;
     text-align: center;
+    border-top: 4px solid variables.$highlight-color;
   }
 
   &__card-title {
@@ -83,46 +89,44 @@
     font-weight: 600;
     padding: 4px;
     position: absolute;
-    top: -24px;
+    top: -90px;
     left: -24px;
     width: 48px;
     height: 48px;
   }
 
   &__image {
-    height: 100%;
     object-fit: scale-down;
-    width: 100%;
+    padding: 0 10px;
 
     &-container {
       height: 180px;
       margin-bottom: 10px;
-      padding: 0 10px;
       position: relative;
       width: 100%;
+      margin-top: 18px;
     }
   }
 
-  // ── Back ──
-  &__card-back {
+  // ── Right ──
+  &__card-right {
     width: 300px;
     min-height: 300px;
-    background-color: variables.$bg-color-dark;
-    border: 4px solid variables.$highlight-color;
-    border-radius: 12px;
     color: variables.$white;
     display: flex;
     flex-direction: column;
-    padding: 14px;
+    padding: 0 14px 14px;
     position: relative;
+    border-top: 4px solid variables.$highlight-color;
+    border-left: 4px solid variables.$highlight-color;
   }
 
   &__flag {
     width: 48px;
     padding: 6px;
     position: absolute;
-    top: -24px;
-    left: -24px;
+    top: -90px;
+    right: -24px;
     border: 4px solid variables.$highlight-color;
     border-radius: 50%;
     background-color: variables.$bg-color-dark;
@@ -132,15 +136,18 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 12px;
+    // padding: 0 12px;
     text-align: left;
     height: 100%;
 
     &-title {
       display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      width: 100%;
+      align-items: baseline;
+      justify-content: center;
+      gap: 24px;
+      // width: 100%;
+      color: variables.$white;
+      margin: 12px 0 12px;
     }
 
     &-container {
@@ -165,14 +172,12 @@
     }
   }
 
-  &__name {
-    font-size: 16px;
+  &__name,
+  &__year {
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.05rem;
-  }
-
-  &__year {
-    font-size: 16px;
+    margin: 0;
   }
 
   &__line {
@@ -191,6 +196,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 12px;
   }
 
   &__badge {
