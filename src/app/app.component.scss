@@ -6,6 +6,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-140%);
+  background: variables.$white;
+  color: variables.$black;
+  padding: 8px 12px;
+  z-index: 1000;
+  text-decoration: underline;
+
+  &:focus-visible {
+    transform: translateY(0);
+    outline: 3px solid variables.$highlight-color;
+    outline-offset: 2px;
+  }
+}
+
 header {
   margin-bottom: 18px;
 
@@ -54,6 +72,11 @@ header {
     &:hover {
       background-color: variables.$highlight-color;
       color: variables.$white;
+    }
+
+    &:focus-visible {
+      outline: 3px solid variables.$white;
+      outline-offset: 2px;
     }
 
     &-half {

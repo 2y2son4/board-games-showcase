@@ -22,6 +22,9 @@
 
           <h2 class="games-sidebar__title">Games</h2>
           <h3 class="games-sidebar__number">( {{printGames().length}} of {{filteredGames().length}} selected)</h3>
+          <p class="sr-only" role="status" aria-live="polite">
+            {{filteredGames().length}} games match the current filters. {{printGames().length}} selected.
+          </p>
 
           <button type="button" mat-raised-button color="primary" class="games-sidebar__reset"
             (click)="restartFilters()">

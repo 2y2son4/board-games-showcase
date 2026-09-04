@@ -116,6 +116,11 @@
       transform-style: preserve-3d;
       transition: transform 0.8s;
 
+      &:focus-visible {
+        outline: 3px solid variables.$highlight-color;
+        outline-offset: 4px;
+      }
+
       &.active {
         transform: rotateY(180deg);
       }

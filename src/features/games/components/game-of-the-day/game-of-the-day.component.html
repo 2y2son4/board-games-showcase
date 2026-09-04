@@ -45,7 +45,8 @@
 
           <!-- BACK -->
           <div class="gotd__card-back">
-            <img class="gotd__flag" src="assets/flags/{{ game.language }}-flag.png" alt="flag">
+            <img class="gotd__flag" src="assets/flags/{{ game.language }}-flag.png"
+              [attr.alt]="'Language: ' + game.language">
             <div class="gotd__info">
               <div class="gotd__info-title">
                 <p class="gotd__name">{{ game.name }}</p>
@@ -108,7 +109,8 @@
                     <div class="gotd__info-down-item">
                       <p class="gotd__rate-title">BGG page:</p>
                       <a href="https://boardgamegeek.com/boardgame/{{ game.bggReference }}" target="_blank"
-                        rel="noopener noreferrer">
+                        rel="noopener noreferrer"
+                        [attr.aria-label]="'Open BoardGameGeek page for ' + game.name + ' (opens in a new tab)'">
                         <div class="gotd__bgg-badge">GO</div>
                       </a>
                     </div>

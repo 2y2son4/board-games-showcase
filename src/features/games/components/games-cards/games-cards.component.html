@@ -2,9 +2,9 @@
   <ul class="games-card__container">
     @for (game of games(); let index = $index; track game.name) {
       <li class="games-card__list">
-        <article class="games-card__list-inner" [class.active]="isSelected(game)" (click)="cardToggled.emit(game)"
+        <div class="games-card__list-inner" [class.active]="isSelected(game)" (click)="cardToggled.emit(game)"
           (keydown.enter)="cardToggled.emit(game)" (keydown.space)="$event.preventDefault(); cardToggled.emit(game)"
-          tabindex="0" role="button">
+          tabindex="0" role="button" [attr.aria-label]="'Toggle details for ' + game.name">
           <div class="games-card__list-front" [class.border-pink]="game.isPlayed">
             <span class="games-card__year-absolute" [class.border-pink]="game.isPlayed"
               [innerHTML]="(game.year.toString()) | highlightText:searchQuery()"></span>
@@ -23,7 +23,7 @@
 
           <div class="games-card__list-back" [class.border-pink]="game.isPlayed">
             <img class="games-card__flag games-card__language" [class.border-pink]="game.isPlayed"
-              src="assets/flags/{{game.language}}-flag.png" alt="flag">
+              src="assets/flags/{{game.language}}-flag.png" [attr.alt]="'Language: ' + game.language">
             <div class="games-card__info games-card__info-scroll">
               <div class="games-card__info-title">
                 <p class="games-card__name" [innerHTML]="game.name | highlightText:searchQuery()"></p>
@@ -45,7 +45,8 @@
                   <p>-</p>
                 }
                 @if (game.age) {
-                  <p class="games-card__players" [innerHTML]="('+' + game.age + ' years') | highlightText:searchQuery()"></p>
+                  <p class="games-card__players"
+                    [innerHTML]="('+' + game.age + ' years') | highlightText:searchQuery()"></p>
                 }
                 <p class="games-card__time">
                   {{formatDuration(game.time)}}
@@ -91,7 +92,8 @@
                   <div class="games-card__info-down-container">
                     <p class="games-card__rate-title">BGG page:</p>
                     <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                      [attr.aria-label]="'Open BoardGameGeek page for ' + game.name + ' (opens in a new tab)'">
                       <div class="games-card__bgg">GO</div>
                     </a>
                   </div>
@@ -99,13 +101,13 @@
               </div>
             </div>
           </div>
-        </article>
+        </div>
       </li>
     }
   </ul>
 
   @if (games().length === 0) {
-    <mat-card class="games-card__no-data">
+    <mat-card class="games-card__no-data" role="status" aria-live="polite">
       <mat-card-content>There are no matching results.</mat-card-content>
       <mat-card-actions>
         <button mat-button (click)="resetRequested.emit()">Reset filters</button>
@@ -118,6 +120,6 @@
   }
 
   @if (isLoadingMore()) {
-    <div class="games-card__loading-more" aria-live="polite">Loading more games...</div>
+    <div class="games-card__loading-more" role="status" aria-live="polite">Loading more games...</div>
   }
 </div>
