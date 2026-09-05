@@ -93,7 +93,8 @@
                   <div class="games-card__info-down-container">
                     <p class="games-card__rate-title">BGG page:</p>
                     <a href="https://boardgamegeek.com/boardgame/{{game.bggReference}}" target="_blank"
-                      rel="noopener noreferrer">
+                      rel="noopener noreferrer"
+                      [attr.aria-label]="'Open BoardGameGeek page for ' + game.name + ' (opens in a new tab)'">
                       <div class="games-card__bgg">GO</div>
                     </a>
                   </div>
@@ -107,7 +108,7 @@
   </ul>
 
   @if (games().length === 0) {
-    <mat-card class="games-card__no-data">
+    <mat-card class="games-card__no-data" role="status" aria-live="polite">
       <mat-card-content>There are no matching results.</mat-card-content>
       <mat-card-actions>
         <button mat-button (click)="resetRequested.emit()">Reset filters</button>
@@ -120,6 +121,6 @@
   }
 
   @if (isLoadingMore()) {
-    <div class="games-card__loading-more" aria-live="polite">Loading more games...</div>
+    <div class="games-card__loading-more" role="status" aria-live="polite">Loading more games...</div>
   }
 </div>

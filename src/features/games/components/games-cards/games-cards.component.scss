@@ -36,6 +36,11 @@
       transform-style: preserve-3d;
       transition: transform 0.8s;
 
+      &:focus-visible {
+        outline: 3px solid variables.$highlight-color;
+        outline-offset: 4px;
+      }
+
       &.active {
         transform: rotateY(180deg);
       }
@@ -295,6 +300,11 @@
       flex-direction: column;
       align-items: center;
     }
+  }
+
+  &__info-down a:focus-visible .games-card__bgg {
+    outline: 3px solid variables.$white;
+    outline-offset: 2px;
   }
 
   &__flag {

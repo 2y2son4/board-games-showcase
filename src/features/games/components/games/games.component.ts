@@ -3,6 +3,7 @@ import {
   Component,
   DestroyRef,
   ElementRef,
+  HostListener,
   OnInit,
   computed,
   inject,
@@ -52,6 +53,8 @@ export class GamesComponent implements OnInit {
   readonly #dialog = inject(MatDialog);
 
   topPage = viewChild<ElementRef>('topPage');
+  filtersRegion = viewChild<ElementRef<HTMLElement>>('filtersRegion');
+  gotdBtn = viewChild<ElementRef<HTMLButtonElement>>('gotdBtn');
 
   gamesList: GameCard[] = [];
   allTypes: string[] = [];
@@ -162,6 +165,90 @@ export class GamesComponent implements OnInit {
       });
 
     this.#loadGames();
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  onKeyboardShortcut(event: KeyboardEvent): void {
+    const target = event.target;
+    const isTypingContext =
+      target instanceof HTMLElement &&
+      (target.isContentEditable ||
+        ['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName));
+
+    if (isTypingContext) {
+      return;
+    }
+
+    const pressedGotdKey =
+      (event.code === 'KeyG' || event.key.toLowerCase() === 'g') &&
+      event.altKey &&
+      event.shiftKey &&
+      !event.ctrlKey &&
+      !event.metaKey;
+    if (pressedGotdKey) {
+      event.preventDefault();
+      this.focusGameOfTheDayButton();
+      this.openGameOfTheDay();
+      return;
+    }
+
+    const isAltShiftShortcut =
+      event.altKey && event.shiftKey && !event.ctrlKey && !event.metaKey;
+
+    if (!isAltShiftShortcut) {
+      return;
+    }
+
+    const pressedFKey =
+      event.code === 'KeyF' || event.key.toLowerCase() === 'f';
+
+    if (pressedFKey) {
+      event.preventDefault();
+      this.focusFiltersRegion();
+      return;
+    }
+  }
+
+  focusFiltersRegion(event?: Event): void {
+    event?.preventDefault();
+    const region = this.filtersRegion()?.nativeElement;
+    if (!region) {
+      return;
+    }
+
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 'auto'
+      : 'smooth';
+    region.scrollIntoView({ behavior, block: 'start' });
+
+    const firstFocusableControl = region.querySelector<HTMLElement>(
+      [
+        'input:not([disabled])',
+        'select:not([disabled])',
+        'textarea:not([disabled])',
+        'button:not([disabled])',
+        '[href]',
+        '[tabindex]:not([tabindex="-1"])',
+      ].join(', '),
+    );
+
+    if (firstFocusableControl) {
+      firstFocusableControl.focus();
+      return;
+    }
+
+    region.focus();
+  }
+
+  focusGameOfTheDayButton(event?: Event): void {
+    event?.preventDefault();
+    const button = this.gotdBtn()?.nativeElement;
+    if (!button) {
+      return;
+    }
+
+    button.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    button.focus();
   }
 
   #loadGames(): void {
