@@ -116,6 +116,27 @@ describe('GameOfTheDayComponent', () => {
     expect(component.selectedGame()).toBeNull();
   });
 
+  it('should set searchPerformed on the first search', () => {
+    expect(component.searchPerformed()).toBe(false);
+
+    component.selectedType = 'Party';
+    component.showGame();
+
+    expect(component.searchPerformed()).toBe(true);
+  });
+
+  it('should keep searchPerformed true across subsequent searches', () => {
+    component.selectedType = 'Party';
+    component.showGame();
+    expect(component.searchPerformed()).toBe(true);
+
+    component.selectedType = 'NonExistentType';
+    component.showGame();
+
+    expect(component.searchPerformed()).toBe(true);
+    expect(component.selectedGame()).toBeNull();
+  });
+
   it('should select from Strategy type correctly', () => {
     component.selectedType = 'Strategy';
     component.showGame();

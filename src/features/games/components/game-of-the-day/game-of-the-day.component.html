@@ -26,14 +26,18 @@
     </div>
 
     @if (selectedGame(); as game) {
-      <div class="gotd__card-wrapper">
-        <article class="gotd__card">
-          <!-- FRONT -->
-          <div class="gotd__card-front">
-            <span class="gotd__year-badge">
-              {{ game.year }}
-            </span>
-            <h2 class="gotd__card-title">{{ game.name }}</h2>
+      <article class="gotd__card-container">
+        <div class="gotd__info-title">
+          @if (game.language !== 'x'){
+            <img class="gotd__flag" src="assets/flags/{{ game.language }}-flag.png" alt="{{ game.language }} language flag">
+          }
+          <h2 class="gotd__name">
+            {{ game.name }}
+            <span>({{ game.year }})</span>
+          </h2>
+        </div>
+        <div class="gotd__cards">
+          <div class="gotd__card-left">
             @if (game.image) {
               <div class="gotd__image-container">
                 <img class="gotd__image" loading="lazy" [ngSrc]="gamesImageBase + '/' + game.image + '.webp'" fill
@@ -42,19 +46,8 @@
             }
             <p class="gotd__card-title">{{ game.editor ? 'by ' + game.editor : '-' }}</p>
           </div>
-
-          <!-- BACK -->
-          <div class="gotd__card-back">
-            <img class="gotd__flag" src="assets/flags/{{ game.language }}-flag.png"
-              [attr.alt]="'Language: ' + game.language">
+          <div class="gotd__card-right">
             <div class="gotd__info">
-              <div class="gotd__info-title">
-                <p class="gotd__name">{{ game.name }}</p>
-                @if (game.year) {
-                  <span class="gotd__year">({{ game.year }})</span>
-                }
-              </div>
-              <div class="gotd__line"></div>
               <div class="gotd__info-container">
                 <div class="gotd__info-upper">
                   <div class="gotd__meta-row">
@@ -62,7 +55,7 @@
                       <p class="gotd__players">
                         @for (player of game.players; let index = $index; let first = $first; let last = $last; track index) {
                           {{ game.players.length === 1 && first ? 'For' : '' }} {{ player }} {{ !last ? 'to' :
-                          player === 1 && game.players.length === 1 && first ? 'player' : 'players' }}
+                            player === 1 && game.players.length === 1 && first ? 'player' : 'players' }}
                         }
                       </p>
                     } @else {
@@ -81,7 +74,7 @@
                     }
                   </mat-chip-set>
                   @if (game.size) {
-                    <div class="gotd__line" style="margin-top: 12px"></div>
+                    <div class="gotd__line"></div>
                     <mat-chip-set>
                       <mat-chip [value]="game.size">{{ game.size.toUpperCase() }}</mat-chip>
                     </mat-chip-set>
@@ -119,10 +112,13 @@
               </div>
             </div>
           </div>
-        </article>
-      </div>
+        </div>
+      </article>
+    } @else if (searchPerformed()) {
+      <p class="gotd__no-results" role="status" aria-live="polite">No game with those characteristics. Select type and/or number of players</p>
     } @else {
-      <p>No game with those characteristics. Select type and/or number of players</p>
+      <p class="gotd__welcome">Select your favorite type and/or number of players, then click "Show game" to discover
+        your next favorite!</p>
     }
   </mat-dialog-content>
 
