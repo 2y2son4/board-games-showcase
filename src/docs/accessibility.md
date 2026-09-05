@@ -27,7 +27,7 @@ Implemented patterns include:
 - Skip to filters link is available on the Games page.
 - Skip to Game of the Day link is available on the Games page.
 - Alt+Shift+F moves focus directly to the filters region.
-- Pressing G opens Game of the Day.
+- Alt+Shift+G opens Game of the Day.
 
 The shortcut is ignored while typing in fields such as input, textarea, or select, so it does not interrupt form entry.
 
@@ -45,7 +45,7 @@ The filters panel is exposed as a focusable, labeled region so assistive technol
 2. Press Tab to reach Skip to filters, then Enter.
 3. Press Tab again to reach Skip to Game of the Day, then Enter.
 4. Or press Alt+Shift+F to jump directly to filters.
-5. Or press G to open Game of the Day.
+5. Or press Alt+Shift+G to open Game of the Day.
 6. Continue with Tab and Shift+Tab through filter controls.
 7. Use Reset to clear active filters.
 

@@ -181,7 +181,8 @@ export class GamesComponent implements OnInit {
 
     const pressedGotdKey =
       (event.code === 'KeyG' || event.key.toLowerCase() === 'g') &&
-      !event.altKey &&
+      event.altKey &&
+      event.shiftKey &&
       !event.ctrlKey &&
       !event.metaKey;
     if (pressedGotdKey) {
