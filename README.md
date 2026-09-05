@@ -43,7 +43,7 @@ This decouples the data from the application code, allowing data updates without
 ## Keyboard Shortcuts (Games)
 
 - **Alt + Shift + F:** Jump to filters.
-- **G:** Open Game of the Day.
+- **Alt + Shift + G:** Open Game of the Day.
 
 ## Accessibility
 
