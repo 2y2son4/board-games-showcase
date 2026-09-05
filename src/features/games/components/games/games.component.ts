@@ -215,7 +215,10 @@ export class GamesComponent implements OnInit {
       return;
     }
 
-    region.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      ? 'auto'
+      : 'smooth';
+    region.scrollIntoView({ behavior, block: 'start' });
 
     const firstFocusableControl = region.querySelector<HTMLElement>(
       [
