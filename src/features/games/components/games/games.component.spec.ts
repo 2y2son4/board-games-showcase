@@ -1,3 +1,4 @@
+import { ElementRef } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GamesComponent } from './games.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -86,6 +87,132 @@ describe('GamesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  describe('keyboard shortcuts', () => {
+    beforeEach(() => {
+      document.body.innerHTML = '';
+      Object.defineProperty(window, 'matchMedia', {
+        writable: true,
+        value: jest.fn().mockImplementation((query: string) => ({
+          matches: false,
+          media: query,
+          onchange: null,
+          addListener: jest.fn(),
+          removeListener: jest.fn(),
+          addEventListener: jest.fn(),
+          removeEventListener: jest.fn(),
+          dispatchEvent: jest.fn(),
+        })),
+      });
+    });
+
+    it('should focus the filters region on Alt+Shift+F', () => {
+      const region = document.createElement('section');
+      const input = document.createElement('input');
+      region.appendChild(input);
+      document.body.appendChild(region);
+      region.scrollIntoView = jest.fn();
+      component['filtersRegion'] = (() => new ElementRef(region)) as any;
+
+      const event = new KeyboardEvent('keydown', {
+        key: 'f',
+        code: 'KeyF',
+        altKey: true,
+        shiftKey: true,
+        bubbles: true,
+        cancelable: true,
+      });
+      Object.defineProperty(event, 'target', {
+        value: document.body,
+        enumerable: true,
+      });
+
+      component.onKeyboardShortcut(event);
+
+      expect(event.defaultPrevented).toBe(true);
+      expect(region.scrollIntoView).toHaveBeenCalledWith({
+        behavior: 'smooth',
+        block: 'start',
+      });
+      expect(document.activeElement).toBe(input);
+    });
+
+    it('should open the Game of the Day when Alt+Shift+G is pressed', () => {
+      const button = document.createElement('button');
+      button.scrollIntoView = jest.fn();
+      component['gotdBtn'] = (() => new ElementRef(button)) as any;
+      document.body.appendChild(button);
+
+      const focusSpy = jest.spyOn(component, 'focusGameOfTheDayButton');
+      const openSpy = jest.spyOn(component, 'openGameOfTheDay');
+      const event = new KeyboardEvent('keydown', {
+        key: 'g',
+        code: 'KeyG',
+        altKey: true,
+        shiftKey: true,
+        bubbles: true,
+        cancelable: true,
+      });
+      Object.defineProperty(event, 'target', {
+        value: document.body,
+        enumerable: true,
+      });
+
+      component.onKeyboardShortcut(event);
+
+      expect(focusSpy).toHaveBeenCalledTimes(1);
+      expect(openSpy).toHaveBeenCalledTimes(1);
+      expect(event.defaultPrevented).toBe(true);
+      expect(button.scrollIntoView).toHaveBeenCalledWith({
+        behavior: 'smooth',
+        block: 'center',
+      });
+      expect(document.activeElement).toBe(button);
+    });
+
+    it('should ignore keyboard shortcuts while typing in inputs or selects', () => {
+      const focusFiltersSpy = jest.spyOn(component, 'focusFiltersRegion');
+      const gotdSpy = jest.spyOn(component, 'focusGameOfTheDayButton');
+      const openSpy = jest.spyOn(component, 'openGameOfTheDay');
+
+      ['INPUT', 'SELECT'].forEach((tagName) => {
+        const field = document.createElement(tagName.toLowerCase());
+        document.body.appendChild(field);
+
+        const filterShortcut = new KeyboardEvent('keydown', {
+          key: 'f',
+          code: 'KeyF',
+          altKey: true,
+          shiftKey: true,
+          bubbles: true,
+          cancelable: true,
+        });
+        Object.defineProperty(filterShortcut, 'target', {
+          value: field,
+          enumerable: true,
+        });
+        component.onKeyboardShortcut(filterShortcut);
+
+        const gotdShortcut = new KeyboardEvent('keydown', {
+          key: 'g',
+          code: 'KeyG',
+          altKey: true,
+          shiftKey: true,
+          bubbles: true,
+          cancelable: true,
+        });
+        Object.defineProperty(gotdShortcut, 'target', {
+          value: field,
+          enumerable: true,
+        });
+        component.onKeyboardShortcut(gotdShortcut);
+      });
+
+      expect(focusFiltersSpy).not.toHaveBeenCalled();
+      expect(gotdSpy).not.toHaveBeenCalled();
+      expect(openSpy).not.toHaveBeenCalled();
+    });
   });
 
   it('should filter games properly based on searchQuery', () => {

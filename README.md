@@ -20,7 +20,7 @@ This decouples the data from the application code, allowing data updates without
 
 - **Dedicated Sections:** Access separate, purpose-built pages for board games and oracle decks, each offering tailored layouts and filter controls.
 - **Interactive Card Flipping:** View each item as a card that can be flipped to reveal comprehensive details, including images, descriptions, and metadata.
-- **Advanced Filtering and Search:** Utilize a robust set of filters and search capabilities to quickly locate specific games or decks based on multiple criteria.
+- **Advanced Filtering and Search (Games):** Utilize a robust set of filters and search capabilities to quickly locate games based on multiple criteria.
 - **Responsive User Experience:** Enjoy seamless usability across desktop and mobile devices, with adaptive layouts and controls.
 
 ## Filtering Options
@@ -38,8 +38,18 @@ This decouples the data from the application code, allowing data updates without
 
 ### Oracles
 
-- **Text Search:** Locate decks by name or artist.
-- **Reset:** Restore the full list and clear the search.
+- **Selection and Export:** Flip cards to select oracle decks and export selected items to PDF.
+
+## Keyboard Shortcuts (Games)
+
+- **Alt + Shift + F:** Jump to filters.
+- **Alt + Shift + G:** Open Game of the Day.
+
+## Accessibility
+
+Accessibility and keyboard usage guidance is documented in:
+
+- [Accessibility and Keyboard Navigation](src/docs/accessibility.md)
 
 The project is currently built with [Angular CLI](https://github.com/angular/angular-cli) 20.x and uses standalone bootstrapping/routing APIs.
 
@@ -68,7 +78,7 @@ The workflow runs two jobs:
    - Runs lint (`pnpm run lint`)
    - Builds production with budgets enabled and stats output (`pnpm run build:prod:stats`)
    - Publishes a bundle size summary (`pnpm run bundle:report`)
-   - Uploads `docs/stats.json` as a CI artifact for bundle drift tracking
+   - Uploads `docs/browser/stats.json` as a CI artifact for bundle drift tracking
    - Runs all unit tests (`pnpm test`)
 
 2. **Build & Deploy** — Runs only on pushes to `main` (after tests pass):
@@ -84,7 +94,7 @@ The app is available at: [https://2y2son4.github.io/board-games-showcase](https:
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/).
+Run `pnpm test` to execute the unit tests via [Jest](https://jestjs.io/).
 
 ## Running end-to-end tests
 

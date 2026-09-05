@@ -1,6 +1,6 @@
 import { ApplicationConfig } from '@angular/core';
 import { IMAGE_CONFIG } from '@angular/common';
-import { provideRouter, withHashLocation } from '@angular/router';
+import { provideRouter, TitleStrategy, withHashLocation } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -9,6 +9,7 @@ import {
   withFetch,
   withJsonpSupport,
 } from '@angular/common/http';
+import { AppTitleStrategy } from './app-title.strategy';
 
 export const appConfig: ApplicationConfig = {
   // los providers se añadirían al routing
@@ -16,6 +17,10 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, withHashLocation()),
     provideAnimationsAsync(),
     provideHttpClient(withFetch(), withJsonpSupport()),
+    {
+      provide: TitleStrategy,
+      useClass: AppTitleStrategy,
+    },
     {
       provide: IMAGE_CONFIG,
       useValue: {

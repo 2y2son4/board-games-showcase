@@ -1,5 +1,15 @@
 <div #topPage></div>
 @if (gamesList && !isLoading()) {
+  <a class="games-skip-link" href="#games-filters-region" (click)="focusFiltersRegion($event)">
+    Skip to filters
+  </a>
+  <a class="games-skip-link games-skip-link-gotd" href="#games-gotd-button" (click)="focusGameOfTheDayButton($event)">
+    Skip to Game of the Day
+  </a>
+  <p id="games-filters-shortcut-help" class="sr-only">
+    Keyboard shortcuts: Alt plus Shift plus F jumps to filters.
+    Alt plus Shift plus G opens Game of the Day.
+  </p>
   <div class="games-layout">
     <div>
       <div class="games-sidebar">
@@ -22,13 +32,16 @@
 
           <h2 class="games-sidebar__title">Games</h2>
           <h3 class="games-sidebar__number">( {{printGames().length}} of {{filteredGames().length}} selected)</h3>
+          <p class="sr-only" role="status" aria-live="polite">
+            {{filteredGames().length}} games match the current filters. {{printGames().length}} selected.
+          </p>
 
           <button type="button" mat-raised-button color="primary" class="games-sidebar__reset"
             (click)="restartFilters()">
             Reset
           </button>
-          <button type="button" mat-raised-button color="primary" class="button-system games-sidebar__export"
-            (click)="openGameOfTheDay()">
+          <button id="games-gotd-button" #gotdBtn type="button" mat-raised-button color="primary"
+            class="button-system games-sidebar__export" (click)="openGameOfTheDay()">
             Game of the Day
           </button>
           <button type="button" mat-raised-button color="primary" class="button-system games-sidebar__export"
@@ -60,10 +73,14 @@
       (chipTypesChanged)="onTypeChange($event)" (sizeChanged)="onSizeChange($event)"
       (loadMoreRequested)="loadMoreGames()" (resetRequested)="restartFilters()"></app-games-cards>
     <div class="divider"></div>
-    <app-games-filters [filterForm]="gamesFilterForm" [sortingSelectLabels]="sortingSelectLabels" [types]="types"
-      [editors]="editors" [sizes]="sizes" [showPlayedBtn]="showPlayedBtn()" [showUnplayedBtn]="showUnplayedBtn()"
-      (playedToggled)="togglePlayed()" (unplayedToggled)="toggleUnPlayed()" (resetClicked)="restartFilters()"
-      (typeSearchChanged)="onSearchTypes($event)" (editorSearchChanged)="onSearchEditors($event)"
-      (sizeFilterChanged)="onSizeFilterChange()"></app-games-filters>
+    <section id="games-filters-region" #filtersRegion tabindex="-1" role="region"
+      aria-labelledby="games-filters-heading" aria-describedby="games-filters-shortcut-help">
+      <h2 id="games-filters-heading" class="sr-only">Filters</h2>
+      <app-games-filters [filterForm]="gamesFilterForm" [sortingSelectLabels]="sortingSelectLabels" [types]="types"
+        [editors]="editors" [sizes]="sizes" [showPlayedBtn]="showPlayedBtn()" [showUnplayedBtn]="showUnplayedBtn()"
+        (playedToggled)="togglePlayed()" (unplayedToggled)="toggleUnPlayed()" (resetClicked)="restartFilters()"
+        (typeSearchChanged)="onSearchTypes($event)" (editorSearchChanged)="onSearchEditors($event)"
+        (sizeFilterChanged)="onSizeFilterChange()"></app-games-filters>
+    </section>
   </div>
 }

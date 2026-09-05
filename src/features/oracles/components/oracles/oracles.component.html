@@ -5,6 +5,9 @@
       <h3 class="oracles-sidebar__number">
         ({{printOracles().length}} of {{oraclesList().length}} selected)
       </h3>
+      <p class="sr-only" role="status" aria-live="polite">
+        {{printOracles().length}} of {{oraclesList().length}} oracles selected.
+      </p>
       <button type="button" mat-raised-button color="primary" class="oracles-sidebar__export"
         [disabled]="printOracles().length === 0" (click)="exportSelectedAsPdf()">
         Export to PDF
@@ -50,7 +53,8 @@
               </div>
               @if (oracle.web) {
                 <div class="oracles-card__web">
-                  <a href="{{oracle.web}}" target="_blank" rel="noopener noreferrer">Web</a>
+                  <a href="{{oracle.web}}" target="_blank" rel="noopener noreferrer"
+                    [attr.aria-label]="'Open external website for ' + oracle.name + ' (opens in a new tab)'">Open website</a>
                 </div>
               }
             </div>

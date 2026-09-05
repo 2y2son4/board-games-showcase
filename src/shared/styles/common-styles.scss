@@ -32,11 +32,22 @@ p {
 }
 
 a,
-a:visited,
+a:visited {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: inherit;
+}
+
 a:hover,
 a:active {
-  text-decoration: none;
-  color: inherit;
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid variables.$highlight-color;
+  outline-offset: 2px;
 }
 
 .border {
